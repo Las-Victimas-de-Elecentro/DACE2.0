@@ -1,0 +1,2492 @@
+Procedimiento Historial_Personal_Est(E/S: Datos[pos_usuario].Carrera: Cadena, Datos[pos_usuario].Semestre, Datos[pos_usuario].Year: Entero, Datos.Materias.Info.Pre1info[pos_usuario].Matematica_I, Datos.Materias.Info.Pre1info[pos_usuario].Matematica_II, Datos.Materias.Info.Pre1info[pos_usuario].Fisica_I, Datos.Materias.Info.Pre1info[pos_usuario].Matematica_III, Datos.Materias.Info.Pre1info[pos_usuario].Fisica_II, Datos.Materias.Info.Pre1info[pos_usuario].Organizacion_Del_Computador, Datos.Materias.Info.Pre1info[pos_usuario].Matematica_IV, Datos.Materias.Info.Pre1info[pos_usuario].Probabilidad_Y_Estadistica, Datos.Materias.Info.Pre1info[pos_usuario].Arquitectura_Del_Computador, Datos.Materias.Info.Pre1info[pos_usuario].Sistemas_Operativos, Datos.Materias.Info.Pre1info[pos_usuario].Redes, Datos.Materias.Info.Pre1info[pos_usuario].Sistemas_Distribuidos, Datos.Materias.Info.Pre1info[pos_usuario].Teoria_De_Sistemas, Datos.Materias.Info.Pre1info[pos_usuario].Ingenieria_Economica, Datos.Materias.Info.Pre1info[pos_usuario].Informatica_Educativa, Datos.Materias.Info.Pre2info[pos_usuario].Logica_Matematica, Datos.Materias.Info.Pre2info[pos_usuario].Fundamentos_De_La_Informatica, Datos.Materias.Info.Pre2info[pos_usuario].Algoritmos_I, Datos.Materias.Info.Pre2info[pos_usuario].Algoritmos_II, Datos.Materias.Info.Pre2info[pos_usuario].Programacion_I, Datos.Materias.Info.Pre2info[pos_usuario].Estructuras_Discretas_I, Datos.Materias.Info.Pre2info[pos_usuario].Base_De_Datos, Datos.Materias.Info.Pre2info[pos_usuario].Programacion_II, Datos.Materias.Info.Pre2info[pos_usuario].Estructuras_Discretas_II, Datos.Materias.Info.Pre2info[pos_usuario].Programacion_III, Datos.Materias.Info.Pre2info[pos_usuario].Sistemas_De_Informacion_I, Datos.Materias.Info.Pre2info[pos_usuario].Traductores_E_Interpretes, Datos.Materias.Info.Pre2info[pos_usuario].Sistemas_De_Informacion_II, Datos.Materias.Info.Pre2info[pos_usuario].Lenguajes_De_Programacion, Datos.Materias.Info.Pre2info[pos_usuario].Sistemas_De_Informacion_III, Datos.Materias.Info.Pre2info[pos_usuario].Etica_Profesional, Datos.Materias.Info.Pre2info[pos_usuario].Control_De_Proyectos, Datos.Materias.Info.Pre2info[pos_usuario].Gestion_Empresarial, Datos.Materias.Info.Pre2info[pos_usuario].Pasantias, Datos.Materias.Info.Pre2info[pos_usuario].Gerencia_De_Proyectos, Datos.Materias.Info.Pre2info[pos_usuario].Proyecto_De_Grado_I, Datos.Materias.Info.Pre2info[pos_usuario].Proyecto_De_Grado_II, Datos.Materias.Info.Pre3info[pos_usuario].Ingles_I, Datos.Materias.Info.Pre3info[pos_usuario].Ingles_II, Datos.Materias.Info.Pre4info[pos_usuario].Formacion_Constitucional, Datos.Materias.Info.Pre4info[pos_usuario].Arte_Y_Cultura, Datos.Materias.Info.Pre5info[pos_usuario].Lenguaje_Comunicacion, Datos.Materias.Info.Pre5info[pos_usuario].Economia_Digital, Datos.Materias.Info.Pre5info[pos_usuario].Deportes, Datos.Materias.Info.Pre5info[pos_usuario].Problematica_Cientifica_, Datos.Materias.Info.Pre5info[pos_usuario].Electiva_I, Datos.Materias.Info.Pre5info[pos_usuario].Metodologia, Datos.Materias.Info.Pre5info[pos_usuario].Electiva_II, Datos.Materias.Info.Pre5info[pos_usuario].Electiva_III, Datos.Materias.Info.Pre5info[pos_usuario].Electiva_IV, Datos.Materias.Info.Pre5info[pos_usuario].Electiva_V, Datos.Materias.Info.Pre5info[pos_usuario].Electiva_De_Area_I, Datos.Materias.Info.Pre5info[pos_usuario].Electiva_De_Area_II, Datos.Materias.Info.Pre5info[pos_usuario].Electiva_De_Area_III, Datos.Materias.Info.Pre5info[pos_usuario].Electiva_Libre_I, Datos.Materias.Info.Pre5info[pos_usuario].Electiva_Libre_II, Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_I, Datos.Materias.Civ.Pre1civ[pos_usuario].Programacion_Logico, Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_II, Datos.Materias.Civ.Pre1civ[pos_usuario].Fisica_I, Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_III, Datos.Materias.Civ.Pre1civ[pos_usuario].Metodos_Numericos, Datos.Materias.Civ.Pre1civ[pos_usuario].Fisica_II, Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_IV, Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_Racional_I, Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_V, Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_Racional_II, Datos.Materias.Civ.Pre1civ[pos_usuario].Resistencia_De_Materiales, Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_De_Fluidos_I, Datos.Materias.Civ.Pre2civ[pos_usuario].Quimica_Basica, Datos.Materias.Civ.Pre2civ[pos_usuario].Geologia, Datos.Materias.Civ.Pre2civ[pos_usuario].Quimica_Aplicada, Datos.Materias.Civ.Pre2civ[pos_usuario].Geologia_Aplicada, Datos.Materias.Civ.Pre2civ[pos_usuario].Hidraulica_I, Datos.Materias.Civ.Pre2civ[pos_usuario].Instalaciones_Sanitarias, Datos.Materias.Civ.Pre2civ[pos_usuario].Hidrologia, Datos.Materias.Civ.Pre2civ[pos_usuario].Mecanica_De_Fluidos_II, Datos.Materias.Civ.Pre2civ[pos_usuario].Hidraulica_II, Datos.Materias.Civ.Pre2civ[pos_usuario].Mecanica_De_Suelos, Datos.Materias.Civ.Pre3civ[pos_usuario].Dibujo, Datos.Materias.Civ.Pre3civ[pos_usuario].Geometria_Descriptiva_I, Datos.Materias.Civ.Pre3civ[pos_usuario].Geometria_Descriptiva, Datos.Materias.Civ.Pre3civ[pos_usuario].Topografia, Datos.Materias.Civ.Pre3civ[pos_usuario].Vias_De_Comunicacion_I, Datos.Materias.Civ.Pre3civ[pos_usuario].Vias_De_Comunicacion_II, Datos.Materias.Civ.Pre3civ[pos_usuario].Dibujo_De_Proyectos, Datos.Materias.Civ.Pre3civ[pos_usuario].Acueductos_Y_Cloacas, Datos.Materias.Civ.Pre3civ[pos_usuario].Planificacion_De_Obras, Datos.Materias.Civ.Pre3civ[pos_usuario].Pavimentos, Datos.Materias.Civ.Pre4civ[pos_usuario].Teorias_De_Estructuras_I, Datos.Materias.Civ.Pre4civ[pos_usuario].Teorias_De_Estructuras_II, Datos.Materias.Civ.Pre4civ[pos_usuario].Concreto_Armado_I, Datos.Materias.Civ.Pre4civ[pos_usuario].Concreto_Armado_II, Datos.Materias.Civ.Pre4civ[pos_usuario].Proyecto_De_Grado_I, Datos.Materias.Civ.Pre4civ[pos_usuario].Metodos_De_Construccion, Datos.Materias.Civ.Pre4civ[pos_usuario].Instalaciones_Para_Edificios, Datos.Materias.Civ.Pre4civ[pos_usuario].Puentes, Datos.Materias.Civ.Pre4civ[pos_usuario].Proyectos_Estructurales_De_Acero, Datos.Materias.Civ.Pre4civ[pos_usuario].Concreto_Pretensado, Datos.Materias.Civ.Pre4civ[pos_usuario].Administracion_De_Obras, Datos.Materias.Civ.Pre5civ[pos_usuario].Ingles_Tecnico, Datos.Materias.Civ.Pre5civ[pos_usuario].Introduccion_Ciencias_Humanas, Datos.Materias.Civ.Pre5civ[pos_usuario].Tecnicas_De_Estudio, Datos.Materias.Civ.Pre5civ[pos_usuario].Metodologia_Cientifica, Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_I, Datos.Materias.Civ.Pre5civ[pos_usuario].Sociologia_Ciencia_Tecnologia, Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_II, Datos.Materias.Civ.Pre5civ[pos_usuario].Derecho, Datos.Materias.Civ.Pre5civ[pos_usuario].Deportes, Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_III, Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_IV, Datos.Materias.Civ.Pre5civ[pos_usuario].Ingenieria_Economica, Datos.Materias.Hidro.Pre1hidro[pos_usuario].Quimica_Inorganica, Datos.Materias.Hidro.Pre1hidro[pos_usuario].Quimica_Aplicada, Datos.Materias.Hidro.Pre1hidro[pos_usuario].Matematica_III, Datos.Materias.Hidro.Pre1hidro[pos_usuario].Matematica_IV, Datos.Materias.Hidro.Pre1hidro[pos_usuario].Probabilidad_Y_Estadistica, Datos.Materias.Hidro.Pre1hidro[pos_usuario].Calculo, Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_I, Datos.Materias.Hidro.Pre2hidro[pos_usuario].Metodologia_Cientifica, Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_II, Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_III, Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_IV, Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_V, Datos.Materias.Medi.Pre1medi[pos_usuario].Histologia_Embriol_y_Genetica, Datos.Materias.Medi.Pre1medi[pos_usuario].Anatomia_Humana, Datos.Materias.Medi.Pre1medi[pos_usuario].Bioquimica, Datos.Materias.Medi.Pre1medi[pos_usuario].Fisiologia_y_Biofisica, Datos.Materias.Medi.Pre2medi[pos_usuario].Parasitologia, Datos.Materias.Medi.Pre2medi[pos_usuario].Semiologia_Medico_Quirurgica, Datos.Materias.Medi.Pre2medi[pos_usuario].Farmacologia, Datos.Materias.Medi.Pre2medi[pos_usuario].Fisiopatologia, Datos.Materias.Medi.Pre2medi[pos_usuario].Anatomia_Patologica, Datos.Materias.Medi.Pre2medi[pos_usuario].Microbiologia, Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Fliar_III, Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_III, Datos.Materias.Medi.Pre4medi[pos_usuario].Trabajo_de_Grado, Datos.Materias.Medi.Pre4medi[pos_usuario].Psicopatologia, Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_I, Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_I, Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_I, Datos.Materias.Medi.Pre4medi[pos_usuario].Clin_Obstetrica_y_Gineco_I, Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_II, Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_II, Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_II, Datos.Materias.Medi.Pre4medi[pos_usuario].Clin_Obstetrica_y_Ginecol_II, Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica, Datos.Materias.Odo.Pre2odo[pos_usuario].Iniciacion_a_la_Clinica, Datos.Materias.Odo.Pre2odo[pos_usuario].Operatoria_Dental_I, Datos.Materias.Odo.Pre2odo[pos_usuario].Materiales_Dentales, Datos.Materias.Odo.Pre2odo[pos_usuario].Radiologia_Bucal, Datos.Materias.Odo.Pre2odo[pos_usuario].Operatoria_Dental_II, Datos.Materias.Odo.Pre2odo[pos_usuario].Patologia_Bucal_y_Maxilofacial_I, Datos.Materias.Odo.Pre2odo[pos_usuario].Cirugia_Bucal_y_Maxilofacial_I, Datos.Materias.Odo.Pre2odo[pos_usuario].Medicina_Interna_y_Semiologia, Datos.Materias.Odo.Pre2odo[pos_usuario].Fisiopatologia, Datos.Materias.Odo.Pre2odo[pos_usuario].Cirugia_Bucal_y_Maxilofacial_II, Datos.Materias.Odo.Pre2odo[pos_usuario].Patologia_Bucal_y_Maxilofacial_II, Datos.Materias.Odo.Pre2odo[pos_usuario].Odontologia_Legal_y_Forense, Datos.Materias.Odo.Pre4odo[pos_usuario].Periodoncia_I, Datos.Materias.Odo.Pre4odo[pos_usuario].Periodoncia_II, Datos.Materias.Odo.Pre4odo[pos_usuario].Ortodoncia_I, Datos.Materias.Odo.Pre4odo[pos_usuario].Ortodoncia_II, Datos.Materias.Odo.Pre4odo[pos_usuario].Atencion_Integral_de_Nino_I, Datos.Materias.Odo.Pre4odo[pos_usuario].Odontopediatria_II, Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_I, Datos.Materias.Odo.Pre5odo[pos_usuario].Formacion_Cultural_y_Artistica, Datos.Materias.Odo.Pre5odo[pos_usuario].Morfologia_Dentaria_y_Oclusion, Datos.Materias.Odo.Pre5odo[pos_usuario].Formacion_Instrumental, Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_II, Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_I, Datos.Materias.Odo.Pre5odo[pos_usuario].Psicologia, Datos.Materias.Odo.Pre5odo[pos_usuario].Farmacologia, Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_III, Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_II, Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_IV, Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_IV, Datos.Materias.Vete.Pre3vete[pos_usuario].Cirugia_Veterinaria, Datos.Materias.Vete.Pre3vete[pos_usuario].Medicina_De_Caninos_Y_Felinos, Datos.Materias.Vete.Pre3vete[pos_usuario].Medicina_De_Rumiantes_Y_Equino, Datos.Materias.Vete.Pre3vete[pos_usuario].Investigacion_Veterinaria_I, Datos.Materias.Vete.Pre3vete[pos_usuario].Extension_Profesionali, Datos.Materias.Vete.Pre3vete[pos_usuario].Gerencia_De_Ser_Veterinaria, Datos.Materias.Vete.Pre3vete[pos_usuario].Saneamiento_Ambiental, Datos.Materias.Vete.Pre3vete[pos_usuario].Mejoramiento_Animal, Datos.Materias.Vete.Pre4vete[pos_usuario].Pasantias_Profesionales, Datos.Materias.Vete.Pre4vete[pos_usuario].Medicina_De_Suinos_Y_Aves, Datos.Materias.Vete.Pre4vete[pos_usuario].Epidemiologia_General, Datos.Materias.Vete.Pre4vete[pos_usuario].Derecho_Constitucional, Datos.Materias.Vete.Pre4vete[pos_usuario].Proceso_De_Prod_Ind_E_Inp_San, Datos.Materias.Vete.Pre4vete[pos_usuario].Legislacion_Y_Deontologia_Vet, Datos.Materias.Vete.Pre4vete[pos_usuario].Med_Conejo_Peces_Esp_Silt_Lab, Datos.Materias.Vete.Pre4vete[pos_usuario].Investigacion_Veterinaria_II, Datos.Materias.Vete.Pre4vete[pos_usuario].Extension_Profesional_II, Datos.Materias.Der.Pre4der[pos_usuario].Practicas_Juridicas_III, Datos.Materias.Der.Pre4der[pos_usuario].Electivas_4, Datos.Materias.Der.Pre5der[pos_usuario].Derecho_Procesal_Penal_II, Datos.Materias.Der.Pre5der[pos_usuario].Obligaciones_III, Datos.Materias.Der.Pre5der[pos_usuario].Derecho_Procesal_Civil_II, Datos.Materias.Der.Pre5der[pos_usuario].Derecho_Mercantil, Datos.Materias.Der.Pre5der[pos_usuario].Derecho_Probatorio_II, Datos.Materias.Der.Pre5der[pos_usuario].Contratos_Y_Garantias, Datos.Materias.Der.Pre5der[pos_usuario].Proyecto_Socio_Juridico_IV, Datos.Materias.Der.Pre5der[pos_usuario].Practicas_Juridicas_IV, Datos.Materias.Der.Pre5der[pos_usuario].Electivas_5, Datos.Materias.Der.Pre5der[pos_usuario].Pasantias, Datos.Materias.Der.Pre5der[pos_usuario].Seminario_Tesina_De_Grado, Datos.Materias.Comu.Pre1comu[pos_usuario].Morfosintaxis_del_castellano, Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_Cientifico, Datos.Materias.Comu.Pre3comu[pos_usuario].Relaciones_Publicas, Datos.Materias.Comu.Pre3comu[pos_usuario].Opinion_Publica, Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_de_Opinion, Datos.Materias.Comu.Pre3comu[pos_usuario].Locucion_Basica, Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_Economico, Datos.Materias.Comu.Pre3comu[pos_usuario].Publicidad, Datos.Materias.Comu.Pre3comu[pos_usuario].Locucion_Profesional, Datos.Materias.Comu.Pre3comu[pos_usuario].Mercadeo, Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_Politico, Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_I, Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_I, Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_II, Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_III, Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_De_Costos_I, Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_De_Costos_II, Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_De_Costos_III, Datos.Materias.Cont.Pre1cont[pos_usuario].Auditoria_I, Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_Especializada_I, Datos.Materias.Cont.Pre3cont[pos_usuario].Instituciones_Financieras, Datos.Materias.Cont.Pre4cont[pos_usuario].Practica_Profesional_I, Datos.Materias.Cont.Pre4cont[pos_usuario].Seminario_I, Datos.Materias.Cont.Pre4cont[pos_usuario].Practica_Profesional_II, Datos.Materias.Cont.Pre4cont[pos_usuario].Seminario_II, Datos.Materias.Cont.Pre4cont[pos_usuario].Etica_Desarrollo_Profesional, Datos.Materias.Cont.Pre4cont[pos_usuario].Tesina_De_Grado, Datos.Materias.Cont.Pre4cont[pos_usuario].Pasantias, Datos.Materias.Eco.Pre2eco[pos_usuario].Matematica_Financiera, Datos.Materias.Eco.Pre2eco[pos_usuario].Estadistica_I, Datos.Materias.Eco.Pre2eco[pos_usuario].Estadistica_II, Datos.Materias.Eco.Pre2eco[pos_usuario].Estadistica_Aplicada, Datos.Materias.Eco.Pre2eco[pos_usuario].Econometria, Datos.Materias.Eco.Pre5eco[pos_usuario].Deporte, Datos.Materias.Eco.Pre5eco[pos_usuario].Ingles_Instrumental, Datos.Materias.Eco.Pre5eco[pos_usuario].Sociologia, Datos.Materias.Eco.Pre5eco[pos_usuario].Arte_Y_Cultura, Datos.Materias.Eco.Pre5eco[pos_usuario].Sociopolitica_Productiva, Datos.Materias.Eco.Pre5eco[pos_usuario].Investigacion_De_Mercado, Datos.Materias.Eco.Pre5eco[pos_usuario].Desarrollo_Economico, Datos.Materias.Eco.Pre5eco[pos_usuario].Analisis_Economico_Regional: Real);
+Inicio
+
+    Mostrar << "Historial Académico";
+    Mostrar << "Aquí se muestra tu desempeño y registro disciplinario";
+
+    En_Caso (Datos[pos_usuario].Carrera ≠ "Ninguna") Sea;
+
+        Caso(Datos[pos_usuario].Carrera = "Informatica");
+
+            //Prelación 1: Matemáticas e Infraestructura
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Matematica_I:...", Datos.Materias.Info.Pre1info[pos_usuario].Matematica_I;
+                Suma = Suma + (Datos.Materias.Info.Pre1info[pos_usuario].Matematica_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre1info[pos_usuario].Matematica_I > 5.5) Entonces;
+                Mostrar << "Matematica_II:...", Datos.Materias.Info.Pre1info[pos_usuario].Matematica_II;
+                Mostrar << "Fisica_I:...", Datos.Materias.Info.Pre1info[pos_usuario].Fisica_I;
+                Suma = Suma + (Datos.Materias.Info.Pre1info[pos_usuario].Matematica_II + Datos.Materias.Info.Pre1info[pos_usuario].Fisica_I);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre1info[pos_usuario].Matematica_II > 5.5) Entonces;
+                Mostrar << "Matematica_III:...", Datos.Materias.Info.Pre1info[pos_usuario].Matematica_III;
+                Suma = Suma + (Datos.Materias.Info.Pre1info[pos_usuario].Matematica_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre1info[pos_usuario].Fisica_I > 5.5) Entonces;
+                Mostrar << "Fisica_II:...", Datos.Materias.Info.Pre1info[pos_usuario].Fisica_II;
+                Suma = Suma + (Datos.Materias.Info.Pre1info[pos_usuario].Fisica_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre1info[pos_usuario].Fisica_II > 5.5) Entonces;
+                Mostrar << "Organizacion_Del_Computador:...", Datos.Materias.Info.Pre1info[pos_usuario].Organizacion_Del_Computador;
+                Suma = Suma + (Datos.Materias.Info.Pre1info[pos_usuario].Organizacion_Del_Computador);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre1info[pos_usuario].Matematica_III > 5.5) Entonces;
+                Mostrar << "Matematica_IV:...", Datos.Materias.Info.Pre1info[pos_usuario].Matematica_IV;
+                Mostrar << "Probabilidad_Y_Estadistica:...", Datos.Materias.Info.Pre1info[pos_usuario].Probabilidad_Y_Estadistica;
+                Suma = Suma + (Datos.Materias.Info.Pre1info[pos_usuario].Matematica_IV + Datos.Materias.Info.Pre1info[pos_usuario].Probabilidad_Y_Estadistica);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre1info[pos_usuario].Organizacion_Del_Computador > 5.5) Entonces;
+                Mostrar << "Arquitectura_Del_Computador:...", Datos.Materias.Info.Pre1info[pos_usuario].Arquitectura_Del_Computador;
+                Suma = Suma + (Datos.Materias.Info.Pre1info[pos_usuario].Arquitectura_Del_Computador);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre1info[pos_usuario].Arquitectura_Del_Computador > 5.5) Entonces;
+                Mostrar << "Sistemas_Operativos:...", Datos.Materias.Info.Pre1info[pos_usuario].Sistemas_Operativos;
+                Suma = Suma + (Datos.Materias.Info.Pre1info[pos_usuario].Sistemas_Operativos);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre1info[pos_usuario].Sistemas_Operativos > 5.5) Entonces;
+                Mostrar << "Redes:...", Datos.Materias.Info.Pre1info[pos_usuario].Redes;
+                Suma = Suma + (Datos.Materias.Info.Pre1info[pos_usuario].Redes);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre1info[pos_usuario].Redes > 5.5) Entonces;
+                Mostrar << "Sistemas_Distribuidos:...", Datos.Materias.Info.Pre1info[pos_usuario].Sistemas_Distribuidos;
+                Suma = Suma + (Datos.Materias.Info.Pre1info[pos_usuario].Sistemas_Distribuidos);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 5) Entonces;
+                Mostrar << "Teoria_De_Sistemas:...", Datos.Materias.Info.Pre1info[pos_usuario].Teoria_De_Sistemas;
+                Suma = Suma + (Datos.Materias.Info.Pre1info[pos_usuario].Teoria_De_Sistemas);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 6) Entonces;
+                Mostrar << "Ingenieria_Economica:...", Datos.Materias.Info.Pre1info[pos_usuario].Ingenieria_Economica;
+                Suma = Suma + (Datos.Materias.Info.Pre1info[pos_usuario].Ingenieria_Economica);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 10) Entonces;
+                Mostrar << "Informatica_Educativa:...", Datos.Materias.Info.Pre1info[pos_usuario].Informatica_Educativa;
+                Suma = Suma + (Datos.Materias.Info.Pre1info[pos_usuario].Informatica_Educativa);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 2: Lógica y Programación
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Logica_Matematica:...", Datos.Materias.Info.Pre2info[pos_usuario].Logica_Matematica;
+                Mostrar << "Fundamentos_De_La_Informatica:...", Datos.Materias.Info.Pre2info[pos_usuario].Fundamentos_De_La_Informatica;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Logica_Matematica + Datos.Materias.Info.Pre2info[pos_usuario].Fundamentos_De_La_Informatica);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Logica_Matematica > 5.5 And Datos.Materias.Info.Pre2info[pos_usuario].Fundamentos_De_La_Informatica > 5.5) Entonces;
+                Mostrar << "Algoritmos_I:...", Datos.Materias.Info.Pre2info[pos_usuario].Algoritmos_I;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Algoritmos_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Algoritmos_I > 5.5) Entonces;
+                Mostrar << "Algoritmos_II:...", Datos.Materias.Info.Pre2info[pos_usuario].Algoritmos_II;
+                Mostrar << "Programacion_I:...", Datos.Materias.Info.Pre2info[pos_usuario].Programacion_I;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Algoritmos_II + Datos.Materias.Info.Pre2info[pos_usuario].Programacion_I);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Algoritmos_II > 5.5) Entonces;
+                Mostrar << "Estructuras_Discretas_I:...", Datos.Materias.Info.Pre2info[pos_usuario].Estructuras_Discretas_I;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Estructuras_Discretas_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Programacion_I > 5.5) Entonces;
+                Mostrar << "Base_De_Datos:...", Datos.Materias.Info.Pre2info[pos_usuario].Base_De_Datos;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Base_De_Datos);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Algoritmos_II > 5.5 And Datos.Materias.Info.Pre2info[pos_usuario].Programacion_I > 5.5) Entonces;
+                Mostrar << "Programacion_II:...", Datos.Materias.Info.Pre2info[pos_usuario].Programacion_II;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Programacion_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Estructuras_Discretas_I > 5.5) Entonces;
+                Mostrar << "Estructuras_Discretas_II:...", Datos.Materias.Info.Pre2info[pos_usuario].Estructuras_Discretas_II;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Estructuras_Discretas_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Programacion_II > 5.5) Entonces;
+                Mostrar << "Programacion_III:...", Datos.Materias.Info.Pre2info[pos_usuario].Programacion_III;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Programacion_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Base_De_Datos > 5.5) Entonces;
+                Mostrar << "Sistemas_De_Informacion_I:...", Datos.Materias.Info.Pre2info[pos_usuario].Sistemas_De_Informacion_I;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Sistemas_De_Informacion_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Estructuras_Discretas_II > 5.5) Entonces;
+                Mostrar << "Traductores_E_Interpretes:...", Datos.Materias.Info.Pre2info[pos_usuario].Traductores_E_Interpretes;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Traductores_E_Interpretes);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Sistemas_De_Informacion_I > 5.5) Entonces;
+                Mostrar << "Sistemas_De_Informacion_II:...", Datos.Materias.Info.Pre2info[pos_usuario].Sistemas_De_Informacion_II;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Sistemas_De_Informacion_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Traductores_E_Interpretes > 5.5) Entonces;
+                Mostrar << "Lenguajes_De_Programacion:...", Datos.Materias.Info.Pre2info[pos_usuario].Lenguajes_De_Programacion;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Lenguajes_De_Programacion);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Sistemas_De_Informacion_II > 5.5) Entonces;
+                Mostrar << "Sistemas_De_Informacion_III:...", Datos.Materias.Info.Pre2info[pos_usuario].Sistemas_De_Informacion_III;
+                Mostrar << "Etica_Profesional:...", Datos.Materias.Info.Pre2info[pos_usuario].Etica_Profesional;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Sistemas_De_Informacion_III + Datos.Materias.Info.Pre2info[pos_usuario].Etica_Profesional);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 7) Entonces;
+                Mostrar << "Control_De_Proyectos:...", Datos.Materias.Info.Pre2info[pos_usuario].Control_De_Proyectos;
+                Mostrar << "Gestion_Empresarial:...", Datos.Materias.Info.Pre2info[pos_usuario].Gestion_Empresarial;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Control_De_Proyectos + Datos.Materias.Info.Pre2info[pos_usuario].Gestion_Empresarial);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Control_De_Proyectos > 5.5 And Datos.Materias.Info.Pre2info[pos_usuario].Gestion_Empresarial > 5.5) Entonces;
+                Mostrar << "Pasantias:...", Datos.Materias.Info.Pre2info[pos_usuario].Pasantias;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Pasantias);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Pasantias > 5.5) Entonces;
+                Mostrar << "Gerencia_De_Proyectos:...", Datos.Materias.Info.Pre2info[pos_usuario].Gerencia_De_Proyectos;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Gerencia_De_Proyectos);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 9) Entonces;
+                Mostrar << "Proyecto_De_Grado_I:...", Datos.Materias.Info.Pre2info[pos_usuario].Proyecto_De_Grado_I;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Proyecto_De_Grado_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre2info[pos_usuario].Proyecto_De_Grado_I > 5.5) Entonces;
+                Mostrar << "Proyecto_De_Grado_II:...", Datos.Materias.Info.Pre2info[pos_usuario].Proyecto_De_Grado_II;
+                Suma = Suma + (Datos.Materias.Info.Pre2info[pos_usuario].Proyecto_De_Grado_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 3: Ingles
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Ingles_I:...", Datos.Materias.Info.Pre3info[pos_usuario].Ingles_I;
+                Suma = Suma + (Datos.Materias.Info.Pre3info[pos_usuario].Ingles_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre3info[pos_usuario].Ingles_I > 5.5) Entonces;
+                Mostrar << "Ingles_II:...", Datos.Materias.Info.Pre3info[pos_usuario].Ingles_II;
+                Suma = Suma + (Datos.Materias.Info.Pre3info[pos_usuario].Ingles_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 4: Socio-Humanística
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Formacion_Constitucional:...", Datos.Materias.Info.Pre4info[pos_usuario].Formacion_Constitucional;
+                Suma = Suma + (Datos.Materias.Info.Pre4info[pos_usuario].Formacion_Constitucional);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre4info[pos_usuario].Formacion_Constitucional > 5.5) Entonces;
+                Mostrar << "Arte_Y_Cultura:...", Datos.Materias.Info.Pre4info[pos_usuario].Arte_Y_Cultura;
+                Suma = Suma + (Datos.Materias.Info.Pre4info[pos_usuario].Arte_Y_Cultura);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 5: Electivas/Varias
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Lenguaje_Comunicacion:...", Datos.Materias.Info.Pre5info[pos_usuario].Lenguaje_Comunicacion;
+                Mostrar << "Economia_Digital:...", Datos.Materias.Info.Pre5info[pos_usuario].Economia_Digital;
+                Mostrar << "Deportes:...", Datos.Materias.Info.Pre5info[pos_usuario].Deportes;
+                Suma = Suma + (Datos.Materias.Info.Pre5info[pos_usuario].Lenguaje_Comunicacion + Datos.Materias.Info.Pre5info[pos_usuario].Economia_Digital + Datos.Materias.Info.Pre5info[pos_usuario].Deportes);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 2 ) Entonces;
+                Mostrar << "Problematica_Cientifica_:...", Datos.Materias.Info.Pre5info[pos_usuario].Problematica_Cientifica_;
+                Mostrar << "Electiva_I:...", Datos.Materias.Info.Pre5info[pos_usuario].Electiva_I;
+                Suma = Suma + (Datos.Materias.Info.Pre5info[pos_usuario].Problematica_Cientifica_ + Datos.Materias.Info.Pre5info[pos_usuario].Electiva_I);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 3 ) Entonces;
+                Mostrar << "Metodologia:...", Datos.Materias.Info.Pre5info[pos_usuario].Metodologia;
+                Suma = Suma + (Datos.Materias.Info.Pre5info[pos_usuario].Metodologia);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_I > 5.5) Entonces;
+                Mostrar << "Electiva_II:...", Datos.Materias.Info.Pre5info[pos_usuario].Electiva_II;
+                Suma = Suma + (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_II > 5.5) Entonces;
+                Mostrar << "Electiva_III:...", Datos.Materias.Info.Pre5info[pos_usuario].Electiva_III;
+                Suma = Suma + (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_III > 5.5) Entonces;
+                Mostrar << "Electiva_IV:...", Datos.Materias.Info.Pre5info[pos_usuario].Electiva_IV;
+                Suma = Suma + (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_IV);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_IV > 5.5) Entonces;
+                Mostrar << "Electiva_V:...", Datos.Materias.Info.Pre5info[pos_usuario].Electiva_V;
+                Suma = Suma + (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_V);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 8) Entonces;
+                Mostrar << "Electiva_De_Area_I:...", Datos.Materias.Info.Pre5info[pos_usuario].Electiva_De_Area_I;
+                Suma = Suma + (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_De_Area_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_De_Area_I > 5.5) Entonces;
+                Mostrar << "Electiva_De_Area_II:...", Datos.Materias.Info.Pre5info[pos_usuario].Electiva_De_Area_II;
+                Suma = Suma + (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_De_Area_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_De_Area_II > 5.5) Entonces;
+                Mostrar << "Electiva_De_Area_III:...", Datos.Materias.Info.Pre5info[pos_usuario].Electiva_De_Area_III;
+                Suma = Suma + (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_De_Area_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 9) Entonces;
+                Mostrar << "Electiva_Libre_I:...", Datos.Materias.Info.Pre5info[pos_usuario].Electiva_Libre_I;
+                Suma = Suma + (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_Libre_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_Libre_I > 5.5) Entonces;
+                Mostrar << "Electiva_Libre_II:...", Datos.Materias.Info.Pre5info[pos_usuario].Electiva_Libre_II;
+                Suma = Suma + (Datos.Materias.Info.Pre5info[pos_usuario].Electiva_Libre_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+        Caso(Datos[pos_usuario].Carrera = "Civil");
+
+            //Prelación 1: Cálculo y Mecánica
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Calculo I:...", Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_I;
+                Suma = Suma + (Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 2 ) Entonces;
+                Mostrar << "Programacion Logico:...", Datos.Materias.Civ.Pre1civ[pos_usuario].Programacion_Logico;
+                Suma = Suma + (Datos.Materias.Civ.Pre1civ[pos_usuario].Programacion_Logico);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_I > 5.5) Entonces;
+                Mostrar << "Calculo II:...", Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_II;
+                Mostrar << "Fisica I:...", Datos.Materias.Civ.Pre1civ[pos_usuario].Fisica_I;
+                Suma = Suma + (Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_II + Datos.Materias.Civ.Pre1civ[pos_usuario].Fisica_I);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_II > 5.5) Entonces;
+                Mostrar << "Calculo III:...", Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_III;
+                Suma = Suma + (Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_II > 5.5 And Datos.Materias.Civ.Pre1civ[pos_usuario].Programacion_Logico > 5.5) Entonces;
+                Mostrar << "Metodos Numericos:...", Datos.Materias.Civ.Pre1civ[pos_usuario].Metodos_Numericos;
+                Suma = Suma + (Datos.Materias.Civ.Pre1civ[pos_usuario].Metodos_Numericos);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Fisica_I > 5.5 And Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_I > 5.5) Entonces;
+                Mostrar << "Fisica II:...", Datos.Materias.Civ.Pre1civ[pos_usuario].Fisica_II;
+                Suma = Suma + (Datos.Materias.Civ.Pre1civ[pos_usuario].Fisica_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_III > 5.5) Entonces;
+                Mostrar << "Calculo IV:...", Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_IV;
+                Suma = Suma + (Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_IV);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_I > 5.5 And Datos.Materias.Civ.Pre1civ[pos_usuario].Fisica_I > 5.5) Entonces;
+                Mostrar << "Mecanica Racional I:...", Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_Racional_I;
+                Suma = Suma + (Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_Racional_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_IV > 5.5) Entonces;
+                Mostrar << "Calculo V:...", Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_V;
+                Suma = Suma + (Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_V);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_Racional_I > 5.5 And Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_IV > 5.5) Entonces;
+                Mostrar << "Mecanica Racional II:...", Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_Racional_II;
+                Suma = Suma + (Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_Racional_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_Racional_II > 5.5 And Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_IV > 5.5) Entonces;
+                Mostrar << "Resistencia De Materiales:...", Datos.Materias.Civ.Pre1civ[pos_usuario].Resistencia_De_Materiales;
+                Suma = Suma + (Datos.Materias.Civ.Pre1civ[pos_usuario].Resistencia_De_Materiales);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Fisica_II > 5.5 And Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_Racional_I > 5.5) Entonces;
+                Mostrar << "Mecanica De Fluidos I:...", Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_De_Fluidos_I;
+                Suma = Suma + (Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_De_Fluidos_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 2: Hidráulica y Geotecnia
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 4 ) Entonces;
+                Mostrar << "Quimica Basica:...", Datos.Materias.Civ.Pre2civ[pos_usuario].Quimica_Basica;
+                Suma = Suma + (Datos.Materias.Civ.Pre2civ[pos_usuario].Quimica_Basica);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 5) Entonces;
+                Mostrar << "Geologia:...", Datos.Materias.Civ.Pre2civ[pos_usuario].Geologia;
+                Suma = Suma + (Datos.Materias.Civ.Pre2civ[pos_usuario].Geologia);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre2civ[pos_usuario].Quimica_Basica > 5.5 And Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_III > 5.5) Entonces;
+                Mostrar << "Quimica Aplicada:...", Datos.Materias.Civ.Pre2civ[pos_usuario].Quimica_Aplicada;
+                Suma = Suma + (Datos.Materias.Civ.Pre2civ[pos_usuario].Quimica_Aplicada);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre2civ[pos_usuario].Quimica_Basica > 5.5 And Datos.Materias.Civ.Pre2civ[pos_usuario].Geologia > 5.5) Entonces;
+                Mostrar << "Geologia Aplicada:...", Datos.Materias.Civ.Pre2civ[pos_usuario].Geologia_Aplicada;
+                Suma = Suma + (Datos.Materias.Civ.Pre2civ[pos_usuario].Geologia_Aplicada);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_De_Fluidos_I > 5.5 And Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_IV > 5.5) Entonces;
+                Mostrar << "Hidraulica I:...", Datos.Materias.Civ.Pre2civ[pos_usuario].Hidraulica_I;
+                Suma = Suma + (Datos.Materias.Civ.Pre2civ[pos_usuario].Hidraulica_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre2civ[pos_usuario].Quimica_Aplicada > 5.5 And Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_De_Fluidos_I > 5.5) Entonces;
+                Mostrar << "Instalaciones Sanitarias:...", Datos.Materias.Civ.Pre2civ[pos_usuario].Instalaciones_Sanitarias;
+                Suma = Suma + (Datos.Materias.Civ.Pre2civ[pos_usuario].Instalaciones_Sanitarias);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre2civ[pos_usuario].Geologia_Aplicada > 5.5) Entonces;
+                Mostrar << "Hidrologia:...", Datos.Materias.Civ.Pre2civ[pos_usuario].Hidrologia;
+                Suma = Suma + (Datos.Materias.Civ.Pre2civ[pos_usuario].Hidrologia);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_De_Fluidos_I > 5.5) Entonces;
+                Mostrar << "Mecanica De Fluidos II:...", Datos.Materias.Civ.Pre2civ[pos_usuario].Mecanica_De_Fluidos_II;
+                Suma = Suma + (Datos.Materias.Civ.Pre2civ[pos_usuario].Mecanica_De_Fluidos_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre2civ[pos_usuario].Hidraulica_I > 5.5) Entonces;
+                Mostrar << "Hidraulica II:...", Datos.Materias.Civ.Pre2civ[pos_usuario].Hidraulica_II;
+                Suma = Suma + (Datos.Materias.Civ.Pre2civ[pos_usuario].Hidraulica_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Mecanica_De_Fluidos_I > 5.5 And Datos.Materias.Civ.Pre2civ[pos_usuario].Geologia_Aplicada > 5.5) Entonces;
+                Mostrar << "Mecanica De Suelos:...", Datos.Materias.Civ.Pre2civ[pos_usuario].Mecanica_De_Suelos;
+                Suma = Suma + (Datos.Materias.Civ.Pre2civ[pos_usuario].Mecanica_De_Suelos);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 3: Diseño y Carreteras
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Dibujo:...", Datos.Materias.Civ.Pre3civ[pos_usuario].Dibujo;
+                Suma = Suma + (Datos.Materias.Civ.Pre3civ[pos_usuario].Dibujo);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 2 ) Entonces;
+                Mostrar << "Geometria Descriptiva I:...", Datos.Materias.Civ.Pre3civ[pos_usuario].Geometria_Descriptiva_I;
+                Suma = Suma + (Datos.Materias.Civ.Pre3civ[pos_usuario].Geometria_Descriptiva_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre3civ[pos_usuario].Geometria_Descriptiva_I > 5.5) Entonces;
+                Mostrar << "Geometria Descriptiva:...", Datos.Materias.Civ.Pre3civ[pos_usuario].Geometria_Descriptiva;
+                Suma = Suma + (Datos.Materias.Civ.Pre3civ[pos_usuario].Geometria_Descriptiva);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre3civ[pos_usuario].Geometria_Descriptiva > 5.5 And Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_III > 5.5) Entonces;
+                Mostrar << "Topografia:...", Datos.Materias.Civ.Pre3civ[pos_usuario].Topografia;
+                Suma = Suma + (Datos.Materias.Civ.Pre3civ[pos_usuario].Topografia);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre2civ[pos_usuario].Mecanica_De_Suelos > 5.5) Entonces;
+                Mostrar << "Vias De Comunicacion I:...", Datos.Materias.Civ.Pre3civ[pos_usuario].Vias_De_Comunicacion_I;
+                Suma = Suma + (Datos.Materias.Civ.Pre3civ[pos_usuario].Vias_De_Comunicacion_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre3civ[pos_usuario].Vias_De_Comunicacion_I > 5.5) Entonces;
+                Mostrar << "Vias De Comunicacion II:...", Datos.Materias.Civ.Pre3civ[pos_usuario].Vias_De_Comunicacion_II;
+                Suma = Suma + (Datos.Materias.Civ.Pre3civ[pos_usuario].Vias_De_Comunicacion_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 7) Entonces;
+                Mostrar << "Dibujo De Proyectos:...", Datos.Materias.Civ.Pre3civ[pos_usuario].Dibujo_De_Proyectos;
+                Mostrar << "Acueductos Y Cloacas:...", Datos.Materias.Civ.Pre3civ[pos_usuario].Acueductos_Y_Cloacas;
+                Suma = Suma + (Datos.Materias.Civ.Pre3civ[pos_usuario].Dibujo_De_Proyectos + Datos.Materias.Civ.Pre3civ[pos_usuario].Acueductos_Y_Cloacas);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 8) Entonces;
+                Mostrar << "Planificacion De Obras:...", Datos.Materias.Civ.Pre3civ[pos_usuario].Planificacion_De_Obras;
+                Suma = Suma + (Datos.Materias.Civ.Pre3civ[pos_usuario].Planificacion_De_Obras);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 10) Entonces;
+                Mostrar << "Pavimentos:...", Datos.Materias.Civ.Pre3civ[pos_usuario].Pavimentos;
+                Suma = Suma + (Datos.Materias.Civ.Pre3civ[pos_usuario].Pavimentos);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 4: Estructuras y Proyectos
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Calculo_III > 5.5 And Datos.Materias.Civ.Pre1civ[pos_usuario].Fisica_II > 5.5) Entonces;
+                Mostrar << "Teorias De Estructuras I:...", Datos.Materias.Civ.Pre4civ[pos_usuario].Teorias_De_Estructuras_I;
+                Suma = Suma + (Datos.Materias.Civ.Pre4civ[pos_usuario].Teorias_De_Estructuras_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre4civ[pos_usuario].Teorias_De_Estructuras_I > 5.5) Entonces;
+                Mostrar << "Teorias De Estructuras II:...", Datos.Materias.Civ.Pre4civ[pos_usuario].Teorias_De_Estructuras_II;
+                Suma = Suma + (Datos.Materias.Civ.Pre4civ[pos_usuario].Teorias_De_Estructuras_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre1civ[pos_usuario].Resistencia_De_Materiales > 5.5 And Datos.Materias.Civ.Pre4civ[pos_usuario].Teorias_De_Estructuras_II > 5.5) Entonces;
+                Mostrar << "Concreto Armado I:...", Datos.Materias.Civ.Pre4civ[pos_usuario].Concreto_Armado_I;
+                Suma = Suma + (Datos.Materias.Civ.Pre4civ[pos_usuario].Concreto_Armado_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre4civ[pos_usuario].Concreto_Armado_I > 5.5 And Datos.Materias.Civ.Pre2civ[pos_usuario].Mecanica_De_Suelos > 5.5) Entonces;
+                Mostrar << "Concreto Armado II:...", Datos.Materias.Civ.Pre4civ[pos_usuario].Concreto_Armado_II;
+                Suma = Suma + (Datos.Materias.Civ.Pre4civ[pos_usuario].Concreto_Armado_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre4civ[pos_usuario].Vias_De_Comunicacion_I > 5.5 And Datos.Materias.Civ.Pre4civ[pos_usuario].Concreto_Armado_II > 5.5) Entonces;
+                Mostrar << "Proyecto De Grado I:...", Datos.Materias.Civ.Pre4civ[pos_usuario].Proyecto_De_Grado_I;
+                Suma = Suma + (Datos.Materias.Civ.Pre4civ[pos_usuario].Proyecto_De_Grado_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 7) Entonces;
+                Mostrar << "Metodos De Construccion:...", Datos.Materias.Civ.Pre4civ[pos_usuario].Metodos_De_Construccion;
+                Mostrar << "Instalaciones Para Edificios:...", Datos.Materias.Civ.Pre4civ[pos_usuario].Instalaciones_Para_Edificios;
+                Suma = Suma + (Datos.Materias.Civ.Pre4civ[pos_usuario].Metodos_De_Construccion + Datos.Materias.Civ.Pre4civ[pos_usuario].Instalaciones_Para_Edificios);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre4civ[pos_usuario].Vias_De_Comunicacion_I > 5.5 And Datos.Materias.Civ.Pre4civ[pos_usuario].Concreto_Armado_II > 5.5) Entonces;
+                Mostrar << "Puentes:...", Datos.Materias.Civ.Pre4civ[pos_usuario].Puentes;
+                Suma = Suma + (Datos.Materias.Civ.Pre4civ[pos_usuario].Puentes);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 9) Entonces;
+                Mostrar << "Proyectos Estructurales De Acero:...", Datos.Materias.Civ.Pre4civ[pos_usuario].Proyectos_Estructurales_De_Acero;
+                Mostrar << "Concreto Pretensado:...", Datos.Materias.Civ.Pre4civ[pos_usuario].Concreto_Pretensado;
+                Suma = Suma + (Datos.Materias.Civ.Pre4civ[pos_usuario].Proyectos_Estructurales_De_Acero + Datos.Materias.Civ.Pre4civ[pos_usuario].Concreto_Pretensado);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 10) Entonces;
+                Mostrar << "Administracion De Obras:...", Datos.Materias.Civ.Pre4civ[pos_usuario].Administracion_De_Obras;
+                Suma = Suma + (Datos.Materias.Civ.Pre4civ[pos_usuario].Administracion_De_Obras);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 5: Generales y Electivas
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Ingles Tecnico:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Ingles_Tecnico;
+                Mostrar << "Introduccion A Las Ciencias Humanas:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Introduccion_Ciencias_Humanas;
+                Suma = Suma + (Datos.Materias.Civ.Pre5civ[pos_usuario].Ingles_Tecnico + Datos.Materias.Civ.Pre5civ[pos_usuario].Introduccion_Ciencias_Humanas);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 2 ) Entonces;
+                Mostrar << "Tecnicas De Estudio Y Doc:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Tecnicas_De_Estudio;
+                Mostrar << "Metodologia Cientifica:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Metodologia_Cientifica;
+                Mostrar << "Electiva I:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_I;
+                Suma = Suma + (Datos.Materias.Civ.Pre5civ[pos_usuario].Tecnicas_De_Estudio + Datos.Materias.Civ.Pre5civ[pos_usuario].Metodologia_Cientifica + Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_I);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 3 ) Entonces;
+                Mostrar << "Sociologia Ciencia Y Tecnologia:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Sociologia_Ciencia_Tecnologia;
+                Suma = Suma + (Datos.Materias.Civ.Pre5civ[pos_usuario].Sociologia_Ciencia_Tecnologia);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_I > 5.5) Entonces;
+                Mostrar << "Electiva II:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_II;
+                Suma = Suma + (Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 4 ) Entonces;
+                Mostrar << "Derecho:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Derecho;
+                Mostrar << "Deportes:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Deportes;
+                Suma = Suma + (Datos.Materias.Civ.Pre5civ[pos_usuario].Derecho + Datos.Materias.Civ.Pre5civ[pos_usuario].Deportes);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_II > 5.5) Entonces;
+                Mostrar << "Electiva III:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_III;
+                Suma = Suma + (Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_III > 5.5) Entonces;
+                Mostrar << "Electiva IV:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_IV;
+                Suma = Suma + (Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_IV);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 6) Entonces;
+                Mostrar << "Ingenieria Economica:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Ingenieria_Economica;
+                Mostrar << "H S E Y S A:...", Datos.Materias.Civ.Pre5civ[pos_usuario].H_S_E_Y_S_A;
+                Suma = Suma + (Datos.Materias.Civ.Pre5civ[pos_usuario].Ingenieria_Economica + Datos.Materias.Civ.Pre5civ[pos_usuario].H_S_E_Y_S_A);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 8) Entonces;
+                Mostrar << "Electiva Tecnica I:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_Tecnica_I;
+                Suma = Suma + (Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_Tecnica_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_Tecnica_I > 5.5) Entonces;
+                Mostrar << "Electiva Tecnica II:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_Tecnica_II;
+                Suma = Suma + (Datos.Materias.Civ.Pre5civ[pos_usuario].Electiva_Tecnica_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 9) Entonces;
+                Mostrar << "Practica Comunitaria:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Practica_Comunitaria;
+                Mostrar << "Prac Profesional:...", Datos.Materias.Civ.Pre5civ[pos_usuario].Prac_Profesional;
+                Suma = Suma + (Datos.Materias.Civ.Pre5civ[pos_usuario].Practica_Comunitaria + Datos.Materias.Civ.Pre5civ[pos_usuario].Prac_Profesional);
+                Contador = Contador + 2;
+            Fin_Si
+
+        Caso(Datos[pos_usuario].Carrera = "Hidrocarburos");
+
+            //Prelación 1: Matemática, Física y Química
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Matematica I:...", Datos.Materias.Hidro.Pre1hidro[pos_usuario].Matematica_I;
+                Mostrar << "Quimica Organica:...", Datos.Materias.Hidro.Pre1hidro[pos_usuario].Quimica_Organica;
+                Suma = Suma + (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Matematica_I + Datos.Materias.Hidro.Pre1hidro[pos_usuario].Quimica_Organica);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Matematica_I > 5.5) Entonces;
+                Mostrar << "Matematica II:...", Datos.Materias.Hidro.Pre1hidro[pos_usuario].Matematica_II;
+                Mostrar << "Fisica I:...", Datos.Materias.Hidro.Pre1hidro[pos_usuario].Fisica_I;
+                Suma = Suma + (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Matematica_II + Datos.Materias.Hidro.Pre1hidro[pos_usuario].Fisica_I);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Quimica_Organica > 5.5) Entonces;
+                Mostrar << "Quimica Inorganica:...", Datos.Materias.Hidro.Pre1hidro[pos_usuario].Quimica_Inorganica;
+                Suma = Suma + (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Quimica_Inorganica);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Matematica_II > 5.5) Entonces;
+                Mostrar << "Matematica III:...", Datos.Materias.Hidro.Pre1hidro[pos_usuario].Matematica_III;
+                Suma = Suma + (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Matematica_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Fisica_I > 5.5) Entonces;
+                Mostrar << "Fisica II:...", Datos.Materias.Hidro.Pre1hidro[pos_usuario].Fisica_II;
+                Suma = Suma + (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Fisica_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Quimica_Inorganica > 5.5) Entonces;
+                Mostrar << "Quimica Aplicada:...", Datos.Materias.Hidro.Pre1hidro[pos_usuario].Quimica_Aplicada;
+                Suma = Suma + (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Quimica_Aplicada);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Matematica_III > 5.5) Entonces;
+                Mostrar << "Matematica IV:...", Datos.Materias.Hidro.Pre1hidro[pos_usuario].Matematica_IV;
+                Mostrar << "Probabilidad Y Estadistica:...", Datos.Materias.Hidro.Pre1hidro[pos_usuario].Probabilidad_Y_Estadistica;
+                Suma = Suma + (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Matematica_IV + Datos.Materias.Hidro.Pre1hidro[pos_usuario].Probabilidad_Y_Estadistica);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 4 ) Entonces;
+                Mostrar << "Calculo:...", Datos.Materias.Hidro.Pre1hidro[pos_usuario].Calculo;
+                Suma = Suma + (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Calculo);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 2: Formación Socio-Política
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Fund Form Socio Politica I:...", Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_I;
+                Mostrar << "Metodologia Cientifica:...", Datos.Materias.Hidro.Pre2hidro[pos_usuario].Metodologia_Cientifica;
+                Suma = Suma + (Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_I + Datos.Materias.Hidro.Pre2hidro[pos_usuario].Metodologia_Cientifica);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_I > 5.5) Entonces;
+                Mostrar << "Fund Form Socio Politica II:...", Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_II;
+                Suma = Suma + (Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_II > 5.5) Entonces;
+                Mostrar << "Fund Form Socio Politica III:...", Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_III;
+                Suma = Suma + (Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_III > 5.5) Entonces;
+                Mostrar << "Fund Form Socio Politica IV:...", Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_IV;
+                Suma = Suma + (Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_IV);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_IV > 5.5) Entonces;
+                Mostrar << "Fund Form Socio Politica V:...", Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_V;
+                Suma = Suma + (Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_V);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_V > 5.5) Entonces;
+                Mostrar << "Fund Form Socio Politica VI:...", Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_VI;
+                Suma = Suma + (Datos.Materias.Hidro.Pre2hidro[pos_usuario].Fund_Form_Socio_Politica_VI);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 3: Geología y Yacimientos
+
+            Si (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Quimica_Inorganica > 5.5) Entonces;
+                Mostrar << "Geologia I:...", Datos.Materias.Hidro.Pre3hidro[pos_usuario].Geologia_I;
+                Suma = Suma + (Datos.Materias.Hidro.Pre3hidro[pos_usuario].Geologia_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre3hidro[pos_usuario].Geologia_I > 5.5) Entonces;
+                Mostrar << "Geologia II:...", Datos.Materias.Hidro.Pre3hidro[pos_usuario].Geologia_II;
+                Suma = Suma + (Datos.Materias.Hidro.Pre3hidro[pos_usuario].Geologia_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre3hidro[pos_usuario].Geologia_II > 5.5) Entonces;
+                Mostrar << "Caracterizacion De Yacimientos:...", Datos.Materias.Hidro.Pre3hidro[pos_usuario].Caracterizacion_De_Yacimientos;
+                Suma = Suma + (Datos.Materias.Hidro.Pre3hidro[pos_usuario].Caracterizacion_De_Yacimientos);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre1hidro[pos_usuario].Fisica_II > 5.5 And Datos.Materias.Hidro.Pre1hidro[pos_usuario].Matematica_III > 5.5) Entonces;
+                Mostrar << "M Racional Y Aplicada:...", Datos.Materias.Hidro.Pre3hidro[pos_usuario].M_Racional_Y_Aplicada;
+                Suma = Suma + (Datos.Materias.Hidro.Pre3hidro[pos_usuario].M_Racional_Y_Aplicada);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre3hidro[pos_usuario].M_Racional_Y_Aplicada > 5.5) Entonces;
+                Mostrar << "Mecanica De Fluidos:...", Datos.Materias.Hidro.Pre3hidro[pos_usuario].Mecanica_De_Fluidos;
+                Suma = Suma + (Datos.Materias.Hidro.Pre3hidro[pos_usuario].Mecanica_De_Fluidos);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre3hidro[pos_usuario].Caracterizacion_De_Yacimientos > 5.5) Entonces;
+                Mostrar << "Perforacion De Pozos:...", Datos.Materias.Hidro.Pre3hidro[pos_usuario].Perforacion_De_Pozos;
+                Mostrar << "Recuperacion Secundaria:...", Datos.Materias.Hidro.Pre3hidro[pos_usuario].Recuperacion_Secundaria;
+                Suma = Suma + (Datos.Materias.Hidro.Pre3hidro[pos_usuario].Perforacion_De_Pozos + Datos.Materias.Hidro.Pre3hidro[pos_usuario].Recuperacion_Secundaria);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre3hidro[pos_usuario].Mecanica_De_Fluidos > 5.5) Entonces;
+                Mostrar << "Transporte Y Distribucion:...", Datos.Materias.Hidro.Pre3hidro[pos_usuario].Transporte_Y_Distribucion;
+                Suma = Suma + (Datos.Materias.Hidro.Pre3hidro[pos_usuario].Transporte_Y_Distribucion);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre3hidro[pos_usuario].Transporte_Y_Distribucion > 5.5 And Datos.Materias.Hidro.Pre3hidro[pos_usuario].Recuperacion_Secundaria > 5.5) Entonces;
+                Mostrar << "Ing De Yacimientos:...", Datos.Materias.Hidro.Pre3hidro[pos_usuario].Ing_De_Yacimientos;
+                Suma = Suma + (Datos.Materias.Hidro.Pre3hidro[pos_usuario].Ing_De_Yacimientos);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 4: Gestión y Proyectos
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Ingles I:...", Datos.Materias.Hidro.Pre4hidro[pos_usuario].Ingles_I;
+                Mostrar << "Dibujo Tecnico:...", Datos.Materias.Hidro.Pre4hidro[pos_usuario].Dibujo_Tecnico;
+                Suma = Suma + (Datos.Materias.Hidro.Pre4hidro[pos_usuario].Ingles_I + Datos.Materias.Hidro.Pre4hidro[pos_usuario].Dibujo_Tecnico);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 3 ) Entonces;
+                Mostrar << "Estructura Organizacional:...", Datos.Materias.Hidro.Pre4hidro[pos_usuario].Estructura_Organizacional;
+                Suma = Suma + (Datos.Materias.Hidro.Pre4hidro[pos_usuario].Estructura_Organizacional);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 7) Entonces;
+                Mostrar << "Control De Proyectos:...", Datos.Materias.Hidro.Pre4hidro[pos_usuario].Control_De_Proyectos;
+                Mostrar << "Org Y Gestion Empresarial:...", Datos.Materias.Hidro.Pre4hidro[pos_usuario].Org_Y_Gestion_Empresarial;
+                Suma = Suma + (Datos.Materias.Hidro.Pre4hidro[pos_usuario].Control_De_Proyectos + Datos.Materias.Hidro.Pre4hidro[pos_usuario].Org_Y_Gestion_Empresarial);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre4hidro[pos_usuario].Control_De_Proyectos > 5.5 And Datos.Materias.Hidro.Pre4hidro[pos_usuario].Org_Y_Gestion_Empresarial > 5.5) Entonces;
+                Mostrar << "Pasantias:...", Datos.Materias.Hidro.Pre4hidro[pos_usuario].Pasantias;
+                Suma = Suma + (Datos.Materias.Hidro.Pre4hidro[pos_usuario].Pasantias);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre4hidro[pos_usuario].Pasantias > 5.5) Entonces;
+                Mostrar << "Gerencia De Proyectos:...", Datos.Materias.Hidro.Pre4hidro[pos_usuario].Gerencia_De_Proyectos;
+                Suma = Suma + (Datos.Materias.Hidro.Pre4hidro[pos_usuario].Gerencia_De_Proyectos);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 9) Entonces;
+                Mostrar << "Proyecto De Grado I:...", Datos.Materias.Hidro.Pre4hidro[pos_usuario].Proyecto_De_Grado_I;
+                Suma = Suma + (Datos.Materias.Hidro.Pre4hidro[pos_usuario].Proyecto_De_Grado_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Hidro.Pre4hidro[pos_usuario].Proyecto_De_Grado_I > 5.5) Entonces;
+                Mostrar << "Proyecto De Grado II:...", Datos.Materias.Hidro.Pre4hidro[pos_usuario].Proyecto_De_Grado_II;
+                Suma = Suma + (Datos.Materias.Hidro.Pre4hidro[pos_usuario].Proyecto_De_Grado_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+        Caso(Datos[pos_usuario].Carrera = "Medicina");
+
+            //Prelación 1: Ciencias Básicas
+
+            Si (Datos[pos_usuario].Year = 1) Entonces;
+                Mostrar << "Histologia_Embriol_y_Genetica:...", Datos.Materias.Medi.Pre1medi[pos_usuario].Histologia_Embriol_y_Genetica;
+                Mostrar << "Anatomia_Humana:...", Datos.Materias.Medi.Pre1medi[pos_usuario].Anatomia_Humana;
+                Suma = Suma + (Datos.Materias.Medi.Pre1medi[pos_usuario].Histologia_Embriol_y_Genetica + Datos.Materias.Medi.Pre1medi[pos_usuario].Anatomia_Humana);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre1medi[pos_usuario].Histologia_Embriol_y_Genetica > 5.5) Entonces;
+                Mostrar << "Bioquimica:...", Datos.Materias.Medi.Pre1medi[pos_usuario].Bioquimica;
+                Mostrar << "Fisiologia_y_Biofisica:...", Datos.Materias.Medi.Pre1medi[pos_usuario].Fisiologia_y_Biofisica;
+                Suma = Suma + (Datos.Materias.Medi.Pre1medi[pos_usuario].Bioquimica + Datos.Materias.Medi.Pre1medi[pos_usuario].Fisiologia_y_Biofisica);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 2) Entonces;
+                Mostrar << "Bioquimica:...", Datos.Materias.Medi.Pre1medi[pos_usuario].Bioquimica;
+                Mostrar << "Fisiologia_y_Biofisica:...", Datos.Materias.Medi.Pre1medi[pos_usuario].Fisiologia_y_Biofisica;
+                Suma = Suma + (Datos.Materias.Medi.Pre1medi[pos_usuario].Bioquimica + Datos.Materias.Medi.Pre1medi[pos_usuario].Fisiologia_y_Biofisica);
+                Contador = Contador + 2;
+            Fin_Si
+
+            //Prelación 2: Diagnóstico
+
+            Si (Datos[pos_usuario].Year = 3) Entonces;
+                Mostrar << "Parasitologia:...", Datos.Materias.Medi.Pre2medi[pos_usuario].Parasitologia;
+                Mostrar << "Semiologia_Medico_Quirurgica:...", Datos.Materias.Medi.Pre2medi[pos_usuario].Semiologia_Medico_Quirurgica;
+                Mostrar << "Farmacologia:...", Datos.Materias.Medi.Pre2medi[pos_usuario].Farmacologia;
+                Mostrar << "Fisiopatologia:...", Datos.Materias.Medi.Pre2medi[pos_usuario].Fisiopatologia;
+                Suma = Suma + (Datos.Materias.Medi.Pre2medi[pos_usuario].Parasitologia + Datos.Materias.Medi.Pre2medi[pos_usuario].Semiologia_Medico_Quirurgica + Datos.Materias.Medi.Pre2medi[pos_usuario].Farmacologia + Datos.Materias.Medi.Pre2medi[pos_usuario].Fisiopatologia);
+                Contador = Contador + 4;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 4) Entonces;
+                Mostrar << "Anatomia_Patologica:...", Datos.Materias.Medi.Pre2medi[pos_usuario].Anatomia_Patologica;
+                Suma = Suma + (Datos.Materias.Medi.Pre2medi[pos_usuario].Anatomia_Patologica);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre1medi[pos_usuario].Histologia_Embriol_y_Genetica > 5.5) Entonces;
+                Mostrar << "Microbiologia:...", Datos.Materias.Medi.Pre2medi[pos_usuario].Microbiologia;
+                Suma = Suma + (Datos.Materias.Medi.Pre2medi[pos_usuario].Microbiologia);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre2medi[pos_usuario].Microbiologia > 5.5) Entonces;
+                Mostrar << "Parasitologia:...", Datos.Materias.Medi.Pre2medi[pos_usuario].Parasitologia;
+                Suma = Suma + (Datos.Materias.Medi.Pre2medi[pos_usuario].Parasitologia);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre1medi[pos_usuario].Bioquimica > 5.5) Entonces;
+                Mostrar << "Farmacologia:...", Datos.Materias.Medi.Pre2medi[pos_usuario].Farmacologia;
+                Suma = Suma + (Datos.Materias.Medi.Pre2medi[pos_usuario].Farmacologia);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre1medi[pos_usuario].Fisiologia_y_Biofisica > 5.5) Entonces;
+                Mostrar << "Semiologia_Medico_Quirurgica:...", Datos.Materias.Medi.Pre2medi[pos_usuario].Semiologia_Medico_Quirurgica;
+                Mostrar << "Fisiopatologia:...", Datos.Materias.Medi.Pre2medi[pos_usuario].Fisiopatologia;
+                Suma = Suma + (Datos.Materias.Medi.Pre2medi[pos_usuario].Semiologia_Medico_Quirurgica + Datos.Materias.Medi.Pre2medi[pos_usuario].Fisiopatologia);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre5medi[pos_usuario].Derecho_Constitucional > 5.5) Entonces;
+                Mostrar << "Anatomia_Patologica:...", Datos.Materias.Medi.Pre2medi[pos_usuario].Anatomia_Patologica;
+                Suma = Suma + (Datos.Materias.Medi.Pre2medi[pos_usuario].Anatomia_Patologica);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 3: Medicina General y Preventiva
+
+            Si (Datos[pos_usuario].Year = 1) Entonces;
+                Mostrar << "Medicina_General_I:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_I;
+                Mostrar << "Medicina_Prv_Com_y_Familiar_I:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_Prv_Com_y_Familiar_I;
+                Suma = Suma + (Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_I + Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_Prv_Com_y_Familiar_I);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 2) Entonces;
+                Mostrar << "Medicina_General_II:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_II;
+                Mostrar << "Medicina_Prv_Com_y_Familiar_II:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_Prv_Com_y_Familiar_II;
+                Suma = Suma + (Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_II + Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_Prv_Com_y_Familiar_II);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 3) Entonces;
+                Mostrar << "Medicina_General_III:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_III;
+                Mostrar << "Med_Prev_Com_y_Fliar_III:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Fliar_III;
+                Suma = Suma + (Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_III + Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Fliar_III);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 4) Entonces;
+                Mostrar << "Med_Prev_Com_y_Familiar_IV:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Familiar_IV;
+                Mostrar << "Medicina_General_IV:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_IV;
+                Suma = Suma + (Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Familiar_IV + Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_IV);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 5) Entonces;
+                Mostrar << "Medicina_General_V:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_V;
+                Mostrar << "Med_Prev_Com_y_Familiar_V:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Familiar_V;
+                Suma = Suma + (Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_V + Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Familiar_V);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_I > 5.5) Entonces;
+                Mostrar << "Medicina_General_II:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_II;
+                Suma = Suma + (Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_Prv_Com_y_Familiar_I > 5.5) Entonces;
+                Mostrar << "Medicina_Prv_Com_y_Familiar_II:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_Prv_Com_y_Familiar_II;
+                Suma = Suma + (Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_Prv_Com_y_Familiar_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_II > 5.5) Entonces;
+                Mostrar << "Medicina_General_III:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_III;
+                Suma = Suma + (Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_Prv_Com_y_Familiar_II > 5.5) Entonces;
+                Mostrar << "Med_Prev_Com_y_Fliar_III:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Fliar_III;
+                Suma = Suma + (Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Fliar_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Fliar_III > 5.5) Entonces;
+                Mostrar << "Med_Prev_Com_y_Familiar_IV:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Familiar_IV;
+                Mostrar << "Medicina_General_IV:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_IV;
+                Suma = Suma + (Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Familiar_IV + Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_IV);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_IV > 5.5) Entonces;
+                Mostrar << "Medicina_General_V:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_V;
+                Suma = Suma + (Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_General_V);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Familiar_IV > 5.5) Entonces;
+                Mostrar << "Med_Prev_Com_y_Familiar_V:...", Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Familiar_V;
+                Suma = Suma + (Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Familiar_V);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 4: Clínica Hospitalaria y Etapa Final
+
+            Si (Datos[pos_usuario].Year = 4) Entonces;
+                Mostrar << "Psicopatologia:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Psicopatologia;
+                Mostrar << "Clin_Obstetrica_y_Gineco_I:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clin_Obstetrica_y_Gineco_I;
+                Mostrar << "Clinica_Quirurgica_I:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_I;
+                Mostrar << "Clinica_Pediatrica_I:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_I;
+                Mostrar << "Clinica_Medica_I:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_I;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Psicopatologia + Datos.Materias.Medi.Pre4medi[pos_usuario].Clin_Obstetrica_y_Gineco_I + Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_I + Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_I + Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_I);
+                Contador = Contador + 5;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 5) Entonces;
+                Mostrar << "Clinica_Quirurgica_II:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_II;
+                Mostrar << "Clinica_Pediatrica_II:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_II;
+                Mostrar << "Medicina_Legal:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Medicina_Legal;
+                Mostrar << "Clinica_Psiquiatrica:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Psiquiatrica;
+                Mostrar << "Clin_Obstetrica_y_Ginecol_II:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clin_Obstetrica_y_Ginecol_II;
+                Mostrar << "Clinica_Medica_II:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_II;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_II + Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_II + Datos.Materias.Medi.Pre4medi[pos_usuario].Medicina_Legal + Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Psiquiatrica + Datos.Materias.Medi.Pre4medi[pos_usuario].Clin_Obstetrica_y_Ginecol_II + Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_II);
+                Contador = Contador + 6;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 6) Entonces;
+                Mostrar << "Internado_Rural:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Internado_Rural;
+                Mostrar << "Clinica_Medica_III:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_III;
+                Mostrar << "Clinica_Quirurgica_III:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_III;
+                Mostrar << "Clinica_Obstetrica_III:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Obstetrica_III;
+                Mostrar << "Clinica_Pediatrica_III:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_III;
+                Mostrar << "Trabajo_de_Grado:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Trabajo_de_Grado;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Internado_Rural + Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_III + Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_III + Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Obstetrica_III + Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_III + Datos.Materias.Medi.Pre4medi[pos_usuario].Trabajo_de_Grado);
+                Contador = Contador + 6;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre3medi[pos_usuario].Med_Prev_Com_y_Fliar_III > 5.5) Entonces;
+                Mostrar << "Psicopatologia:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Psicopatologia;
+                Mostrar << "Clinica_Quirurgica_I:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_I;
+                Mostrar << "Clinica_Medica_I:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_I;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Psicopatologia + Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_I + Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_I);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre2medi[pos_usuario].Semiologia_Medico_Quirurgica > 5.5) Entonces;
+                Mostrar << "Clinica_Pediatrica_I:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_I;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre2medi[pos_usuario].Farmacologia > 5.5) Entonces;
+                Mostrar << "Clin_Obstetrica_y_Gineco_I:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clin_Obstetrica_y_Gineco_I;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Clin_Obstetrica_y_Gineco_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_I > 5.5) Entonces;
+                Mostrar << "Clinica_Medica_II:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_II;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_I > 5.5) Entonces;
+                Mostrar << "Clinica_Quirurgica_II:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_II;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_I > 5.5) Entonces;
+                Mostrar << "Clinica_Pediatrica_II:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_II;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre4medi[pos_usuario].Clin_Obstetrica_y_Gineco_I > 5.5) Entonces;
+                Mostrar << "Clin_Obstetrica_y_Ginecol_II:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clin_Obstetrica_y_Ginecol_II;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Clin_Obstetrica_y_Ginecol_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_II > 5.5) Entonces;
+                Mostrar << "Clinica_Medica_III:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_III;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Medica_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_II > 5.5) Entonces;
+                Mostrar << "Clinica_Quirurgica_III:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_III;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Quirurgica_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_II > 5.5) Entonces;
+                Mostrar << "Clinica_Pediatrica_III:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_III;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Pediatrica_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre4medi[pos_usuario].Clin_Obstetrica_y_Ginecol_II > 5.5) Entonces;
+                Mostrar << "Clinica_Obstetrica_III:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Obstetrica_III;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Obstetrica_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre4medi[pos_usuario].Psicopatologia > 5.5) Entonces;
+                Mostrar << "Clinica_Psiquiatrica:...", Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Psiquiatrica;
+                Suma = Suma + (Datos.Materias.Medi.Pre4medi[pos_usuario].Clinica_Psiquiatrica);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 5: Generales y Sociohumanísticas
+
+            Si (Datos[pos_usuario].Year = 1) Entonces;
+                Mostrar << "Bioetica_I:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Bioetica_I;
+                Mostrar << "Deportes_Arte_y_Cultura:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Deportes_Arte_y_Cultura;
+                Mostrar << "Metod_de_la_Investg_Cientif:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Metod_de_la_Investg_Cientif;
+                Mostrar << "Ingles_Instrumental:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Ingles_Instrumental;
+                Mostrar << "Historia_de_la_Medicina:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Historia_de_la_Medicina;
+                Mostrar << "Antropologia:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Antropologia;
+                Suma = Suma + (Datos.Materias.Medi.Pre5medi[pos_usuario].Bioetica_I + Datos.Materias.Medi.Pre5medi[pos_usuario].Deportes_Arte_y_Cultura + Datos.Materias.Medi.Pre5medi[pos_usuario].Metod_de_la_Investg_Cientif + Datos.Materias.Medi.Pre5medi[pos_usuario].Ingles_Instrumental + Datos.Materias.Medi.Pre5medi[pos_usuario].Historia_de_la_Medicina + Datos.Materias.Medi.Pre5medi[pos_usuario].Antropologia);
+                Contador = Contador + 6;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 2) Entonces;
+                Mostrar << "Deportes_Arte_y_Cultura_II:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Deportes_Arte_y_Cultura_II;
+                Mostrar << "Psicologia_y_Sociologia_Gral:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Psicologia_y_Sociologia_Gral;
+                Mostrar << "Estad_y_Demografia_Medica_II:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Estad_y_Demografia_Medica_II;
+                Mostrar << "Informatica:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Informatica;
+                Suma = Suma + (Datos.Materias.Medi.Pre5medi[pos_usuario].Deportes_Arte_y_Cultura_II + Datos.Materias.Medi.Pre5medi[pos_usuario].Psicologia_y_Sociologia_Gral + Datos.Materias.Medi.Pre5medi[pos_usuario].Estad_y_Demografia_Medica_II + Datos.Materias.Medi.Pre5medi[pos_usuario].Informatica);
+                Contador = Contador + 4;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 3) Entonces;
+                Mostrar << "Derecho_Constitucional:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Derecho_Constitucional;
+                Mostrar << "Int_Etica_Deontol_a_Pract_Med:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Int_Etica_Deontol_a_Pract_Med;
+                Mostrar << "Nutricion:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Nutricion;
+                Mostrar << "Psicologia_Medica_General:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Psicologia_Medica_General;
+                Suma = Suma + (Datos.Materias.Medi.Pre5medi[pos_usuario].Derecho_Constitucional + Datos.Materias.Medi.Pre5medi[pos_usuario].Int_Etica_Deontol_a_Pract_Med + Datos.Materias.Medi.Pre5medi[pos_usuario].Nutricion + Datos.Materias.Medi.Pre5medi[pos_usuario].Psicologia_Medica_General);
+                Contador = Contador + 4;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre5medi[pos_usuario].Deportes_Arte_y_Cultura > 5.5) Entonces;
+                Mostrar << "Deportes_Arte_y_Cultura_II:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Deportes_Arte_y_Cultura_II;
+                Suma = Suma + (Datos.Materias.Medi.Pre5medi[pos_usuario].Deportes_Arte_y_Cultura_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre5medi[pos_usuario].Antropologia > 5.5) Entonces;
+                Mostrar << "Psicologia_y_Sociologia_Gral:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Psicologia_y_Sociologia_Gral;
+                Suma = Suma + (Datos.Materias.Medi.Pre5medi[pos_usuario].Psicologia_y_Sociologia_Gral);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre5medi[pos_usuario].Metod_de_la_Investg_Cientif > 5.5) Entonces;
+                Mostrar << "Estad_y_Demografia_Medica_II:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Estad_y_Demografia_Medica_II;
+                Suma = Suma + (Datos.Materias.Medi.Pre5medi[pos_usuario].Estad_y_Demografia_Medica_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre3medi[pos_usuario].Medicina_Prv_Com_y_Familiar_II > 5.5) Entonces;
+                Mostrar << "Int_Etica_Deontol_a_Pract_Med:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Int_Etica_Deontol_a_Pract_Med;
+                Suma = Suma + (Datos.Materias.Medi.Pre5medi[pos_usuario].Int_Etica_Deontol_a_Pract_Med);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre5medi[pos_usuario].Psicologia_y_Sociologia_Gral > 5.5) Entonces;
+                Mostrar << "Psicologia_Medica_General:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Psicologia_Medica_General;
+                Suma = Suma + (Datos.Materias.Medi.Pre5medi[pos_usuario].Psicologia_Medica_General);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Medi.Pre1medi[pos_usuario].Bioquimica > 5.5) Entonces;
+                Mostrar << "Nutricion:...", Datos.Materias.Medi.Pre5medi[pos_usuario].Nutricion;
+                Suma = Suma + (Datos.Materias.Medi.Pre5medi[pos_usuario].Nutricion);
+                Contador = Contador + 1;
+            Fin_Si
+
+        Caso(Datos[pos_usuario].Carrera = "Odontologia");
+
+            //Prelación 1: Ciencias Básicas
+
+            Si (Datos[pos_usuario].Year = 1) Entonces;
+                Mostrar << "Histol_Embriol_y_Genetica:...", Datos.Materias.Odo.Pre1odo[pos_usuario].Histol_Embriol_y_Genetica;
+                Mostrar << "Morfologia_Humana:...", Datos.Materias.Odo.Pre1odo[pos_usuario].Morfologia_Humana;
+                Mostrar << "Bioquimica_Aplicada:...", Datos.Materias.Odo.Pre1odo[pos_usuario].Bioquimica_Aplicada;
+                Suma = Suma + (Datos.Materias.Odo.Pre1odo[pos_usuario].Histol_Embriol_y_Genetica + Datos.Materias.Odo.Pre1odo[pos_usuario].Morfologia_Humana + Datos.Materias.Odo.Pre1odo[pos_usuario].Bioquimica_Aplicada);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 2) Entonces;
+                Mostrar << "Microbiol_y_Parasitologia:...", Datos.Materias.Odo.Pre1odo[pos_usuario].Microbiol_y_Parasitologia;
+                Mostrar << "Fisiologia:...", Datos.Materias.Odo.Pre1odo[pos_usuario].Fisiologia;
+                Mostrar << "Anatomia_Dentomaxilofacial:...", Datos.Materias.Odo.Pre1odo[pos_usuario].Anatomia_Dentomaxilofacial;
+                Suma = Suma + (Datos.Materias.Odo.Pre1odo[pos_usuario].Microbiol_y_Parasitologia + Datos.Materias.Odo.Pre1odo[pos_usuario].Fisiologia + Datos.Materias.Odo.Pre1odo[pos_usuario].Anatomia_Dentomaxilofacial);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 3) Entonces;
+                Mostrar << "Histofisiologia:...", Datos.Materias.Odo.Pre1odo[pos_usuario].Histofisiologia;
+                Suma = Suma + (Datos.Materias.Odo.Pre1odo[pos_usuario].Histofisiologia);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre1odo[pos_usuario].Histol_Embriol_y_Genetica > 5.5) Entonces;
+                Mostrar << "Microbiol_y_Parasitologia:...", Datos.Materias.Odo.Pre1odo[pos_usuario].Microbiol_y_Parasitologia;
+                Mostrar << "Fisiologia:...", Datos.Materias.Odo.Pre1odo[pos_usuario].Fisiologia;
+                Suma = Suma + (Datos.Materias.Odo.Pre1odo[pos_usuario].Microbiol_y_Parasitologia + Datos.Materias.Odo.Pre1odo[pos_usuario].Fisiologia);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre1odo[pos_usuario].Morfologia_Humana > 5.5) Entonces;
+                Mostrar << "Anatomia_Dentomaxilofacial:...", Datos.Materias.Odo.Pre1odo[pos_usuario].Anatomia_Dentomaxilofacial;
+                Suma = Suma + (Datos.Materias.Odo.Pre1odo[pos_usuario].Anatomia_Dentomaxilofacial);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre1odo[pos_usuario].Microbiol_y_Parasitologia > 5.5) Entonces;
+                Mostrar << "Histofisiologia:...", Datos.Materias.Odo.Pre1odo[pos_usuario].Histofisiologia;
+                Suma = Suma + (Datos.Materias.Odo.Pre1odo[pos_usuario].Histofisiologia);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 2: Clínica y Cirugía
+
+            Si (Datos[pos_usuario].Year = 1) Entonces;
+                Mostrar << "Iniciacion_a_la_Clinica:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Iniciacion_a_la_Clinica;
+                Suma = Suma + (Datos.Materias.Odo.Pre2odo[pos_usuario].Iniciacion_a_la_Clinica);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 2) Entonces;
+                Mostrar << "Operatoria_Dental_I:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Operatoria_Dental_I;
+                Mostrar << "Materiales_Dentales:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Materiales_Dentales;
+                Suma = Suma + (Datos.Materias.Odo.Pre2odo[pos_usuario].Operatoria_Dental_I + Datos.Materias.Odo.Pre2odo[pos_usuario].Materiales_Dentales);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 3) Entonces;
+                Mostrar << "Radiologia_Bucal:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Radiologia_Bucal;
+                Mostrar << "Operatoria_Dental_II:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Operatoria_Dental_II;
+                Mostrar << "Patologia_Bucal_y_Maxilofacial_I:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Patologia_Bucal_y_Maxilofacial_I;
+                Suma = Suma + (Datos.Materias.Odo.Pre2odo[pos_usuario].Radiologia_Bucal + Datos.Materias.Odo.Pre2odo[pos_usuario].Operatoria_Dental_II + Datos.Materias.Odo.Pre2odo[pos_usuario].Patologia_Bucal_y_Maxilofacial_I);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 4) Entonces;
+                Mostrar << "Cirugia_Bucal_y_Maxilofacial_I:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Cirugia_Bucal_y_Maxilofacial_I;
+                Mostrar << "Medicina_Interna_y_Semiologia:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Medicina_Interna_y_Semiologia;
+                Mostrar << "Fisiopatologia:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Fisiopatologia;
+                Suma = Suma + (Datos.Materias.Odo.Pre2odo[pos_usuario].Cirugia_Bucal_y_Maxilofacial_I + Datos.Materias.Odo.Pre2odo[pos_usuario].Medicina_Interna_y_Semiologia + Datos.Materias.Odo.Pre2odo[pos_usuario].Fisiopatologia);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 5) Entonces;
+                Mostrar << "Cirugia_Bucal_y_Maxilofacial_II:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Cirugia_Bucal_y_Maxilofacial_II;
+                Mostrar << "Patologia_Bucal_y_Maxilofacial_II:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Patologia_Bucal_y_Maxilofacial_II;
+                Mostrar << "Odontologia_Legal_y_Forense:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Odontologia_Legal_y_Forense;
+                Suma = Suma + (Datos.Materias.Odo.Pre2odo[pos_usuario].Cirugia_Bucal_y_Maxilofacial_II + Datos.Materias.Odo.Pre2odo[pos_usuario].Patologia_Bucal_y_Maxilofacial_II + Datos.Materias.Odo.Pre2odo[pos_usuario].Odontologia_Legal_y_Forense);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre5odo[pos_usuario].Morfologia_Dentaria_y_Oclusion > 5.5) Entonces;
+                Mostrar << "Operatoria_Dental_I:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Operatoria_Dental_I;
+                Suma = Suma + (Datos.Materias.Odo.Pre2odo[pos_usuario].Operatoria_Dental_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre2odo[pos_usuario].Operatoria_Dental_I > 5.5) Entonces;
+                Mostrar << "Operatoria_Dental_II:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Operatoria_Dental_II;
+                Suma = Suma + (Datos.Materias.Odo.Pre2odo[pos_usuario].Operatoria_Dental_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre1odo[pos_usuario].Fisiologia > 5.5) Entonces;
+                Mostrar << "Patologia_Bucal_y_Maxilofacial_I:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Patologia_Bucal_y_Maxilofacial_I;
+                Suma = Suma + (Datos.Materias.Odo.Pre2odo[pos_usuario].Patologia_Bucal_y_Maxilofacial_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre2odo[pos_usuario].Patologia_Bucal_y_Maxilofacial_I > 5.5) Entonces;
+                Mostrar << "Patologia_Bucal_y_Maxilofacial_II:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Patologia_Bucal_y_Maxilofacial_II;
+                Suma = Suma + (Datos.Materias.Odo.Pre2odo[pos_usuario].Patologia_Bucal_y_Maxilofacial_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre1odo[pos_usuario].Anatomia_Dentomaxilofacial > 5.5) Entonces;
+                Mostrar << "Radiologia_Bucal:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Radiologia_Bucal;
+                Mostrar << "Cirugia_Bucal_y_Maxilofacial_I:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Cirugia_Bucal_y_Maxilofacial_I;
+                Suma = Suma + (Datos.Materias.Odo.Pre2odo[pos_usuario].Radiologia_Bucal + Datos.Materias.Odo.Pre2odo[pos_usuario].Cirugia_Bucal_y_Maxilofacial_I);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre2odo[pos_usuario].Cirugia_Bucal_y_Maxilofacial_I > 5.5) Entonces;
+                Mostrar << "Cirugia_Bucal_y_Maxilofacial_II:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Cirugia_Bucal_y_Maxilofacial_II;
+                Suma = Suma + (Datos.Materias.Odo.Pre2odo[pos_usuario].Cirugia_Bucal_y_Maxilofacial_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_I > 5.5) Entonces;
+                Mostrar << "Medicina_Interna_y_Semiologia:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Medicina_Interna_y_Semiologia;
+                Mostrar << "Fisiopatologia:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Fisiopatologia;
+                Suma = Suma + (Datos.Materias.Odo.Pre2odo[pos_usuario].Medicina_Interna_y_Semiologia + Datos.Materias.Odo.Pre2odo[pos_usuario].Fisiopatologia);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre2odo[pos_usuario].Medicina_Interna_y_Semiologia > 5.5) Entonces;
+                Mostrar << "Odontologia_Legal_y_Forense:...", Datos.Materias.Odo.Pre2odo[pos_usuario].Odontologia_Legal_y_Forense;
+                Suma = Suma + (Datos.Materias.Odo.Pre2odo[pos_usuario].Odontologia_Legal_y_Forense);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 3: Clínica Integral y Prótesis
+
+            Si (Datos[pos_usuario].Year = 3) Entonces;
+                Mostrar << "Protesis_Dental_I:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Dental_I;
+                Mostrar << "Clinica_Integral_del_Adulto_I:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integral_del_Adulto_I;
+                Suma = Suma + (Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Dental_I + Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integral_del_Adulto_I);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 4) Entonces;
+                Mostrar << "Protesis_Dental_II:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Dental_II;
+                Mostrar << "Clinica_Integral_del_Adulto_II:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integral_del_Adulto_II;
+                Mostrar << "Clinica_Integ_del_Adulto_III:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integ_del_Adulto_III;
+                Suma = Suma + (Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Dental_II + Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integral_del_Adulto_II + Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integ_del_Adulto_III);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 5) Entonces;
+                Mostrar << "Protesis_Dental_III:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Dental_III;
+                Mostrar << "Protesis_Total:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Total;
+                Mostrar << "Clinica_Integ_del_Adulto_IV:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integ_del_Adulto_IV;
+                Suma = Suma + (Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Dental_III + Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Total + Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integ_del_Adulto_IV);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre2odo[pos_usuario].Materiales_Dentales > 5.5) Entonces;
+                Mostrar << "Protesis_Dental_I:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Dental_I;
+                Suma = Suma + (Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Dental_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre2odo[pos_usuario].Iniciacion_a_la_Clinica > 5.5) Entonces;
+                Mostrar << "Clinica_Integral_del_Adulto_I:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integral_del_Adulto_I;
+                Suma = Suma + (Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integral_del_Adulto_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Dental_I > 5.5) Entonces;
+                Mostrar << "Protesis_Dental_II:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Dental_II;
+                Mostrar << "Protesis_Total:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Total;
+                Suma = Suma + (Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Dental_II + Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Total);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integral_del_Adulto_I > 5.5) Entonces;
+                Mostrar << "Clinica_Integral_del_Adulto_II:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integral_del_Adulto_II;
+                Suma = Suma + (Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integral_del_Adulto_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integral_del_Adulto_II > 5.5) Entonces;
+                Mostrar << "Clinica_Integ_del_Adulto_III:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integ_del_Adulto_III;
+                Suma = Suma + (Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integ_del_Adulto_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Dental_II > 5.5) Entonces;
+                Mostrar << "Protesis_Dental_III:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Dental_III;
+                Suma = Suma + (Datos.Materias.Odo.Pre3odo[pos_usuario].Protesis_Dental_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integ_del_Adulto_III > 5.5) Entonces;
+                Mostrar << "Clinica_Integ_del_Adulto_IV:...", Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integ_del_Adulto_IV;
+                Suma = Suma + (Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integ_del_Adulto_IV);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 4: Especialidades
+
+            Si (Datos[pos_usuario].Year = 4) Entonces;
+                Mostrar << "Ortodoncia_I:...", Datos.Materias.Odo.Pre4odo[pos_usuario].Ortodoncia_I;
+                Mostrar << "Periodoncia_I:...", Datos.Materias.Odo.Pre4odo[pos_usuario].Periodoncia_I;
+                Mostrar << "Atencion_Integral_de_Nino_I:...", Datos.Materias.Odo.Pre4odo[pos_usuario].Atencion_Integral_de_Nino_I;
+                Suma = Suma + (Datos.Materias.Odo.Pre4odo[pos_usuario].Ortodoncia_I + Datos.Materias.Odo.Pre4odo[pos_usuario].Periodoncia_I + Datos.Materias.Odo.Pre4odo[pos_usuario].Atencion_Integral_de_Nino_I);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 5) Entonces;
+                Mostrar << "Ortodoncia_II:...", Datos.Materias.Odo.Pre4odo[pos_usuario].Ortodoncia_II;
+                Mostrar << "Periodoncia_II:...", Datos.Materias.Odo.Pre4odo[pos_usuario].Periodoncia_II;
+                Mostrar << "Odontopediatria_II:...", Datos.Materias.Odo.Pre4odo[pos_usuario].Odontopediatria_II;
+                Suma = Suma + (Datos.Materias.Odo.Pre4odo[pos_usuario].Ortodoncia_II + Datos.Materias.Odo.Pre4odo[pos_usuario].Periodoncia_II + Datos.Materias.Odo.Pre4odo[pos_usuario].Odontopediatria_II);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre5odo[pos_usuario].Morfologia_Dentaria_y_Oclusion > 5.5) Entonces;
+                Mostrar << "Ortodoncia_I:...", Datos.Materias.Odo.Pre4odo[pos_usuario].Ortodoncia_I;
+                Suma = Suma + (Datos.Materias.Odo.Pre4odo[pos_usuario].Ortodoncia_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre1odo[pos_usuario].Histofisiologia > 5.5) Entonces;
+                Mostrar << "Periodoncia_I:...", Datos.Materias.Odo.Pre4odo[pos_usuario].Periodoncia_I;
+                Suma = Suma + (Datos.Materias.Odo.Pre4odo[pos_usuario].Periodoncia_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre4odo[pos_usuario].Periodoncia_I > 5.5) Entonces;
+                Mostrar << "Periodoncia_II:...", Datos.Materias.Odo.Pre4odo[pos_usuario].Periodoncia_II;
+                Suma = Suma + (Datos.Materias.Odo.Pre4odo[pos_usuario].Periodoncia_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre4odo[pos_usuario].Ortodoncia_I > 5.5) Entonces;
+                Mostrar << "Ortodoncia_II:...", Datos.Materias.Odo.Pre4odo[pos_usuario].Ortodoncia_II;
+                Suma = Suma + (Datos.Materias.Odo.Pre4odo[pos_usuario].Ortodoncia_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre4odo[pos_usuario].Atencion_Integral_de_Nino_I > 5.5) Entonces;
+                Mostrar << "Odontopediatria_II:...", Datos.Materias.Odo.Pre4odo[pos_usuario].Odontopediatria_II;
+                Suma = Suma + (Datos.Materias.Odo.Pre4odo[pos_usuario].Odontopediatria_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 5: Comunitaria, Investigación y General
+
+            Si (Datos[pos_usuario].Year = 1) Entonces;
+                Mostrar << "Odontologia_Comunitaria_I:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_I;
+                Mostrar << "Formacion_Cultural_y_Artistica:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Formacion_Cultural_y_Artistica;
+                Mostrar << "Morfologia_Dentaria_y_Oclusion:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Morfologia_Dentaria_y_Oclusion;
+                Mostrar << "Formacion_Instrumental:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Formacion_Instrumental;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_I + Datos.Materias.Odo.Pre5odo[pos_usuario].Formacion_Cultural_y_Artistica + Datos.Materias.Odo.Pre5odo[pos_usuario].Morfologia_Dentaria_y_Oclusion + Datos.Materias.Odo.Pre5odo[pos_usuario].Formacion_Instrumental);
+                Contador = Contador + 4;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 2) Entonces;
+                Mostrar << "Odontologia_Comunitaria_II:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_II;
+                Mostrar << "Investigacion_I:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_I;
+                Mostrar << "Psicologia:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Psicologia;
+                Mostrar << "Farmacologia:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Farmacologia;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_II + Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_I + Datos.Materias.Odo.Pre5odo[pos_usuario].Psicologia + Datos.Materias.Odo.Pre5odo[pos_usuario].Farmacologia);
+                Contador = Contador + 4;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 3) Entonces;
+                Mostrar << "Odontologia_Comunitaria_III:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_III;
+                Mostrar << "Investigacion_II:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_II;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_III + Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_II);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 4) Entonces;
+                Mostrar << "Odontologia_Comunitaria_IV:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_IV;
+                Mostrar << "Investigacion_IV:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_IV;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_IV + Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_IV);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 5) Entonces;
+                Mostrar << "Salud_Publica:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Salud_Publica;
+                Mostrar << "Investigacion_V:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_V;
+                Mostrar << "Trabajo_de_Grado:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Trabajo_de_Grado;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Salud_Publica + Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_V + Datos.Materias.Odo.Pre5odo[pos_usuario].Trabajo_de_Grado);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_I > 5.5) Entonces;
+                Mostrar << "Odontologia_Comunitaria_II:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_II;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre5odo[pos_usuario].Formacion_Instrumental > 5.5) Entonces;
+                Mostrar << "Investigacion_I:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_I;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre5odo[pos_usuario].Formacion_Cultural_y_Artistica > 5.5) Entonces;
+                Mostrar << "Psicologia:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Psicologia;
+                Mostrar << "Farmacologia:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Farmacologia;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Psicologia + Datos.Materias.Odo.Pre5odo[pos_usuario].Farmacologia);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_II > 5.5) Entonces;
+                Mostrar << "Odontologia_Comunitaria_III:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_III;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_I > 5.5) Entonces;
+                Mostrar << "Investigacion_II:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_II;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_II > 5.5) Entonces;
+                Mostrar << "Investigacion_IV:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_IV;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_IV);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre3odo[pos_usuario].Clinica_Integral_del_Adulto_I > 5.5) Entonces;
+                Mostrar << "Odontologia_Comunitaria_IV:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_IV;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_IV);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre5odo[pos_usuario].Odontologia_Comunitaria_IV > 5.5) Entonces;
+                Mostrar << "Salud_Publica:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Salud_Publica;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Salud_Publica);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_IV > 5.5) Entonces;
+                Mostrar << "Investigacion_V:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_V;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_V);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Odo.Pre5odo[pos_usuario].Investigacion_V > 5.5) Entonces;
+                Mostrar << "Trabajo_de_Grado:...", Datos.Materias.Odo.Pre5odo[pos_usuario].Trabajo_de_Grado;
+                Suma = Suma + (Datos.Materias.Odo.Pre5odo[pos_usuario].Trabajo_de_Grado);
+                Contador = Contador + 1;
+            Fin_Si
+
+        Caso(Datos[pos_usuario].Carrera = "Veterinaria");
+
+            //Año 1
+
+            Si (Datos[pos_usuario].Year = 1) Entonces;
+                Mostrar << "Bioquimica:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Bioquimica; 
+                Mostrar << "Anat_De_Los_Animales_Domestic:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Anat_De_Los_Animales_Domestic; 
+                Mostrar << "Zoologia:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Zoologia; 
+                Mostrar << "Faenas_Pecuarias:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Faenas_Pecuarias; 
+                Mostrar << "Ingles_Instrumental:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Ingles_Instrumental; 
+                Mostrar << "Ecologia_Agricola:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Ecologia_Agricola; 
+                Mostrar << "Anali_Del_Perfil_Profesional:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Anali_Del_Perfil_Profesional; 
+                Mostrar << "Educacion_Fisica_Y_Deportes:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Educacion_Fisica_Y_Deportes; 
+                Mostrar << "Computacion:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Computacion; 
+                Suma = Suma + (Datos.Materias.Vete.Pre1vete[pos_usuario].Bioquimica + Datos.Materias.Vete.Pre1vete[pos_usuario].Anat_De_Los_Animales_Domestic + Datos.Materias.Vete.Pre1vete[pos_usuario].Zoologia + Datos.Materias.Vete.Pre1vete[pos_usuario].Faenas_Pecuarias + Datos.Materias.Vete.Pre1vete[pos_usuario].Ingles_Instrumental + Datos.Materias.Vete.Pre1vete[pos_usuario].Ecologia_Agricola + Datos.Materias.Vete.Pre1vete[pos_usuario].Anali_Del_Perfil_Profesional + Datos.Materias.Vete.Pre1vete[pos_usuario].Educacion_Fisica_Y_Deportes + Datos.Materias.Vete.Pre1vete[pos_usuario].Computacion);
+                Contador = Contador + 9;
+            Fin_Si
+
+            //Año 2
+
+            Si (Datos[pos_usuario].Year = 2) Entonces;
+                Mostrar << "Histologia_Veterinaria:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Histologia_Veterinaria; 
+                Mostrar << "Fisiologia_Animal:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Fisiologia_Animal; 
+                Mostrar << "Bioestadistica:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Bioestadistica; 
+                Mostrar << "Genetica:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Genetica; 
+                Mostrar << "Microbiologia:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Microbiologia; 
+                Mostrar << "Zootecnia:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Zootecnia; 
+                Mostrar << "Arte_Y_Cultura:...", Datos.Materias.Vete.Pre1vete[pos_usuario].Arte_Y_Cultura; 
+                Suma = Suma + (Datos.Materias.Vete.Pre1vete[pos_usuario].Histologia_Veterinaria + Datos.Materias.Vete.Pre1vete[pos_usuario].Fisiologia_Animal + Datos.Materias.Vete.Pre1vete[pos_usuario].Bioestadistica + Datos.Materias.Vete.Pre1vete[pos_usuario].Genetica + Datos.Materias.Vete.Pre1vete[pos_usuario].Microbiologia + Datos.Materias.Vete.Pre1vete[pos_usuario].Zootecnia + Datos.Materias.Vete.Pre1vete[pos_usuario].Arte_Y_Cultura);
+                Contador = Contador + 7;
+            Fin_Si
+
+            //Año 3
+
+            Si (Datos[pos_usuario].Year = 3) Entonces;
+                Mostrar << "Patologia_Clinica_Veterinaria:...", Datos.Materias.Vete.Pre2vete[pos_usuario].Patologia_Clinica_Veterinaria; 
+                Mostrar << "Farmacologia_Veterinaria:...", Datos.Materias.Vete.Pre2vete[pos_usuario].Farmacologia_Veterinaria; 
+                Mostrar << "Semiologia_Veterinaria:...", Datos.Materias.Vete.Pre2vete[pos_usuario].Semiologia_Veterinaria; 
+                Mostrar << "Nutricion_Y_Alimentacion_Ani:...", Datos.Materias.Vete.Pre2vete[pos_usuario].Nutricion_Y_Alimentacion_Ani; 
+                Mostrar << "Reproduccion_Animal:...", Datos.Materias.Vete.Pre2vete[pos_usuario].Reproduccion_Animal; 
+                Mostrar << "Parasitologia_Veterinaria:...", Datos.Materias.Vete.Pre2vete[pos_usuario].Parasitologia_Veterinaria; 
+                Mostrar << "Anatomia_Patologica_Vet:...", Datos.Materias.Vete.Pre2vete[pos_usuario].Anatomia_Patologica_Vet; 
+                Suma = Suma + (Datos.Materias.Vete.Pre2vete[pos_usuario].Patologia_Clinica_Veterinaria + Datos.Materias.Vete.Pre2vete[pos_usuario].Farmacologia_Veterinaria + Datos.Materias.Vete.Pre2vete[pos_usuario].Semiologia_Veterinaria + Datos.Materias.Vete.Pre2vete[pos_usuario].Nutricion_Y_Alimentacion_Ani + Datos.Materias.Vete.Pre2vete[pos_usuario].Reproduccion_Animal + Datos.Materias.Vete.Pre2vete[pos_usuario].Parasitologia_Veterinaria + Datos.Materias.Vete.Pre2vete[pos_usuario].Anatomia_Patologica_Vet);
+                Contador = Contador + 7;
+            Fin_Si
+
+            //Año 4
+
+            Si (Datos[pos_usuario].Year = 4) Entonces;
+                Mostrar << "Cirugia_Veterinaria:...", Datos.Materias.Vete.Pre3vete[pos_usuario].Cirugia_Veterinaria; 
+                Mostrar << "Medicina_De_Caninos_Y_Felinos:...", Datos.Materias.Vete.Pre3vete[pos_usuario].Medicina_De_Caninos_Y_Felinos; 
+                Mostrar << "Medicina_De_Rumiantes_Y_Equino:...", Datos.Materias.Vete.Pre3vete[pos_usuario].Medicina_De_Rumiantes_Y_Equino; 
+                Mostrar << "Investigacion_Veterinaria_I:...", Datos.Materias.Vete.Pre3vete[pos_usuario].Investigacion_Veterinaria_I; 
+                Mostrar << "Extension_Profesionali:...", Datos.Materias.Vete.Pre3vete[pos_usuario].Extension_Profesionali; 
+                Mostrar << "Gerencia_De_Ser_Veterinaria:...", Datos.Materias.Vete.Pre3vete[pos_usuario].Gerencia_De_Ser_Veterinaria; 
+                Mostrar << "Saneamiento_Ambiental:...", Datos.Materias.Vete.Pre3vete[pos_usuario].Saneamiento_Ambiental; 
+                Mostrar << "Mejoramiento_Animal:...", Datos.Materias.Vete.Pre3vete[pos_usuario].Mejoramiento_Animal; 
+                Suma = Suma + (Datos.Materias.Vete.Pre3vete[pos_usuario].Cirugia_Veterinaria + Datos.Materias.Vete.Pre3vete[pos_usuario].Medicina_De_Caninos_Y_Felinos + Datos.Materias.Vete.Pre3vete[pos_usuario].Medicina_De_Rumiantes_Y_Equino + Datos.Materias.Vete.Pre3vete[pos_usuario].Investigacion_Veterinaria_I + Datos.Materias.Vete.Pre3vete[pos_usuario].Extension_Profesionali + Datos.Materias.Vete.Pre3vete[pos_usuario].Gerencia_De_Ser_Veterinaria + Datos.Materias.Vete.Pre3vete[pos_usuario].Saneamiento_Ambiental + Datos.Materias.Vete.Pre3vete[pos_usuario].Mejoramiento_Animal);
+                Contador = Contador + 8;
+            Fin_Si
+
+            //Año 5
+
+            Si (Datos[pos_usuario].Year = 5) Entonces;
+                Mostrar << "Pasantias_Profesionales:...", Datos.Materias.Vete.Pre4vete[pos_usuario].Pasantias_Profesionales; 
+                Mostrar << "Medicina_De_Suinos_Y_Aves:...", Datos.Materias.Vete.Pre4vete[pos_usuario].Medicina_De_Suinos_Y_Aves; 
+                Mostrar << "Epidemiologia_General:...", Datos.Materias.Vete.Pre4vete[pos_usuario].Epidemiologia_General; 
+                Mostrar << "Derecho_Constitucional:...", Datos.Materias.Vete.Pre4vete[pos_usuario].Derecho_Constitucional; 
+                Mostrar << "Proceso_De_Prod_Ind_E_Inp_San:...", Datos.Materias.Vete.Pre4vete[pos_usuario].Proceso_De_Prod_Ind_E_Inp_San; 
+                Mostrar << "Legislacion_Y_Deontologia_Vet:...", Datos.Materias.Vete.Pre4vete[pos_usuario].Legislacion_Y_Deontologia_Vet; 
+                Mostrar << "Med_Conejo_Peces_Esp_Silt_Lab:...", Datos.Materias.Vete.Pre4vete[pos_usuario].Med_Conejo_Peces_Esp_Silt_Lab; 
+                Mostrar << "Investigacion_Veterinaria_II:...", Datos.Materias.Vete.Pre4vete[pos_usuario].Investigacion_Veterinaria_II; 
+                Mostrar << "Extension_Profesional_II:...", Datos.Materias.Vete.Pre4vete[pos_usuario].Extension_Profesional_II; 
+                Mostrar << "Med_Preventiva_Y_Cli_Hospit:...", Datos.Materias.Vete.Pre4vete[pos_usuario].Med_Preventiva_Y_Cli_Hospit; 
+                Mostrar << "Servicio_Comunitario:...", Datos.Materias.Vete.Pre4vete[pos_usuario].Servicio_Comunitario; 
+                Suma = Suma + (Datos.Materias.Vete.Pre4vete[pos_usuario].Pasantias_Profesionales + Datos.Materias.Vete.Pre4vete[pos_usuario].Medicina_De_Suinos_Y_Aves + Datos.Materias.Vete.Pre4vete[pos_usuario].Epidemiologia_General + Datos.Materias.Vete.Pre4vete[pos_usuario].Derecho_Constitucional + Datos.Materias.Vete.Pre4vete[pos_usuario].Proceso_De_Prod_Ind_E_Inp_San + Datos.Materias.Vete.Pre4vete[pos_usuario].Legislacion_Y_Deontologia_Vet + Datos.Materias.Vete.Pre4vete[pos_usuario].Med_Conejo_Peces_Esp_Silt_Lab + Datos.Materias.Vete.Pre4vete[pos_usuario].Investigacion_Veterinaria_II + Datos.Materias.Vete.Pre4vete[pos_usuario].Extension_Profesional_II + Datos.Materias.Vete.Pre4vete[pos_usuario].Med_Preventiva_Y_Cli_Hospit + Datos.Materias.Vete.Pre4vete[pos_usuario].Servicio_Comunitario);
+                Contador = Contador + 11;
+            Fin_Si
+
+        Caso(Datos[pos_usuario].Carrera = "Derecho");
+
+            //Año 1
+
+            Si (Datos[pos_usuario].Year = 1) Entonces;
+                Mostrar << "Derecho_Civil_I:...", Datos.Materias.Der.Pre1der[pos_usuario].Derecho_Civil_I;
+                Mostrar << "Derecho_Constitucional:...", Datos.Materias.Der.Pre1der[pos_usuario].Derecho_Constitucional;
+                Mostrar << "Pensamiento_Bolivariano:...", Datos.Materias.Der.Pre1der[pos_usuario].Pensamiento_Bolivariano;
+                Mostrar << "Introduccion_Al_Derecho:...", Datos.Materias.Der.Pre1der[pos_usuario].Introduccion_Al_Derecho;
+                Mostrar << "Economia_Politica:...", Datos.Materias.Der.Pre1der[pos_usuario].Economia_Politica;
+                Mostrar << "Derecho_Popular:...", Datos.Materias.Der.Pre1der[pos_usuario].Derecho_Popular;
+                Mostrar << "Logica_Juridica:...", Datos.Materias.Der.Pre1der[pos_usuario].Logica_Juridica;
+                Mostrar << "Deontologia_Juridica:...", Datos.Materias.Der.Pre1der[pos_usuario].Deontologia_Juridica;
+                Mostrar << "Arte_Y_Cultura:...", Datos.Materias.Der.Pre1der[pos_usuario].Arte_Y_Cultura;
+                Mostrar << "Deporte:...", Datos.Materias.Der.Pre1der[pos_usuario].Deporte;
+                Suma = Suma + (Datos.Materias.Der.Pre1der[pos_usuario].Derecho_Civil_I + Datos.Materias.Der.Pre1der[pos_usuario].Derecho_Constitucional + Datos.Materias.Der.Pre1der[pos_usuario].Pensamiento_Bolivariano + Datos.Materias.Der.Pre1der[pos_usuario].Introduccion_Al_Derecho + Datos.Materias.Der.Pre1der[pos_usuario].Economia_Politica + Datos.Materias.Der.Pre1der[pos_usuario].Derecho_Popular + Datos.Materias.Der.Pre1der[pos_usuario].Logica_Juridica + Datos.Materias.Der.Pre1der[pos_usuario].Deontologia_Juridica + Datos.Materias.Der.Pre1der[pos_usuario].Arte_Y_Cultura + Datos.Materias.Der.Pre1der[pos_usuario].Deporte);
+                Contador = Contador + 10;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 1 Y Datos.Materias.Der.Pre2der[pos_usuario].Practicas_Juridicas_I > 5.5) Entonces;
+                Mostrar << "Metod_De_Inv_Juridica:...", Datos.Materias.Der.Pre1der[pos_usuario].Metod_De_Inv_Juridica;
+                Suma = Suma + (Datos.Materias.Der.Pre1der[pos_usuario].Metod_De_Inv_Juridica);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 1 Y Datos.Materias.Der.Pre2der[pos_usuario].Filosofia_Del_Derecho > 5.5) Entonces;
+                Mostrar << "Derecho_Romano:...", Datos.Materias.Der.Pre1der[pos_usuario].Derecho_Romano;
+                Suma = Suma + (Datos.Materias.Der.Pre1der[pos_usuario].Derecho_Romano);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Año 2
+
+            Si (Datos[pos_usuario].Year = 2) Entonces;
+                Mostrar << "Derecho_Agrario:...", Datos.Materias.Der.Pre2der[pos_usuario].Derecho_Agrario;
+                Mostrar << "Derecho_Ambiental:...", Datos.Materias.Der.Pre2der[pos_usuario].Derecho_Ambiental;
+                Mostrar << "Medicina_Legal:...", Datos.Materias.Der.Pre2der[pos_usuario].Medicina_Legal;
+                Mostrar << "Criminologia:...", Datos.Materias.Der.Pre2der[pos_usuario].Criminologia;
+                Mostrar << "Derecho_Penal_I:...", Datos.Materias.Der.Pre2der[pos_usuario].Derecho_Penal_I;
+                Mostrar << "Filosofia_Del_Derecho:...", Datos.Materias.Der.Pre2der[pos_usuario].Filosofia_Del_Derecho;
+                Mostrar << "Derecho_Registral:...", Datos.Materias.Der.Pre2der[pos_usuario].Derecho_Registral;
+                Mostrar << "Proyecto_Socio_Juridico_Comunitario_I:...", Datos.Materias.Der.Pre2der[pos_usuario].Proyecto_Socio_Juridico_Comunitario_I;
+                Mostrar << "Practicas_Juridicas_I:...", Datos.Materias.Der.Pre2der[pos_usuario].Practicas_Juridicas_I;
+                Mostrar << "Electivas_2:...", Datos.Materias.Der.Pre2der[pos_usuario].Electivas_2;
+                Suma = Suma + (Datos.Materias.Der.Pre2der[pos_usuario].Derecho_Agrario + Datos.Materias.Der.Pre2der[pos_usuario].Derecho_Ambiental + Datos.Materias.Der.Pre2der[pos_usuario].Medicina_Legal + Datos.Materias.Der.Pre2der[pos_usuario].Criminologia + Datos.Materias.Der.Pre2der[pos_usuario].Derecho_Penal_I + Datos.Materias.Der.Pre2der[pos_usuario].Filosofia_Del_Derecho + Datos.Materias.Der.Pre2der[pos_usuario].Derecho_Registral + Datos.Materias.Der.Pre2der[pos_usuario].Proyecto_Socio_Juridico_Comunitario_I + Datos.Materias.Der.Pre2der[pos_usuario].Practicas_Juridicas_I + Datos.Materias.Der.Pre2der[pos_usuario].Electivas_2);
+                Contador = Contador + 10;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 2 Y Datos.Materias.Der.Pre1der[pos_usuario].Derecho_Civil_I > 5.5) Entonces;
+                Mostrar << "Derecho_Civil_II:...", Datos.Materias.Der.Pre2der[pos_usuario].Derecho_Civil_II;
+                Suma = Suma + (Datos.Materias.Der.Pre2der[pos_usuario].Derecho_Civil_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Año 3
+
+            Si (Datos[pos_usuario].Year = 3) Entonces;
+                Mostrar << "Derecho_Administrativo:...", Datos.Materias.Der.Pre3der[pos_usuario].Derecho_Administrativo;
+                Mostrar << "Derecho_Laboral:...", Datos.Materias.Der.Pre3der[pos_usuario].Derecho_Laboral;
+                Mostrar << "Derecho_Familiar:...", Datos.Materias.Der.Pre3der[pos_usuario].Derecho_Familiar;
+                Mostrar << "Obligaciones_I:...", Datos.Materias.Der.Pre3der[pos_usuario].Obligaciones_I;
+                Mostrar << "Derecho_Internacional_Publico:...", Datos.Materias.Der.Pre3der[pos_usuario].Derecho_Internacional_Publico;
+                Mostrar << "Teoria_General_Del_Proceso:...", Datos.Materias.Der.Pre3der[pos_usuario].Teoria_General_Del_Proceso;
+                Mostrar << "Derecho_Tributario:...", Datos.Materias.Der.Pre3der[pos_usuario].Derecho_Tributario;
+                Suma = Suma + (Datos.Materias.Der.Pre3der[pos_usuario].Derecho_Administrativo + Datos.Materias.Der.Pre3der[pos_usuario].Derecho_Laboral + Datos.Materias.Der.Pre3der[pos_usuario].Derecho_Familiar + Datos.Materias.Der.Pre3der[pos_usuario].Obligaciones_I + Datos.Materias.Der.Pre3der[pos_usuario].Derecho_Internacional_Publico + Datos.Materias.Der.Pre3der[pos_usuario].Teoria_General_Del_Proceso + Datos.Materias.Der.Pre3der[pos_usuario].Derecho_Tributario);
+                Contador = Contador + 7;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 3 Y Datos.Materias.Der.Pre2der[pos_usuario].Derecho_Penal_I > 5.5) Entonces;
+                Mostrar << "Derecho_Penal_II:...", Datos.Materias.Der.Pre3der[pos_usuario].Derecho_Penal_II;
+                Suma = Suma + (Datos.Materias.Der.Pre3der[pos_usuario].Derecho_Penal_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 3 Y Datos.Materias.Der.Pre2der[pos_usuario].Proyecto_Socio_Juridico_Comunitario_I > 5.5) Entonces;
+                Mostrar << "Proyecto_Sociojuridico_II:...", Datos.Materias.Der.Pre3der[pos_usuario].Proyecto_Sociojuridico_II;
+                Suma = Suma + (Datos.Materias.Der.Pre3der[pos_usuario].Proyecto_Sociojuridico_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Year = 3 Y Datos.Materias.Der.Pre2der[pos_usuario].Practicas_Juridicas_I > 5.5) Entonces;
+                Mostrar << "Practicas_Juridicas_II:...", Datos.Materias.Der.Pre3der[pos_usuario].Practicas_Juridicas_II;
+                Suma = Suma + (Datos.Materias.Der.Pre3der[pos_usuario].Practicas_Juridicas_II);
+                Contador = Contador + 1;
+            Fin_Si;
+
+            Si (Datos[pos_usuario].Year = 3 Y Datos.Materias.Der.Pre2der[pos_usuario].Electivas_2 > 5.5) Entonces;
+                Mostrar << "Electivas_3:...", Datos.Materias.Der.Pre3der[pos_usuario].Electivas_3;
+                Suma = Suma + (Datos.Materias.Der.Pre3der[pos_usuario].Electivas_3);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Año 4
+
+            Si (Datos[pos_usuario].Year = 4) Entonces;
+                Mostrar << "Derecho_Contencioso_Administrativo:...", Datos.Materias.Der.Pre4der[pos_usuario].Derecho_Contencioso_Administrativo;
+                Mostrar << "Derecho_Procesal_Penal_I:...", Datos.Materias.Der.Pre4der[pos_usuario].Derecho_Procesal_Penal_I;
+                Mostrar << "Derecho_Procesal_Laboral_I:...", Datos.Materias.Der.Pre4der[pos_usuario].Derecho_Procesal_Laboral_I;
+                Mostrar << "Derecho_En_Sucesiones:...", Datos.Materias.Der.Pre4der[pos_usuario].Derecho_En_Sucesiones;
+                Mostrar << "Obligaciones_II:...", Datos.Materias.Der.Pre4der[pos_usuario].Obligaciones_II;
+                Mostrar << "Derecho_Internacional_Privado:...", Datos.Materias.Der.Pre4der[pos_usuario].Derecho_Internacional_Privado;
+                Mostrar << "Derecho_Procesal_Civil_I:...", Datos.Materias.Der.Pre4der[pos_usuario].Derecho_Procesal_Civil_I;
+                Mostrar << "Derecho_Probatorio_I:...", Datos.Materias.Der.Pre4der[pos_usuario].Derecho_Probatorio_I;
+                Mostrar << "Proyecto_Socio_Juridico_III:...", Datos.Materias.Der.Pre4der[pos_usuario].Proyecto_Socio_Juridico_III;
+                Mostrar << "Practicas_Juridicas_III:...", Datos.Materias.Der.Pre4der[pos_usuario].Practicas_Juridicas_III;
+                Mostrar << "Electivas_4:...", Datos.Materias.Der.Pre4der[pos_usuario].Electivas_4;
+                Suma = Suma + (Datos.Materias.Der.Pre4der[pos_usuario].Derecho_Contencioso_Administrativo + Datos.Materias.Der.Pre4der[pos_usuario].Derecho_Procesal_Penal_I + Datos.Materias.Der.Pre4der[pos_usuario].Derecho_Procesal_Laboral_I + Datos.Materias.Der.Pre4der[pos_usuario].Derecho_En_Sucesiones + Datos.Materias.Der.Pre4der[pos_usuario].Obligaciones_II + Datos.Materias.Der.Pre4der[pos_usuario].Derecho_Internacional_Privado + Datos.Materias.Der.Pre4der[pos_usuario].Derecho_Procesal_Civil_I + Datos.Materias.Der.Pre4der[pos_usuario].Derecho_Probatorio_I + Datos.Materias.Der.Pre4der[pos_usuario].Proyecto_Socio_Juridico_III + Datos.Materias.Der.Pre4der[pos_usuario].Practicas_Juridicas_III + Datos.Materias.Der.Pre4der[pos_usuario].Electivas_4);
+                Contador = Contador + 11;
+            Fin_Si
+
+            //Año 5
+
+            Si (Datos[pos_usuario].Year = 5) Entonces;
+                Mostrar << "Derecho_Procesal_Penal_II:...", Datos.Materias.Der.Pre5der[pos_usuario].Derecho_Procesal_Penal_II;
+                Mostrar << "Obligaciones_III:...", Datos.Materias.Der.Pre5der[pos_usuario].Obligaciones_III;
+                Mostrar << "Derecho_Procesal_Civil_II:...", Datos.Materias.Der.Pre5der[pos_usuario].Derecho_Procesal_Civil_II;
+                Mostrar << "Derecho_Mercantil:...", Datos.Materias.Der.Pre5der[pos_usuario].Derecho_Mercantil;
+                Mostrar << "Derecho_Probatorio_II:...", Datos.Materias.Der.Pre5der[pos_usuario].Derecho_Probatorio_II;
+                Mostrar << "Contratos_Y_Garantias:...", Datos.Materias.Der.Pre5der[pos_usuario].Contratos_Y_Garantias;
+                Mostrar << "Proyecto_Socio_Juridico_IV:...", Datos.Materias.Der.Pre5der[pos_usuario].Proyecto_Socio_Juridico_IV;
+                Mostrar << "Practicas_Juridicas_IV:...", Datos.Materias.Der.Pre5der[pos_usuario].Practicas_Juridicas_IV;
+                Mostrar << "Electivas_5:...", Datos.Materias.Der.Pre5der[pos_usuario].Electivas_5;
+                Mostrar << "Pasantias:...", Datos.Materias.Der.Pre5der[pos_usuario].Pasantias;
+                Mostrar << "Seminario_Tesina_De_Grado:...", Datos.Materias.Der.Pre5der[pos_usuario].Seminario_Tesina_De_Grado;
+                Suma = Suma + (Datos.Materias.Der.Pre5der[pos_usuario].Derecho_Procesal_Penal_II + Datos.Materias.Der.Pre5der[pos_usuario].Obligaciones_III + Datos.Materias.Der.Pre5der[pos_usuario].Derecho_Procesal_Civil_II + Datos.Materias.Der.Pre5der[pos_usuario].Derecho_Mercantil + Datos.Materias.Der.Pre5der[pos_usuario].Derecho_Probatorio_II + Datos.Materias.Der.Pre5der[pos_usuario].Contratos_Y_Garantias + Datos.Materias.Der.Pre5der[pos_usuario].Proyecto_Socio_Juridico_IV + Datos.Materias.Der.Pre5der[pos_usuario].Practicas_Juridicas_IV + Datos.Materias.Der.Pre5der[pos_usuario].Electivas_5 + Datos.Materias.Der.Pre5der[pos_usuario].Pasantias + Datos.Materias.Der.Pre5der[pos_usuario].Seminario_Tesina_De_Grado);
+                Contador = Contador + 11;
+            Fin_Si
+
+        Caso(Datos[pos_usuario].Carrera = "Comunicación");
+
+            //Prelación 1: Lenguaje, Estilo y Teoría
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Morfosintaxis del castellano:...", Datos.Materias.Comu.Pre1comu[pos_usuario].Morfosintaxis_del_castellano;
+                Suma = Suma + (Datos.Materias.Comu.Pre1comu[pos_usuario].Morfosintaxis_del_castellano);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 4 ) Entonces;
+                Mostrar << "Teoria de la Comunicacion:...", Datos.Materias.Comu.Pre1comu[pos_usuario].Teoria_de_la_Comunicacion;
+                Suma = Suma + (Datos.Materias.Comu.Pre1comu[pos_usuario].Teoria_de_la_Comunicacion);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 5) Entonces;
+                Mostrar << "Investigacion de la Comunicacion:...", Datos.Materias.Comu.Pre1comu[pos_usuario].Investigacion_de_la_Comunicacion;
+                Suma = Suma + (Datos.Materias.Comu.Pre1comu[pos_usuario].Investigacion_de_la_Comunicacion);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre1comu[pos_usuario].Morfosintaxis_del_castellano > 5.5) Entonces;
+                Mostrar << "Taller de Redaccion y Estilo I:...", Datos.Materias.Comu.Pre1comu[pos_usuario].Taller_de_Redaccion_y_Estilo_I;
+                Suma = Suma + (Datos.Materias.Comu.Pre1comu[pos_usuario].Taller_de_Redaccion_y_Estilo_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre1comu[pos_usuario].Taller_de_Redaccion_y_Estilo_I > 5.5) Entonces;
+                Mostrar << "Taller de redaccion y Estilo II:...", Datos.Materias.Comu.Pre1comu[pos_usuario].Taller_de_redaccion_y_Estilo_II;
+                Suma = Suma + (Datos.Materias.Comu.Pre1comu[pos_usuario].Taller_de_redaccion_y_Estilo_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre1comu[pos_usuario].Teoria_de_la_Comunicacion > 5.5) Entonces;
+                Mostrar << "Sociologia de la Comunicacion:...", Datos.Materias.Comu.Pre1comu[pos_usuario].Sociologia_de_la_Comunicacion;
+                Suma = Suma + (Datos.Materias.Comu.Pre1comu[pos_usuario].Sociologia_de_la_Comunicacion);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre1comu[pos_usuario].Sociologia_de_la_Comunicacion > 5.5) Entonces;
+                Mostrar << "Semiologia:...", Datos.Materias.Comu.Pre1comu[pos_usuario].Semiologia;
+                Suma = Suma + (Datos.Materias.Comu.Pre1comu[pos_usuario].Semiologia);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 2: Producción de Medios
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 2 ) Entonces;
+                Mostrar << "Comunicacion Social en la Fotografia:...", Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_Social_en_la_Fotografia;
+                Mostrar << "Comunicacion Social en la Radio:...", Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_Social_en_la_Radio;
+                Mostrar << "Comunicacion Social en cine:...", Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_Social_en_cine;
+                Mostrar << "Comunicacion Social en la television:...", Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_Social_en_la_television;
+                Suma = Suma + (Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_Social_en_la_Fotografia + Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_Social_en_la_Radio + Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_Social_en_cine + Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_Social_en_la_television);
+                Contador = Contador + 4;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_Social_en_la_Fotografia > 5.5) Entonces;
+                Mostrar << "Comunicacion grafica:...", Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_grafica;
+                Suma = Suma + (Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_grafica);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_Social_en_la_Radio > 5.5) Entonces;
+                Mostrar << "Periodismo radiofonico:...", Datos.Materias.Comu.Pre2comu[pos_usuario].Periodismo_radiofonico;
+                Suma = Suma + (Datos.Materias.Comu.Pre2comu[pos_usuario].Periodismo_radiofonico);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_Social_en_cine > 5.5) Entonces;
+                Mostrar << "Lenguaje y planificacion cinematografica:...", Datos.Materias.Comu.Pre2comu[pos_usuario].Lenguaje_y_planificacion_cinematografica;
+                Suma = Suma + (Datos.Materias.Comu.Pre2comu[pos_usuario].Lenguaje_y_planificacion_cinematografica);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_Social_en_la_television > 5.5) Entonces;
+                Mostrar << "Periodismo Televisivo:...", Datos.Materias.Comu.Pre2comu[pos_usuario].Periodismo_Televisivo;
+                Suma = Suma + (Datos.Materias.Comu.Pre2comu[pos_usuario].Periodismo_Televisivo);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre2comu[pos_usuario].Comunicacion_grafica > 5.5) Entonces;
+                Mostrar << "Estetica de la Imagen y el Sonido:...", Datos.Materias.Comu.Pre2comu[pos_usuario].Estetica_de_la_Imagen_y_el_Sonido;
+                Suma = Suma + (Datos.Materias.Comu.Pre2comu[pos_usuario].Estetica_de_la_Imagen_y_el_Sonido);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 6) Entonces;
+                Mostrar << "Produccion de Television:...", Datos.Materias.Comu.Pre2comu[pos_usuario].Produccion_de_Television;
+                Mostrar << "Produccion de Radio:...", Datos.Materias.Comu.Pre2comu[pos_usuario].Produccion_de_Radio;
+                Mostrar << "Produccion de Cine:...", Datos.Materias.Comu.Pre2comu[pos_usuario].Produccion_de_Cine;
+                Suma = Suma + (Datos.Materias.Comu.Pre2comu[pos_usuario].Produccion_de_Television + Datos.Materias.Comu.Pre2comu[pos_usuario].Produccion_de_Radio + Datos.Materias.Comu.Pre2comu[pos_usuario].Produccion_de_Cine);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre2comu[pos_usuario].Produccion_de_Cine > 5.5 And Datos.Materias.Comu.Pre2comu[pos_usuario].Produccion_de_Television > 5.5) Entonces;
+                Mostrar << "Montajes Audiovisuales:...", Datos.Materias.Comu.Pre2comu[pos_usuario].Montajes_Audiovisuales;
+                Suma = Suma + (Datos.Materias.Comu.Pre2comu[pos_usuario].Montajes_Audiovisuales);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 3: Periodismo, Opinión y Gestión
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Comunicacion Social en el periodismo:...", Datos.Materias.Comu.Pre3comu[pos_usuario].Comunicacion_Social_en_el_periodismo;
+                Suma = Suma + (Datos.Materias.Comu.Pre3comu[pos_usuario].Comunicacion_Social_en_el_periodismo);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 2 ) Entonces;
+                Mostrar << "Periodismo Informativo:...", Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_Informativo;
+                Suma = Suma + (Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_Informativo);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 4 ) Entonces;
+                Mostrar << "Opinion Publica:...", Datos.Materias.Comu.Pre3comu[pos_usuario].Opinion_Publica;
+                Suma = Suma + (Datos.Materias.Comu.Pre3comu[pos_usuario].Opinion_Publica);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 5) Entonces;
+                Mostrar << "Periodismo Interpretativo:...", Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_Interpretativo;
+                Mostrar << "Fotoperiodismo:...", Datos.Materias.Comu.Pre3comu[pos_usuario].Fotoperiodismo;
+                Mostrar << "Periodismo Cientifico:...", Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_Cientifico;
+                Mostrar << "Relaciones Publicas:...", Datos.Materias.Comu.Pre3comu[pos_usuario].Relaciones_Publicas;
+                Suma = Suma + (Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_Interpretativo + Datos.Materias.Comu.Pre3comu[pos_usuario].Fotoperiodismo + Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_Cientifico + Datos.Materias.Comu.Pre3comu[pos_usuario].Relaciones_Publicas);
+                Contador = Contador + 4;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre3comu[pos_usuario].Opinion_Publica > 5.5) Entonces;
+                Mostrar << "Periodismo de Opinion:...", Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_de_Opinion;
+                Suma = Suma + (Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_de_Opinion);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 6) Entonces;
+                Mostrar << "Locucion Basica:...", Datos.Materias.Comu.Pre3comu[pos_usuario].Locucion_Basica;
+                Mostrar << "Periodismo Economico:...", Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_Economico;
+                Suma = Suma + (Datos.Materias.Comu.Pre3comu[pos_usuario].Locucion_Basica + Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_Economico);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre3comu[pos_usuario].Relaciones_Publicas > 5.5) Entonces;
+                Mostrar << "Publicidad:...", Datos.Materias.Comu.Pre3comu[pos_usuario].Publicidad;
+                Suma = Suma + (Datos.Materias.Comu.Pre3comu[pos_usuario].Publicidad);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre3comu[pos_usuario].Locucion_Basica > 5.5) Entonces;
+                Mostrar << "Locucion Profesional:...", Datos.Materias.Comu.Pre3comu[pos_usuario].Locucion_Profesional;
+                Suma = Suma + (Datos.Materias.Comu.Pre3comu[pos_usuario].Locucion_Profesional);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre3comu[pos_usuario].Publicidad > 5.5) Entonces;
+                Mostrar << "Mercadeo:...", Datos.Materias.Comu.Pre3comu[pos_usuario].Mercadeo;
+                Suma = Suma + (Datos.Materias.Comu.Pre3comu[pos_usuario].Mercadeo);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 7) Entonces;
+                Mostrar << "Periodismo Politico:...", Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_Politico;
+                Suma = Suma + (Datos.Materias.Comu.Pre3comu[pos_usuario].Periodismo_Politico);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 4: Proyectos Comunitarios y Etapa de Grado
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 3 ) Entonces;
+                Mostrar << "Proyecto comunitario sociocomunicacional I:...", Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_I;
+                Suma = Suma + (Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 7) Entonces;
+                Mostrar << "Vinculacion Profesional en el campo socio comunicacional:...", Datos.Materias.Comu.Pre4comu[pos_usuario].Vinculacion_Profesional_en_el_campo_socio_comunicacional;
+                Suma = Suma + (Datos.Materias.Comu.Pre4comu[pos_usuario].Vinculacion_Profesional_en_el_campo_socio_comunicacional);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 8) Entonces;
+                Mostrar << "Orientacion Profesional:...", Datos.Materias.Comu.Pre4comu[pos_usuario].Orientacion_Profesional;
+                Mostrar << "Trabajo Especial de Grado:...", Datos.Materias.Comu.Pre4comu[pos_usuario].Trabajo_Especial_de_Grado;
+                Suma = Suma + (Datos.Materias.Comu.Pre4comu[pos_usuario].Orientacion_Profesional + Datos.Materias.Comu.Pre4comu[pos_usuario].Trabajo_Especial_de_Grado);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_I > 5.5) Entonces;
+                Mostrar << "Proyecto comunitario sociocomunicacional II:...", Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_II;
+                Suma = Suma + (Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_II > 5.5) Entonces;
+                Mostrar << "Proyecto comunitario sociocomunicacional III:...", Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_III;
+                Suma = Suma + (Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_III > 5.5) Entonces;
+                Mostrar << "Proyecto comunitario sociocomunicacional IV:...", Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_IV;
+                Suma = Suma + (Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_IV);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_IV > 5.5) Entonces;
+                Mostrar << "Proyecto comunitario sociocomunicacional V:...", Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_V;
+                Suma = Suma + (Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_V);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_V > 5.5) Entonces;
+                Mostrar << "Proyecto comunitario sociocomunicacional VI:...", Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_VI;
+                Suma = Suma + (Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_VI);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_VI > 5.5) Entonces;
+                Mostrar << "Proyecto comunitario sociocomunicacional VII:...", Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_VII;
+                Suma = Suma + (Datos.Materias.Comu.Pre4comu[pos_usuario].Proyecto_comunitario_sociocomunicacional_VII);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre4comu[pos_usuario].Orientacion_Profesional > 5.5) Entonces;
+                Mostrar << "Orientacion Profesional I:...", Datos.Materias.Comu.Pre4comu[pos_usuario].Orientacion_Profesional_I;
+                Suma = Suma + (Datos.Materias.Comu.Pre4comu[pos_usuario].Orientacion_Profesional_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 5: Generales y Socio-Políticas
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Psicologia de la Comunicacion:...", Datos.Materias.Comu.Pre5comu[pos_usuario].Psicologia_de_la_Comunicacion;
+                Mostrar << "Estadistica:...", Datos.Materias.Comu.Pre5comu[pos_usuario].Estadistica;
+                Mostrar << "Deporte Arte y cultura:...", Datos.Materias.Comu.Pre5comu[pos_usuario].Deporte_Arte_y_cultura;
+                Mostrar << "Pensamiento Bolivariano:...", Datos.Materias.Comu.Pre5comu[pos_usuario].Pensamiento_Bolivariano;
+                Suma = Suma + (Datos.Materias.Comu.Pre5comu[pos_usuario].Psicologia_de_la_Comunicacion + Datos.Materias.Comu.Pre5comu[pos_usuario].Estadistica + Datos.Materias.Comu.Pre5comu[pos_usuario].Deporte_Arte_y_cultura + Datos.Materias.Comu.Pre5comu[pos_usuario].Pensamiento_Bolivariano);
+                Contador = Contador + 4;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 4 ) Entonces;
+                Mostrar << "Etica y Legislacion de Medios y del Periodismo:...", Datos.Materias.Comu.Pre5comu[pos_usuario].Etica_y_Legislacion_de_Medios_y_del_Periodismo;
+                Mostrar << "Formacion Sociopolitica:...", Datos.Materias.Comu.Pre5comu[pos_usuario].Formacion_Sociopolitica;
+                Suma = Suma + (Datos.Materias.Comu.Pre5comu[pos_usuario].Etica_y_Legislacion_de_Medios_y_del_Periodismo + Datos.Materias.Comu.Pre5comu[pos_usuario].Formacion_Sociopolitica);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 5) Entonces;
+                Mostrar << "Economia Politica:...", Datos.Materias.Comu.Pre5comu[pos_usuario].Economia_Politica;
+                Mostrar << "Tecnologia de la Informacion:...", Datos.Materias.Comu.Pre5comu[pos_usuario].Tecnologia_de_la_Informacion;
+                Suma = Suma + (Datos.Materias.Comu.Pre5comu[pos_usuario].Economia_Politica + Datos.Materias.Comu.Pre5comu[pos_usuario].Tecnologia_de_la_Informacion);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 6) Entonces;
+                Mostrar << "Seminario de formacion socio critica I:...", Datos.Materias.Comu.Pre5comu[pos_usuario].Seminario_de_formacion_socio_critica_I;
+                Mostrar << "Idioma Moderno:...", Datos.Materias.Comu.Pre5comu[pos_usuario].Idioma_Moderno;
+                Suma = Suma + (Datos.Materias.Comu.Pre5comu[pos_usuario].Seminario_de_formacion_socio_critica_I + Datos.Materias.Comu.Pre5comu[pos_usuario].Idioma_Moderno);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre5comu[pos_usuario].Seminario_de_formacion_socio_critica_I > 5.5) Entonces;
+                Mostrar << "Seminario de formacion socio critica II:...", Datos.Materias.Comu.Pre5comu[pos_usuario].Seminario_de_formacion_socio_critica_II;
+                Suma = Suma + (Datos.Materias.Comu.Pre5comu[pos_usuario].Seminario_de_formacion_socio_critica_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Comu.Pre5comu[pos_usuario].Seminario_de_formacion_socio_critica_II > 5.5) Entonces;
+                Mostrar << "Seminario de formacion socio critica III:...", Datos.Materias.Comu.Pre5comu[pos_usuario].Seminario_de_formacion_socio_critica_III;
+                Suma = Suma + (Datos.Materias.Comu.Pre5comu[pos_usuario].Seminario_de_formacion_socio_critica_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 7) Entonces;
+                Mostrar << "Gerencia Corporativa:...", Datos.Materias.Comu.Pre5comu[pos_usuario].Gerencia_Corporativa;
+                Suma = Suma + (Datos.Materias.Comu.Pre5comu[pos_usuario].Gerencia_Corporativa);
+                Contador = Contador + 1;
+            Fin_Si
+
+        Caso(Datos[pos_usuario].Carrera = "Contaduría");
+
+            //Prelación 1: Contabilidad y Auditoría
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Contabilidad I:...", Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_I;
+                Suma = Suma + (Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_I > 5.5) Entonces;
+                Mostrar << "Contabilidad II:...", Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_II;
+                Suma = Suma + (Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_II > 5.5) Entonces;
+                Mostrar << "Contabilidad III:...", Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_III;
+                Suma = Suma + (Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_I > 5.5 And Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_II > 5.5) Entonces;
+                Mostrar << "Contabilidad De Costos I:...", Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_De_Costos_I;
+                Suma = Suma + (Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_De_Costos_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_De_Costos_I > 5.5) Entonces;
+                Mostrar << "Contabilidad De Costos II:...", Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_De_Costos_II;
+                Suma = Suma + (Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_De_Costos_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_De_Costos_II > 5.5) Entonces;
+                Mostrar << "Contabilidad De Costos III:...", Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_De_Costos_III;
+                Suma = Suma + (Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_De_Costos_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 4 ) Entonces;
+                Mostrar << "Auditoria I:...", Datos.Materias.Cont.Pre1cont[pos_usuario].Auditoria_I;
+                Mostrar << "Contabilidad Especializada I:...", Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_Especializada_I;
+                Suma = Suma + (Datos.Materias.Cont.Pre1cont[pos_usuario].Auditoria_I + Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_Especializada_I);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Cont.Pre1cont[pos_usuario].Auditoria_I > 5.5) Entonces;
+                Mostrar << "Auditoria II:...", Datos.Materias.Cont.Pre1cont[pos_usuario].Auditoria_II;
+                Suma = Suma + (Datos.Materias.Cont.Pre1cont[pos_usuario].Auditoria_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 5) Entonces;
+                Mostrar << "Contabilidad Especializada II:...", Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_Especializada_II;
+                Suma = Suma + (Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_Especializada_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Cont.Pre1cont[pos_usuario].Auditoria_II > 5.5) Entonces;
+                Mostrar << "Auditoria III:...", Datos.Materias.Cont.Pre1cont[pos_usuario].Auditoria_III;
+                Suma = Suma + (Datos.Materias.Cont.Pre1cont[pos_usuario].Auditoria_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_I > 5.5 And Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_II > 5.5 And Datos.Materias.Cont.Pre1cont[pos_usuario].Contabilidad_III > 5.5) Entonces;
+                Mostrar << "Analisis De Estados Financieros:...", Datos.Materias.Cont.Pre1cont[pos_usuario].Analisis_De_Estados_Financieros;
+                Suma = Suma + (Datos.Materias.Cont.Pre1cont[pos_usuario].Analisis_De_Estados_Financieros);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 2: Matemática y Estadística
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Matematica I:...", Datos.Materias.Cont.Pre2cont[pos_usuario].Matematica_I;
+                Suma = Suma + (Datos.Materias.Cont.Pre2cont[pos_usuario].Matematica_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 2 ) Entonces;
+                Mostrar << "Estadistica I:...", Datos.Materias.Cont.Pre2cont[pos_usuario].Estadistica_I;
+                Suma = Suma + (Datos.Materias.Cont.Pre2cont[pos_usuario].Estadistica_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Cont.Pre2cont[pos_usuario].Matematica_I > 5.5) Entonces;
+                Mostrar << "Matematica II:...", Datos.Materias.Cont.Pre2cont[pos_usuario].Matematica_II;
+                Suma = Suma + (Datos.Materias.Cont.Pre2cont[pos_usuario].Matematica_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Cont.Pre2cont[pos_usuario].Estadistica_I > 5.5) Entonces;
+                Mostrar << "Estadistica II:...", Datos.Materias.Cont.Pre2cont[pos_usuario].Estadistica_II;
+                Suma = Suma + (Datos.Materias.Cont.Pre2cont[pos_usuario].Estadistica_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 3 ) Entonces;
+                Mostrar << "Calculo Financiero:...", Datos.Materias.Cont.Pre2cont[pos_usuario].Calculo_Financiero;
+                Mostrar << "Informatica:...", Datos.Materias.Cont.Pre2cont[pos_usuario].Informatica;
+                Suma = Suma + (Datos.Materias.Cont.Pre2cont[pos_usuario].Calculo_Financiero + Datos.Materias.Cont.Pre2cont[pos_usuario].Informatica);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 5) Entonces;
+                Mostrar << "Investigacion De Operaciones:...", Datos.Materias.Cont.Pre2cont[pos_usuario].Investigacion_Operaciones;
+                Suma = Suma + (Datos.Materias.Cont.Pre2cont[pos_usuario].Investigacion_Operaciones);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 3: Administración, Leyes y Tributos
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Legislacion Mercantil:...", Datos.Materias.Cont.Pre3cont[pos_usuario].Legislacion_Mercantil;
+                Suma = Suma + (Datos.Materias.Cont.Pre3cont[pos_usuario].Legislacion_Mercantil);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 2 ) Entonces;
+                Mostrar << "Introduccion A La Administracion:...", Datos.Materias.Cont.Pre3cont[pos_usuario].Introduccion_A_La_Administracion;
+                Mostrar << "Legislacion Laboral:...", Datos.Materias.Cont.Pre3cont[pos_usuario].Legislacion_Laboral;
+                Suma = Suma + (Datos.Materias.Cont.Pre3cont[pos_usuario].Introduccion_A_La_Administracion + Datos.Materias.Cont.Pre3cont[pos_usuario].Legislacion_Laboral);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 3 ) Entonces;
+                Mostrar << "Procesos Administrativos:...", Datos.Materias.Cont.Pre3cont[pos_usuario].Procesos_Administrativos;
+                Suma = Suma + (Datos.Materias.Cont.Pre3cont[pos_usuario].Procesos_Administrativos);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 4 ) Entonces;
+                Mostrar << "Finanzas Y Gestion Presupuestaria:...", Datos.Materias.Cont.Pre3cont[pos_usuario].Gestion_Presupuestaria;
+                Mostrar << "Administracion Publica:...", Datos.Materias.Cont.Pre3cont[pos_usuario].Administracion_Publica;
+                Suma = Suma + (Datos.Materias.Cont.Pre3cont[pos_usuario].Gestion_Presupuestaria + Datos.Materias.Cont.Pre3cont[pos_usuario].Administracion_Publica);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 5) Entonces;
+                Mostrar << "Sistemas De Informacion Gerencial:...", Datos.Materias.Cont.Pre3cont[pos_usuario].Sistemas_Informacion_Gerencial;
+                Suma = Suma + (Datos.Materias.Cont.Pre3cont[pos_usuario].Sistemas_Informacion_Gerencial);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 6) Entonces;
+                Mostrar << "Sistemas Tributarios I:...", Datos.Materias.Cont.Pre3cont[pos_usuario].Sistemas_Tributarios_I;
+                Mostrar << "Presupuesto:...", Datos.Materias.Cont.Pre3cont[pos_usuario].Presupuesto;
+                Mostrar << "Mercadeo:...", Datos.Materias.Cont.Pre3cont[pos_usuario].Mercadeo;
+                Suma = Suma + (Datos.Materias.Cont.Pre3cont[pos_usuario].Sistemas_Tributarios_I + Datos.Materias.Cont.Pre3cont[pos_usuario].Presupuesto + Datos.Materias.Cont.Pre3cont[pos_usuario].Mercadeo);
+                Contador = Contador + 3;
+            Fin_Si
+
+            Si (Datos.Materias.Cont.Pre3cont[pos_usuario].Sistemas_Tributarios_I > 5.5) Entonces;
+                Mostrar << "Sistemas Tributarios II:...", Datos.Materias.Cont.Pre3cont[pos_usuario].Sistemas_Tributarios_II;
+                Suma = Suma + (Datos.Materias.Cont.Pre3cont[pos_usuario].Sistemas_Tributarios_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 7) Entonces;
+                Mostrar << "Gestion De Talento Humano:...", Datos.Materias.Cont.Pre3cont[pos_usuario].Gestion_De_Talento_Humano;
+                Suma = Suma + (Datos.Materias.Cont.Pre3cont[pos_usuario].Gestion_De_Talento_Humano);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 8) Entonces;
+                Mostrar << "Instituciones Financieras:...", Datos.Materias.Cont.Pre3cont[pos_usuario].Instituciones_Financieras;
+                Suma = Suma + (Datos.Materias.Cont.Pre3cont[pos_usuario].Instituciones_Financieras);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 4: Proyecto Final y Prácticas
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 4 ) Entonces;
+                Mostrar << "Practica Profesional I:...", Datos.Materias.Cont.Pre4cont[pos_usuario].Practica_Profesional_I;
+                Suma = Suma + (Datos.Materias.Cont.Pre4cont[pos_usuario].Practica_Profesional_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 6) Entonces;
+                Mostrar << "Seminario I:...", Datos.Materias.Cont.Pre4cont[pos_usuario].Seminario_I;
+                Suma = Suma + (Datos.Materias.Cont.Pre4cont[pos_usuario].Seminario_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Cont.Pre4cont[pos_usuario].Practica_Profesional_I > 5.5) Entonces;
+                Mostrar << "Practica Profesional II:...", Datos.Materias.Cont.Pre4cont[pos_usuario].Practica_Profesional_II;
+                Suma = Suma + (Datos.Materias.Cont.Pre4cont[pos_usuario].Practica_Profesional_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Cont.Pre4cont[pos_usuario].Seminario_I > 5.5) Entonces;
+                Mostrar << "Seminario II:...", Datos.Materias.Cont.Pre4cont[pos_usuario].Seminario_II;
+                Suma = Suma + (Datos.Materias.Cont.Pre4cont[pos_usuario].Seminario_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 7) Entonces;
+                Mostrar << "Etica Y Desarrollo Profesional:...", Datos.Materias.Cont.Pre4cont[pos_usuario].Etica_Desarrollo_Profesional;
+                Suma = Suma + (Datos.Materias.Cont.Pre4cont[pos_usuario].Etica_Desarrollo_Profesional);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Cont.Pre4cont[pos_usuario].Seminario_II > 5.5) Entonces;
+                Mostrar << "Tesina De Grado:...", Datos.Materias.Cont.Pre4cont[pos_usuario].Tesina_De_Grado;
+                Suma = Suma + (Datos.Materias.Cont.Pre4cont[pos_usuario].Tesina_De_Grado);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 8) Entonces;
+                Mostrar << "Pasantias:...", Datos.Materias.Cont.Pre4cont[pos_usuario].Pasantias;
+                Suma = Suma + (Datos.Materias.Cont.Pre4cont[pos_usuario].Pasantias);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 5: Generales y Electivas
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Lenguaje Y Comunicacion:...", Datos.Materias.Cont.Pre5cont[pos_usuario].Lenguaje_Y_Comunicacion;
+                Mostrar << "Sociopolitica Productiva:...", Datos.Materias.Cont.Pre5cont[pos_usuario].Sociopolitica_Productiva;
+                Mostrar << "Metodologia De La Investigacion:...", Datos.Materias.Cont.Pre5cont[pos_usuario].Metodologia;
+                Mostrar << "Deporte Y Recreacion:...", Datos.Materias.Cont.Pre5cont[pos_usuario].Deporte;
+                Suma = Suma + (Datos.Materias.Cont.Pre5cont[pos_usuario].Lenguaje_Y_Comunicacion + Datos.Materias.Cont.Pre5cont[pos_usuario].Sociopolitica_Productiva + Datos.Materias.Cont.Pre5cont[pos_usuario].Metodologia + Datos.Materias.Cont.Pre5cont[pos_usuario].Deporte);
+                Contador = Contador + 4;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 2 ) Entonces;
+                Mostrar << "Ingles:...", Datos.Materias.Cont.Pre5cont[pos_usuario].Ingles;
+                Mostrar << "Arte Y Cultura:...", Datos.Materias.Cont.Pre5cont[pos_usuario].Arte_Y_Cultura;
+                Suma = Suma + (Datos.Materias.Cont.Pre5cont[pos_usuario].Ingles + Datos.Materias.Cont.Pre5cont[pos_usuario].Arte_Y_Cultura);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 3 ) Entonces;
+                Mostrar << "Introduccion A La Teoria Economica:...", Datos.Materias.Cont.Pre5cont[pos_usuario].Introduccion_Teoria_Economica;
+                Suma = Suma + (Datos.Materias.Cont.Pre5cont[pos_usuario].Introduccion_Teoria_Economica);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 6) Entonces;
+                Mostrar << "Electiva I:...", Datos.Materias.Cont.Pre5cont[pos_usuario].Electiva_I;
+                Suma = Suma + (Datos.Materias.Cont.Pre5cont[pos_usuario].Electiva_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 7) Entonces;
+                Mostrar << "Electiva II:...", Datos.Materias.Cont.Pre5cont[pos_usuario].Electiva_II;
+                Suma = Suma + (Datos.Materias.Cont.Pre5cont[pos_usuario].Electiva_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+        Otro_Caso
+
+            //Prelación 1: Economia
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Introduccion A La Economia:...", Datos.Materias.Eco.Pre1eco[pos_usuario].Introduccion_Economia;
+                Suma = Suma + (Datos.Materias.Eco.Pre1eco[pos_usuario].Introduccion_Economia);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre1eco[pos_usuario].Introduccion_Economia > 5.5) Entonces;
+                Mostrar << "Economia I:...", Datos.Materias.Eco.Pre1eco[pos_usuario].Economia_I;
+                Suma = Suma + (Datos.Materias.Eco.Pre1eco[pos_usuario].Economia_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre1eco[pos_usuario].Economia_I > 5.5) Entonces;
+                Mostrar << "Economia II:...", Datos.Materias.Eco.Pre1eco[pos_usuario].Economia_II;
+                Suma = Suma + (Datos.Materias.Eco.Pre1eco[pos_usuario].Economia_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre1eco[pos_usuario].Economia_II > 5.5) Entonces;
+                Mostrar << "Macroeconomia I:...", Datos.Materias.Eco.Pre1eco[pos_usuario].Macroeconomia_I;
+                Suma = Suma + (Datos.Materias.Eco.Pre1eco[pos_usuario].Macroeconomia_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre1eco[pos_usuario].Economia_I > 5.5 And Datos.Materias.Eco.Pre1eco[pos_usuario].Economia_II > 5.5) Entonces;
+                Mostrar << "Microeconomia I:...", Datos.Materias.Eco.Pre1eco[pos_usuario].Microeconomia_I;
+                Suma = Suma + (Datos.Materias.Eco.Pre1eco[pos_usuario].Microeconomia_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre1eco[pos_usuario].Microeconomia_I > 5.5) Entonces;
+                Mostrar << "Microeconomia II:...", Datos.Materias.Eco.Pre1eco[pos_usuario].Microeconomia_II;
+                Suma = Suma + (Datos.Materias.Eco.Pre1eco[pos_usuario].Microeconomia_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre1eco[pos_usuario].Macroeconomia_I > 5.5) Entonces;
+                Mostrar << "Macroeconomia II:...", Datos.Materias.Eco.Pre1eco[pos_usuario].Macroeconomia_II;
+                Suma = Suma + (Datos.Materias.Eco.Pre1eco[pos_usuario].Macroeconomia_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 6) Entonces;
+                Mostrar << "Economia Politica:...", Datos.Materias.Eco.Pre1eco[pos_usuario].Economia_Politica;
+                Suma = Suma + (Datos.Materias.Eco.Pre1eco[pos_usuario].Economia_Politica);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 7) Entonces;
+                Mostrar << "Economia Internacional:...", Datos.Materias.Eco.Pre1eco[pos_usuario].Economia_Internacional;
+                Suma = Suma + (Datos.Materias.Eco.Pre1eco[pos_usuario].Economia_Internacional);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 2: Matemática y Estadística
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Analisis Matematico I:...", Datos.Materias.Eco.Pre2eco[pos_usuario].Analisis_Matematico_I;
+                Suma = Suma + (Datos.Materias.Eco.Pre2eco[pos_usuario].Analisis_Matematico_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre2eco[pos_usuario].Analisis_Matematico_I > 5.5) Entonces;
+                Mostrar << "Analisis Matematico II:...", Datos.Materias.Eco.Pre2eco[pos_usuario].Analisis_Matematico_II;
+                Suma = Suma + (Datos.Materias.Eco.Pre2eco[pos_usuario].Analisis_Matematico_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 3 ) Entonces;
+                Mostrar << "Estadistica I:...", Datos.Materias.Eco.Pre2eco[pos_usuario].Estadistica_I;
+                Suma = Suma + (Datos.Materias.Eco.Pre2eco[pos_usuario].Estadistica_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre2eco[pos_usuario].Estadistica_I > 5.5) Entonces;
+                Mostrar << "Estadistica II:...", Datos.Materias.Eco.Pre2eco[pos_usuario].Estadistica_II;
+                Mostrar << "Analisis Financiero:...", Datos.Materias.Eco.Pre2eco[pos_usuario].Analisis_Financiero;
+                Suma = Suma + (Datos.Materias.Eco.Pre2eco[pos_usuario].Estadistica_II + Datos.Materias.Eco.Pre2eco[pos_usuario].Analisis_Financiero);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre2eco[pos_usuario].Analisis_Matematico_II > 5.5) Entonces;
+                Mostrar << "Matematica III:...", Datos.Materias.Eco.Pre2eco[pos_usuario].Matematica_III;
+                Suma = Suma + (Datos.Materias.Eco.Pre2eco[pos_usuario].Matematica_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre2eco[pos_usuario].Analisis_Matematico_I > 5.5 And Datos.Materias.Eco.Pre2eco[pos_usuario].Analisis_Matematico_II > 5.5) Entonces;
+                Mostrar << "Matematica Financiera:...", Datos.Materias.Eco.Pre2eco[pos_usuario].Matematica_Financiera;
+                Suma = Suma + (Datos.Materias.Eco.Pre2eco[pos_usuario].Matematica_Financiera);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre2eco[pos_usuario].Estadistica_I > 5.5 And Datos.Materias.Eco.Pre2eco[pos_usuario].Estadistica_II > 5.5) Entonces;
+                Mostrar << "Estadistica Aplicada:...", Datos.Materias.Eco.Pre2eco[pos_usuario].Estadistica_Aplicada;
+                Suma = Suma + (Datos.Materias.Eco.Pre2eco[pos_usuario].Estadistica_Aplicada);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 7) Entonces;
+                Mostrar << "Econometria:...", Datos.Materias.Eco.Pre2eco[pos_usuario].Econometria;
+                Suma = Suma + (Datos.Materias.Eco.Pre2eco[pos_usuario].Econometria);
+                Contador = Contador + 1;
+            Fin_Si
+
+            //Prelación 3: Contabilidad y Bases
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 2 ) Entonces;
+                Mostrar << "Contabilidad General I:...", Datos.Materias.Eco.Pre3eco[pos_usuario].Contabilidad_General_I;
+                Mostrar << "Informatica:...", Datos.Materias.Eco.Pre3eco[pos_usuario].Informatica;
+                Suma = Suma + (Datos.Materias.Eco.Pre3eco[pos_usuario].Contabilidad_General_I + Datos.Materias.Eco.Pre3eco[pos_usuario].Informatica);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre3eco[pos_usuario].Contabilidad_General_I > 5.5) Entonces;
+                Mostrar << "Contabilidad General II:...", Datos.Materias.Eco.Pre3eco[pos_usuario].Contabilidad_General_II;
+                Suma = Suma + (Datos.Materias.Eco.Pre3eco[pos_usuario].Contabilidad_General_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre3eco[pos_usuario].Informatica > 5.5) Entonces;
+                Mostrar << "Informatica Aplicada:...", Datos.Materias.Eco.Pre3eco[pos_usuario].Informatica_Aplicada;
+                Suma = Suma + (Datos.Materias.Eco.Pre3eco[pos_usuario].Informatica_Aplicada);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 3 ) Entonces;
+                Mostrar << "Introduccion A La Administracion:...", Datos.Materias.Eco.Pre3eco[pos_usuario].Introduccion_Administracion;
+                Mostrar << "Historia Y Doctrina Economica:...", Datos.Materias.Eco.Pre3eco[pos_usuario].Historia_Doctrina_Economica;
+                Suma = Suma + (Datos.Materias.Eco.Pre3eco[pos_usuario].Introduccion_Administracion + Datos.Materias.Eco.Pre3eco[pos_usuario].Historia_Doctrina_Economica);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 5) Entonces;
+                Mostrar << "Contabilidad Social:...", Datos.Materias.Eco.Pre3eco[pos_usuario].Contabilidad_Social;
+                Suma = Suma + (Datos.Materias.Eco.Pre3eco[pos_usuario].Contabilidad_Social);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 6) Entonces;
+                Mostrar << "Investigacion De Operaciones:...", Datos.Materias.Eco.Pre3eco[pos_usuario].Investigacion_Operaciones;
+                Suma = Suma + (Datos.Materias.Eco.Pre3eco[pos_usuario].Investigacion_Operaciones);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 7) Entonces;
+                Mostrar << "Teoria Y Politica Monetaria:...", Datos.Materias.Eco.Pre3eco[pos_usuario].Teoria_Politica_Monetaria;
+                Mostrar << "Planificacion:...", Datos.Materias.Eco.Pre3eco[pos_usuario].Planificacion;
+                Suma = Suma + (Datos.Materias.Eco.Pre3eco[pos_usuario].Teoria_Politica_Monetaria + Datos.Materias.Eco.Pre3eco[pos_usuario].Planificacion);
+                Contador = Contador + 2;
+            Fin_Si
+
+            //Prelación 4: Seminario y Proyecto Final
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 4 ) Entonces;
+                Mostrar << "Seminario I:...", Datos.Materias.Eco.Pre4eco[pos_usuario].Seminario_I;
+                Suma = Suma + (Datos.Materias.Eco.Pre4eco[pos_usuario].Seminario_I);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre4eco[pos_usuario].Seminario_I > 5.5) Entonces;
+                Mostrar << "Seminario II:...", Datos.Materias.Eco.Pre4eco[pos_usuario].Seminario_II;
+                Suma = Suma + (Datos.Materias.Eco.Pre4eco[pos_usuario].Seminario_II);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos.Materias.Eco.Pre4eco[pos_usuario].Seminario_II > 5.5) Entonces;
+                Mostrar << "Seminario III:...", Datos.Materias.Eco.Pre4eco[pos_usuario].Seminario_III;
+                Suma = Suma + (Datos.Materias.Eco.Pre4eco[pos_usuario].Seminario_III);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 8) Entonces;
+                Mostrar << "Trabajo Final De Grado:...", Datos.Materias.Eco.Pre4eco[pos_usuario].Trabajo_Final_De_Grado;
+                Suma = Suma + (Datos.Materias.Eco.Pre4eco[pos_usuario].Trabajo_Final_De_Grado);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre = 6) Entonces;
+                Mostrar << "Formulacion Y Evaluacion De Proyectos:...", Datos.Materias.Eco.Pre4eco[pos_usuario].Formulacion_Evaluacion_Proyectos;
+                Mostrar << "Teoria Y Politica Fiscal:...", Datos.Materias.Eco.Pre4eco[pos_usuario].Teoria_Y_Politica_Fiscal;
+                Suma = Suma + (Datos.Materias.Eco.Pre4eco[pos_usuario].Formulacion_Evaluacion_Proyectos + Datos.Materias.Eco.Pre4eco[pos_usuario].Teoria_Y_Politica_Fiscal);
+                Contador = Contador + 2;
+            Fin_Si
+
+            //Prelaciónn 5: Generales y Complementarias
+
+            Si (Datos[pos_usuario].Semestre = 1) Entonces;
+                Mostrar << "Lenguaje Y Comunicacion:...", Datos.Materias.Eco.Pre5eco[pos_usuario].Lenguaje_Comunicacion;
+                Mostrar << "Fundamentos Del Derecho:...", Datos.Materias.Eco.Pre5eco[pos_usuario].Fundamentos_Del_Derecho;
+                Mostrar << "Metodologia De La Investigacion:...", Datos.Materias.Eco.Pre5eco[pos_usuario].Metodologia;
+                Mostrar << "Deporte Y Recreacion:...", Datos.Materias.Eco.Pre5eco[pos_usuario].Deporte;
+                Mostrar << "Ingles Instrumental:...", Datos.Materias.Eco.Pre5eco[pos_usuario].Ingles_Instrumental;
+                Suma = Suma + (Datos.Materias.Eco.Pre5eco[pos_usuario].Lenguaje_Comunicacion + Datos.Materias.Eco.Pre5eco[pos_usuario].Fundamentos_Del_Derecho + Datos.Materias.Eco.Pre5eco[pos_usuario].Metodologia + Datos.Materias.Eco.Pre5eco[pos_usuario].Deporte + Datos.Materias.Eco.Pre5eco[pos_usuario].Ingles_Instrumental);
+                Contador = Contador + 5;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 2 ) Entonces;
+                Mostrar << "Sociologia:...", Datos.Materias.Eco.Pre5eco[pos_usuario].Sociologia;
+                Mostrar << "Arte Y Cultura:...", Datos.Materias.Eco.Pre5eco[pos_usuario].Arte_Y_Cultura;
+                Suma = Suma + (Datos.Materias.Eco.Pre5eco[pos_usuario].Sociologia + Datos.Materias.Eco.Pre5eco[pos_usuario].Arte_Y_Cultura);
+                Contador = Contador + 2;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 3 ) Entonces;
+                Mostrar << "Sociopolitica Productiva:...", Datos.Materias.Eco.Pre5eco[pos_usuario].Sociopolitica_Productiva;
+                Suma = Suma + (Datos.Materias.Eco.Pre5eco[pos_usuario].Sociopolitica_Productiva);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 4 ) Entonces;
+                Mostrar << "Teoria E Investigacion De Mercado:...", Datos.Materias.Eco.Pre5eco[pos_usuario].Investigacion_De_Mercado;
+                Suma = Suma + (Datos.Materias.Eco.Pre5eco[pos_usuario].Investigacion_De_Mercado);
+                Contador = Contador + 1;
+            Fin_Si
+
+            Si (Datos[pos_usuario].Semestre >= 1 And Datos[pos_usuario].Semestre <= 5 ) Entonces;
+                Mostrar << "Desarrollo Economico:...", Datos.Materias.Eco.Pre5eco[pos_usuario].Desarrollo_Economico;
+                Mostrar << "Analisis Economico Regional:...", Datos.Materias.Eco.Pre5eco[pos_usuario].Analisis_Economico_Regional;
+                Suma = Suma + (Datos.Materias.Eco.Pre5eco[pos_usuario].Desarrollo_Economico + Datos.Materias.Eco.Pre5eco[pos_usuario].Analisis_Economico_Regional);
+                Contador = Contador + 2;
+            Fin_Si
+
+    Fin_Caso
+
+    //Promedio
+
+    Si (Suma > 0 And Contador > 0) Entonces;
+        Promedio = Suma / Contador;
+        Mostrar << "Tu Promedio Es De:...", Promedio;
+    Sino
+        Promedio = 0;
+        Mostrar << "No Tienes Promedio";
+    Fin_Si
+
+    //Actas
+
+    Si (Datos[pos_usuario].Actas ≠ "") Entonces;
+        Mostrar << "Posees actas disciplinaria registrada";
+        Mostrar << Datos[pos_usuario].Actas;
+    Sino
+        Mostrar << "No se registran problemas disciplinarios";
+    Fin_Si
+    
+Fin_Procedimiento

@@ -1,0 +1,40 @@
+Inicio
+    var Estudiantes: Datos[500], Notas: Materias;
+
+    //Variables maestras de las notas de las carreras
+    var Informatica: Info, Civil: Civ, Hidrocarburos: Hidro, Medicina: Medi, Odontologia: Odo, Veterinaria: Vete, Derecho: Der, Comunicacion: Comu, Contaduria: Cont, Economia: Eco;
+    
+    //Variables maestras de las notas de las materias de Informatica
+    var Informatica_Pre1: Pre1info[500], Informatica_Pre2: Pre2info[500], Informatica_Pre3: Pre3info[500], Informatica_Pre4: Pre4info[500], Informatica_Pre5: Pre5info[500];
+
+    //Variables maestras de las notas de las materias de Ingenieria Civil
+    var Civil_Pre1: Pre1civ[500], Civil_Pre2: Pre2civ[500], Civil_Pre3: Pre3civ[500], Civil_Pre4: Pre4civ[500], Civil_Pre5: Pre5civ[500];
+
+    //Variables maestras de las notas de las materias de Hidrocarburo
+    var Hidrocarburo_Pre1: Pre1hidro[500], Hidrocarburo_Pre2: Pre2hidro[500], Hidrocarburo_Pre3: Pre3hidro[500], Hidrocarburo_Pre4: Pre4hidro[500], Hidrocarburo_Pre5: Pre5hidro[500];
+
+    //Variables maestras de las notas de las materias de Medicina
+    var Medicina_Pre1: Pre1medi[500], Medicina_Pre2: Pre2medi[500], Medicina_Pre3: Pre3medi[500], Medicina_Pre4: Pre4medi[500], Medicina_Pre5: Pre5medi[500];
+
+    //Variables maestras de las notas de las materias de Odontologia
+    var Odontologia_Pre1: Pre1odo[500], Odontologia_Pre2: Pre2odo[500], Odontologia_Pre3: Pre3odo[500], Odontologia_Pre4: Pre4odo[500], Odontologia_Pre5: Pre5odo[500];
+
+    //Variables maestras de las notas de las materias de Veterinaria
+    var Veterinaria_Pre1: Pre1vete[500], Veterinaria_Pre2: Pre2vete[500], Veterinaria_Pre3: Pre3vete[500], Veterinaria_Pre4: Pre4vete[500], Veterinaria_Pre5: Pre5vete[500];
+
+    //Variables maestras de las notas de las materias de Derecho
+    var Derecho_Pre1: Pre1der[500], Derecho_Pre2: Pre2der[500], Derecho_Pre3: Pre3der[500], Derecho_Pre4: Pre4der[500], Derecho_Pre5: Pre5der[500];
+
+    //Variables maestras de las notas de las materias de Comunicacion
+    var Comunicacion_Pre1: Pre1comu[500], Comunicacion_Pre2: Pre2comu[500], Comunicacion_Pre3: Pre3comu[500], Comunicacion_Pre4: Pre4comu[500], Comunicacion_Pre5: Pre5comu[500];
+
+    //Variables maestras de las notas de las materias de Contaduria
+    var Contaduria_Pre1: Pre1cont[500], Contaduria_Pre2: Pre2cont[500], Contaduria_Pre3: Pre3cont[500], Contaduria_Pre4: Pre4cont[500], Contaduria_Pre5: Pre5cont[500];
+
+    //Variables maestras de las notas de las materias de Economia
+    var Economia_Pre1: Pre1eco[500], Economia_Pre2: Pre2eco[500], Economia_Pre3: Pre3eco[500], Economia_Pre4: Pre4eco[500], Economia_Pre5: Pre5eco[500];
+
+    //Variables Globales
+    var Tema = 0: Booleano;
+    var Avatares[1]: Cadena;
+Fin
