@@ -1,0 +1,13 @@
+Procedimiento Salir_Club(E/S:Ext.clubes.id_club: entero, Ext.Clubes[I]:entero,Ext.Clubes.ID[I]:entero, Ext.Clubes.miembro_ inscrito[I]:entero, Ext.Clubes.nombre[I]:cadena);
+Inicio 
+    Mostrar << "mostrar ingrese el ID del club de dónde está inscrito";
+    Leer >> Ext.clubes.id_club;
+    Para (I = 1 Hasta I = Ext.Clubes[I]) Hacer;
+        Si (Ext.clubes.id_club=Ext.Clubes.ID[I]) Entonces;
+            Ext.Clubes.miembro_ inscrito[I]= Ext.Clubes.miembro_ inscrito[I] - 1;
+            Mostrar << "Ha salido del club:..,", Ext.Clubes.nombre[I];
+        Sino
+            Mostrar << "No está inscrito en ningún club";
+        Fin_Si
+    Fin_Para
+Fin_Procedimiento

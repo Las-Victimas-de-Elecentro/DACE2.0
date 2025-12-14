@@ -1,0 +1,51 @@
+Procedimiento Registro(E/S: Admin[I].Gmail, Datos[I].Gmail, Admin[I].Usuario, Datos[I].Usuario, Admin[I].Password, Datos[I].Password: Cadena, Admin.CI[I], Datos[I].CI, I, Lim, C, I, J, Tarjeta[I, J]: Entero);
+Inicio
+    Var usu, gmail, password: Cadena;
+    Var CI, Des: Entero;
+
+    Repetir
+        Mostrar << ”Ingrese su nombre completo para su nueva cuenta”;
+        Leer >> usu;
+
+        Mostrar << ”Ingrese su cedula para su nueva cuenta”;
+        Leer >> CI;
+
+        Mostrar << ”Ingrese su gmail para su nueva cuenta”;
+        Leer >> gmail;
+
+        Para (I = 1 Hasta I = 500) Hacer;
+            Si (Admin[I].Gmail = gmail) or (Datos[I].Gmail = gmail) Entonces;
+                Mostrar << ”Su correo ya existe en nuestra base de datos, intente nuevamente”;
+                Leer >> gmail;
+                gmailApto = 1;     
+            Fin_Si
+        Fin_Para
+        Si (gmailApto = 0) Entonces;
+            Mostrar << ”¿Qué perfil desea seleccionar? 1: Docente, 2: Estudiante”;
+            Leer >> Des;
+            Mientras (Des < 1 or Des > 2) Hacer;
+                Mostrar << ”Error en dato, intente de nuevo”;
+                Leer >> Des;
+            Fin_Mientras
+            Si (Des = 1) Entonces;
+                Admin.Usuario[Lim] = usu;
+                Admin.CI[Lim] = CI;
+                Admin.Gmail[Lim] = gmail;
+                Admin.Password[Lim] = password;
+                Lim = Lim + 1;
+            Sino
+                Datos.Usuario[C] = usu;
+                Datos.CI[C] = CI;
+                Datos.Gmail[C] = gmail;
+                Datos.Password[C] = password;
+                C = C + 1;
+            Fin_Si
+	
+            Generar_Tarjeta_Coordenadas(I, J, Tarjeta[I, J]);
+            Mostrar_Tarjeta_Coordenadas(I, J, Tarjeta[I, J]);
+            Mostrar << Mostrar_Tarjeta_Coordenadas;
+        Fin_Si
+
+        Hasta (gmailApto = 0);
+    Fin_Repetir
+Fin_Procedimiento

@@ -1,0 +1,15 @@
+Procedimiento Mostrar_Tarjeta_Coordenadas(E/S: I, J: Entero);
+Inicio
+	Mostrar<"A continuación le mostraremos su tarjeta de coordenadas:";
+    Mostrar << "------------------------------------------";
+    Para (I = 1 Hasta I = 5) Hacer;
+		Para (J = 1 Hasta J = 10) Hacer;
+			Si (Tarjeta[I, J] < 10) Entonces;
+				Mostrar << "0", Tarjeta[I, J];		
+			Sino
+				Mostrar << Tarjeta[I, J];
+			Fin_Si
+        Fin_Para
+	Fin_Para
+	Mostrar << "------------------------------------------";
+Fin_Procedimiento

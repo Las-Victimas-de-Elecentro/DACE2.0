@@ -1,0 +1,6 @@
+Funcion Aleatorio(Minimo: Entero, Maximo: Entero): Entero; 
+Inicio 
+	Var número: Entero; 
+	número = GenerarNumeroAleatorio(Minimo, Maximo); // No se cuestione la magia detras de esta funcion. Genera numeros aleatorios, y con eso basta: D ;
+	Devolver (número);
+Fin_Funcion

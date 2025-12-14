@@ -1,0 +1,97 @@
+Registro: Extracurricular_Estudiante;
+    Eventos;
+    Clubes;
+    Celebraciones;
+    Calendario;
+Fin_Registro  
+
+Registro: Eventos;  
+    ID: Entero;     
+    Nombre: Cadena;                               
+    Fecha: Cadena;
+    Descripcion: Cadena;
+Fin_Registro
+
+Registro: Clubes;
+    ID: Entero;
+    Nombre: Cadena;
+    Descripcion: Cadena;
+    Capacidad_Maxima: Entero;
+    Miembros_Inscritos: Entero;
+    Horarios_Disponibles: Entero;
+Fin_Registro
+
+Registro: Celebraciones;
+    ID: Entero;
+    Nombre: Cadena; 
+    Fecha: Cadena;
+    Tipo: Cadena;
+    Descripcion: Cadena;
+Fin_Registro
+
+Registro: Usuario;
+    ID: Entero;
+    Nombre: Cadena;
+    Club_Inscrito: Entero;  // ID del club, 0 si no está inscrito;
+    Horario_Club: Cadena;
+Fin_Registro
+
+
+Procedimiento Extracurricular();
+Inicio
+    Repetir
+        Mostrar << "=== SISTEMA EXTRACURRICULAR ===";
+        Mostrar << "1. Eventos";
+        Mostrar << "2. Clubes";
+        Mostrar << "3. Celebraciones";
+        Mostrar << "4. Calendario";
+        Mostrar << "5. Salir";
+        Mostrar << "Seleccione una opción: ";
+        Leer >> opc;
+        Mientras (opc < 1 or opc > 5) Hacer;
+            Mostrar << "Error, vuelva a intentar";
+            Leer >> opc;
+        Fin_Mientras
+        En_Caso(opc > 0) Sea;
+            Caso (opc = 1);
+                Eventos();
+                Mostrar << Eventos;
+            Caso (opc = 2);
+                Mostrar<<"=== MENÚ DE CLUBES ===";
+                Mostrar<<"1. Ver clubes disponibles";
+                Mostrar<<"2. Inscribirse en un club";
+                Mostrar<<"3. Salir de un club";
+                Mostrar<<"4. Ver información de mi club";
+                Mostrar<<"Seleccione una opción: ";
+                Leer>>opcion;
+                Mientras (opcion < 1 or opcion > 4) Hacer;
+                    Mostrar << "Es invalido, solo rango entre 1-4";
+                    Leer >> opcion;
+                Fin_Mientras
+                En_Caso (opcion > 0) Sea;
+                    Caso(opcion = 1);
+                        Clubes();
+                        Mostrar << Clubes;
+                    Caso(opcion = 2);
+                        Inscripcion_Club();
+                        Mostrar << Inscripcion_Club;
+                    Caso(opcion = 3);
+                        Salir_Club();
+                        Mostrar << Salir_Club;
+                    Otro_Caso
+                        Informacion_Club();
+                        Mostrar << Informacion_Club;
+                Fin_Caso
+            Caso(opc = 3);
+                Celebraciones();
+                Mostrar << Celebraciones;
+            Caso(opc = 4);
+                Calendario();
+                Mostrar << Calendario;
+            Otro_Caso
+                Mostrar << "¡Hasta pronto!";
+                R = 0;
+        Fin_Caso
+        Hasta(R = 0);
+    Fin_Repetir
+Fin_Procedimiento

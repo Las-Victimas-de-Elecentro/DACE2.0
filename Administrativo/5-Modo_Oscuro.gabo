@@ -1,0 +1,11 @@
+Procedimiento Modo_Oscuro();
+Inicio
+    Var opc: Booleano;
+    Mostrar << "¿Desea activar el modo oscuro? 1: Sí, 0: No";
+    Leer >> opc;
+    Si (opc = 1) Entonces;
+        Mostrar << "Modo oscuro activado correctamente.";
+    Sino
+        Mostrar << "Modo claro establecido correctamente.";
+    Fin_Si
+Fin_Procedimiento

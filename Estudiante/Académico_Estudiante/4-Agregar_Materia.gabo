@@ -1,0 +1,18 @@
+Procedimiento Agregar_Materia(E/S:Prof:Docente);
+Inicio
+    Si (Prof.Cant_Materias >= 50) Entonces;
+        Mostrar << "Límite de materias alcanzado. No se puede agregar más.";
+    Sino
+        Var mat: Materia;
+        Mostrar << "Ingrese código de la materia:";
+        Leer >> mat.Codigo;
+        Mostrar << "Ingrese nombre de la materia:";
+        Leer >> mat.Nombre;
+        Mostrar << "Ingrese créditos de la materia:";
+        Leer >> mat.Creditos;
+        Prof.Cant_Materias = Prof.Cant_Materias + 1;
+        Prof.Materias[Prof.Cant_Materias] = mat;
+        Mostrar << "Materia registrada con éxito.";
+    Fin_Si
+Fin_Procedimiento
+

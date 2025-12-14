@@ -1,0 +1,17 @@
+Procedimiento Informacion_Club(E/S:Ext.clubes.id_club: entero, Ext.Clubes[I]:entero,Ext.Clubes.ID[I]:entero, Ext.Clubes.descripcion[I]:cadena, Ext.Clubes.horarios_disponibles: entero, Ext.Clubes.miembro_ inscrito[I]: entero Ext.Clubes.capacidad_maxima[I]: entero);
+Inicio 
+    Mostrar << "Ingrese el ID del club al que pertenece";
+    Leer >> Ext.clubes.id_club;
+    Para (I = 1 Hasta I = Ext.Clubes[I]) Hacer;
+        Si (Ext.clubes.id_club=Ext.Clubes.ID[I]) Entonces;
+            Mostrar << "INFORMACION DE SU CLUB";
+            Mostrar << "Clip:..,", Ext.Clubes.nombre[I];
+            Mostrar << "Descripción:..,", Ext.Clubes.descripcion[I];
+            Mostrar << "horarios:..,", Ext.Clubes.horarios_disponibles[I];
+            Mostrar << "miembros actuales:..,", Ext.Clubes.miembro_ inscrito[I];
+            Mostrar << "Capacidad del club:..,", Ext.Clubes.capacidad_maxima[I];
+        Sino
+            Mostrar << "Error, vuelva a ingresar el ID";
+        Fin_Si
+    Fin_Para
+Fin_Procedimiento

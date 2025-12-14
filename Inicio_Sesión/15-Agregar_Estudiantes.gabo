@@ -1,0 +1,82 @@
+Procedimiento Agregar_Estudiantes(E/S: I, Gestion[I].Usuario: Cadena, Gestion.ID[I] : Cadena, Gestion[I].CI: Entero, Gestion[I].Password: Cadena, Gestion[I].Carrera, Gestion.Yea.Semestre: Entero);
+Inicio
+	Var Pos, Opcion: Entero;
+	Var R, R2: Booleano;
+	Var Lim = 500: Entero;
+	Repetir
+		Mostrar << "Bienvenido a la sección de administración estudiantil";
+		Mostrar << "¿Qué desea hacer?";
+		Mostrar << "1: Agregar un nuevo estudiante";
+		Mostrar << "2: Modificar la información de un estudiante en específico";
+		Mostrar << "3: Cambiar la información de un estudiante por otro";
+		Leer >> Opcion2;
+		Mientras (Opcion2 < 1 or Opcion2 > 3) Hacer;
+			Mostrar << "Error en dato, intente nuevamente";
+			Leer >> Opcion2;
+		Fin_Mientras
+		Para (I = 1 hasta I = 500) Hacer;
+            Mostrar<<I, Gestion .Usuario[I];
+			Mostrar<<Gestion.ID[I];
+            Mostrar<<Gestion.CI[I];
+            Mostrar<<Gestion[I].Password;
+            Mostrar<<Gestion[I].Carrera;
+            Mostrar<<Gestion.Yea.Semestre[I];
+        Fin_Para
+        Si (Opcion = 1) Entonces;
+			Para (I = 1 Hasta I = C) Hacer;
+				Si (Datos[I].Estado = 1) Entonces;  
+					Mostrar << "¿Desea añadirlo a la base de datos 1:Sí, 0: No";
+					Leer >> R2;
+					Si (R2 = 1) Entonces;
+						Datos[I].Usuario = Gestion[Lim].Usuario;
+						Datos[I].ID= Gestion[Lim].ID;
+						Datos[I].CI = Gestion[Lim].CI;
+						Datos[I].Password = Gestion[Lim].Password;
+						Datos[I].Carrera = Gestion[Lim].Carrera;
+						Datos[I].Yea.Semestre = Gestion[Lim].Yea.Semestre;
+						Lim = Lim + 1;
+                    Fin_Si
+                Fin_Si
+            Fin_Para
+        Sino
+            Si (Opcion = 2) Entonces;
+				Mostrar << "Ingrese la posición del estudiante del cual desea modificar su información en la base de datos";
+				Leer >> Pos;
+				Mientras (Pos < 1 or Pos > 500) Hacer;
+					Mostrar << "Fuera del rango de la base de datos, intente nuevamente";
+					Leer >> Pos;
+				Fin_Mientras
+				Mostrar << "Ingrese el nombre modificado";
+				Leer >> Gestion[Pos].Usuario;
+				Mostrar << "Ingrese la cédula del estudiante modificado";
+				Leer >> Gestion[Pos].CI;
+				Mostrar << "Ingrese la contraseña del estudiante modificado";
+				Leer >> Gestion[Pos].Password;
+				Mostrar << "Ingrese la carrera del estudiante modificado";
+				Leer >> Gestion[Pos].Carrera;
+				Mostrar << "Ingrese el semestre del estudiante modificado";
+				Leer >> Gestion[Pos].Yea.Semestre;
+            Sino
+				Mostrar << "Ingrese la posición del estudiante del cual quiere reemplazarlo por otro";
+				Leer >> Pos;
+				Mientras (Pos < 1 or Pos > 500) Hacer;
+					Mostrar << "Fuera del rango";
+					Leer >> Pos;
+				Fin_Mientras
+				Mostrar << "Ingrese el nombre del nuevo estudiante";
+				Leer >> Gestion[Pos].Usuario;
+				Mostrar << "Ingrese la cédula del nuevo estudiante";
+				Leer >> Gestion[Pos].CI;
+				Mostrar << "Ingrese la contraseña del nuevo estudiante";
+				Leer >> Gestion[Pos].Password;
+				Mostrar << "Ingrese la carrera del nuevo estudiante";
+				Leer >> Gestion[Pos].Carrera;
+				Mostrar << "Ingrese el semestre del nuevo estudiante";
+				Leer >> Gestion[Pos].Yea.Semestre;
+            Fin_Si
+        Fin_Si
+		Mostrar << "¿Desea volver al menú principal? 1: Sí, 0: No";
+		Leer >> R;
+        Hasta(R = 0);
+	Fin_Repetir
+Fin_Procedimiento

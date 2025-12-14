@@ -1,0 +1,27 @@
+Procedimiento Inscribir_Estudiante_En_Clase(E/S:Prof:Docente);
+Inicio
+    Var idx: Entero;
+    Var est: Estudiante;
+    Si (Prof.Cant_Clases = 0) Entonces;
+        Mostrar << "No hay clases para inscribir estudiantes.";
+    Sino
+        Mostrar << "Seleccione índice de clase para inscribir estudiante:";
+        
+        Leer >> idx;
+        Mientras (idx < 1) or (idx > Prof.Cant_Clases) Hacer;
+            Mostrar << "Índice inválido, intente nuevamente:";
+            Leer >> idx;
+        Fin_Mientras
+        Mostrar << "ID del estudiante:";
+        Leer >> est.ID_Estudiante;
+        Mostrar << "Nombre del estudiante:";
+        Leer >> est.Nombre;
+        Si (Prof.Clases[idx].Cant_Estudiantes >= 120) Entonces;
+            Mostrar << "Capacidad máxima alcanzada en la clase seleccionada.";
+        Sino
+            Prof.Clases[idx].Cant_Estudiantes = Prof.Clases[idx].Cant_Estudiantes + 1;
+            Prof.Clases[idx].Estudiantes[Prof.Clases[idx].Cant_Estudiantes] = est;
+            Mostrar << "Estudiante inscrito correctamente.";
+        Fin_Si
+    Fin_Si
+Fin_Procedimiento

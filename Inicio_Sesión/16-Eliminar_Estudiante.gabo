@@ -1,0 +1,35 @@
+Procedimiento Eliminar_Estudiante(E/S: Gestion[I].Usuario: Cadena, Gestion.ID[I]: Cadena, Gestion.CI[I]: Entero, Gestion[I].Password: Cadena, Gestion[I].Carrera: Cadena, Gestion.Year.Semestre[I]: Entero);
+Inicio
+	Var R: Booleano;
+    Eliminar: Entero;
+    Repetir
+        Mostrar << "Bienvenido a la eliminación de información de la base de datos";
+		Mostrar << "A continuación se le mostrará la base de datos para que pueda seleccionar la posición del estudiante que desea eliminar";
+        Para (I = 1 hasta I = 500) hacer;
+            Mostrar << I, Gestion[I].Usuario;
+            Mostrar << Gestion[I].ID;
+			Mostrar << Gestion[I].CI;
+			Mostrar << Gestion[I].Password;
+			Mostrar << Gestion[I].Carrera;
+			Mostrar << Gestion[I].Yea.Semestre;
+        Fin_Para
+		Mostrar << "Ingrese la posición del estudiante que usted desea borrar de la base de datos";
+		Leer >> Eliminar;
+		Mientras (Eliminar < 1 or Eliminar > Lim) hacer;
+			Mostrar << "Posición ingresada errónea, intente nuevamente";
+			Leer >> Eliminar;
+		Fin_Mientras
+		Para (I = 1 Hasta I = Lim) Hacer;
+			Si (Eliminar = I) Entonces;
+				Gestion[I].Usuario = " " ;
+				Gestion[I].CI = null;
+				Gestion[I].Password = " ";
+				Gestion[I].Carrera= " ";
+				Gestion[I].Yea.Semestre = null;
+			Fin_Si
+		Fin_Para
+		Mostrar << "¿Desea eliminar algún otro estudiante?, 1: Sí, 0: No";
+		Leer >> R;
+		Hasta (R = 0);
+	Fin_Repetir
+Fin_Procedimiento

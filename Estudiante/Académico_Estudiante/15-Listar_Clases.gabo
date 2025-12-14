@@ -1,0 +1,13 @@
+Procedimiento Listar_Clases(E: Prof:Docente);
+Inicio
+    Var i: Entero;
+    Mostrar << "=== Inventario de Clases ===";
+    Si (Prof.Cant_Clases = 0) Entonces;
+        Mostrar<<"Aún no tiene clases registradas.";
+    Sino
+        Para (i = 1 Hasta i = Prof.Cant_Clases) Hacer;
+            Mostrar << "[", i, "] Cod: ", Prof.Clases[i].Codigo_Materia, " | ", Prof.Clases[i].Nombre_Materia, " | Sección: ", Prof.Clases[i].Seccion, " | Inscritos: ", Prof.Clases[i].Cant_Estudiantes;
+        Fin_Para
+    Fin_Si
+    Mostrar << "================================";
+Fin_Procedimiento

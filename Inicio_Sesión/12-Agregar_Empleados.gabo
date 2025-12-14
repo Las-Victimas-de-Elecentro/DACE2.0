@@ -1,0 +1,78 @@
+Procedimiento Agregar_Empleados(E/S: I, Admin[I].Usuario: Cadena, Admin.CI[I]: Entero, Admin[I].Gmail, Admin[I].Password: Cadena);
+Inicio
+    Var Pos, Opcion: Entero;
+    Var R, R2: Booleano;
+    Var Lim = 36: Entero;
+	Repetir
+		Mostrar << "Bienvenido a la sección de administración de empleados";
+		Mostrar << "¿Qué desea hacer?";
+		Mostrar << "1: Agregar un nuevo empleado";
+		Mostrar << "2: Modificar la información de un empleado en específico";
+		Mostrar << "3: Cambiar la información de un empleado por otro";
+		Leer >> Opcion;
+		Mientras (Opcion < 1 or Opcion > 3) Hacer;
+			Mostrar << "Error en dato, intente nuevamente";
+			Leer >> Opcion;
+		Fin_Mientras
+        Para (I = 1 hasta I = 35) Hacer;
+			Mostrar << I, Admin[I].Usuario;
+			Mostrar << Admin[I].CI;
+			Mostrar << Admin[I].Gmail;
+			Mostrar << Admin[I].Password;
+		Fin_Para
+		Si (Opcion = 1) Entonces;
+			Para (I = 1 Hasta I = K) Hacer;
+                Si (Empleo.Estado[I] = 1) Entonces;	
+                    Mostrar << "¿Desea añadirlo a la base de datos? 1:Sí, 0: No";
+                    Leer >> R2;
+                    Si (R2 = 1) Entonces;
+                        Empleo[I].Usuario = Admin[Lim].Usuario;
+                        Empleo[I].CI = Admin[Lim].CI;
+                        Empleo[I].Gmail = Admin[Lim].Gmail;
+                        Empleo[I].Password = Admin[Lim].Password;
+                        Admin[Lim].Cargo = "Docente";
+                        Lim = Lim + 1;
+                    Fin_Si
+                Fin_Si
+            Fin_Para
+			
+		Sino
+            Si (Opcion = 2) Entonces;
+                Mostrar << "Ingrese la posición del empleado del cual desea modificar su información en la base de datos";
+                Leer >> Pos;
+                Mientras (Pos < 1 or Pos > 35) Hacer;
+                    Mostrar << "Fuera del rango de la base de datos, intente nuevamente";
+                    Leer >> Pos;
+                Fin_Mientras
+                Mostrar << "Ingrese el nombre modificado";
+                Leer >> Admin[Pos].Usuario;
+                Mostrar << "Ingrese la cédula del empleado modificada";
+                Leer >> Admin[Pos].CI;
+                Mostrar << "Ingrese la dirección de correo electrónico del empleado modificado";
+                Leer >> Admin[Pos].Gmail;
+                Mostrar << "Ingrese la contraseña del empleado modificada";
+                Leer >> Admin[Pos].Password;
+                Admin[Pos].Cargo = "Docente";
+            Sino
+                Mostrar << "Ingrese la posición del empleado del cual quiere reemplazarlo por otro";
+                Leer >> Pos;
+                Mientras (Pos < 1 or Pos > 35) Hacer;
+                    Mostrar << "Fuera del rango";
+                    Leer >> Pos;
+                Fin_Mientras
+                Mostrar << "Ingrese el nombre del nuevo empleado";
+                Leer >> Admin[Pos].Usuario;
+                Mostrar << "Ingrese la cédula del nuevo empleado";
+                Leer >> Admin[Pos].CI;
+                Mostrar << "Ingrese el correo electrónico del nuevo empleado";
+                Leer >> Admin[Pos].Gmail;
+                Mostrar << "Ingrese la contraseña del nuevo empleado";
+                Leer >> Admin[Pos].Password;
+                Admin[Pos].Cargo = "Docente";
+            Fin_Si
+		Fin_Si
+        Mostrar << "¿Desea volver al menú principal? 1: Sí, 0: No";
+        Leer >> R;
+        Hasta(R = 0);
+	Fin_Repetir
+Fin_Procedimiento

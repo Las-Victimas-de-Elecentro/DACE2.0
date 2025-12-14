@@ -1,0 +1,25 @@
+Procedimiento Inscripcion_Club(E/S: Ext.clubes.id_club: entero, Ext.Clubes.opcion_horario: entero, Ext.Clubes[I]:entero, Ext.Clubes.miembro_inscrito[I]: entero, Ext.Clubes.capacidad_maxima[I]: entero, Ext.Clubes.nombre[I]: cadena, Ext.Clubes.horarios_disponibles[I]: entero);
+Inicio 
+    Mostrar << "Ingrese el ID del club que desee inscribirse";
+    Leer >> Ext.clubes.id_club;
+    Para (I =1 Hasta I = Ext.Clubes[I]) Hacer;
+        Si (Ext.clubes.id_clup = Ext.Clubes.ID[I]) Entonces;
+            Si (Ext.Clubes.miembro_inscrito[I] < Ext.Clubes.capacidad_maxima[I]) Entonces;
+                Mostrar << " Horarios disponibles para:..,", Ext.Clubes.nombre[I], ":";
+                Mostrar << Ext.Clubes.horarios_disponibles[I];
+                Mostrar << "Seleccione unos de los horarios disponibles";
+                Leer >> Ext.Clubes.opcion_horario;
+                Si (Ext.Clubes.opcion_horario = Ext.Clubes.horarios_disponibles[I]) Entonces;
+                    Ext.Clubes.usuario_club_inscrito;
+                    Ext.Clubes.usuario_horario_club;
+                    Ext.Clubes.miembro_inscrito[I] = Ext.Clubes.miembro_ inscrito[I] + 1;
+                    Mostrar << "¡Inscripción Exitosa¡";
+                    Mostrar << "Club al que perteneces:..,", Ext.Clubes.nombre[I];
+                    Mostrar << "Horario del club:..,", Ext.Clubes.horarios_disponible[I];
+                Sino
+                    Mostrar << "El club no tiene cupos disponibles";
+                Fin_Si
+            Fin_Si
+        Fin_Si
+    Fin_Para
+Fin_Procedimiento
