@@ -1,0 +1,82 @@
+//   SISTEMA DACE - SECCIÓN DOCENTE ACADÉMICA ==============================================================
+// ==========================
+//   REGISTROS
+// ==========================
+Registro: Materia;
+    Codigo: Cadena;
+    Nombre: Cadena;
+    Creditos: Entero;
+Fin_Registro
+
+Registro: Bloque_Horario;
+    ID_Bloque: Entero;
+    Dia: Cadena;           // Lunes, Martes, etc.;
+    Hora_Inicio: Cadena;   // "08:00";
+    Hora_Fin: Cadena;      // "10:00";
+    Aula: Cadena;          // "A-101";
+    Codigo_Materia: Cadena; // Vacío si no asignado;
+    Estado: Cadena;        // "Libre" o "Ocupado";
+Fin_Registro
+
+Registro: Solicitud;
+    ID_Solicitud: Entero;
+    Tipo: Cadena;         // "Acta", "Constancia", "Soporte";
+    Detalle: Cadena;
+    Estado: Cadena;       // "Pendiente", "Procesada", "Rechazada";
+    Fecha: Cadena;        // "2025-12-07";
+Fin_Registro
+
+Registro: Reporte;
+    ID_Reporte: Entero;
+    Descripcion: Cadena;
+    Estado: Cadena;       // "Pendiente", "Atendido", "En progreso";
+    Fecha: Cadena;
+Fin_Registro
+
+Registro: Estudiante;
+    ID_Estudiante: Entero;
+    Nombre: Cadena;
+Fin_Registro
+
+Registro: Clase;
+    Codigo_Materia: Cadena;
+    Nombre_Materia: Cadena;
+    Seccion: Cadena;            // "01";
+    Estudiantes: Arreglo[1..120] de Estudiante;
+    Cant_Estudiantes: Entero;
+Fin_Registro
+
+Registro: Asignacion;
+    ID_Asignacion: Entero;
+    Codigo_Materia: Cadena;
+    Titulo: Cadena;
+    Descripcion: Cadena;
+    Fecha_Publicacion: Cadena;
+    Fecha_Entrega: Cadena;
+    Estado: Cadena;            // "Borrador", "Publicada", "Cerrada";
+Fin_Registro
+
+Registro: Docente;
+    ID_Docente: Entero;
+    Nombre: Cadena;
+    Materias: Arreglo[1..50] de Materia;
+    Cant_Materias: Entero;
+    Horario: Arreglo[1..40] de Bloque_Horario;
+    Cant_Bloques: Entero;
+    Solicitudes: Arreglo[1..100] de Solicitud;
+    Cant_Solicitudes: Entero;
+    Consecutivo_Solicitudes: Entero;
+    Reportes: Arreglo[1..100] de Reporte;
+    Cant_Reportes: Entero;
+    Consecutivo_Reportes: Entero;
+    Clases: Arreglo[1..100] de Clase;
+    Cant_Clases: Entero;
+    Asignaciones: Arreglo[1..200] de Asignacion;
+    Cant_Asignaciones: Entero;
+    Consecutivo_Asignaciones: Entero;
+Fin_Registro
+
+Registro: Bloques_Base;
+    Lista: Arreglo[1..48] de Bloque_Horario; // 6 días * 8 bloques;
+    Cant: Entero;
+Fin_Registro

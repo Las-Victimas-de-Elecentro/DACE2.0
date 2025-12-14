@@ -1,0 +1,116 @@
+Procedimiento Salud(E/S: Salud_Admin[I].Enfermedad_Cronica, Cronica[I], Salud_Admin[I].Discapacidad, Discapacidad[I], Salud_Admin[I].Corazon, Corazon[I]: Cadena, Salud_Admin[I].Asma: Booleano, Salud_Admin[I].Cancer, Cancer[I]: Cadena);
+Inicio
+    Var R, Re, Rep, Repe, Repet, Repeti: Booleano;
+    Var enf, dis, cora, cancer: Entero;
+    Var enf2: Cadena;
+    Mostrar << "¿Desea actualizar su información de salud? 1: Sí, 0: No";
+    Leer >> R;
+    Si (R = 1) Entonces;
+        Mostrar << "¿Posee alguna enfermedad crónica?, 1: Sí, 0: No";
+        Leer >> Re;
+        Si (Re = 1) Entonces;
+            Mostrar << "Ingrese su enfermedad crónica";
+            Mostrar << "1. Hipertensión Arterial";
+            Mostrar << "2. Cardiopatía isquémica";
+            Mostrar << "3. Accidente cerebrovascular";
+            Mostrar << "4. Diabetes Mellitus";
+            Mostrar << "5. Artritis";
+            Mostrar << "6. Colesterol Alto";
+            Mostrar << "7. Enfermedad Renal Crónica";
+            Mostrar << "8. Insuficiencia Cardíaca";
+            Mostrar << "9. Depresión";
+            Mostrar << "10. Alzheimer o demencia";
+            Mostrar << "11. Enfermedad Pulmonar obstructiva crónica";
+            Mostrar << "12. Otra";
+            Leer >> enf;
+            Mientras (enf < 1 or enf > 12) Hacer;
+                Mostrar << "Es invalido, intente nuevamente";
+                Leer >> enf;
+            Fin_Mientras
+            Si (enf = 12) Entonces;
+                Mostrar << "Ingrese la enfermedad crónica de la que padece";
+                Leer >> enf2;
+                Salud_Admin[pos_admin].Enfermedad_Cronica = enf2;
+            Fin_Si
+            Mostrar << "Dato guardado correctamente.";
+            Salud_Admin[pos_admin].Enfermedad_Cronica = Cronica[enf];
+        Sino
+            Salud_Admin[pos_admin].Enfermedad_Cronica = " ";
+        Fin_Si
+        Mostrar << "¿Posee alguna discapacidad? 1: Sí, 0: No";
+        Leer >> Rep;
+        Si (Rep = 1) Entonces;
+            Mostrar << "Ingrese su discapacidad";
+            Mostrar << "1. Discapacidad Física o motora";
+            Mostrar << "2. Discapacidad Intelectual";
+            Mostrar << "3. Sensorial (Visual y Auditiva)";
+            Mostrar << "4. Discapacidad psicosocial o mental";
+            Mostrar << "5. Discapacidad múltiple";
+            Leer >> dis;
+            Mientras (dis < 1 or dis > 5) Hacer;
+                Mostrar << "Es invalido, intente nuevamente.";
+                Leer >> dis;
+            Fin_Mientras
+            Salud_Admin[pos_admin].Discapacidad = Discapacidad[dis];
+        Sino   
+            Salud_Admin[pos_admin].Discapacidad = " ";
+        Fin_Si
+        Mostrar << "¿Posee problemas de corazón?, 1: Sí, 0: No";
+        Leer >> Repe;
+        Si (Repe = 1) Entonces;
+            Mostrar << "Ingrese que padece del corazón";
+            Mostrar << "1. Miocardiopatías";
+            Mostrar << "2. Endocarditis";
+            Mostrar << "3. Valvulopatía";
+            Mostrar << "4. Síndrome de Brugada";
+            Mostrar << "5. Infarto de miocardio";
+            Mostrar << "6. Taquicardia";
+            Mostrar << "7. Arritmia Cardíaca";
+            Mostrar << "8. Síndrome del Corazón Roto";
+            Mostrar << "9. Cardiopatía Congénita";
+            Mostrar << "10. Síndrome de Marfan";
+            Leer >> cora;
+            Mientras (cora < 1 or cora > 10) Hacer;
+                Mostrar << "Es invalido, intente nuevamente.";
+                Leer >> cora;
+            Fin_Mientras
+            Salud_Admin[pos_admin].Corazon = Corazon[cora]; 
+        Sino
+            Salud_Admin[pos_admin].Corazon = " ";
+        Fin_Si
+        Mostrar << "¿Padece de asma?, 1: Sí, 0: No";
+        Leer >> Repet;
+        Si (Repet = 1) Entonces;
+            Salud_Admin[pos_admin].Asma = 1;
+        Sino
+            Salud_Admin[pos_admin].Asma = 0;
+        Fin_Si
+        Mostrar << "¿Padece de algún tipo de cáncer?, 1: Sí, 0: No";
+        Leer >> Repeti;
+        Si (Repeti = 1) Entonces;
+            Mostrar << "Ingrese su tipo de cáncer";
+            Mostrar << "1. Cáncer de Colorrectal";
+            Mostrar << "2. Cáncer de Endometrio";
+            Mostrar << "3. Cáncer de Hígado";
+            Mostrar << "4. Leucemia";
+            Mostrar << "5. Linfoma no Hodgkin";
+            Mostrar << "6. Melanoma";
+            Mostrar << "7. Cáncer de Páncreas";
+            Mostrar << "8. Cáncer de Pulmón";
+            Mostrar << "9. Cáncer de Riñón";
+            Mostrar << "10. Cáncer de Mama";
+            Mostrar << "11. Cáncer de Tiroides";
+            Mostrar << "12. Cáncer de Vejiga";
+            Leer >> cancer;
+            Mientras (cancer < 1 or cancer > 12) Hacer;
+                Mostrar << "Es invalido, intente nuevamente";
+                Leer >> cancer;
+            Fin_Mientras
+            Salud_Admin[pos_admin].Cancer = Cancer[cancer];
+        Sino
+            Salud_Admin[pos_admin].Cancer = " ";
+        Fin_Si
+    Sino
+        Mostrar << "Vuelva al menú principal";
+    Fin_Si
+Fin_Procedimiento

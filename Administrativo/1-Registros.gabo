@@ -1,0 +1,8 @@
+Registro: Salud_Administrativo;
+    Enfermedad_Cronica: Cadena;
+    Discapacidad: Cadena;
+    Corazon: Cadena;
+    Asma: Booleano;
+    Cancer: Cadena;
+Fin_Registro
+Var Salud_Administrativo: Salud_Admin[500];

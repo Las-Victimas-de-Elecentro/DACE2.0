@@ -1,0 +1,11 @@
+Procedimiento Avatar(E/S: Admin[I].Avatar: Cadena);
+Inicio
+    Var R: Booleano;
+    Mostrar << "¿Desea cambiar el avatar o borrarlo? 1: Cambiar, 0: Borrar y poner el por defecto";
+    Leer >> R;
+    Si (R = 1) Entonces;
+        //Aquí se mostrarán las opciones de avatar que puede elegir el usuario
+    Sino
+        //Aquí se borraría el actual y se pondría el por defecto
+    Fin_Si
+Fin_Procedimiento

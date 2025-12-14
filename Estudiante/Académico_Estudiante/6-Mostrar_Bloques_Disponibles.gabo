@@ -1,0 +1,11 @@
+Procedimiento Mostrar_Bloques_Disponibles(E:Base:Bloques_Base);
+Inicio
+    Mostrar<<"=== Bloques disponibles ===";
+    Var i: Entero;
+    Para (i = 1 Hasta i = Base.Cant) Hacer;
+        Si (Base.Lista[i].Estado = "Libre") Entonces;
+            Mostrar << "ID: ", Base.Lista[i].ID_Bloque, " | ", Base.Lista[i].Dia, " ", Base.Lista[i].Hora_Inicio, "-", Base.Lista[i].Hora_Fin, " | Aula: ", Base.Lista[i].Aula;
+        Fin_Si
+    Fin_Para
+    Mostrar<<"===========================";
+Fin_Procedimiento

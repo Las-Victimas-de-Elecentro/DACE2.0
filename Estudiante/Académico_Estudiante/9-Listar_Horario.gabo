@@ -1,0 +1,13 @@
+Procedimiento Listar_Horario(E: Prof:Docente);
+Inicio
+    Mostrar<<"=== Mi Horario Académico ===";
+    Var i: Entero;
+    Si (Prof.Cant_Bloques = 0) Entonces;
+        Mostrar<<"Aún no tiene bloques asignados.";
+    Sino
+        Para (i = 1 Hasta i = Prof.Cant_Bloques) Hacer;
+            Mostrar<<"[", i, "] ", Prof.Horario[i].Dia, " ", Prof.Horario[i].Hora_Inicio, "-", Prof.Horario[i].Hora_Fin, " | Aula: ", Prof.Horario[i].Aula, " | Materia: ", Prof.Horario[i].Codigo_Materia;
+        Fin_Para
+    Fin_Si
+    Mostrar<<"============================";
+Fin_Procedimiento

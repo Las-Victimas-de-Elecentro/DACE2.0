@@ -1,0 +1,36 @@
+Procedimiento Menu_Administrativo(E/S: I, K: Entero, Empleo[I].Usuario: Cadena, Empleo.CI[I]: Entero, Empleo[I].Gmail, Empleo[I].Password: Cadena, Empleo[I].Edad: Entero, Empleo[I].Experiencia, Empleo[I].Titulo, Empleo[I].Descripcion, Admin[I].Usuario: Cadena, Admin.CI[I]: Entero, Admin[I].Gmail, Admin[I].Password: Cadena, C: Entero, Datos[I].Usuario: Cadena,  Datos.CI[I]: Entero,  Datos[I].Password: Cadena, Datos[I].Edad: Entero, Datos[I].Carrera: Cadena, Datos.Yea.Semestre[I]: Entero, Gestion[I].Usuario: Cadena , Gestion[I].CI: Entero, Gestion[I].Password, Gestion[I].Carrera: Cadena, Gestion.Yea.Semestre: Entero);
+Inicio
+	Var Opcion: Entero;
+	Mostrar << "Bienvenido al Sistema Administrativo, ¿Qué desea hacer?";
+	Mostrar << "1: Ingresar solicitudes de empleo";
+	Mostrar << "2: Agregar empleados";
+	Mostrar << "3: Eliminar empleados";
+	Mostrar << "4: Solicitud de inscripción de Estudiantes";
+	Mostrar << "5: Agregar estudiantes";
+	Mostrar << "6: Eliminar estudiantes";
+	Leer >> Opcion;
+	Mientras (Opcion < 1 or Opcion > 6) Hacer;
+		Mostrar << "Error en dato";
+		Leer >> Opcion;
+	Fin_Mientras
+	En_Caso (Opcion > 0) sea;
+		Caso (Opcion = 1);
+            Solicitud_Empleo(I, K, Empleo[I].Usuario, Empleo.CI[I], Empleo[I].Gmail, Empleo[I].Password, Empleo[I].Edad, Empleo[I].Experiencia, Empleo[I].Titulo, Empleo[I].Descripcion);
+            Mostrar << Solicitud_Empleo;
+		Caso (Opcion = 2);
+            Agregar_Empleados(I, Admin[I].Usuario, Admin.CI[I], Admin[I].Gmail, Admin[I].Password);
+            Mostrar << Agregar_Empleados;
+        Caso (Opcion = 3);
+            Eliminar_Empleado (Lim, Admin[I].Usuario, Admin.CI[I], Admin[I].Gmail, Admin[I].Password);
+            Mostrar << Eliminar_Empleado;
+		Caso (Opcion = 4);
+            Estudiantes_Datos(I, C, Datos[I].Usuario, Datos.ID[I],  Datos.CI[I],  Datos[I].Password, Datos[I].Edad, Datos[I].Carrera, Datos.Yea.Semestre[I]);
+            Mostrar << Estudiantes_Datos;
+		Caso (Opcion = 5);
+            Agregar_Estudiantes(I, Gestion[I].Usuario, Gestion.ID[I] , Gestion[I].CI, Gestion[I].Password, Gestion[I].Carrera, Gestion.Yea.Semestre);
+            Mostrar << Agregar_Estudiantes;
+		Otro_Caso
+            Eliminar_Estudiante(Gestion[I].Usuario, Gestion.ID[I], Gestion.CI[I], Gestion[I].Password, Gestion[I].Carrera, Gestion.Year.Semestre[I]);
+            Mostrar << Eliminar_Estudiante;
+		Fin_Caso
+Fin_Procedimiento

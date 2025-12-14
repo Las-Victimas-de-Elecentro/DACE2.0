@@ -1,0 +1,37 @@
+Procedimiento Asignar_Horario(E/S:Prof:Docente, E/S:Base:Bloques_Base);
+Inicio
+Var cod: Cadena, pos: Entero, ok: Booleano, idb: cadena;
+    Mostrar << "=== Ritual de Asignación de Horario ===";
+    Mostrar << "Ingrese el código de la materia que desea impartir:";
+    Var cod: Cadena, pos: Entero; Var ok: Booleano;
+    Leer >> cod;
+    Buscar_Materia(Prof, cod, pos, ok);
+    Si (ok = 0) Entonces;
+        Mostrar << "Materia no encontrada. Regístrela primero.";
+    Sino
+        Mostrar_Bloques_Disponibles(Base);
+        Mostrar << "Ingrese el ID del bloque que desea ocupar:";
+        Leer >> idb;
+        Mientras (idb < 1) o (idb > Base.Cant) Hacer;
+            Mostrar << "ID inválido, intente nuevamente:";
+            Leer >> idb;
+        Fin_Mientras
+        Si (Base.Lista[idb].Estado = "Ocupado") Entonces;
+            Mostrar << "Bloque ya ocupado, seleccione otro.";
+        Sino
+            Var es_valido: Booleano;
+            Validar_Choque_Bloque(Prof, Base.Lista[idb], es_valido);
+            Si (es_valido = 0) Entonces;
+                Mostrar << "El bloque genera choque con su horario actual. Seleccione otro.";
+            Sino
+                // Asignación
+                Base.Lista[idb].Codigo_Materia = Prof.Materias[pos].Codigo;
+                Base.Lista[idb].Aula = "A-101";
+                Base.Lista[idb].Estado = "Ocupado";
+                Prof.Cant_Bloques = Prof.Cant_Bloques + 1;
+                Prof.Horario[Prof.Cant_Bloques] = Base.Lista[idb];
+                Mostrar<<"La materia ha sido inscrita en el tiempo. El aula espera su presencia.";
+            Fin_Si
+        Fin_Si
+    Fin_Si
+Fin_Procedimiento

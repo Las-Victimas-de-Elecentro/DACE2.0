@@ -1,0 +1,34 @@
+Procedimiento Eliminar_Empleado (E/S: Lim, Admin[I].Usuario: Cadena, Admin.CI[I]: Entero, Admin[I].Gmail, Admin[I].Password: Cadena);
+Inicio
+	Var R: Booleano;
+	Eliminar: Entero;
+	Repetir
+		Mostrar << "Bienvenido a la eliminación de información de la base de datos";
+		Mostrar << "A continuación se le mostrará la base de datos para que pueda seleccionar la posición del empleado que desea eliminar";
+		Para (I = 1 hasta I = 35) hacer;
+			Mostrar << I, Admin[I].Usuario;
+			Mostrar << Admin[I].CI;
+			Mostrar << Admin[I].Cargo;
+			Mostrar << Admin[I].Gmail;
+			Mostrar << Admin[I].Password;
+		Fin_Para
+		Mostrar << "Ingrese la posición del empleado que desea borrar de la base de datos";
+		Leer >> Eliminar;
+		Mientras (Eliminar < 1 or Eliminar > Lim) hacer;
+			Mostrar << "Posición ingresada erronea, intente nuevamente";
+			Leer >> Eliminar;
+		Fin_Mientras
+		Para (I = 1 hasta I = Lim) hacer;
+			Si (Eliminar = I) entonces;
+				Admin[I].Usuario = " " ;
+				Admin[I].CI = null;
+				Admin[I].Cargo = " ";
+				Admin[I].Gmail = " " ;
+				Admin[I].Password = " ";
+			Fin_Si
+		Fin_Para
+		Mostrar << "¿Desea eliminar algún otro empleado?, 1: Sí, 0: No";
+		Leer >> R;
+		Hasta (R = 0);
+	Fin_Repetir
+Fin_Procedimiento

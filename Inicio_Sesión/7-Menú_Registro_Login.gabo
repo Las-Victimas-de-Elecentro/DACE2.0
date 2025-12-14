@@ -1,0 +1,22 @@
+Procedimiento Menu_Registro_Login(E/S: Opcion: Entero);
+Inicio
+    Mostrar << "==============================================";
+    Mostrar << "       		BIENVENIDO A U-nergizate";
+    Mostrar << "==============================================";
+	Mostrar << "1. Registrarse";
+    Mostrar << "2. Iniciar sesión";
+	Mostrar << "Seleccione una opción:";
+    Leer >> Opcion;
+	Mientras (Opcion < 1 or Opcion > 2) Hacer;
+        Mostrar<< "Opcion no válida, por favor seleccione una de las opciones mostradas anteriormente";
+        Leer >> Opcion;
+	Fin_Mientras
+	En_Caso (Opcion > 0) Sea;
+		Caso (Opcion = 1);
+            Registro(Admin[I].Gmail, Datos[I].Gmail, Admin[I].Usuario, Datos[I].Usuario, Admin[I].Password, Datos[I].Password, Admin.CI[I], Datos[I].CI, I, Lim, C, I, J, Tarjeta[I, J]);
+            Mostrar << Registro;
+		Otro_Caso
+            Iniciar_Sesion(Datos[I].Gmail, Admin[I].Gmail, Datos[I].Usuario, Admin[I].Usuario, Datos[I].Password, Admin[I].Password, Datos[I].CI, Admin[I].CI, I, J, Tarjeta[I, J]);
+            Mostrar << Iniciar_Sesion;
+	Fin_Caso
+Fin_Procedimiento

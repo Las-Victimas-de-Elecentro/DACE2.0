@@ -1,0 +1,27 @@
+Procedimiento Registrar_Clase(E/S: Prof:Docente);
+Inicio
+    Var cls: Clase; 
+    Var cod: Cadena; 
+    Var pos: Entero; 
+    Var ok: Booleano;
+    Si (Prof.Cant_Clases >= 100) Entonces;
+        Mostrar << "No es posible registrar más clases.";
+    Sino
+        Mostrar << "=== Registro de Clase ===";
+        Mostrar << "Código de materia:";
+        Leer >> cod;
+        Buscar_Materia(Prof, cod, pos, ok);
+        Si (ok = 0) Entonces;
+            Mostrar << "Materia no encontrada.";
+        Sino
+            cls.Codigo_Materia = Prof.Materias[pos].Codigo;
+            cls.Nombre_Materia = Prof.Materias[pos].Nombre;
+            Mostrar << "Sección:";
+            Leer >> cls.Seccion;
+            cls.Cant_Estudiantes = 0;
+            Prof.Cant_Clases = Prof.Cant_Clases + 1;
+            Prof.Clases[Prof.Cant_Clases] = cls;
+            Mostrar << "Clase registrada con éxito.";
+        Fin_Si
+    Fin_Si
+Fin_Procedimiento

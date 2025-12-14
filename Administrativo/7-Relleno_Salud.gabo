@@ -1,0 +1,44 @@
+Procedimiento Relleno_Salud(E/S: Cronica[I], Discapacidad[I], Corazon[I], Cancer[I]: Cadena);
+Inicio
+    Cronica[1] = "Hipertensión Arterial";
+    Cronica[2] = "Cardiopatía Isquémica";
+    Cronica[3] = "Accidente cerebrovascular";
+    Cronica[4] = "Diabetes Mellitus";
+    Cronica[5] = "Artritis";
+    Cronica[6] = "Colesterol Alto";
+    Cronica[7] = "Enfermedad Renal Crónica";
+    Cronica[8] = "Insuficiencia Cardíaca";
+    Cronica[9] = "Depresión";
+    Cronica[10] = "Alzheimer o demencia";
+    Cronica[11] = "Enfermedad Pulmonar Obstructiva crónica";
+
+    Discapacidad[1] = "Discapacidad física o motora";
+    Discapacidad[2] = "Discapacidad Intelectual";
+    Discapacidad[3] = "Sensorial (Visual y Auditiva)";
+    Discapacidad[4] = "Discapacidad psicosocial o mental";
+    Discapacidad[5] = "Discapacidad múltiple";
+
+    Corazon[1] = "Miocardiopatías";
+    Corazon[2] = "Endocarditis";
+    Corazon[3] = "Valvulopatía";
+    Corazon[4] = "Síndrome de Brugada";
+    Corazon[5] = "Infarto de miocardio";
+    Corazon[6] = "Taquicardia";
+    Corazon[7] = "Arritmia Cardíaca";
+    Corazon[8] = "Síndrome del Corazón Roto";
+    Corazon[9] = "Cardiopatía Congénita";
+    Corazon[10] = "Síndrome de Marfan";
+
+    Cancer[1] = "Cáncer de Colorrectal";
+    Cancer[2] = "Cáncer de Endometrio";
+    Cancer[3] = "Cáncer de Hígado";
+    Cancer[4] = "Leucemia";
+    Cancer[5] = "Linfoma no Hodgkin";
+    Cancer[6] = "Melanoma";
+    Cancer[7] = "Cáncer de Páncreas";
+    Cancer[8] = "Cáncer de Pulmón";
+    Cancer[9] = "Cáncer de Riñón";
+    Cancer[10] = "Cáncer de Mama";
+    Cancer[11] = "Cáncer de Tiroides";
+    Cancer[12] = "Cáncer de Vejiga";
+Fin_Procedimiento

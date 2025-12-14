@@ -1,0 +1,17 @@
+Procedimiento Validar_Choque_Bloque(E: Prof:Docente, E: bloque:Bloque_Horario, E/S: es_valido: Booleano);
+Inicio
+    // Valida que el docente no tenga otro bloque en el mismo día y rango
+    es_valido = Verdadero;
+    Var i: Entero;
+    Para (i = 1 Hasta i = Prof.Cant_Bloques) Hacer;
+        Si (Prof.Horario[i].Dia = bloque.Dia) Entonces;
+            // Simplificación: si coincide hora de inicio o fin, consideramos choque
+            Si (Prof.Horario[i].Hora_Inicio = bloque.Hora_Inicio) Entonces;
+                es_valido = 0;
+            Fin_Si
+            Si (Prof.Horario[i].Hora_Fin = bloque.Hora_Fin) Entonces;
+                es_valido = 0;
+            Fin_Si
+        Fin_Si
+    Fin_Para
+Fin_Procedimiento

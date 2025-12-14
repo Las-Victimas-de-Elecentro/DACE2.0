@@ -1,0 +1,13 @@
+Procedimiento Listar_Asignaciones(E: Prof:Docente);
+Inicio
+    Var i: Entero;
+    Mostrar << "=== Mis Asignaciones ===";
+    Si (Prof.Cant_Asignaciones = 0) Entonces;
+        Mostrar << "Aún no tiene asignaciones.";
+    Sino
+        Para (i = 1 Hasta i = Prof.Cant_Asignaciones) Hacer;
+            Mostrar << "ID: ", Prof.Asignaciones[i].ID_Asignacion, " | Título: ", Prof.Asignaciones[i].Titulo, " | Materia: ", Prof.Asignaciones[i].Codigo_Materia, " | Estado: ", Prof.Asignaciones[i].Estado, " | Entrega: ", Prof.Asignaciones[i].Fecha_Entrega;
+        Fin_Para
+    Fin_Si
+    Mostrar << "=========================";
+Fin_Procedimiento

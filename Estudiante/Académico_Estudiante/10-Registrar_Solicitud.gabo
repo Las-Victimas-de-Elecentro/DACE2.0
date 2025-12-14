@@ -1,0 +1,21 @@
+Procedimiento Registrar_Solicitud(E/S: Prof:Docente);
+Inicio
+    Si (Prof.Cant_Solicitudes >= 100) Entonces;
+        Mostrar<<"No es posible registrar más solicitudes.";
+    Sino
+        Var sol: Solicitud;
+        Mostrar << "=== Registro de Solicitud Académica ===";
+        Mostrar << "Tipo de solicitud (Acta, Constancia, Soporte):";
+        Leer >> sol.Tipo;
+        Mostrar << "Detalle de la solicitud:";
+        Leer >> sol.Detalle;
+        Mostrar << "Fecha (YYYY-MM-DD):";
+        Leer >> sol.Fecha;
+        Prof.Consecutivo_Solicitudes = Prof.Consecutivo_Solicitudes + 1;
+        sol.ID_Solicitud = Prof.Consecutivo_Solicitudes;
+        sol.Estado = "Pendiente";
+        Prof.Cant_Solicitudes = Prof.Cant_Solicitudes + 1;
+        Prof.Solicitudes[Prof.Cant_Solicitudes] = sol;
+        Mostrar << "Su petición ha sido elevada. El sistema la custodiará hasta ser atendida.";
+    Fin_Si
+Fin_Procedimiento

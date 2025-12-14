@@ -1,0 +1,19 @@
+Procedimiento Registrar_Reporte(E/S:Prof:Docente);
+Inicio
+    Si (Prof.Cant_Reportes >= 100) Entonces;
+        Mostrar << "No es posible registrar más reportes.";
+    Sino
+        Var rep: Reporte;
+        Mostrar << "=== Registro de Reporte Académico ===";
+        Mostrar << "Describa el problema o incidencia:";
+        Leer >> rep.Descripcion;
+        Mostrar << "Fecha (YYYY-MM-DD):";
+        Leer >> rep.Fecha;
+        Prof.Consecutivo_Reportes = Prof.Consecutivo_Reportes + 1;
+        rep.ID_Reporte = Prof.Consecutivo_Reportes;
+        rep.Estado = "Pendiente";
+        Prof.Cant_Reportes = Prof.Cant_Reportes + 1;
+        Prof.Reportes[Prof.Cant_Reportes] = rep;
+        Mostrar << "El reporte ha sido enviado. La institución escuchará su voz.";
+    Fin_Si
+Fin_Procedimiento
