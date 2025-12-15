@@ -1,10 +1,10 @@
-Procedimiento Eventos(E/S:Ext.Eventos[I]:entero, Ext.Eventos.ID[I]:Entero, Ext.Eventos.nombre[I]: cadena, Ext.Eventos.fecha[I]:cadena, Ext.eventos.descripcion[I]: cadena);
+Procedimiento Eventos(E/S: Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion: Cadena);
 Inicio
-    Mostrar << "A continuación los eventos actuales";
-    Para (I = 1 Hasta I = Ext.Eventos[I]) Hacer;
-        Mostrar << Ext.Eventos.ID[I];
-        Mostrar << Ext.Eventos.nombre[I];
-        Mostrar << Ext.Eventos.fecha[I];
-        Mostrar << Ext.eventos.descripcion[I];
+    Mostrar << "A continuación los Even actuales";
+    Para (I = 1 Hasta I = Even[I]) Hacer;
+        Mostrar << I;
+        Mostrar << Even[I].Nombre;
+        Mostrar << Even[I].Fecha;
+        Mostrar << Even[I].Descripcion;
     Fin_Para
 Fin_Procedimiento

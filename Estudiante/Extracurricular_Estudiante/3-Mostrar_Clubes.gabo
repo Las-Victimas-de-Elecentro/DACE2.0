@@ -1,15 +1,15 @@
-Procedimiento Mostrar_Clubes (E/S: Ext.Clubes[I]: entero, Ext.Clubes.ID[I]: entero, Ext.Clubes.nombre[I]: cadena, Ext.Clubes.descripcion: cadena, Ext.Clubes.miembro_ inscrito[I]: entero, Ext.Clubes.capacidad_maxima[I]);
+Procedimiento Mostrar_Clubes (E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
 Inicio
-    Mostrar << "Clubes Disponibles"; 
-    Para (I = 1 hasta I = Ext.Clubes[I]);
-        Mostrar << Ext.Clubes.ID[I];
-        Mostrar << Ext.Clubes.nombre[I];
-        Mostrar << Ext.Clubes.descripcion[I];
+    Mostrar << "Club Disponibles"; 
+    Para (I = 1 hasta I = Club);
+        Mostrar << I;
+        Mostrar << Club[I].Nombre;
+        Mostrar << Club[I].Descripcion;
         Mostrar << "Miembros inscritos";
-        Mostrar << Ext.Clubes.miembro_ inscrito[I];
+        Mostrar << Club[I].Miembros_Inscritos;
         Mostrar << "Capacidad maxima";
-        Mostrar << Ext.Clubes.capacidad_maxima[I];
+        Mostrar << Club[I].Capacidad_Maxima;
         Mostrar << "Horarios disponibles";
-        Mostrar << Ext.Clubes.horarios_disponibles[I];
+        Mostrar << Club[I].Horarios_Disponibles;
     Fin_Para
 Fin_Procedimiento

@@ -8,7 +8,7 @@ Registro: Materia;
     Creditos: Entero;
 Fin_Registro
 
-Registro: Bloque_Horario;
+Registro: Bloque_Horario;   //[8];
     ID_Bloque: Entero;
     Dia: Cadena;           // Lunes, Martes, etc.;
     Hora_Inicio: Cadena;   // "08:00";
