@@ -1,21 +1,21 @@
-Procedimiento Inscripcion_Club(E/S: Ext.clubes.id_club: entero, Ext.Clubes.opcion_horario: entero, Ext.Clubes[I]:entero, Ext.Clubes.miembro_inscrito[I]: entero, Ext.Clubes.capacidad_maxima[I]: entero, Ext.Clubes.nombre[I]: cadena, Ext.Clubes.horarios_disponibles[I]: entero);
+Procedimiento Inscripcion_Club(E/S: Datos[I].Club, Club[I].Nombre, Club[I].Horarios_Disponibles: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
 Inicio 
+    Var ID: Entero, opcion_horario: Cadena;
     Mostrar << "Ingrese el ID del club que desee inscribirse";
-    Leer >> Ext.clubes.id_club;
-    Para (I =1 Hasta I = Ext.Clubes[I]) Hacer;
-        Si (Ext.clubes.id_clup = Ext.Clubes.ID[I]) Entonces;
-            Si (Ext.Clubes.miembro_inscrito[I] < Ext.Clubes.capacidad_maxima[I]) Entonces;
-                Mostrar << " Horarios disponibles para:..,", Ext.Clubes.nombre[I], ":";
-                Mostrar << Ext.Clubes.horarios_disponibles[I];
+    Leer >> ID;
+    Para (I = 1 Hasta I = Club) Hacer;
+        Si (ID = I) Entonces;
+            Si (Club[I].Miembros_Inscritos < Club[I].Capacidad_Maxima) Entonces;
+                Mostrar << " Horarios disponibles para:..,", Club[I].Nombre, ":";
+                Mostrar << Club[I].Horarios_Disponibles;
                 Mostrar << "Seleccione unos de los horarios disponibles";
-                Leer >> Ext.Clubes.opcion_horario;
-                Si (Ext.Clubes.opcion_horario = Ext.Clubes.horarios_disponibles[I]) Entonces;
-                    Ext.Clubes.usuario_club_inscrito;
-                    Ext.Clubes.usuario_horario_club;
-                    Ext.Clubes.miembro_inscrito[I] = Ext.Clubes.miembro_ inscrito[I] + 1;
+                Leer >> opcion_horario;
+                Si (opcion_horario = Club[I].Horarios_Disponibles) Entonces;
+                    Club[I].Miembros_Inscritos = Club[I].Miembros_Inscritos + 1;
                     Mostrar << "¡Inscripción Exitosa¡";
-                    Mostrar << "Club al que perteneces:..,", Ext.Clubes.nombre[I];
-                    Mostrar << "Horario del club:..,", Ext.Clubes.horarios_disponible[I];
+                    Mostrar << "Club al que perteneces:..,", Club[I].Nombre;
+                    Mostrar << "Horario del club:..,", Club[I].Horarios_Disponibles;
+                    Datos[pos_usuario].Club = Club[I].Nombre;
                 Sino
                     Mostrar << "El club no tiene cupos disponibles";
                 Fin_Si

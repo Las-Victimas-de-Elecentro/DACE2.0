@@ -1,11 +1,11 @@
-Procedimiento Celebraciones(Ext.celebraciones[I]:entero, Ext.celebraciones.nombre[I]:cadena, Ext.celebraciones.fecha[I]:cadena, Ext.celebraciones.tipo[I]:cadena, Ext.celebraciones.descripcion[I]:cadena);
+Procedimiento Celebraciones(E/S: Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion: Cadena);
 Inicio
     Mostrar << "=== CELEBRACIONES Y CONMEMORACIONES ===";
-    Para (I = 1 Hasta I = Ext.celebraciones[I]) HACER;
-        Mostrar << "Celebración:..,", Ext.celebraciones.nombre[I];
-        Mostrar << "Fecha:..,", Ext.celebraciones.fecha[I];
-        Mostrar << "Tipo:..,", Ext.celebraciones.tipo[I];
-        Mostrar << "Descripción:..,", Ext.celebraciones.descripcion[I];
+    Para (I = 1 Hasta I = Cel) Hacer;
+        Mostrar << "Celebración:..,", Cel[I].Nombre;
+        Mostrar << "Fecha:..,", Cel[I].Fecha;
+        Mostrar << "Tipo:..,", Cel[I].Tipo;
+        Mostrar << "Descripción:..,", Cel[I].Descripcion;
         Mostrar << "----------------------------------------";
     Fin_Para
 Fin_Procedimiento
