@@ -6,3 +6,21 @@ Registro: Salud_Administrativo;
     Cancer: Cadena;
 Fin_Registro
 Var Salud_Administrativo: Salud_Admin[500];
+Var Solicitudes: Soli[500];
+Var Reportes: Rep[500];
+
+Registro: Solicitudes;          //Llave: Soli; Ruta: Soli.Campo;
+    Titulo: Cadena;
+    Descripcion: Cadena;
+    Titular: Cadena;
+    Destinatario: Cadena;
+    Estado: Booleano;
+Fin_Registro
+
+Registro: Reportes;             //Llave: Rep; Ruta: Rep.Campo;
+    Titulo: Cadena;
+    Descripcion: Cadena;
+    Titular: Cadena;
+    Problema: Cadena;
+    Recibido: Booleano;
+Fin_Registro
