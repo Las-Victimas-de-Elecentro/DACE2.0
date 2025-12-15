@@ -1,0 +1,88 @@
+Procedimiento Menu_Administrativo(E/S: I, K: Entero, Empleo[I].Usuario: Cadena, Empleo.CI[I]: Entero, Empleo[I].Gmail, Empleo[I].Password: Cadena, Empleo[I].Edad: Entero, Empleo[I].Experiencia, Empleo[I].Titulo, Empleo[I].Descripcion, Admin[I].Usuario: Cadena, Admin.CI[I]: Entero, Admin[I].Gmail, Admin[I].Password: Cadena, C: Entero, Datos[I].Usuario: Cadena,  Datos.CI[I]: Entero,  Datos[I].Password: Cadena, Datos[I].Edad: Entero, Datos[I].Carrera: Cadena, Datos.Yea.Semestre[I]: Entero, Gestion[I].Usuario: Cadena , Gestion[I].CI: Entero, Gestion[I].Password, Gestion[I].Carrera: Cadena, Gestion.Yea.Semestre: Entero, Soli[I].Titulo, Soli[I].Descripcion, Soli[I].Titular, Soli[I].Destinatario: Cadena, Soli[I].Estado: Booleano, Rep[I].Titulo, Rep[I].Descripcion, Rep[I].Titular, Rep[I].Problema: Cadena, Rep[I].Recibido: Booleano, Avatares[I], Admin[I].Avatar: Cadena, Salud_Admin[I].Enfermedad_Cronica, Cronica[I], Salud_Admin[I].Discapacidad, Discapacidad[I], Salud_Admin[I].Corazon, Corazon[I]: Cadena, Salud_Admin[I].Asma: Booleano, Salud_Admin[I].Cancer, Cancer[I]: Cadena);
+Inicio
+	Var Opcion, opc, opc2: Entero;
+	Mostrar << "Bienvenido Administrador, ¿Qué desea hacer?";
+	Mostrar << "1: Ver las opciones de administrativo";
+	Mostrar << "2: Ver las opciones de su perfil";
+	Leer >> opc;
+	Mientras (opc < 1 or opc > 2) Hacer;
+		Mostrar << "Elija una opción válida";
+		Leer >> opc;
+	Fin_Mientras
+	Si (opc = 1) Entonces;
+		Mostrar << "Opciones de administrador:";
+		Mostrar << "1: Ingresar solicitudes de empleo";
+		Mostrar << "2: Agregar empleados";
+		Mostrar << "3: Eliminar empleados";
+		Mostrar << "4: Solicitud de inscripción de Estudiantes";
+		Mostrar << "5: Agregar estudiantes";
+		Mostrar << "6: Eliminar estudiantes";
+		Mostrar << "7: Solicitudes";
+		Mostrar << "8: Reportes";
+		Leer >> Opcion;
+		Mientras (Opcion < 1 or Opcion > 6) Hacer;
+			Mostrar << "Error en dato";
+			Leer >> Opcion;
+		Fin_Mientras
+		En_Caso (Opcion > 0) sea;
+			Caso (Opcion = 1);
+				Solicitud_Empleo(I, K, Empleo[I].Usuario, Empleo.CI[I], Empleo[I].Gmail, Empleo[I].Password, Empleo[I].Edad, Empleo[I].Experiencia, Empleo[I].Titulo, Empleo[I].Descripcion);
+				Mostrar << Solicitud_Empleo;
+			Caso (Opcion = 2);
+				Agregar_Empleados(I, Admin[I].Usuario, Admin.CI[I], Admin[I].Gmail, Admin[I].Password);
+				Mostrar << Agregar_Empleados;
+			Caso (Opcion = 3);
+				Eliminar_Empleado (Lim, Admin[I].Usuario, Admin.CI[I], Admin[I].Gmail, Admin[I].Password);
+				Mostrar << Eliminar_Empleado;
+			Caso (Opcion = 4);
+				Estudiantes_Datos(I, C, Datos[I].Usuario, Datos.ID[I],  Datos.CI[I],  Datos[I].Password, Datos[I].Edad, Datos[I].Carrera, Datos.Yea.Semestre[I]);
+				Mostrar << Estudiantes_Datos;
+			Caso (Opcion = 5);
+				Agregar_Estudiantes(I, Gestion[I].Usuario, Gestion.ID[I] , Gestion[I].CI, Gestion[I].Password, Gestion[I].Carrera, Gestion.Yea.Semestre);
+				Mostrar << Agregar_Estudiantes;
+			Caso (Opcion = 6);
+				Eliminar_Estudiante(Gestion[I].Usuario, Gestion.ID[I], Gestion.CI[I], Gestion[I].Password, Gestion[I].Carrera, Gestion.Year.Semestre[I]);
+				Mostrar << Eliminar_Estudiante;
+			Caso(Opcion = 7);
+				Solicitudes(I, Soli[I].Titulo, Soli[I].Descripcion, Soli[I].Titular, Soli[I].Destinatario, Soli[I].Estado);
+				Mostrar << Solicitudes;
+			Otro_Caso
+				Reportes(I, Rep[I].Titulo, Rep[I].Descripcion, Rep[I].Titular, Rep[I].Problema, Rep[I].Recibido);
+				Mostrar << Reportes;
+		Fin_Caso
+	Sino
+		Mostrar << "Opciones de su perfil:";
+		Mostrar << "1: Información Personal";
+		Mostrar << "2: Seguridad";
+		Mostrar << "3: Modo Oscuro";
+		Mostrar << "4: Avatar";
+		Mostrar << "5: Salud";
+		Mostrar << "6: Estadísticas";
+		Leer >> opc2;
+		Mientras (opc2 < 1 or opc2 > 6) Hacer;
+			Mostrar << "Elija una opción entre 1-6";
+			Leer >> opc2;
+		Fin_Mientras
+		En_Caso (opc2 > 0) Sea;
+			Caso(opc2 = 1);
+				Informacion_Personal_Admin(Admin[I].Usuario, Admin[I].CI, Admin[I].Gmail, Admin[I].Cargo);
+				Mostrar << Informacion_Personal_Admin;
+			Caso(opc2 = 2);
+				Seguridad(Admin[I].Password, Admin[I].Usuario, Admin[I].Cargo, Admin[I].Gmail);
+				Mostrar << Seguridad;
+			Caso(opc2 = 3);
+				Modo_Oscuro();
+				Mostrar << Modo_Oscuro;
+			Caso(opc2 = 4);
+				Avatar_Admin(Avatares[I], Admin[I].Avatar);
+				Mostrar << Avatar_Admin;
+			Caso(opc2 = 5);
+				Salud(Salud_Admin[I].Enfermedad_Cronica, Cronica[I], Salud_Admin[I].Discapacidad, Discapacidad[I], Salud_Admin[I].Corazon, Corazon[I], Salud_Admin[I].Asma, Salud_Admin[I].Cancer, Cancer[I]);
+				Mostrar << Salud;
+			Otro_Caso
+				Estadisticas(I, Admin[I].Usuario, Admin[I].CI, Admin[I].Cargo, Admin[I].Gmail, Datos[I].Nombre, Datos[I].CI, Datos[I].Gmail, Datos[I].Carrera, Datos[I].Year.Semestre);
+				Mostrar << Estadisticas;
+		Fin_Caso
+	Fin_Si
+	
+Fin_Procedimiento

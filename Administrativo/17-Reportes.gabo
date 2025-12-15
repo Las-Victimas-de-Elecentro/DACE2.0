@@ -1,0 +1,56 @@
+Procedimiento Reportes(E/S: I, Rep[I].Titulo, Rep[I].Descripcion, Rep[I].Titular, Rep[I].Problema: Cadena, Rep[I].Recibido: Booleano);
+Inicio
+    Var opc: Entero, R: Booleano;
+    Var ele, elec: Entero;
+    Mostrar << "¡Bienvenido a la sección de Repcitudes!";
+    Mostrar << "¿Qué desea hacer?";
+    Mostrar << "1: Ver los reportes actuales";
+    Mostrar << "2: Borrar reporte en específico";
+    Mostrar << "3: Aprobar reporte como recibido";
+    Leer >> opc;
+    Mientras (opc < 1 or opc > 3) Hacer;
+        Mostrar << "Elija una de las opciones disponibles.";
+        Leer >> opc;
+    Fin_Mientras
+    En_Caso (opc > 0) Sea;
+        Caso(opc = 1);
+            Para (I = 1 Hasta I = S) Hacer;
+                Mostrar << Rep[I].Titulo;
+                Mostrar << Rep[I].Descripcion;
+                Mostrar << Rep[I].Titular;
+                Mostrar << Rep[I].Destinatario;
+            Fin_Para
+            Mostrar << "Esas fueron todos los reportes.";
+        Caso(opc = 2);
+            Para (I = 1 Hasta I = S) Hacer;
+                Mostrar << I, Rep[I].Titulo;
+                Mostrar << Rep[I].Descripcion;
+                Mostrar << Rep[I].Titular;
+                Mostrar << Rep[I].Problema;
+            Fin_Para
+            Mostrar << "Ingrese el número del reporte que desea borrar";
+            Leer >> ele;
+            Mientras (ele < 1 or ele > S) Hacer;
+                Mostrar << "Elija un reporte válido";
+                Leer >> ele;
+            Fin_Mientras
+            Rep[ele].Titulo = null;
+            Rep[ele].Descripcion = null;
+            Rep[ele].Titular = null;
+            Rep[ele].Problema = null;
+        Otro_Caso
+            Para (I = 1 Hasta I = S) Hacer;
+                Mostrar << I, Rep[I].Titulo;
+                Mostrar << Rep[I].Descripcion;
+                Mostrar << Rep[I].Titular;
+                Mostrar << Rep[I].Problema;
+            Fin_Para
+            Mostrar << "Ingrese el reporte que desea aprobar como recibido";
+            Leer >> elec;
+            Mientras (elec < 1 or elec > S) Hacer;
+                Mostrar << "Debe elegir una reporte válida";
+                Leer >> elec;
+            Fin_Mientras
+            Rep[elec].Recibido = 1;
+    Fin_Caso
+Fin_Procedimiento
