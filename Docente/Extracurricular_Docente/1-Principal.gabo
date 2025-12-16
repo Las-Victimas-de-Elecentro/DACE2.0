@@ -21,7 +21,7 @@ Registro: Celebraciones;    //Llave: Cel; Ruta: Cel.Campo;
 Fin_Registro
 
 
-Procedimiento Extracurricular_Estudiante(E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion, Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
+Procedimiento Extracurricular_Docente(E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion, Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
 Inicio
     Var opc: Entero;
     Repetir
@@ -57,10 +57,10 @@ Inicio
                         Mostrar_Clubes(Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima);
                         Mostrar << Clubes;
                     Caso(opcion = 2);
-                        Inscripcion_Club(Datos[I].Club, Club[I].Nombre, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima);
+                        Inscripcion_Club(Prof[I].Club, Club[I].Nombre, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima);
                         Mostrar << Inscripcion_Club;
                     Caso(opcion = 3);
-                        Salir_Club(Club[I].Miembros_Inscritos, Club[I].Nombre, Datos[I].Club);
+                        Salir_Club(Club[I].Miembros_Inscritos, Club[I].Nombre, Prof[I].Club);
                         Mostrar << Salir_Club;
                     Otro_Caso
                         Informacion_Club(Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima);

@@ -1,6 +1,6 @@
 Algoritmo U-nergízate
 
-Registro: Administrativos;
+Registro: Administrativos;  //Administrativos: Admin;
 	Usuario: Cadena;
 	CI: Entero;
 	Cargo: Cadena;
@@ -9,7 +9,19 @@ Registro: Administrativos;
 	Tarjeta: Entero;
 Fin_Registro
 
-Registro: Estudiantes;
+Registro: Docente;      //Docente: Prof;
+    Nombre: Cadena;
+    Cedula: Entero;
+    Gmail: Cadena;
+    Password: Cadena;
+    Tarjeta: Entero;
+    Materias: Cadena;
+    Cant_Materias: Entero;
+    Cant_Clases: Entero;
+    Club: Cadena;
+Fin_Registro
+
+Registro: Estudiantes;      //Estudiantes: Datos;
     Avatar: Cadena;
     Nombre: Cadena;
 	CI: Entero;
@@ -23,6 +35,7 @@ Registro: Estudiantes;
     UC: Entero;
     Actas: Cadena;
     Club: Cadena;
+    Esta_en_Club: Booleano;
     Enfermedad: Cadena;
 Fin_Registro
 
