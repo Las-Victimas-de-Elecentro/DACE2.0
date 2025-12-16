@@ -1,4 +1,4 @@
-Procedimiento Inscripcion_Club(E/S: Datos[I].Club, Club[I].Nombre, Club[I].Horarios_Disponibles: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
+Procedimiento Inscripcion_Club(E/S: Prof[I].Club, Club[I].Nombre, Club[I].Horarios_Disponibles: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
 Inicio 
     Var Nombre_Club, opcion_horario: Cadena;
     Mostrar << "Ingrese el nombre del club que desee inscribirse";
@@ -15,8 +15,8 @@ Inicio
                     Mostrar << "¡Inscripción Exitosa¡";
                     Mostrar << "Club al que perteneces:..,", Club[I].Nombre;
                     Mostrar << "Horario del club:..,", Club[I].Horarios_Disponibles;
-                    Datos[pos_usuario].Club = Club[I].Nombre;
-                    Datos[pos_usuario].Esta_en_Club = 1;
+                    Prof[pos_usuario].Club = Club[I].Nombre;
+                    Prof[pos_usuario].Esta_en_Club = 1;
                 Sino
                     Mostrar << "El club no tiene cupos disponibles";
                 Fin_Si

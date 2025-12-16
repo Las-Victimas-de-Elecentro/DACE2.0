@@ -14,6 +14,7 @@ Registro: Solicitudes;          //Llave: Soli; Ruta: Soli.Campo;
     Descripcion: Cadena;
     Titular: Cadena;
     Destinatario: Cadena;
+    Fecha: Cadena;
     Estado: Booleano;
 Fin_Registro
 
@@ -22,5 +23,6 @@ Registro: Reportes;             //Llave: Rep; Ruta: Rep.Campo;
     Descripcion: Cadena;
     Titular: Cadena;
     Problema: Cadena;
+    Fecha: Cadena;
     Recibido: Booleano;
 Fin_Registro

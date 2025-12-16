@@ -14,23 +14,25 @@ Inicio
     Fin_Mientras
     En_Caso (opc > 0) Sea;
         Caso(opc = 1);
-            Para (I = 1 Hasta I = S) Hacer;
+            Para (I = 1 Hasta I = Re) Hacer;
                 Mostrar << Rep[I].Titulo;
                 Mostrar << Rep[I].Descripcion;
                 Mostrar << Rep[I].Titular;
-                Mostrar << Rep[I].Destinatario;
+                Mostrar << Rep[I].Problema;
+                Mostrar << Rep[I].Fecha;
             Fin_Para
             Mostrar << "Esas fueron todos los reportes.";
         Caso(opc = 2);
-            Para (I = 1 Hasta I = S) Hacer;
+            Para (I = 1 Hasta I = Re) Hacer;
                 Mostrar << I, Rep[I].Titulo;
                 Mostrar << Rep[I].Descripcion;
                 Mostrar << Rep[I].Titular;
                 Mostrar << Rep[I].Problema;
+                Mostrar << Rep[I].Fecha;
             Fin_Para
             Mostrar << "Ingrese el número del reporte que desea borrar";
             Leer >> ele;
-            Mientras (ele < 1 or ele > S) Hacer;
+            Mientras (ele < 1 or ele > Re) Hacer;
                 Mostrar << "Elija un reporte válido";
                 Leer >> ele;
             Fin_Mientras
@@ -38,12 +40,14 @@ Inicio
             Rep[ele].Descripcion = null;
             Rep[ele].Titular = null;
             Rep[ele].Problema = null;
+            Rep[ele].Fecha = null;
         Otro_Caso
-            Para (I = 1 Hasta I = S) Hacer;
+            Para (I = 1 Hasta I = Re) Hacer;
                 Mostrar << I, Rep[I].Titulo;
                 Mostrar << Rep[I].Descripcion;
                 Mostrar << Rep[I].Titular;
                 Mostrar << Rep[I].Problema;
+                Mostrar << Rep[I].Fecha;
             Fin_Para
             Mostrar << "Ingrese el reporte que desea aprobar como recibido";
             Leer >> elec;
