@@ -1,0 +1,78 @@
+Registro: Eventos;          //Llave: Even; Ruta: Even.Campo;
+    ID: Entero;     
+    Nombre: Cadena;                               
+    Fecha: Cadena;
+    Descripcion: Cadena;
+Fin_Registro
+
+Registro: Clubes;           //Llave: Club; Ruta: Club.Campo;
+    Nombre: Cadena;
+    Descripcion: Cadena;
+    Capacidad_Maxima: Entero;
+    Miembros_Inscritos: Entero;
+    Horarios_Disponibles: Cadena;
+Fin_Registro
+
+Registro: Celebraciones;    //Llave: Cel; Ruta: Cel.Campo;
+    Nombre: Cadena; 
+    Fecha: Cadena;
+    Tipo: Cadena;
+    Descripcion: Cadena;
+Fin_Registro
+
+
+Procedimiento Extracurricular_Docente(E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion, Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
+Inicio
+    Var opc: Entero;
+    Repetir
+        Mostrar << "=== SISTEMA EXTRACURRICULAR ===";
+        Mostrar << "1. Eventos";
+        Mostrar << "2. Clubes";
+        Mostrar << "3. Celebraciones";
+        Mostrar << "4. Salir";
+        Mostrar << "Seleccione una opción: ";
+        Leer >> opc;
+        Mientras (opc < 1 or opc > 4) Hacer;
+            Mostrar << "Error, vuelva a intentar";
+            Leer >> opc;
+        Fin_Mientras
+        En_Caso(opc > 0) Sea;
+            Caso (opc = 1);
+                Eventos(Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion);
+                Mostrar << Eventos;
+            Caso (opc = 2);
+                Mostrar<<"=== MENÚ DE CLUBES ===";
+                Mostrar<<"1. Ver clubes disponibles";
+                Mostrar<<"2. Inscribirse en un club";
+                Mostrar<<"3. Salir de un club";
+                Mostrar<<"4. Ver información de mi club";
+                Mostrar<<"Seleccione una opción: ";
+                Leer>>opcion;
+                Mientras (opcion < 1 or opcion > 4) Hacer;
+                    Mostrar << "Es invalido, solo rango entre 1-4";
+                    Leer >> opcion;
+                Fin_Mientras
+                En_Caso (opcion > 0) Sea;
+                    Caso(opcion = 1);
+                        Mostrar_Clubes(Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima);
+                        Mostrar << Clubes;
+                    Caso(opcion = 2);
+                        Inscripcion_Club(Prof[I].Club, Club[I].Nombre, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima);
+                        Mostrar << Inscripcion_Club;
+                    Caso(opcion = 3);
+                        Salir_Club(Club[I].Miembros_Inscritos, Club[I].Nombre, Prof[I].Club);
+                        Mostrar << Salir_Club;
+                    Otro_Caso
+                        Informacion_Club(Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima);
+                        Mostrar << Informacion_Club;
+                Fin_Caso
+            Caso(opc = 3);
+                Celebraciones(Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion);
+                Mostrar << Celebraciones;
+            Otro_Caso
+                Mostrar << "¡Hasta pronto!";
+                R = 0;
+        Fin_Caso
+        Hasta(R = 0);
+    Fin_Repetir
+Fin_Procedimiento

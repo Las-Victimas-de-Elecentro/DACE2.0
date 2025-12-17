@@ -1,0 +1,70 @@
+Procedimiento Solicitud_Empleo(E/S: I, K: Entero, Empleo[I].Usuario: Cadena, Empleo.CI[I]: Entero, Empleo[I].Gmail, Empleo[I].Password: Cadena, Empleo[I].Edad: Entero, Empleo[I].Experiencia, Empleo[I].Titulo, Empleo[I].Descripcion: Cadena);
+Inicio
+	Var K = 1, Rep: Entero;
+	Var R: Booleano;
+	Var opc, Apr: Booleano;
+	Repetir
+        Mostrar << "Rellene la solicitud de empleo";
+        Mostrar << "Ingrese el nombre";
+        Leer >> Empleo[K].Usuario;
+        Mostrar << "Ingrese la cédula";
+        Leer >> Empleo[K].CI;
+        Mostrar << "Ingrese el correo electrónico";
+        Leer >> Empleo[K].Gmail;
+        Mostrar << "Ingrese la contraseña";
+        Leer >> Empleo[K].Password;
+        Mostrar << "Ingrese la edad";
+        Leer >> Empleo[K].Edad;
+        Mientras (Empleo[K].Edad < 18) Hacer;
+            Mostrar << "Solo positivos";
+            Leer >> Empleo[K].Edad;
+        Fin_Mientras
+        Mostrar << "Indique cuál es su experiencia de trabajo";
+        Leer >> Empleo[K].Experiencia;
+        Mostrar << "Ingrese el o los títulos que posea";
+        Leer >> Empleo[K].Titulo;
+        Mostrar << "Ingrese su descripción";
+        Leer >> Empleo[K].Descripcion;
+        Mostrar << "¿Desea ingresar otra solicitud de empleo? 1:Sí, 0: No";
+        Leer >> R;
+        K = K + 1;
+        Hasta(R = 0 or K = 500);
+    Fin_Repetir
+    Mostrar << "¿Desea revisar las solicitudes de empleo? 1: Sí, 0: No";
+    Leer >> opc;
+    Si (opc = 1) Entonces;
+        Mostrar<<"¿Cuántas desea revisar para verificar si deben ser aprobadas o denegadas?";
+        Leer>>Rep;
+        Mientras (Rep < 1 or Rep > K) Hacer;
+            Mostrar << "Solo positivos o es mayor que el tamaño de la base de datos";	
+            Leer >> Rep;
+        Fin_Mientras
+        Para (I = 1 Hasta I = Rep) Hacer;
+            Mostrar << Empleo[I].Usuario;
+            Mostrar << Empleo[I].CI;
+            Mostrar << Empleo[I].Gmail;
+            Mostrar << Empleo[I].Password;
+            Mostrar << Empleo[I].Edad;
+            Mostrar << Empleo[I].Experiencia;
+            Mostrar << Empleo[I].Titulo;
+            Mostrar << Empleo[I].Descripcion;
+            Mostrar << "¿Desea aprobarlo? 1: Sï, 0: No";
+            Leer >> Apr;
+            Empleo[I].Estado = Apr;
+        Fin_Para
+    Sino
+        Mostrar << "Continúe su camino entre el programa";
+    Fin_Si
+    Para (I = 1 Hasta I = K) Hacer;
+        Si (Empleo.Estado[I] = 0) Entonces;
+            Empleo[I].Usuario = " ";
+            Empleo[I].CI = null;
+            Empleo[I].Gmail = " ";
+            Empleo[I].Password = " ";
+            Empleo[I].Edad = null;;
+            Empleo[I].Experiencia = " ";
+            Empleo[I].Titulo = " ";
+            Empleo[I].Descripcion = " ";
+        Fin_Si
+    Fin_Para
+Fin_Procedimiento

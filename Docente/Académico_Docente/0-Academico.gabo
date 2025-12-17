@@ -1,0 +1,67 @@
+// ==========================
+//   FLUJO PRINCIPAL
+// ==========================
+
+Procedimiento Docente_Academico();
+Inicio
+Var Profesor: Docente;
+Var Base_Bloques: Bloques_Base;
+Var opc: Entero;
+Mostrar << "Bienvenido al sistema DACE - Sección Académica (Docente)";
+Inicializar_Docente(Profesor);
+Inicializar_Bloques_Base(Base_Bloques);
+Repetir
+    Mostrar << "========================================";
+    Mostrar << "Seleccione su acción, Maestro:";
+    Mostrar << "1: Registrar Materia";
+    Mostrar << "2: Asignar Horario (selección de bloque)";
+    Mostrar << "3: Ver Mi Horario";
+    Mostrar << "4: Registrar Solicitud";
+    Mostrar << "5: Registrar Reporte";
+    Mostrar << "6: Crear Asignación";
+    Mostrar << "7: Publicar Asignación";
+    Mostrar << "8: Cerrar Asignación";
+    Mostrar << "9: Listar Mis Asignaciones";
+    Mostrar << "0: Salir";
+    Mostrar << "========================================";
+    Leer >> opc;
+    Mientras (opc < 0 or opc > 9) Hacer;
+        Mostrar << "Error al ingresar, intente de nuevo";
+        Leer >> opc;
+    Fin_Mientras
+    En_Caso(opc > 0) sea;
+        Caso (opc = 1);
+            Agregar_Materia(Profesor);
+            Mostrar << Agregar_Materia;
+        Caso (opc = 2); 
+            Asignar_Horario(Profesor, Base_Bloques);
+            Mostrar << Asignar_Horario;
+        Caso (opc = 3); 
+            Listar_Horario(Profesor);
+            Mostrar << Listar_Horario;
+        Caso (opc= 4); 
+            Registrar_Solicitud(Profesor);
+            Mostrar << Registrar_Solicitud;
+        Caso (opc = 5); 
+            Registrar_Reporte(Profesor);
+            Mostrar << Registrar_Reporte;
+        Caso (opc = 6); 
+            Crear_Asignacion(Profesor);
+            Mostrar << Crear_Asignacion;
+        Caso (opc = 7); 
+            Publicar_Asignacion(Profesor);
+            Mostrar << Publicar_Asignacion;
+        Caso (opc = 8); 
+            Cerrar_Asignacion(Profesor);
+            Mostrar << Cerrar_Asignacion;
+        Caso (opc = 9); 
+            Listar_Asignaciones(Profesor);
+            Mostrar << Listar_Asignaciones;
+        Otro_Caso 
+            Mostrar << "Opción inválida. El sistema no reconoce ese gesto.";
+    Fin_Caso
+Hasta(opc = 0);
+Fin_Repetir
+Mostrar << "El ciclo académico se ha cerrado. Gracias por su presencia, Maestro.";
+Fin_Procedimiento
+

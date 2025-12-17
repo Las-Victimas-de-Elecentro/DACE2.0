@@ -1,0 +1,12 @@
+Procedimiento Inicializar_Docente(E/S:Prof:Docente);
+Inicio
+    Prof.Cant_Materias = 0;
+    Prof.Cant_Bloques = 0;
+    Prof.Cant_Solicitudes = 0;
+    Prof.Consecutivo_Solicitudes = 0;
+    Prof.Cant_Reportes = 0;
+    Prof.Consecutivo_Reportes = 0;
+    Prof.Cant_Clases = 0;
+    Prof.Cant_Asignaciones = 0;
+    Prof.Consecutivo_Asignaciones = 0;
+Fin_Procedimiento

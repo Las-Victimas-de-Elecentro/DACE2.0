@@ -1,0 +1,58 @@
+Procedimiento Agregar_Materia(E/S:Prof:Docente);
+Inicio
+    //Nuevo
+    Mostrar << "¿Cuántas materias va a impartir?";
+    Leer >> Cant;
+    Mientras (Cant < 1 or Cant > 50) Hacer;
+        Mostrar << "Solo positivos, y el límite no puede superar las 50 materias";
+        Leer >> Cant;
+    Fin_Mientras
+    Si (Cant = 1) Entonces;
+        Mostrar << "Ingrese el nombre de la materia que va a impartir";
+        Leer >> Materia;
+        Mostrar << "Ingrese el código de la materia";
+        Leer >> Codigo;
+        Para (I = 1 Hasta I = 200) Hacer;
+            Si (Materia = Materia[I].Nombre) or (Codigo = Materia[I].Codigo) Entonces;
+                Mostrar << "Materia encontrada.";
+                Mostrar << "Impartirá la materia llamada: ", Materia[I].Nombre;
+                Prof[pos].Materia = Materia;
+                Prof[pos].Cant_Materias = Cant;
+            Fin_Si
+        Fin_Para
+    Sino
+        Mostrar << "Ingrese las materias que impartirá separadas por comas (Ejemplo: 'Matemática I, Lógica Matemática')";
+        Leer >> Materia;
+        Prof[pos].Materia = Materia;
+        Prof[pos].Cant_Materias = Cant;
+        Para (i = 1 Hasta i = Cant) Hacer;
+            Mostrar << "Ingrese el nombre de las materias individualmente, aquí la materia n°", i, ":";
+            Leer >> Materia;
+            Mostrar << "Ingrese el código de la materia";
+            Leer >> Codigo;
+            Para (i = 1 Hasta i = 200) Hacer;
+                Si (Materia = Materia[I].Nombre) or (Codigo = Materia[I].Codigo) Entonces;
+                    Mostrar << "Materia encontrada.";
+                    Mostrar << "Impartirá la materia llamada: ", Materia[I].Nombre;
+                Fin_Si
+            Fin_Para
+        Fin_Para
+    Fin_Si
+
+    //Antiguo
+    Si (Prof.Cant_Materias >= 50) Entonces;
+        Mostrar << "Límite de materias alcanzado. No se puede agregar más.";
+    Sino
+        Var mat: Materia;
+        Mostrar << "Ingrese código de la materia:";
+        Leer >> mat.Codigo;
+        Mostrar << "Ingrese nombre de la materia:";
+        Leer >> mat.Nombre;
+        Mostrar << "Ingrese créditos de la materia:";
+        Leer >> mat.Creditos;
+        Prof.Cant_Materias = Prof.Cant_Materias + 1;
+        Prof.Materias[Prof.Cant_Materias] = mat;
+        Mostrar << "Materia registrada con éxito.";
+    Fin_Si
+Fin_Procedimiento
+

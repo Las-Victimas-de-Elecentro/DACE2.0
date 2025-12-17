@@ -1,0 +1,12 @@
+Procedimiento Generar_Tarjeta_Coordenadas(E/S: I, J, Minimo, Maximo, Tarjeta[I, J]: Entero);
+Inicio
+	Var coordenada: Entero;
+	Minimo = 1;
+	Maximo = 99;
+	Para (I = 1 Hasta I = 5) Hacer;
+		Para (J = 1 Hasta J =10) Hacer;
+			coordenada = Aleatorio(1, 99);
+			Tarjeta[I,J] = coordenada;
+        Fin_Para
+	Fin_Para
+Fin_Procedimiento

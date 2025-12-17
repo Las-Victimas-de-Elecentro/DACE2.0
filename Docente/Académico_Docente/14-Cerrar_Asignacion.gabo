@@ -1,0 +1,35 @@
+Procedimiento Cerrar_Asignacion(E/S: Prof:Docente);
+Inicio
+    Var i: Entero;
+    Var id: Entero, pos, pos2 = 1: Entero;
+    Si (As = 0) Entonces;
+        Mostrar << "No hay asignaciones para cerrar.";
+    Sino
+        Mostrar << "=== Asignaciones Publicadas ===";
+        Para (i = 1 Hasta i = As) Hacer;
+            Si (Prof[pos].Nombre = Asig[i].Nombre_Profesor)and (Asig[i].Estado = "Publicada") Entonces;
+                Mostrar << " | ", Asig[i].Titulo, " | Materia: ", Asig[i].Codigo_Materia, " | Entrega: ", Asig[i].Fecha_Entrega;
+                asig[pos2] = i;
+                pos2 = pos2 + 1;
+            Fin_Si
+        Fin_Para
+        Mostrar << "Ingrese el ID de la asignación a cerrar:";
+        pos = 0;
+        Para (i = 1 Hasta i = pos2) Hacer;
+            Mostrar << asig[i];
+        Fin_Para
+        Mostrar << "Debe ser alguno de estos IDs";
+        Leer >> id;
+        Para (i = 1 Hasta i = As) Hacer;
+            Si (asig[i] = id) Entonces;
+                pos = i;
+            Fin_Si
+        Fin_Para
+        Si (pos = 0) Entonces;
+            Mostrar << "ID no encontrado.";
+        Sino
+            Asig[pos].Estado = "Cerrada";
+            Mostrar << "Asignación cerrada. Se detienen entregas.";
+        Fin_Si
+    Fin_Si
+Fin_Procedimiento

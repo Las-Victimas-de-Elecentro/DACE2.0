@@ -1,0 +1,76 @@
+Procedimiento Avatar_Admin (E/S: Avatares[10], Admin[I].Avatar: Cadena);
+Inicio
+    var Opc: Entero, A = 0, R: Booleano;
+    Repetir
+        Mostrar << "Gestión de avatar";
+        Mostrar << "Puedes seleccionar un avatar o dejar el predeterminado.";
+        Mostrar << "Seleccione una opción";
+        Mostrar << "1: Dinosaurio";
+        Mostrar << "2: Pizza";
+        Mostrar << "3: Gato";
+        Mostrar << "4: Perro";
+        Mostrar << "5: Lapiz";
+        Mostrar << "6: Planta";
+        Mostrar << "7: Taza de cafe";
+        Mostrar << "8: Ninja";
+        Mostrar << "9: Dona";
+        Mostrar << "10: Balon de fútbol";
+        Mostrar << "11: Avatar Predeterminado";
+        Leer >> Opc;
+        Mientras (Opc < 1 Or > 11) Hacer;
+            Mostrar << "Ingrese solo opciones entre 1-11";
+            Leer >> Opc;
+        Fin_Mientras
+        
+        Mostrar << "¿Estás seguro de que quieres usar este avatar? Ingrese 1:Sí / 0:No";
+        Leer >> A;
+        Mientras (A < 0 Or A > 1) Hacer;
+            Mostrar << "Ingrese solo opciones entre 0-1";
+            Leer >> A;
+        Fin_Mientras
+        
+        En_Caso (A > 0) Sea;
+            Caso(Opc = 1);
+                Admin[pos_admin].Avatar = Avatares[1];
+                Mostrar << "Tu nuevo avatar es: Dinosaurio";
+            Caso(Opc = 2);
+                Admin[pos_admin].Avatar = Avatares[2];
+                Mostrar << "Tu nuevo avatar es: Pizza";  
+            Caso(Opc = 3);
+                Admin[pos_admin].Avatar = Avatares[3];
+                Mostrar << "Tu nuevo avatar es: Gato";
+            Caso(Opc = 4);
+                Admin[pos_admin].Avatar = Avatares[4];
+                Mostrar << "Tu nuevo avatar es: Perro";
+            Caso(Opc = 5);
+                Admin[pos_admin].Avatar = Avatares[5];
+                Mostrar << "Tu nuevo avatar es: Lapiz";
+            Caso(Opc = 6);
+                Admin[pos_admin].Avatar = Avatares[6];
+                Mostrar << "Tu nuevo avatar es: Planta";
+            Caso(Opc = 7);
+                Admin[pos_admin].Avatar = Avatares[7];
+                Mostrar << "Tu nuevo avatar es: Taza de cafe";
+            Caso(Opc = 8);
+                Admin[pos_admin].Avatar = Avatares[8];
+                Mostrar << "Tu nuevo avatar es: Ninja";  
+            Caso(Opc = 9);
+                Admin[pos_admin].Avatar = Avatares[9];
+                Mostrar << "Tu nuevo avatar es: Dona";
+            Caso(Opc = 9);
+                Admin[pos_admin].Avatar = Avatares[10];
+                Mostrar << "Tu nuevo avatar es: Balon de futboll";
+            Otro_Caso
+                Admin[pos_admin].Avatar = Avatares[11];
+                Mostrar << "Avatar predeterminado";
+        Fin_Caso
+
+        Si (A = 0) Entonces;
+            Mostrar << "Cambio de avatar cancelados";
+        Fin_Si
+
+        Mostrar << "¿Quiere cambiar el avatar nuevamente? Ingrese 1:Sí / 0:No";
+        Leer >> R;
+        Hasta(R = 0);
+    Fin_Repetir
+Fin_Procedimiento

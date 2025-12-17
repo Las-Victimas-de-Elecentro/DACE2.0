@@ -1,0 +1,31 @@
+Procedimiento Crear_Asignacion(E/S:Prof:Docente);
+Inicio
+    Var Asig: Asignacion; 
+    Var cod: Cadena; 
+    Var pos: Entero; 
+    Var ok: Booleano;
+    Si (As >= 200) Entonces;
+        Mostrar << "No es posible crear más asignaciones.";
+    Sino
+        Mostrar << "=== Creación de Asignación ===";
+        Mostrar << "Código de materia:";
+        Leer >> cod;
+        Buscar_Materia(Prof, cod, pos, ok);
+        Si (ok = 0) Entonces;
+            Mostrar << "Materia no encontrada.";
+        Sino
+            Asig[As].Codigo_Materia = cod;
+            Asig[As].Nombre_Profesor = Prof[pos].Nombre;
+            Mostrar << "Título:";
+            Leer >> Asig[As].Titulo;
+            Mostrar << "Descripción:";
+            Leer >> Asig[As].Descripcion;
+            Mostrar << "Fecha de publicación (YYYY-MM-DD):";
+            Leer >> Asig[As].Fecha_Publicacion;
+            Mostrar << "Fecha de entrega (YYYY-MM-DD):";
+            Leer >> Asig[As].Fecha_Entrega;
+            Asig[As].Estado = "Borrador";
+            Mostrar << "La tarea ha sido sembrada (en borrador).";
+        Fin_Si
+    Fin_Si
+Fin_Procedimiento

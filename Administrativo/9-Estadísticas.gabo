@@ -1,0 +1,19 @@
+Procedimiento Estadísticas(E/S: I: Entero, Admin[I].Usuario: Cadena, Admin[I].CI: Entero, Admin[I].Cargo, Admin[I].Gmail, Datos[I].Nombre: Cadena, Datos[I].CI: Entero, Datos[I].Gmail, Datos[I].Carrera: Cadena, Datos[I].Year.Semestre: Entero);
+Inicio
+    Mostrar << "A continuación las estadísticas del sistema: ";
+    Mostrar << "Administrativos y Docentes: ";
+    Para (I = 1 Hasta I = Lim) Hacer;
+        Mostrar << Admin[I].Usuario;
+        Mostrar << Admin[I].CI;
+        Mostrar << Admin[I].Cargo;
+        Mostrar << Admin[I].Gmail;
+    Fin_Para
+    Mostrar << "Estudiantes: ";
+    Para (I = 1 Hasta I = C) Hacer;
+        Mostrar << Datos[I].Nombre;
+        Mostrar << Datos[I].CI;
+        Mostrar << Datos[I].Gmail;
+        Mostrar << Datos[I].Carrera;
+        Mostrar << Datos[I].Year.Semestre;
+    Fin_Para
+Fin_Procedimiento
