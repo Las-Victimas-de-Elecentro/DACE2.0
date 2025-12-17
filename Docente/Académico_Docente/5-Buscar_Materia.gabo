@@ -1,10 +1,10 @@
-Procedimiento Buscar_Materia(E: Prof:Docente, E: codigo: Cadena, E/S: pos: Entero, E/S: encontrado: Booleano);
+Procedimiento Buscar_Materia(E: Materias[i].Codigo, cod: Cadena, E/S: pos: Entero, encontrado: Booleano);
 Inicio
-Var i: Entero;
-    encontrado = Falso;
+    Var i: Entero;
+    encontrado = 0;
     pos = 0;
-    Para (i = 1 Hasta i = Prof[pos].Cant_Materias) Hacer;
-        Si (Prof.Materias[i].Codigo = codigo) Entonces;
+    Para (i = 1 Hasta i = 500) Hacer;
+        Si (Materias[i].Codigo = cod) Entonces;
             encontrado = 1;
             pos = i;
         Fin_Si

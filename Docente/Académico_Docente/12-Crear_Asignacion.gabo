@@ -1,4 +1,4 @@
-Procedimiento Crear_Asignacion(E/S:Prof:Docente);
+Procedimiento Crear_Asignacion(E/S: Asig[i].Codigo_Materia, Asig[i].Descripcion, Asig[i].Fecha_Publicacion, Asig[i].Fecha_Entrega, Asig[i].Estado, cod: Cadena, pos, As: Entero, ok: Booleano);
 Inicio
     Var Asig: Asignacion; 
     Var cod: Cadena; 
@@ -10,7 +10,7 @@ Inicio
         Mostrar << "=== Creación de Asignación ===";
         Mostrar << "Código de materia:";
         Leer >> cod;
-        Buscar_Materia(Prof, cod, pos, ok);
+        Buscar_Materia(Materias[i].Codigo, cod, pos, ok);
         Si (ok = 0) Entonces;
             Mostrar << "Materia no encontrada.";
         Sino

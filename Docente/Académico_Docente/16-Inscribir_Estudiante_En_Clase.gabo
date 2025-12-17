@@ -1,4 +1,4 @@
-Procedimiento Inscribir_Estudiante_En_Clase(E/S:Prof:Docente);
+Procedimiento Inscribir_Estudiante_En_Clase(E/S:);
 Inicio
     //Académico Estudiante
     Var idx: Entero;

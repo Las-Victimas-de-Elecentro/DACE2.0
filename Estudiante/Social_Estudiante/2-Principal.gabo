@@ -1,0 +1,27 @@
+Procedimiento Social_Estudiante(E/S: I, J, Am: Entero, Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar, Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera: Cadena, Gru[I].Miembros, Gru[I].Seccion, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Datos[J].Semestre, Datos[J].Year, Prof[J].Cant_Materias: Entero);
+Inicio
+    Var opc: Entero;
+    Var R: Booleano;
+    Repetir
+        Mostrar << "¡Bienvenido a la sección Social Docente!";
+        Mostrar << "¿Qué desea hacer?";
+        Mostrar << "1: Mostrar Novedades";
+        Mostrar << "2: Mostrar Grupos";
+        Mostrar << "3: Sección de Amigos";
+        Leer >> opc;
+        En_Caso (opc > 0) Sea;
+            Caso(opc = 1);
+                Mostrar_Novedades(Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar);
+                Mostrar << Mostrar_Novedades;
+            Caso(opc = 2);
+                Mostrar_Grupos(I, Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia, Gru[I].Miembros, Gru[I].Seccion);
+                Mostrar << Mostrar_Grupos;
+            Otro_Caso
+                Amigos_Estudiante(Am, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Datos[J].Semestre, Datos[J].Year, Prof[J].Cant_Materias);
+                Mostrar << Amigos_Docente;
+        Fin_Caso
+        Mostrar << "¿Desea salir del sistema? 1: Sí, 0: No";
+        Leer >> R;
+        Hasta(R = 1);
+    Fin_Repetir
+Fin_Procedimiento

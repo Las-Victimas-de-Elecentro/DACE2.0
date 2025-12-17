@@ -1,5 +1,7 @@
-Procedimiento Agregar_Materia(E/S:Prof:Docente);
+Procedimiento Agregar_Materia(E/S: Prof[pos].Materias, Materia[I].Nombre, Materia[I].Codigo: Cadena, Prof[pos].Cant_Materias: Entero);
 Inicio
+    Var Cant, I: Entero;
+    Var Materia, Codigo: Cadena;
     //Nuevo
     Mostrar << "¿Cuántas materias va a impartir?";
     Leer >> Cant;
@@ -16,7 +18,7 @@ Inicio
             Si (Materia = Materia[I].Nombre) or (Codigo = Materia[I].Codigo) Entonces;
                 Mostrar << "Materia encontrada.";
                 Mostrar << "Impartirá la materia llamada: ", Materia[I].Nombre;
-                Prof[pos].Materia = Materia;
+                Prof[pos].Materias = Materia;
                 Prof[pos].Cant_Materias = Cant;
             Fin_Si
         Fin_Para
@@ -37,22 +39,6 @@ Inicio
                 Fin_Si
             Fin_Para
         Fin_Para
-    Fin_Si
-
-    //Antiguo
-    Si (Prof.Cant_Materias >= 50) Entonces;
-        Mostrar << "Límite de materias alcanzado. No se puede agregar más.";
-    Sino
-        Var mat: Materia;
-        Mostrar << "Ingrese código de la materia:";
-        Leer >> mat.Codigo;
-        Mostrar << "Ingrese nombre de la materia:";
-        Leer >> mat.Nombre;
-        Mostrar << "Ingrese créditos de la materia:";
-        Leer >> mat.Creditos;
-        Prof.Cant_Materias = Prof.Cant_Materias + 1;
-        Prof.Materias[Prof.Cant_Materias] = mat;
-        Mostrar << "Materia registrada con éxito.";
     Fin_Si
 Fin_Procedimiento
 

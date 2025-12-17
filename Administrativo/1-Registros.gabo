@@ -26,3 +26,4 @@ Registro: Reportes;             //Llave: Rep; Ruta: Rep.Campo;
     Fecha: Cadena;
     Recibido: Booleano;
 Fin_Registro
+

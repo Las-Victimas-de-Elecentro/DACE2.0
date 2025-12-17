@@ -1,4 +1,4 @@
-Procedimiento Registrar_Reporte(E/S:Prof:Docente);
+Procedimiento Registrar_Reporte_Estudiante(E/S: Re: Entero, Rep[i].Titulo, Rep[i].Descripcion, Rep[i].Titular, Rep[i].Problema, Rep[i].Fecha, Datos[pos_usuario].Nombre: Cadena, Rep[i].Recibido: Booleano);
 Inicio
     r: Entero;
     Mostrar << "¿Desea revisar algún reporte suyo? 1: Sí, 2: No, 3: Registrar nuevo reporte";
@@ -12,7 +12,7 @@ Inicio
     Sino
         Si (r = 1) Entonces;
             Para (i = 1 Hasta i = 200) Hacer;
-                Si (Prof[pos].Nombre = Rep[i].Titular) Entonces;
+                Si (Datos[pos_usuario].Nombre = Rep[i].Titular) Entonces;
                     Mostrar << "Se encontró el reporte.";
                     Mostrar << Rep[i].Titulo;
                     Mostrar << Rep[i].Descripcion;
@@ -35,8 +35,8 @@ Inicio
                 Leer >> Rep[Re].Titulo;
                 Mostrar << "Describa el problema o incidencia:";
                 Leer >> Rep[Re].Descripcion;
-                Mostrar << "Títular:", Prof[pos].Nombre;
-                Rep[Re].Titular = Prof[pos].Nombre;
+                Mostrar << "Títular:", Prof[pos_usuario].Nombre;
+                Rep[Re].Titular = Datos[pos_usuario].Nombre;
                 Mostrar << "Problema en cuestión: ";
                 Leer >> Rep[Re].Problema;
                 Mostrar << "Fecha (YYYY-MM-DD):";

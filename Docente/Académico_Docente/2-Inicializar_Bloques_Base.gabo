@@ -1,10 +1,10 @@
-Procedimiento Inicializar_Bloques_Base(E/S: Base:Bloques_Base);
+Procedimiento Inicializar_Bloques_Base(E/S: Base.Lista[I].Hora_Inicio, Base.Lista[I].Hora_Fin, Base.Lista[I].Dia, Base.Lista[I].Aula, Base.Lista[I].Codigo_Materia, Base.Lista[I].Estado: Cadena, Base.Lista[I].ID_Bloque: Entero);
 Inicio
     Base.Cant = 48;
     // Carga de catálogo (ejemplo: 8 bloques por día de Lunes a Sábado)
     Var dias[6]: Cadena;
-    dias[1] = "Lunes"; dias[2] = "Martes"; dias[3] = "Miércoles";
-    dias[4] = "Jueves"; dias[5] = "Viernes"; dias[6] = "Sábado";
+    Var dias[1] = "Lunes"; dias[2] = "Martes"; dias[3] = "Miércoles";
+    Var dias[4] = "Jueves"; dias[5] = "Viernes"; dias[6] = "Sábado";
     Var idx: Entero, d: Entero, b: Entero, global_id: Entero;
     global_id = 0;
     Para (d = 1 Hasta d = 6) Hacer;

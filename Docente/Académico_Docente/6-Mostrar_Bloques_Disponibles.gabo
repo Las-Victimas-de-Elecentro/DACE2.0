@@ -1,4 +1,4 @@
-Procedimiento Mostrar_Bloques_Disponibles(E:Base:Bloques_Base);
+Procedimiento Mostrar_Bloques_Disponibles(E/S: Base.Lista[i].ID_Bloque: Entero, Base.Lista[i].Dia, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Aula, Base.Lista[i].Estado: Cadena);
 Inicio
     Mostrar<<"=== Bloques disponibles ===";
     Var i: Entero;

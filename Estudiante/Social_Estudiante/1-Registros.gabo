@@ -1,0 +1,24 @@
+Registro: Novedades;            //Llave: Nov;
+    Hecho: Cadena;
+    Fecha: Cadena;
+    Responsables: Cadena;
+    Contexto: Cadena;
+    Lugar: Cadena;
+Fin_Registro
+
+Registro: Grupos;           //Llave: Gru;
+    Nombre_Profesor: Cadena;
+    CI_Profesor: Entero;
+    Codigo_Materia: Cadena;
+    Materia: Cadena;
+    Miembros: Entero;
+    Seccion: Entero;
+Fin_Registro
+
+Registro: Amigos;       //Llave: Amig;
+    Nombre_Emisor: Cadena;
+    CI_Emisor: Entero;
+    Nombre_Receptor: Cadena;
+    CI_Receptor: Entero;
+    Avatar_Receptor: Cadena;
+Fin_Registro
