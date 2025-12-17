@@ -1,4 +1,4 @@
-Procedimiento Publicar_Asignacion(E/S:Prof:Docente);
+Procedimiento Publicar_Asignacion(E/S: As: Entero, Prof[pos].Nombre, Asig[i].Nombre_Profesor, Asig[i].Titulo, Asig[i].Estado, Asig[i].Codigo_Materia: Cadena);
 Inicio
     Var i: Entero;
     Var id: Entero, pos, pos2 = 1: Entero;

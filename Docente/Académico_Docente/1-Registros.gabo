@@ -23,10 +23,12 @@ Registro: Lista;
     Cedula: Entero;
 Fin_Registro
 
-Registro: Clase;
+Registro: Clase;            //Llave: Clase;
     Nombre_Profesor: Cadena;
+    CI_Profesor: Entero;
     Codigo_Materia: Cadena;
     Nombre_Materia: Cadena;
+    Periodo: Cadena;
     Dia: Cadena;
     Hora_Inicio: Cadena;
     Hora_Fin: Cadena;
@@ -56,6 +58,24 @@ Registro: Docente;      //Docente: Prof;
     Cant_Materias: Entero;
     Cant_Clases: Entero;
     Club: Cadena;
+    Amigos: Entero;
+Fin_Registro
+
+Registro: Grupos;           //Llave: Gru;
+    Nombre_Profesor: Cadena;
+    CI_Profesor: Entero;
+    Codigo_Materia: Cadena;
+    Materia: Cadena;
+    Miembros: Entero;
+    Seccion: Entero;
+Fin_Registro
+
+Registro: Amigos;       //Llave: Amig;
+    Nombre_Emisor: Cadena;
+    CI_Emisor: Entero;
+    Nombre_Receptor: Cadena;
+    CI_Receptor: Entero;
+    Avatar_Receptor: Cadena;
 Fin_Registro
 
 Registro: Bloques_Base;     //Base;

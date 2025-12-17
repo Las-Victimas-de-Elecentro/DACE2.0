@@ -1,7 +1,7 @@
-Procedimiento Registrar_Solicitud(E/S: Prof:Docente);
+Procedimiento Registrar_Solicitud_Docente(E/S: S: Entero, Soli[i].Titulo, Soli[i].Descripcion, Soli[i].Titular, Soli[i].Destinatario, Soli[i].Fecha, Prof[pos].Nombre: Cadena, Soli[i].Estado: Booleano);
 Inicio
     r: Entero;
-    Mostrar << "¿Desea revisar algún reporte suyo? 1: Sí, 2: No, 3: Registrar nuevo reporte";
+    Mostrar << "¿Desea revisar alguna solicitud suya? 1: Sí, 2: No, 3: Registrar nueva solicitud";
     Leer >> r;
     Mientras (r < 1 or r > 3) Hacer;
         Mostrar << "Es invalido, está fuera del rango";

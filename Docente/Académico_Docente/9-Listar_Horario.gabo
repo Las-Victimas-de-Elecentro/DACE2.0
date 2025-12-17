@@ -1,4 +1,4 @@
-Procedimiento Listar_Horario(E: Prof:Docente);
+Procedimiento Listar_Horario(E/S: Prof[i].Cant_Materias, Clase[i].Seccion, Clase[i].Cant_Estudiantes: Entero, Prof[i].Nombre, Clase[i].Nombre_Profesor, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Clase[i].Aula, Clase[i].Materia, Clase[i].Codigo_Materia: Cadena);
 Inicio
     Mostrar << "=== Mi Horario Académico ===";
     Var i: Entero;
@@ -7,7 +7,7 @@ Inicio
     Sino
         Para (i = 1 Hasta i = 1000) Hacer;
             Si (Prof[pos].Nombre = Clase[i].Nombre_Profesor) Entonces;
-                Mostrar << "[", i, "] ", Clase[i].Dia, " ", Clase[i].Hora_Inicio, "-", Clase[i].Hora_Fin, " | Aula: ", Clase[i].Aula, " | Materia: ", Clase[i].Nombre_Materia, " | Código Materia: ", Clase[i].Codigo_Materia, " | Sección: ", Clases[i].Seccion, " | Inscritos: ", Clases[i].Cant_Estudiantes;;
+                Mostrar << "[", i, "] ", Clase[i].Dia, " ", Clase[i].Hora_Inicio, "-", Clase[i].Hora_Fin, " | Aula: ", Clase[i].Aula, " | Materia: ", Clase[i].Materia, " | Código Materia: ", Clase[i].Codigo_Materia, " | Sección: ", Clases[i].Seccion, " | Inscritos: ", Clases[i].Cant_Estudiantes;
             Fin_Si
         Fin_Para
     Fin_Si

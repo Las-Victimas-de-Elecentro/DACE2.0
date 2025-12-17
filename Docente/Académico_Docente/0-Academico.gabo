@@ -1,67 +1,62 @@
-// ==========================
-//   FLUJO PRINCIPAL
-// ==========================
-
-Procedimiento Docente_Academico();
+Procedimiento Docente_Academico(E/S: Prof[pos].Materias, Materia[I].Nombre, Materia[I].Codigo, Materias[i].Codigo, cod, Base.Lista[I].Hora_Inicio, Base.Lista[I].Hora_Fin, Base.Lista[I].Dia, Base.Lista[I].Aula, Base.Lista[I].Codigo_Materia, Base.Lista[I].Estado, Prof[i].Nombre, Clase[i].Nombre_Profesor, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Clase[i].Aula, Clase[i].Materia, Clase[i].Codigo_Materia, Soli[i].Titulo, Soli[i].Descripcion, Soli[i].Titular, Soli[i].Destinatario, Soli[i].Fecha, Prof[pos].Nombre, Soli[i].Estado, Asig[i].Codigo_Materia, Asig[i].Descripcion, Asig[i].Fecha_Publicacion, Asig[i].Fecha_Entrega, Asig[i].Estado: Cadena, Prof[pos].Cant_Materias, Prof[I].Cant_Clases, Lista[I].ID_Bloque, Clase[i].Seccion, Clase[i].Cant_Estudiantes, S, As: Entero);
 Inicio
-Var Profesor: Docente;
-Var Base_Bloques: Bloques_Base;
-Var opc: Entero;
-Mostrar << "Bienvenido al sistema DACE - Sección Académica (Docente)";
-Inicializar_Docente(Profesor);
-Inicializar_Bloques_Base(Base_Bloques);
-Repetir
-    Mostrar << "========================================";
-    Mostrar << "Seleccione su acción, Maestro:";
-    Mostrar << "1: Registrar Materia";
-    Mostrar << "2: Asignar Horario (selección de bloque)";
-    Mostrar << "3: Ver Mi Horario";
-    Mostrar << "4: Registrar Solicitud";
-    Mostrar << "5: Registrar Reporte";
-    Mostrar << "6: Crear Asignación";
-    Mostrar << "7: Publicar Asignación";
-    Mostrar << "8: Cerrar Asignación";
-    Mostrar << "9: Listar Mis Asignaciones";
-    Mostrar << "0: Salir";
-    Mostrar << "========================================";
-    Leer >> opc;
-    Mientras (opc < 0 or opc > 9) Hacer;
-        Mostrar << "Error al ingresar, intente de nuevo";
+    Var opc: Entero;
+    Mostrar << "Bienvenido al sistema DACE - Sección Académica (Docente)";
+    Inicializar_Docente(Prof[I].Cant_Materias, Prof[I].Cant_Clases);
+    Inicializar_Bloques_Base(Base.Lista[I].Hora_Inicio, Base.Lista[I].Hora_Fin, Base.Lista[I].Dia, Base.Lista[I].Aula, Base.Lista[I].Codigo_Materia, Base.Lista[I].Estado, Base.Lista[I].ID_Bloque);
+    Repetir
+        Mostrar << "========================================";
+        Mostrar << "Seleccione su acción, Maestro:";
+        Mostrar << "1: Registrar Materia";
+        Mostrar << "2: Asignar Horario (selección de bloque)";
+        Mostrar << "3: Ver Mi Horario";
+        Mostrar << "4: Registrar Solicitud";
+        Mostrar << "5: Registrar Reporte";
+        Mostrar << "6: Crear Asignación";
+        Mostrar << "7: Publicar Asignación";
+        Mostrar << "8: Cerrar Asignación";
+        Mostrar << "9: Listar Mis Asignaciones";
+        Mostrar << "0: Salir";
+        Mostrar << "========================================";
         Leer >> opc;
-    Fin_Mientras
-    En_Caso(opc > 0) sea;
-        Caso (opc = 1);
-            Agregar_Materia(Profesor);
-            Mostrar << Agregar_Materia;
-        Caso (opc = 2); 
-            Asignar_Horario(Profesor, Base_Bloques);
-            Mostrar << Asignar_Horario;
-        Caso (opc = 3); 
-            Listar_Horario(Profesor);
-            Mostrar << Listar_Horario;
-        Caso (opc= 4); 
-            Registrar_Solicitud(Profesor);
-            Mostrar << Registrar_Solicitud;
-        Caso (opc = 5); 
-            Registrar_Reporte(Profesor);
-            Mostrar << Registrar_Reporte;
-        Caso (opc = 6); 
-            Crear_Asignacion(Profesor);
-            Mostrar << Crear_Asignacion;
-        Caso (opc = 7); 
-            Publicar_Asignacion(Profesor);
-            Mostrar << Publicar_Asignacion;
-        Caso (opc = 8); 
-            Cerrar_Asignacion(Profesor);
-            Mostrar << Cerrar_Asignacion;
-        Caso (opc = 9); 
-            Listar_Asignaciones(Profesor);
-            Mostrar << Listar_Asignaciones;
-        Otro_Caso 
-            Mostrar << "Opción inválida. El sistema no reconoce ese gesto.";
-    Fin_Caso
-Hasta(opc = 0);
-Fin_Repetir
-Mostrar << "El ciclo académico se ha cerrado. Gracias por su presencia, Maestro.";
+        Mientras (opc < 0 or opc > 9) Hacer;
+            Mostrar << "Error al ingresar, intente de nuevo";
+            Leer >> opc;
+        Fin_Mientras
+        En_Caso(opc > 0) sea;
+            Caso (opc = 1);
+                Agregar_Materia(Prof[pos].Materias, Materia[I].Nombre, Materia[I].Codigo, Prof[pos].Cant_Materias);
+                Mostrar << Agregar_Materia;
+            Caso (opc = 2); 
+                Asignar_Horario(Materias[i].Codigo, cod, pos, encontrado);
+                Mostrar << Asignar_Horario;
+            Caso (opc = 3); 
+                Listar_Horario(Prof[i].Cant_Materias, Clase[i].Seccion, Clase[i].Cant_Estudiantes, Prof[i].Nombre, Clase[i].Nombre_Profesor, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Clase[i].Aula, Clase[i].Materia, Clase[i].Codigo_Materia);
+                Mostrar << Listar_Horario;
+            Caso (opc = 4); 
+                Registrar_Solicitud_Docente(S, Soli[i].Titulo, Soli[i].Descripcion, Soli[i].Titular, Soli[i].Destinatario, Soli[i].Fecha, Prof[pos].Nombre, Soli[i].Estado);
+                Mostrar << Registrar_Solicitud;
+            Caso (opc = 5); 
+                Registrar_Reporte_Docente(Re, Rep[i].Titulo, Rep[i].Descripcion, Rep[i].Titular, Rep[i].Problema, Rep[i].Fecha, Prof[pos].Nombre, Rep[i].Recibido);
+                Mostrar << Registrar_Reporte;
+            Caso (opc = 6); 
+                Crear_Asignacion(Asig[i].Codigo_Materia, Asig[i].Descripcion, Asig[i].Fecha_Publicacion, Asig[i].Fecha_Entrega, Asig[i].Estado, cod, pos, As, ok);
+                Mostrar << Crear_Asignacion;
+            Caso (opc = 7); 
+                Publicar_Asignacion(As, Prof[pos].Nombre, Asig[i].Nombre_Profesor, Asig[i].Titulo, Asig[i].Estado, Asig[i].Codigo_Materia);
+                Mostrar << Publicar_Asignacion;
+            Caso (opc = 8); 
+                Cerrar_Asignacion(As, Prof[pos].Nombre, Asig[i].Nombre_Profesor, Asig[i].Estado, Asig[i].Titulo, Asig[i].Codigo_Materia, Asig[i].Fecha_Entrega);
+                Mostrar << Cerrar_Asignacion;
+            Caso (opc = 9); 
+                Listar_Asignaciones(As, Prof[pos].Nombre, Asig[i].Nombre_Profesor, Asig[i].Titulo, Asig[i].Codigo_Materia, Asig[i].Estado, Asig[i].Fecha_Entrega);
+                Mostrar << Listar_Asignaciones;
+            Otro_Caso 
+                opc = 0;
+                Mostrar << "Opción inválida. El sistema no reconoce ese gesto.";
+        Fin_Caso
+        Hasta(opc = 0);
+    Fin_Repetir
+    Mostrar << "El ciclo académico se ha cerrado. Gracias por su presencia, Maestro.";
 Fin_Procedimiento
 
