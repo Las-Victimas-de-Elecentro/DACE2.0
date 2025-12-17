@@ -22,6 +22,7 @@ Inicio
 			Mostrar << "7: Solicitudes";
 			Mostrar << "8: Reportes";
 			Mostrar << "9: Agregar novedades";
+			Mostrar << "10: Servicio Comunitario";
 			Leer >> Opcion;
 			Mientras (Opcion < 1 or Opcion > 9) Hacer;
 				Mostrar << "Error en dato";
@@ -52,9 +53,12 @@ Inicio
 				Caso(Opcion = 8);
 					Reportes(I, Rep[I].Titulo, Rep[I].Descripcion, Rep[I].Titular, Rep[I].Problema, Rep[I].Recibido);
 					Mostrar << Reportes;
-				Otro_Caso
+				Caso(Opcion = 9);
 					Novedades(Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar);
 					Mostrar << Novedades;
+				Otro_Caso
+					Servicio_Comunitario(Ad.Servicio_Comunitario, Inscripciones);
+					Mostrar << Servicio_Comunitario;
 			Fin_Caso
 		Sino
 			Mostrar << "Opciones de su perfil:";

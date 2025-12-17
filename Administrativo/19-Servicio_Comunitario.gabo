@@ -1,0 +1,25 @@
+Procedimiento Servicio_Comunitario(E/S: Ad.Servicio_Comunitario, Inscripciones: Booleano);
+Inicio
+    Var r: Booleano;
+    Mostrar << "¡Bienvenido a la sección de Servicio Comunitario!";
+    Si (Inscripciones = 0) Entonces;
+        Mostrar << "¿Desea habilitar las inscripciones?";
+        Mostrar << "1: Sí";
+        Mostrar << "0: No";
+        Leer >> r;
+        Si (r = 1) Entonces;
+            Inscripciones = 1;
+        Sino
+            Inscripciones = 0;
+        Fin_Si
+    Sino
+        Si (Inscripciones = 1) Entonces;
+            Mostrar << "¿Desea deshabilitar las inscripciones?";
+            Leer >> r2;
+            Si (r2 = 1) Entonces;
+                Inscripciones = 0;
+                Ad.Servicio_Comunitario = 0;
+            Fin_Si
+        Fin_Si
+    Fin_Si
+Fin_Procedimiento

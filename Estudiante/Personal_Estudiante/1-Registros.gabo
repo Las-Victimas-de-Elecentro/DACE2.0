@@ -9,6 +9,12 @@ Registro: Administrativos;  //Administrativos: Admin;
 	Tarjeta: Entero;
 Fin_Registro
 
+Registro: Admin;        //Admin: Ad;
+    Servicio_Comunitario: Booleano;
+    Inscripciones: Booleano;
+    Pasantias: Booleano;
+Fin_Registro
+
 Registro: Docente;      //Docente: Prof;
     Nombre: Cadena;
     Cedula: Entero;
@@ -39,6 +45,15 @@ Registro: Estudiantes;      //Estudiantes: Datos;
     Club: Cadena;
     Esta_en_Club: Booleano;
     Enfermedad: Cadena;
+Fin_Registro
+
+Registro: Servicio_Comunitario;  //Llave: SerC[N];
+    Nombre:             Cadena;
+    Edad, Cedula:       Entero;
+    Area:               Cadena;
+    Semestre:           Entero;
+    Year:               Entero;
+    Horas_Realizadas:   Real;
 Fin_Registro
 
 // Enfermedades
