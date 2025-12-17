@@ -18,6 +18,8 @@ Registro: Estudiantes;
 	Carrera: Cadena;
     Semestre: Entero;
 	Year: Entero;
+    Materias_Aprobadas: Entero;
+    Servicio_Comunitario: Booleano;
 	Tarjeta: Entero;
     Notas: Real;
     UC: Entero;

@@ -37,4 +37,5 @@ Inicio
     //Variables Globales
     var Tema = 0: Booleano;
     var Avatares[1]: Cadena;
+    var Datos[pos_usuario].Servicio_Comunitario = 0 : Booleano;
 Fin

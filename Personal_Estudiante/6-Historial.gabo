@@ -1667,7 +1667,7 @@ Inicio
                 Mostrar << "Practicas_Juridicas_II:...", Datos.Materias.Der.Pre3der[pos_usuario].Practicas_Juridicas_II;
                 Suma = Suma + (Datos.Materias.Der.Pre3der[pos_usuario].Practicas_Juridicas_II);
                 Contador = Contador + 1;
-            Fin_Si;
+            Fin_Si
 
             Si (Datos[pos_usuario].Year = 3 Y Datos.Materias.Der.Pre2der[pos_usuario].Electivas_2 > 5.5) Entonces;
                 Mostrar << "Electivas_3:...", Datos.Materias.Der.Pre3der[pos_usuario].Electivas_3;
