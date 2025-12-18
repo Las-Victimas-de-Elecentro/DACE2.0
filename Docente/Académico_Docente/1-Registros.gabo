@@ -2,7 +2,7 @@
 // ==========================
 //   REGISTROS
 // ==========================
-Registro: Materia;  //mat;
+Registro: Materia;  //Materia;
     Codigo: Cadena;
     Nombre: Cadena;
     Creditos: Entero;

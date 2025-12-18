@@ -31,7 +31,7 @@ Inicio
             Leer >> Soli[S].Titulo;
             Mostrar << "Tipo de solicitud (Acta, Constancia, Soporte) y breve descripción:";
             Leer >> Soli[S].Descripcion;
-            Mostrar << "Titular:", Prof[pos_usuario].Nombre;
+            Mostrar << "Titular:", Datos[pos_usuario].Nombre;
             Soli[S].Titular = Datos[pos_usuario].Nombre;
             Mostrar << "Destinatario:";
             Leer >> Soli[S].Destinatario;
