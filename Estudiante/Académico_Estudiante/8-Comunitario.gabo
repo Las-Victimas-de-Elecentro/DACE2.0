@@ -104,7 +104,8 @@ Inicio
                         Mostrar << "Ahora usted se encuentra en la base de datos del servicio comunitario";
                     Fin_Si
                 Fin_Si
-            Fin_Si       
+            Fin_Si
+            I = I + 1;
         Hasta (I = J); 
         Fin_Repetir
         Si (Materias_Aprobadas < mitad) entonces;

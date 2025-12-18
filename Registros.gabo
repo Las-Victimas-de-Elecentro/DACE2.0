@@ -1,0 +1,970 @@
+//Perfiles
+Registro: Administrativos;  //Administrativos: Admin;
+	Usuario: Cadena;
+	CI: Entero;
+    Edad: Entero;
+	Cargo: Cadena;
+	Gmail: Cadena;
+	Password: Cadena;
+	Tarjeta: Entero;
+Fin_Registro
+
+Registro: Admin;        //Admin: Ad;
+    Servicio_Comunitario: Booleano;
+    Inscripciones: Booleano;
+    Pasantias: Booleano;
+Fin_Registro
+
+Registro: Docente;      //Docente: Prof;
+    Nombre: Cadena;
+    Cedula: Entero;
+    Edad: Entero;
+    Gmail: Cadena;
+    Password: Cadena;
+    Tarjeta: Entero;
+    Materias: Cadena;
+    Cant_Materias: Entero;
+    Cant_Clases: Entero;
+    Club: Cadena;
+Fin_Registro
+
+Registro: Estudiantes;      //Estudiantes: Datos;
+    Avatar: Cadena;
+    Nombre: Cadena;
+	CI: Entero;
+    Edad: Entero;
+	Gmail: Cadena;
+	Password: Cadena;
+	Carrera: Cadena;
+    Semestre: Entero;
+	Year: Entero;
+	Tarjeta: Entero;
+    Notas: Real;
+    UC: Entero;
+    Actas: Cadena;
+    Club: Cadena;
+    Esta_en_Club: Booleano;
+    Enfermedad: Cadena;
+Fin_Registro
+
+// Enfermedades
+
+Registro: Enfermedad;
+    Transmisibles: Cadena;
+    Cronicas: Cadena;
+    Neurologicas: Cadena;
+    Neoplasias: Cadena;
+    Autoinmunes: Cadena;
+    Trastornos: Cadena;
+    Lesiones: Cadena;
+    Congenitas: Cadena;
+    Metabolicos: Cadena;
+    Ocupacionales: Cadena;
+Fin_Registro
+
+//Académico Docente
+Registro: Materia;  //Materias;
+    Codigo: Cadena;
+    Nombre: Cadena;
+    Creditos: Entero;
+Fin_Registro
+
+Registro: Bloque_Horario;   //Lista[8]/Horario[40];
+    ID_Bloque: Entero;
+    Dia: Cadena;           // Lunes, Martes, etc.;
+    Hora_Inicio: Cadena;   // "08:00";
+    Hora_Fin: Cadena;      // "10:00";
+    Aula: Cadena;          // "A-101";
+    Codigo_Materia: Cadena; // Vacío si no asignado;
+    Estado: Cadena;        // "Libre" o "Ocupado";
+Fin_Registro
+
+Registro: Lista;
+    Nombre: Cadena;
+    Cedula: Entero;
+Fin_Registro
+
+Registro: Clase;            //Llave: Clase;
+    Nombre_Profesor: Cadena;
+    CI_Profesor: Entero;
+    Codigo_Materia: Cadena;
+    Nombre_Materia: Cadena;
+    Periodo: Cadena;
+    Dia: Cadena;
+    Hora_Inicio: Cadena;
+    Hora_Fin: Cadena;
+    Aula: Entero;
+    Seccion: Entero;            // 1, 2, 3;
+    Lista;          //Lista[50] (Nombre y Cédula de cada estudiante);
+    Cant_Estudiantes: Entero;
+Fin_Registro
+
+Registro: Asignacion;   //Llave: Asig;
+    Nombre_Profesor: Cadena;
+    Codigo_Materia: Cadena;
+    Titulo: Cadena;
+    Descripcion: Cadena;
+    Fecha_Publicacion: Cadena;
+    Fecha_Entrega: Cadena;
+    Estado: Cadena;            // "Borrador", "Publicada", "Cerrada";
+Fin_Registro
+
+Registro: Docente;      //Docente: Prof;
+    Nombre: Cadena;
+    Cedula: Entero;
+    Gmail: Cadena;
+    Password: Cadena;
+    Tarjeta: Entero;
+    Materias: Cadena;
+    Cant_Materias: Entero;
+    Cant_Clases: Entero;
+    Club: Cadena;
+    Amigos: Entero;
+Fin_Registro
+
+Registro: Grupos;           //Llave: Gru;
+    Nombre_Profesor: Cadena;
+    CI_Profesor: Entero;
+    Codigo_Materia: Cadena;
+    Materia: Cadena;
+    Miembros: Entero;
+    Seccion: Entero;
+Fin_Registro
+
+Registro: Amigos;       //Llave: Amig;
+    Nombre_Emisor: Cadena;
+    CI_Emisor: Entero;
+    Nombre_Receptor: Cadena;
+    CI_Receptor: Entero;
+    Avatar_Receptor: Cadena;
+Fin_Registro
+
+Registro: Bloques_Base;     //Base;
+    Lista; // 6 días * 8 bloques;
+    Cant: Entero;
+Fin_Registro
+
+//Acádemico Estudiante
+Registro: Servicio_Comunitario;  //Llave: SerC[N];
+    Nombre:             Cadena;
+    Edad, Cedula:       Entero;
+    Area:               Cadena;
+    Semestre:           Entero;
+    Year:               Entero;
+    Horas_Realizadas:   Real;
+Fin_Registro
+
+
+// Notas de las carreras
+
+Registro: Notas;
+    Informatica: Real;
+    Civil: Real;
+    Hidrocarburo: Real;
+    Medicina: Real;
+    Odontologia: Real;
+    Veterinaria: Real;
+    Derecho: Real;
+    Comunicacion: Real;
+    Contaduria: Real;
+    Economia: Real;
+Fin_Registro
+
+//Prelaciones de las Carreras
+
+Registro: Informatica;
+    Informatica_Pre1: Real;
+    Informatica_Pre2: Real;
+    Informatica_Pre3: Real;
+    Informatica_Pre4: Real;
+    Informatica_Pre5: Real;
+Fin_Registro
+
+Registro: Civil;
+    Civil_Pre1: Real;
+    Civil_Pre2: Real;
+    Civil_Pre3: Real;
+    Civil_Pre4: Real;
+    Civil_Pre5: Real;
+Fin_Registro
+
+Registro: Hidrocarburo;
+    Hidrocarburo_Pre1: Real;
+    Hidrocarburo_Pre2: Real;
+    Hidrocarburo_Pre3: Real;
+    Hidrocarburo_Pre4: Real;
+Fin_Registro
+
+Registro: Medicina;
+    Medicina_Pre1: Real;
+    Medicina_Pre2: Real;
+    Medicina_Pre3: Real;
+    Medicina_Pre4: Real;
+    Medicina_Pre5: Real;
+Fin_Registro
+
+Registro: Odontologia;
+    Odontologia_Pre1: Real;
+    Odontologia_Pre2: Real;
+    Odontologia_Pre3: Real;
+    Odontologia_Pre4: Real;
+    Odontologia_Pre5: Real;
+Fin_Registro
+
+Registro: Veterinaria;
+    Veterinaria_Pre1: Real;
+    Veterinaria_Pre2: Real;
+    Veterinaria_Pre3: Real;
+    Veterinaria_Pre4: Real;
+    Veterinaria_Pre5: Real;
+Fin_Registro
+
+Registro: Derecho;
+    Derecho_Pre1: Real;
+    Derecho_Pre2: Real;
+    Derecho_Pre3: Real;
+    Derecho_Pre4: Real;
+    Derecho_Pre5: Real;
+Fin_Registro
+
+Registro: Comunicacion;
+    Comunicacion_Pre1: Real;
+    Comunicacion_Pre2: Real;
+    Comunicacion_Pre3: Real;
+    Comunicacion_Pre4: Real;
+    Comunicacion_Pre5: Real;
+Fin_Registro
+
+Registro: Contaduria;
+    Contaduria_Pre1: Real;
+    Contaduria_Pre2: Real;
+    Contaduria_Pre3: Real;
+    Contaduria_Pre4: Real;
+    Contaduria_Pre5: Real;
+Fin_Registro
+
+Registro: Economia;
+    Economia_Pre1: Real;
+    Economia_Pre2: Real;
+    Economia_Pre3: Real;
+    Economia_Pre4: Real;
+    Economia_Pre5: Real;
+Fin_Registro
+
+//Informatica
+
+Registro Informatica_Pre1;
+    Matematica_I: Real;
+    Matematica_II: Real;
+    Fisica_I: Real;
+    Matematica_III: Real;
+    Fisica_II: Real;
+    Organizacion_Del_Computador: Real;
+    Matematica_IV: Real;
+    Probabilidad_Y_Estadistica: Real;
+    Arquitectura_Del_Computador: Real;
+    Sistemas_Operativos: Real;
+    Redes: Real;
+    Sistemas_Distribuidos: Real;
+    Teoria_De_Sistemas: Real;
+    Ingenieria_Economica: Real;
+    Informatica_Educativa: Real;
+Fin_Registro
+
+Registro Informatica_Pre2;
+    Logica_Matematica: Real;
+    Fundamentos_De_La_Informatica: Real;
+    Algoritmos_I: Real;
+    Algoritmos_II: Real;
+    Programacion_I: Real;
+    Estructuras_Discretas_I: Real;
+    Programacion_II: Real;
+    Base_De_Datos: Real;
+    Estructuras_Discretas_II: Real;
+    Programacion_III: Real;
+    Sistemas_De_Informacion_I: Real;
+    Traductores_E_Interpretes: Real;
+    Sistemas_De_Informacion_II: Real;
+    Lenguajes_De_Programacion: Real;
+    Sistemas_De_Informacion_III: Real;
+    Control_De_Proyectos: Real;
+    Gestion_Empresarial: Real;
+    Pasantias: Real;
+    Proyecto_De_Grado_I: Real;
+    Gerencia_De_Proyectos: Real;
+    Proyecto_De_Grado_II: Real;
+    Etica_Profesional: Real;
+Fin_Registro
+
+Registro Informatica_Pre3;
+    Ingles_I: Real;
+    Ingles_II: Real;
+Fin_Registro
+
+Registro Informatica_Pre4;
+    Formacion_Constitucional: Real;
+    Arte_Cultura: Real;
+Fin_Registro
+
+Registro Informatica_Pre5;
+    Lenguaje_Comunicacion: Real;
+    Economia_Digital: Real;
+    Problematica_Cientifica_: Real;
+    Metodologia: Real;
+    Electiva_I: Real;
+    Electiva_II: Real;
+    Electiva_III: Real;
+    Electiva_IV: Real;
+    Electiva_V: Real;
+    Electiva_De_Area_I: Real;
+    Electiva_De_Area_II: Real;
+    Electiva_De_Area_III: Real;
+    Electiva_Libre_I: Real;
+    Electiva_Libre_II: Real;
+    Deportes: Real;
+Fin_Registro
+
+// Civil
+
+Registro Civil_Pre1;
+    Calculo_I: Real;
+    Programacion_Logico: Real;
+    Calculo_II: Real;
+    Fisica_I: Real;
+    Calculo_III: Real;
+    Metodos_Numericos: Real;
+    Fisica_II: Real;
+    Calculo_IV: Real;
+    Mecanica_Racional_I: Real;
+    Calculo_V: Real;
+    Mecanica_Racional_II: Real;
+    Resistencia_De_Materiales: Real;
+    Mecanica_De_Fluidos_I: Real;
+Fin_Registro
+
+Registro Civil_Pre2;
+    Quimica_Basica: Real;
+    Geologia: Real;
+    Quimica_Aplicada: Real;
+    Geologia_Aplicada: Real;
+    Hidraulica_I: Real;
+    Instalaciones_Sanitarias: Real;
+    Hidrocarburologia: Real;
+    Mecanica_De_Fluidos_II: Real;
+    Hidraulica_II: Real;
+    Mecanica_De_Suelos: Real;
+Fin_Registro
+
+Registro Civil_Pre3;
+    Dibujo: Real;
+    Geometria_Descriptiva_I: Real;
+    Geometria_Descriptiva: Real;
+    Topografia: Real;
+    Vias_De_Comunicacion_I: Real;
+    Vias_De_Comunicacion_II: Real;
+    Dibujo_De_Proyectos: Real;
+    Acueductos_Y_Cloacas: Real;
+    Planificacion_De_Obras: Real;
+    Pavimentos: Real;
+Fin_Registro
+
+Registro Civil_Pre4;
+    Teorias_De_Estructuras_I: Real;
+    Teorias_De_Estructuras_II: Real;
+    Concreto_Armado_I: Real;
+    Concreto_Armado_II: Real;
+    Proyecto_De_Grado_I: Real;
+    Metodos_De_Construccion: Real;
+    Instalaciones_Para_Edificios: Real;
+    Puentes: Real;
+    Proyectos_Estructurales_De_Acero: Real;
+    Concreto_Pretensado: Real;
+    Administracion_De_Obras: Real;
+Fin_Registro
+
+Registro Civil_Pre5;
+    Ingles_Tecnico: Real;
+    Introduccion_Ciencias_Humanas: Real;
+    Tecnicas_De_Estudio: Real;
+    Metodologia_Cientifica: Real;
+    Electiva_I: Real;
+    Sociologia_Ciencia_Tecnologia: Real;
+    Derecho: Real;
+    Deportes: Real;
+    Electiva_II: Real;
+    Electiva_III: Real;
+    Electiva_IV: Real;
+    Ingenieria_Economica: Real;
+    H_S_E_Y_S_A: Real;
+    Electiva_Tecnica_I: Real;
+    Electiva_Tecnica_II: Real;
+    Practica_Comunitaria: Real;
+    Prac_Profesional: Real;
+Fin_Registro
+
+//Hidrocarburo
+
+Registro Hidrocarburo_Pre1;
+    Matematica_I: Real;
+    Quimica_Organica: Real;
+    Matematica_II: Real;
+    Fisica_I: Real;
+    Quimica_Inorganica: Real;
+    Matematica_III: Real;
+    Fisica_II: Real;
+    Quimica_Aplicada: Real;
+    Matematica_IV: Real;
+    Probabilidad_Y_Estadistica: Real;
+    Calculo: Real;
+Fin_Registro
+
+Registro Hidrocarburo_Pre2;
+    Fund_Form_Socio_Politica_I: Real;
+    Metodologia_Cientifica: Real;
+    Fund_Form_Socio_Politica_II: Real;
+    Fund_Form_Socio_Politica_III: Real;
+    Fund_Form_Socio_Politica_IV: Real;
+    Fund_Form_Socio_Politica_V: Real;
+    Fund_Form_Socio_Politica_VI: Real;
+Fin_Registro
+
+Registro Hidrocarburo_Pre3;
+    Geologia_I: Real;
+    Geologia_II: Real;
+    Caracterizacion_De_Yacimientos: Real;
+    M_Racional_Y_Aplicada: Real;
+    Mecanica_De_Fluidos: Real;
+    Perforacion_De_Pozos: Real;
+    Recuperacion_Secundaria: Real;
+    Transporte_Y_Distribucion: Real;
+    Ing_De_Yacimientos: Real;
+Fin_Registro
+
+Registro Hidrocarburo_Pre4;
+    Ingles_I: Real;
+    Dibujo_Tecnico: Real;
+    Estructura_Organizacional: Real;
+    Control_De_Proyectos: Real;
+    Org_Y_Gestion_Empresarial: Real;
+    Pasantias: Real;
+    Gerencia_De_Proyectos: Real;
+    Proyecto_De_Grado_I: Real;
+    Proyecto_De_Grado_II: Real;
+Fin_Registro
+
+//Medicina
+
+Registro Medicina_Pre1;
+    Histologia_Embriol_y_Genetica: Real;
+    Anatomia_Humana: Real;
+    Bioquimica: Real;
+    Fisiologia_y_Biofisica: Real;
+    Semiologia_Medico_Quirurgica: Real;
+Fin_Registro
+
+Registro Medicina_Pre2;
+    Microbiologia: Real;
+    Parasitologia: Real;
+    Farmacologia: Real;
+    Fisiopatologia: Real;
+    Anatomia_Patologica: Real;
+Fin_Registro
+
+Registro Medicina_Pre3;
+    Medicina_General_I: Real;
+    Medicina_General_II: Real;
+    Medicina_General_III: Real;
+    Medicina_General_IV: Real;
+    Medicina_General_V: Real;
+    Medicina_Prv_Com_y_Familiar_I: Real;
+    Medicina_Prv_Com_y_Familiar_II: Real;
+    Med_Prev_Com_y_Fliar_III: Real;
+    Med_Prev_Com_y_Familiar_IV: Real;
+    Med_Prev_Com_y_Familiar_V: Real;
+Fin_Registro
+
+Registro Medicina_Pre4;
+    Clinica_Medica_I: Real;
+    Clinica_Medica_II: Real;
+    Clinica_Medica_III: Real;
+    Clinica_Quirurgica_I: Real;
+    Clinica_Quirurgica_II: Real;
+    Clinica_Quirurgica_III: Real;
+    Clinica_Pediatrica_I: Real;
+    Clinica_Pediatrica_II: Real;
+    Clinica_Pediatrica_III: Real;
+    Clin_Obstetrica_y_Gineco_I: Real;
+    Clin_Obstetrica_y_Ginecol_II: Real;
+    Clinica_Obstetrica_III: Real;
+    Psicopatologia: Real;
+    Clinica_Psiquiatrica: Real;
+    Medicina_Legal: Real;
+    Internado_Rural: Real;
+    Trabajo_de_Grado: Real;
+Fin_Registro
+
+Registro Medicina_Pre5;
+    Bioetica_I: Real;
+    Deportes_Arte_y_Cultura: Real;
+    Metod_de_la_Investg_Cientif: Real;
+    Ingles_Instrumental: Real;
+    Historia_de_la_Medicina: Real;
+    Antropologia: Real;
+    Deportes_Arte_y_Cultura_II: Real;
+    Psicologia_y_Sociologia_Gral: Real;
+    Estad_y_Demografia_Medica_II: Real;
+    Informatica: Real;
+    Derecho_Constitucional: Real;
+    Int_Etica_Deontol_a_Pract_Med: Real;
+    Nutricion: Real;
+    Psicologia_Medica_General: Real;
+Fin_Registro
+
+//Odontologia
+
+Registro Odontologia_Pre1;
+    Histol_Embriol_y_Genetica: Real;
+    Morfologia_Humana: Real;
+    Bioquimica_Aplicada: Real;
+    Microbiol_y_Parasitologia: Real;
+    Fisiologia: Real;
+    Anatomia_Dentomaxilofacial: Real;
+    Histofisiologia: Real;
+Fin_Registro
+
+Registro Odontologia_Pre2;
+    Iniciacion_a_la_Clinica: Real;
+    Operatoria_Dental_I: Real;
+    Materiales_Dentales: Real;
+    Radiologia_Bucal: Real;
+    Operatoria_Dental_II: Real;
+    Patologia_Bucal_y_Maxilofacial_I: Real;
+    Cirugia_Bucal_y_Maxilofacial_I: Real;
+    Medicina_Interna_y_Semiologia: Real;
+    Fisiopatologia: Real;
+    Cirugia_Bucal_y_Maxilofacial_II: Real;
+    Patologia_Bucal_y_Maxilofacial_II: Real;
+    Odontologia_Legal_y_Forense: Real;
+Fin_Registro
+
+Registro Odontologia_Pre3;
+    Protesis_Dental_I: Real;
+    Clinica_Integral_del_Adulto_I: Real;
+    Protesis_Dental_II: Real;
+    Clinica_Integral_del_Adulto_II: Real;
+    Clinica_Integ_del_Adulto_III: Real;
+    Protesis_Dental_III: Real;
+    Protesis_Total: Real;
+    Clinica_Integ_del_Adulto_IV: Real;
+Fin_Registro
+
+Registro Odontologia_Pre4;
+    Ortodoncia_I: Real;
+    Periodoncia_I: Real;
+    Atencion_Integral_de_Nino_I: Real;
+    Ortodoncia_II: Real;
+    Periodoncia_II: Real;
+    Odontopediatria_II: Real;
+Fin_Registro
+
+Registro Odontologia_Pre5;
+    Odontologia_Comunitaria_I: Real;
+    Formacion_Cultural_y_Artistica: Real;
+    Morfologia_Dentaria_y_Oclusion: Real;
+    Formacion_Instrumental: Real;
+    Odontologia_Comunitaria_II: Real;
+    Investigacion_I: Real;
+    Psicologia: Real;
+    Farmacologia: Real;
+    Odontologia_Comunitaria_III: Real;
+    Investigacion_II: Real;
+    Odontologia_Comunitaria_IV: Real;
+    Investigacion_IV: Real;
+    Salud_Publica: Real;
+    Investigacion_V: Real;
+    Trabajo_de_Grado: Real;
+Fin_Registro
+
+//Veterinaria
+
+Registro Veterinaria_Pre1; 
+    Bioquimica: Real;
+    Anat_De_Los_Animales_Domestic: Real;
+    Zoologia: Real;
+    Faenas_Pecuarias: Real;
+    Ingles_Instrumental: Real;
+    Ecologia_Agricola: Real;
+    Anali_Del_Perfil_Profesional: Real;
+    Educacion_Fisica_Y_Deportes: Real;
+    Computacion: Real;
+Fin_Registro
+
+Registro Veterinaria_Pre2; 
+    Histologia_Veterinaria: Real;
+    Fisiologia_Animal: Real;
+    Bioestadistica: Real;
+    Genetica: Real;
+    Microbiologia: Real;
+    Zootecnia: Real;
+    Arte_Y_Cultura: Real;
+Fin_Registro
+
+Registro Veterinaria_Pre3;
+    Patologia_Clinica_Veterinaria: Real;
+    Farmacologia_Veterinaria: Real;
+    Semiologia_Veterinaria: Real;
+    Nutricion_Y_Alimentacion_Ani: Real;
+    Reproduccion_Animal: Real;
+    Parasitologia_Veterinaria: Real;
+    Anatomia_Patologica_Vet: Real;
+Fin_Registro
+
+Registro Veterinaria_Pre4; 
+    Cirugia_Veterinaria: Real;
+    Medicina_De_Caninos_Y_Felinos: Real;
+    Medicina_De_Rumiantes_Y_Equino: Real;
+    Investigacion_Veterinaria_I: Real;
+    Extension_Profesionali: Real;
+    Gerencia_De_Ser_Veterinaria: Real;
+    Saneamiento_Ambiental: Real;
+    Mejoramiento_Animal: Real;
+Fin_Registro
+
+Registro Veterinaria_Pre5; 
+    Pasantias_Profesionales: Real;
+    Medicina_De_Suinos_Y_Aves: Real;
+    Epidemiologia_General: Real;
+    Derecho_Constitucional: Real;
+    Proceso_De_Prod_Ind_E_Inp_San: Real;
+    Legislacion_Y_Deontologia_Vet: Real;
+    Med_Conejo_Peces_Esp_Silt_Lab: Real;
+    Investigacion_Veterinaria_II: Real;
+    Extension_Profesional_II: Real;
+    Med_Preventiva_Y_Cli_Hospit: Real;
+    Servicio_Comunitario: Real;
+Fin_Registro
+
+//Derecho
+
+Registro Derecho_Pre1;
+    Derecho_Civil_I: Real;
+    Derecho_Constitucional: Real;
+    Pensamiento_Bolivariano: Real;
+    Introduccion_Al_Derecho: Real;
+    Economia_Politica: Real;
+    Metod_De_Inv_Juridica: Real;
+    Derecho_Popular: Real;
+    Derecho_Romano: Real;
+    Logica_Juridica: Real;
+    Deontologia_Juridica: Real;
+    Arte_Y_Cultura: Real;
+    Deporte: Real;
+Fin_Registro
+
+Registro Derecho_Pre2;
+    Derecho_Agrario: Real;
+    Derecho_Ambiental: Real;
+    Medicina_Legal: Real;
+    Criminologia: Real;
+    Derecho_Penal_I: Real;
+    Filosofia_Del_Derecho: Real;
+    Derecho_Registral: Real;
+    Proyecto_Socio_Juridico_Comunitario_I: Real;
+    Derecho_Civil_II: Real;
+    Practicas_Juridicas_I: Real;
+    Electivas_2: Real;
+Fin_Registro
+
+Registro Derecho_Pre3;
+    Derecho_Administrativo: Real;
+    Derecho_Penal_II: Real;
+    Derecho_Laboral: Real;
+    Derecho_Familiar: Real;
+    Obligaciones_I: Real;
+    Derecho_Internacional_Publico: Real;
+    Teoria_General_Del_Proceso: Real;
+    Derecho_Tributario: Real;
+    Proyecto_Sociojuridico_II: Real;
+    Practicas_Juridicas_II: Real;
+    Electivas_3: Real;
+Fin_Registro
+
+Registro Derecho_Pre4;
+    Derecho_Contencioso_Administrativo: Real;
+    Derecho_Procesal_Penal_I: Real;
+    Derecho_Procesal_Laboral_I: Real;
+    Derecho_En_Sucesiones: Real;
+    Obligaciones_II: Real;
+    Derecho_Internacional_Privado: Real;
+    Derecho_Procesal_Civil_I: Real;
+    Derecho_Probatorio_I: Real;
+    Proyecto_Socio_Juridico_III: Real;
+    Practicas_Juridicas_III: Real;
+    Electivas_4: Real;
+Fin_Registro
+
+Registro Derecho_Pre5;
+    Derecho_Procesal_Penal_II: Real;
+    Obligaciones_III: Real;
+    Derecho_Procesal_Civil_II: Real;
+    Derecho_Mercantil: Real;
+    Derecho_Probatorio_II: Real;
+    Contratos_Y_Garantias: Real;
+    Proyecto_Socio_Juridico_IV: Real;
+    Practicas_Juridicas_IV: Real;
+    Electivas_5: Real;
+    Pasantias: Real;
+    Seminario_Tesina_De_Grado: Real;
+Fin_Registro
+
+//Comunicación
+
+Registro Comunicacion_Pre1;
+    Morfosintaxis_del_castellano: Real;
+    Teoria_de_la_Comunicacion: Real;
+    Investigacion_de_la_Comunicacion: Real;
+    Taller_de_Redaccion_y_Estilo_I: Real;
+    Taller_de_redaccion_y_Estilo_II: Real;
+    Sociologia_de_la_Comunicacion: Real;
+    Semiologia: Real;
+Fin_Registro
+
+Registro Comunicacion_Pre2;
+    Comunicacion_Social_en_la_Fotografia: Real;
+    Comunicacion_Social_en_la_Radio: Real;
+    Comunicacion_Social_en_cine: Real;
+    Comunicacion_Social_en_la_television: Real;
+    Comunicacion_grafica: Real;
+    Periodismo_radiofonico: Real;
+    Lenguaje_y_planificacion_cinematografica: Real;
+    Periodismo_Televisivo: Real;
+    Estetica_de_la_Imagen_y_el_Sonido: Real;
+    Produccion_de_Television: Real;
+    Produccion_de_Radio: Real;
+    Produccion_de_Cine: Real;
+    Montajes_Audiovisuales: Real;
+Fin_Registro
+
+Registro Comunicacion_Pre3;
+    Comunicacion_Social_en_el_periodismo: Real;
+    Periodismo_Informativo: Real;
+    Opinion_Publica: Real;
+    Periodismo_Interpretativo: Real;
+    Fotoperiodismo: Real;
+    Periodismo_Cientifico: Real;
+    Relaciones_Publicas: Real;
+    Periodismo_de_Opinion: Real;
+    Locucion_Basica: Real;
+    Periodismo_Economico: Real;
+    Publicidad: Real;
+    Locucion_Profesional: Real;
+    Mercadeo: Real;
+    Periodismo_Politico: Real;
+Fin_Registro
+
+Registro Comunicacion_Pre4;
+    Proyecto_comunitario_sociocomunicacional_I: Real;
+    Orientacion_Profesional: Real;
+    Vinculacion_Profesional_en_el_campo_socio_comunicacional: Real;
+    Trabajo_Especial_de_Grado: Real;
+    Proyecto_comunitario_sociocomunicacional_II: Real;
+    Proyecto_comunitario_sociocomunicacional_III: Real;
+    Proyecto_comunitario_sociocomunicacional_IV: Real;
+    Proyecto_comunitario_sociocomunicacional_V: Real;
+    Proyecto_comunitario_sociocomunicacional_VI: Real;
+    Proyecto_comunitario_sociocomunicacional_VII: Real;
+    Orientacion_Profesional_I: Real;
+Fin_Registro
+
+Registro Comunicacion_Pre5;
+    Psicologia_de_la_Comunicacion: Real;
+    Estadistica: Real;
+    Deporte_Arte_y_cultura: Real;
+    Pensamiento_Bolivariano: Real;
+    Etica_y_Legislacion_de_Medios_y_del_Periodismo: Real;
+    Formacion_Sociopolitica: Real;
+    Economia_Politica: Real;
+    Tecnologia_de_la_Informacion: Real;
+    Seminario_de_formacion_socio_critica_I: Real;
+    Idioma_Moderno: Real;
+    Seminario_de_formacion_socio_critica_II: Real;
+    Seminario_de_formacion_socio_critica_III: Real;
+    Gerencia_Corporativa: Real;
+Fin_Registro
+
+//Contabiduria
+
+Registro Contaduria_Pre1;
+    Contabilidad_I: Real;
+    Contabilidad_II: Real;
+    Contabilidad_III: Real;
+    Contabilidad_De_Costos_I: Real;
+    Contabilidad_De_Costos_II: Real;
+    Contabilidad_De_Costos_III: Real;
+    Contabilidad_Especializada_I: Real;
+    Contabilidad_Especializada_II: Real;
+    Auditoria_I: Real;
+    Auditoria_II: Real;
+    Auditoria_III: Real;
+    Analisis_De_Estados_Financieros: Real;
+Fin_Registro
+
+Registro Contaduria_Pre2;
+    Matematica_I: Real;
+    Matematica_II: Real;
+    Estadistica_I: Real;
+    Estadistica_II: Real;
+    Informatica: Real;
+    Calculo_Financiero: Real;
+    Investigacion_Operaciones: Real;
+Fin_Registro
+
+Registro Contaduria_Pre3;
+    Legislacion_Mercantil: Real;
+    Legislacion_Laboral: Real;
+    Introduccion_Administracion: Real;
+    Procesos_Administrativos: Real;
+    Administracion_Publica: Real;
+    Sistemas_Informacion_Gerencial: Real;
+    Gestion_Presupuestaria: Real;
+    Sistemas_Tributarios_I: Real;
+    Sistemas_Tributarios_II: Real;
+    Presupuesto: Real;
+    Mercadeo: Real;
+    Instituciones_Financieras: Real;
+    Gestion_De_Talento_Humano: Real;
+Fin_Registro
+
+Registro Contaduria_Pre4;
+    Practica_Profesional_I: Real;
+    Practica_Profesional_II: Real;
+    Seminario_I: Real;
+    Seminario_II: Real;
+    Tesina_De_Grado: Real;
+    Pasantias: Real;
+    Etica_Desarrollo_Profesional: Real;
+Fin_Registro
+
+Registro Contaduria_Pre5;
+    Lenguaje_Comunicacion: Real;
+    Sociopolitica_Productiva: Real;
+    Metodologia: Real;
+    Deporte: Real;
+    Ingles: Real;
+    Arte_Y_Cultura: Real;
+    Introduccion_Teoria_Economica: Real;
+    Electiva_I: Real;
+    Electiva_II: Real;
+Fin_Registro
+
+//Economia
+
+Registro Economia_Pre1;
+    Introduccion_Economia: Real;
+    Economia_I: Real;
+    Economia_II: Real;
+    Macroeconomia_I: Real;
+    Microeconomia_I: Real;
+    Microeconomia_II: Real;
+    Macroeconomia_II: Real;
+    Economia_Politica: Real;
+    Economia_Internacional: Real;
+Fin_Registro
+
+Registro Economia_Pre2;
+    Analisis_Matematico_I: Real;
+    Analisis_Matematico_II: Real;
+    Estadistica_I: Real;
+    Estadistica_II: Real;
+    Analisis_Financiero: Real;
+    Matematica_III: Real;
+    Matematica_Financiera: Real;
+    Estadistica_Aplicada: Real;
+    Econometria: Real;
+Fin_Registro
+
+Registro Economia_Pre3;
+    Contabilidad_General_I: Real;
+    Informatica: Real;
+    Contabilidad_General_II: Real;
+    Informatica_Aplicada: Real;
+    Introduccion_Administracion: Real;
+    Historia_Doctrina_Economica: Real;
+    Contabilidad_Social: Real;
+    Investigacion_Operaciones: Real;
+    Teoria_Politica_Monetaria: Real;
+    Planificacion: Real;
+Fin_Registro
+
+Registro Economia_Pre4;
+    Seminario_I: Real;
+    Seminario_II: Real;
+    Seminario_III: Real;
+    Trabajo_Final_De_Grado: Real;
+    Formulacion_Evaluacion_Proyectos: Real;
+    Teoria_Y_Politica_Fiscal: Real;
+Fin_Registro
+
+Registro Economia_Pre5;
+    Lenguaje_Comunicacion: Real;
+    Fundamentos_Del_Derecho: Real;
+    Metodologia: Real;
+    Deporte: Real;
+    Ingles_Instrumental: Real;
+    Sociologia: Real;
+    Arte_Y_Cultura: Real;
+    Sociopolitica_Productiva: Real;
+    Investigacion_De_Mercado: Real;
+    Desarrollo_Economico: Real;
+    Analisis_Economico_Regional: Real;
+Fin_Registro
+
+
+//Social
+Registro: Novedades;            //Llave: Nov;
+    Hecho: Cadena;
+    Fecha: Cadena;
+    Responsables: Cadena;
+    Contexto: Cadena;
+    Lugar: Cadena;
+Fin_Registro
+
+Registro: Grupos;           //Llave: Gru;
+    Nombre_Profesor: Cadena;
+    CI_Profesor: Entero;
+    Codigo_Materia: Cadena;
+    Materia: Cadena;
+    Miembros: Entero;
+    Seccion: Entero;
+Fin_Registro
+
+Registro: Amigos;       //Llave: Amig;
+    Nombre_Emisor: Cadena;
+    CI_Emisor: Entero;
+    Nombre_Receptor: Cadena;
+    CI_Receptor: Entero;
+    Avatar_Receptor: Cadena;
+Fin_Registro
+
+//Extracurricular
+Registro: Eventos;          //Llave: Even; Ruta: Even.Campo;
+    ID: Entero;     
+    Nombre: Cadena;                               
+    Fecha: Cadena;
+    Descripcion: Cadena;
+Fin_Registro
+
+Registro: Clubes;           //Llave: Club; Ruta: Club.Campo;
+    Nombre: Cadena;
+    Descripcion: Cadena;
+    Capacidad_Maxima: Entero;
+    Miembros_Inscritos: Entero;
+    Horarios_Disponibles: Cadena;
+Fin_Registro
+
+Registro: Celebraciones;    //Llave: Cel; Ruta: Cel.Campo;
+    Nombre: Cadena; 
+    Fecha: Cadena;
+    Tipo: Cadena;
+    Descripcion: Cadena;
+Fin_Registro
