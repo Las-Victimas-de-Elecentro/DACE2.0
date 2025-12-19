@@ -1,0 +1,3 @@
+Inicio
+    var Docente: Prof[500], Enfermedad: Salud[500];
+Fin

@@ -1,0 +1,25 @@
+Registro: Docente;
+    Avatar: Cadena;
+    Nombre: Cadena;
+    CI: Entero;
+    Gmail: Cadena;
+    Password: Cadena;
+    Tarjeta: Entero;
+    Materias: Cadena;
+    Cant_Materias: Entero; // Sin Usar
+    Cant_Clases: Entero; // Sin Usar
+    Club: Cadena; // Sin Usar
+Fin_Registro
+
+Registro: Enfermedad;
+    Transmisibles: Cadena;
+    Cronicas: Cadena;
+    Neurologicas: Cadena;
+    Neoplasias: Cadena;
+    Autoinmunes: Cadena;
+    Trastornos: Cadena;
+    Lesiones: Cadena;
+    Congenitas: Cadena;
+    Metabolicos: Cadena;
+    Ocupacionales: Cadena;
+Fin_Registro

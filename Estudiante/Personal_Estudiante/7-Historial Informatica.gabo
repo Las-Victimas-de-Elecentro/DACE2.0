@@ -1,0 +1,264 @@
+Procedimiento Historial_Informatica (E/S: Suma, Datos.Materias.Info[pos_usuario].Matematica_I, Datos.Materias.Info[pos_usuario].Fundamentos_Informatica, Datos.Materias.Info[pos_usuario].Logica_Matematica, Datos.Materias.Info[pos_usuario].Lenguaje_Comunicacion, Datos.Materias.Info[pos_usuario].Ingles_I, Datos.Materias.Info[pos_usuario].Formacion_Constitucional, Datos.Materias.Info[pos_usuario].Economia_Digital, Datos.Materias.Info[pos_usuario].Matematica_II, Datos.Materias.Info[pos_usuario].Fisica_I, Datos.Materias.Info[pos_usuario].Algoritmos_I, Datos.Materias.Info[pos_usuario].Ingles_II, Datos.Materias.Info[pos_usuario].Prob_Cient_Tec, Datos.Materias.Info[pos_usuario].Electiva_I, Datos.Materias.Info[pos_usuario].Arte_Y_Cultura, Datos.Materias.Info[pos_usuario].Matematica_III, Datos.Materias.Info[pos_usuario].Fisica_II, Datos.Materias.Info[pos_usuario].Algoritmos_II, Datos.Materias.Info[pos_usuario].Programacion_I, Datos.Materias.Info[pos_usuario].Electiva_II, Datos.Materias.Info[pos_usuario].Tecnicas_Investigacion, Datos.Materias.Info[pos_usuario].Matematica_IV, Datos.Materias.Info[pos_usuario].Probabilidad_Estadistica, Datos.Materias.Info[pos_usuario].Estructuras_Discretas_I, Datos.Materias.Info[pos_usuario].Programacion_II, Datos.Materias.Info[pos_usuario].Base_Datos, Datos.Materias.Info[pos_usuario].Electiva_III, Datos.Materias.Info[pos_usuario].Organizacion_Computador, Datos.Materias.Info[pos_usuario].Algebra_Booleana, Datos.Materias.Info[pos_usuario].Estructuras_Discretas_II, Datos.Materias.Info[pos_usuario].Programacion_III, Datos.Materias.Info[pos_usuario].Teoria_Sistemas, Datos.Materias.Info[pos_usuario].Electiva_IV, Datos.Materias.Info[pos_usuario].Arquitectura_Computador, Datos.Materias.Info[pos_usuario].Metodos_Numericos, Datos.Materias.Info[pos_usuario].Investigacion_Operaciones, Datos.Materias.Info[pos_usuario].Sistemas_Informacion_I, Datos.Materias.Info[pos_usuario].Electiva_V, Datos.Materias.Info[pos_usuario].Ingenieria_Economica, Datos.Materias.Info[pos_usuario].Sistemas_Operativos, Datos.Materias.Info[pos_usuario].Traductores_Interpretes, Datos.Materias.Info[pos_usuario].Sistemas_Informacion_II, Datos.Materias.Info[pos_usuario].Control_Proyectos, Datos.Materias.Info[pos_usuario].Gestion_Empresarial, Datos.Materias.Info[pos_usuario].Redes, Datos.Materias.Info[pos_usuario].Pasantias, Datos.Materias.Info[pos_usuario].Lenguajes_Programacion, Datos.Materias.Info[pos_usuario].Sistemas_Informacion_III, Datos.Materias.Info[pos_usuario].Electiva_Area_I, Datos.Materias.Info[pos_usuario].Sistemas_Distribuidos, Datos.Materias.Info[pos_usuario].Electiva_Area_II, Datos.Materias.Info[pos_usuario].Etica_Profesional, Datos.Materias.Info[pos_usuario].Proyecto_Grado_I, Datos.Materias.Info[pos_usuario].Electiva_Libre_I, Datos.Materias.Info[pos_usuario].Deportes, Datos.Materias.Info[pos_usuario].Gerencia_Proyectos, Datos.Materias.Info[pos_usuario].Proyecto_Grado_II, Datos.Materias.Info[pos_usuario].Electiva_Area_III, Datos.Materias.Info[pos_usuario].Electiva_Libre_II, Datos.Materias.Info[pos_usuario].Informatica_Educativa: Real);
+Inicio
+
+    // Primer Semestre
+    Si (Datos[pos_usuario].Semestre >= 1) Entonces;
+        Mostrar << "Matematica I:...", Datos.Materias.Info[pos_usuario].Matematica_I;
+        Mostrar << "Fundamentos De La Informatica:...", Datos.Materias.Info[pos_usuario].Fundamentos_Informatica;
+        Mostrar << "Logica Matematica:...", Datos.Materias.Info[pos_usuario].Logica_Matematica;
+        Mostrar << "Lenguaje Y Comunicacion:...", Datos.Materias.Info[pos_usuario].Lenguaje_Comunicacion;
+        Mostrar << "Ingles I:...", Datos.Materias.Info[pos_usuario].Ingles_I;
+        Mostrar << "Formacion Constitucional:...", Datos.Materias.Info[pos_usuario].Formacion_Constitucional;
+        Mostrar << "Economia Digital En Venezuela:...", Datos.Materias.Info[pos_usuario].Economia_Digital;
+
+        Suma = Suma + (Datos.Materias.Info[pos_usuario].Matematica_I + Datos.Materias.Info[pos_usuario].Fundamentos_Informatica + Datos.Materias.Info[pos_usuario].Logica_Matematica + Datos.Materias.Info[pos_usuario].Lenguaje_Comunicacion + Datos.Materias.Info[pos_usuario].Ingles_I + Datos.Materias.Info[pos_usuario].Formacion_Constitucional + Datos.Materias.Info[pos_usuario].Economia_Digital);
+        Contador = Contador + 7;
+    Fin_Si
+
+    // Segundo Semestre
+    Si (Datos.Materias.Info[pos_usuario].Matematica_I > 5.5) Entonces;
+        Mostrar << "Matematica II:...", Datos.Materias.Info[pos_usuario].Matematica_II;
+        Mostrar << "Fisica I:...", Datos.Materias.Info[pos_usuario].Fisica_I;
+        
+        Suma = Suma + (Datos.Materias.Info[pos_usuario].Matematica_II + Datos.Materias.Info[pos_usuario].Fisica_I);
+        Contador = Contador + 2;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Fundamentos_Informatica > 5.5) Y (Datos.Materias.Info[pos_usuario].Logica_Matematica > 5.5) Entonces;
+        Mostrar << "Algoritmos I:...", Datos.Materias.Info[pos_usuario].Algoritmos_I;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Algoritmos_I;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Ingles_I > 5.5) Entonces;
+        Mostrar << "Ingles II:...", Datos.Materias.Info[pos_usuario].Ingles_II;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Ingles_II;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 2) Entonces;
+        Mostrar << "Problematica Cientifica Tecnologica:...", Datos.Materias.Info[pos_usuario].Prob_Cient_Tec;
+        Mostrar << "Electiva I:...", Datos.Materias.Info[pos_usuario].Electiva_I;
+        Mostrar << "Arte Y Cultura:...", Datos.Materias.Info[pos_usuario].Arte_Y_Cultura;
+        
+        Suma = Suma + (Datos.Materias.Info[pos_usuario].Prob_Cient_Tec + Datos.Materias.Info[pos_usuario].Electiva_I + Datos.Materias.Info[pos_usuario].Arte_Y_Cultura);
+        Contador = Contador + 3;
+    Fin_Si
+
+    // Tercer Semestre
+    Si (Datos.Materias.Info[pos_usuario].Matematica_II > 5.5) Entonces;
+        Mostrar << "Matematica III:...", Datos.Materias.Info[pos_usuario].Matematica_III;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Matematica_III;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Fisica_I > 5.5) Entonces;
+        Mostrar << "Fisica II:...", Datos.Materias.Info[pos_usuario].Fisica_II;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Fisica_II;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Algoritmos_I > 5.5) Entonces;
+        Mostrar << "Algoritmos II:...", Datos.Materias.Info[pos_usuario].Algoritmos_II;
+        Mostrar << "Programacion I:...", Datos.Materias.Info[pos_usuario].Programacion_I;
+        
+        Suma = Suma + (Datos.Materias.Info[pos_usuario].Algoritmos_II + Datos.Materias.Info[pos_usuario].Programacion_I);
+        Contador = Contador + 2;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Electiva_I > 5.5) Entonces;
+        Mostrar << "Electiva II:...", Datos.Materias.Info[pos_usuario].Electiva_II;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Electiva_II;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 3) Entonces;
+        Mostrar << "Tecnicas De Investigacion:...", Datos.Materias.Info[pos_usuario].Tecnicas_Investigacion;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Tecnicas_Investigacion;
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Cuarto Semestre
+    Si (Datos.Materias.Info[pos_usuario].Matematica_III > 5.5) Entonces;
+        Mostrar << "Matematica IV:...", Datos.Materias.Info[pos_usuario].Matematica_IV;
+        Mostrar << "Probabilidad Y Estadistica:...", Datos.Materias.Info[pos_usuario].Probabilidad_Estadistica;
+        
+        Suma = Suma + (Datos.Materias.Info[pos_usuario].Matematica_IV + Datos.Materias.Info[pos_usuario].Probabilidad_Estadistica);
+        Contador = Contador + 2;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Algoritmos_II > 5.5) Entonces;
+        Mostrar << "Estructuras Discretas I:...", Datos.Materias.Info[pos_usuario].Estructuras_Discretas_I;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Estructuras_Discretas_I;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Programacion_I > 5.5) Y (Datos.Materias.Info[pos_usuario].Algoritmos_II > 5.5) Entonces;
+        Mostrar << "Programacion II:...", Datos.Materias.Info[pos_usuario].Programacion_II;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Programacion_II;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Programacion_I > 5.5) Entonces;
+        Mostrar << "Base De Datos:...", Datos.Materias.Info[pos_usuario].Base_Datos;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Base_Datos;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Electiva_II > 5.5) Entonces;
+        Mostrar << "Electiva III:...", Datos.Materias.Info[pos_usuario].Electiva_III;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Electiva_III;
+        Contador = Contador + 1;
+    Fin_Si
+
+    // V Semestre
+    Si (Datos.Materias.Info[pos_usuario].Fisica_II > 5.5) Entonces;
+        Mostrar << "Organizacion Del Computador:...", Datos.Materias.Info[pos_usuario].Organizacion_Computador;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Organizacion_Computador;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Estructuras_Discretas_I > 5.5) Entonces;
+        Mostrar << "Algebra Booleana:...", Datos.Materias.Info[pos_usuario].Algebra_Booleana;
+        Mostrar << "Estructuras Discretas II:...", Datos.Materias.Info[pos_usuario].Estructuras_Discretas_II;
+        
+        Suma = Suma + (Datos.Materias.Info[pos_usuario].Algebra_Booleana + Datos.Materias.Info[pos_usuario].Estructuras_Discretas_II);
+        Contador = Contador + 2;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Programacion_II > 5.5) Entonces;
+        Mostrar << "Programacion III:...", Datos.Materias.Info[pos_usuario].Programacion_III;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Programacion_III;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 5) Entonces;
+        Mostrar << "Teoria De Sistemas:...", Datos.Materias.Info[pos_usuario].Teoria_Sistemas;
+        Mostrar << "Electiva IV:...", Datos.Materias.Info[pos_usuario].Electiva_IV;
+        
+        Suma = Suma + (Datos.Materias.Info[pos_usuario].Teoria_Sistemas + Datos.Materias.Info[pos_usuario].Electiva_IV);
+        Contador = Contador + 2;
+    Fin_Si
+
+    // Sexto Semestre
+    Si (Datos.Materias.Info[pos_usuario].Organizacion_Computador > 5.5) Entonces;
+        Mostrar << "Arquitectura Del Computador:...", Datos.Materias.Info[pos_usuario].Arquitectura_Computador;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Arquitectura_Computador;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Matematica_IV > 5.5) Entonces;
+        Mostrar << "Metodos Numericos:...", Datos.Materias.Info[pos_usuario].Metodos_Numericos;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Metodos_Numericos;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Estructuras_Discretas_II > 5.5) Y (Datos.Materias.Info[pos_usuario].Probabilidad_Estadistica > 5.5) Entonces;
+        Mostrar << "Investigacion De Operaciones:...", Datos.Materias.Info[pos_usuario].Investigacion_Operaciones;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Investigacion_Operaciones;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Base_Datos > 5.5) Y (Datos.Materias.Info[pos_usuario].Teoria_Sistemas > 5.5) Entonces;
+        Mostrar << "Sistemas De Informacion I:...", Datos.Materias.Info[pos_usuario].Sistemas_Informacion_I;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Sistemas_Informacion_I;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Electiva_IV > 5.5) Entonces;
+        Mostrar << "Electiva V:...", Datos.Materias.Info[pos_usuario].Electiva_V;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Electiva_V;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 6) Entonces;
+        Mostrar << "Ingenieria Economica:...", Datos.Materias.Info[pos_usuario].Ingenieria_Economica;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Ingenieria_Economica;
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Septimo Semestre
+    Si (Datos.Materias.Info[pos_usuario].Arquitectura_Computador > 5.5) Entonces;
+        Mostrar << "Sistemas Operativos:...", Datos.Materias.Info[pos_usuario].Sistemas_Operativos;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Sistemas_Operativos;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Estructuras_Discretas_II > 5.5) Entonces;
+        Mostrar << "Traductores E Interpretes:...", Datos.Materias.Info[pos_usuario].Traductores_Interpretes;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Traductores_Interpretes;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Sistemas_Informacion_I > 5.5) Entonces;
+        Mostrar << "Sistemas De Informacion II:...", Datos.Materias.Info[pos_usuario].Sistemas_Informacion_II;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Sistemas_Informacion_II;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 7) Entonces;
+        Mostrar << "Control De Proyectos:...", Datos.Materias.Info[pos_usuario].Control_Proyectos;
+        Mostrar << "Organizacion Y Gestion Empresarial:...", Datos.Materias.Info[pos_usuario].Gestion_Empresarial;
+        
+        Suma = Suma + (Datos.Materias.Info[pos_usuario].Control_Proyectos + Datos.Materias.Info[pos_usuario].Gestion_Empresarial);
+        Contador = Contador + 2;
+    Fin_Si
+
+    // Octavo Semestre
+    Si (Datos.Materias.Info[pos_usuario].Sistemas_Operativos > 5.5) Entonces;
+        Mostrar << "Redes:...", Datos.Materias.Info[pos_usuario].Redes;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Redes;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Control_Proyectos > 5.5) Y (Datos.Materias.Info[pos_usuario].Gestion_Empresarial > 5.5) Entonces;
+        Mostrar << "Pasantias:...", Datos.Materias.Info[pos_usuario].Pasantias;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Pasantias;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Traductores_Interpretes > 5.5) Entonces;
+        Mostrar << "Lenguajes De Programacion:...", Datos.Materias.Info[pos_usuario].Lenguajes_Programacion;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Lenguajes_Programacion;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Sistemas_Informacion_II > 5.5) Entonces;
+        Mostrar << "Sistemas De Informacion III:...", Datos.Materias.Info[pos_usuario].Sistemas_Informacion_III;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Sistemas_Informacion_III;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 8) Entonces;
+        Mostrar << "Electiva De Area I:...", Datos.Materias.Info[pos_usuario].Electiva_Area_I;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Electiva_Area_I;
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Noveno Semestre
+    Si (Datos.Materias.Info[pos_usuario].Redes > 5.5) Entonces;
+        Mostrar << "Sistemas Distribuidos:...", Datos.Materias.Info[pos_usuario].Sistemas_Distribuidos;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Sistemas_Distribuidos;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Electiva_Area_I > 5.5) Entonces;
+        Mostrar << "Electiva De Area II:...", Datos.Materias.Info[pos_usuario].Electiva_Area_II;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Electiva_Area_II;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Sistemas_Informacion_II > 5.5) Entonces;
+        Mostrar << "Etica Profesional:...", Datos.Materias.Info[pos_usuario].Etica_Profesional;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Etica_Profesional;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 9) Entonces;
+        Mostrar << "Proyecto De Grado I:...", Datos.Materias.Info[pos_usuario].Proyecto_Grado_I;
+        Mostrar << "Electiva Libre I:...", Datos.Materias.Info[pos_usuario].Electiva_Libre_I;
+        Mostrar << "Deportes:...", Datos.Materias.Info[pos_usuario].Deportes;
+       
+        Suma = Suma + (Datos.Materias.Info[pos_usuario].Proyecto_Grado_I + Datos.Materias.Info[pos_usuario].Electiva_Libre_I + Datos.Materias.Info[pos_usuario].Deportes);
+        Contador = Contador + 3;
+    Fin_Si
+
+    // Decimo Semestre
+    Si (Datos.Materias.Info[pos_usuario].Pasantias > 5.5) Entonces;
+        Mostrar << "Gerencia De Proyectos:...", Datos.Materias.Info[pos_usuario].Gerencia_Proyectos;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Gerencia_Proyectos;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Proyecto_Grado_I > 5.5) Entonces;
+        Mostrar << "Proyecto De Grado II:...", Datos.Materias.Info[pos_usuario].Proyecto_Grado_II;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Proyecto_Grado_II;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Electiva_Area_II > 5.5) Entonces;
+        Mostrar << "Electiva De Area III:...", Datos.Materias.Info[pos_usuario].Electiva_Area_III;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Electiva_Area_III;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Info[pos_usuario].Electiva_Libre_I > 5.5) Entonces;
+        Mostrar << "Electiva Libre II:...", Datos.Materias.Info[pos_usuario].Electiva_Libre_II;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Electiva_Libre_II;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 10) Entonces;
+        Mostrar << "Informatica Educativa:...", Datos.Materias.Info[pos_usuario].Informatica_Educativa;
+        Suma = Suma + Datos.Materias.Info[pos_usuario].Informatica_Educativa;
+        Contador = Contador + 1;
+    Fin_Si
+
+Fin_Procedimiento

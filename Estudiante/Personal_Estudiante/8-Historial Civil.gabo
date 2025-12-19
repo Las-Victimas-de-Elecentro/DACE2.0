@@ -1,0 +1,259 @@
+Procedimiento Historial_Civil (E/S: Suma, Datos.Materias.Civ[pos_usuario].Ingles_Tecnico, Datos.Materias.Civ[pos_usuario].Tec_Estudio_Doc, Datos.Materias.Civ[pos_usuario].Geometria_Descriptiva_I, Datos.Materias.Civ[pos_usuario].Calculo_I, Datos.Materias.Civ[pos_usuario].Metod_Razonamiento_Logico, Datos.Materias.Civ[pos_usuario].Arte_Y_Cultura, Datos.Materias.Civ[pos_usuario].Calculo_II, Datos.Materias.Civ[pos_usuario].Fisica_I, Datos.Materias.Civ[pos_usuario].Geometria_Descriptiva_II, Datos.Materias.Civ[pos_usuario].Introduccion_Ciencias_Humanas, Datos.Materias.Civ[pos_usuario].Sociedad_Ciencia_Tecnologia, Datos.Materias.Civ[pos_usuario].Fisica_II, Datos.Materias.Civ[pos_usuario].Mecanica_Racional_I, Datos.Materias.Civ[pos_usuario].Calculo_III, Datos.Materias.Civ[pos_usuario].Informatica_Para_Ingenieros, Datos.Materias.Civ[pos_usuario].Quimica_Basica, Datos.Materias.Civ[pos_usuario].Deportes, Datos.Materias.Civ[pos_usuario].Mecanica_Racional_II, Datos.Materias.Civ[pos_usuario].Quimica_Aplicada, Datos.Materias.Civ[pos_usuario].Topografia, Datos.Materias.Civ[pos_usuario].Calculo_IV, Datos.Materias.Civ[pos_usuario].Estadistica_Para_Ingenieros, Datos.Materias.Civ[pos_usuario].Electiva_No_Tecnica, Datos.Materias.Civ[pos_usuario].Geologia_Aplicada, Datos.Materias.Civ[pos_usuario].Resistencia_De_Materiales, Datos.Materias.Civ[pos_usuario].Mecanica_De_Fluidos_I, Datos.Materias.Civ[pos_usuario].Calculo_V, Datos.Materias.Civ[pos_usuario].Electiva_No_Tecnica_II, Datos.Materias.Civ[pos_usuario].Materiales_Y_Ensayos, Datos.Materias.Civ[pos_usuario].Mecanica_De_Suelos, Datos.Materias.Civ[pos_usuario].H_San_Ambiental, Datos.Materias.Civ[pos_usuario].Teorias_De_Estructuras_I, Datos.Materias.Civ[pos_usuario].Hidrologia, Datos.Materias.Civ[pos_usuario].Mecanica_De_Fluidos_II, Datos.Materias.Civ[pos_usuario].Dibujo_De_Proyectos, Datos.Materias.Civ[pos_usuario].Teorias_De_Estructuras_II, Datos.Materias.Civ[pos_usuario].Instalaciones_Para_Edificios, Datos.Materias.Civ[pos_usuario].Metodologia_Investigacion, Datos.Materias.Civ[pos_usuario].Acueductos_Y_Cloacas, Datos.Materias.Civ[pos_usuario].Ingenieria_Economica, Datos.Materias.Civ[pos_usuario].Electiva_Tecnica, Datos.Materias.Civ[pos_usuario].Obras_Hidraulicas, Datos.Materias.Civ[pos_usuario].Concreto_Armado, Datos.Materias.Civ[pos_usuario].Vias_De_Comunicacion_I, Datos.Materias.Civ[pos_usuario].Proy_Estructurales_Acero, Datos.Materias.Civ[pos_usuario].Electiva_Tecnica_II, Datos.Materias.Civ[pos_usuario].Practica_Profesional, Datos.Materias.Civ[pos_usuario].Concreto_Pretenzado, Datos.Materias.Civ[pos_usuario].Fundaciones_Y_Muros, Datos.Materias.Civ[pos_usuario].Vias_De_Comunicacion_II, Datos.Materias.Civ[pos_usuario].Practica_Comunitaria, Datos.Materias.Civ[pos_usuario].Trabajo_Grado_I, Datos.Materias.Civ[pos_usuario].Proyectos_Estructurales_Concreto, Datos.Materias.Civ[pos_usuario].Trabajo_Grado_II, Datos.Materias.Civ[pos_usuario].Pavimentos, Datos.Materias.Civ[pos_usuario].Puentes, Datos.Materias.Civ[pos_usuario].Administracion_De_Obras: Real);
+Inicio
+
+    // Primer Semestre
+    Si (Datos[pos_usuario].Semestre >= 1) Entonces;
+        Mostrar << "Ingles Tecnico:...", Datos.Materias.Civ[pos_usuario].Ingles_Tecnico;
+        Mostrar << "Tec. De Estudio Y Doc.:...", Datos.Materias.Civ[pos_usuario].Tec_Estudio_Doc;
+        Mostrar << "Geometria Descriptiva I:...", Datos.Materias.Civ[pos_usuario].Geometria_Descriptiva_I;
+        Mostrar << "Calculo I:...", Datos.Materias.Civ[pos_usuario].Calculo_I;
+        Mostrar << "Metod. Del Razonamiento Logico:...", Datos.Materias.Civ[pos_usuario].Metod_Razonamiento_Logico;
+        Mostrar << "Arte Y Cultura:...", Datos.Materias.Civ[pos_usuario].Arte_Y_Cultura;
+     
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Ingles_Tecnico + Datos.Materias.Civ[pos_usuario].Tec_Estudio_Doc + Datos.Materias.Civ[pos_usuario].Geometria_Descriptiva_I + Datos.Materias.Civ[pos_usuario].Calculo_I + Datos.Materias.Civ[pos_usuario].Metod_Razonamiento_Logico + Datos.Materias.Civ[pos_usuario].Arte_Y_Cultura);
+        Contador = Contador + 6;
+    Fin_Si
+
+    // Segundo Semestre
+    Si (Datos.Materias.Civ[pos_usuario].Calculo_I > 5.5) Entonces;
+        Mostrar << "Calculo II:...", Datos.Materias.Civ[pos_usuario].Calculo_II;
+        Mostrar << "Fisica I:...", Datos.Materias.Civ[pos_usuario].Fisica_I;
+      
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Calculo_II + Datos.Materias.Civ[pos_usuario].Fisica_I);
+        Contador = Contador + 2;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Geometria_Descriptiva_I > 5.5) Entonces;
+        Mostrar << "Geometria Descriptiva II:...", Datos.Materias.Civ[pos_usuario].Geometria_Descriptiva_II;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Geometria_Descriptiva_II); 
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 2) Entonces;
+        Mostrar << "Introduccion A Las Ciencias Humanas:...", Datos.Materias.Civ[pos_usuario].Introduccion_Ciencias_Humanas;
+        Mostrar << "Sociedad Ciencia Y Tecnologia:...", Datos.Materias.Civ[pos_usuario].Sociedad_Ciencia_Tecnologia;
+      
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Introduccion_Ciencias_Humanas + Datos.Materias.Civ[pos_usuario].Sociedad_Ciencia_Tecnologia); 
+        Contador = Contador + 2;
+    Fin_Si
+
+    // Tercer Semestre
+    Si (Datos.Materias.Civ[pos_usuario].Fisica_I > 5.5) Entonces;
+        Mostrar << "Fisica II:...", Datos.Materias.Civ[pos_usuario].Fisica_II;
+        Mostrar << "Mecanica Racional I:...", Datos.Materias.Civ[pos_usuario].Mecanica_Racional_I;
+      
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Fisica_II + Datos.Materias.Civ[pos_usuario].Mecanica_Racional_I);
+        Contador = Contador + 2;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Calculo_II > 5.5) Entonces;
+        Mostrar << "Calculo III:...", Datos.Materias.Civ[pos_usuario].Calculo_III;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Calculo_III); 
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Metod_Razonamiento_Logico > 5.5) Entonces;
+        Mostrar << "Informatica Para Ingenieros:...", Datos.Materias.Civ[pos_usuario].Informatica_Para_Ingenieros;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Informatica_Para_Ingenieros); 
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 3) Entonces;
+        Mostrar << "Quimica Basica:...", Datos.Materias.Civ[pos_usuario].Quimica_Basica;
+        Mostrar << "Deportes:...", Datos.Materias.Civ[pos_usuario].Deportes;
+       
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Quimica_Basica + Datos.Materias.Civ[pos_usuario].Deportes);
+        Contador = Contador + 2;
+    Fin_Si
+
+    // Cuarto Semestre
+    Si (Datos.Materias.Civ[pos_usuario].Mecanica_Racional_I > 5.5) Entonces;
+        Mostrar << "Mecanica Racional II:...", Datos.Materias.Civ[pos_usuario].Mecanica_Racional_II;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Mecanica_Racional_II);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Quimica_Basica > 5.5) Entonces;
+        Mostrar << "Quimica Aplicada:...", Datos.Materias.Civ[pos_usuario].Quimica_Aplicada;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Quimica_Aplicada); 
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Calculo_III > 5.5) Entonces;
+        Mostrar << "Topografia:...", Datos.Materias.Civ[pos_usuario].Topografia;
+        Mostrar << "Calculo IV:...", Datos.Materias.Civ[pos_usuario].Calculo_IV;
+        Mostrar << "Estadistica Para Ingenieros:...", Datos.Materias.Civ[pos_usuario].Estadistica_Para_Ingenieros;
+       
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Topografia + Datos.Materias.Civ[pos_usuario].Calculo_IV + Datos.Materias.Civ[pos_usuario].Estadistica_Para_Ingenieros);
+        Contador = Contador + 3;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 4) Entonces;
+        Mostrar << "Electiva No Tecnica:...", Datos.Materias.Civ[pos_usuario].Electiva_No_Tecnica;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Electiva_No_Tecnica); 
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Quinto Semestre
+    Si (Datos.Materias.Civ[pos_usuario].Geometria_Descriptiva_II > 5.5 And Datos.Materias.Civ[pos_usuario].Quimica_Aplicada > 5.5 And Datos.Materias.Civ[pos_usuario].Topografia > 5.5) Entonces;
+        Mostrar << "Geologia Aplicada:...", Datos.Materias.Civ[pos_usuario].Geologia_Aplicada;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Geologia_Aplicada);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Mecanica_Racional_II > 5.5 And Datos.Materias.Civ[pos_usuario].Calculo_IV > 5.5) Entonces;
+        Mostrar << "Resistencia De Materiales:...", Datos.Materias.Civ[pos_usuario].Resistencia_De_Materiales;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Resistencia_De_Materiales);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Mecanica_Racional_II > 5.5 And Datos.Materias.Civ[pos_usuario].Quimica_Aplicada > 5.5) Entonces;
+        Mostrar << "Mecanica De Fluidos I:...", Datos.Materias.Civ[pos_usuario].Mecanica_De_Fluidos_I;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Mecanica_De_Fluidos_I);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Calculo_IV > 5.5) Entonces;
+        Mostrar << "Calculo V:...", Datos.Materias.Civ[pos_usuario].Calculo_V;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Calculo_V); 
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 5) Entonces;
+        Mostrar << "Electiva No Tecnica II:...", Datos.Materias.Civ[pos_usuario].Electiva_No_Tecnica_II;
+        Mostrar << "Materiales Y Ensayos:...", Datos.Materias.Civ[pos_usuario].Materiales_Y_Ensayos;
+       
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Electiva_No_Tecnica_II + Datos.Materias.Civ[pos_usuario].Materiales_Y_Ensayos);
+        Contador = Contador + 2;
+    Fin_Si
+
+    // Sexto Semestre
+    Si (Datos.Materias.Civ[pos_usuario].Geologia_Aplicada > 5.5 And Datos.Materias.Civ[pos_usuario].Materiales_Y_Ensayos > 5.5) Entonces;
+        Mostrar << "Mecanica De Suelos:...", Datos.Materias.Civ[pos_usuario].Mecanica_De_Suelos;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Mecanica_De_Suelos);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Quimica_Aplicada > 5.5 And Datos.Materias.Civ[pos_usuario].Mecanica_De_Fluidos_I > 5.5) Entonces;
+        Mostrar << "H & San Ambiental:...", Datos.Materias.Civ[pos_usuario].H_San_Ambiental;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].H_San_Ambiental);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Resistencia_De_Materiales > 5.5) Entonces;
+        Mostrar << "Teorias De Estructuras I:...", Datos.Materias.Civ[pos_usuario].Teorias_De_Estructuras_I;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Teorias_De_Estructuras_I);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Mecanica_De_Fluidos_I > 5.5 And Datos.Materias.Civ[pos_usuario].Geologia_Aplicada > 5.5) Entonces;
+        Mostrar << "Hidrologia:...", Datos.Materias.Civ[pos_usuario].Hidrologia;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Hidrologia); 
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Mecanica_De_Fluidos_I > 5.5) Entonces;
+        Mostrar << "Mecanica De Fluidos II:...", Datos.Materias.Civ[pos_usuario].Mecanica_De_Fluidos_II;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Mecanica_De_Fluidos_II);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 6) Entonces;
+        Mostrar << "Dibujo De Proyectos:...", Datos.Materias.Civ[pos_usuario].Dibujo_De_Proyectos;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Dibujo_De_Proyectos); 
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Septimo Semestre
+    Si (Datos.Materias.Civ[pos_usuario].Teorias_De_Estructuras_I > 5.5) Entonces;
+        Mostrar << "Teorias De Estructuras II:...", Datos.Materias.Civ[pos_usuario].Teorias_De_Estructuras_II;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Teorias_De_Estructuras_II);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].H_San_Ambiental > 5.5 And Datos.Materias.Civ[pos_usuario].Mecanica_De_Fluidos_II > 5.5 And Datos.Materias.Civ[pos_usuario].Dibujo_De_Proyectos > 5.5) Entonces;
+        Mostrar << "Instalaciones Para Edificios:...", Datos.Materias.Civ[pos_usuario].Instalaciones_Para_Edificios;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Instalaciones_Para_Edificios);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Estadistica_Para_Ingenieros > 5.5) Entonces;
+        Mostrar << "Metodologia De La Investigacion:...", Datos.Materias.Civ[pos_usuario].Metodologia_Investigacion;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Metodologia_Investigacion);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Topografia > 5.5 And Datos.Materias.Civ[pos_usuario].Mecanica_De_Fluidos_II > 5.5) Entonces;
+        Mostrar << "Acueductos Y Cloacas:...", Datos.Materias.Civ[pos_usuario].Acueductos_Y_Cloacas;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Acueductos_Y_Cloacas);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 7) Entonces;
+        Mostrar << "Ingenieria Economica:...", Datos.Materias.Civ[pos_usuario].Ingenieria_Economica;
+        Mostrar << "Electiva Tecnica:...", Datos.Materias.Civ[pos_usuario].Electiva_Tecnica;
+       
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Ingenieria_Economica + Datos.Materias.Civ[pos_usuario].Electiva_Tecnica);
+        Contador = Contador + 2;
+    Fin_Si
+
+    // Octavo Semestre
+    Si (Datos.Materias.Civ[pos_usuario].Acueductos_Y_Cloacas > 5.5 And Datos.Materias.Civ[pos_usuario].Hidrologia > 5.5) Entonces;
+        Mostrar << "Obras Hidraulicas:...", Datos.Materias.Civ[pos_usuario].Obras_Hidraulicas;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Obras_Hidraulicas);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Teorias_De_Estructuras_II > 5.5 And Datos.Materias.Civ[pos_usuario].Materiales_Y_Ensayos > 5.5) Entonces;
+        Mostrar << "Concreto Armado:...", Datos.Materias.Civ[pos_usuario].Concreto_Armado;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Concreto_Armado);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Topografia > 5.5) Entonces;
+        Mostrar << "Vias De Comunicacion I:...", Datos.Materias.Civ[pos_usuario].Vias_De_Comunicacion_I;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Vias_De_Comunicacion_I);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Mecanica_De_Suelos > 5.5) Entonces;
+        Mostrar << "Proy. Estructurales De Acero:...", Datos.Materias.Civ[pos_usuario].Proy_Estructurales_Acero;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Proy_Estructurales_Acero);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 8) Entonces;
+        Mostrar << "Electiva Tecnica II:...", Datos.Materias.Civ[pos_usuario].Electiva_Tecnica_II;
+        Mostrar << "Practica Profesional:...", Datos.Materias.Civ[pos_usuario].Practica_Profesional;
+       
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Electiva_Tecnica_II + Datos.Materias.Civ[pos_usuario].Practica_Profesional);
+        Contador = Contador + 2;
+    Fin_Si
+
+    // Noveno Semestre
+    Si (Datos.Materias.Civ[pos_usuario].Concreto_Armado > 5.5) Entonces;
+        Mostrar << "Concreto Pretenzado:...", Datos.Materias.Civ[pos_usuario].Concreto_Pretenzado;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Concreto_Pretenzado);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Concreto_Armado > 5.5 And Datos.Materias.Civ[pos_usuario].Mecanica_De_Suelos > 5.5) Entonces;
+        Mostrar << "Fundaciones Y Muros:...", Datos.Materias.Civ[pos_usuario].Fundaciones_Y_Muros;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Fundaciones_Y_Muros);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Vias_De_Comunicacion_I > 5.5) Entonces;
+        Mostrar << "Vias De Comunicacion II:...", Datos.Materias.Civ[pos_usuario].Vias_De_Comunicacion_II;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Vias_De_Comunicacion_II);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 9) Entonces;
+        Mostrar << "Practica Comunitaria:...", Datos.Materias.Civ[pos_usuario].Practica_Comunitaria;
+        Mostrar << "Trabajo Especial De Grado I:...", Datos.Materias.Civ[pos_usuario].Trabajo_Grado_I;
+      
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Practica_Comunitaria + Datos.Materias.Civ[pos_usuario].Trabajo_Grado_I);
+        Contador = Contador + 2;
+    Fin_Si
+
+    // Decimo Semestre
+    Si (Datos.Materias.Civ[pos_usuario].Concreto_Armado > 5.5 And Datos.Materias.Civ[pos_usuario].Fundaciones_Y_Muros > 5.5) Entonces;
+        Mostrar << "Proyectos Estructurales De Concreto:...", Datos.Materias.Civ[pos_usuario].Proyectos_Estructurales_Concreto;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Proyectos_Estructurales_Concreto);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Trabajo_Grado_I > 5.5) Entonces;
+        Mostrar << "Trabajo Especial De Grado II:...", Datos.Materias.Civ[pos_usuario].Trabajo_Grado_II;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Trabajo_Grado_II);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Vias_De_Comunicacion_I > 5.5) Entonces;
+        Mostrar << "Pavimentos:...", Datos.Materias.Civ[pos_usuario].Pavimentos;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Pavimentos); 
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Civ[pos_usuario].Concreto_Pretenzado > 5.5) Entonces;
+        Mostrar << "Puentes:...", Datos.Materias.Civ[pos_usuario].Puentes;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Puentes); 
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].Semestre >= 10) Entonces;
+        Mostrar << "Administracion De Obras:...", Datos.Materias.Civ[pos_usuario].Administracion_De_Obras;
+        Suma = Suma + (Datos.Materias.Civ[pos_usuario].Administracion_De_Obras); 
+        Contador = Contador + 1;
+    Fin_Si
+
+Fin_Procedimiento

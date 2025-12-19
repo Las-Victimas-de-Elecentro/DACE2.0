@@ -1,4 +1,4 @@
-Procedimiento Oscuro_Personal_Est(E/S:Tema: Booleano);
+Procedimiento Oscuro_Personal_Prof(E/S:Tema: Booleano);
 Inicio
     var Opc, R: Booleano; 
     Repetir

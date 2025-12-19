@@ -1,0 +1,251 @@
+Procedimiento Historial_Hidrocarburos(E/S: Suma, Datos.Materias.Hid[pos_usuario].Formacion_Socio_I, Datos.Materias.Hid[pos_usuario].Proyecto_I, Datos.Materias.Hid[pos_usuario].Dibujo_Tecnico, Datos.Materias.Hid[pos_usuario].Matematica_I, Datos.Materias.Hid[pos_usuario].Ingles_Tecnico, Datos.Materias.Hid[pos_usuario].Quimica_Inorganica, Datos.Materias.Hid[pos_usuario].Orientacion_Ing, Datos.Materias.Hid[pos_usuario].Arte_Cultura, Datos.Materias.Hid[pos_usuario].Matematica_II, Datos.Materias.Hid[pos_usuario].Fisica_I, Datos.Materias.Hid[pos_usuario].Quimica_Organica, Datos.Materias.Hid[pos_usuario].Formacion_Socio_II, Datos.Materias.Hid[pos_usuario].Proyecto_II, Datos.Materias.Hid[pos_usuario].Informatica, Datos.Materias.Hid[pos_usuario].Deporte, Datos.Materias.Hid[pos_usuario].Formacion_Socio_III, Datos.Materias.Hid[pos_usuario].Proyecto_III, Datos.Materias.Hid[pos_usuario].Fisica_II, Datos.Materias.Hid[pos_usuario].Lab_Fisica, Datos.Materias.Hid[pos_usuario].Matematica_III, Datos.Materias.Hid[pos_usuario].Geologia_General, Datos.Materias.Hid[pos_usuario].Formacion_Socio_IV, Datos.Materias.Hid[pos_usuario].Proyecto_IV, Datos.Materias.Hid[pos_usuario].Mecanica_Rocas_Fluidos, Datos.Materias.Hid[pos_usuario].Probabilidades_Estadisticas, Datos.Materias.Hid[pos_usuario].Termodinamica, Datos.Materias.Hid[pos_usuario].Caracterizacion_Fisica_Yac, Datos.Materias.Hid[pos_usuario].Sistema_Compresion_Gas, Datos.Materias.Hid[pos_usuario].Legislacion_Petrolera, Datos.Materias.Hid[pos_usuario].Proyecto_V, Datos.Materias.Hid[pos_usuario].Perforacion_Pozos, Datos.Materias.Hid[pos_usuario].Caracterizacion_Energetica_Yac, Datos.Materias.Hid[pos_usuario].Transporte_Distribucion, Datos.Materias.Hid[pos_usuario].Geologia_Estructural, Datos.Materias.Hid[pos_usuario].Comercio_Internacional, Datos.Materias.Hid[pos_usuario].Proyecto_VI, Datos.Materias.Hid[pos_usuario].Seguridad_Industrial, Datos.Materias.Hid[pos_usuario].Caracterizacion_Dinamica_Yac, Datos.Materias.Hid[pos_usuario].Recuperacion_Secundaria, Datos.Materias.Hid[pos_usuario].Perfilaje_Pozos, Datos.Materias.Hid[pos_usuario].Completacion_Pozos, Datos.Materias.Hid[pos_usuario].Proyecto_VII, Datos.Materias.Hid[pos_usuario].Geologia_Produccion, Datos.Materias.Hid[pos_usuario].Ing_Produccion_I, Datos.Materias.Hid[pos_usuario].Proteccion_Riesgos, Datos.Materias.Hid[pos_usuario].Transferencia_Calor, Datos.Materias.Hid[pos_usuario].Electiva_Corrosion, Datos.Materias.Hid[pos_usuario].Auditoria_Ambiental, Datos.Materias.Hid[pos_usuario].Procesos_Petroquimicos, Datos.Materias.Hid[pos_usuario].Procesos_Refinacion, Datos.Materias.Hid[pos_usuario].Proyecto_VIII, Datos.Materias.Hid[pos_usuario].Ing_Produccion_II, Datos.Materias.Hid[pos_usuario].Simulacion_Yacimientos, Datos.Materias.Hid[pos_usuario].Electiva_Calidad, Datos.Materias.Hid[pos_usuario].TEG, Datos.Materias.Hid[pos_usuario].Recuperacion_Mejorada: Real);
+Inicio
+
+    // 1 Semestre
+    Si (Datos[pos_usuario].Semestre >= 1) Entonces;
+        Mostrar << "Formación Socio Política I:...", Datos.Materias.Hid[pos_usuario].Formacion_Socio_I;
+        Mostrar << "Proyecto Comunitario Socio Energético I:...", Datos.Materias.Hid[pos_usuario].Proyecto_I;
+        Mostrar << "Dibujo Técnico y Descriptiva:...", Datos.Materias.Hid[pos_usuario].Dibujo_Tecnico;
+        Mostrar << "Matemática I:...", Datos.Materias.Hid[pos_usuario].Matematica_I;
+        Mostrar << "Ingles Técnico:...", Datos.Materias.Hid[pos_usuario].Ingles_Tecnico;
+        Mostrar << "Química Inorgánica:...", Datos.Materias.Hid[pos_usuario].Quimica_Inorganica;
+        Mostrar << "Orientac a la Ingeniería del Petróleo y Gas Natural:...", Datos.Materias.Hid[pos_usuario].Orientacion_Ing;
+        Mostrar << "Arte y Cultura:...", Datos.Materias.Hid[pos_usuario].Arte_Cultura;
+        
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Formacion_Socio_I + Datos.Materias.Hid[pos_usuario].Proyecto_I + Datos.Materias.Hid[pos_usuario].Dibujo_Tecnico + Datos.Materias.Hid[pos_usuario].Matematica_I + Datos.Materias.Hid[pos_usuario].Ingles_Tecnico + Datos.Materias.Hid[pos_usuario].Quimica_Inorganica + Datos.Materias.Hid[pos_usuario].Orientacion_Ing + Datos.Materias.Hid[pos_usuario].Arte_Cultura);
+        Contador = Contador + 8;
+    Fin_Si
+
+    // 2 Semestre
+    Si (Datos.Materias.Hid[pos_usuario].Matematica_I > 5.5) Entonces;
+        Mostrar << "Matemática II:...", Datos.Materias.Hid[pos_usuario].Matematica_II;
+        Mostrar << "Física I:...", Datos.Materias.Hid[pos_usuario].Fisica_I;
+        
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Matematica_II + Datos.Materias.Hid[pos_usuario].Fisica_I);
+        Contador = Contador + 2;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Quimica_Inorganica > 5.5) Entonces;
+        Mostrar << "Química Orgánica:...", Datos.Materias.Hid[pos_usuario].Quimica_Organica;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Quimica_Organica);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Formacion_Socio_I > 5.5) Entonces;
+        Mostrar << "Formación Socio Política II:...", Datos.Materias.Hid[pos_usuario].Formacion_Socio_II;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Formacion_Socio_II);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Proyecto_I > 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético II:...", Datos.Materias.Hid[pos_usuario].Proyecto_II;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Proyecto_II);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].UC_Aprobadas >= 10) Entonces;
+        Mostrar << "Informática:...", Datos.Materias.Hid[pos_usuario].Informatica;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Informatica);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].UC_Aprobadas >= 20) Entonces;
+        Mostrar << "Deporte:...", Datos.Materias.Hid[pos_usuario].Deporte;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Deporte);
+        Contador = Contador + 1;
+    Fin_Si
+
+    // 3 Semestre
+    Si (Datos.Materias.Hid[pos_usuario].Formacion_Socio_II > 5.5) Entonces;
+        Mostrar << "Formación Socio Política III:...", Datos.Materias.Hid[pos_usuario].Formacion_Socio_III;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Formacion_Socio_III);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Proyecto_II > 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético III:...", Datos.Materias.Hid[pos_usuario].Proyecto_III;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Proyecto_III);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Fisica_I > 5.5) Entonces;
+        Mostrar << "Física II:...", Datos.Materias.Hid[pos_usuario].Fisica_II;
+        Mostrar << "Laboratorio de Física:...", Datos.Materias.Hid[pos_usuario].Lab_Fisica;
+
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Fisica_II + Datos.Materias.Hid[pos_usuario].Lab_Fisica);
+        Contador = Contador + 2;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Matematica_II > 5.5) Entonces;
+        Mostrar << "Matemática III:...", Datos.Materias.Hid[pos_usuario].Matematica_III;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Matematica_III);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Quimica_Inorganica > 5.5) Entonces;
+        Mostrar << "Geología General:...", Datos.Materias.Hid[pos_usuario].Geologia_General;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Geologia_General);
+        Contador = Contador + 1;
+    Fin_Si
+
+    // 4 Semestre
+    Si (Datos.Materias.Hid[pos_usuario].Formacion_Socio_III > 5.5) Entonces;
+        Mostrar << "Formación Socio Política IV:...", Datos.Materias.Hid[pos_usuario].Formacion_Socio_IV;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Formacion_Socio_IV);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Proyecto_III > 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético IV:...", Datos.Materias.Hid[pos_usuario].Proyecto_IV;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Proyecto_IV);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Fisica_II > 5.5) Entonces;
+        Mostrar << "Mecánica de las Rocas y de los Fluidos:...", Datos.Materias.Hid[pos_usuario].Mecanica_Rocas_Fluidos;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Mecanica_Rocas_Fluidos);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Matematica_III > 5.5) Entonces;
+        Mostrar << "Probabilidades y Estadísticas:...", Datos.Materias.Hid[pos_usuario].Probabilidades_Estadisticas;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Probabilidades_Estadisticas);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Matematica_III > 5.5 And Datos.Materias.Hid[pos_usuario].Fisica_II > 5.5) Entonces;
+        Mostrar << "Termodinámica General y Aplicada:...", Datos.Materias.Hid[pos_usuario].Termodinamica;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Termodinamica);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Geologia_General > 5.5) Entonces;
+        Mostrar << "Caracterización Física de los Yacimientos:...", Datos.Materias.Hid[pos_usuario].Caracterizacion_Fisica_Yac;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Caracterizacion_Fisica_Yac);
+        Contador = Contador + 1;
+    Fin_Si
+
+    // 5 Semestre
+    Si (Datos.Materias.Hid[pos_usuario].Termodinamica > 5.5 And Datos.Materias.Hid[pos_usuario].Mecanica_Rocas_Fluidos > 5.5) Entonces;
+        Mostrar << "Sistema de Compresión de Gas:...", Datos.Materias.Hid[pos_usuario].Sistema_Compresion_Gas;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Sistema_Compresion_Gas);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Formacion_Socio_IV > 5.5) Entonces;
+        Mostrar << "Formación Socio Política (Legislación Petrolera):...", Datos.Materias.Hid[pos_usuario].Legislacion_Petrolera;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Legislacion_Petrolera);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Proyecto_IV > 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético V:...", Datos.Materias.Hid[pos_usuario].Proyecto_V;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Proyecto_V);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Caracterizacion_Fisica_Yac > 5.5) Entonces;
+        Mostrar << "Perforación de Pozos:...", Datos.Materias.Hid[pos_usuario].Perforacion_Pozos;
+        Mostrar << "Caracterización Energética de los Yacimientos:...", Datos.Materias.Hid[pos_usuario].Caracterizacion_Energetica_Yac;
+       
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Perforacion_Pozos + Datos.Materias.Hid[pos_usuario].Caracterizacion_Energetica_Yac);
+        Contador = Contador + 2;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Mecanica_Rocas_Fluidos > 5.5) Entonces;
+        Mostrar << "Transporte y Distribución de Hidrocarburos:...", Datos.Materias.Hid[pos_usuario].Transporte_Distribucion;
+        Mostrar << "Geología Estructural:...", Datos.Materias.Hid[pos_usuario].Geologia_Estructural;
+       
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Transporte_Distribucion + Datos.Materias.Hid[pos_usuario].Geologia_Estructural);
+        Contador = Contador + 2;
+    Fin_Si
+
+    // 6 Semestre
+    Si (Datos.Materias.Hid[pos_usuario].Legislacion_Petrolera > 5.5) Entonces;
+        Mostrar << "Formación Socio Política (Comercio Internacional):...", Datos.Materias.Hid[pos_usuario].Comercio_Internacional;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Comercio_Internacional);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Proyecto_V > 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético VI:...", Datos.Materias.Hid[pos_usuario].Proyecto_VI;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Proyecto_VI);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].UC_Aprobadas >= 100) Entonces;
+        Mostrar << "Seguridad Industrial:...", Datos.Materias.Hid[pos_usuario].Seguridad_Industrial;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Seguridad_Industrial);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Caracterizacion_Energetica_Yac > 5.5) Entonces;
+        Mostrar << "Caracterización Dinámica de los Yacimientos:...", Datos.Materias.Hid[pos_usuario].Caracterizacion_Dinamica_Yac;
+        Mostrar << "Recuperación Secundaria de Yacimientos:...", Datos.Materias.Hid[pos_usuario].Recuperacion_Secundaria;
+      
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Caracterizacion_Dinamica_Yac + Datos.Materias.Hid[pos_usuario].Recuperacion_Secundaria);
+        Contador = Contador + 2;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Perforacion_Pozos > 5.5) Entonces;
+        Mostrar << "Perfilaje de Pozos:...", Datos.Materias.Hid[pos_usuario].Perfilaje_Pozos;
+        Mostrar << "Completación de Pozos:...", Datos.Materias.Hid[pos_usuario].Completacion_Pozos;
+       
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Perfilaje_Pozos + Datos.Materias.Hid[pos_usuario].Completacion_Pozos);
+        Contador = Contador + 2;
+    Fin_Si
+
+    // 7 Semestre
+    Si (Datos.Materias.Hid[pos_usuario].Proyecto_VI > 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético VII:...", Datos.Materias.Hid[pos_usuario].Proyecto_VII;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Proyecto_VII);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Geologia_Estructural > 5.5 And Datos.Materias.Hid[pos_usuario].Caracterizacion_Dinamica_Yac > 5.5) Entonces;
+        Mostrar << "Geología de Producción:...", Datos.Materias.Hid[pos_usuario].Geologia_Produccion;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Geologia_Produccion);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Caracterizacion_Dinamica_Yac > 5.5) Entonces;
+        Mostrar << "Ingeniería de Producción I:...", Datos.Materias.Hid[pos_usuario].Ing_Produccion_I;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Ing_Produccion_I);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Seguridad_Industrial > 5.5) Entonces;
+        Mostrar << "Protección Integral de Riesgos:...", Datos.Materias.Hid[pos_usuario].Proteccion_Riesgos;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Proteccion_Riesgos);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Termodinamica > 5.5) Entonces;
+        Mostrar << "Transferencia de Calor:...", Datos.Materias.Hid[pos_usuario].Transferencia_Calor;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Transferencia_Calor);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].UC_Aprobadas >= 120) Entonces;
+        Mostrar << "Electiva Profesional (Corrosión):...", Datos.Materias.Hid[pos_usuario].Electiva_Corrosion;
+        Mostrar << "Evaluación y Auditoría Ambiental:...", Datos.Materias.Hid[pos_usuario].Auditoria_Ambiental;
+        
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Electiva_Corrosion + Datos.Materias.Hid[pos_usuario].Auditoria_Ambiental);
+        Contador = Contador + 2;
+    Fin_Si
+
+    // 8 Semestre
+    Si (Datos.Materias.Hid[pos_usuario].Transporte_Distribucion > 5.5) Entonces;
+        Mostrar << "Procesos Petroquímicos:...", Datos.Materias.Hid[pos_usuario].Procesos_Petroquimicos;
+        Mostrar << "Procesos de Refinación:...", Datos.Materias.Hid[pos_usuario].Procesos_Refinacion;
+       
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Procesos_Petroquimicos + Datos.Materias.Hid[pos_usuario].Procesos_Refinacion);
+        Contador = Contador + 2;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Proyecto_VII > 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético VIII:...", Datos.Materias.Hid[pos_usuario].Proyecto_VIII;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Proyecto_VIII);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Ing_Produccion_I > 5.5) Entonces;
+        Mostrar << "Ingeniería de Producción II:...", Datos.Materias.Hid[pos_usuario].Ing_Produccion_II;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Ing_Produccion_II);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Matematica_III > 5.5) Entonces;
+        Mostrar << "Simulación Numérica de Yacimientos:...", Datos.Materias.Hid[pos_usuario].Simulacion_Yacimientos;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Simulacion_Yacimientos);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos[pos_usuario].UC_Aprobadas >= 140) Entonces;
+        Mostrar << "Electiva Profesional (Gestión de Calidad):...", Datos.Materias.Hid[pos_usuario].Electiva_Calidad;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Electiva_Calidad);
+        Contador = Contador + 1;
+    Fin_Si
+
+    // 9 Semestre
+    Si (Datos.Materias.Hid[pos_usuario].Proyecto_VIII > 5.5) Entonces;
+        Mostrar << "Trabajo Especial de Grado:...", Datos.Materias.Hid[pos_usuario].TEG;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].TEG);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Hid[pos_usuario].Recuperacion_Secundaria > 5.5) Entonces;
+        Mostrar << "Recuperación Mejorada:...", Datos.Materias.Hid[pos_usuario].Recuperacion_Mejorada;
+        Suma = Suma + (Datos.Materias.Hid[pos_usuario].Recuperacion_Mejorada);
+        Contador = Contador + 1;
+    Fin_Si
+
+Fin_Procedimiento

@@ -1,0 +1,9 @@
+Procedimiento Historial_Personal_Prof (E: Clase[pos].Codigo_Materia, Clase[pos].Nombre_Materia, Clase[pos].Periodo: Cadena, Clase[pos].Cant_Estudiantes: Entero);
+Inicio
+    Mostrar << "Historial Labor Docente";
+    Mostrar << "Aquí se muestran tus materias impartidas y períodos correspondientes.";
+    Mostrar << Clase[pos].Codigo_Materia;
+    Mostrar << Clase[pos].Nombre_Materia;
+    Mostrar << Clase[pos].Periodo;
+    Mostrar << Clase[pos].Cant_Estudiantes;
+Fin_Procedimiento
