@@ -8,13 +8,13 @@ Inicio
     Fin_Para
     //Primer Semestre
     Si (Datos[pos_usuario].UC_Aprobadas = 0) Entonces;
-        Mostrar << "Matematica I:...";
-        Mostrar << "Lenguaje y Comunicacion:...";
-        Mostrar << "Legislacion Mercantil:...";
-        Mostrar << "Contabilidad I:...";
-        Mostrar << "Sociopolitica Productiva:...";
-        Mostrar << "Metodologia de la Investigacion:...";
-        Mostrar << "Deporte y Recreacion:...", 
+        Mostrar << "Matematica I";
+        Mostrar << "Lenguaje y Comunicacion";
+        Mostrar << "Legislacion Mercantil";
+        Mostrar << "Contabilidad I";
+        Mostrar << "Sociopolitica Productiva";
+        Mostrar << "Metodologia de la Investigacion";
+        Mostrar << "Deporte y Recreacion", 
         Para (I = 1 Hasta I = 7) Hacer;
             Mostrar << Inscripcion;
         Fin_Para
