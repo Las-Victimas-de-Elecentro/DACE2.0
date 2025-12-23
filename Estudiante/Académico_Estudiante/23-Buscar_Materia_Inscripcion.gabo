@@ -1,0 +1,35 @@
+Procedimiento Buscar_Materia_Inscripcion(E/S: cod, Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, List[L].Nombre, Datos[I].Nombre: Cadena, Clase[K].Cant_Estudiantes, Clase[K].Seccion, List[L].Cedula, Datos[I].CI, J, L: Entero);
+Inicio
+    Var q: Booleano;
+    Var K: Entero;
+    Si (cod = Materias[J].Codigo) Entonces;
+        Para (K = 1 Hasta K = 500) Hacer;
+            Si (Clase[K].Codigo = cod) Entonces;
+                Si (Clase[K].Cant_Estudiantes >= 50) Entonces;
+                    Mostrar << "Profesor: ", Clase[K].Nombre_Profesor;
+                    Mostrar << "Día: ", Clase[K].Dia;
+                    Mostrar << "Hora de inicio: ", Clase[K].Hora_Inicio;
+                    Mostrar << "Hora que finaliza: ", Clase[K].Hora_Fin;
+                    Mostrar << "Aula: ", Clase[K].Aula;
+                    Mostrar << "Sección: ", Clase[K].Seccion;
+                    Mostrar << "No puede inscribir la materia acá porque ya no hay cupos.";
+                Sino
+                    Mostrar << "Profesor: ", Clase[K].Nombre_Profesor;
+                    Mostrar << "Día: ", Clase[K].Dia;
+                    Mostrar << "Hora de inicio: ", Clase[K].Hora_Inicio;
+                    Mostrar << "Hora que finaliza: ", Clase[K].Hora_Fin;
+                    Mostrar << "Aula: ", Clase[K].Aula;
+                    Mostrar << "Sección: ", Clase[K].Seccion;
+                    Mostrar << "¿Desea inscribir la materia en esa clase? 1: Sí, 0: No";
+                    Leer >> q;
+                    Si (q = 1) Entonces;
+                        List[L].Nombre = Datos[pos_usuario].Nombre;
+                        List[L].Cedula = Datos[pos_usuario].CI;
+                        L = L + 1;
+                        Clase[K].Cant_Estudiantes = Clase[K].Cant_Estudiantes + 1;
+                    Fin_Si
+                Fin_Si
+            Fin_Si
+        Fin_Para
+    Fin_Si
+Fin_Procedimiento

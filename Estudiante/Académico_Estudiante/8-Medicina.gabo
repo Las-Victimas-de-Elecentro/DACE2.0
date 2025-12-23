@@ -1,0 +1,277 @@
+Procedimiento Medicina();
+Inicio
+    Mostrar << "Aquí los bloques disponibles para que pueda organizar sus materias:";
+    Para (i = 1 Hasta i = 48) Hacer;
+        Si (Base.Lista[i].Estado = "Libre") Entonces;
+            Mostrar << "ID: ", Base.Lista[i].ID_Bloque, " | ", Base.Lista[i].Dia, " ", Base.Lista[i].Hora_Inicio, "-", Base.Lista[i].Hora_Fin, " | Aula: ", Base.Lista[i].Aula;
+        Fin_Si
+    Fin_Para
+    //Primer Semestre
+    Si (Datos[pos_usuario].UC_Aprobadas = 0) Entonces;
+        Mostrar << "Histología Embriología y Genética";
+        Mostrar << "Bioética I";
+        Mostrar << "Medicina General I";
+        Mostrar << "Deportes, Arte y Cultura";
+        Mostrar << "Metodología de la Investigación Científica";
+        Mostrar << "Ingles Instrumental";
+        Mostrar << "Medicina Prv. Com. y Familiar I";
+        Mostrar << "Anatomía Humana";
+        Mostrar << "Historia de la Medicina";
+        Mostrar << "Antropología";
+        Para (I = 1 Hasta I = 10) Hacer;
+            Mostrar << Inscripcion;
+        Fin_Para
+    Fin_Si
+
+
+    //Primer Año
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Med[pos_usuario].Histologia_Embriologia < 5.5) Entonces;
+        Mostrar << "Histología Embriología y Genética";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Med[pos_usuario].Bioetica_I < 5.5) Entonces;
+        Mostrar << "Bioética I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_General_I < 5.5) Entonces;
+        Mostrar << "Medicina General I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Med[pos_usuario].Deportes_Arte_Cultura_I < 5.5) Entonces;
+        Mostrar << "Deportes, Arte y Cultura";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Med[pos_usuario].Metod_Investigacion < 5.5) Entonces;
+        Mostrar << "Metodología de la Investigación";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_I < 5.5) Entonces;
+        Mostrar << "Medicina Preventiva, Comunitaria y Familiar I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Med[pos_usuario].Anatomia_Humana < 5.5) Entonces;
+        Mostrar << "Anatomía Humana";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Med[pos_usuario].Antropologia < 5.5) Entonces;
+        Mostrar << "Antropología";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Segundo Año
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Histologia_Embriologia > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Microbiologia < 5.5) Entonces;
+        Mostrar << "Microbiología I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Deportes_Arte_Cultura_I > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Deportes_Arte_Cultura_II < 5.5) Entonces;
+        Mostrar << "Deportes, Arte y Cultura II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Histologia_Embriologia > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Bioquimica < 5.5) Entonces;
+        Mostrar << "Bioquimica";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_General_I > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_General_II < 5.5) Entonces;
+        Mostrar << "Medicina General II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Antropologia > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Psicologia_Sociologia < 5.5) Entonces;
+        Mostrar << "Psicología y Sociología Gral";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Metod_Investigacion > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Estadistica_Demografia < 5.5) Entonces;
+        Mostrar << "Bioquimica";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Histologia_Embriologia > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Fisiologia_Biofisica < 5.5) Entonces;
+        Mostrar << "Fisiología y Biofísica";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 2) and (Datos[pos_usuario].Materias.Med[pos_usuario].Informatica < 5.5) Entonces;
+        Mostrar << "Informática";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_I > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_II < 5.5) Entonces;
+        Mostrar << "Medicina Preventiva, Comunitaria y Familiar II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Tercer Año
+    Si (Datos[pos_usuario].Year >= 3) and (Datos[pos_usuario].Materias.Med[pos_usuario].Derecho_Constitucional < 5.5) Entonces;
+        Mostrar << "Derecho Constitucional";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_II > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_III < 5.5) Entonces;
+        Mostrar << "Medicina Preventiva, Comunitaria y Familiar III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Microbiologia > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Parasitologia < 5.5) Entonces;
+        Mostrar << "Parasitología";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Fisiologia_Biofisica > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Semiologia < 5.5) Entonces;
+        Mostrar << "Semiología Médico Quirúrgica";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Bioquimica > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Farmacologia < 5.5) Entonces;
+        Mostrar << "Farmacología";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_II > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Etica_Deontologia < 5.5) Entonces;
+        Mostrar << "Inteligencia Ética/Deontologia Práctica Médica";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Fisiologia_Biofisica > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Fisiopatologia < 5.5) Entonces;
+        Mostrar << "Fisiopatología";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Bioquimica > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Nutricion < 5.5) Entonces;
+        Mostrar << "Nutricion";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Psicologia_Sociologia > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Psicologia_Medica < 5.5) Entonces;
+        Mostrar << "Psicología Médica General";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_General_II > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_General_III < 5.5) Entonces;
+        Mostrar << "Medicina General III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Cuarto Año
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Psicologia_Medica > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Psicopatologia < 5.5) Entonces;
+        Mostrar << "Psicopatología";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Farmacologia > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Obstetrica_I < 5.5) Entonces;
+        Mostrar << "Clínica Obstetrica y Ginecológica I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Fisiopatologia > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Quirurgica_I < 5.5) Entonces;
+        Mostrar << "Clínica Quirúrgica I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Semiologia > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Pediatrica_I < 5.5) Entonces;
+        Mostrar << "Clínica Pediátrica I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Anatomia_Humana > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Anatomia_Patologica < 5.5) Entonces;
+        Mostrar << "Anatomía Patológica";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_III > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_IV < 5.5) Entonces;
+        Mostrar << "Medicina Preventiva, Comunitaria y Familiar IV";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_III > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_General_IV < 5.5) Entonces;
+        Mostrar << "Medicina General IV";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Fisiopatologia > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Medica_I < 5.5) Entonces;
+        Mostrar << "Clínica Médica I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Quinto Año
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Quirurgica_I > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Quirurgica_II < 5.5) Entonces;
+        Mostrar << "Clínica Quirúrgica II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_General_IV > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_General_V < 5.5) Entonces;
+        Mostrar << "Medicina General V";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Pediatrica_I > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Pediatrica_II < 5.5) Entonces;
+        Mostrar << "Clínica Pediátrica II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Anatomia_Patologica > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Legal < 5.5) Entonces;
+        Mostrar << "Medicina Legal";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_IV > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_V < 5.5) Entonces;
+        Mostrar << "Medicina Preventiva, Comunitaria y Familiar V";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Psicopatologia > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Psiquiatrica < 5.5) Entonces;
+        Mostrar << "Clínica Psiquiatrica";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Obstetrica_I > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Obstetrica_II < 5.5) Entonces;
+        Mostrar << "Clínica Obstetrica y Ginecológica II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Medica_I > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Medica_II < 5.5) Entonces;
+        Mostrar << "Clínica Médica II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Sexto Año
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_General_V > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Internado_Rural < 5.5) Entonces;
+        Mostrar << "Internado Rural";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Medica_II > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Medica_III < 5.5) Entonces;
+        Mostrar << "Clínica Médica III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Quirurgica_II > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Quirurgica_III < 5.5) Entonces;
+        Mostrar << "Clínica Quirúrguica III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Obstetrica_II > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Obstetrica_III < 5.5) Entonces;
+        Mostrar << "Clínica Obstetrica y Ginecológica III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Pediatrica_II > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Pediatrica_III < 5.5) Entonces;
+        Mostrar << "Clínica Pediátrica III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_V > 5.5) and (Datos[pos_usuario].Materias.Med[pos_usuario].Trabajo_Grado < 5.5) Entonces;
+        Mostrar << "Trabajo de Grado";
+        Mostrar << Inscripcion;
+    Fin_Si
+Fin_Procedimiento

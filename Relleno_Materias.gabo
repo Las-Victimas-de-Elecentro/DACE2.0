@@ -494,7 +494,7 @@ Inicio
     Materias[116].Codigo = "PAV1064";
     Materias[116].Creditos = 2;
 
-    Materias[117].Nombre = "Fuentes";
+    Materias[117].Nombre = "Puentes";
     Materias[117].Codigo = "PUE1043";
     Materias[117].Creditos = 4;
 

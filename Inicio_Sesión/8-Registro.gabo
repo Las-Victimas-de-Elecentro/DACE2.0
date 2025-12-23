@@ -4,27 +4,27 @@ Inicio
     Var CI, Des: Entero;
 
     Repetir
-        Mostrar << ”Ingrese su nombre completo para su nueva cuenta”;
+        Mostrar << "Ingrese su nombre completo para su nueva cuenta";
         Leer >> usu;
 
-        Mostrar << ”Ingrese su cedula para su nueva cuenta”;
+        Mostrar << "Ingrese su cedula para su nueva cuenta";
         Leer >> CI;
 
-        Mostrar << ”Ingrese su gmail para su nueva cuenta”;
+        Mostrar << "Ingrese su gmail para su nueva cuenta";
         Leer >> gmail;
 
         Para (I = 1 Hasta I = 500) Hacer;
             Si (Admin[I].Gmail = gmail) or (Datos[I].Gmail = gmail) Entonces;
-                Mostrar << ”Su correo ya existe en nuestra base de datos, intente nuevamente”;
+                Mostrar << "Su correo ya existe en nuestra base de datos, intente nuevamente";
                 Leer >> gmail;
                 gmailApto = 1;     
             Fin_Si
         Fin_Para
         Si (gmailApto = 0) Entonces;
-            Mostrar << ”¿Qué perfil desea seleccionar? 1: Docente, 2: Estudiante”;
+            Mostrar << "¿Qué perfil desea seleccionar? 1: Docente, 2: Estudiante";
             Leer >> Des;
             Mientras (Des < 1 or Des > 2) Hacer;
-                Mostrar << ”Error en dato, intente de nuevo”;
+                Mostrar << "Error en dato, intente de nuevo";
                 Leer >> Des;
             Fin_Mientras
             Si (Des = 1) Entonces;
