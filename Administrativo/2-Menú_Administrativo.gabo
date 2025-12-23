@@ -24,7 +24,7 @@ Inicio
 			Mostrar << "9: Agregar novedades";
 			Mostrar << "10: Servicio Comunitario";
 			Leer >> Opcion;
-			Mientras (Opcion < 1 or Opcion > 9) Hacer;
+			Mientras (Opcion < 1 or Opcion > 10) Hacer;
 				Mostrar << "Error en dato";
 				Leer >> Opcion;
 			Fin_Mientras

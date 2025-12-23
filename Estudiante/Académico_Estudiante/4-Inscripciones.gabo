@@ -1,0 +1,30 @@
+Procedimiento Inscripciones();
+Inicio
+    Mostrar << "¡Bienvenido al apartado de las Inscripciones!";
+    Si (Inscripciones_Dace = 1) Entonces;
+        En_Caso (Datos[pos_usuario].Carrera <> "Ninguno") Sea;
+            Caso(Datos[pos_usuario].Carrera = "Informática");
+                // ...
+            Caso(Datos[pos_usuario].Carrera = "Civil");
+                // ...
+            Caso(Datos[pos_usuario].Carrera = "Hidrocarburos");
+                // ...
+            Caso(Datos[pos_usuario].Carrera = "Medicina");
+                // ...
+            Caso(Datos[pos_usuario].Carrera = "Odontología");
+                // ...
+            Caso(Datos[pos_usuario].Carrera = "Veterinaria");
+                // ...
+            Caso(Datos[pos_usuario].Carrera = "Derecho");
+                // ...
+            Caso(Datos[pos_usuario].Carrera = "Comunicación");
+                // ...
+            Caso(Datos[pos_usuario].Carrera = "Contaduría");
+                // ...
+            Otro_Caso
+                Historial_Economia();
+        Fin_Caso
+    Sino
+        Mostrar << "Las inscripciones no están disponibles en este momento.";
+    Fin_Si
+Fin_Procedimiento
