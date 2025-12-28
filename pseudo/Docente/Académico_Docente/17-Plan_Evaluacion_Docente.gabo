@@ -1,0 +1,64 @@
+Procedimiento Plan_Evaluacion_Docente(E/S: Materias[I].Codigo, Clase[J].Codigo_Materia, Prof[pos].Nombre, Clase[J].Nombre_Profesor, Plan[P].Fecha, Plan[P].Tema, Plan[P].Estrategia, Plan[P].Nombre_Profesor, Plan[P].Nombre_Materia, Plan[P].Codigo_Materia: Cadena, Plan[P].Ponderacion, Plan[P].ID_Plan, Clase[J].ID_Clase, P: Entero, Plan[P].Firmado: Booleano);
+Inicio
+    Var I, J: Entero;
+    Var cod: Cadena;
+    Var R, R2, R3: Booleano;
+    Mostrar << "¡Bienvenido a la sección de Planes de Evaluación!";
+    Mostrar << "¿Desea asignar una evaluación para su materia? 1: Sí, 0: No";
+    Leer >> R;
+    Repetir
+        Si (R = 1) Entonces;
+            Mostrar << "Ingrese el código de la materia a la que le quiere agregar una evaluación.";
+            Leer >> cod;
+            Para (I = 1 Hasta I = 500) Hacer;
+                Si (cod = Materias[I].Codigo) Entonces;
+                    Mostrar << "Materia encontrada";
+                    Para (J = 1 Hasta I = 500) Hacer;
+                        Si (cod = Clase[J].Codigo_Materia) and (Prof[pos].Nombre = Clase[J].Nombre_Profesor) Entonces;
+                            Mostrar << "Ingrese la fecha de la evaluación (DD/MM/YYYY)";
+                            Leer >> Plan[P].Fecha;
+                            Mostrar << "De acuerdo, ingrese el tema de la evaluación:";
+                            Leer >> Plan[P].Tema;
+                            Mostrar << "Ingrese la estrategia de la evaluación que se usará";
+                            Leer >> Plan[P].Estrategia;
+                            Mostrar << "Ingrese la ponderación que tendrá esa evaluación:";
+                            Leer >> Plan[P].Ponderacion;
+                            Mientras (Plan[P].Ponderacion < 1) Hacer;
+                                Mostrar << "Es invalido, solo positivos";
+                                Leer >> Plan[P].Ponderacion;
+                            Fin_Mientras
+                            Mostrar << "¿Está correcto? 1: Sí, 0: No";
+                            Leer >> R3;
+                            Si (R3 = 0) Entonces;
+                                Mostrar << "Ingrese la fecha de la evaluación (DD/MM/YYYY)";
+                                Leer >> Plan[P].Fecha;
+                                Mostrar << "De acuerdo, ingrese el tema de la evaluación:";
+                                Leer >> Plan[P].Tema;
+                                Mostrar << "Ingrese la estrategia de la evaluación que se usará";
+                                Leer >> Plan[P].Estrategia;
+                                Mostrar << "Ingrese la ponderación que tendrá esa evaluación:";
+                                Leer >> Plan[P].Ponderacion;
+                                Mientras (Plan[P].Ponderacion < 1) Hacer;
+                                    Mostrar << "Es invalido, solo positivos";
+                                    Leer >> Plan[P].Ponderacion;
+                                Fin_Mientras
+                            Fin_Si
+                            Mostrar << "Perfecto. Evaluación añadida a la espera para ser aprobada por el consejo";
+                            Plan[P].ID_Plan = Clase[J].ID_Clase;
+                            Plan[P].Nombre_Profesor = Prof[pos].Nombre;
+                            Plan[P].Codigo_Materia = cod;
+                            Plan[P].Nombre_Materia = Materias[I].Nombre;
+                            Plan[P].Firmado = 0;
+                            P = P + 1;
+                        Fin_Si
+                    Fin_Para
+                Fin_Si
+            Fin_Para
+        Sino
+            Mostrar << "Vuelva pronto.";
+            R2 = 0;
+        Fin_Si
+        Mostrar << "¿Desea asignar otra evaluación? 1: Sí, 0: No";
+        Hasta(R2 = 0);
+    Fin_Repetir
+Fin_Procedimiento

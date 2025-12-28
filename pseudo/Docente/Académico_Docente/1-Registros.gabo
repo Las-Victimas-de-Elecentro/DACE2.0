@@ -1,0 +1,144 @@
+//   SISTEMA DACE - SECCIÓN DOCENTE ACADÉMICA ==============================================================
+// ==========================
+//   REGISTROS
+// ==========================
+Registro: Materia;  //Materia;
+    Codigo: Cadena;
+    Nombre: Cadena;
+    Creditos: Entero;
+Fin_Registro
+
+Registro: Bloque_Horario;   //Lista[8]/Horario[40];
+    ID_Bloque: Entero;
+    Dia: Cadena;           // Lunes, Martes, etc.;
+    Hora_Inicio: Cadena;   // "08:00";
+    Hora_Fin: Cadena;      // "10:00";
+    Aula: Cadena;          // "A-101";
+    Codigo_Materia: Cadena; // Vacío si no asignado;
+    Estado: Cadena;        // "Libre" o "Ocupado";
+Fin_Registro
+
+Registro: Lista;        //List;
+    ID_Lista: Entero;
+    Nombre: Cadena;
+    Cedula: Entero;
+Fin_Registro
+
+Registro: Clase;            //Llave: Clase;
+    ID_Clase: Entero;
+    Nombre_Profesor: Cadena;
+    CI_Profesor: Entero;
+    Codigo_Materia: Cadena;
+    Nombre_Materia: Cadena;
+    Periodo: Cadena;
+    Dia: Cadena;
+    Hora_Inicio: Cadena;
+    Hora_Fin: Cadena;
+    Aula: Entero;
+    Seccion: Entero;            // 1, 2, 3;
+    Cant_Estudiantes: Entero;
+    Virtual: Booleano;
+    Plataforma: Cadena;
+Fin_Registro
+
+Registro: Lista_Magistral;        //Lista_M;
+    ID_Lista: Entero;
+    Nombre: Cadena;
+    Cedula: Entero;
+Fin_Registro
+
+Registro: Clase_Magistral;            //Llave: Mag;
+    ID_Clase: Entero;
+    Nombre_Profesor: Cadena;
+    CI_Profesor: Entero;
+    Codigo_Materia: Cadena;
+    Nombre_Materia: Cadena;
+    Fecha: Cadena;
+    Horas: Real;
+    Aula: Cadena;
+    Cant_Estudiantes: Entero;
+    Precio: Real;
+    Autorizacion: Booleano;
+Fin_Registro
+
+Registro: Plan_Evaluacion;      //Llave: Plan;
+    ID_Plan: Entero;
+    Nombre_Profesor: Cadena;
+    CI_Profesor: Entero;
+    Codigo_Materia: Cadena;
+    Nombre_Materia: Cadena;
+    Fecha: Cadena;
+    Tema: Cadena;
+    Estrategia: Cadena;
+    Ponderacion: Entero;
+    Firmado: Booleano;
+Fin_Registro
+
+Registro: Asignacion;   //Llave: Asig;
+    ID_Asignacion: Entero;
+    Nombre_Profesor: Cadena;
+    Codigo_Materia: Cadena;
+    Titulo: Cadena;
+    Descripcion: Cadena;
+    Fecha_Publicacion: Cadena;
+    Fecha_Entrega: Cadena;
+    Estado: Cadena;            // "Borrador", "Publicada", "Cerrada";
+Fin_Registro
+
+Registro: Docente;      //Docente: Prof;
+    Nombre: Cadena;
+    Cedula: Entero;
+    Gmail: Cadena;
+    Password: Cadena;
+    Tarjeta: Entero;
+    Materias: Cadena;
+    Cant_Materias: Entero;
+    Cant_Clases: Entero;
+    Club: Cadena;
+    Amigos: Entero;
+Fin_Registro
+
+Registro: Grupos;           //Llave: Gru;
+    Nombre_Profesor: Cadena;
+    CI_Profesor: Entero;
+    Codigo_Materia: Cadena;
+    Materia: Cadena;
+    Miembros: Entero;
+    Seccion: Entero;
+Fin_Registro
+
+Registro: Carnetizacion; //Carn
+    Lugar: Cadena;
+    Carrera: Cadena;
+    Fecha: Cadena
+    Precio: Real;
+    Activo: Booleano;
+Fin_Registro
+
+Registro: Carnet;       //Car
+    Nombre: Cadena;
+    CI: Entero;
+    Carrera: Cadena;
+    Fecha_Vencimiento: Cadena;
+Fin_Registro
+
+Registro: Amigos;       //Llave: Amig;
+    Nombre_Emisor: Cadena;
+    CI_Emisor: Entero;
+    Nombre_Receptor: Cadena;
+    CI_Receptor: Entero;
+    Avatar_Receptor: Cadena;
+Fin_Registro
+
+Registro: Bloques_Base;     //Base;
+    Bloque_Horario; // 6 días * 8 bloques;
+    Cant: Entero;
+Fin_Registro
+
+Registro: Chatbot;      //Bot[10]
+    Preguntas: Cadena;
+    Respuesta1: Cadena;
+    Respuesta2: Cadena;
+    Respuesta3: Cadena;
+    Respuesta4: Cadena;
+Fin_Registro

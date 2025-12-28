@@ -1,0 +1,40 @@
+Procedimiento metodo_pago(E/S: Egresos, Ingresos, Precio: Real, DTB: Cadena, validacion_pago: Booleano);
+Inicio
+    Var opc_pago, referencia: Entero;
+    Mostrar << "Estimado Usuario a continuacion se muestran los metodos de pago disponibles";
+    Mostrar << "1: Transferencia Bancaria";
+    Mostrar << "2: Pago Movil";
+    Leer >> opc_pago;
+    Mientras (opc_pago < 1 OR opc_pago > 2) Hacer;
+        Mostrar << "Error en opcion seleccionada, por favor vuelva a intentar";
+        Leer >> opc_pago;
+    Fin_Mientras
+
+    En_Caso (opc_pago > 0) Sea;
+    Caso (opc_pago = 1);
+        Mostrar << "Estos son los datos del vendedor";
+        Mostrar << DTB;
+        Leer >> referencia;
+        Mientras (referencia < 0) Hacer;
+            Mostrar << "Error en referencia ingresada, verifique e ingrese nuevamente";
+            Leer >> referencia;
+        Fin_Mientras
+        Mostrar << "Se ha efectuado el pago de ", Precio, "$, muchas gracias por su pago";
+        validacion_pago = 1;
+        
+    Otro_Caso
+        Mostrar << "Estos son los datos bancarios del vendedor";
+        Mostrar << DTB;
+        Leer >> referencia;
+
+        Mientras (referencia < 0) Hacer;
+            Mostrar << "Error en referencia ingresada, verifique e ingrese nuevamente";
+            Leer >> referencia;
+        Fin_Mientras
+
+        Mostrar << "Se ha efectuado el pago de ", Precio, "$, muchas gracias por su pago";
+        validacion_pago = 1;
+    Fin_Caso
+    Egresos = Egresos + Precio;
+    Ingresos = Egresos;
+Fin_Procedimiento

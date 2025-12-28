@@ -1,0 +1,301 @@
+Procedimiento Derecho(E/S: Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, Lista[L].Nombre, Datos[I].Nombre, Base.Lista[i].Estado, Base.Lista[i].ID_Bloque, Base.Lista[i].Dia, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Aula: Cadena, Clase[K].Seccion, Lista[L].Cedula, Datos[I].CI, Clase[K].Cant_Estudiantes, L, Datos[pos_usuario].UC_Aprobadas: Entero, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Civil_I, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Constitucional, Datos[pos_usuario].Materias.Der[pos_usuario].Pensamiento_Bolivariano, Datos[pos_usuario].Materias.Der[pos_usuario].Introduccion_Derecho, Datos[pos_usuario].Materias.Der[pos_usuario].Economia_Politica, Datos[pos_usuario].Materias.Der[pos_usuario].Investigacion_Jurídica, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Popular, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Romano, Datos[pos_usuario].Materias.Der[pos_usuario].Logica_Juridica, Datos[pos_usuario].Materias.Der[pos_usuario].Deontologia_Juridica, Datos[pos_usuario].Materias.Der[pos_usuario].Arte_Cultura, Datos[pos_usuario].Materias.Der[pos_usuario].Deporte, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Agrario, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Ambiental, Datos[pos_usuario].Materias.Der[pos_usuario].Medicina_Legal, Datos[pos_usuario].Materias.Der[pos_usuario].Criminologia, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Penal_I, Datos[pos_usuario].Materias.Der[pos_usuario].Filosofia_Derecho, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Registral, Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_I, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Civil_II, Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_I, Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_I, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Administrativo, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Penal_II, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Laboral, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Familiar, Datos[pos_usuario].Materias.Der[pos_usuario].Obligaciones_I, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Inter_Publico, Datos[pos_usuario].Materias.Der[pos_usuario].Teoria_General, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Tributario, Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_II, Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_II, Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_II, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Contencioso, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Penal_I, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Laboral_I, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Sucesiones, Datos[pos_usuario].Materias.Der[pos_usuario].Obligaciones_II, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Internacional_Priv, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Civil_I, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Probatorio_I, Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_III, Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_III, Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_III, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Penal_II, Datos[pos_usuario].Materias.Der[pos_usuario].Obligaciones_III, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Civil_II, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Mercantil, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Probatorio_II, Datos[pos_usuario].Materias.Der[pos_usuario].Contratos_Garantias, Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_IV, Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_IV, Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_IV: Real);
+Inicio
+    Mostrar << "Aquí los bloques disponibles para que pueda organizar sus materias:";
+    Para (i = 1 Hasta i = 48) Hacer;
+        Si (Base.Lista[i].Estado = "Libre") Entonces;
+            Mostrar << "ID: ", Base.Lista[i].ID_Bloque, " | ", Base.Lista[i].Dia, " ", Base.Lista[i].Hora_Inicio, "-", Base.Lista[i].Hora_Fin, " | Aula: ", Base.Lista[i].Aula;
+        Fin_Si
+    Fin_Para
+    //Primer Año
+    Si (Datos[pos_usuario].UC_Aprobadas = 0) Entonces;
+        Mostrar << "Derecho Civil I";
+        Mostrar << "Derecho Constitucional";
+        Mostrar << "Pensamiento Bolivariano";
+        Mostrar << "Introduccion al Derecho";
+        Mostrar << "Economia Politica";
+        Mostrar << "Metodología de Investigación Jurídica";
+        Mostrar << "Derecho Popular";
+        Mostrar << "Derecho Romano";
+        Mostrar << "Lógica Jurídica";
+        Mostrar << "Deontología Jurídica";
+        Mostrar << "Arte y Cultura";
+        Mostrar << "Deporte";
+        Para (I = 1 Hasta I = 12) Hacer;
+            Mostrar << Inscripcion;
+        Fin_Para
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Civil_I < 5.5) Entonces;
+        Mostrar << "Derecho Civil I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Constitucional < 5.5) Entonces;
+        Mostrar << "Derecho Constitucional";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Der[pos_usuario].Pensamiento_Bolivariano < 5.5) Entonces;
+        Mostrar << "Pensamiento Bolivariano";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Der[pos_usuario].Introduccion_Derecho < 5.5) Entonces;
+        Mostrar << "Introducción al Derecho";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Der[pos_usuario].Economia_Politica < 5.5) Entonces;
+        Mostrar << "Economía Política";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Der[pos_usuario].Investigacion_Jurídica < 5.5) Entonces;
+        Mostrar << "Metodología de Investigación Jurídica";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Popular < 5.5) Entonces;
+        Mostrar << "Derecho Popular";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Romano < 5.5) Entonces;
+        Mostrar << "Derecho Romano";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Der[pos_usuario].Logica_Juridica < 5.5) Entonces;
+        Mostrar << "Lógica Jurídica";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Der[pos_usuario].Deontologia_Juridica < 5.5) Entonces;
+        Mostrar << "Deontología Jurídica";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Der[pos_usuario].Arte_Cultura < 5.5) Entonces;
+        Mostrar << "Arte y Cultura";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Der[pos_usuario].Deporte < 5.5) Entonces;
+        Mostrar << "Deporte";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Segundo Año
+    Si (Datos[pos_usuario].Year >= 2) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Agrario < 5.5) Entonces;
+        Mostrar << "Derecho Agrario";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 2) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Ambiental < 5.5) Entonces;
+        Mostrar << "Derecho Ambiental";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 2) and (Datos[pos_usuario].Materias.Der[pos_usuario].Medicina_Legal < 5.5) Entonces;
+        Mostrar << "Medicina Legal";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 2) and (Datos[pos_usuario].Materias.Der[pos_usuario].Criminologia < 5.5) Entonces;
+        Mostrar << "Criminología";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 2) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Penal_I < 5.5) Entonces;
+        Mostrar << "Derecho Penal I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 2) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Romano > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Filosofia_Derecho < 5.5) Entonces;
+        Mostrar << "Filosofía del Derecho";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 2) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Registral < 5.5) Entonces;
+        Mostrar << "Derecho Registral";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 2) and (Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_I < 5.5) Entonces;
+        Mostrar << "Proyecto Socio Jurídico Comunitario I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 2) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Civil_I > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Civil_II < 5.5) Entonces;
+        Mostrar << "Derecho Civil II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 2) and (Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_I < 5.5) Entonces;
+        Mostrar << "Prácticas Jurídicas I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 2) and (Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_I < 5.5) Entonces;
+        Mostrar << "Electiva I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Tercer Año
+    Si (Datos[pos_usuario].Year >= 3) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Administrativo < 5.5) Entonces;
+        Mostrar << "Derecho Administrativo";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 2) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Penal_I > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Penal_II < 5.5) Entonces;
+        Mostrar << "Derecho Penal II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 3) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Laboral < 5.5) Entonces;
+        Mostrar << "Derecho Laboral";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 3) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Familiar < 5.5) Entonces;
+        Mostrar << "Derecho Familiar";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 3) and (Datos[pos_usuario].Materias.Der[pos_usuario].Obligaciones_I < 5.5) Entonces;
+        Mostrar << "Obligaciones I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 3) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Inter_Publico < 5.5) Entonces;
+        Mostrar << "Derecho Internacional Público";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 3) and (Datos[pos_usuario].Materias.Der[pos_usuario].Teoria_General < 5.5) Entonces;
+        Mostrar << "Teoría General del Proceso";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 3) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Tributario < 5.5) Entonces;
+        Mostrar << "Derecho Tributario";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 3) and (Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_I > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_II < 5.5) Entonces;
+        Mostrar << "Proyecto Socio Jurídico Comunitario II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 3) and (Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_I > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_II < 5.5) Entonces;
+        Mostrar << "Prácticas Jurídicas II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 3) and (Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_I > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_II < 5.5) Entonces;
+        Mostrar << "Electiva II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Cuarto Año
+    Si (Datos[pos_usuario].Year >= 4) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Contencioso < 5.5) Entonces;
+        Mostrar << "Derecho Contencioso Administrativo";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 4) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Penal_I < 5.5) Entonces;
+        Mostrar << "Derecho Procesal Penal I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 4) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Laboral_I < 5.5) Entonces;
+        Mostrar << "Derecho Procesal Laboral I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 4) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Sucesiones < 5.5) Entonces;
+        Mostrar << "Derecho en Sucesiones";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 4) and (Datos[pos_usuario].Materias.Der[pos_usuario].Obligaciones_I > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Obligaciones_II < 5.5) Entonces;
+        Mostrar << "Obligaciones II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 4) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Internacional_Priv < 5.5) Entonces;
+        Mostrar << "Derecho Internacional Privado";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 4) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Civil_I < 5.5) Entonces;
+        Mostrar << "Derecho Procesal Civil I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 4) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Probatorio_I < 5.5) Entonces;
+        Mostrar << "Derecho Probatorio I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 4) and (Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_II > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_III < 5.5) Entonces;
+        Mostrar << "Proyecto Socio Jurídico Comunitario III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 4) and (Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_II > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_III < 5.5) Entonces;
+        Mostrar << "Prácticas Jurídicas III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 4) and (Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_II > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_III < 5.5) Entonces;
+        Mostrar << "Electiva III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Quinto Año
+    Si (Datos[pos_usuario].Year >= 5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Penal_I > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Penal_II < 5.5) Entonces;
+        Mostrar << "Derecho Procesal Penal II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Obligaciones_II > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Obligaciones_III < 5.5) Entonces;
+        Mostrar << "Obligaciones III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Civil_I > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Civil_II < 5.5) Entonces;
+        Mostrar << "Derecho Procesal Civil II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Mercantil < 5.5) Entonces;
+        Mostrar << "Derecho Mercantil";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Probatorio_I > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Probatorio_II < 5.5) Entonces;
+        Mostrar << "Derecho Probatorio II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Contratos_Garantias < 5.5) Entonces;
+        Mostrar << "Contratos y Garantías";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_III > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_IV < 5.5) Entonces;
+        Mostrar << "Proyecto Socio Jurídico Comunitario IV";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_III > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_IV < 5.5) Entonces;
+        Mostrar << "Prácticas Jurídicas IV";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Year >= 5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_III > 5.5) and (Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_IV < 5.5) Entonces;
+        Mostrar << "Electiva IV";
+        Mostrar << Inscripcion;
+    Fin_Si
+Fin_Procedimiento
