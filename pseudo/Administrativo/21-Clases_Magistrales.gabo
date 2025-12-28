@@ -1,0 +1,32 @@
+Procedimiento Clases_Magistrales_Admin(E/S: Mag[I].ID_Clase, Mag[I].CI_Profesor: Entero, Mag[I].Nombre_Materia, Mag[I].Codigo_Materia, Mag[I].Nombre_Profesor: Cadena, Mag[I].Autorizacion: Booleano);
+Inicio
+    Var R, R2: Booleano;
+    Var I, ID: Entero;
+    Repetir
+        Mostrar << "¡Bienvenido a la sección de Clases Magistrales!";
+        Mostrar << "¿Desea ver las clases magistrales? 1: Sí, 0: No";
+        Leer >> R;
+        Si (R = 1) Entonces;
+            Para (I = 1 Hasta I = 500) Hacer;
+                Mostrar << Mag[I].ID_Clase;
+                Mostrar << Mag[I].Nombre_Materia;
+                Mostrar << Mag[I].Codigo_Materia;
+                Mostrar << Mag[I].Nombre_Profesor;
+                Mostrar << Mag[I].CI_Profesor;
+                Mostrar << Mag[I].Autorizacion;
+            Fin_Para
+            Mostrar << "Ingrese la ID de la clase magistral que desea aprobar";
+            Leer >> ID;
+            Mientras (ID < 1) or (Mag[ID].Autorizacion = 1) Hacer;
+                Mostrar << "Es invalido, solo positivos, y no puede aprobar una clase que ya está aprobada";
+                Leer >> ID;
+            Fin_Mientras
+            Mag[ID].Autorizacion = 1;
+        Sino
+            Mostrar << "Vuelva pronto";
+        Fin_Si
+        Mostrar << "¿Desea aprobar otra Clase Magistral? 1: Sí, 0: No";
+        Leer >> R2;
+        Hasta(R2 = 0);
+    Fin_Repetir
+Fin_Procedimiento

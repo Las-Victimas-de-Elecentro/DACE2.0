@@ -1,0 +1,1758 @@
+Procedimiento Buscar_Materia_Lista(E/S: cod, Materias[J].Codigo, Materias[J].Nombre, Clase[K].Codigo, Datos[L].Nombre, carrera: Cadena, J, Lista[F].ID_Lista, Clase[K].ID_Clase, Prof[pos].Cedula, Clase[K].CI_Profesor, Clase[K].Seccion, Datos[L].CI: Entero, Datos[L].Materias.Info[L].Lenguaje_Comunicacion, Datos[L].Materias.Info[L].Economia_Digital, Datos[L].Materias.Info[L].Deporte, Datos[L].Materias.Info[L].Matematica_I, Datos[L].Materias.Info[L].Matematica_II, Datos[L].Materias.Info[L].Fisica_I, Datos[L].Materias.Info[L].Fundamentos_Informatica, Datos[L].Materias.Info[L].Logica_Matematica, Datos[L].Materias.Info[L].Algoritmos_I, Datos[L].Materias.Info[L].Ingles_I, Datos[L].Materias.Info[L].Ingles_II, Datos[L].Materias.Info[L].Prob_Cient_Tec, Datos[L].Materias.Info[L].Formacion_Constitucional, Datos[L].Materias.Info[L].Arte_Y_Cultura, Datos[L].Materias.Info[L].Electiva_I, Datos[L].Materias.Info[L].Matematica_III, Datos[L].Materias.Info[L].Fisica_II, Datos[L].Materias.Info[L].Algoritmos_II, Datos[L].Materias.Info[L].Programacion_I, Datos[L].Materias.Info[L].Electiva_II, Datos[L].Materias.Info[L].Tecnicas_Investigacion, Datos[L].Materias.Info[L].Matematica_IV, Datos[L].Materias.Info[L].Probabilidad_Estadistica, Datos[L].Materias.Info[L].Estructuras_Discretas_I, Datos[L].Materias.Info[L].Programacion_II, Datos[L].Materias.Info[L].Base_Datos, Datos[L].Materias.Info[L].Electiva_III, Datos[L].Materias.Info[L].Organizacion_Computador, Datos[L].Materias.Info[L].Algebra_Booleana, Datos[L].Materias.Info[L].Estructuras_Discretas_II, Datos[L].Materias.Info[L].Programacion_III, Datos[L].Materias.Info[L].Electiva_IV, Datos[L].Materias.Info[L].Teoria_Sistemas, Datos[L].Materias.Info[L].Arquitectura_Computador, Datos[L].Materias.Info[L].Metodos_Numericos, Datos[L].Materias.Info[L].Investigacion_Operaciones, Datos[L].Materias.Info[L].Sistemas_Informacion_I, Datos[L].Materias.Info[L].Electiva_V, Datos[L].Materias.Info[L].Ingenieria_Economica, Datos[L].Materias.Info[L].Sistemas_Operativos, Datos[L].Materias.Info[L].Traductores_Interpretes, Datos[L].Materias.Info[L].Sistemas_Informacion_II, Datos[L].Materias.Info[L].Control_Proyectos, Datos[L].Materias.Info[L].Gestion_Empresarial, Datos[L].Materias.Info[L].Redes, Datos[L].Materias.Info[L].Lenguajes_Programacion, Datos[L].Materias.Info[L].Sistemas_Informacion_III, Datos[L].Materias.Info[L].Etica_Profesional, Datos[L].Materias.Info[L].Pasantias, Datos[L].Materias.Info[L].Electiva_Area_I, Datos[L].Materias.Info[L].Sistemas_Distribuidos, Datos[L].Materias.Info[L].Electiva_Libre_I, Datos[L].Materias.Info[L].Proyecto_Grado_I, Datos[L].Materias.Info[L].Informatica_Educativa, Datos[L].Materias.Info[L].Electiva_Area_II, Datos[L].Materias.Info[L].Electiva_Libre_II, Datos[L].Materias.Info[L].Gerencia_Proyectos, Datos[L].Materias.Info[L].Proyecto_Grado_II, Datos[L].Materias.Info[L].Electiva_Area_III, Datos[L].Materias.Civ[L].Ingles_Tecnico, Datos[L].Materias.Civ[L].Tec_Estudio_Doc, Datos[L].Materias.Civ[L].Metod_Razonamiento_Logico, Datos[L].Materias.Civ[L].Arte_Y_Cultura, Datos[L].Materias.Civ[L].Calculo_I, Datos[L].Materias.Civ[L].Calculo_II, Datos[L].Materias.Civ[L].Fisica_I, Datos[L].Materias.Civ[L].Geometria_Descriptiva_I, Datos[L].Materias.Civ[L].Geometria_Descriptiva_II, Datos[L].Materias.Civ[L].Introduccion_Ciencias_Humanas, Datos[L].Materias.Civ[L].Sociedad_Ciencia_Tecnologia, Datos[L].Materias.Civ[L].Fisica_II, Datos[L].Materias.Info[L].Calculo_III, Datos[L].Materias.Civ[L].Mecanica_Racional_I, Datos[L].Materias.Civ[L].Informatica_Para_Ingenieros, Datos[L].Materias.Civ[L].Quimica_Basica, Datos[L].Materias.Civ[L].Deportes, Datos[L].Materias.Civ[L].Mecanica_Racional_II, Datos[L].Materias.Civ[L].Quimica_Aplicada, Datos[L].Materias.Civ[L].Topografia, Datos[L].Materias.Civ[L].Calculo_IV, Datos[L].Materias.Civ[L].Estadistica_Para_Ingenieros, Datos[L].Materias.Civ[L].Electiva_No_Tecnica, Datos[L].Materias.Civ[L].Geologia_Aplicada, Datos[L].Materias.Civ[L].Resistencia_De_Materiales, Datos[L].Materias.Civ[L].Electiva_No_Tecnica_II, Datos[L].Materias.Civ[L].Materiales_Y_Ensayos, Datos[L].Materias.Civ[L].Mecanica_De_Fluidos_I, Datos[L].Materias.Civ[L].Calculo_V, Datos[L].Materias.Civ[L].Mecanica_De_Suelos, Datos[L].Materias.Civ[L].H_San_Ambiental, Datos[L].Materias.Civ[L].Teorias_De_Estructuras_I, Datos[L].Materias.Civ[L].Dibujo_De_Proyectos, Datos[L].Materias.Civ[L].Hidrologia, Datos[L].Materias.Civ[L].Mecanica_De_Fluidos_II, Datos[L].Materias.Civ[L].Teorias_De_Estructuras_II, Datos[L].Materias.Civ[L].Ingenieria_Economica, Datos[L].Materias.Civ[L].Instalaciones_Para_Edificios, Datos[L].Materias.Civ[L].Metodologia_Investigacion, Datos[L].Materias.Civ[L].Acueductos_Y_Cloacas, Datos[L].Materias.Civ[L].Electiva_Tecnica, Datos[L].Materias.Civ[L].Electiva_Tecnica_II, Datos[L].Materias.Civ[L].Obras_Hidraulicas, Datos[L].Materias.Civ[L].Practica_Profesional, Datos[L].Materias.Civ[L].Concreto_Armado, Datos[L].Materias.Civ[L].Vias_De_Comunicacion_I, Datos[L].Materias.Civ[L].Proy_Estructurales_Acero, Datos[L].Materias.Civ[L].Practica_Comunitaria, Datos[L].Materias.Civ[L].Trabajo_Grado_I, Datos[L].Materias.Civ[L].Concreto_Pretenzado, Datos[L].Materias.Civ[L].Fundaciones_Y_Muros, Datos[L].Materias.Civ[L].Vias_De_Comunicacion_II, Datos[L].Materias.Civ[L].Proyectos_Estructurales_Concreto, Datos[L].Materias.Civ[L].Trabajo_Grado_II, Datos[L].Materias.Civ[L].Administracion_De_Obras, Datos[L].Materias.Civ[L].Pavimentos, Datos[L].Materias.Civ[L].Puentes, Datos[L].Materias.Hid[L].Formacion_Socio_I, Datos[L].Materias.Hid[L].Proyecto_I, Datos[L].Materias.Hid[L].Dibujo_Tecnico, Datos[L].Materias.Hid[L].Matematica_I, Datos[L].Materias.Hid[L].Ingles_Tecnico, Datos[L].Materias.Hid[L].Quimica_Inorganica, Datos[L].Materias.Hid[L].Orientacion_Ing, Datos[L].Materias.Hid[L].Arte_Cultura, Datos[L].Materias.Hid[L].Informatica, Datos[L].Materias.Hid[L].Matematica_II, Datos[L].Materias.Hid[L].Fisica_I, Datos[L].Materias.Hid[L].Quimica_Organica, Datos[L].Materias.Hid[L].Formacion_Socio_II, Datos[L].Materias.Hid[L].Proyecto_II, Datos[L].Materias.Hid[L].Deporte, Datos[L].Materias.Hid[L].Formacion_Socio_III, Datos[L].Materias.Hid[L].Proyecto_III, Datos[L].Materias.Hid[L].Fisica_II, Datos[L].Materias.Hid[L].Geologia_General, Datos[L].Materias.Hid[L].Matematica_III, Datos[L].Materias.Hid[L].Lab_Fisica, Datos[L].Materias.Hid[L].Formacion_Socio_IV, Datos[L].Materias.Hid[L].Proyecto_IV, Datos[L].Materias.Hid[L].Mecanica_Rocas_Fluidos, Datos[L].Materias.Hid[L].Probabilidades_Estadisticas, Datos[L].Materias.Hid[L].Termodinamica, Datos[L].Materias.Hid[L].Caracterizacion_Fisica_Yac, Datos[L].Materias.Hid[L].Sistema_Comprension_Gas, Datos[L].Materias.Hid[L].Legislacion_Petrolera, Datos[L].Materias.Hid[L].Proyecto_V, Datos[L].Materias.Hid[L].Perforacion_Pozos, Datos[L].Materias.Hid[L].Caracterizacion_Energetica_Yac, Datos[L].Materias.Hid[L].Transporte_Distribucion, Datos[L].Materias.Hid[L].Geologia_Estructural, Datos[L].Materias.Hid[L].Comercio_Internacional, Datos[L].Materias.Hid[L].Proyecto_VI, Datos[L].Materias.Hid[L].Seguridad_Industrial, Datos[L].Materias.Hid[L].Caracterizacion_Dinamica_Yac, Datos[L].Materias.Hid[L].Perfilaje_Pozos, Datos[L].Materias.Hid[L].Completacion_Pozos, Datos[L].Materias.Hid[L].Recuperacion_Secundaria, Datos[L].Materias.Hid[L].Proyecto_VII, Datos[L].Materias.Hid[L].Geologia_Produccion, Datos[L].Materias.Hid[L].Ing_Produccion_I, Datos[L].Materias.Hid[L].Proteccion_Riesgos, Datos[L].Materias.Hid[L].Auditoria_Ambiental, Datos[L].Materias.Hid[L].Transferencia_Calor, Datos[L].Materias.Hid[L].Procesos_Petroquimicos, Datos[L].Materias.Hid[L].Proyecto_VIII, Datos[L].Materias.Hid[L].Electiva_Calidad, Datos[L].Materias.Hid[L].Ing_Produccion_II, Datos[L].Materias.Hid[L].Simulacion_Yacimientos, Datos[L].Materias.Hid[L].Procesos_Refinacion, Datos[L].Materias.Hid[L].TEG, Datos[L].Materias.Hid[L].Recuperacion_Mejorada, Datos[L].Materias.Med[L].Histologia_Embriologia, Datos[L].Materias.Med[L].Bioetica_I, Datos[L].Materias.Med[L].Medicina_General_I, Datos[L].Materias.Med[L].Deportes_Arte_Cultura_I, Datos[L].Materias.Med[L].Metod_Investigacion, Datos[L].Materias.Med[L].Medicina_Preventiva_I, Datos[L].Materias.Med[L].Anatomia_Humana, Datos[L].Materias.Med[L].Antropologia, Datos[L].Materias.Med[L].Microbiologia, Datos[L].Materias.Med[L].Deportes_Arte_Cultura_II, Datos[L].Materias.Med[L].Bioquimica, Datos[L].Materias.Med[L].Medicina_General_II, Datos[L].Materias.Med[L].Psicologia_Sociologia, Datos[L].Materias.Med[L].Estadistica_Demografia, Datos[L].Materias.Med[L].Fisiologia_Biofisica, Datos[L].Materias.Med[L].Informatica, Datos[L].Materias.Med[L].Medicina_Preventiva_II, Datos[L].Materias.Med[L].Derecho_Constitucional, Datos[L].Materias.Med[L].Medicina_Preventiva_III, Datos[L].Materias.Med[L].Parasitologia, Datos[L].Materias.Med[L].Semiologia, Datos[L].Materias.Med[L].Farmacologia, Datos[L].Materias.Med[L].Etica_Deontologia, Datos[L].Materias.Med[L].Fisiopatologia, Datos[L].Materias.Med[L].Nutricion, Datos[L].Materias.Med[L].Psicologia_Medica, Datos[L].Materias.Med[L].Medicina_General_III, Datos[L].Materias.Med[L].Psicopatologia, Datos[L].Materias.Med[L].Clinica_Obstetrica_I, Datos[L].Materias.Med[L].Clinica_Quirurgica_I, Datos[L].Materias.Med[L].Clinica_Pediatrica_I, Datos[L].Materias.Med[L].Anatomia_Patologica, Datos[L].Materias.Med[L].Medicina_Preventiva_IV, Datos[L].Materias.Med[L].Medicina_General_IV, Datos[L].Materias.Med[L].Clinica_Medica_I, Datos[L].Materias.Med[L].Clinica_Quirurgica_II, Datos[L].Materias.Med[L].Medicina_General_V, Datos[L].Materias.Med[L].Clinica_Pediatrica_II, Datos[L].Materias.Med[L].Medicina_Legal, Datos[L].Materias.Med[L].Medicina_Preventiva_V, Datos[L].Materias.Med[L].Clinica_Psiquiatrica, Datos[L].Materias.Med[L].Clinica_Obstetrica_II, Datos[L].Materias.Med[L].Clinica_Medica_II, Datos[L].Materias.Med[L].Internado_Rural, Datos[L].Materias.Med[L].Clinica_Medica_III, Datos[L].Materias.Med[L].Clinica_Quirurgica_III, Datos[L].Materias.Med[L].Clinica_Obstetrica_III, Datos[L].Materias.Med[L].Clinica_Pediatrica_III, Datos[L].Materias.Med[L].Trabajo_Grado, Datos[L].Materias.Odo[L].Morfologia_Dentaria, Datos[L].Materias.Odo[L].Formacion_Cultural_I, Datos[L].Materias.Odo[L].Odontologia_Comunitaria_I, Datos[L].Materias.Odo[L].Iniciacion_Clinica, Datos[L].Materias.Odo[L].Morfologia_Humana, Datos[L].Materias.Odo[L].Formacion_Instrumental_I, Datos[L].Materias.Odo[L].Bioquimica_Aplicada, Datos[L].Materias.Odo[L].Histologia_Embriologia, Datos[L].Materias.Odo[L].Deportes_I, Datos[L].Materias.Odo[L].Investigacion_I, Datos[L].Materias.Odo[L].Odontologia_Comunitaria_II, Datos[L].Materias.Odo[L].Histofisiologia, Datos[L].Materias.Odo[L].Clinica_Adulto_I, Datos[L].Materias.Odo[L].Biomateriales, Datos[L].Materias.Odo[L].Deportes_II, Datos[L].Materias.Odo[L].Investigacion_II, Datos[L].Materias.Odo[L].Microbiologia_Parasitologia, Datos[L].Materias.Odo[L].Formacion_Instrumental_II, Datos[L].Materias.Odo[L].Formacion_Cultural_II, Datos[L].Materias.Odo[L].Investigacion_III, Datos[L].Materias.Odo[L].Clinica_Adulto_II, Datos[L].Materias.Odo[L].Atencion_Nino_I, Datos[L].Materias.Odo[L].Odontologia_Comunitaria_III, Datos[L].Materias.Odo[L].Medicina_Semiologia, Datos[L].Materias.Odo[L].Fisiopatologia, Datos[L].Materias.Odo[L].Farmacologia, Datos[L].Materias.Odo[L].Investigacion_IV, Datos[L].Materias.Odo[L].Clinica_Adulto_III, Datos[L].Materias.Odo[L].Odontologia_Comunitaria_IV, Datos[L].Materias.Odo[L].Atencion_Nino_II, Datos[L].Materias.Odo[L].Investigacion_V, Datos[L].Materias.Odo[L].Gerontologia, Datos[L].Materias.Odo[L].Odontologia_Comunitaria_V, Datos[L].Materias.Odo[L].Toxicologia, Datos[L].Materias.Vet[L].Computacion, Datos[L].Materias.Vet[L].Deportes, Datos[L].Materias.Vet[L].Perfil_Profesional, Datos[L].Materias.Vet[L].Ecologia_Agricola, Datos[L].Materias.Vet[L].Ingles_Instrumental, Datos[L].Materias.Vet[L].Anatomia_I, Datos[L].Materias.Vet[L].Faenas_Pecuarias, Datos[L].Materias.Vet[L].Bioquimica, Datos[L].Materias.Vet[L].Electiva_Complementaria, Datos[L].Materias.Vet[L].Zoologia, Datos[L].Materias.Vet[L].Histologia, Datos[L].Materias.Vet[L].Microbiologia, Datos[L].Materias.Vet[L].Genetica, Datos[L].Materias.Vet[L].Zootecnia, Datos[L].Materias.Vet[L].Bioestadistica, Datos[L].Materias.Vet[L].Arte_Cultura, Datos[L].Materias.Vet[L].Fisiologia_Animal, Datos[L].Materias.Vet[L].Patologia_Clinica, Datos[L].Materias.Vet[L].Reproduccion, Datos[L].Materias.Vet[L].Farmacologia, Datos[L].Materias.Vet[L].Semiologia, Datos[L].Materias.Vet[L].Nutricion, Datos[L].Materias.Vet[L].Parasitologia, Datos[L].Materias.Vet[L].Anatomia_Patologica, Datos[L].Materias.Vet[L].Investigacion_I, Datos[L].Materias.Vet[L].Medicina_Caninos, Datos[L].Materias.Vet[L].Gerencia, Datos[L].Materias.Vet[L].Mejoramiento_Animal, Datos[L].Materias.Vet[L].Medicina_Rumiantes, Datos[L].Materias.Vet[L].Cirugia, Datos[L].Materias.Vet[L].Saneamiento, Datos[L].Materias.Vet[L].Extension_I, Datos[L].Materias.Vet[L].Medicina_Preventiva, Datos[L].Materias.Vet[L].Produccion_Industria, Datos[L].Materias.Vet[L].Derecho_Constitucional, Datos[L].Materias.Vet[L].Medicina_Suinos, Datos[L].Materias.Vet[L].Medicina_Especies, Datos[L].Materias.Vet[L].Legislacion, Datos[L].Materias.Vet[L].Servicio_Comunitario, Datos[L].Materias.Vet[L].Pasantias, Datos[L].Materias.Vet[L].Epidemiologia, Datos[L].Materias.Vet[L].Investigacion_II, Datos[L].Materias.Vet[L].Extension_II, Datos[L].Materias.Der[L].Derecho_Civil_I, Datos[L].Materias.Der[L].Derecho_Constitucional, Datos[L].Materias.Der[L].Pensamiento_Bolivariano, Datos[L].Materias.Der[L].Introduccion_Derecho, Datos[L].Materias.Der[L].Economia_Politica, Datos[L].Materias.Der[L].Investigacion_Jurídica, Datos[L].Materias.Der[L].Derecho_Popular, Datos[L].Materias.Der[L].Derecho_Romano, Datos[L].Materias.Der[L].Logica_Juridica, Datos[L].Materias.Der[L].Deontologia_Juridica, Datos[L].Materias.Der[L].Arte_Cultura, Datos[L].Materias.Der[L].Deporte, Datos[L].Materias.Der[L].Derecho_Agrario, Datos[L].Materias.Der[L].Derecho_Ambiental, Datos[L].Materias.Der[L].Medicina_Legal, Datos[L].Materias.Der[L].Criminologia, Datos[L].Materias.Der[L].Derecho_Penal_I, Datos[L].Materias.Der[L].Filosofia_Derecho, Datos[L].Materias.Der[L].Derecho_Registral, Datos[L].Materias.Der[L].Proyecto_I, Datos[L].Materias.Der[L].Derecho_Civil_II, Datos[L].Materias.Der[L].Practicas_Juridicas_I, Datos[L].Materias.Der[L].Electiva_I, Datos[L].Materias.Der[L].Derecho_Administrativo, Datos[L].Materias.Der[L].Derecho_Penal_II, Datos[L].Materias.Der[L].Derecho_Laboral, Datos[L].Materias.Der[L].Derecho_Familiar, Datos[L].Materias.Der[L].Obligaciones_I, Datos[L].Materias.Der[L].Derecho_Inter_Publico, Datos[L].Materias.Der[L].Teoria_General, Datos[L].Materias.Der[L].Derecho_Tributario, Datos[L].Materias.Der[L].Proyecto_II, Datos[L].Materias.Der[L].Practicas_Juridicas_II, Datos[L].Materias.Der[L].Electiva_II, Datos[L].Materias.Der[L].Derecho_Contencioso, Datos[L].Materias.Der[L].Derecho_Proc_Penal_I, Datos[L].Materias.Der[L].Derecho_Proc_Laboral_I, Datos[L].Materias.Der[L].Derecho_Sucesiones, Datos[L].Materias.Der[L].Obligaciones_II, Datos[L].Materias.Der[L].Derecho_Internacional_Priv, Datos[L].Materias.Der[L].Derecho_Proc_Civil_I, Datos[L].Materias.Der[L].Derecho_Probatorio_I, Datos[L].Materias.Der[L].Proyecto_III, Datos[L].Materias.Der[L].Practicas_Juridicas_III, Datos[L].Materias.Der[L].Electiva_III, Datos[L].Materias.Der[L].Derecho_Proc_Penal_II, Datos[L].Materias.Der[L].Obligaciones_III, Datos[L].Materias.Der[L].Derecho_Proc_Civil_II, Datos[L].Materias.Der[L].Derecho_Mercantil, Datos[L].Materias.Der[L].Derecho_Probatorio_II, Datos[L].Materias.Der[L].Contratos_Garantias, Datos[L].Materias.Der[L].Proyecto_IV, Datos[L].Materias.Der[L].Practicas_Juridicas_IV, Datos[L].Materias.Der[L].Electiva_IV, Datos[L].Materias.Soc[L].Morfosintaxis, Datos[L].Materias.Soc[L].Com_Social_Periodismo, Datos[L].Materias.Soc[L].Psicologia_Com, Datos[L].Materias.Soc[L].Estadistica, Datos[L].Materias.Soc[L].Deporte_Arte_Cultura, Datos[L].Materias.Soc[L].Pensamiento_Bolivariano, Datos[L].Materias.Soc[L].Periodismo_Informativo, Datos[L].Materias.Soc[L].Com_Social_Radio, Datos[L].Materias.Soc[L].Com_Social_Cine, Datos[L].Materias.Soc[L].Com_Social_TV, Datos[L].Materias.Soc[L].Com_Social_Foto, Datos[L].Materias.Soc[L].Taller_Redaccion_I, Datos[L].Materias.Soc[L].Proyecto_I, Datos[L].Materias.Soc[L].Taller_Redaccion_II, Datos[L].Materias.Soc[L].Com_Grafica, Datos[L].Materias.Soc[L].Periodismo_Radiofonico, Datos[L].Materias.Soc[L].Lenguaje_Cine, Datos[L].Materias.Soc[L].Periodismo_TV, Datos[L].Materias.Soc[L].Estetica_Imagen_Sonido, Datos[L].Materias.Soc[L].Teoria_Comunicacion, Datos[L].Materias.Soc[L].Opinion_Publica, Datos[L].Materias.Soc[L].Formacion_Sociopolitica, Datos[L].Materias.Soc[L].Proyecto_II, Datos[L].Materias.Soc[L].Etica_Legislacion, Datos[L].Materias.Soc[L].Proyecto_III, Datos[L].Materias.Soc[L].Sociologia_Comunicacion, Datos[L].Materias.Soc[L].Investigacion_Comunicacion, Datos[L].Materias.Soc[L].Periodismo_Interpretativo, Datos[L].Materias.Soc[L].Periodismo_Opinion, Datos[L].Materias.Soc[L].Economia_Politica, Datos[L].Materias.Soc[L].Produccion_TV, Datos[L].Materias.Soc[L].Produccion_Radio, Datos[L].Materias.Soc[L].Produccion_Cine, Datos[L].Materias.Soc[L].Seminario_Critica_I, Datos[L].Materias.Soc[L].Proyecto_IV, Datos[L].Materias.Soc[L].Semiologia, Datos[L].Materias.Soc[L].Fotoperiodismo, Datos[L].Materias.Soc[L].Seminario_Critica_II, Datos[L].Materias.Soc[L].Periodismo_Cientifico, Datos[L].Materias.Soc[L].Montajes_Audiovisuales, Datos[L].Materias.Soc[L].Relaciones_Publicas, Datos[L].Materias.Soc[L].Proyecto_V, Datos[L].Materias.Soc[L].Tecnologia_Informacion, Datos[L].Materias.Soc[L].Locucion_Basica, Datos[L].Materias.Soc[L].Publicidad, Datos[L].Materias.Soc[L].Idioma_Moderno, Datos[L].Materias.Soc[L].Seminario_Critica_III, Datos[L].Materias.Soc[L].Periodismo_Economico, Datos[L].Materias.Soc[L].Proyecto_VI, Datos[L].Materias.Soc[L].Orientacion_Profesional_I, Datos[L].Materias.Soc[L].Gerencia_Corporativa, Datos[L].Materias.Soc[L].Mercadeo, Datos[L].Materias.Soc[L].Locucion_Profesional, Datos[L].Materias.Soc[L].Proyecto_VII, Datos[L].Materias.Soc[L].Periodismo_Politico, Datos[L].Materias.Soc[L].Orientacion_Profesional_II, Datos[L].Materias.Soc[L].Vinculacion_Profesional, Datos[L].Materias.Soc[L].Trabajo_Grado, Datos[L].Materias.Con[L].Matematica_I, Datos[L].Materias.Con[L].Lenguaje_Comunicacion, Datos[L].Materias.Con[L].Contabilidad_I, Datos[L].Materias.Con[L].Sociopolitica_Productiva, Datos[L].Materias.Con[L].Metodologia_Investigacion, Datos[L].Materias.Con[L].Deporte_Recreacion, Datos[L].Materias.Con[L].Matematica_II, Datos[L].Materias.Con[L].Contabilidad_II, Datos[L].Materias.Con[L].Ingles, Datos[L].Materias.Con[L].Legislacion_Laboral, Datos[L].Materias.Con[L].Estadistica_I, Datos[L].Materias.Con[L].Introduccion_Administracion, Datos[L].Materias.Con[L].Arte_Cultura, Datos[L].Materias.Con[L].Informatica, Datos[L].Materias.Con[L].Calculo_Financiero, Datos[L].Materias.Con[L].Teoria_Economica, Datos[L].Materias.Con[L].Estadistica_II, Datos[L].Materias.Con[L].Contabilidad_III, Datos[L].Materias.Con[L].Procesos_Administrativos, Datos[L].Materias.Con[L].Contabilidad_Costos_I, Datos[L].Materias.Con[L].Practica_Profesional_I, Datos[L].Materias.Con[L].Auditoria_I, Datos[L].Materias.Con[L].Contabilidad_Especializada_I, Datos[L].Materias.Con[L].Finanzas_Gestion_Presupuestaria, Datos[L].Materias.Con[L].Administracion_Publica, Datos[L].Materias.Con[L].Sistemas_Informacion_Gerencial, Datos[L].Materias.Con[L].Investigacion_Operaciones, Datos[L].Materias.Con[L].Auditoria_II, Datos[L].Materias.Con[L].Contabilidad_Especializada_II, Datos[L].Materias.Con[L].Contabilidad_Costos_II, Datos[L].Materias.Con[L].Gerencia_Proyectos, Datos[L].Materias.Con[L].Habilidades_Gerenciales, Datos[L].Materias.Con[L].Contabilidad_Ambiental, Datos[L].Materias.Con[L].Sistemas_Tributarios_I, Datos[L].Materias.Con[L].Mercadeo, Datos[L].Materias.Con[L].Presupuesto, Datos[L].Materias.Con[L].Contabilidad_Costos_III, Datos[L].Materias.Con[L].Seminario_I, Datos[L].Materias.Con[L].Practica_Profesional_II, Datos[L].Materias.Con[L].Sistemas_Tributarios_II, Datos[L].Materias.Con[L].Gestion_Talento_Humano, Datos[L].Materias.Con[L].Auditoria_III, Datos[L].Materias.Con[L].Analisis_Estados_Financieros, Datos[L].Materias.Con[L].Etica_Desarrollo_Profesional, Datos[L].Materias.Con[L].Seminario_II, Datos[L].Materias.Con[L].Tributacion_Aduanera, Datos[L].Materias.Con[L].Tecnicas_Negociacion, Datos[L].Materias.Con[L].Avaluos, Datos[L].Materias.Con[L].Instituciones_Financieras, Datos[L].Materias.Con[L].Tesis_Grado, Datos[L].Materias.Con[L].Pasantias, Datos[L].Materias.Eco[L].Introduccion_Economia, Datos[L].Materias.Eco[L].Analisis_Matematico_I, Datos[L].Materias.Eco[L].Lenguaje_Comunicacion, Datos[L].Materias.Eco[L].Fundamentos_Derecho, Datos[L].Materias.Eco[L].Metodologia_Investigacion, Datos[L].Materias.Eco[L].Deporte_Recreacion, Datos[L].Materias.Eco[L].Ingles_Instrumental, Datos[L].Materias.Eco[L].Economia_I, Datos[L].Materias.Eco[L].Sociologia, Datos[L].Materias.Eco[L].Analisis_Matematico_II, Datos[L].Materias.Eco[L].Contabilidad_General_I, Datos[L].Materias.Eco[L].Informatica, Datos[L].Materias.Eco[L].Arte_Cultura, Datos[L].Materias.Eco[L].Estadistica_I, Datos[L].Materias.Eco[L].Economia_II, Datos[L].Materias.Eco[L].Sociopolitica_Productiva, Datos[L].Materias.Eco[L].Estadistica_II, Datos[L].Materias.Eco[L].Contabilidad_General_II, Datos[L].Materias.Eco[L].Introduccion_Administracion, Datos[L].Materias.Eco[L].Historia_Doctrina_Economica, Datos[L].Materias.Eco[L].Informatica_Aplicada, Datos[L].Materias.Eco[L].Macroeconomia_I, Datos[L].Materias.Eco[L].Analisis_Financiero, Datos[L].Materias.Eco[L].Matematica_III, Datos[L].Materias.Eco[L].Microeconomia_I, Datos[L].Materias.Eco[L].Teoria_Investigacion_Mercado, Datos[L].Materias.Eco[L].Seminario_I, Datos[L].Materias.Eco[L].Estadistica_Aplicada, Datos[L].Materias.Eco[L].Macroeconomia_II, Datos[L].Materias.Eco[L].Microeconomia_II, Datos[L].Materias.Eco[L].Matematica_Financiera, Datos[L].Materias.Eco[L].Contabilidad_Social, Datos[L].Materias.Eco[L].Desarrollo_Economico, Datos[L].Materias.Eco[L].Analisis_Economico_Regional, Datos[L].Materias.Eco[L].Economia_Politica, Datos[L].Materias.Eco[L].Formulacion_Evaluacion_Proyectos, Datos[L].Materias.Eco[L].Investigacion_Operaciones, Datos[L].Materias.Eco[L].Teoria_Politica_Fiscal, Datos[L].Materias.Eco[L].Seminario_II, Datos[L].Materias.Eco[L].Economia_Politica_Agricola, Datos[L].Materias.Eco[L].Economia_Industrial, Datos[L].Materias.Eco[L].Economia_Industrial, Datos[L].Materias.Eco[L].Economia_Minera, Datos[L].Materias.Eco[L].Economia_Ambiente, Datos[L].Materias.Eco[L].Seminario_III, Datos[L].Materias.Eco[L].Econometria, Datos[L].Materias.Eco[L].Teoria_Politica_Monetaria, Datos[L].Materias.Eco[L].Planificacion, Datos[L].Materias.Eco[L].Economia_Internacional, Datos[L].Materias.Eco[L].Formulacion_Evaluacion_Agricola, Datos[L].Materias.Eco[L].Gestion_Comunitaria, Datos[L].Materias.Eco[L].Contabilidad_Costos, Datos[L].Materias.Eco[L].Presupuesto, Datos[L].Materias.Eco[L].Trabajo_Final_Grado, Datos[L].Materias.Eco[L].Finanzas_Internacionales, Datos[L].Materias.Eco[L].Estructura_Economica_Mundial, Datos[L].Materias.Eco[L].Gestion_Riesgo, Datos[L].Materias.Eco[L].Economia_Crisis: Real);
+Inicio
+    Var K, F, L, nota: Entero;
+    Si (cod = Materias[J].Codigo) Entonces;
+        Para (K = 1 Hasta K = 500) Hacer;
+            Si (Clase[K].Codigo = cod) Entonces;
+                Para (F = 1 Hasta F = 500) Hacer;
+                    Si (Lista[F].ID_Lista = Clase[K].ID_Clase) Entonces;
+                        Si (Prof[pos].Cedula = Clase[K].CI_Profesor) Entonces;
+                            Para (L = F Hasta L = F+49) Hacer;
+                                Mostrar << Clase[K].Seccion;
+                                Mostrar << Datos[L].Nombre;
+                                Mostrar << Datos[L].CI;
+                                Mostrar << "¿Cuánta nota desea ponerle a este estudiante?";
+                                Leer >> nota;
+                                Mientras (nota < 1 or nota > 10) Hacer;
+                                    Mostrar << "Es invalido, intente una nota del 1 al 10";
+                                    Leer >> nota;
+                                Fin_Mientras
+                                En_Caso (carrera <> "Ninguna") Sea;
+                                    Caso(carrera = "Informatica");
+                                        // Primer Semestre
+                                        Si (Materias[J].Nombre = "Matemática I") Entonces;
+                                            Datos[L].Materias.Info[L].Matematica_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Fundamentos de la Informática") Entonces;
+                                            Datos[L].Materias.Info[L].Fundamentos_de_la_Informatica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Lógica Matemática") Entonces;
+                                            Datos[L].Materias.Info[L].Logica_Matematica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Lenguaje y Comunicación") Entonces;
+                                            Datos[L].Materias.Info[L].Lenguaje_y_Comunicacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Ingles I") Entonces;
+                                            Datos[L].Materias.Info[L].Ingles_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Formacion Constitucional") Entonces;
+                                            Datos[L].Materias.Info[L].Formacion_Constitucional = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Economía Digital") Entonces;
+                                            Datos[L].Materias.Info[L].Economia_Digital = nota;
+                                        Fin_Si
+
+                                        // Segundo Semestre
+                                        Si (Materias[J].Nombre = "Matemática II") Entonces;
+                                            Datos[L].Materias.Info[L].Matematica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Física I") Entonces;
+                                            Datos[L].Materias.Info[L].Fisica_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Algoritmos I") Entonces;
+                                            Datos[L].Materias.Info[L].Algoritmos_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Problemática Científica Tecnológica") Entonces;
+                                            Datos[L].Materias.Info[L].Problematica_Cientifica_Tecnologica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Ingles II") Entonces;
+                                            Datos[L].Materias.Info[L].Ingles_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva I") Entonces;
+                                            Datos[L].Materias.Info[L].Electiva_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Arte y Cultura") Entonces;
+                                            Datos[L].Materias.Info[L].Arte_y_Cultura = nota;
+                                        Fin_Si
+
+                                        // Tercer Semestre
+                                        Si (Materias[J].Nombre = "Matemática III") Entonces;
+                                            Datos[L].Materias.Info[L].Matematica_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Física II") Entonces;
+                                            Datos[L].Materias.Info[L].Fisica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Algoritmos II") Entonces;
+                                            Datos[L].Materias.Info[L].Algoritmos_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Programación I") Entonces;
+                                            Datos[L].Materias.Info[L].Programacion_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Metodología y Técnicas de Investigación") Entonces;
+                                            Datos[L].Materias.Info[L].Metodologia_y_Tecnicas_de_Investigacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva II") Entonces;
+                                            Datos[L].Materias.Info[L].Electiva_II = nota;
+                                        Fin_Si
+
+                                        // Cuarto Semestre
+                                        Si (Materias[J].Nombre = "Matemática IV") Entonces;
+                                            Datos[L].Materias.Info[L].Matematica_IV = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Probabilidad y Estadística") Entonces;
+                                            Datos[L].Materias.Info[L].Probabilidad_y_Estadistica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Estructuras Discretas I") Entonces;
+                                            Datos[L].Materias.Info[L].Estructuras_Discretas_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Programación II") Entonces;
+                                            Datos[L].Materias.Info[L].Programacion_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Base de Datos") Entonces;
+                                            Datos[L].Materias.Info[L].Base_de_Datos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva III") Entonces;
+                                            Datos[L].Materias.Info[L].Electiva_III = nota;
+                                        Fin_Si
+
+                                        // Quinto Semestre
+                                        Si (Materias[J].Nombre = "Organización del Computador") Entonces;
+                                            Datos[L].Materias.Info[L].Organizacion_del_Computador = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Algebra Booleana") Entonces;
+                                            Datos[L].Materias.Info[L].Algebra_Booleana = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Estructuras Discretas II") Entonces;
+                                            Datos[L].Materias.Info[L].Estructuras_Discretas_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Programación III") Entonces;
+                                            Datos[L].Materias.Info[L].Programacion_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Teoría de Sistemas") Entonces;
+                                            Datos[L].Materias.Info[L].Teoria_de_Sistemas = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva IV") Entonces;
+                                            Datos[L].Materias.Info[L].Electiva_IV = nota;
+                                        Fin_Si
+
+                                        // Sexto Semestre
+                                        Si (Materias[J].Nombre = "Arquitectura del Computador") Entonces;
+                                            Datos[L].Materias.Info[L].Arquitectura_del_Computador = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Métodos Numéricos") Entonces;
+                                            Datos[L].Materias.Info[L].Metodos_Numericos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Investigación de Operaciones") Entonces;
+                                            Datos[L].Materias.Info[L].Investigacion_de_Operaciones = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Ingeniería Económica") Entonces;
+                                            Datos[L].Materias.Info[L].Ingenieria_Economica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Sistemas de Información I") Entonces;
+                                            Datos[L].Materias.Info[L].Sistemas_de_Informacion_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva V") Entonces;
+                                            Datos[L].Materias.Info[L].Electiva_V = nota;
+                                        Fin_Si
+
+                                        // Séptimo Semestre
+                                        Si (Materias[J].Nombre = "Sistemas Operativos") Entonces;
+                                            Datos[L].Materias.Info[L].Sistemas_Operativos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Control de Proyectos") Entonces;
+                                            Datos[L].Materias.Info[L].Control_de_Proyectos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Gestión Empresarial") Entonces;
+                                            Datos[L].Materias.Info[L].Gestion_Empresarial = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Traductores e Interpretes") Entonces;
+                                            Datos[L].Materias.Info[L].Traductores_e_Interpretes = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Sistemas de Información II") Entonces;
+                                            Datos[L].Materias.Info[L].Sistemas_de_Informacion_II = nota;
+                                        Fin_Si
+
+                                        // Octavo Semestre
+                                        Si (Materias[J].Nombre = "Redes") Entonces;
+                                            Datos[L].Materias.Info[L].Redes = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Pasantías") Entonces;
+                                            Datos[L].Materias.Info[L].Pasantias = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva de Área I") Entonces;
+                                            Datos[L].Materias.Info[L].Electiva_de_Area_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Lenguajes de Programación") Entonces;
+                                            Datos[L].Materias.Info[L].Lenguajes_de_Programacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Sistemas de Información III") Entonces;
+                                            Datos[L].Materias.Info[L].Sistemas_de_Informacion_III = nota;
+                                        Fin_Si
+
+                                        // Noveno Semestre
+                                        Si (Materias[J].Nombre = "Sistemas Distribuidos") Entonces;
+                                            Datos[L].Materias.Info[L].Sistemas_Distribuidos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto de Grado I") Entonces;
+                                            Datos[L].Materias.Info[L].Proyecto_de_Grado_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva de Área II") Entonces;
+                                            Datos[L].Materias.Info[L].Electiva_de_Area_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva Libre I") Entonces;
+                                            Datos[L].Materias.Info[L].Electiva_Libre_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Ética Profesional") Entonces;
+                                            Datos[L].Materias.Info[L].Etica_Profesional = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Deportes") Entonces;
+                                            Datos[L].Materias.Info[L].Deportes = nota;
+                                        Fin_Si
+
+                                        // Décimo Semestre
+                                        Si (Materias[J].Nombre = "Gerencia de Proyectos") Entonces;
+                                            Datos[L].Materias.Info[L].Gerencia_de_Proyectos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto de Grado II") Entonces;
+                                            Datos[L].Materias.Info[L].Proyecto_de_Grado_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva de Área III") Entonces;
+                                            Datos[L].Materias.Info[L].Electiva_de_Area_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva Libre II") Entonces;
+                                            Datos[L].Materias.Info[L].Electiva_Libre_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Informática Educativa") Entonces;
+                                            Datos[L].Materias.Info[L].Informatica_Educativa = nota;
+                                        Fin_Si
+
+                                    Caso(carrera = "Civil");
+                                        // Primer Semestre
+                                        Si (Materias[J].Nombre = "Inglés Técnico") Entonces;
+                                            Datos[L].Materias.Civ[L].Ingles_Tecnico = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Técnicas de Estudio y Documentación") Entonces;
+                                            Datos[L].Materias.Civ[L].Tecnicas_de_Estudio_y_Documentacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Geometría Descriptiva I") Entonces;
+                                            Datos[L].Materias.Civ[L].Geometria_Descriptiva_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Calculo I") Entonces;
+                                            Datos[L].Materias.Civ[L].Calculo_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Métodos del Razonamiento Lógico") Entonces;
+                                            Datos[L].Materias.Civ[L].Metodos_del_Razonamiento_Logico = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Arte y Cultura") Entonces;
+                                            Datos[L].Materias.Civ[L].Arte_y_Cultura = nota;
+                                        Fin_Si
+
+                                        // Segundo Semestre
+                                        Si (Materias[J].Nombre = "Calculo II") Entonces;
+                                            Datos[L].Materias.Civ[L].Calculo_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Introducción a las Ciencias Humanas") Entonces;
+                                            Datos[L].Materias.Civ[L].Introduccion_a_las_Ciencias_Humanas = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Física I") Entonces;
+                                            Datos[L].Materias.Civ[L].Fisica_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Geometría Descriptiva II") Entonces;
+                                            Datos[L].Materias.Civ[L].Geometria_Descriptiva_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Sociedad Ciencia y Tecnología") Entonces;
+                                            Datos[L].Materias.Civ[L].Sociedad_Ciencia_y_Tecnologia = nota;
+                                        Fin_Si
+
+                                        // Tercer Semestre
+                                        Si (Materias[J].Nombre = "Física II") Entonces;
+                                            Datos[L].Materias.Civ[L].Fisica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Química Básica") Entonces;
+                                            Datos[L].Materias.Civ[L].Quimica_Basica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Calculo III") Entonces;
+                                            Datos[L].Materias.Civ[L].Calculo_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Mecánica Racional I") Entonces;
+                                            Datos[L].Materias.Civ[L].Mecanica_Racional_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Deportes") Entonces;
+                                            Datos[L].Materias.Civ[L].Deportes = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Informática para Ingenieros") Entonces;
+                                            Datos[L].Materias.Civ[L].Informatica_para_Ingenieros = nota;
+                                        Fin_Si
+
+                                        // Cuarto Semestre
+                                        Si (Materias[J].Nombre = "Mecánica Racional II") Entonces;
+                                            Datos[L].Materias.Civ[L].Mecanica_Racional_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Química Aplicada") Entonces;
+                                            Datos[L].Materias.Civ[L].Quimica_Aplicada = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Topografía") Entonces;
+                                            Datos[L].Materias.Civ[L].Topografia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Calculo IV") Entonces;
+                                            Datos[L].Materias.Civ[L].Calculo_IV = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Estadística para Ingenieros") Entonces;
+                                            Datos[L].Materias.Civ[L].Estadistica_para_Ingenieros = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva No Técnica") Entonces;
+                                            Datos[L].Materias.Civ[L].Electiva_No_Tecnica = nota;
+                                        Fin_Si
+
+                                        // Quinto Semestre
+                                        Si (Materias[J].Nombre = "Geología Aplicada") Entonces;
+                                            Datos[L].Materias.Civ[L].Geologia_Aplicada = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Resistencia de Materiales") Entonces;
+                                            Datos[L].Materias.Civ[L].Resistencia_de_Materiales = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva No Técnica II") Entonces;
+                                            Datos[L].Materias.Civ[L].Electiva_No_Tecnica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Materiales y Ensayos") Entonces;
+                                            Datos[L].Materias.Civ[L].Materiales_y_Ensayos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Mecánica de Fluidos I") Entonces;
+                                            Datos[L].Materias.Civ[L].Mecanica_de_Fluidos_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Calculo V") Entonces;
+                                            Datos[L].Materias.Civ[L].Calculo_V = nota;
+                                        Fin_Si
+
+                                        // Sexto Semestre
+                                        Si (Materias[J].Nombre = "Mecánica de Suelos") Entonces;
+                                            Datos[L].Materias.Civ[L].Mecanica_de_Suelos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "H & San Ambiental") Entonces;
+                                            Datos[L].Materias.Civ[L].H_y_San_Ambiental = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Teorías de Estructuras I") Entonces;
+                                            Datos[L].Materias.Civ[L].Teorias_de_Estructuras_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Dibujo de Proyectos") Entonces;
+                                            Datos[L].Materias.Civ[L].Dibujo_de_Proyectos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Hidrología") Entonces;
+                                            Datos[L].Materias.Civ[L].Hidrologia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Mecánica de Fluidos II") Entonces;
+                                            Datos[L].Materias.Civ[L].Mecanica_de_Fluidos_II = nota;
+                                        Fin_Si
+
+                                        // Séptimo Semestre
+                                        Si (Materias[J].Nombre = "Teorías de Estructuras II") Entonces;
+                                            Datos[L].Materias.Civ[L].Teorias_de_Estructuras_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Ingeniería Económica") Entonces;
+                                            Datos[L].Materias.Civ[L].Ingenieria_Economica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Instalaciones para Edificios") Entonces;
+                                            Datos[L].Materias.Civ[L].Instalaciones_para_Edificios = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Metodología de la Investigación") Entonces;
+                                            Datos[L].Materias.Civ[L].Metodologia_de_la_Investigacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Acueductos y Cloacas") Entonces;
+                                            Datos[L].Materias.Civ[L].Acueductos_y_Cloacas = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva Técnica") Entonces;
+                                            Datos[L].Materias.Civ[L].Electiva_Tecnica = nota;
+                                        Fin_Si
+
+                                        // Octavo Semestre
+                                        Si (Materias[J].Nombre = "Electiva Técnica II") Entonces;
+                                            Datos[L].Materias.Civ[L].Electiva_Tecnica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Obras Hidráulicas") Entonces;
+                                            Datos[L].Materias.Civ[L].Obras_Hidraulicas = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Práctica Profesional") Entonces;
+                                            Datos[L].Materias.Civ[L].Practica_Profesional = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Concreto Armado") Entonces;
+                                            Datos[L].Materias.Civ[L].Concreto_Armado = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Vías de Comunicación I") Entonces;
+                                            Datos[L].Materias.Civ[L].Vias_de_Comunicacion_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyectos Estructurales de Acero") Entonces;
+                                            Datos[L].Materias.Civ[L].Proyectos_Estructurales_de_Acero = nota;
+                                        Fin_Si
+
+                                        // Noveno Semestre
+                                        Si (Materias[J].Nombre = "Práctica Comunitaria") Entonces;
+                                            Datos[L].Materias.Civ[L].Practica_Comunitaria = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Trabajo Especial de Grado I") Entonces;
+                                            Datos[L].Materias.Civ[L].Trabajo_Especial_de_Grado_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Concreto Pretenzado") Entonces;
+                                            Datos[L].Materias.Civ[L].Concreto_Pretenzado = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Fundaciones y Muros") Entonces;
+                                            Datos[L].Materias.Civ[L].Fundaciones_y_Muros = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Vías de Comunicación II") Entonces;
+                                            Datos[L].Materias.Civ[L].Vias_de_Comunicacion_II = nota;
+                                        Fin_Si
+
+                                        // Décimo Semestre
+                                        Si (Materias[J].Nombre = "Proyectos Estructurales de Concreto") Entonces;
+                                            Datos[L].Materias.Civ[L].Proyectos_Estructurales_de_Concreto = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Trabajo Especial de Grado II") Entonces;
+                                            Datos[L].Materias.Civ[L].Trabajo_Especial_de_Grado_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Administración de Obras") Entonces;
+                                            Datos[L].Materias.Civ[L].Administracion_de_Obras = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Pavimentos") Entonces;
+                                            Datos[L].Materias.Civ[L].Pavimentos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Puentes") Entonces;
+                                            Datos[L].Materias.Civ[L].Puentes = nota;
+                                        Fin_Si
+
+                                    Caso(carrera = "Hidrocarburos");
+                                        // Primer Semestre
+                                        Si (Materias[J].Nombre = "Formación Socio Política I") Entonces;
+                                            Datos[L].Materias.Hid[L].Formacion_Socio_Politica_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Comunitario Socio Energético I") Entonces;
+                                            Datos[L].Materias.Hid[L].Proyecto_Comunitario_Socio_Energetico_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Dibujo Técnico y Descriptiva") Entonces;
+                                            Datos[L].Materias.Hid[L].Dibujo_Tecnico_y_Descriptiva = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Matemática I") Entonces;
+                                            Datos[L].Materias.Hid[L].Matematica_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Ingles Técnico") Entonces;
+                                            Datos[L].Materias.Hid[L].Ingles_Tecnico = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Química Inorgánica") Entonces;
+                                            Datos[L].Materias.Hid[L].Quimica_Inorganica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Orientación a la Ingeniería del Petróleo y Gas Natural") Entonces;
+                                            Datos[L].Materias.Hid[L].Orientacion_a_la_Ingenieria_del_Petroleo_y_Gas_Natural = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Arte y Cultura") Entonces;
+                                            Datos[L].Materias.Hid[L].Arte_y_Cultura = nota;
+                                        Fin_Si
+
+                                        // Segundo Semestre
+                                        Si (Materias[J].Nombre = "Informática") Entonces;
+                                            Datos[L].Materias.Hid[L].Informatica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Matemática II") Entonces;
+                                            Datos[L].Materias.Hid[L].Matematica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Física I") Entonces;
+                                            Datos[L].Materias.Hid[L].Fisica_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Química Orgánica") Entonces;
+                                            Datos[L].Materias.Hid[L].Quimica_Organica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Formación Socio Política II") Entonces;
+                                            Datos[L].Materias.Hid[L].Formacion_Socio_Politica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Comunitario Socio Energético II") Entonces;
+                                            Datos[L].Materias.Hid[L].Proyecto_Comunitario_Socio_Energetico_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Deporte") Entonces;
+                                            Datos[L].Materias.Hid[L].Deporte = nota;
+                                        Fin_Si
+
+                                        // Tercer Semestre
+                                        Si (Materias[J].Nombre = "Formación Socio Política III") Entonces;
+                                            Datos[L].Materias.Hid[L].Formacion_Socio_Politica_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Comunitario Socio Energético III") Entonces;
+                                            Datos[L].Materias.Hid[L].Proyecto_Comunitario_Socio_Energetico_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Física II") Entonces;
+                                            Datos[L].Materias.Hid[L].Fisica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Geología General") Entonces;
+                                            Datos[L].Materias.Hid[L].Geologia_General = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Matemática III") Entonces;
+                                            Datos[L].Materias.Hid[L].Matematica_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Laboratorio de Física") Entonces;
+                                            Datos[L].Materias.Hid[L].Laboratorio_de_Fisica = nota;
+                                        Fin_Si
+
+                                        // Cuarto Semestre
+                                        Si (Materias[J].Nombre = "Formación Socio Política IV") Entonces;
+                                            Datos[L].Materias.Hid[L].Formacion_Socio_Politica_IV = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Comunitario Socio Energético IV") Entonces;
+                                            Datos[L].Materias.Hid[L].Proyecto_Comunitario_Socio_Energetico_IV = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Mecánica de las Rocas y de los Fluidos") Entonces;
+                                            Datos[L].Materias.Hid[L].Mecanica_de_las_Rocas_y_de_los_Fluidos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Probabilidades y Estadísticas") Entonces;
+                                            Datos[L].Materias.Hid[L].Probabilidades_y_Estadisticas = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Termodinámica General y Aplicada") Entonces;
+                                            Datos[L].Materias.Hid[L].Termodinamica_General_y_Aplicada = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Caracterización Física de los Yacimientos") Entonces;
+                                            Datos[L].Materias.Hid[L].Caracterizacion_Fisica_de_los_Yacimientos = nota;
+                                        Fin_Si
+
+                                        // Quinto Semestre
+                                        Si (Materias[J].Nombre = "Sistema de Compresión de Gas") Entonces;
+                                            Datos[L].Materias.Hid[L].Sistema_de_Compresion_de_Gas = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Formación Socio Política (Legislación Petrolera)") Entonces;
+                                            Datos[L].Materias.Hid[L].Formacion_Socio_Politica_Legislacion_Petrolera = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Socio Comunitario Socio Energético V") Entonces;
+                                            Datos[L].Materias.Hid[L].Proyecto_Socio_Comunitario_Socio_Energetico_V = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Perforación de Pozos") Entonces;
+                                            Datos[L].Materias.Hid[L].Perforacion_de_Pozos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Caracterización Energética de los Yacimientos") Entonces;
+                                            Datos[L].Materias.Hid[L].Caracterizacion_Energetica_de_los_Yacimientos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Transporte y Distribución de Hidrocarburos") Entonces;
+                                            Datos[L].Materias.Hid[L].Transporte_y_Distribucion_de_Hidrocarburos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Geología Estructural") Entonces;
+                                            Datos[L].Materias.Hid[L].Geologia_Estructural = nota;
+                                        Fin_Si
+
+                                        // Sexto Semestre
+                                        Si (Materias[J].Nombre = "Formación Socio Política (Integración con el Comercio Internacional)") Entonces;
+                                            Datos[L].Materias.Hid[L].Formacion_Socio_Politica_Integracion_con_el_Comercio_Internacional = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Comunitario Socio Energético VI") Entonces;
+                                            Datos[L].Materias.Hid[L].Proyecto_Comunitario_Socio_Energetico_VI = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Seguridad Industrial") Entonces;
+                                            Datos[L].Materias.Hid[L].Seguridad_Industrial = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Caracterización Dinámica de los Yacimientos") Entonces;
+                                            Datos[L].Materias.Hid[L].Caracterizacion_Dinamica_de_los_Yacimientos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Perfilaje de Pozos") Entonces;
+                                            Datos[L].Materias.Hid[L].Perfilaje_de_Pozos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Competación de Pozos") Entonces;
+                                            Datos[L].Materias.Hid[L].Competacion_de_Pozos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Recuperación Secundaria de Yacimientos") Entonces;
+                                            Datos[L].Materias.Hid[L].Recuperacion_Secundaria_de_Yacimientos = nota;
+                                        Fin_Si
+
+                                        // Séptimo Semestre
+                                        Si (Materias[J].Nombre = "Proyecto Comunitario Socio Energético VII") Entonces;
+                                            Datos[L].Materias.Hid[L].Proyecto_Comunitario_Socio_Energetico_VII = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Geología de Producción") Entonces;
+                                            Datos[L].Materias.Hid[L].Geologia_de_Produccion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Ingeniería de Producción I") Entonces;
+                                            Datos[L].Materias.Hid[L].Ingenieria_de_Produccion_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Protección Integral de Riesgos") Entonces;
+                                            Datos[L].Materias.Hid[L].Proteccion_Integral_de_Riesgos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva Profesional (Corrosión e Integridad Mecánica)") Entonces;
+                                            Datos[L].Materias.Hid[L].Electiva_Profesional_Corrosion_e_Integridad_Mecanica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Evaluación y Auditoría Ambiental") Entonces;
+                                            Datos[L].Materias.Hid[L].Evaluacion_y_Auditoria_Ambiental = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Transferencia de Calor") Entonces;
+                                            Datos[L].Materias.Hid[L].Transferencia_de_Calor = nota;
+                                        Fin_Si
+
+                                        // Octavo Semestre
+                                        Si (Materias[J].Nombre = "Procesos Petroquímicos") Entonces;
+                                            Datos[L].Materias.Hid[L].Procesos_Petroquimicos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Comunitario Socio Energético VIII") Entonces;
+                                            Datos[L].Materias.Hid[L].Proyecto_Comunitario_Socio_Energetico_VIII = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva Profesional (Gestión y Control de Calidad)") Entonces;
+                                            Datos[L].Materias.Hid[L].Electiva_Profesional_Gestion_y_Control_de_Calidad = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Ingeniería de Producción II") Entonces;
+                                            Datos[L].Materias.Hid[L].Ingenieria_de_Produccion_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Simulación Numérica de Yacimientos") Entonces;
+                                            Datos[L].Materias.Hid[L].Simulacion_Numerica_de_Yacimientos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Procesos de Refinación") Entonces;
+                                            Datos[L].Materias.Hid[L].Procesos_de_Refinacion = nota;
+                                        Fin_Si
+
+                                        // Noveno Semestre
+                                        Si (Materias[J].Nombre = "Trabajo Especial de Grado") Entonces;
+                                            Datos[L].Materias.Hid[L].Trabajo_Especial_de_Grado = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Recuperación Mejorada") Entonces;
+                                            Datos[L].Materias.Hid[L].Recuperacion_Mejorada = nota;
+                                        Fin_Si
+
+                                    Caso(carrera = "Medicina");
+                                        // Primer Año
+                                        Si (Materias[J].Nombre = "Histología Embriología y Genética") Entonces;
+                                            Datos[L].Materias.Med[L].Histologia_Embriologia_y_Genetica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Bioética I") Entonces;
+                                            Datos[L].Materias.Med[L].Bioetica_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina General I") Entonces;
+                                            Datos[L].Materias.Med[L].Medicina_General_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Deportes, Arte y Cultura") Entonces;
+                                            Datos[L].Materias.Med[L].Deportes_Arte_y_Cultura = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Metodología de la Investigación Científica") Entonces;
+                                            Datos[L].Materias.Med[L].Metodologia_de_la_Investigacion_Cientifica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Ingles Instrumental") Entonces;
+                                            Datos[L].Materias.Med[L].Ingles_Instrumental = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina Preventiva, Comunitaria y Familiar I") Entonces;
+                                            Datos[L].Materias.Med[L].Medicina_Preventiva_Comunitaria_y_Familiar_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Anatomía Humana") Entonces;
+                                            Datos[L].Materias.Med[L].Anatomia_Humana = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Historia de la Medicina") Entonces;
+                                            Datos[L].Materias.Med[L].Historia_de_la_Medicina = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Antropología") Entonces;
+                                            Datos[L].Materias.Med[L].Antropologia = nota;
+                                        Fin_Si
+
+                                        // Segundo Año
+                                        Si (Materias[J].Nombre = "Microbiología") Entonces;
+                                            Datos[L].Materias.Med[L].Microbiologia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Deportes, Arte y Cultura II") Entonces;
+                                            Datos[L].Materias.Med[L].Deportes_Arte_y_Cultura_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Bioquímica") Entonces;
+                                            Datos[L].Materias.Med[L].Bioquimica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina General II") Entonces;
+                                            Datos[L].Materias.Med[L].Medicina_General_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Psicología y Sociología Gral") Entonces;
+                                            Datos[L].Materias.Med[L].Psicologia_y_Sociologia_Gral = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Estadística y Demografía Médica II") Entonces;
+                                            Datos[L].Materias.Med[L].Estadistica_y_Demografia_Medica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Fisiología y Biofísica") Entonces;
+                                            Datos[L].Materias.Med[L].Fisiologia_y_Biofisica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Informática") Entonces;
+                                            Datos[L].Materias.Med[L].Informatica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina Preventiva, Comunitaria y Familiar II") Entonces;
+                                            Datos[L].Materias.Med[L].Medicina_Preventiva_Comunitaria_y_Familiar_II = nota;
+                                        Fin_Si
+
+                                        // Tercer Año
+                                        Si (Materias[J].Nombre = "Derecho Constitucional") Entonces;
+                                            Datos[L].Materias.Med[L].Derecho_Constitucional = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina Preventiva, Comunitaria y Familiar III") Entonces;
+                                            Datos[L].Materias.Med[L].Medicina_Preventiva_Comunitaria_y_Familiar_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Parasitología") Entonces;
+                                            Datos[L].Materias.Med[L].Parasitologia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Semiología Médico Quirúrgica") Entonces;
+                                            Datos[L].Materias.Med[L].Semiologia_Medico_Quirurgica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Farmacología") Entonces;
+                                            Datos[L].Materias.Med[L].Farmacologia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Inteligencia Ética/Deontología Práctica Médica") Entonces;
+                                            Datos[L].Materias.Med[L].Inteligencia_Etica_Deontologia_Practica_Medica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Fisiopatología") Entonces;
+                                            Datos[L].Materias.Med[L].Fisiopatologia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Nutrición") Entonces;
+                                            Datos[L].Materias.Med[L].Nutricion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Psicología Médica General") Entonces;
+                                            Datos[L].Materias.Med[L].Psicologia_Medica_General = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina General III") Entonces;
+                                            Datos[L].Materias.Med[L].Medicina_General_III = nota;
+                                        Fin_Si
+
+                                        // Cuarto Año
+                                        Si (Materias[J].Nombre = "Psicopatología") Entonces;
+                                            Datos[L].Materias.Med[L].Psicopatologia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Obstetrica y Ginecología I") Entonces;
+                                            Datos[L].Materias.Med[L].Clinica_Obstetrica_y_Ginecologia_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Quirúrgica I") Entonces;
+                                            Datos[L].Materias.Med[L].Clinica_Quirurgica_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Pediátrica I") Entonces;
+                                            Datos[L].Materias.Med[L].Clinica_Pediatrica_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Anatomía Patológica") Entonces;
+                                            Datos[L].Materias.Med[L].Anatomia_Patologica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina Preventiva Comunitaria y Familiar IV") Entonces;
+                                            Datos[L].Materias.Med[L].Medicina_Preventiva_Comunitaria_y_Familiar_IV = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina General IV") Entonces;
+                                            Datos[L].Materias.Med[L].Medicina_General_IV = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Médica I") Entonces;
+                                            Datos[L].Materias.Med[L].Clinica_Medica_I = nota;
+                                        Fin_Si
+
+                                        // Quinto Año
+                                        Si (Materias[J].Nombre = "Clínica Quirúrgica II") Entonces;
+                                            Datos[L].Materias.Med[L].Clinica_Quirurgica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina General V") Entonces;
+                                            Datos[L].Materias.Med[L].Medicina_General_V = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Pediátrica II") Entonces;
+                                            Datos[L].Materias.Med[L].Clinica_Pediatrica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina Legal") Entonces;
+                                            Datos[L].Materias.Med[L].Medicina_Legal = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina Preventiva, Comunitaria y Familiar V") Entonces;
+                                            Datos[L].Materias.Med[L].Medicina_Preventiva_Comunitaria_y_Familiar_V = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Psiquiátrica") Entonces;
+                                            Datos[L].Materias.Med[L].Clinica_Psiquiatrica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Obstetrica y Ginecológica II") Entonces;
+                                            Datos[L].Materias.Med[L].Clinica_Obstetrica_y_Ginecologica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Médica II") Entonces;
+                                            Datos[L].Materias.Med[L].Clinica_Medica_II = nota;
+                                        Fin_Si
+
+                                        // Sexto Año
+                                        Si (Materias[J].Nombre = "Internado Rural") Entonces;
+                                            Datos[L].Materias.Med[L].Internado_Rural = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Médica III") Entonces;
+                                            Datos[L].Materias.Med[L].Clinica_Medica_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Quirúrgica III") Entonces;
+                                            Datos[L].Materias.Med[L].Clinica_Quirurgica_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Obstetrica III") Entonces;
+                                            Datos[L].Materias.Med[L].Clinica_Obstetrica_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Pediátrica III") Entonces;
+                                            Datos[L].Materias.Med[L].Clinica_Pediatrica_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Trabajo de Grado") Entonces;
+                                            Datos[L].Materias.Med[L].Trabajo_de_Grado = nota;
+                                        Fin_Si
+
+                                    Caso(carrera = "Odontologia");
+                                        // Primer Año
+                                        Si (Materias[J].Nombre = "Morfología Dentaria y Oclusión") Entonces;
+                                            Datos[L].Materias.Odo[L].Morfologia_Dentaria_y_Oclusion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Formación Cultural y Artística") Entonces;
+                                            Datos[L].Materias.Odo[L].Formacion_Cultural_y_Artistica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Odontología Comunitaria I") Entonces;
+                                            Datos[L].Materias.Odo[L].Odontologia_Comunitaria_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Iniciación a la Clínica") Entonces;
+                                            Datos[L].Materias.Odo[L].Iniciacion_a_la_Clinica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Morfología Humana") Entonces;
+                                            Datos[L].Materias.Odo[L].Morfologia_Humana = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Formación Instrumental") Entonces;
+                                            Datos[L].Materias.Odo[L].Formacion_Instrumental = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Bioquímica Aplicada") Entonces;
+                                            Datos[L].Materias.Odo[L].Bioquimica_Aplicada = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Histología, Embriología y Genética") Entonces;
+                                            Datos[L].Materias.Odo[L].Histologia_Embriologia_y_Genetica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Educación Física y Deportes I") Entonces;
+                                            Datos[L].Materias.Odo[L].Educacion_Fisica_y_Deportes_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Investigación I") Entonces;
+                                            Datos[L].Materias.Odo[L].Investigacion_I = nota;
+                                        Fin_Si
+
+                                        // Segundo Año
+                                        Si (Materias[J].Nombre = "Odontología Comunitaria II") Entonces;
+                                            Datos[L].Materias.Odo[L].Odontologia_Comunitaria_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Histofisiología") Entonces;
+                                            Datos[L].Materias.Odo[L].Histofisiologia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Integral del Adulto I") Entonces;
+                                            Datos[L].Materias.Odo[L].Clinica_Integral_del_Adulto_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Biomateriales Odontológicos") Entonces;
+                                            Datos[L].Materias.Odo[L].Biomateriales_Odontologicos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Educación Física y Deportes II") Entonces;
+                                            Datos[L].Materias.Odo[L].Educacion_Fisica_y_Deportes_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Investigación II") Entonces;
+                                            Datos[L].Materias.Odo[L].Investigacion_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Microbiología y Parasitología") Entonces;
+                                            Datos[L].Materias.Odo[L].Microbiologia_y_Parasitologia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Formación Instrumental II") Entonces;
+                                            Datos[L].Materias.Odo[L].Formacion_Instrumental_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Formación Cultural y Artística II") Entonces;
+                                            Datos[L].Materias.Odo[L].Formacion_Cultural_y_Artistica_II = nota;
+                                        Fin_Si
+
+                                        // Tercer Año
+                                        Si (Materias[J].Nombre = "Investigación III") Entonces;
+                                            Datos[L].Materias.Odo[L].Investigacion_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Integral del Adulto II") Entonces;
+                                            Datos[L].Materias.Odo[L].Clinica_Integral_del_Adulto_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Atención Integral de Niño I") Entonces;
+                                            Datos[L].Materias.Odo[L].Atencion_Integral_de_Nino_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Odontología Comunitaria III") Entonces;
+                                            Datos[L].Materias.Odo[L].Odontologia_Comunitaria_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina Interna y Semiología") Entonces;
+                                            Datos[L].Materias.Odo[L].Medicina_Interna_y_Semiologia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Fisiopatología") Entonces;
+                                            Datos[L].Materias.Odo[L].Fisiopatologia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Farmacología") Entonces;
+                                            Datos[L].Materias.Odo[L].Farmacologia = nota;
+                                        Fin_Si
+
+                                        // Cuarto Año
+                                        Si (Materias[J].Nombre = "Investigación IV") Entonces;
+                                            Datos[L].Materias.Odo[L].Investigacion_IV = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Clínica Integral del Adulto III") Entonces;
+                                            Datos[L].Materias.Odo[L].Clinica_Integral_del_Adulto_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Odontología Comunitaria IV") Entonces;
+                                            Datos[L].Materias.Odo[L].Odontologia_Comunitaria_IV = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Atención Integral de Niño II") Entonces;
+                                            Datos[L].Materias.Odo[L].Atencion_Integral_de_Nino_II = nota;
+                                        Fin_Si
+
+                                        // Quinto Año
+                                        Si (Materias[J].Nombre = "Investigación V") Entonces;
+                                            Datos[L].Materias.Odo[L].Investigacion_V = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Odontología Comunitaria V") Entonces;
+                                            Datos[L].Materias.Odo[L].Odontologia_Comunitaria_V = nota;
+                                        Fin_Si
+
+                                        // Sexto Año
+                                        Si (Materias[J].Nombre = "Toxicología") Entonces;
+                                            Datos[L].Materias.Odo[L].Toxicologia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Gerontología") Entonces;
+                                            Datos[L].Materias.Odo[L].Gerontologia = nota;
+                                        Fin_Si
+
+                                    Caso(carrera = "Veterinaria");
+                                        // Primer Año
+                                        Si (Materias[J].Nombre = "Faenas Pecuarias") Entonces;
+                                            Datos[L].Materias.Vet[L].Faenas_Pecuarias = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Ingles Instrumental") Entonces;
+                                            Datos[L].Materias.Vet[L].Ingles_Instrumental = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Ecología Agrícola") Entonces;
+                                            Datos[L].Materias.Vet[L].Ecologia_Agricola = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Análisis del Perfil Profesional") Entonces;
+                                            Datos[L].Materias.Vet[L].Analisis_del_Perfil_Profesional = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Educación Física y Deportes") Entonces;
+                                            Datos[L].Materias.Vet[L].Educacion_Fisica_y_Deportes = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Bioquímica") Entonces;
+                                            Datos[L].Materias.Vet[L].Bioquimica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Computación") Entonces;
+                                            Datos[L].Materias.Vet[L].Computacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Zoología") Entonces;
+                                            Datos[L].Materias.Vet[L].Zoologia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Anatomía de los Animales Domesticos") Entonces;
+                                            Datos[L].Materias.Vet[L].Anatomia_de_los_Animales_Domesticos = nota;
+                                        Fin_Si
+
+                                        // Segundo Año
+                                        Si (Materias[J].Nombre = "Histología Veterinaria") Entonces;
+                                            Datos[L].Materias.Vet[L].Histologia_Veterinaria = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Arte y Cultura") Entonces;
+                                            Datos[L].Materias.Vet[L].Arte_y_Cultura = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Bioestadística") Entonces;
+                                            Datos[L].Materias.Vet[L].Bioestadistica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Genética") Entonces;
+                                            Datos[L].Materias.Vet[L].Genetica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Fisiología Animal") Entonces;
+                                            Datos[L].Materias.Vet[L].Fisiologia_Animal = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Zootecnia") Entonces;
+                                            Datos[L].Materias.Vet[L].Zootecnia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Microbiología") Entonces;
+                                            Datos[L].Materias.Vet[L].Microbiologia = nota;
+                                        Fin_Si
+
+                                        // Tercer Año
+                                        Si (Materias[J].Nombre = "Patología Clínica Veterinaria") Entonces;
+                                            Datos[L].Materias.Vet[L].Patologia_Clinica_Veterinaria = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Farmacología Veterinaria") Entonces;
+                                            Datos[L].Materias.Vet[L].Farmacologia_Veterinaria = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Semiología Veterinaria") Entonces;
+                                            Datos[L].Materias.Vet[L].Semiologia_Veterinaria = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Nutrición y Alimentación Animal") Entonces;
+                                            Datos[L].Materias.Vet[L].Nutricion_y_Alimentacion_Animal = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Reproducción Animal") Entonces;
+                                            Datos[L].Materias.Vet[L].Reproduccion_Animal = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Parasitología Veterinaria") Entonces;
+                                            Datos[L].Materias.Vet[L].Parasitologia_Veterinaria = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Anatomía Patológica Veterinaria") Entonces;
+                                            Datos[L].Materias.Vet[L].Anatomia_Patologica_Veterinaria = nota;
+                                        Fin_Si
+
+                                        // Cuarto Año
+                                        Si (Materias[J].Nombre = "Gerencia de Servicio Veterinaria") Entonces;
+                                            Datos[L].Materias.Vet[L].Gerencia_de_Servicio_Veterinaria = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Saneamiento Ambiental") Entonces;
+                                            Datos[L].Materias.Vet[L].Saneamiento_Ambiental = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina de Rumiantes y Equino") Entonces;
+                                            Datos[L].Materias.Vet[L].Medicina_de_Rumiantes_y_Equino = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Mejoramiento Animal") Entonces;
+                                            Datos[L].Materias.Vet[L].Mejoramiento_Animal = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina de Caninos y Felinos") Entonces;
+                                            Datos[L].Materias.Vet[L].Medicina_de_Caninos_y_Felinos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Investigación Veterinaria I") Entonces;
+                                            Datos[L].Materias.Vet[L].Investigacion_Veterinaria_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Extensión Profesional I") Entonces;
+                                            Datos[L].Materias.Vet[L].Extension_Profesional_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Cirugía Veterinaria") Entonces;
+                                            Datos[L].Materias.Vet[L].Cirugia_Veterinaria = nota;
+                                        Fin_Si
+
+                                        // Quinto Año
+                                        Si (Materias[J].Nombre = "Servicio Comunitario") Entonces;
+                                            Datos[L].Materias.Vet[L].Servicio_Comunitario = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina Preventiva y Clínica Hospitalaria") Entonces;
+                                            Datos[L].Materias.Vet[L].Medicina_Preventiva_y_Clinica_Hospitalaria = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Extensión Profesional II") Entonces;
+                                            Datos[L].Materias.Vet[L].Extension_Profesional_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Investigación Veterinaria II") Entonces;
+                                            Datos[L].Materias.Vet[L].Investigacion_Veterinaria_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina, Conejo, Peces, Especies Silvestres Laboratorio") Entonces;
+                                            Datos[L].Materias.Vet[L].Medicina_Conejo_Peces_Especies_Silvestres_Laboratorio = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Legislación y Deontología Veterinaria") Entonces;
+                                            Datos[L].Materias.Vet[L].Legislacion_y_Deontologia_Veterinaria = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proceso de Producción Ind e Inp San") Entonces;
+                                            Datos[L].Materias.Vet[L].Proceso_de_Produccion_Ind_e_Inp_San = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Constitucional") Entonces;
+                                            Datos[L].Materias.Vet[L].Derecho_Constitucional = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Epidemiología General") Entonces;
+                                            Datos[L].Materias.Vet[L].Epidemiologia_General = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina de Suinos y Aves") Entonces;
+                                            Datos[L].Materias.Vet[L].Medicina_de_Suinos_y_Aves = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Pasantías Profesionales") Entonces;
+                                            Datos[L].Materias.Vet[L].Pasantias_Profesionales = nota;
+                                        Fin_Si
+
+                                    Caso(carrera = "Derecho");
+                                        // Primer Año
+                                        Si (Materias[J].Nombre = "Derecho Civil I") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Civil_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Constitucional") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Constitucional = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Pensamiento Bolivariano") Entonces;
+                                            Datos[L].Materias.Der[L].Pensamiento_Bolivariano = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Introducción al Derecho") Entonces;
+                                            Datos[L].Materias.Der[L].Introduccion_Derecho = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Economía Política") Entonces;
+                                            Datos[L].Materias.Der[L].Economia_Politica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Métodos de Investigación Jurídica") Entonces;
+                                            Datos[L].Materias.Der[L].Metodos_de_Investigacion_Juridica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Popular") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Popular = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Romano") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Romano = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Lógica Jurídica") Entonces;
+                                            Datos[L].Materias.Der[L].Logica_Juridica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Deontología Jurídica") Entonces;
+                                            Datos[L].Materias.Der[L].Deontologia_Juridica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Arte y Cultura") Entonces;
+                                            Datos[L].Materias.Der[L].Arte_y_Cultura = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Deporte") Entonces;
+                                            Datos[L].Materias.Der[L].Deporte = nota;
+                                        Fin_Si
+
+                                        // Segundo Año
+                                        Si (Materias[J].Nombre = "Derecho Agrario") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Agrario = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Ambiental") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Ambiental = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Medicina Legal") Entonces;
+                                            Datos[L].Materias.Der[L].Medicina_Legal = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Criminología") Entonces;
+                                            Datos[L].Materias.Der[L].Criminologia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Penal I") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Penal_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Filosofía del Derecho") Entonces;
+                                            Datos[L].Materias.Der[L].Filosofia_del_Derecho = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Registral") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Registral = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Socio Jurídico Comunitario I") Entonces;
+                                            Datos[L].Materias.Der[L].Proyecto_Socio_Juridico_Comunitario_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Civil II") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Civil_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Prácticas Jurídicas I") Entonces;
+                                            Datos[L].Materias.Der[L].Practicas_Juridicas_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva I") Entonces;
+                                            Datos[L].Materias.Der[L].Electiva_I = nota;
+                                        Fin_Si
+
+                                        // Tercer Año
+                                        Si (Materias[J].Nombre = "Derecho Administrativo") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Administrativo = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Penal II") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Penal_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Laboral") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Laboral = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Familiar") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Familiar = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Obligaciones I") Entonces;
+                                            Datos[L].Materias.Der[L].Obligaciones_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Internacional Público") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Internacional_Publico = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Teoría General del Proceso") Entonces;
+                                            Datos[L].Materias.Der[L].Teoria_General_del_Proceso = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Tributario") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Tributario = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Socio Jurídico II") Entonces;
+                                            Datos[L].Materias.Der[L].Proyecto_Socio_Juridico_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Prácticas Jurídicas II") Entonces;
+                                            Datos[L].Materias.Der[L].Practicas_Juridicas_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva II") Entonces;
+                                            Datos[L].Materias.Der[L].Electiva_II = nota;
+                                        Fin_Si
+
+                                        // Cuarto Año
+                                        Si (Materias[J].Nombre = "Derecho Contencioso Administrativo") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Contencioso_Administrativo = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Procesal Penal I") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Procesal_Penal_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Procesal Laboral I") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Procesal_Laboral_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho en Sucesiones") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_en_Sucesiones = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Obligaciones II") Entonces;
+                                            Datos[L].Materias.Der[L].Obligaciones_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Internacional Privado") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Internacional_Privado = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Procesal Civil I") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Procesal_Civil_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Probatorio I") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Probatorio_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Socio Jurídico III") Entonces;
+                                            Datos[L].Materias.Der[L].Proyecto_Socio_Juridico_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Prácticas Jurídicas III") Entonces;
+                                            Datos[L].Materias.Der[L].Practicas_Juridicas_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva III") Entonces;
+                                            Datos[L].Materias.Der[L].Electiva_III = nota;
+                                        Fin_Si
+
+                                        // Quinto Año
+                                        Si (Materias[J].Nombre = "Derecho Procesal Penal II") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Procesal_Penal_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Obligaciones III") Entonces;
+                                            Datos[L].Materias.Der[L].Obligaciones_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Procesal Civil II") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Procesal_Civil_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Mercantil") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Mercantil = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Derecho Probatorio II") Entonces;
+                                            Datos[L].Materias.Der[L].Derecho_Probatorio_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Contratos y Garantías") Entonces;
+                                            Datos[L].Materias.Der[L].Contratos_y_Garantias = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Socio Jurídico IV") Entonces;
+                                            Datos[L].Materias.Der[L].Proyecto_Socio_Juridico_IV = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Prácticas Jurídicas IV") Entonces;
+                                            Datos[L].Materias.Der[L].Practicas_Juridicas_IV = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Electiva IV") Entonces;
+                                            Datos[L].Materias.Der[L].Electiva_IV = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Pasantías") Entonces;
+                                            Datos[L].Materias.Der[L].Pasantias = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Seminario Tesina de Grado") Entonces;
+                                            Datos[L].Materias.Der[L].Seminario_Tesina_de_Grado = nota;
+                                        Fin_Si
+
+                                    Caso(carrera = "Comunicación");
+                                        // Primer Semestre
+                                        Si (Materias[J].Nombre = "Morfosintaxis del Castellano") Entonces;
+                                            Datos[L].Materias.Soc[L].Morfosintaxis_Castellano = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Comunicación Social en el Periodismo") Entonces;
+                                            Datos[L].Materias.Soc[L].Comunicacion_Social_en_el_Periodismo = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Psicología de la Comunicación") Entonces;
+                                            Datos[L].Materias.Soc[L].Psicologia_Comunicacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Estadística") Entonces;
+                                            Datos[L].Materias.Soc[L].Estadistica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Deporte, Arte y Cultura") Entonces;
+                                            Datos[L].Materias.Soc[L].Deporte_Arte_y_Cultura = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Pensamiento Bolivariano") Entonces;
+                                            Datos[L].Materias.Soc[L].Pensamiento_Bolivariano = nota;
+                                        Fin_Si
+
+                                        // Segundo Semestre
+                                        Si (Materias[J].Nombre = "Periodismo Informativo") Entonces;
+                                            Datos[L].Materias.Soc[L].Periodismo_Informativo = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Comunicación Social en la Radio") Entonces;
+                                            Datos[L].Materias.Soc[L].Comunicacion_Social_en_la_Radio = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Comunicación Social en Cine") Entonces;
+                                            Datos[L].Materias.Soc[L].Comunicacion_Social_en_Cine = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Comunicación Social en la Televisión") Entonces;
+                                            Datos[L].Materias.Soc[L].Comunicacion_Social_en_la_Television = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Comunicación Social en la Fotografía") Entonces;
+                                            Datos[L].Materias.Soc[L].Comunicacion_Social_en_la_Fotografia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Taller de Redacción y Estilo I") Entonces;
+                                            Datos[L].Materias.Soc[L].Taller_de_Redaccion_y_Estilo_I = nota;
+                                        Fin_Si
+
+                                        // Tercer Semestre
+                                        Si (Materias[J].Nombre = "Proyecto Comunitario Socio Comunicacional I") Entonces;
+                                            Datos[L].Materias.Soc[L].Proyecto_Comunitario_Socio_Comunicacional_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Taller de Redacción y Estilo II") Entonces;
+                                            Datos[L].Materias.Soc[L].Taller_de_Redaccion_y_Estilo_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Comunicación Gráfica") Entonces;
+                                            Datos[L].Materias.Soc[L].Comunicacion_Grafica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Periodismo Radiofónico") Entonces;
+                                            Datos[L].Materias.Soc[L].Periodismo_Radiofonico = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Lenguaje y Planificación Cinematográfica") Entonces;
+                                            Datos[L].Materias.Soc[L].Lenguaje_y_Planificacion_Cinematografica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Periodismo Televisivo") Entonces;
+                                            Datos[L].Materias.Soc[L].Periodismo_Televisivo = nota;
+                                        Fin_Si
+
+                                        // Cuarto Semestre
+                                        Si (Materias[J].Nombre = "Estética de la Imagen y el Sonido") Entonces;
+                                            Datos[L].Materias.Soc[L].Estetica_de_la_Imagen_y_el_Sonido = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Teoría de la Comunicación") Entonces;
+                                            Datos[L].Materias.Soc[L].Teoria_de_la_Comunicacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Opinión Pública") Entonces;
+                                            Datos[L].Materias.Soc[L].Opinion_Publica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Formación Sociopolítica") Entonces;
+                                            Datos[L].Materias.Soc[L].Formacion_Sociopolitica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Comunitario Socio Comunicacional II") Entonces;
+                                            Datos[L].Materias.Soc[L].Proyecto_Comunitario_Socio_Comunicacional_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Ética y Legislación de Medios y del Periodismo") Entonces;
+                                            Datos[L].Materias.Soc[L].Etica_y_Legislacion_de_Medios_y_del_Periodismo = nota;
+                                        Fin_Si
+
+                                        // Quinto Semestre
+                                        Si (Materias[J].Nombre = "Proyecto Comunitario Sociocomunicacional III") Entonces;
+                                            Datos[L].Materias.Soc[L].Proyecto_Comunitario_Sociocomunicacional_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Sociología de la Comunicación") Entonces;
+                                            Datos[L].Materias.Soc[L].Sociologia_de_la_Comunicacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Investigación de la Comunicación") Entonces;
+                                            Datos[L].Materias.Soc[L].Investigacion_de_la_Comunicacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Periodismo Interpretativo") Entonces;
+                                            Datos[L].Materias.Soc[L].Periodismo_Interpretativo = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Periodismo de Opinión") Entonces;
+                                            Datos[L].Materias.Soc[L].Periodismo_de_Opinion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Economía Política") Entonces;
+                                            Datos[L].Materias.Soc[L].Economia_Politica = nota;
+                                        Fin_Si
+
+                                        // Sexto Semestre
+                                        Si (Materias[J].Nombre = "Producción de Televisión") Entonces;
+                                            Datos[L].Materias.Soc[L].Produccion_de_Television = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Producción de Radio") Entonces;
+                                            Datos[L].Materias.Soc[L].Produccion_de_Radio = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Producción de Cine") Entonces;
+                                            Datos[L].Materias.Soc[L].Produccion_de_Cine = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Seminario de Formación Socio Crítica I") Entonces;
+                                            Datos[L].Materias.Soc[L].Seminario_de_Formacion_Socio_Critica_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Comunitario Sociocomunicacional IV") Entonces;
+                                            Datos[L].Materias.Soc[L].Proyecto_Comunitario_Sociocomunicacional_IV = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Semiología") Entonces;
+                                            Datos[L].Materias.Soc[L].Semiologia = nota;
+                                        Fin_Si
+
+                                        // Séptimo Semestre
+                                        Si (Materias[J].Nombre = "Fotoperiodismo") Entonces;
+                                            Datos[L].Materias.Soc[L].Fotoperiodismo = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Seminario de Formación Socio Crítica II") Entonces;
+                                            Datos[L].Materias.Soc[L].Seminario_de_Formacion_Socio_Critica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Periodismo Científico") Entonces;
+                                            Datos[L].Materias.Soc[L].Periodismo_Cientifico = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Montajes Audiovisuales") Entonces;
+                                            Datos[L].Materias.Soc[L].Montajes_Audiovisuales = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Relaciones Públicas") Entonces;
+                                            Datos[L].Materias.Soc[L].Relaciones_Publicas = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Comunitario Sociocomunicacional V") Entonces;
+                                            Datos[L].Materias.Soc[L].Proyecto_Comunitario_Sociocomunicacional_V = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Tecnología de la Información") Entonces;
+                                            Datos[L].Materias.Soc[L].Tecnologia_de_la_Informacion = nota;
+                                        Fin_Si
+
+                                        // Octavo Semestre
+                                        Si (Materias[J].Nombre = "Locución Básica") Entonces;
+                                            Datos[L].Materias.Soc[L].Locucion_Basica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Publicidad") Entonces;
+                                            Datos[L].Materias.Soc[L].Publicidad = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Idioma Moderno") Entonces;
+                                            Datos[L].Materias.Soc[L].Idioma_Moderno = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Seminario de Formación Socio Crítica III") Entonces;
+                                            Datos[L].Materias.Soc[L].Seminario_de_Formacion_Socio_Critica_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Periodismo Económico") Entonces;
+                                            Datos[L].Materias.Soc[L].Periodismo_Economico = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Comunitario Sociocomunicacional VI") Entonces;
+                                            Datos[L].Materias.Soc[L].Proyecto_Comunitario_Sociocomunicacional_VI = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Orientación Profesional I") Entonces;
+                                            Datos[L].Materias.Soc[L].Orientacion_Profesional_I = nota;
+                                        Fin_Si
+
+                                        // Noveno Semestre
+                                        Si (Materias[J].Nombre = "Gerencia Corporativa") Entonces;
+                                            Datos[L].Materias.Soc[L].Gerencia_Corporativa = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Mercadeo") Entonces;
+                                            Datos[L].Materias.Soc[L].Mercadeo = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Locución Profesional") Entonces;
+                                            Datos[L].Materias.Soc[L].Locucion_Profesional = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Proyecto Comunitario Sociocomunicacional VII") Entonces;
+                                            Datos[L].Materias.Soc[L].Proyecto_Comunitario_Sociocomunicacional_VII = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Periodismo Político") Entonces;
+                                            Datos[L].Materias.Soc[L].Periodismo_Politico = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Orientación Profesional") Entonces;
+                                            Datos[L].Materias.Soc[L].Orientacion_Profesional = nota;
+                                        Fin_Si
+
+                                        // Décimo Semestre
+                                        Si (Materias[J].Nombre = "Vinculación Profesional en el Campo Sociocomunicacional") Entonces;
+                                            Datos[L].Materias.Soc[L].Vinculacion_Profesional_en_el_Campo_Sociocomunicacional = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Trabajo Especial de Grado") Entonces;
+                                            Datos[L].Materias.Soc[L].Trabajo_Especial_de_Grado = nota;
+                                        Fin_Si
+
+                                    Caso(carrera = "Contaduría");
+                                        // Primer Semestre
+                                        Si (Materias[J].Nombre = "Matemática I") Entonces;
+                                            Datos[L].Materias.Con[L].Matematica_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Lenguaje y Comunicación") Entonces;
+                                            Datos[L].Materias.Con[L].Lenguaje_y_Comunicacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Legislación Mercantil") Entonces;
+                                            Datos[L].Materias.Con[L].Legislacion_Mercantil = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Contabilidad I") Entonces;
+                                            Datos[L].Materias.Con[L].Contabilidad_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Sociopolítica Productiva") Entonces;
+                                            Datos[L].Materias.Con[L].Sociopolitica_Productiva = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Metodología de la Investigación") Entonces;
+                                            Datos[L].Materias.Con[L].Metodologia_de_la_Investigacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Deporte y Recreación") Entonces;
+                                            Datos[L].Materias.Con[L].Deporte_y_Recreacion = nota;
+                                        Fin_Si
+
+                                        // Segundo Semestre
+                                        Si (Materias[J].Nombre = "Matemática II") Entonces;
+                                            Datos[L].Materias.Con[L].Matematica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Contabilidad II") Entonces;
+                                            Datos[L].Materias.Con[L].Contabilidad_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Inglés") Entonces;
+                                            Datos[L].Materias.Con[L].Ingles = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Legislación Laboral") Entonces;
+                                            Datos[L].Materias.Con[L].Legislacion_Laboral = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Estadística I") Entonces;
+                                            Datos[L].Materias.Con[L].Estadistica_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Introducción a la Adminstración") Entonces;
+                                            Datos[L].Materias.Con[L].Introduccion_a_la_Administracion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Arte y Cultura") Entonces;
+                                            Datos[L].Materias.Con[L].Arte_y_Cultura = nota;
+                                        Fin_Si
+
+                                        // Tercer Semestre
+                                        Si (Materias[J].Nombre = "Informática") Entonces;
+                                            Datos[L].Materias.Con[L].Informatica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Calculo Financiero") Entonces;
+                                            Datos[L].Materias.Con[L].Calculo_Financiero = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Introducción a la Teoría Económica") Entonces;
+                                            Datos[L].Materias.Con[L].Introduccion_a_la_Teoria_Economica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Estadística II") Entonces;
+                                            Datos[L].Materias.Con[L].Estadistica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Contabilidad III") Entonces;
+                                            Datos[L].Materias.Con[L].Contabilidad_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Procesos Administrativos") Entonces;
+                                            Datos[L].Materias.Con[L].Procesos_Administrativos = nota;
+                                        Fin_Si
+
+                                        // Cuarto Semestre
+                                        Si (Materias[J].Nombre = "Contabilidad de Costos I") Entonces;
+                                            Datos[L].Materias.Con[L].Contabilidad_de_Costos_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Práctica Profesional I") Entonces;
+                                            Datos[L].Materias.Con[L].Practica_Profesional_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Auditoría I") Entonces;
+                                            Datos[L].Materias.Con[L].Auditoria_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Contabilidad Especializada I") Entonces;
+                                            Datos[L].Materias.Con[L].Contabilidad_Especializada_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Finanzas y Gestión Presupuestaria") Entonces;
+                                            Datos[L].Materias.Con[L].Finanzas_y_Gestion_Presupuestaria = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Administración Pública") Entonces;
+                                            Datos[L].Materias.Con[L].Administracion_Publica = nota;
+                                        Fin_Si
+
+                                        // Quinto Semestre
+                                        Si (Materias[J].Nombre = "Sistemas de Información Gerencial") Entonces;
+                                            Datos[L].Materias.Con[L].Sistemas_de_Informacion_Gerencial = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Investigación de Operaciones") Entonces;
+                                            Datos[L].Materias.Con[L].Investigacion_de_Operaciones = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Auditoría II") Entonces;
+                                            Datos[L].Materias.Con[L].Auditoria_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Contabilidad Especializada II") Entonces;
+                                            Datos[L].Materias.Con[L].Contabilidad_Especializada_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Contabilidad de Costos II") Entonces;
+                                            Datos[L].Materias.Con[L].Contabilidad_de_Costos_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Gerencia de Proyectos") Entonces;
+                                            Datos[L].Materias.Con[L].Gerencia_de_Proyectos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Habilidades Gerenciales") Entonces;
+                                            Datos[L].Materias.Con[L].Habilidades_Gerenciales = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Contabilidad Ambiental") Entonces;
+                                            Datos[L].Materias.Con[L].Contabilidad_Ambiental = nota;
+                                        Fin_Si
+
+                                        // Sexto Semestre
+                                        Si (Materias[J].Nombre = "Sistemas Tributarios I") Entonces;
+                                            Datos[L].Materias.Con[L].Sistemas_Tributarios_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Mercadeo") Entonces;
+                                            Datos[L].Materias.Con[L].Mercadeo = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Presupuesto") Entonces;
+                                            Datos[L].Materias.Con[L].Presupuesto = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Contabilidad de Costos III") Entonces;
+                                            Datos[L].Materias.Con[L].Contabilidad_de_Costos_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Seminario I") Entonces;
+                                            Datos[L].Materias.Con[L].Seminario_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Práctica Profesional II") Entonces;
+                                            Datos[L].Materias.Con[L].Practica_Profesional_II = nota;
+                                        Fin_Si
+
+                                        // Séptimo Semestre
+                                        Si (Materias[J].Nombre = "Sistemas Tributarios II") Entonces;
+                                            Datos[L].Materias.Con[L].Sistemas_Tributarios_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Gestión de Talento Humano") Entonces;
+                                            Datos[L].Materias.Con[L].Gestion_de_Talento_Humano = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Auditoría III") Entonces;
+                                            Datos[L].Materias.Con[L].Auditoria_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Análisis de Estados Financieros") Entonces;
+                                            Datos[L].Materias.Con[L].Analisis_de_Estados_Financieros = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Ética y Desarrollo Profesional") Entonces;
+                                            Datos[L].Materias.Con[L].Etica_y_Desarrollo_Profesional = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Seminario II") Entonces;
+                                            Datos[L].Materias.Con[L].Seminario_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Tributación Aduanera") Entonces;
+                                            Datos[L].Materias.Con[L].Tributacion_Aduanera = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Técnicas de Negociación y Conciliación") Entonces;
+                                            Datos[L].Materias.Con[L].Tecnicas_de_Negociacion_y_Conciliacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Avalúos") Entonces;
+                                            Datos[L].Materias.Con[L].Avaluos = nota;
+                                        Fin_Si
+
+                                        // Octavo Semestre
+                                        Si (Materias[J].Nombre = "Instituciones Financieras") Entonces;
+                                            Datos[L].Materias.Con[L].Instituciones_Financieras = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Tesina de Grado") Entonces;
+                                            Datos[L].Materias.Con[L].Tesina_de_Grado = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Pasantías") Entonces;
+                                            Datos[L].Materias.Con[L].Pasantias = nota;
+                                        Fin_Si
+
+                                    Otro_Caso
+                                        // Primer Semestre
+                                        Si (Materias[J].Nombre = "Introducción a la Economía") Entonces;
+                                            Datos[L].Materias.Eco[L].Introduccion_Economia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Análisis Matemático I") Entonces;
+                                            Datos[L].Materias.Eco[L].Analisis_Matematico_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Lenguaje y Comunicación") Entonces;
+                                            Datos[L].Materias.Eco[L].Lenguaje_y_Comunicacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Fundamentos del Derecho") Entonces;
+                                            Datos[L].Materias.Eco[L].Fundamentos_del_Derecho = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Metodología de la Investigación") Entonces;
+                                            Datos[L].Materias.Eco[L].Metodologia_de_la_Investigacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Deporte y Recreación") Entonces;
+                                            Datos[L].Materias.Eco[L].Deporte_y_Recreacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Ingles Instrumental") Entonces;
+                                            Datos[L].Materias.Eco[L].Ingles_Instrumental = nota;
+                                        Fin_Si
+
+                                        // Segundo Semestre
+                                        Si (Materias[J].Nombre = "Economía I") Entonces;
+                                            Datos[L].Materias.Eco[L].Economia_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Sociología") Entonces;
+                                            Datos[L].Materias.Eco[L].Sociologia = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Análisis Matemático II") Entonces;
+                                            Datos[L].Materias.Eco[L].Analisis_Matematico_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Contabilidad General I") Entonces;
+                                            Datos[L].Materias.Eco[L].Contabilidad_General_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Informática") Entonces;
+                                            Datos[L].Materias.Eco[L].Informatica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Arte y Cultura") Entonces;
+                                            Datos[L].Materias.Eco[L].Arte_y_Cultura = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Estadística I") Entonces;
+                                            Datos[L].Materias.Eco[L].Estadistica_I = nota;
+                                        Fin_Si
+
+                                        // Tercer Semestre
+                                        Si (Materias[J].Nombre = "Economía II") Entonces;
+                                            Datos[L].Materias.Eco[L].Economia_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Sociopolítica Productiva") Entonces;
+                                            Datos[L].Materias.Eco[L].Sociopolitica_Productiva = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Estadística II") Entonces;
+                                            Datos[L].Materias.Eco[L].Estadistica_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Contabilidad General II") Entonces;
+                                            Datos[L].Materias.Eco[L].Contabilidad_General_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Introducción a la Administración") Entonces;
+                                            Datos[L].Materias.Eco[L].Introduccion_a_la_Administracion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Historia y Doctrina Económica") Entonces;
+                                            Datos[L].Materias.Eco[L].Historia_y_Doctrina_Economica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Informática Aplicada") Entonces;
+                                            Datos[L].Materias.Eco[L].Informatica_Aplicada = nota;
+                                        Fin_Si
+
+                                        // Cuarto Semestre
+                                        Si (Materias[J].Nombre = "Macroeconomía I") Entonces;
+                                            Datos[L].Materias.Eco[L].Macroeconomia_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Análisis Financiero") Entonces;
+                                            Datos[L].Materias.Eco[L].Analisis_Financiero = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Matemática III") Entonces;
+                                            Datos[L].Materias.Eco[L].Matematica_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Microeconomía I") Entonces;
+                                            Datos[L].Materias.Eco[L].Microeconomia_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Teoría e Investigación de Mercado") Entonces;
+                                            Datos[L].Materias.Eco[L].Teoria_e_Investigacion_de_Mercado = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Seminario I") Entonces;
+                                            Datos[L].Materias.Eco[L].Seminario_I = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Estadística Aplicada") Entonces;
+                                            Datos[L].Materias.Eco[L].Estadistica_Aplicada = nota;
+                                        Fin_Si
+
+                                        // Quinto Semestre
+                                        Si (Materias[J].Nombre = "Macroeconomía II") Entonces;
+                                            Datos[L].Materias.Eco[L].Macroeconomia_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Microeconomía II") Entonces;
+                                            Datos[L].Materias.Eco[L].Microeconomia_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Matemática Financiera") Entonces;
+                                            Datos[L].Materias.Eco[L].Matematica_Financiera = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Contabilidad Social") Entonces;
+                                            Datos[L].Materias.Eco[L].Contabilidad_Social = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Desarrollo Económico") Entonces;
+                                            Datos[L].Materias.Eco[L].Desarrollo_Economico = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Análisis Económico Regional") Entonces;
+                                            Datos[L].Materias.Eco[L].Analisis_Economico_Regional = nota;
+                                        Fin_Si
+
+                                        // Sexto Semestre
+                                        Si (Materias[J].Nombre = "Economía Política") Entonces;
+                                            Datos[L].Materias.Eco[L].Economia_Politica = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Formulación y Evaluación de Proyectos") Entonces;
+                                            Datos[L].Materias.Eco[L].Formulacion_y_Evaluacion_de_Proyectos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Investigación de Operaciones") Entonces;
+                                            Datos[L].Materias.Eco[L].Investigacion_de_Operaciones = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Teoría y Política Fiscal") Entonces;
+                                            Datos[L].Materias.Eco[L].Teoria_y_Politica_Fiscal = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Seminario II") Entonces;
+                                            Datos[L].Materias.Eco[L].Seminario_II = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Economía y Política Agrícola") Entonces;
+                                            Datos[L].Materias.Eco[L].Economia_y_Politica_Agricola = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Economía Industrial") Entonces;
+                                            Datos[L].Materias.Eco[L].Economia_Industrial = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Economía Minera y Petrolera") Entonces;
+                                            Datos[L].Materias.Eco[L].Economia_Minera_y_Petrolera = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Economía Ambiente y Sociedad") Entonces;
+                                            Datos[L].Materias.Eco[L].Economia_Ambiente_y_Sociedad = nota;
+                                        Fin_Si
+
+                                        // Séptimo Semestre
+                                        Si (Materias[J].Nombre = "Seminario III") Entonces;
+                                            Datos[L].Materias.Eco[L].Seminario_III = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Econometría") Entonces;
+                                            Datos[L].Materias.Eco[L].Econometria = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Teoría y Política Monetaria") Entonces;
+                                            Datos[L].Materias.Eco[L].Teoria_y_Politica_Monetaria = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Planificación") Entonces;
+                                            Datos[L].Materias.Eco[L].Planificacion = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Economía Internacional") Entonces;
+                                            Datos[L].Materias.Eco[L].Economia_Internacional = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Formulación y Evaluación de Proyectos Agrícolas") Entonces;
+                                            Datos[L].Materias.Eco[L].Formulacion_y_Evaluacion_de_Proyectos_Agricolas = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Gestión Comunitaria") Entonces;
+                                            Datos[L].Materias.Eco[L].Gestion_Comunitaria = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Contabilidad de Costos") Entonces;
+                                            Datos[L].Materias.Eco[L].Contabilidad_de_Costos = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Presupuesto") Entonces;
+                                            Datos[L].Materias.Eco[L].Presupuesto = nota;
+                                        Fin_Si
+
+                                        // Octavo Semestre
+                                        Si (Materias[J].Nombre = "Trabajo Final de Grado") Entonces;
+                                            Datos[L].Materias.Eco[L].Trabajo_Final_de_Grado = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Finanzas Internacionales") Entonces;
+                                            Datos[L].Materias.Eco[L].Finanzas_Internacionales = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Estructura Económica Mundial") Entonces;
+                                            Datos[L].Materias.Eco[L].Estructura_Economica_Mundial = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Gestión de Riesgo") Entonces;
+                                            Datos[L].Materias.Eco[L].Gestion_de_Riesgo = nota;
+                                        Fin_Si
+                                        Si (Materias[J].Nombre = "Economía y Crisis") Entonces;
+                                            Datos[L].Materias.Eco[L].Economia_y_Crisis = nota;
+                                        Fin_Si
+                                Fin_Caso
+                            Fin_Para
+                        Fin_Si
+                    Fin_Si
+                Fin_Para
+            Fin_Si
+        Fin_Para
+    Fin_Si
+Fin_Procedimiento

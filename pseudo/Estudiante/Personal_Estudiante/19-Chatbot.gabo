@@ -1,0 +1,34 @@
+Procedimiento Chatbot(E/S: Minimo, Maximo: Entero, Bot[I].Preguntas, Bot[I].Respuesta1, Bot[I].Respuesta2, Bot[I].Respuesta3, Bot[I].Respuesta4: Cadena);
+Inicio
+    Var I, ID, num: Entero;
+    Var R: Booleano;
+    Mostrar << "¡Bienvenido al apartado de preguntas frecuentes con DABOT!";
+    Repetir
+        Mostrar << "Seleccione una pregunta:";
+        Para (I = 1 Hasta I = 10) Hacer;
+            Mostrar << I, Bot[I].Preguntas;
+        Fin_Para
+        Mostrar << "Seleccione el número de la pregunta que desee saber";
+        Leer >> ID;
+        Mientras (ID < 1 or ID > 10) Hacer;
+            Mostrar << "Es invalido, tiene que estar en el rango de las preguntas que existen.";
+            Leer >> ID;
+        Fin_Mientras
+        Minimo = 1;
+        Maximo = 4;
+        num = Aleatorio(Minimo, Maximo);
+        En_Caso (num > 0) Sea;
+            Caso(num = 1);
+                Mostrar << Bot[ID].Respuesta1;
+            Caso(num = 2);
+                Mostrar << Bot[ID].Respuesta2;
+            Caso(num = 3);
+                Mostrar << Bot[ID].Respuesta3;
+            Otro_Caso
+                Mostrar << Bot[ID].Respuesta4;
+        Fin_Caso
+        Mostrar << "¿Desea hacer otra pregunta? 1: Sí, 0: No";
+        Leer >> R;
+        Hasta(R = 0);
+    Fin_Repetir
+Fin_Procedimiento

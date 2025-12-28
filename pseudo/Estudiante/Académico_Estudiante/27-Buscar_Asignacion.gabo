@@ -1,0 +1,32 @@
+Procedimiento Buscar_Asignacion(E/S: cod, Materias[J].Codigo, Clase[K].Codigo, Asig[Q].Estado, Asig[Q].Nombre_Profesor, Asig[Q].Codigo_Materia, Asig[Q].Titulo, Asig[Q].Descripcion, Asig[Q].Fecha_Publicacion, Asig[Q].Fecha_Entrega: Cadena, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Asig[Q].ID_Asignacion: Entero);
+Inicio
+    Var J, K, F, Q: Entero;
+    w = 1: Booleano;
+    Si (cod = Materias[J].Codigo) Entonces;
+        Para (K = 1 Hasta K = 500) Hacer;
+            Si (Clase[K].Codigo = cod) Entonces;
+                Para (F = 1 Hasta F = 500) Hacer;
+                    Si (Lista[F].ID_Lista = Clase[K].ID_Clase) and (w = 1) Entonces;
+                        Para (L = F Hasta L = F+49) Hacer;
+                            Si (Datos[pos_usuario].CI = Lista[L].Cedula) Entonces;
+                                Para (Q = 1 Hasta Q = 500) Hacer;
+                                    Si (Clase[K].ID_Clase = Asig[Q].ID_Asignacion) Entonces;
+                                        Si (Asig[Q].Estado = "Cerrada") or (Asig[Q].Estado = "Publicada") Entonces;
+                                            Mostrar << Asig[Q].Nombre_Profesor;
+                                            Mostrar << Asig[Q].Codigo_Materia;
+                                            Mostrar << Asig[Q].Titulo;
+                                            Mostrar << Asig[Q].Descripcion;
+                                            Mostrar << Asig[Q].Fecha_Publicacion;
+                                            Mostrar << Asig[Q].Fecha_Entrega;
+                                        Fin_Si
+                                    Fin_Si
+                                Fin_Para
+                                w = 0;
+                            Fin_Si
+                        Fin_Para
+                    Fin_Si
+                Fin_Para
+            Fin_Si
+        Fin_Para
+    Fin_Si
+Fin_Procedimiento

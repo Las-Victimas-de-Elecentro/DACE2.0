@@ -1,0 +1,48 @@
+Procedimiento Clases_Magistrales_Docente(E/S: Materias[I].Codigo, Materias[I].Nombre, Prof[pos].Nombre, Mag[magis].Fecha, Mag[magis].Aula, Mag[magis].Nombre_Materia, Mag[magis].Codigo_Materia, Mag[magis].Nombre_Profesor: Cadena, Prof[pos].Cedula, Mag[magis].CI_Profesor, Mag[magis].ID_Clase, magis: Entero, Mag[magis].Horas, Mag[magis].Precio: Real);
+Inicio
+    Var cod: Cadena;
+    Var I: Entero;
+    Var R, R2: Booleano;
+    Repetir
+        Mostrar << "¡Bienvenido a la sección de Clases Magistrales!";
+        Mostrar << "¿Desea aperturar una clase magistral? 1: Sí, 0: No";
+        Leer >> R;
+        Si (R = 1) Entonces;
+            Mostrar << "Ingrese el código de la materia que impartirá en dicha clase magistral";
+            Leer >> cod;
+            Para (I = 1 Hasta I = 500) Hacer;
+                Si (cod = Materias[I].Codigo) Entonces;
+                    Mostrar << "Materia encontrada.";
+                    Mostrar << "¿Qué fecha escogerá para la clase magistral? (DD/MM/YYYY)";
+                    Leer >> Mag[magis].Fecha;
+                    Mostrar << "¿Cuántas horas durará?";
+                    Leer >> Mag[magis].Horas;
+                    Mientras (Mag[magis].Horas < 1) Hacer;
+                        Mostrar << "Es invalido, intente nuevamente";
+                        Leer >> Mag[magis].Horas;
+                    Fin_Mientras
+                    Mostrar << "Elija el aula en que se realizará la clase";
+                    Leer >> Mag[magis].Aula;
+                    Mostrar << "Ingrese el precio que costará dicha clase";
+                    Leer >> Mag[magis].Precio;
+                    Mientras (Mag[magis].Precio < 1) Hacer;
+                        Mostrar << "Es invalido, solo se permiten positivos";
+                        Leer >> Mag[magis].Precio;
+                    Fin_Mientras
+                    Mag[magis].Autorizacion = 0;
+                    Mag[magis].Nombre_Materia = Materias[I].Nombre;
+                    Mag[magis].Codigo_Materia = Materias[I].Codigo;
+                    Mag[magis].Nombre_Profesor = Prof[pos].Nombre;
+                    Mag[magis].CI_Profesor = Prof[pos].Cedula;
+                    Mag[magis].ID_Clase = Mag[magis].ID_Clase + 1;
+                    magis = magis + 1;
+                Fin_Si
+            Fin_Para
+        Sino
+            Mostrar << "Vuelva pronto.";
+        Fin_Si
+        Mostrar << "¿Desea volver al menú principal? 1: Sí, 0: No";
+        Leer >> R2;
+        Hasta(R2 = 1);
+    Fin_Repetir
+Fin_Procedimiento

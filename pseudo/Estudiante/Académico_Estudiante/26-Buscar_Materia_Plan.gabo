@@ -1,0 +1,32 @@
+Procedimiento Buscar_Materia_Plan(E/S: cod, Materias[J].Codigo, Clase[K].Codigo, Plan[Q].Nombre_Profesor, Plan[Q].Nombre_Materia, Plan[Q].Tema, Plan[Q].Fecha, Plan[Q].Estrategia: Cadena, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Plan[Q].ID_Plan, Plan[Q].Ponderacion: Entero, Plan[Q].Firmado: Booleano);
+Inicio
+    Var K, F, Q: Entero;
+    Si (cod = Materias[J].Codigo) Entonces;
+        Para (K = 1 Hasta K = 500) Hacer;
+            Si (Clase[K].Codigo = cod) Entonces;
+                Para (F = 1 Hasta F = 500) Hacer;
+                    Si (Lista[F].ID_Lista = Clase[K].ID_Clase) Entonces;
+                        Para (L = F Hasta L = F+49) Hacer;
+                            Si (Datos[pos_usuario].CI = Lista[L].Cedula) Entonces;
+                                Para (Q = 1 Hasta Q = 500) Hacer;
+                                    Si (Clase[K].ID_Clase = Plan[Q].ID_Plan) Entonces;
+                                        Si (Plan[Q].Firmado = 1) Entonces;
+                                            Mostrar << Plan[Q].Nombre_Profesor;
+                                            Mostrar << Plan[Q].Nombre_Materia;
+                                            Mostrar << Plan[Q].Tema;
+                                            Mostrar << Plan[Q].Fecha;
+                                            Mostrar << Plan[Q].Estrategia;
+                                            Mostrar << Plan[Q].Ponderacion;
+                                        Sino
+                                            Mostrar << "No está firmado aún, así que no es válido";
+                                        Fin_Si
+                                    Fin_Si
+                                Fin_Para
+                            Fin_Si
+                        Fin_Para
+                    Fin_Si
+                Fin_Para
+            Fin_Si
+        Fin_Para
+    Fin_Si
+Fin_Procedimiento

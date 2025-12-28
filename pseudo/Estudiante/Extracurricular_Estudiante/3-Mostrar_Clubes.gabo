@@ -1,0 +1,17 @@
+Procedimiento Mostrar_Clubes (E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero, Club[I].Activo: Booleano);
+Inicio
+    Mostrar << "Clubs Disponibles"; 
+    Para (I = 1 hasta I = 500);
+        Si (Club[I].Activo = 1) Entonces;
+            Mostrar << I;
+            Mostrar << Club[I].Nombre;
+            Mostrar << Club[I].Descripcion;
+            Mostrar << "Miembros inscritos";
+            Mostrar << Club[I].Miembros_Inscritos;
+            Mostrar << "Capacidad maxima";
+            Mostrar << Club[I].Capacidad_Maxima;
+            Mostrar << "Horarios disponibles";
+            Mostrar << Club[I].Horarios_Disponibles;
+        Fin_Si
+    Fin_Para
+Fin_Procedimiento

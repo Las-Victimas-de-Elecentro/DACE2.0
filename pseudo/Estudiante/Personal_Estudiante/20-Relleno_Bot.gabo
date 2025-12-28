@@ -1,0 +1,62 @@
+Procedimiento Relleno_Bot(E/S: Bot[I].Preguntas, Bot[I].Respuesta1, Bot[I].Respuesta2, Bot[I].Respuesta3, Bot[I].Respuesta4: Cadena);
+Inicio
+    Bot[1].Preguntas = "¿Cuáles son los requisitos para ingresar a la UNERG?";
+    Bot[1].Respuesta1 = "En circunstancias normales se solicita el título de Bachiller con timbre fiscal, notas certificadas, copia de cédula y cumplir con el proceso de registro OPSU, si no se encuentra asignado por OPSU, entonces presente su motivo para cambiarse de universidad y obtener su cupo en las oficinas de la Universidad";
+    Bot[1].Respuesta2 = "La persona debe estar asignada por la OPSU para poder inscribirse en la universidad, se necesitan las notas certificadas, el título de bachiller con timbre fiscal y la copia de la cédula, en caso de que no esté asignada por la OPSU, debe presentar una exposición de motivo para cambiarse de universidad y obtener su cupo en las oficinas de la universidad";
+    Bot[1].Respuesta3 = "Si desea inscribirse en la Universidad Nacional Experimental de los Llanos Centrales Rómulo Gallegos debe cumplir con una serie de requisitos, los cuales son: 1. Tener el título de bachiller con timbre fiscal, 2. La copia de la cédula, 3. Estar asignado por la Oficina de Planificación del Sector Universitario. Si no cumple esta última condición deberá ir a las oficinas de la universidad con una exposición de motivo.";
+    Bot[1].Respuesta4 = "Para efectuar su inscripción, deberá traer a la sede más cercana con estos requisitos: Tener el título de Bachiller, copia de la cédula y deberá traer la planilla que certifique que está asignado por la OPSU para esta universidad. Si no cumple con esto último deberá acceder mediante una exposición de motivo.";
+
+    Bot[2].Preguntas = "¿Qué carreras se pueden estudiar en la UNERG?";
+    Bot[2].Respuesta1 = "Algunas de estas pueden ser, en el Área de Ciencias de la Salud, tienes Medicina, Medicina Veterinaria, Odontología, Enfermería, Histocitotecnología. Por otra parte en el Área de Ciencias Económicas y Sociales tienes Comunicación Social, Economía, Administración Social, entre otros. Así como también, está el Área de Educación. En la parte de Ingeniería tienes Ingeniería en Informática, Ingeniería Civil, entre otros. Sin olvidarnos de la importante facultad de Derecho que también está incluida en la UNERG";
+    Bot[2].Respuesta2 = "Esto se divide por áreas como puede ser el Área de Ingeniería donde está Ingeniería Agronómica de Producción Animal y Producción Vegetal, Ingeniería en Hidrocarburos Mención Gas y Mención Petróleo, entre otros. También se encuentra el Área de Educación. Además, está la facultad de derecho, así como también el Área de Ciencias de la Salud con Medicina y Medicina Veterinaria, Odontología, etc. Tienen también el Área de Ciencias Económicas y Sociales con Contaduría Pública, Fisioterapia, Economía y demás.";
+    Bot[2].Respuesta3 = "Entre las carreras tenemos la Facultad de Derecho para los abogados, así como también el Área de Ciencias Económicas y Sociales donde están Administración, Nutrición y Diétetica, Economía, entre otros. Tenemos el Área de Ingeniería donde se encuentra Ingeniería Industrial, Ingeniería en Electrónica y algunas más. Por otro lado, tenemos el Área de Ciencias de la Salud donde tiene Enfermería, Medicina Veterinaria, y algunas más, por último se tiene el Área de Educación.";
+    Bot[2].Respuesta4 = "Primeramente se tiene el Área de Educación, luego el Área de Ciencias Económicas y Sociales donde se encuentra Contaduría, Comunicación Social, Economía y otras más. Existe el Área de Ciencias de la Salud donde dan Histocitotecnología, Enfermería y demás. También se tiene la facultad de Derecho, así como también la Facultad de Ingeniería donde está Ingeniería en Informática, Ingeniería Industrial, entre otros.";
+
+    Bot[3].Preguntas = "¿Dónde está ubicada la sede principal?";
+    Bot[3].Respuesta1 = "Se encuentra ubicada en la capital del Estado Guárico, en San Juan de los Morros en la Vía El Castrero.";
+    Bot[3].Respuesta2 = "Esta misma se encuentra en San Juan de los Morros Vía el Castero en el Estado Guárico";
+    Bot[3].Respuesta3 = "La que se tiene como sede principal se localiza en San Juan de los Morros, Estado Guárico en la Vía el Castrero";
+    Bot[3].Respuesta4 = "Ubicación: Estado Guárico, San Juan de los Morros Vía el Castrero";
+
+    Bot[4].Preguntas = "¿Cuál es el régimen académico?";
+    Bot[4].Respuesta1 = "Se tienen los programas anuales como Medicina, Derecho, etc. Así como los programas semestrales como las Ingenierías como puede ser la Ingeniería en Informática, Ingeniería Civil, entre otros.";
+    Bot[4].Respuesta2 = "En la universidad existen los programas semestrales como pueden ser Administración, Comunicación Social y demás. Por otro lado, los programas anuales pueden ser Veterinaria, Educación, etc.";
+    Bot[4].Respuesta3 = "Existen los programas anuales, como Enfermería, Odontología y más. Así como también se tienen los semestrales como Ingeniería Agronómica Producción Animal y Producción Vegetal e Ingeniería Industrial. ";
+    Bot[4].Respuesta4 = "Primeramente tiene los programas semestrales como Economía, Ingeniería en Hidrocarburos Mención Gas y Mención Petróleo y varias más en cuestión. Además, también existen los programas anuales como Histocitotecnología y demás.";
+
+    Bot[5].Preguntas = "¿Qué servicios ofrece la universidad?";
+    Bot[5].Respuesta1 = "La universidad ofrece servicios como pueden ser programas comunitarios y proyectos de servicio social desde el inicio de la carrera en curso, actividades culturales y varias cosas más.";
+    Bot[5].Respuesta2 = "Ofrece servicios como pueden ser tener medios propios, como la prensa universitaria y una emisora radial llamada 'Radio Unerg 92.7 FM' y demás.";
+    Bot[5].Respuesta3 = "Se tienen correo institucional y oficinas sectoriales para cada área académica para atacar los posibles problemas ocasionados para su posible resolución y más.";
+    Bot[5].Respuesta4 = "Se tiene transporte público para que los estudiantes puedan ir a la universidad de manera gratuita desde el centro, así como también un comedor en donde pueden degustar un buen almuerzo, así como esas cosas, hay varias más.";
+
+    Bot[6].Preguntas = "¿Se ofrecen posgrados?";
+    Bot[6].Respuesta1 = "Sí, en áreas de Ciencias de la Salud, así como en Educación y Administración";
+    Bot[6].Respuesta2 = "Sí, en áreas como Educación, de Ciencias de la Salud y Administración";
+    Bot[6].Respuesta3 = "Sí, en áreas como Administración, Ciencias de la Salud y Educación";
+    Bot[6].Respuesta4 = "Sí, en áreas de Ciencias de la Salud y entre otros, así como en Administración y Educación";
+
+    Bot[7].Preguntas = "¿Qué es el servicio comunitario?";
+    Bot[7].Respuesta1 = "Es un requisito obligatorio de proyectos sociales vinculados a la carrera";
+    Bot[7].Respuesta2 = "Todos los estudiantes deben cumplir servicio comunitario en proyectos sociales";
+    Bot[7].Respuesta3 = "Es una actividad académica obligatoria que conecta al estudiante con la comunidad";
+    Bot[7].Respuesta4 = "El servicio comunitario consiste en proyectos sociales que forman parte del plan de estudios";
+
+    Bot[8].Preguntas = "¿Dónde se tramitan constancias y récord académico?";
+    Bot[8].Respuesta1 = "En la Oficina de Control de Estudios de cada área académica";
+    Bot[8].Respuesta2 = "Se gestionan directamente en la Dirección de Control de Estudios correspondiente";
+    Bot[8].Respuesta3 = "El trámite se realiza en la oficina de Control de Estudios de la facultad";
+    Bot[8].Respuesta4 = "Las constancias y récords se solicitan en la unidad administrativa de Control de Estudios";
+
+    Bot[9].Preguntas = "¿Qué hacer en caso de pérdida de documentos universitarios?";
+    Bot[9].Respuesta1 = "Notificar a la oficina correspondiente y solicitar reposición con pago de arancel";
+    Bot[9].Respuesta2 = "Informar la pérdida en Control de Estudios y pedir duplicado con los requisitos";
+    Bot[9].Respuesta3 = "Acudir a la unidad administrativa y gestionar la reposición del documento extraviado";
+    Bot[9].Respuesta4 = "Reportar la pérdida y tramitar la emisión de un nuevo documento oficial";
+
+    Bot[10].Preguntas = "¿La UNERG tiene convenios internacionales?";
+    Bot[10].Respuesta1 = "Sí, con universidades latinoamericanas y europeas";
+    Bot[10].Respuesta2 = "La UNERG mantiene convenios internacionales para intercambio académico.";
+    Bot[10].Respuesta3 = "Existen acuerdos con instituciones extranjeras en Latinoamérica y Europa";
+    Bot[10].Respuesta4 = "La universidad participa en convenios internacionales de cooperación académica";
+Fin_Procedimiento

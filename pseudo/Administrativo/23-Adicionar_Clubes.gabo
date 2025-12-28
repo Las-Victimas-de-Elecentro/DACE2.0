@@ -1,0 +1,109 @@
+Procedimiento Adicionar_Clubes(E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles: Cadena, club, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero, Club[I].Activo: Booleano);
+Inicio
+    Var opc, I, ID: Entero;
+    Mostrar << "¡Bienvenido a la sección de adición de Clubes!";
+    Repetir
+        Mostrar << "¿Qué desea hacer?";
+        Mostrar << "1: Ver los clubes actuales";
+        Mostrar << "2: Añadir clubes nuevos";
+        Mostrar << "3: Modificar algún club";
+        Mostrar << "4: Eliminar algún club";
+        Leer >> opc;
+        Mientras (opc < 1 or opc > 4) Hacer;
+            Mostrar << "Es invalido, solo entre el rango de 1-4";
+            Leer >> opc;
+        Fin_Mientras
+        En_Caso (opc > 0) Sea;
+            Caso(opc = 1);
+                Para (I = 1 Hasta I = 500) Hacer;
+                    Si (Club[I].Activo = 1) Entonces;
+                        Mostrar << Club[I].Nombre;
+                        Mostrar << Club[I].Descripcion;
+                        Mostrar << "Miembros Inscritos:";
+                        Mostrar << Club[I].Miembros_Inscritos;
+                        Mostrar << "Capacidad Máxima:";
+                        Mostrar << Club[I].Capacidad_Maxima;
+                        Mostrar << "Horarios Disponibles:";
+                        Mostrar << Club[I].Horarios_Disponibles;.
+                    Fin_Si
+                Fin_Para
+            Caso(opc = 2);
+                Mostrar << "Ingrese el nombre del nuevo club";
+                Leer >> Club[club].Nombre;
+                Mostrar << "Ingrese su descripción";
+                Leer >> Club[club].Descripcion;
+                Mostrar << "Ingrese la capacidad máxima de miembros del club";
+                Leer >> Club[club].Capacidad_Maxima;
+                Mientras (Club[club].Capacidad_Maxima < 10 or Club[club].Capacidad_Maxima > 100) Hacer;
+                    Mostrar << "Es invalido";
+                    Leer >> Club[club].Capacidad_Maxima;
+                Fin_Mientras
+                Mostrar << "Ingrese los horarios disponibles (Formato: Lunes: 7:30am-9:00am, Martes: 12:00pm-1:30pm)";
+                Leer >> Club[club].Horarios_Disponibles;
+                Club[club].Activo = 1;
+                club = club + 1;
+                Mostrar << "Club añadido correctamente.";
+            Caso(opc = 3);
+                Para (I = 1 Hasta I = 500) Hacer;
+                    Si (Club[I].Activo = 1) Entonces;
+                        Mostrar << Club[I].Nombre;
+                        Mostrar << Club[I].Descripcion;
+                        Mostrar << "Miembros Inscritos:";
+                        Mostrar << Club[I].Miembros_Inscritos;
+                        Mostrar << "Capacidad Máxima:";
+                        Mostrar << Club[I].Capacidad_Maxima;
+                        Mostrar << "Horarios Disponibles:";
+                        Mostrar << Club[I].Horarios_Disponibles;
+                    Fin_Si
+                Fin_Para
+                Mostrar << "Ingrese el ID del club que desea modificar su información según el número mostrado";
+                Leer >> ID;
+                Mientras (ID < 1 or ID > 500) Hacer;
+                    Mostrar << "Es invalido, no está en el rango";
+                    Leer >> ID;
+                Fin_Mientras
+                Mostrar << "Ingrese el nombre del club modificado";
+                Leer >> Club[ID].Nombre;
+                Mostrar << "Ingrese la descripción modificada del club";
+                Leer >> Club[ID].Descripcion;
+                Mostrar << "Ingrese la capacidad máxima modificada del club";
+                Leer >> Club[ID].Capacidad_Maxima;
+                Mientras (Club[ID].Capacidad_Maxima < Club[ID].Miembros_Inscritos) or (Club[ID].Capacidad_Maxima < 1 or Club[ID].Capacidad_Maxima > 100) Hacer;
+                    Mostrar << "Es invalido, intente nuevamente";
+                    Leer >> Club[ID].Capacidad_Maxima;
+                Fin_Mientras
+                Mostrar << "Ingrese los nuevos horarios disponibles (Formato: Lunes: 7:30am-9:00am, Martes: 12:00pm-1:30pm)";
+                Leer >> Club[ID].Horarios_Disponibles;
+            Otro_Caso
+                Para (I = 1 Hasta I = 500) Hacer;
+                    Si (Club[I].Activo = 1) Entonces;
+                        Mostrar << Club[I].Nombre;
+                        Mostrar << Club[I].Descripcion;
+                        Mostrar << "Miembros Inscritos:";
+                        Mostrar << Club[I].Miembros_Inscritos;
+                        Mostrar << "Capacidad Máxima:";
+                        Mostrar << Club[I].Capacidad_Maxima;
+                        Mostrar << "Horarios Disponibles:";
+                        Mostrar << Club[I].Horarios_Disponibles;
+                    Fin_Si
+                Fin_Para
+                Mostrar << "Ingrese el ID del club que desea borrar su información según el número mostrado";
+                Leer >> ID;
+                Mientras (ID < 1 or ID > 500) Hacer;
+                    Mostrar << "Es invalido, no está en el rango";
+                    Leer >> ID;
+                Fin_Mientras
+                Para (I = ID Hasta I = 500) Hacer;
+                    Club[I].Nombre = Club[I + 1].Nombre;
+                    Club[I].Descripcion = Club[I + 1].Descripcion;
+                    Club[I].Miembros_Inscritos = Club[I + 1].Miembros_Inscritos;
+                    Club[I].Capacidad_Maxima = Club[I + 1].Capacidad_Maxima;
+                    Club[I].Horarios_Disponibles = Club[I + 1].Horarios_Disponibles;
+                Fin_Para
+                Mostrar << "Club borrado correctamente.";
+        Fin_Caso
+        Mostrar << "¿Desea volver al menú principal? 1: Sí, 0: No";
+        Leer >> R;
+        Hasta(R = 1)
+    Fin_Repetir
+Fin_Procedimiento

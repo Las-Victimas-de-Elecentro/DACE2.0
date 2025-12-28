@@ -1,0 +1,311 @@
+Procedimiento Hidrocarburos(E/S: Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, Lista[L].Nombre, Datos[I].Nombre, Base.Lista[i].Estado, Base.Lista[i].ID_Bloque, Base.Lista[i].Dia, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Aula: Cadena, Clase[K].Seccion, Lista[L].Cedula, Datos[I].CI, Clase[K].Cant_Estudiantes, L, Datos[pos_usuario].UC_Aprobadas: Entero, Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_I, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_I, Datos[pos_usuario].Materias.Hid[pos_usuario].Dibujo_Tecnico, Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_I, Datos[pos_usuario].Materias.Hid[pos_usuario].Ingles_Tecnico, Datos[pos_usuario].Materias.Hid[pos_usuario].Quimica_Inorganica, Datos[pos_usuario].Materias.Hid[pos_usuario].Orientacion_Ing, Datos[pos_usuario].Materias.Hid[pos_usuario].Arte_Cultura, Datos[pos_usuario].Materias.Hid[pos_usuario].Informatica, Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_II, Datos[pos_usuario].Materias.Hid[pos_usuario].Fisica_I, Datos[pos_usuario].Materias.Hid[pos_usuario].Quimica_Organica, Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_II, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_II, Datos[pos_usuario].Materias.Hid[pos_usuario].Deporte, Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_III, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_III, Datos[pos_usuario].Materias.Hid[pos_usuario].Fisica_II, Datos[pos_usuario].Materias.Hid[pos_usuario].Geologia_General, Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_III, Datos[pos_usuario].Materias.Hid[pos_usuario].Lab_Fisica, Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_IV, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_IV, Datos[pos_usuario].Materias.Hid[pos_usuario].Mecanica_Rocas_Fluidos, Datos[pos_usuario].Materias.Hid[pos_usuario].Probabilidades_Estadisticas, Datos[pos_usuario].Materias.Hid[pos_usuario].Termodinamica, Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Fisica_Yac, Datos[pos_usuario].Materias.Hid[pos_usuario].Sistema_Comprension_Gas, Datos[pos_usuario].Materias.Hid[pos_usuario].Legislacion_Petrolera, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_V, Datos[pos_usuario].Materias.Hid[pos_usuario].Perforacion_Pozos, Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Energetica_Yac, Datos[pos_usuario].Materias.Hid[pos_usuario].Transporte_Distribucion, Datos[pos_usuario].Materias.Hid[pos_usuario].Geologia_Estructural, Datos[pos_usuario].Materias.Hid[pos_usuario].Comercio_Internacional, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_VI, Datos[pos_usuario].Materias.Hid[pos_usuario].Seguridad_Industrial, Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Dinamica_Yac, Datos[pos_usuario].Materias.Hid[pos_usuario].Perfilaje_Pozos, Datos[pos_usuario].Materias.Hid[pos_usuario].Completacion_Pozos, Datos[pos_usuario].Materias.Hid[pos_usuario].Recuperacion_Secundaria, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_VII, Datos[pos_usuario].Materias.Hid[pos_usuario].Geologia_Produccion, Datos[pos_usuario].Materias.Hid[pos_usuario].Ing_Produccion_I, Datos[pos_usuario].Materias.Hid[pos_usuario].Proteccion_Riesgos, Datos[pos_usuario].Materias.Hid[pos_usuario].Auditoria_Ambiental, Datos[pos_usuario].Materias.Hid[pos_usuario].Transferencia_Calor, Datos[pos_usuario].Materias.Hid[pos_usuario].Procesos_Petroquimicos, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_VIII, Datos[pos_usuario].Materias.Hid[pos_usuario].Electiva_Calidad, Datos[pos_usuario].Materias.Hid[pos_usuario].Ing_Produccion_II, Datos[pos_usuario].Materias.Hid[pos_usuario].Simulacion_Yacimientos, Datos[pos_usuario].Materias.Hid[pos_usuario].Procesos_Refinacion, Datos[pos_usuario].Materias.Hid[pos_usuario].TEG, Datos[pos_usuario].Materias.Hid[pos_usuario].Recuperacion_Mejorada: Real);
+Inicio
+    Mostrar << "Aquí los bloques disponibles para que pueda organizar sus materias:";
+    Para (i = 1 Hasta i = 48) Hacer;
+        Si (Base.Lista[i].Estado = "Libre") Entonces;
+            Mostrar << "ID: ", Base.Lista[i].ID_Bloque, " | ", Base.Lista[i].Dia, " ", Base.Lista[i].Hora_Inicio, "-", Base.Lista[i].Hora_Fin, " | Aula: ", Base.Lista[i].Aula;
+        Fin_Si
+    Fin_Para
+    //Primer Semestre
+    Si (Datos[pos_usuario].UC_Aprobadas = 0) Entonces;
+        Mostrar << "Formación Socio Política I";
+        Mostrar << "Proyecto Comunitario Socio Energético I";
+        Mostrar << "Dibujo Técnico y Descriptiva";
+        Mostrar << "Matemática I";
+        Mostrar << "Ingles Técnico";
+        Mostrar << "Química Inorgánica";
+        Mostrar << "Orientación a la Ingeniería del Petróleo y Gas Natural"; 
+        Mostrar << "Arte y Cultura";
+        Para (I = 1 Hasta I = 8) Hacer;
+            Mostrar << Inscripcion;
+        Fin_Para
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_I < 5.5) Entonces;
+        Mostrar << "Formación Socio Política I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_I < 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Dibujo_Tecnico < 5.5) Entonces;
+        Mostrar << "Dibujo Técnico y Descriptiva";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_I < 5.5) Entonces;
+        Mostrar << "Matemática I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Ingles_Tecnico < 5.5) Entonces;
+        Mostrar << "Inglés Técnico";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Quimica_Inorganica < 5.5) Entonces;
+        Mostrar << "Química Inorgánica";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Orientacion_Ing < 5.5) Entonces;
+        Mostrar << "Orientación a la Ingeniería del Petróleo y Gas Natural";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Arte_Cultura < 5.5) Entonces;
+        Mostrar << "Arte y Cultura";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Segundo Semestre
+    Si (Datos[pos_usuario].UC_Aprobadas >= 10) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Informatica < 5.5) Entonces;
+        Mostrar << "Informática";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_I > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_II < 5.5) Entonces;
+        Mostrar << "Matemática II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_I > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Fisica_I < 5.5) Entonces;
+        Mostrar << "Física I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Quimica_Inorganica > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Quimica_Organica > 5.5) Entonces;
+        Mostrar << "Química Orgánica";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_I > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_II < 5.5) Entonces;
+        Mostrar << "Formación Socio Política II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_I > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_II < 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas >= 20) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Deporte < 5.5) Entonces;
+        Mostrar << "Deporte";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Tercer Semestre
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_II > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_III < 5.5) Entonces;
+        Mostrar << "Formación Socio Política III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_II > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_III < 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Fisica_I > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Fisica_II < 5.5) Entonces;
+        Mostrar << "Física II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Quimica_Inorganica > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Geologia_General < 5.5) Entonces;
+        Mostrar << "Geología General";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_II > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_III < 5.5) Entonces;
+        Mostrar << "Matemática III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Fisica_I > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Lab_Fisica < 5.5) Entonces;
+        Mostrar << "Laboratorio de Física";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Cuarto Semestre
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_III > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_IV < 5.5) Entonces;
+        Mostrar << "Formación Socio Política IV";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_III > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_IV < 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético IV";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Fisica_II > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Mecanica_Rocas_Fluidos < 5.5) Entonces;
+        Mostrar << "Mecánica de las Rocas y de los Fluidos";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_III > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Probabilidades_Estadisticas < 5.5) Entonces;
+        Mostrar << "Probabilidades y Estadísticas";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_III > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Fisica_II > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Termodinamica < 5.5) Entonces;
+        Mostrar << "Termodinámica General y Aplicada";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Geologia_General > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Fisica_Yac < 5.5) Entonces;
+        Mostrar << "Caracterización Física de los Yacimientos";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Quinto Semestre
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Termodinamica > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Mecanica_Rocas_Fluidos > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Sistema_Comprension_Gas < 5.5) Entonces;
+        Mostrar << "Sistema de Compresión de Gas";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_IV > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Legislacion_Petrolera < 5.5) Entonces;
+        Mostrar << "Formación Socio Política Legislación Petrolera";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_IV > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_V < 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético V";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Fisica_Yac > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Perforacion_Pozos < 5.5) Entonces;
+        Mostrar << "Perforación de Pozos";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Fisica_Yac > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Energetica_Yac < 5.5) Entonces;
+        Mostrar << "Caracterización Energética de los Yacimientos";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Mecanica_Rocas_Fluidos > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Transporte_Distribucion < 5.5) Entonces;
+        Mostrar << "Transporte y Distribución de Hidrocarburos";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Mecanica_Rocas_Fluidos > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Geologia_Estructural < 5.5) Entonces;
+        Mostrar << "Geología Estructural";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Sexto Semestre
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Legislacion_Petrolera > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Comercio_Internacional < 5.5) Entonces;
+        Mostrar << "Formación Socio Política Integración con el Comercio Internacional";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_V > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_VI < 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético VI";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas >= 100) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Seguridad_Industrial < 5.5) Entonces;
+        Mostrar << "Seguridad Industrial";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Energetica_Yac > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Dinamica_Yac < 5.5) Entonces;
+        Mostrar << "Caracterización Dinámica de los Yacimientos";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Perforacion_Pozos > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Perfilaje_Pozos < 5.5) Entonces;
+        Mostrar << "Perfilaje de Pozos";
+        Mostrar << Inscripcion;
+    Fin_Si
+    
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Perforacion_Pozos > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Completacion_Pozos < 5.5) Entonces;
+        Mostrar << "Completación de Pozos";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Energetica_Yac > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Recuperacion_Secundaria < 5.5) Entonces;
+        Mostrar << "Recuperación Secundaria de los Yacimientos";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Séptimo Semestre
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_VI > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_VII < 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético VII";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Geologia_Estructural > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Dinamica_Yac > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Geologia_Produccion < 5.5) Entonces;
+        Mostrar << "Geología de Producción";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Dinamica_Yac > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Ing_Produccion_I < 5.5) Entonces;
+        Mostrar << "Ingeniería de Producción I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Seguridad_Industrial > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Proteccion_Riesgos < 5.5) Entonces;
+        Mostrar << "Protección Integral de Riesgos";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas >= 120) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Electiva_Corrosion < 5.5) Entonces;
+        Mostrar << "Electiva Profesional (Corrosión e Integridad Mecánica)";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas >= 120) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Auditoria_Ambiental < 5.5) Entonces;
+        Mostrar << "Evaluación y Auditoría Ambiental";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Termodinamica > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Transferencia_Calor < 5.5) Entonces;
+        Mostrar << "Transferencia de Calor";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Octavo Semestre
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Transporte_Distribucion > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Procesos_Petroquimicos < 5.5) Entonces;
+        Mostrar << "Procesos Petroquímicos";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_VII > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_VIII < 5.5) Entonces;
+        Mostrar << "Proyecto Comunitario Socio Energético VIII";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas >= 140) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Electiva_Calidad < 5.5) Entonces;
+        Mostrar << "Electiva Profesional (Gestión y Control de Calidad)";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Ing_Produccion_I > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Ing_Produccion_II < 5.5) Entonces;
+        Mostrar << "Ingeniería de Producción II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_III > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Simulacion_Yacimientos < 5.5) Entonces;
+        Mostrar << "Simulación Numérica de Yacimientos";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Transporte_Distribucion > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Procesos_Refinacion < 5.5) Entonces;
+        Mostrar << "Procesos de Refinación";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Noveno Semestre
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_VIII > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].TEG < 5.5) Entonces;
+        Mostrar << "Trabajo Especial de Grado";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Hid[pos_usuario].Recuperacion_Secundaria > 5.5) and (Datos[pos_usuario].Materias.Hid[pos_usuario].Recuperacion_Mejorada < 5.5) Entonces;
+        Mostrar << "Recuperación Mejorada";
+        Mostrar << Inscripcion;
+    Fin_Si
+Fin_Procedimiento

@@ -1,0 +1,101 @@
+Procedimiento Planes_Evaluacion(E/S: Plan[I].ID_Plan, Plan[I].Ponderacion: Entero, Plan[I].Nombre_Profesor, Plan[I].Codigo_Materia, Plan[I].Nombre_Materia, Plan[I].Fecha, Plan[I].Tema, Plan[I].Estrategia: Cadena, Plan[I].Firmado: Booleano);
+Inicio
+    Var opc, ID, CI, I: Entero;
+    Var R: Booleano;
+    Repetir
+        Mostrar << "¡Bienvenido a la sección de Planes de Evaluación!";
+        Mostrar << "¿Qué desea hacer?";
+        Mostrar << "1: Ver todos los planes de evaluación";
+        Mostrar << "2: Buscar un plan de evaluación por código de materia";
+        Mostrar << "3: Buscar un plan de evaluación por cédula del profesor";
+        Leer >> opc;
+        Mientras (opc < 1 or opc > 3) Hacer;
+            Mostrar << "Es invalido";
+            Leer >> opc;
+        Fin_Mientras
+        En_Caso (opc > 0) Sea;
+            Caso(opc = 1);
+                Para (I = 1 Hasta I = 500) Hacer;
+                    Mostrar << Plan[I].ID_Plan;
+                    Mostrar << Plan[I].Nombre_Profesor;
+                    Mostrar << Plan[I].Codigo_Materia;
+                    Mostrar << Plan[I].Nombre_Materia;
+                    Mostrar << Plan[I].Fecha;
+                    Mostrar << Plan[I].Tema;
+                    Mostrar << Plan[I].Estrategia;
+                    Mostrar << Plan[I].Ponderacion;
+                    Mostrar << Plan[I].Firmado;
+                Fin_Para
+                Mostrar << "¿Desea firmar algún plan de evaluación? 1: Sí, 0: No";
+                Leer >> R;
+                Si (R = 1) Entonces;
+                    Mostrar << "Ingrese el ID de la evaluación que desea firmar";
+                    Leer >> ID;
+                    Mientras (ID < 1) or (Plan[ID].Firmado = 1) Hacer;
+                        Mostrar << "Es invalido, solo positivos, y no puede firmar algo que ya está firmado";
+                        Leer >> ID;
+                    Fin_Mientras
+                    Plan[ID].Firmado = 1;
+                Sino
+                    Mostrar << "Vuelva pronto.";
+                Fin_Si
+            Caso(opc = 2);
+                Mostrar << "Ingrese el código de la materia que desea buscar su plan de evaluación";
+                Leer >> cod;
+                Para (I = 1 Hasta I = 500) Hacer;
+                    Si (cod = Plan[I].Codigo_Materia) Entonces;
+                        Mostrar << Plan[I].ID_Plan;
+                        Mostrar << Plan[I].Nombre_Profesor;
+                        Mostrar << Plan[I].Codigo_Materia;
+                        Mostrar << Plan[I].Nombre_Materia;
+                        Mostrar << Plan[I].Fecha;
+                        Mostrar << Plan[I].Tema;
+                        Mostrar << Plan[I].Estrategia;
+                        Mostrar << Plan[I].Ponderacion;
+                        Mostrar << Plan[I].Firmado;
+                        Si (Plan[I].Firmado = 0) Entonces;
+                            Mostrar << "¿Desea firmarlo? 1: Sí, 0: No";
+                            Leer >> R;
+                            Si (R = 1) Entonces;
+                                Mostrar << "Firmado correctamente.";
+                                Plan[I].Firmado = 1;
+                            Fin_Si
+                        Fin_Si
+                        Mostrar << "Siguiente.";
+                    Fin_Si
+                Fin_Para
+            Otro_Caso
+                Mostrar << "Ingrese la cédula del profesor que desea buscar para ver los planes de evaluación";
+                Leer >> CI;
+                Mientras (CI < 1000000 or CI > 50000000) Hacer;
+                    Mostrar << "Es invalido, solo positivos o cédulas existentes";
+                    Leer >> CI;
+                Fin_Mientras
+                Para (I = 1 Hasta I = 500) Hacer;
+                    Si (CI = Plan[I].CI_Profesor) Entonces;
+                        Mostrar << Plan[I].ID_Plan;
+                        Mostrar << Plan[I].Nombre_Profesor;
+                        Mostrar << Plan[I].Codigo_Materia;
+                        Mostrar << Plan[I].Nombre_Materia;
+                        Mostrar << Plan[I].Fecha;
+                        Mostrar << Plan[I].Tema;
+                        Mostrar << Plan[I].Estrategia;
+                        Mostrar << Plan[I].Ponderacion;
+                        Mostrar << Plan[I].Firmado;
+                        Si (Plan[I].Firmado = 0) Entonces;
+                            Mostrar << "¿Desea firmarlo? 1: Sí, 0: No";
+                            Leer >> R;
+                            Si (R = 1) Entonces;
+                                Mostrar << "Firmado correctamente.";
+                                Plan[I].Firmado = 1;
+                            Fin_Si
+                        Fin_Si
+                        Mostrar << "Siguiente.";
+                    Fin_Si
+                Fin_Para
+        Fin_Caso
+        Mostrar << "¿Desea volver al menú principal? 1: Sí, 0: No";
+        Leer >> R2;
+        Hasta(R2 = 1);
+    Fin_Repetir
+Fin_Procedimiento
