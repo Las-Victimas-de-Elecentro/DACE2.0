@@ -1,10 +1,15 @@
-#include <iostream>
-#include "Cabeceras/Modulos.h"
-#include "Cabeceras/Registros.h"
+#include "Header.h"
+#include <windows.h>
 using namespace std;
 int main()
 {
-    int N;
+    //Caracteres Especiales
+    SetConsoleOutputCP(65001);
+    SetConsoleCP(65001);
+
+    string Rol;
+    bool Oscuro = 0;
+    int N, Opc_F;
     Usuario User[500];
     Nacimiento Fecha[500];
 
@@ -35,7 +40,7 @@ int main()
         switch (Opc)
         {
             case 1:
-                Sesion (User, N);
+                Sesion (User, N, Opc_F, Rol, Oscuro);
             case 2:
                 Registro (User);
                 break;

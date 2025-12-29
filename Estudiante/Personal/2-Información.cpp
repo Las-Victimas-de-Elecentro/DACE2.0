@@ -1,12 +1,11 @@
-#include <iostream>
-#include <string>
-#include "../Cabeceras/Modulos.h"
-#include "../Cabeceras/Registros.h"
+#include "../../Main/Header.h"
 using namespace std;
 
-void Perfil (Usuario (&User)[500], int &N)
+void Info_Est_Personal (Usuario (&User)[500], int &N)
 {
-    cout << "Perfil" << endl;
+    Limpiar();
+
+    cout << "Información personal" << endl;
     cout << "Nombre: " << User[N].Nombre << endl;
     cout << "Apellido: " << User[N].Apellido << endl;
     cout << "Cedula: " << User[N].Cedula << endl;

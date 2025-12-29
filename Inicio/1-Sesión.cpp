@@ -1,14 +1,13 @@
-#include <iostream>
-#include <string>
-#include "../Cabeceras/Modulos.h"
-#include "../Cabeceras/Registros.h"
+#include "../Main/Header.h"
 using namespace std;
 
-void Sesion (Usuario (&User)[500], int &N)
+void Sesion (Usuario (&User)[500], int &N, int Opc_F, string Rol, bool &Oscuro)
 {
     string Correo, Password;
     int I;
     bool User_Valido;
+
+    Limpiar();
 
     cout << "Ingrese su Correo: ";
     cin >> Correo;
@@ -39,5 +38,5 @@ void Sesion (Usuario (&User)[500], int &N)
 
     } while (User_Valido == false);
 
-    Inicio (User, N);
+    Menu_Est_Personal(User, N, Opc_F, Rol, Oscuro);
 }
