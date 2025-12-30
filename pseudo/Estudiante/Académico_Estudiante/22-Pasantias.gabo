@@ -1,4 +1,428 @@
-Procedimiento Pasantias();
+Registro: Pasantias;  //Llave: Pas[P];
+    Nombre:             Cadena;
+    Edad, Cedula:       Entero;
+    Password:           Cadena;
+    Carrera:            Cadena;
+    Semestre:           Entero;
+    Year:               Entero;
+    Empresa:            Cadena;
+    Estado_Solicitud:   Entero;
+    Horas:              Real;
+Fin_Registro
+
+Procedimiento Pasantias (E/S: Pas[P].Nombre, Pas[P].Password, Pas[P].Carrera, Datos[pos_usuario].Carrera, Datos[pos_usuario].Nombre, Pas[I].Empresa: Cadena, Pas[P].Edad, Pas[P].Cedula, Pas[P].Semestre, Pas[P].Year, Datos[pos_usuario].Edad, Datos[pos_usuario].Semestre, Datos[pos_usuario].Year, Datos[pos_usuario].CI, Datos[pos_usuario].Materias_Aprobadas, Datos[pos_usuario].UC_Aprobadas, P, Pas[I].Estado_Solicitud: Entero, Pas[P].Horas: Real, Datos[pos_usuario].Servicio_Comunitario, K, Datos[pos_usuario].Pasantias: Booleano);
 Inicio
-    // ...
+    Var R = 3, Cedula, opc: Entero;
+    Var Password1, Password2, Nombre, Justificacion: Cadena;
+    Var Horas: Real;
+    Var R3, R4: Booleano;
+    Si (Datos[pos_usuario].Pasantias = 1) Entonces;
+        Mostrar << "Ya hiciste las pasantías, volviendo al menú principal...";
+    Sino
+        Mostrar << "Ha Ingresado al sistema de pasantías, por favor, siga las instrucciones a continuación";
+        Mostrar << "Ingrese su cedula";
+        Leer >> Cedula;
+        Mientras (Cedula != Datos[pos_usuario].CI) Hacer;
+            Mostrar << "Los datos de su cedula no se encuentran en nuestra base de datos, por favor intentelo nuevamente";
+        Fin_Mientras
+        En_Caso (Datos[pos_usuario].Carrera != " ") Sea;
+            Caso (Datos[pos_usuario].Carrera = "Informática") and (Datos[pos_usuario].UC_Aprobadas >= 110);
+                R4 = 1;
+            Caso (Datos[pos_usuario].Carrera = "Civil") and (Datos[pos_usuario].UC_Aprobadas >= 130);
+                R4 = 1;
+            Caso (Datos[pos_usuario].Carrera = "Hidrocarburos") and (Datos[pos_usuario].UC_Aprobadas >= 140);
+                R4 = 1;
+            Caso (Datos[pos_usuario].Carrera = "Medicina") and (Datos[pos_usuario].UC_Aprobadas >= 70);
+                R4 = 1;
+            Caso (Datos[pos_usuario].Carrera = "Odontología") and (Datos[pos_usuario].UC_Aprobadas >= 58);
+                R4 = 1;
+            Caso (Datos[pos_usuario].Carrera = "Veterinaria") and (Datos[pos_usuario].UC_Aprobadas >= 80);
+                R4 = 1;
+            Caso (Datos[pos_usuario].Carrera = "Derecho") and (Datos[pos_usuario].UC_Aprobadas >= 95);
+                R4 = 1;
+            Caso (Datos[pos_usuario].Carrera = "Comunicación") and (Datos[pos_usuario].UC_Aprobadas >= 115);
+                R4 = 1;
+            Caso (Datos[pos_usuario].Carrera = "Contaduría") and (Datos[pos_usuario].UC_Aprobadas >= 180);
+                R4 = 1;
+            Caso (Datos[pos_usuario].Carrera = "Economía") and (Datos[pos_usuario].UC_Aprobadas >= 160);
+                R4 = 1;
+            Otro_Caso   
+                R4 = 0;
+                Mostrar << "Usted no posee el minimo de Unidades de credito necesarias para poder realizar pasantías";
+        Fin_Caso
+        Repetir
+            Si (Cedula != Pas[I].Cedula) Entonces;
+                R1 = 0;
+            Sino
+                J = I;
+            Fin_Si
+            Si (R4 = 1) Entonces;
+                Si (R1 = 0) Entonces;
+                    Mostrar << "Usted no posee una cuenta en la base de datos de las pasantías"; 
+                    Mostrar << "Desea crear una cuenta, 1: Si, 0: No";
+                    Leer >> R2;
+                    Si (R2 = 1) Entonces;
+                        Si (Pas[I].Cedula = 0) Entonces;
+                            Pas[I].Nombre =                          Datos[pos_usuario].Nombre;
+                            Pas[I].Edad =                            Datos[pos_usuario].Edad;
+                            Pas[I].Cedula =                          Datos[pos_usuario].CI;
+                            Pas[I].Carrera =                         Datos[pos_usuario].Carrera;
+                            Pas[I].Semestre =                        Datos[pos_usuario].Semestre;
+                            Pas[I].Year =                            Datos[pos_usuario].Year;
+                            Pas[I].Empresa =                         " ";
+                            Pas[I].Estado_Solicitud =                0; 
+                            Pas[I].Horas =                           0;
+                            Mostrar << "Ingrese su contraseña";
+                            Leer >> Password1;
+                            Mostrar << "Confirme su contraseña";
+                            Leer >> Password2;
+                            Mientras (Password1 != Password2) Hacer;
+                                Mostrar << "Error, vuelva a intentar";
+                                Mostrar << "Ingrese su contraseña";
+                                Leer >> Password1;
+                                Mostrar << "Confirme su contraseña";
+                                Leer >> Password2;
+                            Fin_Mientras
+                            Pas[I].Password = Password1;
+                        Sino
+                            P = P + 1;
+                            Pas[P].Nombre =                          Datos[pos_usuario].Nombre;
+                            Pas[P].Edad =                            Datos[pos_usuario].Edad;
+                            Pas[P].Cedula =                          Datos[pos_usuario].CI;
+                            Pas[P].Carrera =                         Datos[pos_usuario].Carrera;
+                            Pas[P].Semestre =                        Datos[pos_usuario].Semestre;
+                            Pas[P].Year =                            Datos[pos_usuario].Year;
+                            Pas[P].Empresa =                         " ";
+                            Pas[P].Estado_Solicitud =                0;
+                            Pas[P].Horas =                           0; 
+                            Mostrar << "Ingrese su contraseña";
+                            Leer >> Password1;
+                            Mostrar << "Confirme su contraseña";
+                            Leer >> Password2;
+                            Mientras (Password1 != Password2) Hacer;
+                                Mostrar << "Error, vuelva a intentar";
+                                Mostrar << "Ingrese su contraseña";
+                                Leer >> Password1;
+                                Mostrar << "Confirme su contraseña";
+                                Leer >> Password2;
+                            Fin_Mientras
+                            Pas[P].Password = Password1;
+                        Fin_Si
+                    Sino
+                        Mostrar << "Ingrese su contraseña";
+                        Leer >> Password1;
+                        Mientras (Password2 != Pas[J].Password) Hacer;
+                            Mostrar << "Error en la contraseña le quedan: ", J3, " Intentos";
+                            Leer >> Password2;
+                            J3 = J3 - 1;
+                            Si (J3 = 0) Entonces;
+                                Password2 = Pas[J].Password;
+                                R3 = 0;
+                            Fin_Si
+                        Fin_Mientras     
+                        Si (R3 = 1) Entonces;
+                            Mostrar << "Seleecione 1: para empresas del listado, 2: para agregar una empresa por su cuenta, 3: para revisar alguna solicitud pendiente";
+                            Leer >> R;
+                            Mientras (R < 1 or R > 3) Hacer;
+                                Mostrar << "Error en su opcion seleccionada, por favor, intentelo nuevamente";
+                                Leer >> R;
+                            Fin_Mientras
+                            En_Caso (R > 0) Sea;
+                                Caso (R = 1) and (Pas[J].Estado_Solicitud = 0);
+                                    En_Caso (Datos[pos_usuario].Carrera != " ") Sea;
+                                        Caso (Pas[J].Carrera = "Informática");
+                                            Mostrar << "Estas son las locaciones disponibles: ";
+                                            Mostrar << "1. SIAR Valencia, C.A. (Carabobo)";
+                                            Mostrar << "2. UCAB – Departamento de Prácticas Profesionales (Caracas)";
+                                            Mostrar << "3. Deinsa Global (Caracas, soluciones tecnológicas)";
+                                            Mientras (Opc < 1 or Opc > 3) Hacer;
+                                                Mostrar << "Su seleccion no se encuentra dentro del rango señalado, por favor intentelo nuevamente";    
+                                                Mostrar << "1. SIAR Valencia, C.A. (Carabobo)";
+                                                Mostrar << "2. UCAB – Departamento de Prácticas Profesionales (Caracas)";
+                                                Mostrar << "3. Deinsa Global (Caracas, soluciones tecnológicas)";
+                                                Leer >> Opc;
+                                            Fin_Mientras
+                                            En_Caso (Opc > 0) Sea;
+                                                Caso (Opc = 1);
+                                                    Pas[J].Empresa = "SIAR Valencia, C.A. (Carabobo)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Caso (Opc = 2);
+                                                    Pas[J].Empresa = "UCAB – Departamento de Prácticas Profesionales (Caracas)v";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Otro_Caso
+                                                    Pas[J].Empresa = "Deinsa Global (Caracas, soluciones tecnológicas)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                            Fin_Caso
+                                        Caso (Pas[J].Carrera = "Civil");
+                                            Mostrar << "Estas son las locaciones disponibles: ";
+                                            Mostrar << "1. UCAB – Escuela de Ingeniería Civil (Guayana)";
+                                            Mostrar << "2. PepsiCo (Aragua, pasantías en ingeniería)";
+                                            Mostrar << "3. Febeca C.A. (Carabobo, materiales de construcción)";
+                                            Mientras (Opc < 1 or Opc > 3) Hacer;
+                                                Mostrar << "Su seleccion no se encuentra dentro del rango señalado, por favor intentelo nuevamente";    
+                                                Mostrar << "1. UCAB – Escuela de Ingeniería Civil (Guayana)";
+                                                Mostrar << "2. PepsiCo (Aragua, pasantías en ingeniería)";
+                                                Mostrar << "3. Febeca C.A. (Carabobo, materiales de construcción)";
+                                                Leer >> Opc;
+                                            Fin_Mientras
+                                            En_Caso (Opc > 0) Sea;
+                                                Caso (Opc = 1);
+                                                    Pas[J].Empresa = "UCAB – Escuela de Ingeniería Civil (Guayana)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Caso (Opc = 2);
+                                                    Pas[J].Empresa = "PepsiCo (Aragua, pasantías en ingeniería)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Otro_Caso
+                                                    Pas[J].Empresa = "Febeca C.A. (Carabobo, materiales de construcción)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                            Fin_Caso
+                                        Caso (Pas[J].Carrera = "Hidrocarburos");
+                                            Mostrar << "Estas son las locaciones disponibles: ";
+                                            Mostrar << "1. Chevron Venezuela (Maracaibo, operaciones upstream)";
+                                            Mostrar << "2. Facultad de Ingeniería UCV – Escuela de Petróleo";
+                                            Mostrar << "3. Industrias La Urbina (Trujillo, procesos químicos relacionados)";
+                                            Mientras (Opc < 1 or Opc > 3) Hacer;
+                                                Mostrar << "Su seleccion no se encuentra dentro del rango señalado, por favor intentelo nuevamente";    
+                                                Mostrar << "1. Chevron Venezuela (Maracaibo, operaciones upstream)";
+                                                Mostrar << "2. Facultad de Ingeniería UCV – Escuela de Petróleo";
+                                                Mostrar << "3. Industrias La Urbina (Trujillo, procesos químicos relacionados)";
+                                                Leer >> Opc;
+                                            Fin_Mientras
+                                            En_Caso (Opc > 0) Sea;
+                                                Caso (Opc = 1);
+                                                    Pas[J].Empresa = "Chevron Venezuela (Maracaibo, operaciones upstream)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Caso (Opc = 2);
+                                                    Pas[J].Empresa = "Facultad de Ingeniería UCV – Escuela de Petróleo";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Otro_Caso
+                                                    Pas[J].Empresa = "Industrias La Urbina (Trujillo, procesos químicos relacionados)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                            Fin_Caso
+                                        Caso (Pas[J].Carrera = "Medicina");
+                                            Mostrar << "Estas son las locaciones disponibles: ";
+                                            Mostrar << "1. Medicina Laboral de Venezuela C.A. (Caracas)";
+                                            Mostrar << "2. Pasantía Rural en comunidades de salud";
+                                            Mostrar << "3. Universidad de Los Andes – Prácticas de Campo (Mérida)";
+                                            Mientras (Opc < 1 or Opc > 3) Hacer;
+                                                Mostrar << "Su seleccion no se encuentra dentro del rango señalado, por favor intentelo nuevamente";    
+                                                Mostrar << "1. Medicina Laboral de Venezuela C.A. (Caracas)";
+                                                Mostrar << "2. Pasantía Rural en comunidades de salud";
+                                                Mostrar << "3. Universidad de Los Andes – Prácticas de Campo (Mérida)";
+                                                Leer >> Opc;
+                                            Fin_Mientras
+                                            En_Caso (Opc > 0) Sea;
+                                                Caso (Opc = 1);
+                                                    Pas[J].Empresa = "Medicina Laboral de Venezuela C.A. (Caracas)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Caso (Opc = 2);
+                                                    Pas[J].Empresa = "Pasantía Rural en comunidades de salud";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Otro_Caso
+                                                    Pas[J].Empresa = "Universidad de Los Andes – Prácticas de Campo (Mérida)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                            Fin_Caso
+                                        Caso (Pas[J].Carrera = "Odontología");
+                                            Mostrar << "Estas son las locaciones disponibles: ";
+                                            Mostrar << "1. Universidad de Los Andes – Facultad de Odontología (Mérida)";
+                                            Mostrar << "2. Facultad de Odontología UCV (Caracas)";
+                                            Mostrar << "3. Clínicas privadas asociadas a ULA y UCV";
+                                            Mientras (Opc < 1 or Opc > 3) Hacer;
+                                                Mostrar << "Su seleccion no se encuentra dentro del rango señalado, por favor intentelo nuevamente";    
+                                                Mostrar << "1. Universidad de Los Andes – Facultad de Odontología (Mérida)";
+                                                Mostrar << "2. Facultad de Odontología UCV (Caracas)";
+                                                Mostrar << "3. Clínicas privadas asociadas a ULA y UCV";
+                                                Leer >> Opc;
+                                            Fin_Mientras
+                                            En_Caso (Opc > 0) Sea;
+                                                Caso (Opc = 1);
+                                                    Pas[J].Empresa = "Universidad de Los Andes – Facultad de Odontología (Mérida)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Caso (Opc = 2);
+                                                    Pas[J].Empresa = "Facultad de Odontología UCV (Caracas)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Otro_Caso
+                                                    Pas[J].Empresa = "Clínicas privadas asociadas a ULA y UCV";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                            Fin_Caso
+                                        Caso (Pas[J].Carrera = "Veterinaria");
+                                            Mostrar << "Estas son las locaciones disponibles: ";
+                                            Mostrar << "1. UNERG – Núcleo Zaraza (Guárico, prácticas en campo)";
+                                            Mostrar << "2. Instituto Nacional de Higiene “Rafael Rangel” (Caracas)";
+                                            Mostrar << "3. Centros de producción animal (bovinos, equinos, aves) vinculados a Unerg";
+                                            Mientras (Opc < 1 or Opc > 3) Hacer;
+                                                Mostrar << "Su seleccion no se encuentra dentro del rango señalado, por favor intentelo nuevamente";    
+                                                Mostrar << "1. UNERG – Núcleo Zaraza (Guárico, prácticas en campo)";
+                                                Mostrar << "2. Instituto Nacional de Higiene “Rafael Rangel” (Caracas)";
+                                                Mostrar << "3. Centros de producción animal (bovinos, equinos, aves) vinculados a Unerg";
+                                                Leer >> Opc;
+                                            Fin_Mientras
+                                            En_Caso (Opc > 0) Sea;
+                                                Caso (Opc = 1);
+                                                    Pas[J].Empresa = "UNERG – Núcleo Zaraza (Guárico, prácticas en campo)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Caso (Opc = 2);
+                                                    Pas[J].Empresa = "Instituto Nacional de Higiene “Rafael Rangel” (Caracas)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Otro_Caso
+                                                    Pas[J].Empresa = "Centros de producción animal (bovinos, equinos, aves) vinculados a Unerg";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                            Fin_Caso
+                                        Caso (Pas[J].Carrera = "Derecho");
+                                            Mostrar << "Estas son las locaciones disponibles: ";
+                                            Mostrar << "1. Defiende Venezuela (ONG de DDHH, Caracas)";
+                                            Mostrar << "2. UCAB – Escuela de Derecho (Caracas y Guayana)";
+                                            Mostrar << "3. Universidad de Carabobo – Facultad de Ciencias Jurídicas y Políticas";
+                                            Mientras (Opc < 1 or Opc > 3) Hacer;
+                                                Mostrar << "Su seleccion no se encuentra dentro del rango señalado, por favor intentelo nuevamente";    
+                                                Mostrar << "1. Defiende Venezuela (ONG de DDHH, Caracas)";
+                                                Mostrar << "2. UCAB – Escuela de Derecho (Caracas y Guayana)";
+                                                Mostrar << "3. Universidad de Carabobo – Facultad de Ciencias Jurídicas y Políticas";
+                                                Leer >> Opc;
+                                            Fin_Mientras
+                                            En_Caso (Opc > 0) Sea;
+                                                Caso (Opc = 1);
+                                                    Pas[J].Empresa = "Defiende Venezuela (ONG de DDHH, Caracas)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Caso (Opc = 2);
+                                                    Pas[J].Empresa = "UCAB – Escuela de Derecho (Caracas y Guayana)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Otro_Caso
+                                                    Pas[J].Empresa = "Universidad de Carabobo – Facultad de Ciencias Jurídicas y Políticas";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                            Fin_Caso
+                                        Caso (Pas[J].Carrera = "Comunicación");
+                                            Mostrar << "Estas son las locaciones disponibles: ";
+                                            Mostrar << "1. Coca-Cola FEMSA (Caracas/Valencia, comunicación corporativa)";
+                                            Mostrar << "2. Fundación Team Perruno (Caracas, comunicación social aplicada a ONG)";
+                                            Mostrar << "3. Mondelēz International (Caracas, inteligencia de mercado)";
+                                            Mientras (Opc < 1 or Opc > 3) Hacer;
+                                                Mostrar << "Su seleccion no se encuentra dentro del rango señalado, por favor intentelo nuevamente";    
+                                                Mostrar << "1. Coca-Cola FEMSA (Caracas/Valencia, comunicación corporativa)";
+                                                Mostrar << "2. Fundación Team Perruno (Caracas, comunicación social aplicada a ONG)";
+                                                Mostrar << "3. Mondelēz International (Caracas, inteligencia de mercado)";
+                                                Leer >> Opc;
+                                            Fin_Mientras
+                                            En_Caso (Opc > 0) Sea;
+                                                Caso (Opc = 1);
+                                                    Pas[J].Empresa = "Coca-Cola FEMSA (Caracas/Valencia, comunicación corporativa)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Caso (Opc = 2);
+                                                    Pas[J].Empresa = "Fundación Team Perruno (Caracas, comunicación social aplicada a ONG)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Otro_Caso
+                                                    Pas[J].Empresa = "Mondelēz International (Caracas, inteligencia de mercado)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                            Fin_Caso
+                                        Caso (Pas[J].Carrera = "Contaduría");
+                                            Mostrar << "Estas son las locaciones disponibles: ";
+                                            Mostrar << "1. Fundación Jacinto Convit (Caracas, pasantías contables)";
+                                            Mostrar << "2. Industrias Cartan, C.A. (Aragua)";
+                                            Mostrar << "3. Febeca C.A. (Carabobo, área financiera)";
+                                            Mientras (Opc < 1 or Opc > 3) Hacer;
+                                                Mostrar << "Su seleccion no se encuentra dentro del rango señalado, por favor intentelo nuevamente";    
+                                                Mostrar << "1. Fundación Jacinto Convit (Caracas, pasantías contables)";
+                                                Mostrar << "2. Industrias Cartan, C.A. (Aragua)";
+                                                Mostrar << "3. Febeca C.A. (Carabobo, área financiera)";
+                                                Leer >> Opc;
+                                            Fin_Mientras
+                                            En_Caso (Opc > 0) Sea;
+                                                Caso (Opc = 1);
+                                                    Pas[J].Empresa = "Fundación Jacinto Convit (Caracas, pasantías contables)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Caso (Opc = 2);
+                                                    Pas[J].Empresa = "Industrias Cartan, C.A. (Aragua)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Otro_Caso
+                                                    Pas[J].Empresa = "Febeca C.A. (Carabobo, área financiera)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                            Fin_Caso
+                                        Otro_Caso
+                                            Mostrar << "Estas son las locaciones disponibles: ";
+                                            Mostrar << "1. VenAmCham – Internship Program (Caracas, alianza UCAB/UNIMET)";
+                                            Mostrar << "2. UCAB – Escuela de Economía";
+                                            Mostrar << "3. Empresas Polar (Guárico/Caracas, análisis económico)";
+                                            Mientras (Opc < 1 or Opc > 3) Hacer;
+                                                Mostrar << "Su seleccion no se encuentra dentro del rango señalado, por favor intentelo nuevamente";    
+                                                Mostrar << "1. VenAmCham – Internship Program (Caracas, alianza UCAB/UNIMET)";
+                                                Mostrar << "2. UCAB – Escuela de Economía";
+                                                Mostrar << "3. Empresas Polar (Guárico/Caracas, análisis económico)";
+                                                Leer >> Opc;
+                                            Fin_Mientras
+                                            En_Caso (Opc > 0) Sea;
+                                                Caso (Opc = 1);
+                                                    Pas[J].Empresa = "VenAmCham – Internship Program (Caracas, alianza UCAB/UNIMET)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Caso (Opc = 2);
+                                                    Pas[J].Empresa = "UCAB – Escuela de Economía";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                                Otro_Caso
+                                                    Pas[J].Empresa = "Empresas Polar (Guárico/Caracas, análisis económico)";
+                                                    Pas[J].Estado_Solicitud = 1;
+                                            Fin_Caso
+                                    Fin_Caso
+                                Caso (R = 2) and (Pas[J].Estado_Solicitud = 0);
+                                    Mostrar << "Bienvenido a la sección de solicitud de empresa, siga las instrucciones a continuación";
+                                    Mostrar << "Ingrese el nombre de la empresa";
+                                    Leer >> Nombre;
+                                    Mostrar << "Ingrese la justificacion";
+                                    Leer >> Justificacion;
+                                    Solicitud = "Nombre: ", Pas[J].Nombre, "Edad: ", Pas[J].Edad, "Cedula: ", Pas[J].Cedula, "Carrera: ", Pas[J].Carrera, "Semestre: ", Pas[J].Semestre, "Año: ", Pas[J].Year, "Estado de la solicitud: ",Pas[J].Estado_Solicitud;
+                                    Solicitud = Solicitud + Justificacion;    
+                                    Pas[J].Estado_Solicitud = 2;
+                                Caso (R = 3);
+                                    Mostrar << "Bienvenido a la sección de estado de solicitud, a continuación le diremos el estado actual de su solicitud";
+                                    Si (Pas[J].Estado_Solicitud = 1) Entonces;
+                                        Mostrar << "Su solicitud fue aprobada";
+                                    Sino
+                                        Si (Pas[J].Estado_Solicitud = 0) Entonces;
+                                            Mostrar << "Su solicitud fue rechazada";
+                                        Sino
+                                            Mostrar << "Su solicitud esta en proceso";
+                                        Fin_Si
+                                    Fin_Si
+                                Otro_Caso 
+                                    Mostrar << "Bienvenido a la sección de agregar horas a las pasantías, por favor siga las instrucciones a continuación";
+                                    Mostrar << "Aqui puede agregar las horas trabajadas en las pasantías, recuerde que las jornadas laborales tienen un máximo de 8 horas";
+                                    Mostrar << "Ingrese las horas trabajadas en su última jornada";
+                                    Leer >> Horas;
+                                    Mientras (Horas <= 0 or Horas > 8) Hacer;
+                                        Mostrar << "Error en los datos de las horas ingresados, por favor intentelo nuevamente";
+                                        Leer >> Horas;
+                                    Fin_Mientras
+                                    Pas[J].Horas = Pas[J].Horas + Horas;
+                                    Si (Pas[J].Horas >= 320) Entonces;
+                                        Mostrar << "Usted ya cumplió con el minimo de horas necesarias";
+                                        Mostrar << "Proximamente se le mostrara su nota";
+                                    Fin_Si
+                                    Si (Datos[pos_usuario].Pasantias = 1) Entonces;
+                                        Si (J != P) Entonces;
+                                            Para (J2 = J hasta J2 = P) Hacer;
+                                                Pas[J2].Nombre = Pas[J2 + 1].Nombre;           
+                                                Pas[J2].Edad = Pas[J2 + 1].Edad;
+                                                Pas[J2].Cedula = Pas[J2 + 1].Cedula;
+                                                Pas[J2].Password = Pas[J2 + 1].Password;
+                                                Pas[J2].Carrera = Pas[J2 + 1].Carrera;
+                                                Pas[J2].Semestre = Pas[J2 + 1].Semestre;
+                                                Pas[J2].Year =   Pas[J2 + 1].Year;
+                                                Pas[J2].Empresa = Pas[J2 + 1].Empresa;
+                                                Pas[J2].Estado_Solicitud =  Pas[J2 + 1].Estado_Solicitud;
+                                                Pas[J2].Horas = Pas[J2 + 1].Horas;
+                                            Fin_Para
+                                            P = P - 1;
+                                        Sino
+                                            P = P - 1;
+                                        Fin_Si
+                                    Fin_Si
+                            Fin_Caso
+                        Sino
+                            Mostrar << "Gracias por ingresar al sistema";
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+            Fin_Si
+            I = I + 1;
+            Hasta (I = P);
+        Fin_Repetir
+    Fin_Si
 Fin_Procedimiento

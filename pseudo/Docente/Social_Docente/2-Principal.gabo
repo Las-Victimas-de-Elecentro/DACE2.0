@@ -1,4 +1,4 @@
-Procedimiento Social_Docente(E/S: I, J, Am: Entero, Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar, Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera: Cadena, Gru[I].Miembros, Gru[I].Seccion, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Datos[J].Semestre, Datos[J].Year, Prof[J].Cant_Materias: Entero);
+Procedimiento Docente_Social(E/S: I, J, Am: Entero, Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar, Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera: Cadena, Gru[I].Miembros, Gru[I].Seccion, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Datos[J].Semestre, Datos[J].Year, Prof[J].Cant_Materias: Entero);
 Inicio
     Var opc: Entero;
     Var R: Booleano;

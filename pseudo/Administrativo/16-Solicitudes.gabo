@@ -1,6 +1,6 @@
-Procedimiento Solicitudes_Admin(E/S: I, Soli[I].Titulo, Soli[I].Descripcion, Soli[I].Titular, Soli[I].Destinatario: Cadena, Soli[I].Estado: Booleano);
+Procedimiento Solicitudes_Admin(E/S: S: Entero, Soli[I].Titulo, Soli[I].Descripcion, Soli[I].Titular, Soli[I].Destinatario: Cadena, Soli[I].Estado: Booleano);
 Inicio
-    Var opc: Entero, R: Booleano;
+    Var I, opc: Entero, R: Booleano;
     Var ele, elec: Entero;
     Mostrar << "¡Bienvenido a la sección de Solicitudes!";
     Mostrar << "¿Qué desea hacer?";

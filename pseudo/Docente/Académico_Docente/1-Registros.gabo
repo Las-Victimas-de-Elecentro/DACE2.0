@@ -1,7 +1,3 @@
-//   SISTEMA DACE - SECCIÓN DOCENTE ACADÉMICA ==============================================================
-// ==========================
-//   REGISTROS
-// ==========================
 Registro: Materia;  //Materia;
     Codigo: Cadena;
     Nombre: Cadena;

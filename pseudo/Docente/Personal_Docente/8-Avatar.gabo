@@ -1,4 +1,4 @@
-Procedimiento Avatar_Personal_Prof (E/S: Avatares[10], Prof[pos].Avatar: Cadena);
+Procedimiento Avatar_Personal_Prof (E/S: Avatares[I], Prof[pos].Avatar: Cadena);
 Inicio
     var Opc: entero, A = 0, R:Booleano;
     Repetir

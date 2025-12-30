@@ -15,7 +15,7 @@ Inicio
         Fin_Mientras
         En_Caso (opc > 0) Sea;
             Caso(opc = 1);
-                Para (I = 1 Hasta I = 500) Hacer;
+                Para (I = 1 Hasta I = 5000) Hacer;
                     Mostrar << Plan[I].ID_Plan;
                     Mostrar << Plan[I].Nombre_Profesor;
                     Mostrar << Plan[I].Codigo_Materia;

@@ -1,0 +1,984 @@
+Algoritmo DACE_ELECENTRO
+Registro: Administrativos;  //Administrativos: Admin;
+	Usuario: Cadena;
+	CI: Entero;
+	Cargo: Cadena;
+	Gmail: Cadena;
+	Password: Cadena;
+	Tarjeta: Entero;
+Fin_Registro
+
+Registro: Admin;        //Admin: Ad;
+    Servicio_Comunitario: Booleano;
+    Inscripciones: Booleano;
+    Pasantias: Booleano;
+Fin_Registro
+
+Registro: Docente;      //Docente: Prof;
+    Nombre: Cadena;
+    Cedula: Entero;
+    Edad: Entero;
+    Gmail: Cadena;
+    Password: Cadena;
+    Tarjeta: Entero;
+    Materias: Cadena;
+    Cant_Materias: Entero;
+    Cant_Clases: Entero;
+    Club: Cadena;
+    Enfermedad: Cadena;
+Fin_Registro
+
+Registro: Estudiantes;      //Estudiantes: Datos;
+    Avatar: Cadena;
+    Nombre: Cadena;
+	CI: Entero;
+    Edad: Entero;
+    Telefono: Cadena;
+	Gmail: Cadena;
+	Password: Cadena;
+	Carrera: Cadena;
+    Semestre: Entero;
+	Year: Entero;
+    Materias_Aprobadas: Entero;
+    Servicio_Comunitario: Booleano;
+	Tarjeta: Entero;
+    Notas: Real;
+    UC: Entero;
+    UC_Aprobadas: Entero;
+    Actas: Cadena;
+    Club: Cadena;
+    Esta_en_Club: Booleano;
+    Enfermedad: Cadena;
+Fin_Registro
+
+//Docente
+Registro: Materia;  //Materia;
+    Codigo: Cadena;
+    Nombre: Cadena;
+    Creditos: Entero;
+Fin_Registro
+
+Registro: Bloque_Horario;   //Lista[8]/Horario[40];
+    ID_Bloque: Entero;
+    Dia: Cadena;           // Lunes, Martes, etc.;
+    Hora_Inicio: Cadena;   // "08:00";
+    Hora_Fin: Cadena;      // "10:00";
+    Aula: Cadena;          // "A-101";
+    Codigo_Materia: Cadena; // Vacío si no asignado;
+    Estado: Cadena;        // "Libre" o "Ocupado";
+Fin_Registro
+
+Registro: Lista;        //Lista;
+    ID_Lista: Entero;
+    Nombre: Cadena;
+    Cedula: Entero;
+Fin_Registro
+
+Registro: Clase;            //Llave: Clase;
+    ID_Clase: Entero;
+    Nombre_Profesor: Cadena;
+    CI_Profesor: Entero;
+    Codigo_Materia: Cadena;
+    Nombre_Materia: Cadena;
+    Periodo: Cadena;
+    Dia: Cadena;
+    Hora_Inicio: Cadena;
+    Hora_Fin: Cadena;
+    Aula: Entero;
+    Seccion: Entero;            // 1, 2, 3;
+    Cant_Estudiantes: Entero;
+    Virtual: Booleano;
+    Plataforma: Cadena;
+Fin_Registro
+
+Registro: Lista_Magistral;        //Lista_M;
+    ID_Lista: Entero;
+    Nombre: Cadena;
+    Cedula: Entero;
+Fin_Registro
+
+Registro: Clase_Magistral;            //Llave: Mag;
+    ID_Clase: Entero;
+    Nombre_Profesor: Cadena;
+    CI_Profesor: Entero;
+    Codigo_Materia: Cadena;
+    Nombre_Materia: Cadena;
+    Fecha: Cadena;
+    Horas: Real;
+    Aula: Cadena;
+    Cant_Estudiantes: Entero;
+    Precio: Real;
+    Autorizacion: Booleano;
+Fin_Registro
+
+Registro: Plan_Evaluacion;      //Llave: Plan;
+    ID_Plan: Entero;
+    Nombre_Profesor: Cadena;
+    CI_Profesor: Entero;
+    Codigo_Materia: Cadena;
+    Nombre_Materia: Cadena;
+    Fecha: Cadena;
+    Tema: Cadena;
+    Estrategia: Cadena;
+    Ponderacion: Entero;
+    Firmado: Booleano;
+Fin_Registro
+
+Registro: Asignacion;   //Llave: Asig;
+    ID_Asignacion: Entero;
+    Nombre_Profesor: Cadena;
+    Codigo_Materia: Cadena;
+    Titulo: Cadena;
+    Descripcion: Cadena;
+    Fecha_Publicacion: Cadena;
+    Fecha_Entrega: Cadena;
+    Estado: Cadena;            // "Borrador", "Publicada", "Cerrada";
+Fin_Registro
+
+Registro: Grupos;           //Llave: Gru;
+    Nombre_Profesor: Cadena;
+    CI_Profesor: Entero;
+    Codigo_Materia: Cadena;
+    Materia: Cadena;
+    Miembros: Entero;
+    Seccion: Entero;
+Fin_Registro
+
+Registro: Bloques_Base;     //Base;
+    Bloque_Horario; // 6 días * 8 bloques;
+    Cant: Entero;
+Fin_Registro
+
+//General
+Registro: Solicitudes;          //Llave: Soli; Ruta: Soli.Campo;
+    Titulo: Cadena;
+    Descripcion: Cadena;
+    Titular: Cadena;
+    Destinatario: Cadena;
+    Fecha: Cadena;
+    Estado: Booleano;
+Fin_Registro
+
+Registro: Reportes;             //Llave: Rep; Ruta: Rep.Campo;
+    Titulo: Cadena;
+    Descripcion: Cadena;
+    Titular: Cadena;
+    Problema: Cadena;
+    Fecha: Cadena;
+    Recibido: Booleano;
+Fin_Registro
+
+Registro: Eventos;          //Llave: Even; Ruta: Even.Campo;
+    ID: Entero;     
+    Nombre: Cadena;                               
+    Fecha: Cadena;
+    Descripcion: Cadena;
+Fin_Registro
+
+Registro: Clubes;           //Llave: Club; Ruta: Club.Campo;
+    Nombre: Cadena;
+    Descripcion: Cadena;
+    Capacidad_Maxima: Entero;
+    Miembros_Inscritos: Entero;
+    Horarios_Disponibles: Cadena;
+Fin_Registro
+
+Registro: Celebraciones;    //Llave: Cel; Ruta: Cel.Campo;
+    Nombre: Cadena; 
+    Fecha: Cadena;
+    Tipo: Cadena;
+    Descripcion: Cadena;
+Fin_Registro
+
+Registro: Carnetizacion; //Carn
+    Lugar: Cadena;
+    Carrera: Cadena;
+    Fecha: Cadena
+    Precio: Real;
+    Activo: Booleano;
+Fin_Registro
+
+Registro: Carnet;       //Car
+    Nombre: Cadena;
+    CI: Entero;
+    Carrera: Cadena;
+    Fecha_Vencimiento: Cadena;
+Fin_Registro
+
+Registro: Amigos;       //Llave: Amig;
+    Nombre_Emisor: Cadena;
+    CI_Emisor: Entero;
+    Nombre_Receptor: Cadena;
+    CI_Receptor: Entero;
+    Avatar_Receptor: Cadena;
+Fin_Registro
+
+Registro: Novedades;            //Llave: Nov;
+    Hecho: Cadena;
+    Fecha: Cadena;
+    Responsables: Cadena;
+    Contexto: Cadena;
+    Lugar: Cadena;
+Fin_Registro
+
+
+Registro: Chatbot;      //Bot[10]
+    Preguntas: Cadena;
+    Respuesta1: Cadena;
+    Respuesta2: Cadena;
+    Respuesta3: Cadena;
+    Respuesta4: Cadena;
+Fin_Registro
+
+
+// Enfermedades
+
+Registro: Enfermedad;       //Salud
+    Transmisibles: Cadena;
+    Cronicas: Cadena;
+    Neurologicas: Cadena;
+    Neoplasias: Cadena;
+    Autoinmunes: Cadena;
+    Trastornos: Cadena;
+    Lesiones: Cadena;
+    Congenitas: Cadena;
+    Metabolicos: Cadena;
+    Ocupacionales: Cadena;
+Fin_Registro
+
+
+//Estudiante
+Registro: Pasantias;  //Llave: Pas[P];
+    Nombre:             Cadena;
+    Edad, Cedula:       Entero;
+    Password:           Cadena;
+    Carrera:            Cadena;
+    Semestre:           Entero;
+    Year:               Entero;
+    Empresa:            Cadena;
+    Estado_Solicitud:   Entero;
+    Horas:              Real;
+Fin_Registro
+
+Registro: Servicio_Comunitario;  //Llave: SerC[N];
+    Nombre:             Cadena;
+    Edad, Cedula:       Entero;
+    Area:               Cadena;
+    Semestre:           Entero;
+    Year:               Entero;
+    Horas_Realizadas:   Real;
+Fin_Registro
+
+Registro: Market_Place;         // MP[N];
+    Usuario: Cadena;
+    Cedula: Entero;
+    Contacto: Cadena;
+    Password: Cadena;
+    Datos_Bancarios: Cadena;
+    Area: Cadena;
+    Boveda: Real;
+    Ingresos: Real;
+    Egresos: Real;
+    Bitacora: Cadena;
+Fin_Registro
+
+Registro: Comida_MP;            // C_MP[N];
+    Vendedor: Cadena;
+    Cedula: Entero;
+    Contacto: Cadena;
+    Datos_Bancarios: Cadena;
+    Producto: Cadena;
+    Stock: Entero;
+    Precio: Real;
+Fin_Registro
+
+Registro: Articulos_MP;         //A_MP[N];
+    Vendedor: Cadena;
+    Cedula: Entero;
+    Contacto: Cadena;
+    Datos_Bancarios: Cadena;
+    Producto: Cadena;
+    Stock: Entero;
+    Precio: Real;
+Fin_Registro
+
+Registro: Servicios_MP;         //S_MP[N];
+    Vendedor: Cadena;
+    Cedula: Entero;
+    Disp: Booleano;
+    Precio: Real;
+    Contacto: Cadena;
+    Datos_Bancarios: Cadena;
+    Producto: Cadena;
+Fin_Registro
+
+Registro: Publicaciones;        //Publi[]
+    ID_Publicacion: Entero;
+    Autor: Cadena;
+    Normas: Cadena;
+    Tema: Cadena;
+    Texto: Cadena;
+    Fecha: Cadena;
+    Comentarios: Entero;
+    Cant_Reacciones: Entero;
+    Tipo_Reaccion1: Cadena;
+    Tipo_Reaccion2: Cadena;
+    Tipo_Reaccion3: Cadena;
+    Etiqueta: Cadena;
+    Activo: Booleano;
+Fin_Registro
+
+
+Registro: Comentarios;          //Com[]
+    ID_Publicacion: Entero;
+    ID_Comentario: Entero;
+    Autor: Cadena;
+    Comentario: Cadena;
+    Fecha: Cadena;
+    Cant_Reacciones: Entero;
+    Tipo_Reaccion1: Cadena;
+    Tipo_Reaccion2: Cadena;
+    Tipo_Reaccion3: Cadena;
+Fin_Registro
+
+Registro: Respuesta;        //Res[]
+    ID_Comentario: Entero;
+    ID_Respuesta: Entero;
+    Autor: Cadena;
+    Respuesta: Cadena;
+    Fecha: Cadena;
+    Cant_Reacciones: Entero;
+    Tipo_Reaccion1: Cadena;
+    Tipo_Reaccion2: Cadena;
+    Tipo_Reaccion3: Cadena;
+Fin_Registro
+
+Registro: Reacciones;           //Rea[]
+    ID_Publicacion: Entero;
+    ID_Comentario: Entero;
+    ID_Respuesta: Entero;
+    ID_Reacciones: Entero;
+    Me_Gusta: Cadena;
+    Cant_Gusta: Entero;
+    Me_Encanta: Cadena;
+    Cant_Encanta: Entero;
+    Me_Importa: Cadena;
+    Cant_Importa: Entero;
+    Me_Divierte: Cadena;
+    Cant_Divierte: Entero;
+    Me_Asombra: Cadena;
+    Cant_Asombra: Entero;
+    Me_Entristece: Cadena;
+    Cant_Entristece: Entero;
+    Me_Molesta: Cadena;
+    Cant_Molesta: Entero;
+Fin_Registro
+
+Registro: Servicio_Comunitario;  //Llave: SerC[N];
+    Nombre:             Cadena;
+    Edad, Cedula:       Entero;
+    Area:               Cadena;
+    Semestre:           Entero;
+    Year:               Entero;
+    Horas_Realizadas:   Real;
+Fin_Registro
+// Notas de las carreras
+
+Registro: Notas;
+    Informatica: Real;
+    Civil: Real;
+    Hidrocarburo: Real;
+    Medicina: Real;
+    Odontologia: Real;
+    Veterinaria: Real;
+    Derecho: Real;
+    Comunicacion: Real;
+    Contaduria: Real;
+    Economia: Real;
+Fin_Registro
+
+Registro Informatica;
+    Matematica_I: Real;
+    Fundamentos_Informatica: Real;
+    Logica_Matematica: Real;
+    Lenguaje_Comunicacion: Real;
+    Ingles_I: Real;
+    Formacion_Constitucional: Real;
+    Economia_Digital: Real;
+    Matematica_II: Real;
+    Fisica_I: Real;
+    Algoritmos_I: Real;
+    Ingles_II: Real;
+    Prob_Cient_Tec: Real;
+    Electiva_I: Real;
+    Arte_Y_Cultura: Real;
+    Matematica_III: Real;
+    Fisica_II: Real;
+    Algoritmos_II: Real;
+    Programacion_I: Real;
+    Electiva_II: Real;
+    Tecnicas_Investigacion: Real;
+    Matematica_IV: Real;
+    Probabilidad_Estadistica: Real;
+    Estructuras_Discretas_I: Real;
+    Programacion_II: Real;
+    Base_Datos: Real;
+    Electiva_III: Real;
+    Organizacion_Computador: Real;
+    Algebra_Booleana: Real;
+    Estructuras_Discretas_II: Real;
+    Programacion_III: Real;
+    Teoria_Sistemas: Real;
+    Electiva_IV: Real;
+    Arquitectura_Computador: Real;
+    Metodos_Numericos: Real;
+    Investigacion_Operaciones: Real;
+    Sistemas_Informacion_I: Real;
+    Electiva_V: Real;
+    Ingenieria_Economica: Real;
+    Sistemas_Operativos: Real;
+    Traductores_Interpretes: Real;
+    Sistemas_Informacion_II: Real;
+    Control_Proyectos: Real;
+    Gestion_Empresarial: Real;
+    Redes: Real;
+    Pasantias: Real;
+    Lenguajes_Programacion: Real;
+    Sistemas_Informacion_III: Real;
+    Electiva_Area_I: Real;
+    Sistemas_Distribuidos: Real;
+    Electiva_Area_II: Real;
+    Etica_Profesional: Real;
+    Proyecto_Grado_I: Real;
+    Electiva_Libre_I: Real;
+    Deportes: Real;
+    Gerencia_Proyectos: Real;
+    Proyecto_Grado_II: Real;
+    Electiva_Area_III: Real;
+    Electiva_Libre_II: Real;
+    Informatica_Educativa: Real;
+Fin_Registro
+
+Registro Civil;
+    Ingles_Tecnico: Real;
+    Tec_Estudio_Doc: Real;
+    Geometria_Descriptiva_I: Real;
+    Calculo_I: Real;
+    Metod_Razonamiento_Logico: Real;
+    Arte_Y_Cultura: Real;
+    Calculo_II: Real;
+    Fisica_I: Real;
+    Geometria_Descriptiva_II: Real;
+    Introduccion_Ciencias_Humanas: Real;
+    Sociedad_Ciencia_Tecnologia: Real;
+    Fisica_II: Real;
+    Mecanica_Racional_I: Real;
+    Calculo_III: Real;
+    Informatica_Para_Ingenieros: Real;
+    Quimica_Basica: Real;
+    Deportes: Real;
+    Mecanica_Racional_II: Real;
+    Quimica_Aplicada: Real;
+    Topografia: Real;
+    Calculo_IV: Real;
+    Estadistica_Para_Ingenieros: Real;
+    Electiva_No_Tecnica: Real;
+    Geologia_Aplicada: Real;
+    Resistencia_De_Materiales: Real;
+    Mecanica_De_Fluidos_I: Real;
+    Calculo_V: Real;
+    Electiva_No_Tecnica_II: Real;
+    Materiales_Y_Ensayos: Real;
+    Mecanica_De_Suelos: Real;
+    H_San_Ambiental: Real;
+    Teorias_De_Estructuras_I: Real;
+    Hidrologia: Real;
+    Mecanica_De_Fluidos_II: Real;
+    Dibujo_De_Proyectos: Real;
+    Teorias_De_Estructuras_II: Real;
+    Instalaciones_Para_Edificios: Real;
+    Metodologia_Investigacion: Real;
+    Acueductos_Y_Cloacas: Real;
+    Ingenieria_Economica: Real;
+    Electiva_Tecnica: Real;
+    Obras_Hidraulicas: Real;
+    Concreto_Armado: Real;
+    Vias_De_Comunicacion_I: Real;
+    Proy_Estructurales_Acero: Real;
+    Electiva_Tecnica_II: Real;
+    Practica_Profesional: Real;
+    Concreto_Pretenzado: Real;
+    Fundaciones_Y_Muros: Real;
+    Vias_De_Comunicacion_II: Real;
+    Practica_Comunitaria: Real;
+    Trabajo_Grado_I: Real;
+    Proyectos_Estructurales_Concreto: Real;
+    Trabajo_Grado_II: Real;
+    Pavimentos: Real;
+    Puentes: Real;
+    Administracion_De_Obras: Real;
+Fin_Registro
+
+Registro Hidrocarburos;
+    Formacion_Socio_I: Real;
+    Proyecto_I: Real;
+    Dibujo_Tecnico: Real;
+    Matematica_I: Real;
+    Ingles_Tecnico: Real;
+    Quimica_Inorganica: Real;
+    Orientacion_Ing: Real;
+    Arte_Cultura: Real;
+    Matematica_II: Real;
+    Fisica_I: Real;
+    Quimica_Organica: Real;
+    Formacion_Socio_II: Real;
+    Proyecto_II: Real;
+    Informatica: Real;
+    Deporte: Real;
+    Formacion_Socio_III: Real;
+    Proyecto_III: Real;
+    Fisica_II: Real;
+    Lab_Fisica: Real;
+    Matematica_III: Real;
+    Geologia_General: Real;
+    Formacion_Socio_IV: Real;
+    Proyecto_IV: Real;
+    Mecanica_Rocas_Fluidos: Real;
+    Probabilidades_Estadisticas: Real;
+    Termodinamica: Real;
+    Caracterizacion_Fisica_Yac: Real;
+    Sistema_Compresion_Gas: Real;
+    Legislacion_Petrolera: Real;
+    Proyecto_V: Real;
+    Perforacion_Pozos: Real;
+    Caracterizacion_Energetica_Yac: Real;
+    Transporte_Distribucion: Real;
+    Geologia_Estructural: Real;
+    Comercio_Internacional: Real;
+    Proyecto_VI: Real;
+    Seguridad_Industrial: Real;
+    Caracterizacion_Dinamica_Yac: Real;
+    Recuperacion_Secundaria: Real;
+    Perfilaje_Pozos: Real;
+    Completacion_Pozos: Real;
+    Proyecto_VII: Real;
+    Geologia_Produccion: Real;
+    Ing_Produccion_I: Real;
+    Proteccion_Riesgos: Real;
+    Transferencia_Calor: Real;
+    Electiva_Corrosion: Real;
+    Auditoria_Ambiental: Real;
+    Procesos_Petroquimicos: Real;
+    Procesos_Refinacion: Real;
+    Proyecto_VIII: Real;
+    Ing_Produccion_II: Real;
+    Simulacion_Yacimientos: Real;
+    Electiva_Calidad: Real;
+    TEG: Real;
+    Recuperacion_Mejorada: Real;
+Fin_Registro
+
+Registro Medicina
+    Histologia_Embriologia: Real; 
+    Bioetica_I: Real; 
+    Medicina_General_I: Real; 
+    Deportes_Arte_Cultura_I: Real; 
+    Metod_Investigacion: Real; 
+    Ingles_Instrumental: Real; 
+    Medicina_Preventiva_I: Real; 
+    Anatomia_Humana: Real; 
+    Historia_Medicina: Real; 
+    Antropologia: Real; 
+    Microbiologia: Real; 
+    Bioquimica: Real; 
+    Fisiologia_Biofisica: Real; 
+    Deportes_Arte_Cultura_II: Real; 
+    Medicina_General_II: Real; 
+    Psicologia_Sociologia: Real; 
+    Estadistica_Demografia: Real; 
+    Medicina_Preventiva_II: Real; 
+    Informatica: Real; 
+    Medicina_Preventiva_III: Real; 
+    Etica_Deontologia: Real; 
+    Parasitologia: Real; 
+    Semiologia: Real; 
+    Fisiopatologia: Real; 
+    Farmacologia: Real; 
+    Nutricion: Real; 
+    Psicologia_Medica: Real; 
+    Medicina_General_III: Real; 
+    Derecho_Constitucional: Real; 
+    Psicopatologia: Real; 
+    Clinica_Quirurgica_I: Real; 
+    Medicina_Preventiva_IV: Real; 
+    Medicina_General_IV: Real; 
+    Clinica_Medica_I: Real; 
+    Clinica_Obstetrica_I: Real; 
+    Clinica_Pediatrica_I: Real; 
+    Anatomia_Patologica: Real; 
+    Clinica_Quirurgica_II: Real; 
+    Medicina_General_V: Real; 
+    Clinica_Pediatrica_II: Real; 
+    Medicina_Legal: Real; 
+    Medicina_Preventiva_V: Real; 
+    Clinica_Psiquiatrica: Real; 
+    Clinica_Obstetrica_II: Real; 
+    Clinica_Medica_II: Real; 
+    Internado_Rural: Real; 
+    Clinica_Medica_III: Real; 
+    Clinica_Quirurgica_III: Real; 
+    Clinica_Obstetrica_III: Real; 
+    Clinica_Pediatrica_III: Real; 
+    Trabajo_Grado: Real; 
+Fin_Registro
+
+Registro Odontologia;
+    Morfologia_Dentaria: Real;
+    Formacion_Cultural_I: Real;
+    Odontologia_Comunitaria_I: Real;
+    Iniciacion_Clinica: Real;
+    Morfologia_Humana: Real;
+    Formacion_Instrumental_I: Real;
+    Bioquimica_Aplicada: Real;
+    Histologia_Embriologia: Real;
+    Deportes_I: Real;
+    Investigacion_I: Real;
+    Odontologia_Comunitaria_II: Real;
+    Formacion_Cultural_II: Real;
+    Histofisiologia: Real;
+    Clinica_Adulto_I: Real;
+    Biomateriales: Real;
+    Deportes_II: Real;
+    Investigacion_II: Real;
+    Microbiologia_Parasitologia: Real;
+    Formacion_Instrumental_II: Real;
+    Investigacion_III: Real;
+    Clinica_Adulto_II: Real;
+    Toxicologia: Real;
+    Odontologia_Comunitaria_III: Real;
+    Atencion_Nino_I: Real;
+    Medicina_Semiologia: Real;
+    Fisiopatologia: Real;
+    Gerontologia: Real;
+    Farmacologia: Real;
+    Investigacion_IV: Real;
+    Odontologia_Comunitaria_IV: Real;
+    Atencion_Nino_II: Real;
+    Clinica_Adulto_III: Real;
+    Investigacion_V: Real;
+    Odontologia_Comunitaria_V: Real;
+Fin_Registro
+
+Registro Veterinaria;
+    Faenas_Pecuarias: Real;
+    Ingles_Instrumental: Real;
+    Ecologia_Agricola: Real;
+    Perfil_Profesional: Real;
+    Deportes: Real;
+    Bioquimica: Real;
+    Computacion: Real;
+    Zoologia: Real;
+    Anatomia_I: Real;
+    Histologia: Real;
+    Arte_Cultura: Real;
+    Bioestadistica: Real;
+    Genetica: Real;
+    Fisiologia_Animal: Real;
+    Zootecnia: Real;
+    Microbiologia: Real;
+    Patologia_Clinica: Real;
+    Farmacologia: Real;
+    Semiologia: Real;
+    Nutricion: Real;
+    Reproduccion: Real;
+    Parasitologia: Real;
+    Anatomia_Patologica: Real;
+    Gerencia: Real;
+    Saneamiento: Real;
+    Medicina_Rumiantes: Real;
+    Mejoramiento_Animal: Real;
+    Medicina_Caninos: Real;
+    Investigacion_I: Real;
+    Extension_I: Real;
+    Cirugia: Real;
+    Servicio_Comunitario: Real;
+    Medicina_Preventiva: Real;
+    Extension_II: Real;
+    Investigacion_II: Real;
+    Medicina_Especies: Real;
+    Legislacion: Real;
+    Produccion_Industria: Real;
+    Derecho_Constitucional: Real;
+    Epidemiologia: Real;
+    Medicina_Suinos: Real;
+    Pasantias: Real;
+Fin_Registro
+
+Registro Derecho;
+    Derecho_Civil_I: Real; 
+    Derecho_Constitucional: Real; 
+    Pensamiento_Bolivariano: Real; 
+    Introduccion_Derecho: Real; 
+    Economia_Politica: Real; 
+    Sociologia_Juridica: Real; 
+    Lenguaje_Comunicacion: Real; 
+    Metodologia_I: Real; 
+    Proyecto_I: Real; 
+    Practicas_I: Real; 
+    Electiva_I: Real; 
+    Derecho_Civil_II: Real; 
+    Derecho_Admin_I: Real; 
+    Derecho_Penal_I: Real; 
+    Derecho_Romano_I: Real; 
+    Derecho_Ambiental: Real; 
+    Medicina_Legal: Real; 
+    Derecho_Agrario: Real; 
+    Derechos_Humanos: Real; 
+    Metodologia_II: Real; 
+    Proyecto_II: Real; 
+    Practicas_II: Real; 
+    Electiva_II: Real; 
+    Obligaciones_I: Real; 
+    Derecho_Admin_II: Real; 
+    Derecho_Penal_II: Real; 
+    Derecho_Romano_II: Real; 
+    Derecho_Trabajo_I: Real; 
+    Criminologia: Real; 
+    Derecho_Inter_Publico: Real; 
+    Derecho_Proc_Penal_I: Real; 
+    Filosofia_Derecho: Real; 
+    Hacienda_Publica: Real; 
+    Electiva_III: Real; 
+    Derecho_Civil_IV: Real; 
+    Derecho_Trabajo_II: Real; 
+    Derecho_Civil_V: Real; 
+    Derecho_Tributario: Real; 
+    Obligaciones_II: Real; 
+    Derecho_Proc_Civil_I: Real; 
+    Derecho_Probatorio_I: Real; 
+    Proyecto_III: Real; 
+    Practicas_III: Real; 
+    Electiva_IV: Real; 
+    Derecho_Proc_Penal_II: Real; 
+    Obligaciones_III: Real; 
+    Derecho_Proc_Civil_II: Real; 
+    Derecho_Mercantil: Real; 
+    Derecho_Probatorio_II: Real; 
+    Derecho_Internacional_Priv: Real; 
+    Etica_Deontologia: Real; 
+    Derecho_Registral: Real; 
+    Seminario_Grado: Real; 
+    Proyecto_IV: Real; 
+    Practicas_IV: Real; 
+    Electiva_V: Real; 
+Fin_Registro
+
+Registro Comunicacion;
+    Morfosintaxis: Real;
+    Com_Social_Periodismo: Real;
+    Psicologia_Com: Real;
+    Estadistica: Real;
+    Deporte_Arte_Cultura: Real;
+    Pensamiento_Bolivariano: Real;
+    Periodismo_Informativo: Real;
+    Com_Social_Radio: Real;
+    Com_Social_Cine: Real;
+    Com_Social_TV: Real;
+    Com_Social_Foto: Real;
+    Taller_Redaccion_I: Real;
+    Proyecto_I: Real;
+    Taller_Redaccion_II: Real;
+    Com_Grafica: Real;
+    Periodismo_Radiofonico: Real;
+    Lenguaje_Cine: Real;
+    Periodismo_TV: Real;
+    Teoria_Comunicacion: Real;
+    Opinion_Publica: Real;
+    Formacion_Sociopolitica: Real;
+    Etica_Legislacion: Real;
+    Estetica_Imagen_Sonido: Real;
+    Proyecto_II: Real;
+    Investigacion_Comunicacion: Real;
+    Periodismo_Interpretativo: Real;
+    Economia_Politica: Real;
+    Proyecto_III: Real;
+    Sociologia_Comunicacion: Real;
+    Periodismo_Opinion: Real;
+    Produccion_Radio: Real;
+    Produccion_Cine: Real;
+    Seminario_Critica_I: Real;
+    Produccion_TV: Real;
+    Proyecto_IV: Real;
+    Semiologia: Real;
+    Fotoperiodismo: Real;
+    Periodismo_Cientifico: Real;
+    Relaciones_Publicas: Real;
+    Tecnologia_Informacion: Real;
+    Seminario_Critica_II: Real;
+    Montajes_Audiovisuales: Real;
+    Proyecto_V: Real;
+    Locucion_Basica: Real;
+    Idioma_Moderno: Real;
+    Periodismo_Economico: Real;
+    Orientacion_Profesional: Real;
+    Publicidad: Real;
+    Seminario_Critica_III: Real;
+    Proyecto_VI: Real;
+    Gerencia_Corporativa: Real;
+    Periodismo_Politico: Real;
+    Mercadeo: Real;
+    Locucion_Profesional: Real;
+    Proyecto_VII: Real;
+    Orientacion_Prof_I: Real;
+    Vinculacion_Profesional: Real;
+    Trabajo_Grado: Real;
+Fin_Registro
+
+Registro Contaduria;
+    Matematica_I: Real;
+    Lenguaje_Comunicacion: Real;
+    Legislacion_Mercantil: Real;
+    Contabilidad_I: Real;
+    Sociopolitica_Productiva: Real;
+    Metodologia_Investigacion: Real;
+    Deporte_Recreacion: Real;
+    Ingles: Real;
+    Legislacion_Laboral: Real;
+    Estadistica_I: Real;
+    Introduccion_Administracion: Real;
+    Arte_Cultura: Real;
+    Matematica_II: Real;
+    Contabilidad_II: Real;
+    Informatica: Real;
+    Calculo_Financiero: Real;
+    Teoria_Economica: Real;
+    Procesos_Administrativos: Real;
+    Estadistica_II: Real;
+    Contabilidad_III: Real;
+    Practica_Profesional_I: Real;
+    Auditoria_I: Real;
+    Contabilidad_Especializada_I: Real;
+    Finanzas_Gestion_Presupuestaria: Real;
+    Administracion_Publica: Real;
+    Contabilidad_Costos_I: Real;
+    Sistemas_Informacion_Gerencial: Real;
+    Investigacion_Operaciones: Real;
+    Contabilidad_Especializada_II: Real;
+    Electiva_I: Real;
+    Auditoria_II: Real;
+    Contabilidad_Costos_II: Real;
+    Sistemas_Tributarios_I: Real;
+    Mercadeo: Real;
+    Presupuesto: Real;
+    Seminario_I: Real;
+    Electiva_I_2: Real;
+    Contabilidad_Costos_III: Real;
+    Practica_Profesional_II: Real;
+    Gestion_Talento_Humano: Real;
+    Etica_Desarrollo_Profesional: Real;
+    Electiva_II: Real;
+    Sistemas_Tributarios_II: Real;
+    Auditoria_III: Real;
+    Analisis_Estados_Financieros: Real;
+    Seminario_II: Real;
+    Instituciones_Financieras: Real;
+    Pasantias: Real;
+    Electiva_II_2: Real;
+    Tesina_Grado: Real;
+Fin_Registro
+
+Registro Economia;
+    Introduccion_Economia: Real;
+    Analisis_Matematico_I: Real;
+    Lenguaje_Comunicacion: Real;
+    Fundamentos_Derecho: Real;
+    Metodologia_Investigacion: Real;
+    Deporte_Recreacion: Real;
+    Ingles_Instrumental: Real;
+    Sociologia: Real;
+    Contabilidad_General_I: Real;
+    Informatica: Real;
+    Arte_Cultura: Real;
+    Estadistica_I: Real;
+    Economia_I: Real;
+    Analisis_Matematico_II: Real;
+    Sociopolitica_Productiva: Real;
+    Introduccion_Administracion: Real;
+    Historia_Doctrina_Economica: Real;
+    Economia_II: Real;
+    Estadistica_II: Real;
+    Contabilidad_General_II: Real;
+    Informatica_Aplicada: Real;
+    Teoria_Investigacion_Mercado: Real;
+    Seminario_I: Real;
+    Macroeconomia_I: Real;
+    Analisis_Financiero: Real;
+    Matematica_III: Real;
+    Microeconomia_I: Real;
+    Estadistica_Aplicada: Real;
+    Contabilidad_Social: Real;
+    Desarrollo_Economico: Real;
+    Analisis_Economico_Regional: Real;
+    Macroeconomia_II: Real;
+    Microeconomia_II: Real;
+    Matematica_Financiera: Real;
+    Economia_Politica: Real;
+    Formulacion_Evaluacion_Proyectos: Real;
+    Investigacion_Operaciones: Real;
+    Teoria_Politica_Fiscal: Real;
+    Electiva_I: Real;
+    Seminario_II: Real;
+    Econometria: Real;
+    Teoria_Politica_Monetaria: Real;
+    Planificacion: Real;
+    Economia_Internacional: Real;
+    Electiva_II: Real;
+    Seminario_III: Real;
+    Electiva_III: Real;
+    Trabajo_Final_Grado: Real;
+Fin_Registro
+
+Inicio
+    //Variables Maestras
+    Var Estudiantes: Datos[5000], Enfermedad: Salud[5000];
+    Var Notas: Materias, 
+    Var Informatica: Info[5000], Civil: Civ[5000], Hidrocarburos: Hid[5000];
+    Var Medicina: Med[5000], Odontologia: Odo[5000], Veterinaria: Vet[5000];
+    Var Derecho: Der[5000], Comunicacion: Soc[5000];
+    Var Contaduria: Con[5000], Economia: Eco[5000];
+    Var Solicitud_Empleo: Empleo[500];
+    Var Administrativos: Admin[500];
+    Var Estudiantes: Datos[500];
+    
+    //Variables Globales
+    Var K = 1, I, Opcion, Minimo, Maximo: Entero;
+    Var Rol: Cadena;
+    Var R, Acceso: Booleano;
+    Var Tema = 0: Booleano;
+    Var Avatares[20]: Cadena;
+    Var Suma: Real;
+    Var Datos[pos_usuario].Servicio_Comunitario = 0: Booleano;
+
+    Relleno_Bot(Bot[I].Preguntas, Bot[I].Respuesta1, Bot[I].Respuesta2, Bot[I].Respuesta3, Bot[I].Respuesta4);
+    Repetir
+        Menu_Registro_Login(Opcion);
+        Mostrar << Menu_Registro_Login;
+        Si (Rol = "Administrativo") Entonces;
+            Menu_Administrativo(club, carnet, Nov, Re, S, v, C, Lim, K, Empleo[K].Edad, Empleo[K].CI, Admin[I].CI, Gestion[C].CI, Gestion[C].Edad, Gestion[C].Year, Gestion[C].Semestre, Datos[I].CI, Datos[I].Year, Datos[I].Semestre, Pas[I].Edad, Pas[I].Cedula, Pas[I].Semestre, Pas[I].Year, Pas[I].Estado_Solicitud, Plan[I].ID_Plan, Plan[I].Ponderacion, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima, Clase[I].CI_Profesor, Clase[I].Cant_Estudiantes, Prof[I].CI, Prof[I].Cant_Materias, Prof[I].Cant_Clases, Empleo[K].Usuario, Empleo[K].Gmail, Empleo[K].Password, Empleo[K].Experiencia, Empleo[K].Titulo, Empleo[K].Descripcion, Lim, Admin[I].Usuario, Admin[I].Cargo, Admin[I].Gmail, Admin[I].Password, Gestion[C].Usuario, Gestion[C].Password, Gestion[C].Carrera, Datos[I].Usuario, Datos[I].Gmail, Datos[I].Password, Datos[I].Carrera, Soli[I].Titulo, Soli[I].Descripcion, Soli[I].Titular, Soli[I].Destinatario, Rep[I].Titulo, Rep[I].Descripcion, Rep[I].Titular, Rep[I].Problema, Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar, Pas[I].Nombre, Pas[I].Password, Pas[I].Carrera, Pas[I].Empresa, Carn[carnet].Carrera, Carn[carnet].Lugar, Carn[carnet].Fecha, Plan[I].Nombre_Profesor, Plan[I].Codigo_Materia, Plan[I].Nombre_Materia, Plan[I].Fecha, Plan[I].Tema, Plan[I].Estrategia, Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Avatares[I], Admin[pos_admin].Avatar, Clase[I].Nombre_Profesor, Clase[I].Codigo_Materia, Clase[I].Periodo, Salud_Admin[pos_admin].Enfermedad_Cronica, Cronica[I], Salud_Admin[pos_admin].Discapacidad, Discapacidad[I], Salud_Admin[pos_admin].Corazon, Corazon[I], Salud_Admin[pos_admin].Cancer, Cancer[I], Prof[I].Nombre, Prof[I].Gmail. Prof[I].Materias, Pas[I].Horas, Carn[carnet].Precio, Empleo[K].Estado, Gestion[I].Estado, Soli[I].Estado, Rep[I].Recibido, Ad.Servicio_Comunitario, Inscripciones, Carn[carnet].Activo, Plan[I].Firmado, Club[I].Activo, Tema, Salud_Admin[pos_admin].Asma);
+            Mostrar << Menu_Administrativo;
+        Sino
+            Si (Rol = "Docente") Entonces;
+                Menu_Docente(Prof[pos].Materias, Materias[I].Nombre, Materias[I].Codigo, cod, Base.Lista[I].Hora_Inicio, Base.Lista[I].Hora_Fin, Base.Lista[I].Dia, Base.Lista[I].Aula, Base.Lista[I].Codigo_Materia, Base.Lista[I].Estado, Prof[i].Nombre, Clase[i].Nombre_Profesor, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Clase[i].Aula, Clase[i].Nombre_Materia, Clase[i].Codigo_Materia, Soli[i].Titulo, Soli[i].Descripcion, Soli[i].Titular, Soli[i].Destinatario, Soli[i].Fecha, Prof[pos].Nombre, Soli[i].Estado, Asig[i].Codigo_Materia, Asig[i].Descripcion, Asig[i].Fecha_Publicacion, Asig[i].Fecha_Entrega, Asig[i].Estado, Mag[magis].Fecha, Mag[magis].Aula, Mag[magis].Nombre_Materia, Mag[magis].Codigo_Materia, Mag[magis].Nombre_Profesor, Plan[P].Fecha, Plan[P].Tema, Plan[P].Estrategia, Plan[P].Nombre_Profesor, Plan[P].Nombre_Materia, Plan[P].Codigo_Materia, cod, Datos[L].Nombre, carrera, Avatares[I], Prof[pos].Avatar, Prof[pos].Gmail, Prof[pos].Password, Prof[pos].Salud[pos].Transmisibles, Prof[pos].Salud[pos].Cronicas, Prof[pos].Salud[pos].Neurologicas, Prof[pos].Salud[pos].Neoplasias, Prof[pos].Salud[pos].Autoinmunes, Prof[pos].Salud[pos].Trastornos, Prof[pos].Salud[pos].Lesiones, Prof[pos].Salud[pos].Congenitas, Prof[pos].Salud[pos].Metabolicos, Prof[pos].Salud[pos].Ocupacionales, Clase[I].Periodo, Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar, Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera, Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion, Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion, Prof[pos].Cant_Materias, Prof[I].Cant_Clases, Clase[i].Seccion, Clase[i].Cant_Estudiantes, S, As, Prof[pos].Cedula, Mag[magis].CI_Profesor, Mag[magis].ID_Clase, Clase[J].ID_Clase, magis, Plan[P].Ponderacion, Plan[P].ID_Plan, P, J, Lista[F].ID_Lista, Clase[K].CI_Profesor, Clase[K].Seccion, Datos[L].CI, Prof[pos].CI, I, Am, Gru[I].Miembros, Gru[I].Seccion, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Datos[J].Semestre, Datos[J].Year, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima, Mag[magis].Horas, Mag[magis].Precio, Datos[L].Materias.Info[L].Lenguaje_Comunicacion, Datos[L].Materias.Info[L].Economia_Digital, Datos[L].Materias.Info[L].Deporte, Datos[L].Materias.Info[L].Matematica_I, Datos[L].Materias.Info[L].Matematica_II, Datos[L].Materias.Info[L].Fisica_I, Datos[L].Materias.Info[L].Fundamentos_Informatica, Datos[L].Materias.Info[L].Logica_Matematica, Datos[L].Materias.Info[L].Algoritmos_I, Datos[L].Materias.Info[L].Ingles_I, Datos[L].Materias.Info[L].Ingles_II, Datos[L].Materias.Info[L].Prob_Cient_Tec, Datos[L].Materias.Info[L].Formacion_Constitucional, Datos[L].Materias.Info[L].Arte_Y_Cultura, Datos[L].Materias.Info[L].Electiva_I, Datos[L].Materias.Info[L].Matematica_III, Datos[L].Materias.Info[L].Fisica_II, Datos[L].Materias.Info[L].Algoritmos_II, Datos[L].Materias.Info[L].Programacion_I, Datos[L].Materias.Info[L].Electiva_II, Datos[L].Materias.Info[L].Tecnicas_Investigacion, Datos[L].Materias.Info[L].Matematica_IV, Datos[L].Materias.Info[L].Probabilidad_Estadistica, Datos[L].Materias.Info[L].Estructuras_Discretas_I, Datos[L].Materias.Info[L].Programacion_II, Datos[L].Materias.Info[L].Base_Datos, Datos[L].Materias.Info[L].Electiva_III, Datos[L].Materias.Info[L].Organizacion_Computador, Datos[L].Materias.Info[L].Algebra_Booleana, Datos[L].Materias.Info[L].Estructuras_Discretas_II, Datos[L].Materias.Info[L].Programacion_III, Datos[L].Materias.Info[L].Electiva_IV, Datos[L].Materias.Info[L].Teoria_Sistemas, Datos[L].Materias.Info[L].Arquitectura_Computador, Datos[L].Materias.Info[L].Metodos_Numericos, Datos[L].Materias.Info[L].Investigacion_Operaciones, Datos[L].Materias.Info[L].Sistemas_Informacion_I, Datos[L].Materias.Info[L].Electiva_V, Datos[L].Materias.Info[L].Ingenieria_Economica, Datos[L].Materias.Info[L].Sistemas_Operativos, Datos[L].Materias.Info[L].Traductores_Interpretes, Datos[L].Materias.Info[L].Sistemas_Informacion_II, Datos[L].Materias.Info[L].Control_Proyectos, Datos[L].Materias.Info[L].Gestion_Empresarial, Datos[L].Materias.Info[L].Redes, Datos[L].Materias.Info[L].Lenguajes_Programacion, Datos[L].Materias.Info[L].Sistemas_Informacion_III, Datos[L].Materias.Info[L].Etica_Profesional, Datos[L].Materias.Info[L].Pasantias, Datos[L].Materias.Info[L].Electiva_Area_I, Datos[L].Materias.Info[L].Sistemas_Distribuidos, Datos[L].Materias.Info[L].Electiva_Libre_I, Datos[L].Materias.Info[L].Proyecto_Grado_I, Datos[L].Materias.Info[L].Informatica_Educativa, Datos[L].Materias.Info[L].Electiva_Area_II, Datos[L].Materias.Info[L].Electiva_Libre_II, Datos[L].Materias.Info[L].Gerencia_Proyectos, Datos[L].Materias.Info[L].Proyecto_Grado_II, Datos[L].Materias.Info[L].Electiva_Area_III, Datos[L].Materias.Civ[L].Ingles_Tecnico, Datos[L].Materias.Civ[L].Tec_Estudio_Doc, Datos[L].Materias.Civ[L].Metod_Razonamiento_Logico, Datos[L].Materias.Civ[L].Arte_Y_Cultura, Datos[L].Materias.Civ[L].Calculo_I, Datos[L].Materias.Civ[L].Calculo_II, Datos[L].Materias.Civ[L].Fisica_I, Datos[L].Materias.Civ[L].Geometria_Descriptiva_I, Datos[L].Materias.Civ[L].Geometria_Descriptiva_II, Datos[L].Materias.Civ[L].Introduccion_Ciencias_Humanas, Datos[L].Materias.Civ[L].Sociedad_Ciencia_Tecnologia, Datos[L].Materias.Civ[L].Fisica_II, Datos[L].Materias.Info[L].Calculo_III, Datos[L].Materias.Civ[L].Mecanica_Racional_I, Datos[L].Materias.Civ[L].Informatica_Para_Ingenieros, Datos[L].Materias.Civ[L].Quimica_Basica, Datos[L].Materias.Civ[L].Deportes, Datos[L].Materias.Civ[L].Mecanica_Racional_II, Datos[L].Materias.Civ[L].Quimica_Aplicada, Datos[L].Materias.Civ[L].Topografia, Datos[L].Materias.Civ[L].Calculo_IV, Datos[L].Materias.Civ[L].Estadistica_Para_Ingenieros, Datos[L].Materias.Civ[L].Electiva_No_Tecnica, Datos[L].Materias.Civ[L].Geologia_Aplicada, Datos[L].Materias.Civ[L].Resistencia_De_Materiales, Datos[L].Materias.Civ[L].Electiva_No_Tecnica_II, Datos[L].Materias.Civ[L].Materiales_Y_Ensayos, Datos[L].Materias.Civ[L].Mecanica_De_Fluidos_I, Datos[L].Materias.Civ[L].Calculo_V, Datos[L].Materias.Civ[L].Mecanica_De_Suelos, Datos[L].Materias.Civ[L].H_San_Ambiental, Datos[L].Materias.Civ[L].Teorias_De_Estructuras_I, Datos[L].Materias.Civ[L].Dibujo_De_Proyectos, Datos[L].Materias.Civ[L].Hidrologia, Datos[L].Materias.Civ[L].Mecanica_De_Fluidos_II, Datos[L].Materias.Civ[L].Teorias_De_Estructuras_II, Datos[L].Materias.Civ[L].Ingenieria_Economica, Datos[L].Materias.Civ[L].Instalaciones_Para_Edificios, Datos[L].Materias.Civ[L].Metodologia_Investigacion, Datos[L].Materias.Civ[L].Acueductos_Y_Cloacas, Datos[L].Materias.Civ[L].Electiva_Tecnica, Datos[L].Materias.Civ[L].Electiva_Tecnica_II, Datos[L].Materias.Civ[L].Obras_Hidraulicas, Datos[L].Materias.Civ[L].Practica_Profesional, Datos[L].Materias.Civ[L].Concreto_Armado, Datos[L].Materias.Civ[L].Vias_De_Comunicacion_I, Datos[L].Materias.Civ[L].Proy_Estructurales_Acero, Datos[L].Materias.Civ[L].Practica_Comunitaria, Datos[L].Materias.Civ[L].Trabajo_Grado_I, Datos[L].Materias.Civ[L].Concreto_Pretenzado, Datos[L].Materias.Civ[L].Fundaciones_Y_Muros, Datos[L].Materias.Civ[L].Vias_De_Comunicacion_II, Datos[L].Materias.Civ[L].Proyectos_Estructurales_Concreto, Datos[L].Materias.Civ[L].Trabajo_Grado_II, Datos[L].Materias.Civ[L].Administracion_De_Obras, Datos[L].Materias.Civ[L].Pavimentos, Datos[L].Materias.Civ[L].Puentes, Datos[L].Materias.Hid[L].Formacion_Socio_I, Datos[L].Materias.Hid[L].Proyecto_I, Datos[L].Materias.Hid[L].Dibujo_Tecnico, Datos[L].Materias.Hid[L].Matematica_I, Datos[L].Materias.Hid[L].Ingles_Tecnico, Datos[L].Materias.Hid[L].Quimica_Inorganica, Datos[L].Materias.Hid[L].Orientacion_Ing, Datos[L].Materias.Hid[L].Arte_Cultura, Datos[L].Materias.Hid[L].Informatica, Datos[L].Materias.Hid[L].Matematica_II, Datos[L].Materias.Hid[L].Fisica_I, Datos[L].Materias.Hid[L].Quimica_Organica, Datos[L].Materias.Hid[L].Formacion_Socio_II, Datos[L].Materias.Hid[L].Proyecto_II, Datos[L].Materias.Hid[L].Deporte, Datos[L].Materias.Hid[L].Formacion_Socio_III, Datos[L].Materias.Hid[L].Proyecto_III, Datos[L].Materias.Hid[L].Fisica_II, Datos[L].Materias.Hid[L].Geologia_General, Datos[L].Materias.Hid[L].Matematica_III, Datos[L].Materias.Hid[L].Lab_Fisica, Datos[L].Materias.Hid[L].Formacion_Socio_IV, Datos[L].Materias.Hid[L].Proyecto_IV, Datos[L].Materias.Hid[L].Mecanica_Rocas_Fluidos, Datos[L].Materias.Hid[L].Probabilidades_Estadisticas, Datos[L].Materias.Hid[L].Termodinamica, Datos[L].Materias.Hid[L].Caracterizacion_Fisica_Yac, Datos[L].Materias.Hid[L].Sistema_Comprension_Gas, Datos[L].Materias.Hid[L].Legislacion_Petrolera, Datos[L].Materias.Hid[L].Proyecto_V, Datos[L].Materias.Hid[L].Perforacion_Pozos, Datos[L].Materias.Hid[L].Caracterizacion_Energetica_Yac, Datos[L].Materias.Hid[L].Transporte_Distribucion, Datos[L].Materias.Hid[L].Geologia_Estructural, Datos[L].Materias.Hid[L].Comercio_Internacional, Datos[L].Materias.Hid[L].Proyecto_VI, Datos[L].Materias.Hid[L].Seguridad_Industrial, Datos[L].Materias.Hid[L].Caracterizacion_Dinamica_Yac, Datos[L].Materias.Hid[L].Perfilaje_Pozos, Datos[L].Materias.Hid[L].Completacion_Pozos, Datos[L].Materias.Hid[L].Recuperacion_Secundaria, Datos[L].Materias.Hid[L].Proyecto_VII, Datos[L].Materias.Hid[L].Geologia_Produccion, Datos[L].Materias.Hid[L].Ing_Produccion_I, Datos[L].Materias.Hid[L].Proteccion_Riesgos, Datos[L].Materias.Hid[L].Electiva_Corrosion, Datos[L].Materias.Hid[L].Auditoria_Ambiental, Datos[L].Materias.Hid[L].Transferencia_Calor, Datos[L].Materias.Hid[L].Procesos_Petroquimicos, Datos[L].Materias.Hid[L].Proyecto_VIII, Datos[L].Materias.Hid[L].Electiva_Calidad, Datos[L].Materias.Hid[L].Ing_Produccion_II, Datos[L].Materias.Hid[L].Simulacion_Yacimientos, Datos[L].Materias.Hid[L].Procesos_Refinacion, Datos[L].Materias.Hid[L].TEG, Datos[L].Materias.Hid[L].Recuperacion_Mejorada, Datos[L].Materias.Med[L].Histologia_Embriologia, Datos[L].Materias.Med[L].Bioetica_I, Datos[L].Materias.Med[L].Medicina_General_I, Datos[L].Materias.Med[L].Deportes_Arte_Cultura_I, Datos[L].Materias.Med[L].Metod_Investigacion, Datos[L].Materias.Med[L].Medicina_Preventiva_I, Datos[L].Materias.Med[L].Anatomia_Humana, Datos[L].Materias.Med[L].Antropologia, Datos[L].Materias.Med[L].Microbiologia, Datos[L].Materias.Med[L].Deportes_Arte_Cultura_II, Datos[L].Materias.Med[L].Bioquimica, Datos[L].Materias.Med[L].Medicina_General_II, Datos[L].Materias.Med[L].Psicologia_Sociologia, Datos[L].Materias.Med[L].Estadistica_Demografia, Datos[L].Materias.Med[L].Fisiologia_Biofisica, Datos[L].Materias.Med[L].Informatica, Datos[L].Materias.Med[L].Medicina_Preventiva_II, Datos[L].Materias.Med[L].Derecho_Constitucional, Datos[L].Materias.Med[L].Medicina_Preventiva_III, Datos[L].Materias.Med[L].Parasitologia, Datos[L].Materias.Med[L].Semiologia, Datos[L].Materias.Med[L].Farmacologia, Datos[L].Materias.Med[L].Etica_Deontologia, Datos[L].Materias.Med[L].Fisiopatologia, Datos[L].Materias.Med[L].Nutricion, Datos[L].Materias.Med[L].Psicologia_Medica, Datos[L].Materias.Med[L].Medicina_General_III, Datos[L].Materias.Med[L].Psicopatologia, Datos[L].Materias.Med[L].Clinica_Obstetrica_I, Datos[L].Materias.Med[L].Clinica_Quirurgica_I, Datos[L].Materias.Med[L].Clinica_Pediatrica_I, Datos[L].Materias.Med[L].Anatomia_Patologica, Datos[L].Materias.Med[L].Medicina_Preventiva_IV, Datos[L].Materias.Med[L].Medicina_General_IV, Datos[L].Materias.Med[L].Clinica_Medica_I, Datos[L].Materias.Med[L].Clinica_Quirurgica_II, Datos[L].Materias.Med[L].Medicina_General_V, Datos[L].Materias.Med[L].Clinica_Pediatrica_II, Datos[L].Materias.Med[L].Medicina_Legal, Datos[L].Materias.Med[L].Medicina_Preventiva_V, Datos[L].Materias.Med[L].Clinica_Psiquiatrica, Datos[L].Materias.Med[L].Clinica_Obstetrica_II, Datos[L].Materias.Med[L].Clinica_Medica_II, Datos[L].Materias.Med[L].Internado_Rural, Datos[L].Materias.Med[L].Clinica_Medica_III, Datos[L].Materias.Med[L].Clinica_Quirurgica_III, Datos[L].Materias.Med[L].Clinica_Obstetrica_III, Datos[L].Materias.Med[L].Clinica_Pediatrica_III, Datos[L].Materias.Med[L].Trabajo_Grado, Datos[L].Materias.Odo[L].Morfologia_Dentaria, Datos[L].Materias.Odo[L].Formacion_Cultural_I, Datos[L].Materias.Odo[L].Odontologia_Comunitaria_I, Datos[L].Materias.Odo[L].Iniciacion_Clinica, Datos[L].Materias.Odo[L].Morfologia_Humana, Datos[L].Materias.Odo[L].Formacion_Instrumental_I, Datos[L].Materias.Odo[L].Bioquimica_Aplicada, Datos[L].Materias.Odo[L].Histologia_Embriologia, Datos[L].Materias.Odo[L].Deportes_I, Datos[L].Materias.Odo[L].Investigacion_I, Datos[L].Materias.Odo[L].Odontologia_Comunitaria_II, Datos[L].Materias.Odo[L].Histofisiologia, Datos[L].Materias.Odo[L].Clinica_Adulto_I, Datos[L].Materias.Odo[L].Biomateriales, Datos[L].Materias.Odo[L].Deportes_II, Datos[L].Materias.Odo[L].Investigacion_II, Datos[L].Materias.Odo[L].Microbiologia_Parasitologia, Datos[L].Materias.Odo[L].Formacion_Instrumental_II, Datos[L].Materias.Odo[L].Formacion_Cultural_II, Datos[L].Materias.Odo[L].Investigacion_III, Datos[L].Materias.Odo[L].Clinica_Adulto_II, Datos[L].Materias.Odo[L].Atencion_Nino_I, Datos[L].Materias.Odo[L].Odontologia_Comunitaria_III, Datos[L].Materias.Odo[L].Medicina_Semiologia, Datos[L].Materias.Odo[L].Fisiopatologia, Datos[L].Materias.Odo[L].Farmacologia, Datos[L].Materias.Odo[L].Investigacion_IV, Datos[L].Materias.Odo[L].Clinica_Adulto_III, Datos[L].Materias.Odo[L].Odontologia_Comunitaria_IV, Datos[L].Materias.Odo[L].Atencion_Nino_II, Datos[L].Materias.Odo[L].Investigacion_V, Datos[L].Materias.Odo[L].Gerontologia, Datos[L].Materias.Odo[L].Odontologia_Comunitaria_V, Datos[L].Materias.Odo[L].Toxicologia, Datos[L].Materias.Vet[L].Computacion, Datos[L].Materias.Vet[L].Deportes, Datos[L].Materias.Vet[L].Perfil_Profesional, Datos[L].Materias.Vet[L].Ecologia_Agricola, Datos[L].Materias.Vet[L].Ingles_Instrumental, Datos[L].Materias.Vet[L].Anatomia_I, Datos[L].Materias.Vet[L].Faenas_Pecuarias, Datos[L].Materias.Vet[L].Bioquimica, Datos[L].Materias.Vet[L].Electiva_Complementaria, Datos[L].Materias.Vet[L].Zoologia, Datos[L].Materias.Vet[L].Histologia, Datos[L].Materias.Vet[L].Microbiologia, Datos[L].Materias.Vet[L].Genetica, Datos[L].Materias.Vet[L].Zootecnia, Datos[L].Materias.Vet[L].Bioestadistica, Datos[L].Materias.Vet[L].Arte_Cultura, Datos[L].Materias.Vet[L].Fisiologia_Animal, Datos[L].Materias.Vet[L].Patologia_Clinica, Datos[L].Materias.Vet[L].Reproduccion, Datos[L].Materias.Vet[L].Farmacologia, Datos[L].Materias.Vet[L].Semiologia, Datos[L].Materias.Vet[L].Nutricion, Datos[L].Materias.Vet[L].Parasitologia, Datos[L].Materias.Vet[L].Anatomia_Patologica, Datos[L].Materias.Vet[L].Investigacion_I, Datos[L].Materias.Vet[L].Medicina_Caninos, Datos[L].Materias.Vet[L].Gerencia, Datos[L].Materias.Vet[L].Mejoramiento_Animal, Datos[L].Materias.Vet[L].Medicina_Rumiantes, Datos[L].Materias.Vet[L].Cirugia, Datos[L].Materias.Vet[L].Saneamiento, Datos[L].Materias.Vet[L].Extension_I, Datos[L].Materias.Vet[L].Medicina_Preventiva, Datos[L].Materias.Vet[L].Produccion_Industria, Datos[L].Materias.Vet[L].Derecho_Constitucional, Datos[L].Materias.Vet[L].Medicina_Suinos, Datos[L].Materias.Vet[L].Medicina_Especies, Datos[L].Materias.Vet[L].Legislacion, Datos[L].Materias.Vet[L].Servicio_Comunitario, Datos[L].Materias.Vet[L].Pasantias, Datos[L].Materias.Vet[L].Epidemiologia, Datos[L].Materias.Vet[L].Investigacion_II, Datos[L].Materias.Vet[L].Extension_II, Datos[L].Materias.Der[L].Derecho_Civil_I, Datos[L].Materias.Der[L].Derecho_Constitucional, Datos[L].Materias.Der[L].Pensamiento_Bolivariano, Datos[L].Materias.Der[L].Introduccion_Derecho, Datos[L].Materias.Der[L].Economia_Politica, Datos[L].Materias.Der[L].Investigacion_Jurídica, Datos[L].Materias.Der[L].Derecho_Popular, Datos[L].Materias.Der[L].Derecho_Romano, Datos[L].Materias.Der[L].Logica_Juridica, Datos[L].Materias.Der[L].Deontologia_Juridica, Datos[L].Materias.Der[L].Arte_Cultura, Datos[L].Materias.Der[L].Deporte, Datos[L].Materias.Der[L].Derecho_Agrario, Datos[L].Materias.Der[L].Derecho_Ambiental, Datos[L].Materias.Der[L].Medicina_Legal, Datos[L].Materias.Der[L].Criminologia, Datos[L].Materias.Der[L].Derecho_Penal_I, Datos[L].Materias.Der[L].Filosofia_Derecho, Datos[L].Materias.Der[L].Derecho_Registral, Datos[L].Materias.Der[L].Proyecto_I, Datos[L].Materias.Der[L].Derecho_Civil_II, Datos[L].Materias.Der[L].Practicas_Juridicas_I, Datos[L].Materias.Der[L].Electiva_I, Datos[L].Materias.Der[L].Derecho_Administrativo, Datos[L].Materias.Der[L].Derecho_Penal_II, Datos[L].Materias.Der[L].Derecho_Laboral, Datos[L].Materias.Der[L].Derecho_Familiar, Datos[L].Materias.Der[L].Obligaciones_I, Datos[L].Materias.Der[L].Derecho_Inter_Publico, Datos[L].Materias.Der[L].Teoria_General, Datos[L].Materias.Der[L].Derecho_Tributario, Datos[L].Materias.Der[L].Proyecto_II, Datos[L].Materias.Der[L].Practicas_Juridicas_II, Datos[L].Materias.Der[L].Electiva_II, Datos[L].Materias.Der[L].Derecho_Contencioso, Datos[L].Materias.Der[L].Derecho_Proc_Penal_I, Datos[L].Materias.Der[L].Derecho_Proc_Laboral_I, Datos[L].Materias.Der[L].Derecho_Sucesiones, Datos[L].Materias.Der[L].Obligaciones_II, Datos[L].Materias.Der[L].Derecho_Internacional_Priv, Datos[L].Materias.Der[L].Derecho_Proc_Civil_I, Datos[L].Materias.Der[L].Derecho_Probatorio_I, Datos[L].Materias.Der[L].Proyecto_III, Datos[L].Materias.Der[L].Practicas_Juridicas_III, Datos[L].Materias.Der[L].Electiva_III, Datos[L].Materias.Der[L].Derecho_Proc_Penal_II, Datos[L].Materias.Der[L].Obligaciones_III, Datos[L].Materias.Der[L].Derecho_Proc_Civil_II, Datos[L].Materias.Der[L].Derecho_Mercantil, Datos[L].Materias.Der[L].Derecho_Probatorio_II, Datos[L].Materias.Der[L].Contratos_Garantias, Datos[L].Materias.Der[L].Proyecto_IV, Datos[L].Materias.Der[L].Practicas_Juridicas_IV, Datos[L].Materias.Der[L].Electiva_IV, Datos[L].Materias.Soc[L].Morfosintaxis, Datos[L].Materias.Soc[L].Com_Social_Periodismo, Datos[L].Materias.Soc[L].Psicologia_Com, Datos[L].Materias.Soc[L].Estadistica, Datos[L].Materias.Soc[L].Deporte_Arte_Cultura, Datos[L].Materias.Soc[L].Pensamiento_Bolivariano, Datos[L].Materias.Soc[L].Periodismo_Informativo, Datos[L].Materias.Soc[L].Com_Social_Radio, Datos[L].Materias.Soc[L].Com_Social_Cine, Datos[L].Materias.Soc[L].Com_Social_TV, Datos[L].Materias.Soc[L].Com_Social_Foto, Datos[L].Materias.Soc[L].Taller_Redaccion_I, Datos[L].Materias.Soc[L].Proyecto_I, Datos[L].Materias.Soc[L].Taller_Redaccion_II, Datos[L].Materias.Soc[L].Com_Grafica, Datos[L].Materias.Soc[L].Periodismo_Radiofonico, Datos[L].Materias.Soc[L].Lenguaje_Cine, Datos[L].Materias.Soc[L].Periodismo_TV, Datos[L].Materias.Soc[L].Estetica_Imagen_Sonido, Datos[L].Materias.Soc[L].Teoria_Comunicacion, Datos[L].Materias.Soc[L].Opinion_Publica, Datos[L].Materias.Soc[L].Formacion_Sociopolitica, Datos[L].Materias.Soc[L].Proyecto_II, Datos[L].Materias.Soc[L].Etica_Legislacion, Datos[L].Materias.Soc[L].Proyecto_III, Datos[L].Materias.Soc[L].Sociologia_Comunicacion, Datos[L].Materias.Soc[L].Investigacion_Comunicacion, Datos[L].Materias.Soc[L].Periodismo_Interpretativo, Datos[L].Materias.Soc[L].Periodismo_Opinion, Datos[L].Materias.Soc[L].Economia_Politica, Datos[L].Materias.Soc[L].Produccion_TV, Datos[L].Materias.Soc[L].Produccion_Radio, Datos[L].Materias.Soc[L].Produccion_Cine, Datos[L].Materias.Soc[L].Seminario_Critica_I, Datos[L].Materias.Soc[L].Proyecto_IV, Datos[L].Materias.Soc[L].Semiologia, Datos[L].Materias.Soc[L].Fotoperiodismo, Datos[L].Materias.Soc[L].Seminario_Critica_II, Datos[L].Materias.Soc[L].Periodismo_Cientifico, Datos[L].Materias.Soc[L].Montajes_Audiovisuales, Datos[L].Materias.Soc[L].Relaciones_Publicas, Datos[L].Materias.Soc[L].Proyecto_V, Datos[L].Materias.Soc[L].Tecnologia_Informacion, Datos[L].Materias.Soc[L].Locucion_Basica, Datos[L].Materias.Soc[L].Publicidad, Datos[L].Materias.Soc[L].Idioma_Moderno, Datos[L].Materias.Soc[L].Seminario_Critica_III, Datos[L].Materias.Soc[L].Periodismo_Economico, Datos[L].Materias.Soc[L].Proyecto_VI, Datos[L].Materias.Soc[L].Orientacion_Profesional_I, Datos[L].Materias.Soc[L].Gerencia_Corporativa, Datos[L].Materias.Soc[L].Mercadeo, Datos[L].Materias.Soc[L].Locucion_Profesional, Datos[L].Materias.Soc[L].Proyecto_VII, Datos[L].Materias.Soc[L].Periodismo_Politico, Datos[L].Materias.Soc[L].Orientacion_Profesional_II, Datos[L].Materias.Soc[L].Vinculacion_Profesional, Datos[L].Materias.Soc[L].Trabajo_Grado, Datos[L].Materias.Con[L].Matematica_I, Datos[L].Materias.Con[L].Lenguaje_Comunicacion, Datos[L].Materias.Con[L].Legislacion_Mercantil, Datos[L].Materias.Con[L].Contabilidad_I, Datos[L].Materias.Con[L].Sociopolitica_Productiva, Datos[L].Materias.Con[L].Metodologia_Investigacion, Datos[L].Materias.Con[L].Deporte_Recreacion, Datos[L].Materias.Con[L].Matematica_II, Datos[L].Materias.Con[L].Contabilidad_II, Datos[L].Materias.Con[L].Ingles, Datos[L].Materias.Con[L].Legislacion_Laboral, Datos[L].Materias.Con[L].Estadistica_I, Datos[L].Materias.Con[L].Introduccion_Administracion, Datos[L].Materias.Con[L].Arte_Cultura, Datos[L].Materias.Con[L].Informatica, Datos[L].Materias.Con[L].Calculo_Financiero, Datos[L].Materias.Con[L].Teoria_Economica, Datos[L].Materias.Con[L].Estadistica_II, Datos[L].Materias.Con[L].Contabilidad_III, Datos[L].Materias.Con[L].Procesos_Administrativos, Datos[L].Materias.Con[L].Contabilidad_Costos_I, Datos[L].Materias.Con[L].Practica_Profesional_I, Datos[L].Materias.Con[L].Auditoria_I, Datos[L].Materias.Con[L].Contabilidad_Especializada_I, Datos[L].Materias.Con[L].Finanzas_Gestion_Presupuestaria, Datos[L].Materias.Con[L].Administracion_Publica, Datos[L].Materias.Con[L].Sistemas_Informacion_Gerencial, Datos[L].Materias.Con[L].Investigacion_Operaciones, Datos[L].Materias.Con[L].Auditoria_II, Datos[L].Materias.Con[L].Contabilidad_Especializada_II, Datos[L].Materias.Con[L].Contabilidad_Costos_II, Datos[L].Materias.Con[L].Gerencia_Proyectos, Datos[L].Materias.Con[L].Habilidades_Gerenciales, Datos[L].Materias.Con[L].Contabilidad_Ambiental, Datos[L].Materias.Con[L].Sistemas_Tributarios_I, Datos[L].Materias.Con[L].Mercadeo, Datos[L].Materias.Con[L].Presupuesto, Datos[L].Materias.Con[L].Contabilidad_Costos_III, Datos[L].Materias.Con[L].Seminario_I, Datos[L].Materias.Con[L].Practica_Profesional_II, Datos[L].Materias.Con[L].Sistemas_Tributarios_II, Datos[L].Materias.Con[L].Gestion_Talento_Humano, Datos[L].Materias.Con[L].Auditoria_III, Datos[L].Materias.Con[L].Analisis_Estados_Financieros, Datos[L].Materias.Con[L].Etica_Desarrollo_Profesional, Datos[L].Materias.Con[L].Seminario_II, Datos[L].Materias.Con[L].Tributacion_Aduanera, Datos[L].Materias.Con[L].Tecnicas_Negociacion, Datos[L].Materias.Con[L].Avaluos, Datos[L].Materias.Con[L].Instituciones_Financieras, Datos[L].Materias.Con[L].Tesis_Grado, Datos[L].Materias.Con[L].Pasantias, Datos[L].Materias.Eco[L].Introduccion_Economia, Datos[L].Materias.Eco[L].Analisis_Matematico_I, Datos[L].Materias.Eco[L].Lenguaje_Comunicacion, Datos[L].Materias.Eco[L].Fundamentos_Derecho, Datos[L].Materias.Eco[L].Metodologia_Investigacion, Datos[L].Materias.Eco[L].Deporte_Recreacion, Datos[L].Materias.Eco[L].Ingles_Instrumental, Datos[L].Materias.Eco[L].Economia_I, Datos[L].Materias.Eco[L].Sociologia, Datos[L].Materias.Eco[L].Analisis_Matematico_II, Datos[L].Materias.Eco[L].Contabilidad_General_I, Datos[L].Materias.Eco[L].Informatica, Datos[L].Materias.Eco[L].Arte_Cultura, Datos[L].Materias.Eco[L].Estadistica_I, Datos[L].Materias.Eco[L].Economia_II, Datos[L].Materias.Eco[L].Sociopolitica_Productiva, Datos[L].Materias.Eco[L].Estadistica_II, Datos[L].Materias.Eco[L].Contabilidad_General_II, Datos[L].Materias.Eco[L].Introduccion_Administracion, Datos[L].Materias.Eco[L].Historia_Doctrina_Economica, Datos[L].Materias.Eco[L].Informatica_Aplicada, Datos[L].Materias.Eco[L].Macroeconomia_I, Datos[L].Materias.Eco[L].Analisis_Financiero, Datos[L].Materias.Eco[L].Matematica_III, Datos[L].Materias.Eco[L].Microeconomia_I, Datos[L].Materias.Eco[L].Teoria_Investigacion_Mercado, Datos[L].Materias.Eco[L].Seminario_I, Datos[L].Materias.Eco[L].Estadistica_Aplicada, Datos[L].Materias.Eco[L].Macroeconomia_II, Datos[L].Materias.Eco[L].Microeconomia_II, Datos[L].Materias.Eco[L].Matematica_Financiera, Datos[L].Materias.Eco[L].Contabilidad_Social, Datos[L].Materias.Eco[L].Desarrollo_Economico, Datos[L].Materias.Eco[L].Analisis_Economico_Regional, Datos[L].Materias.Eco[L].Economia_Politica, Datos[L].Materias.Eco[L].Formulacion_Evaluacion_Proyectos, Datos[L].Materias.Eco[L].Investigacion_Operaciones, Datos[L].Materias.Eco[L].Teoria_Politica_Fiscal, Datos[L].Materias.Eco[L].Seminario_II, Datos[L].Materias.Eco[L].Economia_Politica_Agricola, Datos[L].Materias.Eco[L].Economia_Industrial, Datos[L].Materias.Eco[L].Economia_Industrial, Datos[L].Materias.Eco[L].Economia_Minera, Datos[L].Materias.Eco[L].Economia_Ambiente, Datos[L].Materias.Eco[L].Seminario_III, Datos[L].Materias.Eco[L].Econometria, Datos[L].Materias.Eco[L].Teoria_Politica_Monetaria, Datos[L].Materias.Eco[L].Planificacion, Datos[L].Materias.Eco[L].Economia_Internacional, Datos[L].Materias.Eco[L].Formulacion_Evaluacion_Agricola, Datos[L].Materias.Eco[L].Gestion_Comunitaria, Datos[L].Materias.Eco[L].Contabilidad_Costos, Datos[L].Materias.Eco[L].Presupuesto, Datos[L].Materias.Eco[L].Trabajo_Final_Grado, Datos[L].Materias.Eco[L].Finanzas_Internacionales, Datos[L].Materias.Eco[L].Estructura_Economica_Mundial, Datos[L].Materias.Eco[L].Gestion_Riesgo, Datos[L].Materias.Eco[L].Economia_Crisis, Plan[P].Firmado, Tema);
+                Mostrar << Menu_Docente;
+            Sino
+                Si (Rol = "Estudiante") Entonces;
+                    Menu_Estudiante(w, Re, S, M, P, Datos[pos_usuario].CI, Car[pos_usuario].CI, Plan[Q].ID_Plan, Plan[Q].Ponderacion, Lista[I].ID_Lista, Asig[Q].ID_Asignacion, Clase[J].ID_Clase, Clase[J].Seccion, Lista_M[M].Cedula, Mag[I].Cant_Estudiantes, Lista[L].Cedula, Datos[I].CI, Clase[K].Cant_Estudiantes, L, Datos[pos_usuario].UC_Aprobadas, SerC[N].Edad, SerC[N].Cedula, SerC[N].Semestre, SerC[N].Year, Datos[pos_usuario].Edad, Datos[pos_usuario].Semestre, Datos[pos_usuario].Year, Datos[pos_usuario].CI, Datos[pos_usuario].Materias_Aprobadas, Pas[P].Edad, Pas[P].Cedula, Pas[P].Semestre, Pas[P].Year, Datos[pos_usuario].Edad, Datos[pos_usuario].Semestre, Datos[pos_usuario].Year, Datos[pos_usuario].Materias_Aprobadas, P, Pas[I].Estado_Solicitud, Datos[pos_usuario].Tarjeta, Minimo, Maximo, I, J, Am, N, Aux, Ver, react, com, re, Publi[Ver].Comentarios, Publi[Ver].ID_Publicacion, Publi[Ver].Comentarios, Publi[Ver].Cant_Reacciones, Com[J].Cant_Reacciones, Res[re].ID_Comentario, Res[re].ID_Respuesta, Com[com].ID_Publicacion, Com[com].ID_Comentario, Rea[react].ID_Comentario, Rea[react].ID_Publicacion, Rea[react].ID_Respuesta, Rea[react].ID_Reacciones, Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[react].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[react].Cant_Molesta, Gru[I].Miembros, Gru[I].Seccion, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Prof[J].Cant_Materias, C_MP[I].Cedula, C_MP[I].Stock, A_MP[I].Cedula, A_MP[I].Stock, S_MP[I].Cedula, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima, Datos[pos_usuario].Carrera, Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, Lista[L].Nombre, Datos[I].Nombre, Base.Lista[i].Estado, Base.Lista[i].ID_Bloque, Base.Lista[i].Dia, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Aula, Clase[J].Codigo_Materia, Clase[J].Nombre_Materia, Clase[J].Dia, Clase[J].Hora_Inicio, Clase[J].Hora_Fin, Clase[J].Aula, cod, Clase[K].Codigo_Materia, Asig[Q].Estado, Asig[Q].Nombre_Profesor, Asig[Q].Codigo_Materia, Asig[Q].Titulo, Asig[Q].Descripcion, Asig[Q].Fecha_Publicacion, Asig[Q].Fecha_Entrega, Soli[i].Titulo, Soli[i].Descripcion, Soli[i].Titular, Soli[i].Destinatario, Soli[i].Fecha, Rep[i].Titulo, Rep[i].Descripcion, Rep[i].Titular, Rep[i].Problema, Rep[i].Fecha, Mag[I].Nombre_Profesor, Mag[I].Nombre_Materia, Mag[I].Dia, Mag[I].Hora_Inicio, Mag[I].Hora_Fin, Mag[I].Aula, Lista_M[M].Nombre, Plan[Q].Nombre_Profesor, Plan[Q].Nombre_Materia, Plan[Q].Tema, Plan[Q].Fecha, Plan[Q].Estrategia, Carn[I].Carrera, Carn[I].Lugar, Carn[I].Fecha, Car[pos_usuario].Nombre, Car[pos_usuario].Carrera, Car[pos_usuario].Fecha_Vencimiento, SerC[N].Nombre, SerC[N].Area, Pas[P].Nombre, Pas[P].Password, Pas[P].Carrera, Pas[I].Empresa, Datos[pos_usuario].Avatar, Datos[pos_usuario].Gmail, Datos[pos_usuario].Password, Avatares[I], Datos[pos_usuario].Salud[pos_usuario].Transmisibles, Datos[pos_usuario].Salud[pos_usuario].Cronicas, Datos[pos_usuario].Salud[pos_usuario].Neurologicas, Datos[pos_usuario].Salud[pos_usuario].Neoplasias, Datos[pos_usuario].Salud[pos_usuario].Autoinmunes, Datos[pos_usuario].Salud[pos_usuario].Trastornos, Datos[pos_usuario].Salud[pos_usuario].Lesiones, Datos[pos_usuario].Salud[pos_usuario].Congenitas, Datos[pos_usuario].Salud[pos_usuario].Metabolicos, Datos[pos_usuario].Salud[pos_usuario].Ocupacionales, Bot[I].Preguntas, Bot[I].Respuesta1, Bot[I].Respuesta2, Bot[I].Respuesta3, Bot[I].Respuesta4, Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar, Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera, DTB, Datos[pos_usuario].Gmail, MP[I].Usuario, MP[I].Contacto, MP[I].Area, MP[I].Bitacora, MP[I].Datos_Bancarios, MP[I].Password, C_MP[I].Vendedor, C_MP[I].Contacto, C_MP[I].Datos_Bancarios, C_MP[I].Producto, A_MP[I].Vendedor, A_MP[I].Contacto, A_MP[I].Contacto, A_MP[I].Datos_Bancarios, A_MP[I].Producto, S_MP[I].Vendedor, S_MP[I].Contacto, S_MP[I].Datos_Bancarios, S_MP[I].Producto, Publi[Ver].Autor, Publi[Ver].Tema, Publi[Ver].Normas, Publi[Ver].Texto, Publi[Ver].Tipo_Reaccion1, Publi[Ver].Tipo_Reaccion2, Publi[Ver].Tipo_Reaccion3, Publi[Ver].Etiqueta, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta, Com[com].Comentario, Com[com].Fecha, Com[com].Autor, Com[J].Tipo_Reaccion1, Com[J].Tipo_Reaccion2, Com[J].Tipo_Reaccion3, Res[re].Comentario, Res[re].Autor, Res[re].Fecha, Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion, Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion, Datos[pos_usuario].Materias.Info[pos_usuario].Lenguaje_Comunicacion, Datos[pos_usuario].Materias.Info[pos_usuario].Economia_Digital, Datos[pos_usuario].Materias.Info[pos_usuario].Deporte, Datos[pos_usuario].Materias.Info[pos_usuario].Matematica_I, Datos[pos_usuario].Materias.Info[pos_usuario].Matematica_II, Datos[pos_usuario].Materias.Info[pos_usuario].Fisica_I, Datos[pos_usuario].Materias.Info[pos_usuario].Fundamentos_Informatica, Datos[pos_usuario].Materias.Info[pos_usuario].Logica_Matematica, Datos[pos_usuario].Materias.Info[pos_usuario].Algoritmos_I, Datos[pos_usuario].Materias.Info[pos_usuario].Ingles_I, Datos[pos_usuario].Materias.Info[pos_usuario].Ingles_II, Datos[pos_usuario].Materias.Info[pos_usuario].Prob_Cient_Tec, Datos[pos_usuario].Materias.Info[pos_usuario].Formacion_Constitucional, Datos[pos_usuario].Materias.Info[pos_usuario].Arte_Y_Cultura, Datos[pos_usuario].Materias.Info[pos_usuario].Electiva_I, Datos[pos_usuario].Materias.Info[pos_usuario].Matematica_III, Datos[pos_usuario].Materias.Info[pos_usuario].Fisica_II, Datos[pos_usuario].Materias.Info[pos_usuario].Algoritmos_II, Datos[pos_usuario].Materias.Info[pos_usuario].Programacion_I, Datos[pos_usuario].Materias.Info[pos_usuario].Electiva_II, Datos[pos_usuario].Materias.Info[pos_usuario].Tecnicas_Investigacion, Datos[pos_usuario].Materias.Info[pos_usuario].Matematica_IV, Datos[pos_usuario].Materias.Info[pos_usuario].Probabilidad_Estadistica, Datos[pos_usuario].Materias.Info[pos_usuario].Estructuras_Discretas_I, Datos[pos_usuario].Materias.Info[pos_usuario].Programacion_II, Datos[pos_usuario].Materias.Info[pos_usuario].Base_Datos, Datos[pos_usuario].Materias.Info[pos_usuario].Electiva_III, Datos[pos_usuario].Materias.Info[pos_usuario].Organizacion_Computador, Datos[pos_usuario].Materias.Info[pos_usuario].Algebra_Booleana, Datos[pos_usuario].Materias.Info[pos_usuario].Estructuras_Discretas_II, Datos[pos_usuario].Materias.Info[pos_usuario].Programacion_III, Datos[pos_usuario].Materias.Info[pos_usuario].Electiva_IV, Datos[pos_usuario].Materias.Info[pos_usuario].Teoria_Sistemas, Datos[pos_usuario].Materias.Info[pos_usuario].Arquitectura_Computador, Datos[pos_usuario].Materias.Info[pos_usuario].Metodos_Numericos, Datos[pos_usuario].Materias.Info[pos_usuario].Investigacion_Operaciones, Datos[pos_usuario].Materias.Info[pos_usuario].Sistemas_Informacion_I, Datos[pos_usuario].Materias.Info[pos_usuario].Electiva_V, Datos[pos_usuario].Materias.Info[pos_usuario].Ingenieria_Economica, Datos[pos_usuario].Materias.Info[pos_usuario].Sistemas_Operativos, Datos[pos_usuario].Materias.Info[pos_usuario].Traductores_Interpretes, Datos[pos_usuario].Materias.Info[pos_usuario].Sistemas_Informacion_II, Datos[pos_usuario].Materias.Info[pos_usuario].Control_Proyectos, Datos[pos_usuario].Materias.Info[pos_usuario].Gestion_Empresarial, Datos[pos_usuario].Materias.Info[pos_usuario].Redes, Datos[pos_usuario].Materias.Info[pos_usuario].Lenguajes_Programacion, Datos[pos_usuario].Materias.Info[pos_usuario].Sistemas_Informacion_III, Datos[pos_usuario].Materias.Info[pos_usuario].Etica_Profesional, Datos[pos_usuario].Materias.Info[pos_usuario].Pasantias, Datos[pos_usuario].Materias.Info[pos_usuario].Electiva_Area_I, Datos[pos_usuario].Materias.Info[pos_usuario].Sistemas_Distribuidos, Datos[pos_usuario].Materias.Info[pos_usuario].Electiva_Libre_I, Datos[pos_usuario].Materias.Info[pos_usuario].Proyecto_Grado_I, Datos[pos_usuario].Materias.Info[pos_usuario].Informatica_Educativa, Datos[pos_usuario].Materias.Info[pos_usuario].Electiva_Area_II, Datos[pos_usuario].Materias.Info[pos_usuario].Electiva_Libre_II, Datos[pos_usuario].Materias.Info[pos_usuario].Gerencia_Proyectos, Datos[pos_usuario].Materias.Info[pos_usuario].Proyecto_Grado_II, Datos[pos_usuario].Materias.Info[pos_usuario].Electiva_Area_III, Datos[pos_usuario].Materias.Civ[pos_usuario].Ingles_Tecnico, Datos[pos_usuario].Materias.Civ[pos_usuario].Tec_Estudio_Doc, Datos[pos_usuario].Materias.Civ[pos_usuario].Metod_Razonamiento_Logico, Datos[pos_usuario].Materias.Civ[pos_usuario].Arte_Y_Cultura, Datos[pos_usuario].Materias.Civ[pos_usuario].Calculo_I, Datos[pos_usuario].Materias.Civ[pos_usuario].Calculo_II, Datos[pos_usuario].Materias.Civ[pos_usuario].Fisica_I, Datos[pos_usuario].Materias.Civ[pos_usuario].Geometria_Descriptiva_I, Datos[pos_usuario].Materias.Civ[pos_usuario].Geometria_Descriptiva_II, Datos[pos_usuario].Materias.Civ[pos_usuario].Introduccion_Ciencias_Humanas, Datos[pos_usuario].Materias.Civ[pos_usuario].Sociedad_Ciencia_Tecnologia, Datos[pos_usuario].Materias.Civ[pos_usuario].Fisica_II, Datos[pos_usuario].Materias.Info[pos_usuario].Calculo_III, Datos[pos_usuario].Materias.Civ[pos_usuario].Mecanica_Racional_I, Datos[pos_usuario].Materias.Civ[pos_usuario].Informatica_Para_Ingenieros, Datos[pos_usuario].Materias.Civ[pos_usuario].Quimica_Basica, Datos[pos_usuario].Materias.Civ[pos_usuario].Deportes, Datos[pos_usuario].Materias.Civ[pos_usuario].Mecanica_Racional_II, Datos[pos_usuario].Materias.Civ[pos_usuario].Quimica_Aplicada, Datos[pos_usuario].Materias.Civ[pos_usuario].Topografia, Datos[pos_usuario].Materias.Civ[pos_usuario].Calculo_IV, Datos[pos_usuario].Materias.Civ[pos_usuario].Estadistica_Para_Ingenieros, Datos[pos_usuario].Materias.Civ[pos_usuario].Electiva_No_Tecnica, Datos[pos_usuario].Materias.Civ[pos_usuario].Geologia_Aplicada, Datos[pos_usuario].Materias.Civ[pos_usuario].Resistencia_De_Materiales, Datos[pos_usuario].Materias.Civ[pos_usuario].Electiva_No_Tecnica_II, Datos[pos_usuario].Materias.Civ[pos_usuario].Materiales_Y_Ensayos, Datos[pos_usuario].Materias.Civ[pos_usuario].Mecanica_De_Fluidos_I, Datos[pos_usuario].Materias.Civ[pos_usuario].Calculo_V, Datos[pos_usuario].Materias.Civ[pos_usuario].Mecanica_De_Suelos, Datos[pos_usuario].Materias.Civ[pos_usuario].H_San_Ambiental, Datos[pos_usuario].Materias.Civ[pos_usuario].Teorias_De_Estructuras_I, Datos[pos_usuario].Materias.Civ[pos_usuario].Dibujo_De_Proyectos, Datos[pos_usuario].Materias.Civ[pos_usuario].Hidrologia, Datos[pos_usuario].Materias.Civ[pos_usuario].Mecanica_De_Fluidos_II, Datos[pos_usuario].Materias.Civ[pos_usuario].Teorias_De_Estructuras_II, Datos[pos_usuario].Materias.Civ[pos_usuario].Ingenieria_Economica, Datos[pos_usuario].Materias.Civ[pos_usuario].Instalaciones_Para_Edificios, Datos[pos_usuario].Materias.Civ[pos_usuario].Metodologia_Investigacion, Datos[pos_usuario].Materias.Civ[pos_usuario].Acueductos_Y_Cloacas, Datos[pos_usuario].Materias.Civ[pos_usuario].Electiva_Tecnica, Datos[pos_usuario].Materias.Civ[pos_usuario].Electiva_Tecnica_II, Datos[pos_usuario].Materias.Civ[pos_usuario].Obras_Hidraulicas, Datos[pos_usuario].Materias.Civ[pos_usuario].Practica_Profesional, Datos[pos_usuario].Materias.Civ[pos_usuario].Concreto_Armado, Datos[pos_usuario].Materias.Civ[pos_usuario].Vias_De_Comunicacion_I, Datos[pos_usuario].Materias.Civ[pos_usuario].Proy_Estructurales_Acero, Datos[pos_usuario].Materias.Civ[pos_usuario].Practica_Comunitaria, Datos[pos_usuario].Materias.Civ[pos_usuario].Trabajo_Grado_I, Datos[pos_usuario].Materias.Civ[pos_usuario].Concreto_Pretenzado, Datos[pos_usuario].Materias.Civ[pos_usuario].Fundaciones_Y_Muros, Datos[pos_usuario].Materias.Civ[pos_usuario].Vias_De_Comunicacion_II, Datos[pos_usuario].Materias.Civ[pos_usuario].Proyectos_Estructurales_Concreto, Datos[pos_usuario].Materias.Civ[pos_usuario].Trabajo_Grado_II, Datos[pos_usuario].Materias.Civ[pos_usuario].Administracion_De_Obras, Datos[pos_usuario].Materias.Civ[pos_usuario].Pavimentos, Datos[pos_usuario].Materias.Civ[pos_usuario].Puentes, Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_I, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_I, Datos[pos_usuario].Materias.Hid[pos_usuario].Dibujo_Tecnico, Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_I, Datos[pos_usuario].Materias.Hid[pos_usuario].Ingles_Tecnico, Datos[pos_usuario].Materias.Hid[pos_usuario].Quimica_Inorganica, Datos[pos_usuario].Materias.Hid[pos_usuario].Orientacion_Ing, Datos[pos_usuario].Materias.Hid[pos_usuario].Arte_Cultura, Datos[pos_usuario].Materias.Hid[pos_usuario].Informatica, Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_II, Datos[pos_usuario].Materias.Hid[pos_usuario].Fisica_I, Datos[pos_usuario].Materias.Hid[pos_usuario].Quimica_Organica, Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_II, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_II, Datos[pos_usuario].Materias.Hid[pos_usuario].Deporte, Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_III, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_III, Datos[pos_usuario].Materias.Hid[pos_usuario].Fisica_II, Datos[pos_usuario].Materias.Hid[pos_usuario].Geologia_General, Datos[pos_usuario].Materias.Hid[pos_usuario].Matematica_III, Datos[pos_usuario].Materias.Hid[pos_usuario].Lab_Fisica, Datos[pos_usuario].Materias.Hid[pos_usuario].Formacion_Socio_IV, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_IV, Datos[pos_usuario].Materias.Hid[pos_usuario].Mecanica_Rocas_Fluidos, Datos[pos_usuario].Materias.Hid[pos_usuario].Probabilidades_Estadisticas, Datos[pos_usuario].Materias.Hid[pos_usuario].Termodinamica, Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Fisica_Yac, Datos[pos_usuario].Materias.Hid[pos_usuario].Sistema_Comprension_Gas, Datos[pos_usuario].Materias.Hid[pos_usuario].Legislacion_Petrolera, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_V, Datos[pos_usuario].Materias.Hid[pos_usuario].Perforacion_Pozos, Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Energetica_Yac, Datos[pos_usuario].Materias.Hid[pos_usuario].Transporte_Distribucion, Datos[pos_usuario].Materias.Hid[pos_usuario].Geologia_Estructural, Datos[pos_usuario].Materias.Hid[pos_usuario].Comercio_Internacional, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_VI, Datos[pos_usuario].Materias.Hid[pos_usuario].Seguridad_Industrial, Datos[pos_usuario].Materias.Hid[pos_usuario].Caracterizacion_Dinamica_Yac, Datos[pos_usuario].Materias.Hid[pos_usuario].Perfilaje_Pozos, Datos[pos_usuario].Materias.Hid[pos_usuario].Completacion_Pozos, Datos[pos_usuario].Materias.Hid[pos_usuario].Recuperacion_Secundaria, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_VII, Datos[pos_usuario].Materias.Hid[pos_usuario].Geologia_Produccion, Datos[pos_usuario].Materias.Hid[pos_usuario].Ing_Produccion_I, Datos[pos_usuario].Materias.Hid[pos_usuario].Proteccion_Riesgos, Datos[pos_usuario].Materias.Hid[pos_usuario].Auditoria_Ambiental, Datos[pos_usuario].Materias.Hid[pos_usuario].Transferencia_Calor, Datos[pos_usuario].Materias.Hid[pos_usuario].Procesos_Petroquimicos, Datos[pos_usuario].Materias.Hid[pos_usuario].Proyecto_VIII, Datos[pos_usuario].Materias.Hid[pos_usuario].Electiva_Calidad, Datos[pos_usuario].Materias.Hid[pos_usuario].Ing_Produccion_II, Datos[pos_usuario].Materias.Hid[pos_usuario].Simulacion_Yacimientos, Datos[pos_usuario].Materias.Hid[pos_usuario].Procesos_Refinacion, Datos[pos_usuario].Materias.Hid[pos_usuario].TEG, Datos[pos_usuario].Materias.Hid[pos_usuario].Recuperacion_Mejorada, Datos[pos_usuario].Materias.Med[pos_usuario].Histologia_Embriologia, Datos[pos_usuario].Materias.Med[pos_usuario].Bioetica_I, Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_General_I, Datos[pos_usuario].Materias.Med[pos_usuario].Deportes_Arte_Cultura_I, Datos[pos_usuario].Materias.Med[pos_usuario].Metod_Investigacion, Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_I, Datos[pos_usuario].Materias.Med[pos_usuario].Anatomia_Humana, Datos[pos_usuario].Materias.Med[pos_usuario].Antropologia, Datos[pos_usuario].Materias.Med[pos_usuario].Microbiologia, Datos[pos_usuario].Materias.Med[pos_usuario].Deportes_Arte_Cultura_II, Datos[pos_usuario].Materias.Med[pos_usuario].Bioquimica, Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_General_II, Datos[pos_usuario].Materias.Med[pos_usuario].Psicologia_Sociologia, Datos[pos_usuario].Materias.Med[pos_usuario].Estadistica_Demografia, Datos[pos_usuario].Materias.Med[pos_usuario].Fisiologia_Biofisica, Datos[pos_usuario].Materias.Med[pos_usuario].Informatica, Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_II, Datos[pos_usuario].Materias.Med[pos_usuario].Derecho_Constitucional, Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_III, Datos[pos_usuario].Materias.Med[pos_usuario].Parasitologia, Datos[pos_usuario].Materias.Med[pos_usuario].Semiologia, Datos[pos_usuario].Materias.Med[pos_usuario].Farmacologia, Datos[pos_usuario].Materias.Med[pos_usuario].Etica_Deontologia, Datos[pos_usuario].Materias.Med[pos_usuario].Fisiopatologia, Datos[pos_usuario].Materias.Med[pos_usuario].Nutricion, Datos[pos_usuario].Materias.Med[pos_usuario].Psicologia_Medica, Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_General_III, Datos[pos_usuario].Materias.Med[pos_usuario].Psicopatologia, Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Obstetrica_I, Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Quirurgica_I, Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Pediatrica_I, Datos[pos_usuario].Materias.Med[pos_usuario].Anatomia_Patologica, Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_IV, Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_General_IV, Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Medica_I, Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Quirurgica_II, Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_General_V, Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Pediatrica_II, Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Legal, Datos[pos_usuario].Materias.Med[pos_usuario].Medicina_Preventiva_V, Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Psiquiatrica, Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Obstetrica_II, Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Medica_II, Datos[pos_usuario].Materias.Med[pos_usuario].Internado_Rural, Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Medica_III, Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Quirurgica_III, Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Obstetrica_III, Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Pediatrica_III, Datos[pos_usuario].Materias.Med[pos_usuario].Trabajo_Grado, Datos[pos_usuario].Materias.Odo[pos_usuario].Morfologia_Dentaria, Datos[pos_usuario].Materias.Odo[pos_usuario].Formacion_Cultural_I, Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_I, Datos[pos_usuario].Materias.Odo[pos_usuario].Iniciacion_Clinica, Datos[pos_usuario].Materias.Odo[pos_usuario].Morfologia_Humana, Datos[pos_usuario].Materias.Odo[pos_usuario].Formacion_Instrumental_I, Datos[pos_usuario].Materias.Odo[pos_usuario].Bioquimica_Aplicada, Datos[pos_usuario].Materias.Odo[pos_usuario].Histologia_Embriologia, Datos[pos_usuario].Materias.Odo[pos_usuario].Deportes_I, Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_I, Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_II, Datos[pos_usuario].Materias.Odo[pos_usuario].Histofisiologia, Datos[pos_usuario].Materias.Odo[pos_usuario].Clinica_Adulto_I, Datos[pos_usuario].Materias.Odo[pos_usuario].Biomateriales, Datos[pos_usuario].Materias.Odo[pos_usuario].Deportes_II, Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_II, Datos[pos_usuario].Materias.Odo[pos_usuario].Microbiologia_Parasitologia, Datos[pos_usuario].Materias.Odo[pos_usuario].Formacion_Instrumental_II, Datos[pos_usuario].Materias.Odo[pos_usuario].Formacion_Cultural_II, Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_III, Datos[pos_usuario].Materias.Odo[pos_usuario].Clinica_Adulto_II, Datos[pos_usuario].Materias.Odo[pos_usuario].Atencion_Nino_I, Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_III, Datos[pos_usuario].Materias.Odo[pos_usuario].Medicina_Semiologia, Datos[pos_usuario].Materias.Odo[pos_usuario].Fisiopatologia, Datos[pos_usuario].Materias.Odo[pos_usuario].Farmacologia, Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_IV, Datos[pos_usuario].Materias.Odo[pos_usuario].Clinica_Adulto_III, Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_IV, Datos[pos_usuario].Materias.Odo[pos_usuario].Atencion_Nino_II, Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_V, Datos[pos_usuario].Materias.Odo[pos_usuario].Gerontologia, Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_V, Datos[pos_usuario].Materias.Odo[pos_usuario].Toxicologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Computacion, Datos[pos_usuario].Materias.Vet[pos_usuario].Deportes, Datos[pos_usuario].Materias.Vet[pos_usuario].Perfil_Profesional, Datos[pos_usuario].Materias.Vet[pos_usuario].Ecologia_Agricola, Datos[pos_usuario].Materias.Vet[pos_usuario].Ingles_Instrumental, Datos[pos_usuario].Materias.Vet[pos_usuario].Anatomia_I, Datos[pos_usuario].Materias.Vet[pos_usuario].Faenas_Pecuarias, Datos[pos_usuario].Materias.Vet[pos_usuario].Bioquimica, Datos[pos_usuario].Materias.Vet[pos_usuario].Electiva_Complementaria, Datos[pos_usuario].Materias.Vet[pos_usuario].Zoologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Histologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Microbiologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Genetica, Datos[pos_usuario].Materias.Vet[pos_usuario].Zootecnia, Datos[pos_usuario].Materias.Vet[pos_usuario].Bioestadistica, Datos[pos_usuario].Materias.Vet[pos_usuario].Arte_Cultura, Datos[pos_usuario].Materias.Vet[pos_usuario].Fisiologia_Animal, Datos[pos_usuario].Materias.Vet[pos_usuario].Patologia_Clinica, Datos[pos_usuario].Materias.Vet[pos_usuario].Reproduccion, Datos[pos_usuario].Materias.Vet[pos_usuario].Farmacologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Semiologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Nutricion, Datos[pos_usuario].Materias.Vet[pos_usuario].Parasitologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Anatomia_Patologica, Datos[pos_usuario].Materias.Vet[pos_usuario].Investigacion_I, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Caninos, Datos[pos_usuario].Materias.Vet[pos_usuario].Gerencia, Datos[pos_usuario].Materias.Vet[pos_usuario].Mejoramiento_Animal, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Rumiantes, Datos[pos_usuario].Materias.Vet[pos_usuario].Cirugia, Datos[pos_usuario].Materias.Vet[pos_usuario].Saneamiento, Datos[pos_usuario].Materias.Vet[pos_usuario].Extension_I, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Preventiva, Datos[pos_usuario].Materias.Vet[pos_usuario].Produccion_Industria, Datos[pos_usuario].Materias.Vet[pos_usuario].Derecho_Constitucional, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Suinos, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Especies, Datos[pos_usuario].Materias.Vet[pos_usuario].Legislacion, Datos[pos_usuario].Materias.Vet[pos_usuario].Servicio_Comunitario, Datos[pos_usuario].Materias.Vet[pos_usuario].Pasantias, Datos[pos_usuario].Materias.Vet[pos_usuario].Epidemiologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Investigacion_II, Datos[pos_usuario].Materias.Vet[pos_usuario].Extension_II, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Civil_I, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Constitucional, Datos[pos_usuario].Materias.Der[pos_usuario].Pensamiento_Bolivariano, Datos[pos_usuario].Materias.Der[pos_usuario].Introduccion_Derecho, Datos[pos_usuario].Materias.Der[pos_usuario].Economia_Politica, Datos[pos_usuario].Materias.Der[pos_usuario].Investigacion_Jurídica, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Popular, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Romano, Datos[pos_usuario].Materias.Der[pos_usuario].Logica_Juridica, Datos[pos_usuario].Materias.Der[pos_usuario].Deontologia_Juridica, Datos[pos_usuario].Materias.Der[pos_usuario].Arte_Cultura, Datos[pos_usuario].Materias.Der[pos_usuario].Deporte, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Agrario, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Ambiental, Datos[pos_usuario].Materias.Der[pos_usuario].Medicina_Legal, Datos[pos_usuario].Materias.Der[pos_usuario].Criminologia, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Penal_I, Datos[pos_usuario].Materias.Der[pos_usuario].Filosofia_Derecho, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Registral, Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_I, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Civil_II, Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_I, Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_I, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Administrativo, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Penal_II, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Laboral, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Familiar, Datos[pos_usuario].Materias.Der[pos_usuario].Obligaciones_I, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Inter_Publico, Datos[pos_usuario].Materias.Der[pos_usuario].Teoria_General, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Tributario, Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_II, Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_II, Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_II, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Contencioso, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Penal_I, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Laboral_I, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Sucesiones, Datos[pos_usuario].Materias.Der[pos_usuario].Obligaciones_II, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Internacional_Priv, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Civil_I, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Probatorio_I, Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_III, Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_III, Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_III, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Penal_II, Datos[pos_usuario].Materias.Der[pos_usuario].Obligaciones_III, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Proc_Civil_II, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Mercantil, Datos[pos_usuario].Materias.Der[pos_usuario].Derecho_Probatorio_II, Datos[pos_usuario].Materias.Der[pos_usuario].Contratos_Garantias, Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_IV, Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_IV, Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_IV, Datos[pos_usuario].Materias.Soc[pos_usuario].Morfosintaxis, Datos[pos_usuario].Materias.Soc[pos_usuario].Com_Social_Periodismo, Datos[pos_usuario].Materias.Soc[pos_usuario].Psicologia_Com, Datos[pos_usuario].Materias.Soc[pos_usuario].Estadistica, Datos[pos_usuario].Materias.Soc[pos_usuario].Deporte_Arte_Cultura, Datos[pos_usuario].Materias.Soc[pos_usuario].Pensamiento_Bolivariano, Datos[pos_usuario].Materias.Soc[pos_usuario].Periodismo_Informativo, Datos[pos_usuario].Materias.Soc[pos_usuario].Com_Social_Radio, Datos[pos_usuario].Materias.Soc[pos_usuario].Com_Social_Cine, Datos[pos_usuario].Materias.Soc[pos_usuario].Com_Social_TV, Datos[pos_usuario].Materias.Soc[pos_usuario].Com_Social_Foto, Datos[pos_usuario].Materias.Soc[pos_usuario].Taller_Redaccion_I, Datos[pos_usuario].Materias.Soc[pos_usuario].Proyecto_I, Datos[pos_usuario].Materias.Soc[pos_usuario].Taller_Redaccion_II, Datos[pos_usuario].Materias.Soc[pos_usuario].Com_Grafica, Datos[pos_usuario].Materias.Soc[pos_usuario].Periodismo_Radiofonico, Datos[pos_usuario].Materias.Soc[pos_usuario].Lenguaje_Cine, Datos[pos_usuario].Materias.Soc[pos_usuario].Periodismo_TV, Datos[pos_usuario].Materias.Soc[pos_usuario].Estetica_Imagen_Sonido, Datos[pos_usuario].Materias.Soc[pos_usuario].Teoria_Comunicacion, Datos[pos_usuario].Materias.Soc[pos_usuario].Opinion_Publica, Datos[pos_usuario].Materias.Soc[pos_usuario].Formacion_Sociopolitica, Datos[pos_usuario].Materias.Soc[pos_usuario].Proyecto_II, Datos[pos_usuario].Materias.Soc[pos_usuario].Etica_Legislacion, Datos[pos_usuario].Materias.Soc[pos_usuario].Proyecto_III, Datos[pos_usuario].Materias.Soc[pos_usuario].Sociologia_Comunicacion, Datos[pos_usuario].Materias.Soc[pos_usuario].Investigacion_Comunicacion, Datos[pos_usuario].Materias.Soc[pos_usuario].Periodismo_Interpretativo, Datos[pos_usuario].Materias.Soc[pos_usuario].Periodismo_Opinion, Datos[pos_usuario].Materias.Soc[pos_usuario].Economia_Politica, Datos[pos_usuario].Materias.Soc[pos_usuario].Produccion_TV, Datos[pos_usuario].Materias.Soc[pos_usuario].Produccion_Radio, Datos[pos_usuario].Materias.Soc[pos_usuario].Produccion_Cine, Datos[pos_usuario].Materias.Soc[pos_usuario].Seminario_Critica_I, Datos[pos_usuario].Materias.Soc[pos_usuario].Proyecto_IV, Datos[pos_usuario].Materias.Soc[pos_usuario].Semiologia, Datos[pos_usuario].Materias.Soc[pos_usuario].Fotoperiodismo, Datos[pos_usuario].Materias.Soc[pos_usuario].Seminario_Critica_II, Datos[pos_usuario].Materias.Soc[pos_usuario].Periodismo_Cientifico, Datos[pos_usuario].Materias.Soc[pos_usuario].Montajes_Audiovisuales, Datos[pos_usuario].Materias.Soc[pos_usuario].Relaciones_Publicas, Datos[pos_usuario].Materias.Soc[pos_usuario].Proyecto_V, Datos[pos_usuario].Materias.Soc[pos_usuario].Tecnologia_Informacion, Datos[pos_usuario].Materias.Soc[pos_usuario].Locucion_Basica, Datos[pos_usuario].Materias.Soc[pos_usuario].Publicidad, Datos[pos_usuario].Materias.Soc[pos_usuario].Idioma_Moderno, Datos[pos_usuario].Materias.Soc[pos_usuario].Seminario_Critica_III, Datos[pos_usuario].Materias.Soc[pos_usuario].Periodismo_Economico, Datos[pos_usuario].Materias.Soc[pos_usuario].Proyecto_VI, Datos[pos_usuario].Materias.Soc[pos_usuario].Orientacion_Profesional_I, Datos[pos_usuario].Materias.Soc[pos_usuario].Gerencia_Corporativa, Datos[pos_usuario].Materias.Soc[pos_usuario].Mercadeo, Datos[pos_usuario].Materias.Soc[pos_usuario].Locucion_Profesional, Datos[pos_usuario].Materias.Soc[pos_usuario].Proyecto_VII, Datos[pos_usuario].Materias.Soc[pos_usuario].Periodismo_Politico, Datos[pos_usuario].Materias.Soc[pos_usuario].Orientacion_Profesional_II, Datos[pos_usuario].Materias.Soc[pos_usuario].Vinculacion_Profesional, Datos[pos_usuario].Materias.Soc[pos_usuario].Trabajo_Grado, Datos[pos_usuario].Materias.Con[pos_usuario].Matematica_I, Datos[pos_usuario].Materias.Con[pos_usuario].Lenguaje_Comunicacion, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_I, Datos[pos_usuario].Materias.Con[pos_usuario].Sociopolitica_Productiva, Datos[pos_usuario].Materias.Con[pos_usuario].Metodologia_Investigacion, Datos[pos_usuario].Materias.Con[pos_usuario].Deporte_Recreacion, Datos[pos_usuario].Materias.Con[pos_usuario].Matematica_II, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_II, Datos[pos_usuario].Materias.Con[pos_usuario].Ingles, Datos[pos_usuario].Materias.Con[pos_usuario].Legislacion_Laboral, Datos[pos_usuario].Materias.Con[pos_usuario].Estadistica_I, Datos[pos_usuario].Materias.Con[pos_usuario].Introduccion_Administracion, Datos[pos_usuario].Materias.Con[pos_usuario].Arte_Cultura, Datos[pos_usuario].Materias.Con[pos_usuario].Informatica, Datos[pos_usuario].Materias.Con[pos_usuario].Calculo_Financiero, Datos[pos_usuario].Materias.Con[pos_usuario].Teoria_Economica, Datos[pos_usuario].Materias.Con[pos_usuario].Estadistica_II, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_III, Datos[pos_usuario].Materias.Con[pos_usuario].Procesos_Administrativos, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Costos_I, Datos[pos_usuario].Materias.Con[pos_usuario].Practica_Profesional_I, Datos[pos_usuario].Materias.Con[pos_usuario].Auditoria_I, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Especializada_I, Datos[pos_usuario].Materias.Con[pos_usuario].Finanzas_Gestion_Presupuestaria, Datos[pos_usuario].Materias.Con[pos_usuario].Administracion_Publica, Datos[pos_usuario].Materias.Con[pos_usuario].Sistemas_Informacion_Gerencial, Datos[pos_usuario].Materias.Con[pos_usuario].Investigacion_Operaciones, Datos[pos_usuario].Materias.Con[pos_usuario].Auditoria_II, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Especializada_II, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Costos_II, Datos[pos_usuario].Materias.Con[pos_usuario].Gerencia_Proyectos, Datos[pos_usuario].Materias.Con[pos_usuario].Habilidades_Gerenciales, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Ambiental, Datos[pos_usuario].Materias.Con[pos_usuario].Sistemas_Tributarios_I, Datos[pos_usuario].Materias.Con[pos_usuario].Mercadeo, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Costos_III, Datos[pos_usuario].Materias.Con[pos_usuario].Seminario_I, Datos[pos_usuario].Materias.Con[pos_usuario].Practica_Profesional_II, Datos[pos_usuario].Materias.Con[pos_usuario].Sistemas_Tributarios_II, Datos[pos_usuario].Materias.Con[pos_usuario].Gestion_Talento_Humano, Datos[pos_usuario].Materias.Con[pos_usuario].Auditoria_III, Datos[pos_usuario].Materias.Con[pos_usuario].Analisis_Estados_Financieros, Datos[pos_usuario].Materias.Con[pos_usuario].Etica_Desarrollo_Profesional, Datos[pos_usuario].Materias.Con[pos_usuario].Seminario_II, Datos[pos_usuario].Materias.Con[pos_usuario].Tributacion_Aduanera, Datos[pos_usuario].Materias.Con[pos_usuario].Tecnicas_Negociacion, Datos[pos_usuario].Materias.Con[pos_usuario].Avaluos, Datos[pos_usuario].Materias.Con[pos_usuario].Instituciones_Financieras, Datos[pos_usuario].Materias.Con[pos_usuario].Tesis_Grado, Datos[pos_usuario].Materias.Con[pos_usuario].Pasantias, Datos[pos_usuario].Materias.Eco[pos_usuario].Introduccion_Economia, Datos[pos_usuario].Materias.Eco[pos_usuario].Analisis_Matematico_I, Datos[pos_usuario].Materias.Eco[pos_usuario].Lenguaje_Comunicacion, Datos[pos_usuario].Materias.Eco[pos_usuario].Fundamentos_Derecho, Datos[pos_usuario].Materias.Eco[pos_usuario].Metodologia_Investigacion, Datos[pos_usuario].Materias.Eco[pos_usuario].Deporte_Recreacion, Datos[pos_usuario].Materias.Eco[pos_usuario].Ingles_Instrumental, Datos[pos_usuario].Materias.Eco[pos_usuario].Economia_I, Datos[pos_usuario].Materias.Eco[pos_usuario].Sociologia, Datos[pos_usuario].Materias.Eco[pos_usuario].Analisis_Matematico_II, Datos[pos_usuario].Materias.Eco[pos_usuario].Contabilidad_General_I, Datos[pos_usuario].Materias.Eco[pos_usuario].Informatica, Datos[pos_usuario].Materias.Eco[pos_usuario].Arte_Cultura, Datos[pos_usuario].Materias.Eco[pos_usuario].Estadistica_I, Datos[pos_usuario].Materias.Eco[pos_usuario].Economia_II, Datos[pos_usuario].Materias.Eco[pos_usuario].Sociopolitica_Productiva, Datos[pos_usuario].Materias.Eco[pos_usuario].Estadistica_II, Datos[pos_usuario].Materias.Eco[pos_usuario].Contabilidad_General_II, Datos[pos_usuario].Materias.Eco[pos_usuario].Introduccion_Administracion, Datos[pos_usuario].Materias.Eco[pos_usuario].Historia_Doctrina_Economica, Datos[pos_usuario].Materias.Eco[pos_usuario].Informatica_Aplicada, Datos[pos_usuario].Materias.Eco[pos_usuario].Macroeconomia_I, Datos[pos_usuario].Materias.Eco[pos_usuario].Analisis_Financiero, Datos[pos_usuario].Materias.Eco[pos_usuario].Matematica_III, Datos[pos_usuario].Materias.Eco[pos_usuario].Microeconomia_I, Datos[pos_usuario].Materias.Eco[pos_usuario].Teoria_Investigacion_Mercado, Datos[pos_usuario].Materias.Eco[pos_usuario].Seminario_I, Datos[pos_usuario].Materias.Eco[pos_usuario].Estadistica_Aplicada, Datos[pos_usuario].Materias.Eco[pos_usuario].Macroeconomia_II, Datos[pos_usuario].Materias.Eco[pos_usuario].Microeconomia_II, Datos[pos_usuario].Materias.Eco[pos_usuario].Matematica_Financiera, Datos[pos_usuario].Materias.Eco[pos_usuario].Contabilidad_Social, Datos[pos_usuario].Materias.Eco[pos_usuario].Desarrollo_Economico, Datos[pos_usuario].Materias.Eco[pos_usuario].Analisis_Economico_Regional, Datos[pos_usuario].Materias.Eco[pos_usuario].Economia_Politica, Datos[pos_usuario].Materias.Eco[pos_usuario].Formulacion_Evaluacion_Proyectos, Datos[pos_usuario].Materias.Eco[pos_usuario].Investigacion_Operaciones, Datos[pos_usuario].Materias.Eco[pos_usuario].Teoria_Politica_Fiscal, Datos[pos_usuario].Materias.Eco[pos_usuario].Seminario_II, Datos[pos_usuario].Materias.Eco[pos_usuario].Economia_Politica_Agricola, Datos[pos_usuario].Materias.Eco[pos_usuario].Economia_Industrial, Datos[pos_usuario].Materias.Eco[pos_usuario].Economia_Industrial, Datos[pos_usuario].Materias.Eco[pos_usuario].Economia_Minera, Datos[pos_usuario].Materias.Eco[pos_usuario].Economia_Ambiente, Datos[pos_usuario].Materias.Eco[pos_usuario].Seminario_III, Datos[pos_usuario].Materias.Eco[pos_usuario].Econometria, Datos[pos_usuario].Materias.Eco[pos_usuario].Teoria_Politica_Monetaria, Datos[pos_usuario].Materias.Eco[pos_usuario].Planificacion, Datos[pos_usuario].Materias.Eco[pos_usuario].Economia_Internacional, Datos[pos_usuario].Materias.Eco[pos_usuario].Formulacion_Evaluacion_Agricola, Datos[pos_usuario].Materias.Eco[pos_usuario].Gestion_Comunitaria, Datos[pos_usuario].Materias.Eco[pos_usuario].Contabilidad_Costos, Datos[pos_usuario].Materias.Eco[pos_usuario].Presupuesto, Datos[pos_usuario].Materias.Eco[pos_usuario].Trabajo_Final_Grado, Datos[pos_usuario].Materias.Eco[pos_usuario].Finanzas_Internacionales, Datos[pos_usuario].Materias.Eco[pos_usuario].Estructura_Economica_Mundial, Datos[pos_usuario].Materias.Eco[pos_usuario].Gestion_Riesgo, Datos[pos_usuario].Materias.Eco[pos_usuario].Economia_Crisis, Suma, Carn[I].Precio, monto_pago, SerC[N].Horas_Realizadas, Pas[P].Horas, Precio, Ingresos, Egresos, MP[I].Ingresos, MP[I].Egresos, MP[I].Boveda, C_MP[I].Precio, A_MP[I].Precio, S_MP[I].Precio, Ad.Inscripciones, Rep[I].Recibido, Soli[i].Estado, Mag[I].Autorizacion, Plan[Q].Firmado, validacion_pago, Datos[pos_usuario].Servicio_Comunitario, Inscripciones, K, Datos[pos_usuario].Pasantias, Tema, validacion_pago, S_MP[I].Disp, Publi[I].Activo);
+                    Mostrar << Menu_Estudiante;
+                Fin_Si
+            Fin_Si
+        Fin_Si
+        Mostrar << "¿Desea salir de la página? 1: Sí, 0: No";
+        Leer >> R;
+        Hasta (R = 0);
+    Fin_Repetir
+Fin

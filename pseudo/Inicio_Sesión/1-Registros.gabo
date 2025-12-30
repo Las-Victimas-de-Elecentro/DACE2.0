@@ -31,15 +31,10 @@ Registro: Estudiantes;
 	Tarjeta: Entero;
 Fin_Registro
 
-Registro: Tiempo;
-	Semestre: Entero;
-Fin_Registro
 Inicio
     Var Solicitud_Empleo: Empleo[500];
     Var Administrativos: Admin[500];
     Var Estudiantes: Datos[500];
-    Var Tiempo: Sem[500];
-    Var Year: Yea[500];
     Var K = 1, I, Opcion, Minimo, Maximo: Entero;
     Var Rol: Cadena;
     Var R, Acceso: Booleano;

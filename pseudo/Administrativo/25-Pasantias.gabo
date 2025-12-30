@@ -1,0 +1,37 @@
+Procedimiento Pasantias(E/S: Pas[I].Edad, Pas[I].Cedula, Pas[I].Semestre, Pas[I].Year, Pas[I].Estado_Solicitud: Entero, Pas[I].Nombre, Pas[I].Password, Pas[I].Carrera, Pas[I].Empresa: Cadena, Pas[I].Horas: Real);
+Inicio
+    Mostrar << "¡Bienvenido a la sección de Pasantías!";
+    Repetir
+        Mostrar << "¿Desea ver las solicitudes que hay? 1: Sí, 0: No";
+        Leer >> R;
+        Si (R = 1) Entonces;
+            Para (I = 1 Hasta I = P) Hacer;
+                Mostrar << Pas[I].Nombre;
+                Mostrar << Pas[I].Edad;
+                Mostrar << Pas[I].Cedula;
+                Mostrar << Pas[I].Password;
+                Mostrar << Pas[I].Carrera;
+                Mostrar << Pas[I].Semestre;
+                Mostrar << Pas[I].Year;
+                Mostrar << Pas[I].Empresa;
+                Mostrar << Pas[I].Estado_Solicitud;
+                Mostrar << Pas[I].Horas;
+                Si (Pas[I].Estado_Solicitud = 2) Entonces;
+                    Mostrar << "¿Qué deseas hacer con la solicitud? 1: Aprobarla, 0: Rechazarla";
+                    Leer >> R2;
+                    Si (R2 = 1) Entonces;
+                        Pas[I].Estado_Solicitud = 1;
+                    Sino
+                        Pas[I].Estado_Solicitud = 0;
+                    Fin_Si
+                Fin_Si
+            Fin_Para
+        Sino
+            Mostrar << "Volviendo al menú principal.";
+            R3 = 0;
+        Fin_Si
+        Mostrar << "¿Deseas ver de nuevo las solicitudes? 1: Sí, 0: No";
+        Leer >> R3;
+        Hasta(R3 = 0);
+    Fin_Repetir
+Fin_Procedimiento

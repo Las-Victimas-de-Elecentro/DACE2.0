@@ -1,8 +1,7 @@
-Procedimiento Agregar_Empleados(E/S: I, Admin[I].Usuario: Cadena, Admin.CI[I]: Entero, Admin[I].Gmail, Admin[I].Password: Cadena);
+Procedimiento Agregar_Empleados(E/S: Lim: Entero, Admin[I].Usuario, Admin[I].Cargo, Admin[I].Gmail, Admin[I].Password, Empleo[I].Usuario, Empleo[I].Gmail, Empleo[I].Password: Cadena);
 Inicio
-    Var Pos, Opcion: Entero;
+    Var I, Pos, Opcion: Entero;
     Var R, R2: Booleano;
-    Var Lim = 36: Entero;
 	Repetir
 		Mostrar << "Bienvenido a la sección de administración de empleados";
 		Mostrar << "¿Qué desea hacer?";
@@ -19,10 +18,11 @@ Inicio
 			Mostrar << Admin[I].CI;
 			Mostrar << Admin[I].Gmail;
 			Mostrar << Admin[I].Password;
+            Mostrar << Admin[I].Cargo;
 		Fin_Para
 		Si (Opcion = 1) Entonces;
 			Para (I = 1 Hasta I = K) Hacer;
-                Si (Empleo.Estado[I] = 1) Entonces;	
+                Si (Empleo[I].Estado = 1) Entonces;	
                     Mostrar << "¿Desea añadirlo a la base de datos? 1:Sí, 0: No";
                     Leer >> R2;
                     Si (R2 = 1) Entonces;

@@ -1,0 +1,194 @@
+Procedimiento Propias_Publicaciones(E/S: Publi[I].ID_Publicacion, Publi[I].Comentarios, Publi[I].Cant_Reacciones: Entero, Datos[pos_usuario].Nombre, Publi[I].Autor, Publi[I].Texto, Publi[I].Normas, Publi[I].Tema, Publi[I].Fecha, Publi[I].Etiqueta, Publi[I].Tipo_Reaccion1, Publi[I].Tipo_Reaccion2, Publi[I].Tipo_Reaccion3: Cadena, Publi[I].Activo: Booleano);
+Inicio
+    Var I, R, R2, R4, K = 2, Jose_Lozano[K], K5, K4: Entero;
+    Var Tema, Etiqueta: Cadena;
+    Var R3, R5, R6: Booleano;
+    Mostrar << "Bienvenido a la seccion de busqueda, edicion, eliminacion y ocultamiento de sus propias publicaciones";
+    Mostrar << "Ingrese mediante cual filtro desea buscar su publicacion";
+    Mostrar << "1. Autor";
+    Mostrar << "2. Tema";
+    Mostrar << "3. Etiqueta";
+    Leer >> R2;
+    Mientras (R2 < 1 or R2 > 3) Hacer;
+        Mostrar << "Error en los datos ingresados, no se pudo concretar su seleccion, por favor, intentelo nuevamente";
+        Mostrar << "1. Autor";
+        Mostrar << "2. Tema";
+        Mostrar << "3. Etiqueta";
+        Leer >> R2;
+    Fin_Mientras
+    En_Caso (R2 > 0) Sea;
+        Caso (R2 = 1);
+            Para (I = 1 Hasta I = pub) Hacer;
+                Si (Publi[I].Autor = Datos[pos_usuario].Nombre) Entonces;
+                    Mostrar << "Publicacion numero", K;
+                    Mostrar << Publi[I].Texto;
+                    Mostrar << Publi[I].ID_Publicacion;    
+                    Mostrar << Publi[I].Autor;               
+                    Mostrar << Publi[I].Normas;        
+                    Mostrar << Publi[I].Tema;          
+                    Mostrar << Publi[I].Fecha;           
+                    Mostrar << Publi[I].Comentarios;      
+                    Mostrar << Publi[I].Cant_Reacciones;   
+                    Mostrar << Publi[I].Tipo_Reaccion1;     
+                    Mostrar << Publi[I].Tipo_Reaccion2;   
+                    Mostrar << Publi[I].Tipo_Reaccion3;  
+                    Mostrar << Publi[I].Etiqueta;          
+                    Mostrar << Publi[I].Activo;        
+                    K = K + 1;
+                Fin_Si
+                Si (K = 1) Entonces;
+                    Mostrar << "Usted no posee ninguna publicacion aqui";
+                Fin_Si
+            Fin_Para
+        Caso (R2 = 2);
+            Repetir
+                Mostrar << "Ingrese el Tema";
+                Leer >> Tema;
+                Para (I = 1 Hasta I = pub) hacer;
+                    Si (Publi[I].Autor = Datos[pos_usuario].Nombre) and (Tema = Publi[I].Tema) entonces;
+                        Mostrar << "Publicacion numero", K;
+                        Mostrar << Publi[I].Texto;
+                        Mostrar << Publi[I].ID_Publicacion;    
+                        Mostrar << Publi[I].Autor;               
+                        Mostrar << Publi[I].Normas;        
+                        Mostrar << Publi[I].Tema;          
+                        Mostrar << Publi[I].Fecha;           
+                        Mostrar << Publi[I].Comentarios;      
+                        Mostrar << Publi[I].Cant_Reacciones;   
+                        Mostrar << Publi[I].Tipo_Reaccion1;     
+                        Mostrar << Publi[I].Tipo_Reaccion2;   
+                        Mostrar << Publi[I].Tipo_Reaccion3;  
+                        Mostrar << Publi[I].Etiqueta;          
+                        Mostrar << Publi[I].Activo;        
+                        K = K + 1;
+                    Fin_Si
+                Fin_Para
+                Si (K = 1) Entonces;
+                    Mostrar << "Usted no posee publicaciones referentes al tema ingresado: ", Tema;
+                Fin_Si
+                Mostrar << "Desea buscar otro tema, 1: Si, 0: No";
+                Leer >> R3;
+                Hasta (R3 = 0);
+            Fin_Repetir
+        Otro_Caso
+            Repetir
+                Mostrar << "Ingrese La etiqueta";
+                Leer >> Etiqueta;
+                Para (I = 1 Hasta I = pub) Hacer;
+                    Si (Publi[I].Autor = Datos[pos_usuario].Nombre) and (Etiqueta = Publi[I].Etiqueta) entonces;
+                        Mostrar << "Publicacion numero", K;
+                        Mostrar << Publi[I].Texto;
+                        Mostrar << Publi[I].ID_Publicacion;    
+                        Mostrar << Publi[I].Autor;               
+                        Mostrar << Publi[I].Normas;        
+                        Mostrar << Publi[I].Tema;          
+                        Mostrar << Publi[I].Fecha;           
+                        Mostrar << Publi[I].Comentarios;      
+                        Mostrar << Publi[I].Cant_Reacciones;   
+                        Mostrar << Publi[I].Tipo_Reaccion1;     
+                        Mostrar << Publi[I].Tipo_Reaccion2;   
+                        Mostrar << Publi[I].Tipo_Reaccion3;  
+                        Mostrar << Publi[I].Etiqueta;          
+                        Mostrar << Publi[I].Activo;        
+                        K = K + 1;
+                    Fin_Si
+                Fin_Para
+                Si (K = 1) Entonces;
+                    Mostrar << "Usted no posee publicaciones referentes a la etiqueta ingresada: ", Etiqueta;
+                Fin_Si
+                Mostrar << "Desea buscar otra publicacion por etiqueta, 1: Si, 0: No";
+                Leer >> R3;
+                Hasta (R3 = 0);
+            Fin_Repetir
+    Fin_Caso
+    Mostrar << "A continuacion se le mostrara todas sus publicaciones, para que asi pueda editarlas";
+    Para (I = 1 Hasta I = pub) Hacer;
+        Si (Publi[I].Autor = Datos[pos_usuario].Nombre) Entonces;
+            Mostrar << "Publicacion numero", K;
+            Mostrar << Publi[I].Texto;
+            Mostrar << Publi[I].ID_Publicacion;    
+            Mostrar << Publi[I].Autor;               
+            Mostrar << Publi[I].Normas;        
+            Mostrar << Publi[I].Tema;          
+            Mostrar << Publi[I].Fecha;           
+            Mostrar << Publi[I].Comentarios;      
+            Mostrar << Publi[I].Cant_Reacciones;   
+            Mostrar << Publi[I].Tipo_Reaccion1;     
+            Mostrar << Publi[I].Tipo_Reaccion2;   
+            Mostrar << Publi[I].Tipo_Reaccion3;  
+            Mostrar << Publi[I].Etiqueta;          
+            Mostrar << Publi[I].Activo;        
+            Jose_Lozano[K] = I;
+            K = K + 1;
+        Fin_Si
+    Fin_Para
+    K = K - 1;
+    Mostrar << "Ingrese la publicacion que desea modificar o eliminar";
+    Leer >> R;
+    Mientras (R < 0 or R > K) Hacer;
+        Mostrar << "Error en la publicacion ingresada, por favor intentelo nuevamente";
+        Leer >> R;
+    Fin_Mientras
+    K4 = Jose_Lozano[R];
+    Mostrar << "Ingrese que desea hacer con la publicacion";
+    Mostrar << "1. Editar el contenido";
+    Mostrar << "2. Eliminar";
+    Mostrar << "3. Ocultar";
+    Leer >> R4;
+    Mientras (R4 < 1 or R4 > 3) Hacer;
+        Mostrar << "Error en la opcione seleccionada, por favor intentelo nuevamente";
+        Mostrar << "1. Editar el contenido";
+        Mostrar << "2. Eliminar";
+        Mostrar << "3. Ocultar";
+        Leer >> R4;
+    Fin_Mientras
+    En_Caso (R4 > 0) Sea;
+        Caso (R4 = 1);
+            Repetir
+                Mostrar << "Ingrese el nuevo texto de la publicacion";
+                Publi[K4].Texto = Texto;        
+                Mostrar << "Ingrese el nuevo tema de la publicacion";
+                Publi[K4].Tema = Tema;
+                Mostrar << "Ingrese la(s) nueva(s) etiquetas de la publicacion";
+                Publi[K4].Etiqueta = Etiqueta;
+                Mostrar << "Desea repetir esta accion 1: Si, 2: No";
+                Leer >> R6;
+                Hasta (R6  = 0);
+            Fin_Repetir          
+        Caso (R4 = 2);
+            Para (K5 = K4 Hasta K5 = (pub - 1)) Hacer;
+                Si (K5 != pub) Entonces;
+                    Publi[K5].Texto = Publi[K5 + 1].Texto;
+                    Publi[K5].ID_Publicacion = Publi[K5 + 1].ID_Publicacion;   
+                    Publi[K5].Autor =  Publi[K5 + 1].Autor;              
+                    Publi[K5].Normas = Publi[K5 + 1].Normas;      
+                    Publi[K5].Tema = Publi[K5 + 1].Tema;          
+                    Publi[K5].Fecha = Publi[K5 + 1].Fecha;         
+                    Publi[K5].Comentarios = Publi[K5 + 1].Comentarios;    
+                    Publi[K5].Cant_Reacciones = Publi[K5 + 1].Cant_Reacciones;
+                    Publi[K5].Tipo_Reaccion1 = Publi[K5 + 1].Tipo_Reaccion1;    
+                    Publi[K5].Tipo_Reaccion2 = Publi[K5 + 1].Tipo_Reaccion2;
+                    Publi[K5].Tipo_Reaccion3 = Publi[K5 + 1].Tipo_Reaccion3;
+                    Publi[K5].Etiqueta = Publi[K5 + 1].Etiqueta;         
+                    Publi[K5].Activo = Publi[K5 + 1].Activo;
+                Sino
+                    pub = pub - 1;
+                Fin_Si
+            Fin_Para
+            Mostrar << "Su publicacion fue eliminada permanentemente de forma exitosa";
+        Otro_Caso
+            Si (Publi[K4].Activo = 0) Entonces;
+                Mostrar << "¿Desea activar la visualizacion de su publicacion?, 1: Sí, 0: No";
+                Leer >> R5;
+                Si (R5 = 1) Entonces;
+                    Publi[K4].Activo = 1;
+                Fin_Si
+            Sino
+                Mostrar << "¿Desea desactivar la visualizacion de su publicacion?, 1: Sí, 0: No";
+                Leer >> R5;
+                Si (R5 = 1) Entonces;
+                    Publi[K4].Activo = 0;
+                Fin_Si
+            Fin_Si
+    Fin_Caso
+Fin_Procedimiento

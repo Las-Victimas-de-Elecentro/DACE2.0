@@ -1,6 +1,6 @@
-Procedimiento Solicitud_Empleo(E/S: I, K: Entero, Empleo[I].Usuario: Cadena, Empleo.CI[I]: Entero, Empleo[I].Gmail, Empleo[I].Password: Cadena, Empleo[I].Edad: Entero, Empleo[I].Experiencia, Empleo[I].Titulo, Empleo[I].Descripcion: Cadena);
+Procedimiento Solicitud_Empleo(E/S: K, Empleo[K].Edad, Empleo[K].CI: Entero, Empleo[K].Usuario, Empleo[K].Gmail, Empleo[K].Password, Empleo[K].Experiencia, Empleo[K].Titulo, Empleo[K].Descripcion: Cadena, Empleo[K].Estado: Booleano);
 Inicio
-	Var K = 1, Rep: Entero;
+	Var Rep: Entero;
 	Var R: Booleano;
 	Var opc, Apr: Booleano;
 	Repetir
@@ -28,13 +28,13 @@ Inicio
         Mostrar << "¿Desea ingresar otra solicitud de empleo? 1:Sí, 0: No";
         Leer >> R;
         K = K + 1;
-        Hasta(R = 0 or K = 500);
+        Hasta(R = 0 or K = 5000);
     Fin_Repetir
     Mostrar << "¿Desea revisar las solicitudes de empleo? 1: Sí, 0: No";
     Leer >> opc;
     Si (opc = 1) Entonces;
-        Mostrar<<"¿Cuántas desea revisar para verificar si deben ser aprobadas o denegadas?";
-        Leer>>Rep;
+        Mostrar << "¿Cuántas desea revisar para verificar si deben ser aprobadas o denegadas?";
+        Leer >> Rep;
         Mientras (Rep < 1 or Rep > K) Hacer;
             Mostrar << "Solo positivos o es mayor que el tamaño de la base de datos";	
             Leer >> Rep;

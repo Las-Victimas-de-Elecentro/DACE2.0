@@ -1,6 +1,6 @@
-Procedimiento Menu_Personal_Prof();
+Procedimiento Docente_Personal(E/S: Avatares[I], Prof[pos].Avatar, Prof[pos].Nombre, Prof[pos].Gmail, Prof[pos].Password, Prof[pos].Salud[pos].Transmisibles, Prof[pos].Salud[pos].Cronicas, Prof[pos].Salud[pos].Neurologicas, Prof[pos].Salud[pos].Neoplasias, Prof[pos].Salud[pos].Autoinmunes, Prof[pos].Salud[pos].Trastornos, Prof[pos].Salud[pos].Lesiones, Prof[pos].Salud[pos].Congenitas, Prof[pos].Salud[pos].Metabolicos, Prof[pos].Salud[pos].Ocupacionales, Clase[I].Codigo_Materia, Clase[I].Nombre_Materia, Clase[I].Periodo, Clase[I].Nombre_Profesor, Clase[I].Dia, Clase[I].Hora_Inicio, Clase[I].Hora_Fin, Clase[I].Aula: Cadena, Prof[pos].CI, Clase[I].Cant_Estudiantes: Entero, Tema: Booleano);
 Inicio
-    var Opc: entero, R: Booleano;
+    var Opc: Entero, R: Booleano;
     Repetir
         Mostrar << "Bienvenido a tu perfil personal de profesor";
         Mostrar << "Aqui puedes gestionar tu informacion, seguridad y preferencias";
@@ -11,8 +11,9 @@ Inicio
         Mostrar << "4: Modo Oscuro";
         Mostrar << "5: Avatar";
         Mostrar << "6: Salud";
+        Mostrar << "0: Salir";
         Leer >> Opc;
-        Mientras (Opc < 1 Or Opc > 6) Hacer;
+        Mientras (Opc < 0 Or Opc > 6) Hacer;
             Mostrar << "Ingrese solo opciones entre 1-6";
             Leer >> Opc;
         Fin_Mientras
@@ -24,22 +25,23 @@ Inicio
                 Seguridad_Personal_Prof(Prof[pos].Password, Prof[pos].Gmail);
                 Mostrar << Seguridad_Personal_Prof;
             Caso(Opc = 3);
-                Historial_Personal_Prof(Clase[pos].Codigo_Materia, Clase[pos].Nombre_Materia, Clase[pos].Periodo, Clase[pos].Cant_Profudiantes);
+                Historial_Personal_Prof(Clase[I].Codigo_Materia, Clase[I].Nombre_Materia, Clase[I].Periodo, Clase[I].Nombre_Profesor, Clase[I].Dia, Clase[I].Hora_Inicio, Clase[I].Hora_Fin, Clase[I].Aula, Clase[I].Cant_Estudiantes);
                 Mostrar << Historial_Personal_Prof;
             Caso(Opc = 4);
                 Oscuro_Personal_Prof(Tema);
                 Mostrar << Oscuro_Personal_Prof;
             Caso(Opc = 5);
-                Avatares (Avatares[10]);
-                Avatar_Personal_Prof(Avatares[10], Prof[pos].Avatar);
+                Avatares (Avatares[I]);
+                Avatar_Personal_Prof(Avatares[I], Prof[pos].Avatar);
                 Mostrar << Avatar_Personal_Prof;
-            Otro_Caso
-                Salud_Personal_Prof(Prof.Salud[pos].Transmisibles, Prof.Salud[pos].Cronicas, Prof.Salud[pos].Neurologicas, Prof.Salud[pos].Neoplasias, Prof.Salud[pos].Autoinmunes, Prof.Salud[pos].Trastornos, Prof.Salud[pos].Lesiones, Prof.Salud[pos].Congenitas, Prof.Salud[pos].Metabolicos, Prof.Salud[pos].Ocupacionales);
+            Caso (Opc = 6);
+                Salud_Personal_Prof(Prof[pos].Salud[pos].Transmisibles, Prof[pos].Salud[pos].Cronicas, Prof[pos].Salud[pos].Neurologicas, Prof[pos].Salud[pos].Neoplasias, Prof[pos].Salud[pos].Autoinmunes, Prof[pos].Salud[pos].Trastornos, Prof[pos].Salud[pos].Lesiones, Prof[pos].Salud[pos].Congenitas, Prof[pos].Salud[pos].Metabolicos, Prof[pos].Salud[pos].Ocupacionales);
                 Mostrar << Salud_Personal_Prof;
+            Otro_Caso
+                R = 0;
         Fin_Caso
-        Mostrar << "¿Desea elegir otra opción? Ingrese 1:Si, 0:No";
-        Leer R;
+        Mostrar << "¿Desea elegir otra opción? Ingrese 1: Sí, 0:No";
+        Leer >> R;
         Hasta(R = 0);
     Fin_Repetir
-
 Fin_Procedimiento

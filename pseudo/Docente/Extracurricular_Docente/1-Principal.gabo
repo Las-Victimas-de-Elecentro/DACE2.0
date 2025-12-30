@@ -21,7 +21,7 @@ Registro: Celebraciones;    //Llave: Cel; Ruta: Cel.Campo;
 Fin_Registro
 
 
-Procedimiento Extracurricular_Docente(E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion, Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
+Procedimiento Docente_Extracurricular(E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion, Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
 Inicio
     Var opc: Entero;
     Repetir

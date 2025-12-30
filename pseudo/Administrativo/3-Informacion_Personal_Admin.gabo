@@ -1,4 +1,4 @@
-Procedimiento Informacion_Personal_Admin(E/S: Admin[I].Usuario: Cadena, Admin[I].CI: Entero, Admin[I].Gmail, Admin[I].Cargo: Cadena);
+Procedimiento Informacion_Personal_Admin(E/S: Admin[pos_admin].Usuario: Cadena, Admin[pos_admin].CI: Entero, Admin[pos_admin].Gmail, Admin[pos_admin].Cargo: Cadena);
 Inicio
     Mostrar << "A continuación sus datos personales";
     Mostrar << "Usuario: ", Admin[pos_admin].Usuario;

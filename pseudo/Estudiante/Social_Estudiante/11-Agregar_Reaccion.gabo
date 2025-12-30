@@ -1,0 +1,40 @@
+Procedimiento Agregar_Reaccion(E/S: react, Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[react].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[react].Cant_Molesta: Entero, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta: Cadena);
+Inicio
+    Var opc: Entero;
+    Mostrar << "¿Qué tipo de reacción desea agregar?";
+    Mostrar << "1: Me gusta";
+    Mostrar << "2: Me encanta";
+    Mostrar << "3: Me importa";
+    Mostrar << "4: Me divierte";
+    Mostrar << "5: Me asombra";
+    Mostrar << "6: Me entristece";
+    Mostrar << "7: Me molesta";
+    Leer >> opc;
+    Mientras (opc < 1 or opc > 7) Hacer;
+        Mostrar << "Es invalido, solo hay 7 reacciones, elija una";
+        Leer >> opc;
+    Fin_Mientras
+    En_Caso (opc > 0) Sea;
+        Caso(opc = 1);
+            Mostrar << Rea[react].Me_Gusta;
+            Rea[react].Cant_Gusta = Rea[react].Cant_Gusta + 1;
+        Caso(opc = 2);
+            Mostrar << Rea[react].Me_Encanta;
+            Rea[react].Cant_Encanta = Rea[react].Cant_Encanta + 1;
+        Caso(opc = 3);
+            Mostrar << Rea[react].Me_Importa;
+            Rea[react].Cant_Importa = Rea[react].Cant_Importa + 1;
+        Caso(opc = 4);
+            Mostrar << Rea[react].Me_Divierte;
+            Rea[react].Cant_Divierte = Rea[react].Cant_Divierte + 1;
+        Caso(opc = 5);
+            Mostrar << Rea[react].Me_Asombra;
+            Rea[react].Cant_Asombra = Rea[react].Cant_Asombra + 1;
+        Caso(opc = 6);
+            Mostrar << Rea[react].Me_Entristece;
+            Rea[react].Cant_Entristece = Rea[react].Cant_Entristece + 1;
+        Otro_Caso
+            Mostrar << Rea[react].Me_Molesta;
+            Rea[react].Cant_Molesta = Rea[react].Cant_Molesta + 1;
+    Fin_Caso
+Fin_Procedimiento
