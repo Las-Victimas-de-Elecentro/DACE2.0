@@ -1,0 +1,17 @@
+Procedimiento Comentar(E/S: com, Ver, Com[com].ID_Publicacion, Com[com].ID_Comentario, Publi[Ver].Comentarios: Entero, Com[com].Comentario, Com[com].Fecha, Com[com].Autor: Cadena);
+Inicio
+    Var R: Booleano;
+    Repetir
+        Mostrar << "Ingrese su comentario";
+        Leer >> Com[com].Comentario;
+        Mostrar << "Ingrese la fecha";
+        Leer >> Com[com].Fecha;
+        Mostrar << "¿Desea enviarlo? 1: Sí, 0: No";
+        Leer >> R;
+        Hasta(R = 1);
+    Fin_Repetir
+    Com[com].ID_Publicacion = Publi[Ver].ID_Publicacion;
+    Com[com].ID_Comentario = com;
+    Com[com].Autor = Datos[pos_usuario].Nombre;
+    com = com + 1;
+Fin_Procedimiento

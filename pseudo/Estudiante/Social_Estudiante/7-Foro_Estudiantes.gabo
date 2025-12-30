@@ -1,0 +1,100 @@
+Registro: Publicaciones;        //Publi[]
+    ID_Publicacion: Entero;
+    Autor: Cadena;
+    Normas: Cadena;
+    Tema: Cadena;
+    Texto: Cadena;
+    Fecha: Cadena;
+    Comentarios: Entero;
+    Cant_Reacciones: Entero;
+    Tipo_Reaccion1: Cadena;
+    Tipo_Reaccion2: Cadena;
+    Tipo_Reaccion3: Cadena;
+    Etiqueta: Cadena;
+    Activo: Booleano;
+Fin_Registro
+
+
+Registro: Comentarios;          //Com[]
+    ID_Publicacion: Entero;
+    ID_Comentario: Entero;
+    Autor: Cadena;
+    Comentario: Cadena;
+    Fecha: Cadena;
+    Cant_Reacciones: Entero;
+    Tipo_Reaccion1: Cadena;
+    Tipo_Reaccion2: Cadena;
+    Tipo_Reaccion3: Cadena;
+Fin_Registro
+
+Registro: Respuesta;        //Res[]
+    ID_Comentario: Entero;
+    ID_Respuesta: Entero;
+    Autor: Cadena;
+    Respuesta: Cadena;
+    Fecha: Cadena;
+    Cant_Reacciones: Entero;
+    Tipo_Reaccion1: Cadena;
+    Tipo_Reaccion2: Cadena;
+    Tipo_Reaccion3: Cadena;
+Fin_Registro
+
+Registro: Reacciones;           //Rea[]
+    ID_Publicacion: Entero;
+    ID_Comentario: Entero;
+    ID_Respuesta: Entero;
+    ID_Reacciones: Entero;
+    Me_Gusta: Cadena;
+    Cant_Gusta: Entero;
+    Me_Encanta: Cadena;
+    Cant_Encanta: Entero;
+    Me_Importa: Cadena;
+    Cant_Importa: Entero;
+    Me_Divierte: Cadena;
+    Cant_Divierte: Entero;
+    Me_Asombra: Cadena;
+    Cant_Asombra: Entero;
+    Me_Entristece: Cadena;
+    Cant_Entristece: Entero;
+    Me_Molesta: Cadena;
+    Cant_Molesta: Entero;
+Fin_Registro
+
+Procedimiento Foro_Estudiantes(E/S: Aux, Ver, react, com, re, Publi[Ver].Comentarios, Publi[Ver].ID_Publicacion, Publi[Ver].Comentarios, Publi[Ver].Cant_Reacciones, Com[J].Cant_Reacciones, Res[re].ID_Comentario, Res[re].ID_Respuesta, Com[com].ID_Publicacion, Com[com].ID_Comentario, Rea[react].ID_Comentario, Rea[react].ID_Publicacion, Rea[react].ID_Respuesta, Rea[react].ID_Reacciones, Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[react].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[react].Cant_Molesta: Entero, Publi[Ver].Autor, Publi[Ver].Tema, Publi[Ver].Normas, Publi[Ver].Texto, Publi[Ver].Tipo_Reaccion1, Publi[Ver].Tipo_Reaccion2, Publi[Ver].Tipo_Reaccion3, Publi[Ver].Etiqueta, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta, Com[com].Comentario, Com[com].Fecha, Com[com].Autor, Com[J].Tipo_Reaccion1, Com[J].Tipo_Reaccion2, Com[J].Tipo_Reaccion3, Res[re].Comentario, Res[re].Autor, Res[re].Fecha: Cadena, Publi[Ver].Activo: Booleano);
+Inicio
+    Var opc: Entero;
+    Var R: Booleano;
+    Repetir
+        Mostrar << "¡Bienvenido al Foro de Estudiantes!";
+        Mostrar << "1: Crear publicación";
+        Mostrar << "2: Ver publicaciones";
+        Mostrar << "3: Buscar publicación por un tema en específico";
+        Mostrar << "4: Ver tus publicaciones para decidir si editarla, borrarla u ocultarla";
+        Mostrar << "5: Ranking de Publicaciones";
+        Leer >> opc;
+        Mientras (opc < 1 or opc > 5) Hacer;
+            Mostrar << "Es invalido";
+            Leer >> opc;
+        Fin_Mientras
+        En_Caso (opc > 0) Sea;
+            Caso(opc = 1);
+                Crear_Publicacion(pub, Publi[pub].ID_Publicacion, Publi[pub].Fecha, Publi[pub].Tema, Publi[pub].Normas, Publi[pub].Texto, Publi[pub].Etiqueta, Publi[pub].Autor);
+                Mostrar << Crear_Publicacion;
+            Caso(opc = 2);
+                Publicaciones(Aux, Ver, react, com, re, Publi[Ver].Comentarios, Publi[Ver].ID_Publicacion, Publi[Ver].Comentarios, Publi[Ver].Cant_Reacciones, Com[J].Cant_Reacciones, Res[re].ID_Comentario, Res[re].ID_Respuesta, Com[com].ID_Publicacion, Com[com].ID_Comentario, Rea[react].ID_Comentario, Rea[react].ID_Publicacion, Rea[react].ID_Respuesta, Rea[react].ID_Reacciones, Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[react].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[react].Cant_Molesta, Publi[Ver].Autor, Publi[Ver].Tema, Publi[Ver].Normas, Publi[Ver].Texto, Publi[Ver].Tipo_Reaccion1, Publi[Ver].Tipo_Reaccion2, Publi[Ver].Tipo_Reaccion3, Publi[Ver].Etiqueta, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta, Com[com].Comentario, Com[com].Fecha, Com[com].Autor, Com[J].Tipo_Reaccion1, Com[J].Tipo_Reaccion2, Com[J].Tipo_Reaccion3, Res[re].Comentario, Res[re].Autor, Res[re].Fecha, Publi[Ver].Activo);
+                Mostrar << Publicaciones;
+            Caso(opc = 3);
+                Buscar_Publicacion(Aux, Ver, react, com, re, Publi[Ver].Comentarios, Publi[Ver].ID_Publicacion, Publi[I].Cant_Reacciones, Com[J].Cant_Reacciones, Res[re].ID_Comentario, Res[re].ID_Respuesta, Com[com].ID_Publicacion, Com[com].ID_Comentario, Rea[react].ID_Comentario, Rea[react].ID_Publicacion, Rea[react].ID_Respuesta, Rea[react].ID_Reacciones, Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[react].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[react].Cant_Molesta, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta, Com[com].Comentario, Com[com].Fecha, Com[com].Autor, Com[J].Tipo_Reaccion1, Com[J].Tipo_Reaccion2, Com[J].Tipo_Reaccion3, Res[re].Comentario, Res[re].Autor, Res[re].Fecha, Publi[I].Autor, Publi[I].Tema, Publi[I].Normas, Publi[I].Texto, Publi[I].Tipo_Reaccion1, Publi[I].Tipo_Reaccion2, Publi[I].Tipo_Reaccion3, Publi[Ver].Activo);
+                Mostrar << Buscar_Publicacion;
+            Caso(opc = 4);
+                Propias_Publicaciones(Publi[I].ID_Publicacion, Publi[I].Comentarios, Publi[I].Cant_Reacciones, Datos[pos_usuario].Nombre, Publi[I].Autor, Publi[I].Texto, Publi[I].Normas, Publi[I].Tema, Publi[I].Fecha, Publi[I].Etiqueta, Publi[I].Tipo_Reaccion1, Publi[I].Tipo_Reaccion2, Publi[I].Tipo_Reaccion3, Publi[I].Activo);
+                Mostrar << Propias_Publicaciones;
+            Otro_Caso
+                Ranking(Aux, Ver, react, com, re, pub, Publi[I].ID_Publicacion, Publi[I].Comentarios, Publi[I].Cant_Reacciones, Publi[I].Texto, Publi[I].Autor, Publi[I].Tema, Publi[I].Fecha, Publi[I].Tipo_Reaccion1, Publi[I].Tipo_Reaccion2, Publi[I].Tipo_Reaccion3, Publi[I].Etiqueta);
+                Mostrar << Ranking;
+        Fin_Caso
+        Mostrar << "¿Desea volver al menú principal? 1: Sí, 0: No";
+        Leer >> R;
+        Hasta(R = 1);
+    Fin_Repetir
+Fin_Procedimiento

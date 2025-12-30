@@ -1,0 +1,36 @@
+Procedimiento Crear_Publicacion(E/S: pub, Publi[pub].ID_Publicacion: Entero, Publi[pub].Fecha, Publi[pub].Tema, Publi[pub].Normas, Publi[pub].Texto, Publi[pub].Etiqueta, Publi[pub].Autor: Cadena);
+Inicio
+    Var R, R2: Booleano;
+    Mostrar << "|  Creación de Publicaciones  |";
+    Repetir
+        Repetir
+            Mostrar << "Ingrese la fecha de la publicación (DD/MM/YYYY)";
+            Leer >> Publi[pub].Fecha;
+            Mostrar << "Ingrese la temática que tendrá la publicación";
+            Leer >> Publi[pub].Tema;
+            Mostrar << "Ingrese las normas de la publicación";
+            Leer >> Publi[pub].Normas;
+            Mostrar << "Ingrese el texto que contendrá la publicación";
+            Leer >> Publi[pub].Texto;
+            Mostrar << "Ingrese la etiqueta que tendrá la publicación para poder ser encontrada";
+            Leer >> Publi[pub].Etiqueta;
+            
+            Mostrar << Publi[pub].Fecha;
+            Mostrar << Publi[pub].Tema;
+            Mostrar << Publi[pub].Normas;
+            Mostrar << Publi[pub].Texto;
+            Mostrar << Publi[pub].Etiqueta;
+            Mostrar << "¿Esos datos son correctos? 1: Sí, 0: No";
+            Leer >> R;
+            Hasta(R = 1);
+        Fin_Repetir
+        Mostrar << "Publicación creada correctamente";
+        Publi[pub].Autor = Datos[pos_usuario].Nombre;
+        Publi[pub].ID_Publicacion = pub;
+        
+        pub = pub + 1;
+        Mostrar << "¿Desea crear otra publicación? 1: Sí, 0: No";
+        Leer >> R2;
+        Hasta(R2 = 0);
+    Fin_Repetir
+Fin_Procedimiento

@@ -51,7 +51,7 @@ Inicio
     Fin_Si
 
     Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Der[pos_usuario].Investigacion_Jurídica < 5.5) Entonces;
-        Mostrar << "Metodología de Investigación Jurídica";
+        Mostrar << "Métodos de Investigación Jurídica";
         Mostrar << Inscripcion;
     Fin_Si
 

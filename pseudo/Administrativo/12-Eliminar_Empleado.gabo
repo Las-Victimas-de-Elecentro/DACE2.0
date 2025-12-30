@@ -1,7 +1,7 @@
-Procedimiento Eliminar_Empleado (E/S: Lim, Admin[I].Usuario: Cadena, Admin.CI[I]: Entero, Admin[I].Gmail, Admin[I].Password: Cadena);
+Procedimiento Eliminar_Empleado (E/S: Lim, Admin[I].CI: Entero, Admin[I].Usuario, Admin[I].Cargo, Admin[I].Gmail, Admin[I].Password: Cadena);
 Inicio
 	Var R: Booleano;
-	Eliminar: Entero;
+	Var Eliminar: Entero;
 	Repetir
 		Mostrar << "Bienvenido a la eliminación de información de la base de datos";
 		Mostrar << "A continuación se le mostrará la base de datos para que pueda seleccionar la posición del empleado que desea eliminar";

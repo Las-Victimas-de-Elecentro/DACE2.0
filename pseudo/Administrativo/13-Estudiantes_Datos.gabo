@@ -1,31 +1,31 @@
-Procedimiento Estudiantes_Datos(E/S: I, C: Entero, Datos[I].Usuario: Cadena, Datos.ID[I]: cadena,  Datos.CI[I]: Entero,  Datos[I].Password: Cadena, Datos[I].Edad: Entero, Datos[I].Carrera: Cadena, Datos.Year.Semestre[I]:Entero);
+Procedimiento Estudiantes_Datos(E/S: C, Gestion[C].CI, Gestion[C].Edad, Gestion[C].Year, Gestion[C].Semestre: Entero, Gestion[C].Usuario, Gestion[C].Password, Gestion[C].Carrera: Cadena);
 Inicio
 	Var C = 1, Es: Entero;
 	Var Z: Booleano;
 	Var opc2, Apr2: Booleano;
     Repetir
         Mostrar << "Ingrese el nombre del estudiante";
-        Leer >> Datos[C].Usuario;
-        Mostrar << "Ingrese la ID del estudiante";
-        Leer >> Datos[C].ID;
+        Leer >> Gestion[C].Usuario;
         Mostrar << "Ingrese la cédula del estudiante";
-        Leer >> Datos[C].CI;
+        Leer >> Gestion[C].CI;
         Mostrar << "Ingrese la contraseña";
-        Leer >> Datos[C].Password;
+        Leer >> Gestion[C].Password;
         Mostrar << "Ingrese la edad";
-        Leer >> Datos[C].Edad;
-        Mientras (Datos[C].Edad < 17 or Datos[C].Edad > 100) Hacer;
+        Leer >> Gestion[C].Edad;
+        Mientras (Gestion[C].Edad < 17 or Gestion[C].Edad > 100) Hacer;
             Mostrar << "Solo positivos";
-            Leer >> Datos[C].Edad;
+            Leer >> Gestion[C].Edad;
         Fin_Mientras
         Mostrar << "Ingrese la carrera del estudiante";
-        Leer >> Datos[C].Carrera;
+        Leer >> Gestion[C].Carrera;
+        Mostrar << "Ingrese el año del estudiante";
+        Leer >> Gestion[C].Year;
         Mostrar << "Ingrese el semestre del estudiante";
-        Leer >> Datos[C].Yea.Semestre;
-        Mostrar << "¿Desea verificar otra inscripción estudiantil? 1:Sí, 0: No";
+        Leer >> Gestion[C].Semestre;
+        Mostrar << "¿Desea verificar otra inscripción estudiantil? 1: Sí, 0: No";
         Leer >> Z;
         C= C + 1;
-        Hasta(Z = 0 or C= 500);
+        Hasta(Z = 0 or C = 5000);
     Fin_Repetir
     Mostrar << "¿Desea revisar las inscripciones estudiantiles en cuanto a los requisitos a cumplir? 1: Sí, 0: No";
     Leer >> opc2;
@@ -36,29 +36,29 @@ Inicio
             Mostrar << "Solo positivos o es mayor a la base de datos";                                  		Leer>>Es;
         Fin_Mientras
         Para (I = 1 Hasta I = Es) Hacer;
-            Mostrar << Datos[I].Usuario;
-            Mostrar << Datos[I].ID;
-            Mostrar << Datos[I].CI;
-            Mostrar << Datos[I].Password;
-            Mostrar << Datos[I].Edad;
-            Mostrar << Datos[I].Carrera;
-            Mostrar << Datos[I].Yea.Semestre;
+            Mostrar << Gestion[I].Usuario;
+            Mostrar << Gestion[I].ID;
+            Mostrar << Gestion[I].CI;
+            Mostrar << Gestion[I].Password;
+            Mostrar << Gestion[I].Edad;
+            Mostrar << Gestion[I].Carrera;
+            Mostrar << Gestion[I].Yea.Semestre;
             Mostrar << "¿Desea inscribir al estudiante? 1: Sï, 0: No";
             Leer >> Apr2;
-            Datos[I].Estado = Apr2;
+            Gestion[I].Estado = Apr2;
         Fin_Para
     Sino
         Mostrar<<"Continúe su camino entre el programa estudiantil";
     Fin_Si
     Para (I = 1 Hasta I = C) Hacer;
-        Si (Datos.Estado[I] = 0) Entonces;
-            Datos[I].Usuario = " ";
-            Datos[I].ID = " ";
-            Datos[I].CI = null;
-            Datos[I].Password = " ";
-            Datos[I].Edad = null;
-            Datos[I].Carrera= " ";
-            Datos[I].Yea.Semestre= " ";
+        Si (Gestion.Estado[I] = 0) Entonces;
+            Gestion[I].Usuario = " ";
+            Gestion[I].ID = " ";
+            Gestion[I].CI = null;
+            Gestion[I].Password = " ";
+            Gestion[I].Edad = null;
+            Gestion[I].Carrera= " ";
+            Gestion[I].Yea.Semestre= " ";
         Fin_Si
     Fin_Para
 Fin_Procedimiento

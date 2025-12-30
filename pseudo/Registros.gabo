@@ -46,6 +46,7 @@ Registro: Estudiantes;      //Estudiantes: Datos;
     Club: Cadena;
     Esta_en_Club: Booleano;
     Enfermedad: Cadena;
+    Vistos: Entero
 Fin_Registro
 
 // Enfermedades

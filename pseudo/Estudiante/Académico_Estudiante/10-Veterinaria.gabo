@@ -121,7 +121,7 @@ Inicio
     Fin_Si
 
     Si (Datos[pos_usuario].Year >= 3) and (Datos[pos_usuario].Materias.Vet[pos_usuario].Farmacologia < 5.5) Entonces;
-        Mostrar << "Farmacología";
+        Mostrar << "Farmacología Veterinaria";
         Mostrar << Inscripcion;
     Fin_Si
 

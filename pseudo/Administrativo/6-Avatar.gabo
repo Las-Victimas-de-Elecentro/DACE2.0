@@ -1,4 +1,4 @@
-Procedimiento Avatar_Admin (E/S: Avatares[10], Admin[I].Avatar: Cadena);
+Procedimiento Avatar_Admin (E/S: Avatares[I], Admin[pos_admin].Avatar: Cadena);
 Inicio
     var Opc: Entero, A = 0, R: Booleano;
     Repetir
@@ -17,17 +17,13 @@ Inicio
         Mostrar << "10: Balon de fútbol";
         Mostrar << "11: Avatar Predeterminado";
         Leer >> Opc;
-        Mientras (Opc < 1 Or > 11) Hacer;
+        Mientras (Opc < 1 or Opc > 11) Hacer;
             Mostrar << "Ingrese solo opciones entre 1-11";
             Leer >> Opc;
         Fin_Mientras
         
         Mostrar << "¿Estás seguro de que quieres usar este avatar? Ingrese 1:Sí / 0:No";
         Leer >> A;
-        Mientras (A < 0 Or A > 1) Hacer;
-            Mostrar << "Ingrese solo opciones entre 0-1";
-            Leer >> A;
-        Fin_Mientras
         
         En_Caso (A > 0) Sea;
             Caso(Opc = 1);

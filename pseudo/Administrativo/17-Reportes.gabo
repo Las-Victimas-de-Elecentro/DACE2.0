@@ -1,6 +1,6 @@
-Procedimiento Reportes(E/S: I, Rep[I].Titulo, Rep[I].Descripcion, Rep[I].Titular, Rep[I].Problema: Cadena, Rep[I].Recibido: Booleano);
+Procedimiento Reportes(E/S: Re: Entero, Rep[I].Titulo, Rep[I].Descripcion, Rep[I].Titular, Rep[I].Problema: Cadena, Rep[I].Recibido: Booleano);
 Inicio
-    Var opc: Entero, R: Booleano;
+    Var opc, I: Entero, R: Booleano;
     Var ele, elec: Entero;
     Mostrar << "¡Bienvenido a la sección de Repcitudes!";
     Mostrar << "¿Qué desea hacer?";

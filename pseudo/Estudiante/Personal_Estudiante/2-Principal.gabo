@@ -1,15 +1,18 @@
+Algoritmo DACE_ELECENTRO
 Inicio
     //Variables Maestras
-    var Estudiantes: Datos[500], Enfermedad: Salud[500];
-    var Notas: Materias, 
-    var Informatica: Info[500], Civil: Civ[500], Hidrocarburos: Hid[500];
-    var Medicina: Med[500], Odontologia: Odo[500], Veterinaria: Vet[500];
-    var Derecho: Der[500], Comunicacion: Soc[500];
-    var Contaduria: Con[500], Economia: Eco[500];
+    Var Estudiantes: Datos[5000], Enfermedad: Salud[5000];
+    Var Notas: Materias, 
+    Var Informatica: Info[5000], Civil: Civ[5000], Hidrocarburos: Hid[5000];
+    Var Medicina: Med[5000], Odontologia: Odo[5000], Veterinaria: Vet[5000];
+    Var Derecho: Der[5000], Comunicacion: Soc[5000];
+    Var Contaduria: Con[5000], Economia: Eco[5000];
     
     //Variables Globales
-    var Tema = 0: Booleano;
-    var Avatares[1]: Cadena;
-    var Suma: Real;
-    var Datos[pos_usuario].Servicio_Comunitario = 0 : Booleano;
+    Var Tema = 0: Booleano;
+    Var Avatares[20]: Cadena;
+    Var Suma: Real;
+    Var Datos[pos_usuario].Servicio_Comunitario = 0: Booleano;
+
+    Relleno_Bot(Bot[I].Preguntas, Bot[I].Respuesta1, Bot[I].Respuesta2, Bot[I].Respuesta3, Bot[I].Respuesta4);
 Fin

@@ -1,4 +1,4 @@
-Procedimiento Novedades(E/S: Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar: Cadena);
+Procedimiento Novedades(E/S: Nov: Entero, Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar: Cadena);
 Inicio
     Var opc: Entero, R: Booleano;
     Repetir
@@ -21,18 +21,18 @@ Inicio
             Fin_Para
             Mostrar << "Esas fueron todas las novedades.";
         Sino
-            //N debe ser agregada al principal que es la que controla las novedades
-            N = N + 1;
+            //Nov debe ser agregada al principal que es la que controla las novedades
+            Nov = Nov + 1;
             Mostrar << "Ingrese de qué hecho trata esta nueva novedad:";
-            Leer >> Nov[N].Hecho;
+            Leer >> Nov[Nov].Hecho;
             Mostrar << "¿En qué fecha sucedió? (DD/MM/YYYY)";
-            Leer >> Nov[N].Fecha;
+            Leer >> Nov[Nov].Fecha;
             Mostrar << "¿Quiénes fueron los responsables?";
-            Leer >> Nov[N].Responsables;
+            Leer >> Nov[Nov].Responsables;
             Mostrar << "¿Cuál fue el contexto?";
-            Leer >> Nov[N].Contexto;
+            Leer >> Nov[Nov].Contexto;
             Mostrar << "¿Cuál fue el lugar?";
-            Leer >> Nov[N].Lugar;
+            Leer >> Nov[Nov].Lugar;
             Mostrar << "Novedad insertada correctamente.";
         Fin_Si
         Mostrar << "¿Desea ver todas las novedades o ingresar otra nuevamente? 1: Sí, 0: No";

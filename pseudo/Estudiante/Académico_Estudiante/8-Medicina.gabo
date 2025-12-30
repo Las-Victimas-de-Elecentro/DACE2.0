@@ -60,6 +60,11 @@ Inicio
         Mostrar << Inscripcion;
     Fin_Si
 
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Med[pos_usuario].Historia_Medicina) Entonces;
+        Mostrar << "Historia de la Medicina";
+        Mostrar << Inscripcion;
+    Fin_Si
+
     Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Med[pos_usuario].Antropologia < 5.5) Entonces;
         Mostrar << "Antropología";
         Mostrar << Inscripcion;

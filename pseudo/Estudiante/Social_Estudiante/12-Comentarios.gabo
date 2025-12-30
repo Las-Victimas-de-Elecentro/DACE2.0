@@ -1,0 +1,76 @@
+Procedimiento Comentarios(E/S: Ver, re, react, Publi[Ver].ID_Publicacion, Publi[Ver].Comentarios, Com[J].ID_Publicacion, Com[J].Cant_Reacciones, Res[K].Cant_Reacciones, Res[re].ID_Comentario, Res[re].ID_Respuesta, Rea[react].ID_Publicacion, Rea[react].ID_Comentario, Rea[react].ID_Respuesta, Rea[react].ID_Reacciones, Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[react].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[react].Cant_Molesta: Entero, Com[J].Autor, Com[J].Fecha, Com[J].Tipo_Reaccion1, Com[J].Tipo_Reaccion2, Com[J].Tipo_Reaccion3, Res[re].Comentario, Res[re].Autor, Res[re].Fecha, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta: Cadena);
+Inicio
+    Var J, K, opc: Entero;
+    Para (J = 1 Hasta J = com) Hacer;
+        Si (Publi[Ver].ID_Publicacion = Com[J].ID_Publicacion) Entonces;
+            Mostrar << Com[J].Autor;
+            Mostrar << Com[J].Fecha;
+            Mostrar << Com[J].Comentario;
+            Mostrar << Com[J].Cant_Reacciones;
+            Mostrar << Com[J].Tipo_Reaccion1;
+            Mostrar << Com[J].Tipo_Reaccion2;
+            Mostrar << Com[J].Tipo_Reaccion3;
+            Mostrar << Com[J].Respuestas;
+            Mostrar << "¿Qué desea hacer?";
+            Mostrar << "1: Responder";
+            Mostrar << "2: Reaccionar";
+            Mostrar << "3: Ver las respuestas";
+            Mostrar << "4: Pasar al siguiente comentario si hay";
+            Leer >> opc;
+            En_Caso (opc > 0) Sea;
+                Caso(opc = 1);
+                    Repetir
+                        Mostrar << "Ingrese su respuesta a ese comentario";
+                        Leer >> Res[re].Comentario;
+                        Mostrar << "Ingrese la fecha";
+                        Leer >> Res[re].Fecha;
+                        Mostrar << "¿Desea enviarlo? 1: Sí, 0: No";
+                        Leer >> R5;
+                        Hasta(R5 = 1);
+                    Fin_Repetir
+                    Res[re].ID_Comentario = Com[J].ID_Comentario;
+                    Res[re].ID_Respuesta = re;
+                    Res[re].Autor = Datos[pos_usuario].Nombre;
+                    Publi[Ver].Comentarios = Publi[Ver].Comentarios + 1;
+                    re = re + 1;
+                Caso(opc = 2);
+                    Aux = Com[J].ID_Comentario;
+                    Rea[react].ID_Publicacion = -1;
+                    Rea[react].ID_Comentario = Aux;
+                    Rea[react].ID_Respuesta = -1;
+                    Agregar_Reaccion(Aux, Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[react].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[react].Cant_Molesta, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta);
+                    Mostrar << Agregar_Reaccion;
+                    Rea[react].ID_Reacciones = react;
+                    Com[J].Cant_Reacciones = Com[J].Cant_Reacciones + 1;
+                    react = react + 1;
+                Caso(opc = 3);
+                    Para (K = 1 Hasta K = re) Hacer;
+                        Si (Com[J].ID_Comentario = Res[K].ID_Comentario) Entonces;
+                            Mostrar << Res[K].Autor;
+                            Mostrar << Res[K].Respuesta;
+                            Mostrar << Res[K].Fecha;
+                            Mostrar << Res[K].Cant_Reacciones;
+                            Mostrar << Res[K].Tipo_Reaccion1;
+                            Mostrar << Res[K].Tipo_Reaccion2;
+                            Mostrar << Res[K].Tipo_Reaccion3;
+                            Mostrar << "¿Desea reaccionar a esta respuesta? 1: Sí, 0: No";
+                            Leer >> R;
+                            Si (R = 1) Entonces;
+                                Aux = Res[K].ID_Respuesta;
+                                Rea[react].ID_Publicacion = -1;
+                                Rea[react].ID_Comentario = -1;
+                                Rea[react].ID_Respuesta = Aux;
+                                Agregar_Reaccion(Aux, Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[Aux].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[Aux].Cant_Molesta, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta);
+                                Mostrar << Agregar_Reaccion;
+                                Rea[react].ID_Reacciones = react;
+                                Res[K].Cant_Reacciones = Res[K].Cant_Reacciones + 1;
+                                react = react + 1;
+                            Fin_Si
+                        Fin_Si
+                    Fin_Para
+                Otro_Caso
+                    opc = 4;
+            Fin_Caso
+        Fin_Si
+    Fin_Para
+Fin_Procedimiento
