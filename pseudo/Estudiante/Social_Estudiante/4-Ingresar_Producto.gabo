@@ -1,0 +1,162 @@
+Procedimiento Ingresar_Producto(E/S: M, J2, C_MP[I].Cedula, A_MP[I].Cedula, S_MP[I].Cedula, C_MP[I].Stock, A_MP[I].Stock: Entero, C_MP[I].Precio, A_MP[I].Precio, S_MP[I].Precio: Real, C_MP[I].Vendedor, C_MP[I].Contacto, C_MP[I].Datos_Bancarios, C_MP[I].Producto, A_MP[I].Vendedor, A_MP[I].Contacto, A_MP[I].Datos_Bancarios, A_MP[I].Producto, S_MP[I].Vendedor, S_MP[I].Contacto, S_MP[I].Datos_Bancarios, S_MP[I].Producto: Cadena, S_MP[I].Disp: Booleano);
+Inicio
+    Var I, R3: Entero;
+    Var R4: Booleano;
+    Mostrar << "Ingrese el tipo de producto que es de las siguientes 3 opciones";
+    Mostrar << "1-) Comida";
+    Mostrar << "2-) Articulos";
+    Mostrar << "3-) Servicios";
+    Leer >> R3;
+    Mientras (R3 < 1 or R3 > 3) Hacer;
+        Mostrar << "Opcion seleccionada errónea, vuelvalo a intentar";
+        Mostrar << "1-) Comida";
+        Mostrar << "2-) Articulos";
+        Mostrar << "3-) Servicios";
+        Leer >> R3;
+    Fin_Mientras
+    En_Caso (R3 > 0) Sea;
+        Caso (R3 = 1);
+            Para (I = 1 Hasta I = M) Hacer;
+                Si (C_MP[I].Cedula = 0) Entonces;
+                    C_MP[I].Vendedor =            MP[J2].Usuario;
+                    C_MP[I].Cedula =              MP[J2].Cedula;
+                    C_MP[I].Contacto =            MP[J2].Contacto;
+                    C_MP[I].Datos_Bancarios =     MP[J2].Datos_Bancarios;
+                    Mostrar << "Ingrese el producto a vender (solo mayusculas)";
+                    Leer >> C_MP[I].Producto;
+                    Mostrar << "Ingrese el stock del producto (1-25)";
+                    Leer >> C_MP[I].Stock;
+                    Mientras (C_MP[I].Stock < 1 or C_MP[I].Stock > 25) Hacer;
+                        Mostrar << "Rango de sotck erroneo, intentelo neuvamente";
+                        Leer >> C_MP[I].Stock;
+                    Fin_Mientras
+                    Mostrar << "Ingrese el precio";
+                    Leer >> C_MP[I].Precio;
+                    Mientras (C_MP[I].Precio < 0) hacer;
+                        Mostrar << "Precio ingresado equivocado";
+                        Leer >> C_MP[I].Precio;
+                    Fin_Mientras
+                    Mostrar << "Ahora su producto se encuentra en la sección de comida del Market Place";
+                    R4 = 1;
+                Fin_Si
+                Si (C_MP[I].Cedula != 0) Entonces;
+                    R4 = 1;
+                Fin_Si
+            Fin_Para
+            Si (R4 = 1) Entonces;
+                M = M + 1;
+                C_MP[M].Vendedor =            MP[J2].Usuario;
+                C_MP[M].Cedula =              MP[J2].Cedula;
+                C_MP[M].Contacto =            MP[J2].Contacto;
+                C_MP[M].Datos_Bancarios =     MP[J2].Datos_Bancarios;
+                Mostrar << "Ingrese el producto a vender (solo mayusculas)";
+                Leer >> C_MP[M].Producto;
+                Mostrar << "Ingrese el stock del producto (1-25)";
+                Leer >> C_MP[M].Stock;
+                Mientras (C_MP[M].Stock < 1 or C_MP[M].Stock > 25) Hacer;
+                    Mostrar << "Rango de sotck erroneo, intentelo neuvamente";
+                    Leer >> C_MP[M].Stock;
+                Fin_Mientras
+                Mostrar << "Ingrese el precio";
+                Leer >> C_MP[M].Precio;
+                Mientras (C_MP[M].Precio < 0) Hacer;
+                    Mostrar << "Precio ingresado equivocado";
+                    Leer >> C_MP[M].Precio;
+                Fin_Mientras
+                Mostrar << "Ahora su producto se encuentra en la seccion de comida del Market Place";
+            Fin_Si
+        Caso (R3 = 2);
+            Para (I = 1 Hasta I = M) Hacer;
+                Si (A_MP[I].Cedula = 0) Entonces;
+                    A_MP[I].Vendedor =            MP[J2].Usuario;
+                    A_MP[I].Cedula =              MP[J2].Cedula;
+                    A_MP[I].Contacto =            MP[J2].Contacto;
+                    A_MP[I].Datos_Bancarios =     MP[J2].Datos_Bancarios;
+                    Mostrar << "Ingrese el producto a vender (solo mayusculas)";
+                    Leer >> A_MP[I].Producto;
+                    Mostrar << "Ingrese el stock del producto (1-25)";
+                    Leer >> A_MP[I].Stock;
+                    Mientras (A_MP[I].Stock < 1 or A_MP[I].Stock > 25) Hacer;
+                        Mostrar << "Rango de sotck erroneo, intentelo neuvamente";
+                        Leer >> A_MP[I].Stock;
+                    Fin_Mientras
+                    Mostrar << "Ingrese el precio";
+                    Leer >> A_MP[I].Precio;
+                    Mientras (A_MP[I].Precio < 0) hacer;
+                        Mostrar << "Precio ingresado equivocado";
+                        Leer >> A_MP[I].Precio;
+                    Fin_Mientras
+                    Mostrar << "Ahora su producto se encuentra en la seccion de articulos del Market Place";
+                    R4 = 1;
+                Fin_Si
+                Si (A_MP[I].Cedula != 0) Entonces;
+                    R4 = 1;
+                Fin_Si
+            Fin_Para
+            Si (R4 = 1) Entonces;
+                M = M + 1;
+                A_MP[M].Vendedor =            MP[J2].Usuario;
+                A_MP[M].Cedula =              MP[J2].Cedula;
+                A_MP[M].Contacto =            MP[J2].Contacto;
+                A_MP[M].Datos_Bancarios =     MP[J2].Datos_Bancarios;
+                Mostrar << "Ingrese el producto a vender (solo mayusculas)";
+                Leer >> A_MP[M].Producto;
+                Mostrar << "Ingrese el stock del producto (1-25)";
+                Leer >> A_MP[M].Stock;
+                Mientras (A_MP[M].Stock < 1) or (A_MP[M].Stock > 25) Hacer;
+                    Mostrar << "Rango de sotck erroneo, intentelo neuvamente";
+                    Leer >> A_MP[M].Stock;
+                Fin_Mientras
+                Mostrar << "Ingrese el precio";
+                Leer >> A_MP[M].Precio;
+                Mientras (A_MP[M].Precio < 0) hacer;
+                    Mostrar << "Precio ingresado equivocado";
+                    Leer >> A_MP[M].Precio;
+                Fin_Mientras
+                Mostrar << "Ahora su producto se encuentra en la sección de articulos del Market Place";
+            Fin_Si
+        Otro_Caso
+            Para (I = 1 Hasta I = M) Hacer;
+                Si (S_MP[I].Cedula = 0) Entonces;
+                    S_MP[I].Vendedor =            MP[J2].Usuario;
+                    S_MP[I].Cedula =              MP[J2].Cedula;
+                    S_MP[I].Contacto =            MP[J2].Contacto;
+                    S_MP[I].Datos_Bancarios =     MP[J2].Datos_Bancarios;
+                    Mostrar << "Ingrese del servicio a proporcionar (solo mayusculas)";
+                    Leer >> S_MP[I].Producto;
+                    Mostrar << "Ingrese su disponibilidad 1: Si hay, 0: No hay";
+                    Leer >> S_MP[I].Disp;
+                    Mostrar << "Ingrese el precio";
+                    Leer >> S_MP[I].Precio;
+                    Mientras (S_MP[I].Precio < 0) Hacer;
+                        Mostrar << "Precio ingresado equivocado";
+                        Leer >> S_MP[I].Precio;
+                    Fin_Mientras
+                    Mostrar << "Ahora su producto se encuentra en la sección de servicios del Market Place";
+                    R4 = 1;
+                Fin_Si
+                Si (S_MP[I].Cedula != 0) Entonces;
+                    R4 = 1;
+                Fin_Si
+            Fin_Para
+            Si (R4 = 1) Entonces;
+                M = M + 1;
+                S_MP[M].Vendedor =            MP[J2].Usuario;
+                S_MP[M].Cedula =              MP[J2].Cedula;
+                S_MP[M].Contacto =            MP[J2].Contacto;
+                S_MP[M].Datos_Bancarios =     MP[J2].Datos_Bancarios;
+                Mostrar << "Ingrese del servicio a proporcionar (solo mayusculas)";
+                Leer >> S_MP[M].Producto;
+                Mostrar << "Ingrese su disponibilidad 1: Si hay, 0: No hay";
+                Leer >> S_MP[M].Disp;
+                Mostrar << "Ingrese el precio";
+                Leer >> S_MP[M].Precio;
+                Mientras (S_MP[M].Precio < 0) Hacer;
+                    Mostrar << "Precio ingresado equivocado";
+                    Leer >> S_MP[M].Precio;
+                Fin_Mientras
+                Mostrar << "Ahora su producto se encuentra en la sección de servicios del Market Place";
+                R4 = 1;
+            Fin_Si
+    Fin_Caso
+Fin_Procedimiento

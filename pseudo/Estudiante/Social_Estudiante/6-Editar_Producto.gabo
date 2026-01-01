@@ -1,0 +1,275 @@
+Procedimiento Editar_Producto(E/S: M, Cedula, C_MP[I].Cedula, C_MP[I].Stock, A_MP[I].Cedula, A_MP[I].Stock, S_MP[I].Cedula: Entero, C_MP[I].Precio, A_MP[I].Precio, S_MP[I].Precio: Real, C_MP[I].Producto, C_MP[I].Vendedor, C_MP[I].Contacto, C_MP[I].Datos_Bancarios, A_MP[I].Producto, A_MP[I].Vendedor, A_MP[I].Contacto, A_MP[I].Datos_Bancarios: Cadena, S_MP[I].Disp: Booleano);
+Inicio
+    Var I, Opc2, Jose_Lozano[K], K = 2, K2, K3: Entero;
+    Var R7, K4, K6 = 0: Booleano;
+    Mostrar << "De que Area es el producto que desea editar";
+    Mostrar << "1-) Comida";
+    Mostrar << "2-) Articulos";
+    Mostrar << "3-) Servicios";
+    Mostrar << "4-) Todos o algunas de las anteriores";
+    Leer >> Opc2;
+    Mientras (Opc2 < 1 or Opc2 > 4) Hacer;
+        Mostrar << "La opcion seleccionada no se encuentra dentro de los valores señalados, por favor, intentelo nuevamente";
+        Leer >> Opc2;
+    Fin_Mientras
+    Mostrar << "Estos son sus productos";
+    En_Caso (Opc2 > 0) Sea;
+        Caso (Opc2 = 1);
+            Mostrar << "Sección de comida";
+            Mostrar << "Esta y otras secciones pueden ser utilizadas para rellenó de su inventario";
+            Mostrar << "¿Desea eliminar permanentemente algun producto ? 1: Sí, 0: No";
+            Leer >> R7;
+            Si (R7 = 1) Entonces;
+                Para (I = 1 Hasta I = M) Hacer;
+                    Si (Cedula = C_MP[I].Cedula) Entonces;
+                        Mostrar << "Producto: ", C_MP[I].Producto, K;
+                        Jose_Lozano[K] = I; 
+                        K = K + 1;
+                        K6 = 1;
+                    Fin_Si
+                Fin_Para
+                Si (K6 = 0) Entonces;
+                    Mostrar << "Usted no posee productos aqui";
+                Fin_Si
+                K = K - 1;
+                Si (K6 = 1) Entonces;
+                    Repetir
+                        Mostrar << "Según en que puesto se le mostró el producto que desea borrar ingreselo aqui";
+                        Leer >> K2;
+                        K3 = Jose_Lozano[K2];
+                        Para (I = K3 Hasta I = M) Hacer;
+                            C_MP[I].Vendedor = C_MP[I + 1].Vendedor;
+                            C_MP[I].Cedula = C_MP[I + 1].Cedula;
+                            C_MP[I].Contacto = C_MP[I + 1].Contacto;
+                            C_MP[I].Datos_Bancarios = C_MP[I + 1].Datos_Bancarios;
+                            C_MP[I].Producto = C_MP[I + 1].Producto;
+                            C_MP[I].Stock = C_MP[I + 1].Stock;
+                            C_MP[I].Precio = C_MP[I + 1].Precio;
+                        Fin_Para
+                        Mostrar << "¿Desea eliminar otro producto de la seccion de comida?";
+                        Mostrar << "1: Sí, 0: No";
+                        Leer >> K4;
+                        Hasta(K4 = 0);
+                    Fin_Repetir
+                Fin_Si
+            Sino
+                Para (I = 1 Hasta I = M) Hacer;
+                    Si (Cedula = C_MP[I].Cedula) Entonces;
+                        Mostrar << "Producto: ", C_MP[I].Producto, K;
+                        Jose_Lozano[K] = I; 
+                        K = K + 1;
+                        K6 = 1;
+                    Fin_Si
+                Fin_Para
+                K = K - 1;
+                Si (K6 = 0) Entonces;
+                    Mostrar << "Usted no posee productos aqui";
+                    K6 = 0;
+                Fin_Si
+                Si (K6 = 1) Entonces;
+                    Repetir
+                        Mostrar << "Según en que puesto se le mostró el producto que desea editar ingreselo aqui";
+                        Leer >> K2;
+                        K3 = Jose_Lozano[K2];
+                        Mostrar << "Ingrese los nuevos valores de su producto";
+                        Mostrar << "Ingrese el producto a vender";
+                        Leer >> C_MP[K3].Producto;
+                        Mostrar << "Ingrese el stock del producto (1-25)";
+                        Leer >> C_MP[K3].Stock;
+                        Mientras (C_MP[K3].Stock < 1) or (C_MP[K3].Stock > 25) Hacer;
+                            Mostrar << "Rango de sotck erroneo, intentelo neuvamente";
+                            Leer >> C_MP[K3].Stock;
+                        Fin_Mientras
+                        Mostrar << "Ingrese el precio";
+                        Leer >> C_MP[K3].Precio;
+                        Mientras (C_MP[K3].Precio < 0) Hacer;
+                            Mostrar << "Precio ingresado equivocado";
+                            Leer >> C_MP[K3].Precio;
+                        Fin_Mientras
+                        Mostrar << "Su producto fue editado exitosamente";
+                        Mostrar << "Asi luce ahora";
+                        Mostrar << C_MP[K3].Vendedor;
+                        Mostrar << C_MP[K3].Cedula;
+                        Mostrar << C_MP[K3].Producto;
+                        Mostrar << C_MP[K3].Stock;
+                        Mostrar << C_MP[K3].Precio;
+                        Mostrar << "¿Desea editar otro producto de la seccion de comida?";
+                        Mostrar << "1: Sí, 0: No";
+                        Leer >> K4;
+                        Hasta(K4 = 0);
+                    Fin_Repetir
+                Fin_Si
+            Fin_Si
+        Caso (Opc2 = 2);
+            Mostrar << "Sección de Articulos";
+            Mostrar << "Esta y otras secciones pueden ser utilizadas para relleno de su inventario";
+            Mostrar << "Desea eliminar permanentemente algun producto? 1: Sí, 0: No";
+            Leer >> R7;
+            Si (R7 = 1) Entonces;
+                Para (I = 1 Hasta I = M) Hacer;
+                    Si (Cedula = A_MP[I].Cedula) Entonces;
+                        Mostrar << "Producto: ", A_MP[I].Producto, K;
+                        Jose_Lozano[K] = I;
+                        K = K + 1;
+                        K6 = 1;
+                    Fin_Si
+                Fin_Para
+                Si (K6 = 0) Entonces;
+                    Mostrar << "Usted no posee productos aqui";
+                Fin_Si
+                K = K - 1;
+                Si (K6 != 0) Entonces;
+                    Repetir
+                        Mostrar << "Según en que puesto se le mostró el producto que desea borrar ingreselo aquí";
+                        Leer >> K2;
+                        K3 = Jose_Lozano[K2];
+                        Para (I = K3 Hasta I = M) Hacer;
+                            A_MP[I].Vendedor = A_MP[I + 1].Vendedor;
+                            A_MP[I].Cedula = A_MP[I + 1].Cedula;
+                            A_MP[I].Contacto = A_MP[I + 1].Contacto;
+                            A_MP[I].Datos_Bancarios = A_MP[I + 1].Datos_Bancarios;
+                            A_MP[I].Producto = A_MP[I + 1].Producto;
+                            A_MP[I].Stock = A_MP[I + 1].Stock;
+                            A_MP[I].Precio = A_MP[I + 1].Precio;
+                        Fin_Para
+                        M = M - 1;
+                        Mostrar << "¿Desea eliminar otro producto de la seccion de articulos?";
+                        Mostrar << "1: Sí, 0: No";
+                        Leer >> K4;
+                        Hasta(K4 = 0);
+                    Fin_Repetir
+                Fin_Si
+            Sino
+                Para (I = 1 Hasta I = M) Hacer;
+                    Si (Cedula = A_MP[I].Cedula) Entonces;
+                        Mostrar << "Producto: ", A_MP[I].Producto, K;
+                        Jose_Lozano[K] = I;
+                        K = K + 1;
+                        K6 = 1;
+                    Fin_Si
+                Fin_Para
+                K = K - 1;
+                Si (K6 = 0) Entonces;
+                    Mostrar << "Usted no posee productos aqui";
+                    K6 = 0;
+                Fin_Si
+                Si (K6 != 0) Entonces;
+                    Repetir
+                        Mostrar << "Según en que puesto se le mostró el producto que desea editar ingreselo aqui";
+                        Leer >> K2;
+                        K3 = Jose_Lozano[K2];
+                        Mostrar << "Ingrese los nuevos valores de su producto";
+                        Mostrar << "Ingrese el producto a vender";
+                        Leer >> A_MP[K3].Producto;
+                        Mostrar << "Ingrese el stock del producto (1-25)";
+                        Leer >> A_MP[K3].Stock;
+                        Mientras (A_MP[K3].Stock < 1 or A_MP[K3].Stock > 25) Hacer;
+                            Mostrar << "Rango de sotck erroneo, intentelo neuvamente";
+                            Leer >> A_MP[K3].Stock;
+                        Fin_Mientras
+                        Mostrar << "Ingrese el precio";
+                        Leer >> A_MP[K3].Precio;
+                        Mientras (A_MP[K3].Precio < 0) Hacer;
+                            Mostrar << "Precio ingresado equivocado";
+                            Leer >> A_MP[K3].Precio;
+                        Fin_Mientras
+                        Mostrar << "Su producto fue editado exitosamente";
+                        Mostrar << "Asi luce ahora";
+                        Mostrar << A_MP[K3].Vendedor;
+                        Mostrar << A_MP[K3].Cedula;
+                        Mostrar << A_MP[K3].Producto;
+                        Mostrar << A_MP[K3].Stock;
+                        Mostrar << A_MP[K3].Precio;
+                        Mostrar << "¿Desea editar otro producto de la seccion de articulos?";
+                        Mostrar << "1: Sí, 0: No";
+                        Leer >> K4;
+                        Hasta(K4 = 0);
+                    Fin_Repetir
+                Fin_Si
+            Fin_Si
+        Otro_Caso
+            Mostrar << "Sección de Servicios";
+            Mostrar << "Esta y otras secciones pueden ser utilizadas para relleno de su inventario";
+            Mostrar << "¿Desea eliminar permanentemente algun producto? 1: Sí, 0: No";
+            Leer >> R7;
+            Si (R7 = 1) Entonces;
+                Para (I = 1 Hasta I = M) Hacer;
+                    Si (Cedula = S_MP[I].Cedula) Entonces;
+                        Mostrar << "Producto: ", S_MP[I].Producto, K;
+                        Jose_Lozano[K] = I;
+                        K = K + 1;
+                        K6 = 1;
+                    Fin_Si
+                Fin_Para
+                Si (K6 = 0) Entonces;
+                    Mostrar << "Usted no posee productos aqui";
+                Fin_Si
+                K = K - 1;
+                Si (K6 != 0) Entonces;
+                    Repetir
+                        Mostrar << "Según en que puesto se le mostró el producto que desea borrar, ingreselo aquí";
+                        Leer >> K2;
+                        K3 = Jose_Lozano[K2];
+                        Para (I = K3 Hasta I = M) Hacer; 
+                            S_MP[I].Vendedor = S_MP[I + 1].Vendedor;
+                            S_MP[I].Cedula = S_MP[I + 1].Cedula;
+                            S_MP[I].Contacto = S_MP[I + 1].Contacto;
+                            S_MP[I].Datos_Bancarios = S_MP[I + 1].Datos_Bancarios;
+                            S_MP[I].Producto = S_MP[I + 1].Producto;
+                            S_MP[I].Stock = S_MP[I + 1].Stock;
+                            S_MP[I].Precio = S_MP[I + 1].Precio;
+                        Fin_Para
+                        M = M - 1;
+                        Mostrar << "¿Desea eliminar otro producto de la seccion de servicios?";
+                        Mostrar << "1: Sí, 0: No";
+                        Leer >> K4;
+                        Hasta(K4 = 0);
+                    Fin_Repetir
+                Fin_Si
+            Sino
+                Para (I = 1 Hasta I = M) Hacer;
+                    Si (Cedula = S_MP[I].Cedula) entonces;
+                        Mostrar << "Producto: ", S_MP[I].Producto, K;
+                        Jose_Lozano[K] = I;
+                        K = K + 1;
+                    Sino
+                        Mostrar << "Usted no posee productos aqui";
+                        K6 = 0;
+                    Fin_Si
+                Fin_Para
+                K = K - 1;
+                Si (K6 != 0) Entonces;
+                    Repetir
+                        Mostrar << "Según en que puesto se le mostró el producto que desea editar ingreselo aqui";
+                        Leer >> K2;
+                        K3 = Jose_Lozano[K2];
+                        Mostrar << "Ingrese los nuevos valores de su producto";
+                        Mostrar << "Ingrese el producto a vender";
+                        Leer >> S_MP[K3].Producto;
+                        Mostrar << "Ingrese la Disponibilidad para el servicio";
+                        Leer >> S_MP[K3].Disp;
+                        Mostrar << "Ingrese el precio";
+                        Leer >> S_MP[K3].Precio;
+                        Mientras (S_MP[K3].Precio < 0) Hacer;
+                            Mostrar << "Precio ingresado equivocado";
+                            Leer >> S_MP[K3].Precio;
+                        Fin_Mientras
+                        Mostrar << "Ingrese la nueva informacion de contacto";
+                        Leer >> S_MP[K3].Contacto;
+                        Mostrar << "Su producto fue editado exitosamente";
+                        Mostrar << "Asi luce ahora";
+                        Mostrar << S_MP[K3].Vendedor;
+                        Mostrar << S_MP[K3].Cedula;
+                        Mostrar << S_MP[K3].Producto;
+                        Mostrar << S_MP[K3].Disp;
+                        Mostrar << S_MP[K3].Precio;
+                        Mostrar << S_MP[K3].Contacto;
+                        Mostrar << "¿Desea editar otro producto de la seccion de Servicios?";
+                        Mostrar << "1: Sí, 0: No";
+                        Leer >> K4;
+                        Hasta (K4 = 0);
+                    Fin_Repetir
+                Fin_Si
+        Fin_Caso
+    Fin_Caso
+Fin_Procedimiento

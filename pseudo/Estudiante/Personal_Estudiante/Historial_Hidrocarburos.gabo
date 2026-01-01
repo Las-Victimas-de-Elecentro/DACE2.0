@@ -247,5 +247,4 @@ Inicio
         Suma = Suma + (Datos.Materias.Hid[pos_usuario].Recuperacion_Mejorada);
         Contador = Contador + 1;
     Fin_Si
-
 Fin_Procedimiento

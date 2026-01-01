@@ -1,8 +1,8 @@
 Algoritmo DACE_ELECENTRO
 Registro: Administrativos;  //Administrativos: Admin;
 	Usuario: Cadena;
-	CI: Entero;
 	Cargo: Cadena;
+	CI: Entero;
 	Gmail: Cadena;
 	Password: Cadena;
 	Tarjeta: Entero;
@@ -11,7 +11,6 @@ Fin_Registro
 Registro: Admin;        //Admin: Ad;
     Servicio_Comunitario: Booleano;
     Inscripciones: Booleano;
-    Pasantias: Booleano;
 Fin_Registro
 
 Registro: Docente;      //Docente: Prof;
@@ -41,6 +40,7 @@ Registro: Estudiantes;      //Estudiantes: Datos;
 	Year: Entero;
     Materias_Aprobadas: Entero;
     Servicio_Comunitario: Booleano;
+    Pasantias: Booleano;
 	Tarjeta: Entero;
     Notas: Real;
     UC: Entero;
@@ -52,7 +52,7 @@ Registro: Estudiantes;      //Estudiantes: Datos;
 Fin_Registro
 
 //Docente
-Registro: Materia;  //Materia;
+Registro: Materia;  //Materias;
     Codigo: Cadena;
     Nombre: Cadena;
     Creditos: Entero;
@@ -233,7 +233,28 @@ Fin_Registro
 
 // Enfermedades
 
-Registro: Enfermedad;       //Salud
+Registro: Salud_Administrativo;
+    Enfermedad_Cronica: Cadena;
+    Discapacidad: Cadena;
+    Corazon: Cadena;
+    Asma: Booleano;
+    Cancer: Cadena;
+Fin_Registro
+
+Registro: Enfermedad_Docente;       //Salud
+    Transmisibles: Cadena;
+    Cronicas: Cadena;
+    Neurologicas: Cadena;
+    Neoplasias: Cadena;
+    Autoinmunes: Cadena;
+    Trastornos: Cadena;
+    Lesiones: Cadena;
+    Congenitas: Cadena;
+    Metabolicos: Cadena;
+    Ocupacionales: Cadena;
+Fin_Registro
+
+Registro: Enfermedad_Estudiante;       //Salud
     Transmisibles: Cadena;
     Cronicas: Cadena;
     Neurologicas: Cadena;
@@ -269,7 +290,7 @@ Registro: Servicio_Comunitario;  //Llave: SerC[N];
     Horas_Realizadas:   Real;
 Fin_Registro
 
-Registro: Market_Place;         // MP[N];
+Registro: Market_Place;         // MP[M];
     Usuario: Cadena;
     Cedula: Entero;
     Contacto: Cadena;
@@ -282,7 +303,7 @@ Registro: Market_Place;         // MP[N];
     Bitacora: Cadena;
 Fin_Registro
 
-Registro: Comida_MP;            // C_MP[N];
+Registro: Comida_MP;            // C_MP[M];
     Vendedor: Cadena;
     Cedula: Entero;
     Contacto: Cadena;
@@ -292,7 +313,7 @@ Registro: Comida_MP;            // C_MP[N];
     Precio: Real;
 Fin_Registro
 
-Registro: Articulos_MP;         //A_MP[N];
+Registro: Articulos_MP;         //A_MP[M];
     Vendedor: Cadena;
     Cedula: Entero;
     Contacto: Cadena;
@@ -302,7 +323,7 @@ Registro: Articulos_MP;         //A_MP[N];
     Precio: Real;
 Fin_Registro
 
-Registro: Servicios_MP;         //S_MP[N];
+Registro: Servicios_MP;         //S_MP[M];
     Vendedor: Cadena;
     Cedula: Entero;
     Disp: Booleano;
@@ -374,14 +395,7 @@ Registro: Reacciones;           //Rea[]
     Cant_Molesta: Entero;
 Fin_Registro
 
-Registro: Servicio_Comunitario;  //Llave: SerC[N];
-    Nombre:             Cadena;
-    Edad, Cedula:       Entero;
-    Area:               Cadena;
-    Semestre:           Entero;
-    Year:               Entero;
-    Horas_Realizadas:   Real;
-Fin_Registro
+
 // Notas de las carreras
 
 Registro: Notas;
@@ -940,25 +954,69 @@ Fin_Registro
 
 Inicio
     //Variables Maestras
-    Var Estudiantes: Datos[5000], Enfermedad: Salud[5000];
-    Var Notas: Materias, 
+    //Admin
+    Var Administrativos: Admin[5000];
+    Var Salud_Administrativo: Salud_Admin[5000];
+    Var Materia: Materias[547];
+    Var //Gestion[5000];
+    Var Solicitud_Empleo: Empleo[5000];
+
+    //Docente
+    Var Docente: Prof[5000];
+    Var Bloque_Horario: Lista[48];
+    Var Lista: Lista[5000];
+    Var Clase: Clase[5000];
+    Var Lista_Magistral: Lista_M[5000];
+    Var Clase_Magistral: Mag[5000];
+    Var Plan_Evaluacion: Plan[5000];
+    Var Asignacion: Asig[5000];
+    Var Grupos: Gru[5000];
+    Var Enfermedad_Docente: Salud[5000];
+
+    //Estudiante
+    Var Estudiantes: Datos[5000], Enfermedad_Estudiante: Salud[5000];
+    Var Notas: Materias,
     Var Informatica: Info[5000], Civil: Civ[5000], Hidrocarburos: Hid[5000];
     Var Medicina: Med[5000], Odontologia: Odo[5000], Veterinaria: Vet[5000];
     Var Derecho: Der[5000], Comunicacion: Soc[5000];
     Var Contaduria: Con[5000], Economia: Eco[5000];
-    Var Solicitud_Empleo: Empleo[500];
-    Var Administrativos: Admin[500];
-    Var Estudiantes: Datos[500];
+    Var Carnet: Car[5000];
+    Var Pasantias: Pas[P];
+    Var Servicio_Comunitario: SerC[N];
+    Var Market_Place: MP[M];
+    Var Comida_MP: C_MP[M];
+    Var Articulos_MP: A_MP[M];
+    Var Servicios_MP: S_MP[M];
+    Var Publicaciones: Publi[5000];
+    Var Comentarios: Com[5000];
+    Var Respuestas: Res[5000];
+    Var Reacciones: Rea[5000];
+    
+    //General
+    Var Solicitudes: Soli[5000];
+    Var Reportes: Rep[5000];
+    Var Clubes: Club[5000];
+    Var Celebraciones: Cel[5000];
+    Var Carnetizacion: Carn[5000];
+    Var Amigos: Amig[5000];
+    Var Novedades: Nov[5000];
+    Var Chatbot: Bot[10];
     
     //Variables Globales
-    Var K = 1, I, Opcion, Minimo, Maximo: Entero;
-    Var Rol: Cadena;
+    //Iteradores
+    Var I, J, club = 0, carnet = 0, Nov = 0, Re = 0, S = 0, v = 0, C = 0, Lim = 35, K = 0, w = 0, re = 0, M = 0, P = 0, L = 0, Am = 0, N = 2, Aux = 0, Ver = 0, react = 0, com = 0: Entero;
+    //Posiciones al iniciar sesión
+    Var pos_admin, pos, pos_usuario: Entero;
+    //Generales
+    Var Opcion, Minimo, Maximo: Entero;
+    Var Rol, cod, Avatares[10]: Cadena;
     Var R, Acceso: Booleano;
-    Var Tema = 0: Booleano;
-    Var Avatares[20]: Cadena;
-    Var Suma: Real;
+    Var Tema = 0, validacion_pago, Inscripciones: Booleano;
+    Var Suma, monto_pago, Ingresos, Egresos: Real;
     Var Datos[pos_usuario].Servicio_Comunitario = 0: Booleano;
 
+    Relleno_Salud(Cronica[I], Discapacidad[I], Corazon[I], Cancer[I]);
+    Relleno_Clase(Lista[I].ID_Lista, Lista_M[I].ID_Lista);
     Relleno_Bot(Bot[I].Preguntas, Bot[I].Respuesta1, Bot[I].Respuesta2, Bot[I].Respuesta3, Bot[I].Respuesta4);
     Repetir
         Menu_Registro_Login(Opcion);

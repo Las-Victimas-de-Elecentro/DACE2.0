@@ -1,15 +1,15 @@
-Procedimiento Salir_Club(E/S: Club[I].Miembros_Inscritos: Entero, Club[I].Nombre, Datos[I].Club: Cadena);
+Procedimiento Salir_Club(E/S: Club[I].Miembros_Inscritos: Entero, Club[I].Nombre, Prof[I].Club: Cadena);
 Inicio 
     Var Nombre_Club: Entero;
-    Si (Datos[pos_usuario].Esta_en_Club = 1) Entonces;
+    Si (Prof[pos_usuario].Esta_en_Club = 1) Entonces;
         Mostrar << "Ingrese el nombre del club de dónde está inscrito";
         Leer >> Nombre_Club;
         Para (I = 1 Hasta I = Club) Hacer;
-            Si (Datos[pos_usuario].Club = Nombre_Club) Entonces;
+            Si (Prof[pos_usuario].Club = Nombre_Club) Entonces;
                 Club[I].Miembros_Inscritos = Club[I].Miembros_Inscritos - 1;
                 Mostrar << "Ha salido del club:..,", Club[I].Nombre;
-                Datos[pos_usuario].Club = null;
-                Datos[pos_usuario].Esta_en_Club = 0;
+                Prof[pos_usuario].Club = null;
+                Prof[pos_usuario].Esta_en_Club = 0;
             
         Fin_Para
     Sino

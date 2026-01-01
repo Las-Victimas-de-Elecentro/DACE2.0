@@ -172,5 +172,4 @@ Inicio
         Suma = Suma + Datos.Materias.Eco[pos_usuario].Trabajo_Final_Grado;
         Contador = Contador + 1;
     Fin_Si
-
 Fin_Procedimiento

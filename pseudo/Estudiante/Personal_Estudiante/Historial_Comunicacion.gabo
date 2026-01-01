@@ -220,9 +220,8 @@ Inicio
     Si (Datos[pos_usuario].Semestre >= 10) Entonces;
         Mostrar << "Vinculación Profesional en el campo socio comunicacional:...", Datos.Materias.Soc[pos_usuario].Vinculacion_Profesional;
         Mostrar << "Trabajo Especial de Grado:...", Datos.Materias.Soc[pos_usuario].Trabajo_Grado;
-      
+    
         Suma = Suma + (Datos.Materias.Soc[pos_usuario].Vinculacion_Profesional + Datos.Materias.Soc[pos_usuario].Trabajo_Grado);
         Contador = Contador + 2;
     Fin_Si
-
 Fin_Procedimiento

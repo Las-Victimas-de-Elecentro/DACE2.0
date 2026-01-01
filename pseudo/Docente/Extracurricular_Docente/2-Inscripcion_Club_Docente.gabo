@@ -1,4 +1,4 @@
-Procedimiento Inscripcion_Club(E/S: Prof[I].Club, Club[I].Nombre, Club[I].Horarios_Disponibles: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
+Procedimiento Inscripcion_Club_Docente(E/S: Prof[I].Club, Club[I].Nombre, Club[I].Horarios_Disponibles: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
 Inicio 
     Var Nombre_Club, opcion_horario: Cadena;
     Mostrar << "Ingrese el nombre del club que desee inscribirse";

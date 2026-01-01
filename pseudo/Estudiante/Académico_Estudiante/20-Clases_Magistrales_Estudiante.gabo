@@ -1,4 +1,4 @@
-Procedimiento Clases_Magistrales(E/S: Mag[I].Autorizacion: Booleano, Mag[I].Nombre_Profesor, Mag[I].Nombre_Materia, Mag[I].Dia, Mag[I].Hora_Inicio, Mag[I].Hora_Fin, Mag[I].Aula, Lista_M[M].Nombre: Cadena, Lista_M[M].Cedula, Mag[I].Cant_Estudiantes, M: Entero);
+Procedimiento Clases_Magistrales_Estudiante(E/S: Mag[I].Autorizacion: Booleano, Mag[I].Nombre_Profesor, Mag[I].Nombre_Materia, Mag[I].Dia, Mag[I].Hora_Inicio, Mag[I].Hora_Fin, Mag[I].Aula, Lista_M[M].Nombre: Cadena, Lista_M[M].Cedula, Mag[I].Cant_Estudiantes, M: Entero);
 Inicio
     Var R, R2: Booleano;
     Var I: Entero;

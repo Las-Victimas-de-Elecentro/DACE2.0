@@ -91,5 +91,4 @@ Inicio
         Suma = Suma + (Datos.Materias.Der[pos_usuario].Derecho_Proc_Penal_II + Datos.Materias.Der[pos_usuario].Obligaciones_III + Datos.Materias.Der[pos_usuario].Derecho_Proc_Civil_II + Datos.Materias.Der[pos_usuario].Derecho_Mercantil + Datos.Materias.Der[pos_usuario].Derecho_Probatorio_II + Datos.Materias.Der[pos_usuario].Derecho_Internacional_Priv + Datos.Materias.Der[pos_usuario].Etica_Deontologia + Datos.Materias.Der[pos_usuario].Derecho_Registral + Datos.Materias.Der[pos_usuario].Seminario_Grado + Datos.Materias.Der[pos_usuario].Proyecto_IV + Datos.Materias.Der[pos_usuario].Practicas_IV + Datos.Materias.Der[pos_usuario].Electiva_V);
         Contador = Contador + 12;
     Fin_Si
-
 Fin_Procedimiento

@@ -1,4 +1,4 @@
-Procedimiento Salud_Personal_Prof(E/S: Prof[pos].Salud[pos].Transmisibles, Prof[pos].Salud[pos].Cronicas, Prof[pos].Salud[pos].Neurologicas, Prof[pos].Salud[pos].Neoplasias, Prof[pos].Salud[pos].Autoinmunes, Prof[pos].Salud[pos].Trastornos, Prof[pos].Salud[pos].Lesiones, Prof[pos].Salud[pos].Congenitas, Prof[pos].Salud[pos].Metabolicos, Prof[pos].Salud[pos].Ocupacionales: Cadena);
+Procedimiento Salud_Docente(E/S: Prof[pos].Salud[pos].Transmisibles, Prof[pos].Salud[pos].Cronicas, Prof[pos].Salud[pos].Neurologicas, Prof[pos].Salud[pos].Neoplasias, Prof[pos].Salud[pos].Autoinmunes, Prof[pos].Salud[pos].Trastornos, Prof[pos].Salud[pos].Lesiones, Prof[pos].Salud[pos].Congenitas, Prof[pos].Salud[pos].Metabolicos, Prof[pos].Salud[pos].Ocupacionales: Cadena);
 Inicio
     var Opc: Entero, R: Booleano;
     Repetir

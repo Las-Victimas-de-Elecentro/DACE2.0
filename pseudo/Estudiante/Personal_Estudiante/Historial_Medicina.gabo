@@ -155,5 +155,4 @@ Inicio
         Suma = Suma + (Datos.Materias.Med[pos_usuario].Internado_Rural + Datos.Materias.Med[pos_usuario].Clinica_Medica_III + Datos.Materias.Med[pos_usuario].Clinica_Quirurgica_III + Datos.Materias.Med[pos_usuario].Clinica_Obstetrica_III + Datos.Materias.Med[pos_usuario].Clinica_Pediatrica_III + Datos.Materias.Med[pos_usuario].Trabajo_Grado);
         Contador = Contador + 6;
     Fin_Si
-
 Fin_Procedimiento

@@ -55,7 +55,7 @@ Inicio
                 Listar_Asignaciones(As, Prof[pos].Nombre, Asig[i].Nombre_Profesor, Asig[i].Titulo, Asig[i].Codigo_Materia, Asig[i].Estado, Asig[i].Fecha_Entrega);
                 Mostrar << Listar_Asignaciones;
             Caso (opc = 10); 
-                Clases_Magistrales(Materias[I].Codigo, Materias[I].Nombre, Prof[pos].Nombre, Mag[magis].Fecha, Mag[magis].Aula, Mag[magis].Nombre_Materia, Mag[magis].Codigo_Materia, Mag[magis].Nombre_Profesor, Prof[pos].Cedula, Mag[magis].CI_Profesor, Mag[magis].ID_Clase, magis, Mag[magis].Horas, Mag[magis].Precio);
+                Clases_Magistrales_Docente(Materias[I].Codigo, Materias[I].Nombre, Prof[pos].Nombre, Mag[magis].Fecha, Mag[magis].Aula, Mag[magis].Nombre_Materia, Mag[magis].Codigo_Materia, Mag[magis].Nombre_Profesor, Prof[pos].Cedula, Mag[magis].CI_Profesor, Mag[magis].ID_Clase, magis, Mag[magis].Horas, Mag[magis].Precio);
                 Mostrar << Clases_Magistrales;
             Caso (opc = 11); 
                 Plan_Evaluacion_Docente(Materias[I].Codigo, Clase[J].Codigo_Materia, Prof[pos].Nombre, Clase[J].Nombre_Profesor, Plan[P].Fecha, Plan[P].Tema, Plan[P].Estrategia, Plan[P].Nombre_Profesor, Plan[P].Nombre_Materia, Plan[P].Codigo_Materia, Plan[P].Ponderacion, Plan[P].ID_Plan, Clase[J].ID_Clase, P, Plan[P].Firmado);
@@ -71,4 +71,3 @@ Inicio
     Fin_Repetir
     Mostrar << "El ciclo académico se ha cerrado. Gracias por su presencia, Maestro.";
 Fin_Procedimiento
-

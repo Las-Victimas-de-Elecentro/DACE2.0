@@ -1,4 +1,4 @@
-Procedimiento Seguridad_Personal_Prof(E/S:Prof[pos].Password, Prof[pos].Gmail: Cadena);
+Procedimiento Seguridad_Docente(E/S:Prof[pos].Password, Prof[pos].Gmail: Cadena);
 Inicio
     var Opc: entero, NewC, NewG: Cadena, S = 0, R: Booleano;
     
@@ -52,5 +52,4 @@ Inicio
         Leer >> R;
         Hasta(R = 0);
     Fin_Repetir
-    
 Fin_Procedimiento

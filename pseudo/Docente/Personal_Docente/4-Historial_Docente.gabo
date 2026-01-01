@@ -1,4 +1,4 @@
-Procedimiento Historial_Personal_Prof (E/S: Clase[I].Codigo_Materia, Clase[I].Nombre_Materia, Clase[I].Periodo, Clase[I].Nombre_Profesor, Clase[I].Dia, Clase[I].Hora_Inicio, Clase[I].Hora_Fin, Clase[I].Aula: Cadena, Clase[I].Cant_Estudiantes: Entero);
+Procedimiento Historial_Docente(E/S: Clase[I].Codigo_Materia, Clase[I].Nombre_Materia, Clase[I].Periodo, Clase[I].Nombre_Profesor, Clase[I].Dia, Clase[I].Hora_Inicio, Clase[I].Hora_Fin, Clase[I].Aula: Cadena, Clase[I].Cant_Estudiantes: Entero);
 Inicio
     Mostrar << "Historial Labor Docente";
     Mostrar << "Aquí se muestran tus materias impartidas y períodos correspondientes.";

@@ -1,4 +1,4 @@
-Procedimiento Seguridad_Personal_Est(E/S:Datos[pos_usuario].Password, Datos[pos_usuario].Gmail: Cadena);
+Procedimiento Seguridad_Estudiante(E/S:Datos[pos_usuario].Password, Datos[pos_usuario].Gmail: Cadena);
 Inicio
     var Opc: entero, NewC, NewG: Cadena, S = 0, R: Booleano;
     
@@ -52,5 +52,4 @@ Inicio
         Leer >> R;
         Hasta(R = 0);
     Fin_Repetir
-    
 Fin_Procedimiento

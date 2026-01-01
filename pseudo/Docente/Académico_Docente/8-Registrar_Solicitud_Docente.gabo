@@ -39,5 +39,6 @@ Inicio
             Leer >> Soli[S].Fecha;
             Mostrar << "Su petición ha sido elevada. El sistema la custodiará hasta ser atendida.";
             S = S + 1;
+        Fin_Si
     Fin_Si
 Fin_Procedimiento

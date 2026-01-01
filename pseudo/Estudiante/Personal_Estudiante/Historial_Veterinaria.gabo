@@ -77,5 +77,4 @@ Inicio
         Suma = Suma + (Datos.Materias.Vet[pos_usuario].Servicio_Comunitario + Datos.Materias.Vet[pos_usuario].Medicina_Preventiva + Datos.Materias.Vet[pos_usuario].Extension_II + Datos.Materias.Vet[pos_usuario].Investigacion_II + Datos.Materias.Vet[pos_usuario].Medicina_Especies + Datos.Materias.Vet[pos_usuario].Legislacion + Datos.Materias.Vet[pos_usuario].Produccion_Industria + Datos.Materias.Vet[pos_usuario].Derecho_Constitucional + Datos.Materias.Vet[pos_usuario].Epidemiologia + Datos.Materias.Vet[pos_usuario].Medicina_Suinos + Datos.Materias.Vet[pos_usuario].Pasantias);
         Contador = Contador + 11;
     Fin_Si
-
 Fin_Procedimiento

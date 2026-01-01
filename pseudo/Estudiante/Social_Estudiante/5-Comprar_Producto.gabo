@@ -1,0 +1,172 @@
+Procedimiento Comprar_Producto(E/S: M, C_MP[I].Stock, A_MP[I].Stock: Entero, MP[I].Boveda, MP[I].Egresos, C_MP[I].Precio, C_MP[I].Ingresos, C_MP[I].Boveda, A_MP[I].Precio, A_MP[I].Ingresos, A_MP[I].Boveda, S_MP[I].Precio, S_MP[I].Ingresos, S_MP[I].Boveda, Precio, Egresos, Ingresos: Real, MP[I].Bitacora, MP[I].Usuario, C_MP[I].Vendedor, C_MP[I].Contacto, C_MP[I].Producto, C_MP[I].Datos_Bancarios, C_MP[I].Bitacora, A_MP[I].Vendedor, A_MP[I].Contacto, A_MP[I].Producto, A_MP[I].Datos_Bancarios, A_MP[I].Bitacora, S_MP[I].Vendedor, S_MP[I].Contacto, S_MP[I].Producto, S_MP[I].Datos_Bancarios, S_MP[I].Bitacora, DTB: Cadena, S_MP[I].Disp, validacion_pago: Booleano);
+Inicio
+    Var I, Opc3, Q1, Unidades: Entero;
+    Var Q2, Q3, Q4: Booleano;
+    Mostrar << "Bienvenido a la sección de compra";
+    Mostrar << "Ingrese mediente numeros en cual de las siguientes 3 secciones está interesado";
+    Repetir
+        Mostrar << "1-) Comida";
+        Mostrar << "2-) Articulos";
+        Mostrar << "3-) Servicios";
+        Leer >> Opc3;
+        Mientras (Opc3 < 1 or Opc3 > 3) Hacer;
+            Mostrar << "Su opcion seleccioanda esta fuera del rango señalado, por favor, ingreselo nuevamente";
+            Leer >> Opc3;
+        Fin_Mientras
+        En_Caso (Opc3 > 0) Sea;
+            Caso (Opc3 = 1);
+                Para (I = 1 Hasta I = M) Hacer;
+                    Si (C_MP[I].Stock > 0) Entonces;
+                        Mostrar << "Producto numero: ", I;
+                        Mostrar << "Vendedor: ", C_MP[I].Vendedor;
+                        Mostrar << "Contacto: ", C_MP[I].Contacto;
+                        Mostrar << "Producto: ", C_MP[I].Producto;
+                        Mostrar << "Stock: ", C_MP[I].Stock;
+                        Mostrar << "Precio: ", C_MP[I].Precio;
+                        Q5 = Q5 + 1;
+                    Fin_Si
+                Fin_Para
+                Mostrar << "Ingrese si le intereso algun producto 1: Si, 0: No";
+                Leer >> Q2;
+                Si (Q2 = 1) Entonces;
+                    Mostrar << "Ingrese el numero del producto que le intereso";
+                    Leer >> Q1;
+                    Mientras (Q1 < 0 or Q1 > Q5) Hacer;
+                        Mostrar << "El producto ingresado no se encuentra dentro de los rangos, por favor, ingreselo nuevamente";
+                        Leer >> Q1;
+                    Fin_Mientras
+                    Mostrar << "Ingrese cuantas Unidades desea";
+                    Leer >> Unidades;
+                    Mientras (Unidades < 1 or Unidades > C_MP[Q1].Stock) Hacer;
+                        Mostrar << "La cantidad ingresada es invalida, ingrese algo inferior o igual a Stock y que sea superior a 0";
+                        Leer >> Unidades;
+                    Fin_Mientras
+                    DTB = C_MP[Q1].Datos_Bancarios;
+                    Precio = C_MP[Q1].Precio;
+                    metodo_pago(Egresos, Ingresos, Precio, DTB, validacion_pago);
+                    Mostrar << metodo_pago;
+                    Si (Validacion_pago = 1) Entonces;
+                        C_MP[Q1].Ingresos = C_MP[Q1].Ingresos + Ingresos;
+                        C_MP[Q1].Boveda = C_MP[Q1].Boveda + Ingresos;
+                        MP[J2].Boveda = MP[J2].Boveda - Egresos;
+                        MP[J2].Egresos = MP[J2].Egresos + Egresos;
+                        C_MP[Q1].Stock = C_MP[Q1].Stock - Unidades;
+                        C_MP[Q1].Bitacora = C_MP[Q1].Bitacora + ("Usted gano: ", Precio, "dinero  con el producto ", C_MP[Q1].Producto, " atribuido por ", MP[J2].Usuario);
+                        MP[J2].Bitacora = MP[J2].Bitacora + ("Usted gasto: ", Precio, "dinero con el producto ", C_MP[Q1].Producto, "Del cual es dueño", C_MP[Q1].Vendedor);
+                        Mostrar << "Gracias por su compra";
+                    Sino
+                        Mostrar << "Mamaste no hay rial";
+                        Mostrar << "Posdata, si llegaste a leer este pedazo de codigo que sepas que Felipe lo esta haciendo un 26 de diciembre a las 12 de la noche mamado del codigo";
+                        Mostrar << "Gracias";
+                    Fin_Si
+                Sino 
+                    Mostrar << "¿Desea finalizar la sesión? 1: Sí, 0: No";
+                    Leer >> Q3;
+                    Si (Q3 = 1) Entonces;
+                        Q4 = 1;
+                    Sino 
+                        Q4 = 0;
+                    Fin_Si
+                Fin_Si
+            Caso (Opc3 = 2);
+                Para (I = 1 Hasta I = M) Hacer;
+                    Si (A_MP[I].Stock > 0) Entonces;
+                        Mostrar << "Producto numero: ", I;
+                        Mostrar << "Vendedor: ", A_MP[I].Vendedor;
+                        Mostrar << "Contacto: ", A_MP[I].Contacto;
+                        Mostrar << "Producto: ", A_MP[I].Producto;
+                        Mostrar << "Stock: ", A_MP[I].Stock;
+                        Mostrar << "Precio: ", A_MP[I].Precio;
+                        Q5 = Q5 + 1;
+                    Fin_Si
+                Fin_Para
+                Mostrar << "Ingrese si le interesó algun producto 1: Sí, 0: No";
+                Leer >> Q2;
+                Si (Q2 = 1) Entonces;
+                    Mostrar << "Ingrese el numero del producto que le intereso";
+                    Leer >> Q1;
+                    Mientras (Q1 < 0 or Q1 > Q5) Hacer;
+                        Mostrar << "El producto ingresado no se encuentra dentro de los rangos, por favor, ingreselo nuevamente";
+                        Leer >> Q1;
+                    Fin_Mientras
+                    Mostrar << "Ingrese cuantas Unidades desea";
+                    Leer >> Unidades;
+                    Mientras (Unidades < 1) or (Unidades > A_MP[Q1].Stock) Hacer;
+                        Mostrar << "La cantidad ingresada es invalida, ingrese algo inferior o igual a Stock y que sea superior a 0";
+                        Leer >> Unidades;
+                    Fin_Mientras
+                    DTB = A_MP[Q1].Datos_Bancarios;
+                    Precio = A_MP[Q1].Precio;
+                    metodo_pago(Egresos, Ingresos, Precio, DTB, validacion_pago);
+                    Si (validacion_pago = 1) Entonces;
+                        Mostrar << metodo_pago;
+                        A_MP[Q1].Ingresos = A_MP[Q1].Ingresos + Ingresos;
+                        A_MP[Q1].Boveda = A_MP[Q1].Boveda + Ingresos;
+                        MP[J2].Boveda = MP[J2].Boveda - Egresos;
+                        MP[J2].Egresos = MP[J2].Egresos + Egresos;
+                        A_MP[Q1].Stock = A_MP[Q1].Stock - Unidades;
+                        A_MP[Q1].Bitacora = A_MP[Q1].Bitacora + ("Usted gano: ", Precio, "dinero  con el producto ", A_MP[Q1].Producto, " atribuido por ", MP[J2].Usuario);
+                        MP[J2].Bitacora = MP[J2].Bitacora + ("Usted gasto: ", Precio, "dinero con el producto ", A_MP[Q1].Producto, "Del cual es dueño", A_MP[Q1].Vendedor);
+                        Mostrar << "Gracias por su compra";
+                    Sino
+                        Mostrar << "El pago no puedo ser efectuado, la compra no fue realizada";
+                    Fin_Si
+                Sino 
+                    Mostrar << "Desea finalizar la sesión 1: Sí, 0: No";
+                    Leer >> Q3;
+                    Si (Q3 = 1) Entonces;
+                        Q4 = 1;
+                    Sino 
+                        Q4 = 0;
+                    Fin_Si
+                Fin_Si
+            Otro_Caso
+                Para (I = 1 Hasta I = M) Hacer;
+                    Si (S_MP[I].Disp = 1) Entonces;
+                        Mostrar << "Producto numero: ", I;
+                        Mostrar << "Vendedor: ", S_MP[I].Vendedor;
+                        Mostrar << "Contacto: ", S_MP[I].Contacto;
+                        Mostrar << "Producto: ", S_MP[I].Producto;
+                        Mostrar << "Disponibilidad: ", S_MP[I].Disp;
+                        Mostrar << "Precio: ", S_MP[I].Precio;
+                        Q5 = Q5 + 1;
+                    Fin_Si
+                Fin_Para
+                Mostrar << "Ingrese si le interesó algun producto 1: Sí, 0: No";
+                Leer >> Q2;
+                Si (Q2 = 1) Entonces;
+                    Mostrar << "Ingrese el numero del producto que le intereso";
+                    Leer >> Q1;
+                    Mientras (Q1 < 0 or Q1 > Q5) Hacer;
+                        Mostrar << "El producto ingresado no se encuentra dentro de los rangos, por favor, ingreselo nuevamente";
+                        Leer >> Q1;
+                    Fin_Mientras
+                    Mostrar << "Utilice el contacto del Usuario para contactarse con el";
+                    DTB = S_MP[Q1].Datos_Bancarios;
+                    Precio = S_MP[Q1].Precio;
+                    metodo_pago(Egresos, Ingresos, Precio, DTB, validacion_pago);
+                    Mostrar << metodo_pago;
+                    Si (Validacion_Pago = 1) Entonces;
+                        S_MP[Q1].Ingresos = S_MP[Q1].Ingresos + Ingresos;
+                        S_MP[Q1].Boveda = S_MP[Q1].Boveda + Ingresos;
+                        MP[J2].Boveda = MP[J2].Boveda - Egresos;
+                        MP[J2].Egresos = MP[J2].Egresos + Egresos;
+                        S_MP[Q1].Bitacora = S_MP[Q1].Bitacora + "Usted gano: ", Precio, "dinero  con el producto ", S_MP[Q1].Producto, " atribuido por ", MP[J2].Usuario;
+                        MP[J2].Bitacora = MP[J2].Bitacora + "Usted gasto: ", Precio, "dinero con el producto ", S_MP[Q1].Producto, "Del cual es dueño", S_MP[Q1].Vendedor;
+                        Mostrar << "Gracias por su compra";
+                    Sino 
+                        Mostrar << "El pago no puedo ser efectuado, la compra no fue realizada";
+                    Fin_Si
+                Sino 
+                    Mostrar << "Desea finalizar la sesion 1: Sí, 0: No";
+                    Leer >> Q3;
+                    Si (Q3 = 1) entonces;
+                        Q4 = 1;
+                    Sino 
+                        Q4 = 0;
+                    Fin_Si
+                Fin_Si
+        Fin_Caso
+        Hasta (Q4 = 1);
+    Fin_Repetir
+Fin_Procedimiento

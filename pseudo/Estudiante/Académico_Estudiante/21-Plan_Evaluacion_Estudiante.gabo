@@ -1,4 +1,4 @@
-Procedimiento Plan_Evaluacion(E/S: Datos[pos_usuario].Carrera, cod, Materias[J].Codigo, Clase[K].Codigo, Plan[Q].Nombre_Profesor, Plan[Q].Nombre_Materia, Plan[Q].Tema, Plan[Q].Fecha, Plan[Q].Estrategia: Cadena, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Plan[Q].ID_Plan, Plan[Q].Ponderacion: Entero, Plan[Q].Firmado: Booleano);
+Procedimiento Plan_Evaluacion_Estudiante(E/S: Datos[pos_usuario].Carrera, cod, Materias[J].Codigo, Clase[K].Codigo, Plan[Q].Nombre_Profesor, Plan[Q].Nombre_Materia, Plan[Q].Tema, Plan[Q].Fecha, Plan[Q].Estrategia: Cadena, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Plan[Q].ID_Plan, Plan[Q].Ponderacion: Entero, Plan[Q].Firmado: Booleano);
 Inicio
     Var J: Entero;
     Var R: Booleano;

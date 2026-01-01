@@ -1,4 +1,4 @@
-Procedimiento Salud_Personal_Est(E/S: Datos.Salud[pos_usuario].Transmisibles, Datos.Salud[pos_usuario].Cronicas, Datos.Salud[pos_usuario].Neurologicas, Datos.Salud[pos_usuario].Neoplasias, Datos.Salud[pos_usuario].Autoinmunes, Datos.Salud[pos_usuario].Trastornos, Datos.Salud[pos_usuario].Lesiones, Datos.Salud[pos_usuario].Congenitas, Datos.Salud[pos_usuario].Metabolicos, Datos.Salud[pos_usuario].Ocupacionales: Cadena);
+Procedimiento Salud_Estudiante(E/S: Datos.Salud[pos_usuario].Transmisibles, Datos.Salud[pos_usuario].Cronicas, Datos.Salud[pos_usuario].Neurologicas, Datos.Salud[pos_usuario].Neoplasias, Datos.Salud[pos_usuario].Autoinmunes, Datos.Salud[pos_usuario].Trastornos, Datos.Salud[pos_usuario].Lesiones, Datos.Salud[pos_usuario].Congenitas, Datos.Salud[pos_usuario].Metabolicos, Datos.Salud[pos_usuario].Ocupacionales: Cadena);
 Inicio
     var Opc: Entero, R: Booleano;
     Repetir

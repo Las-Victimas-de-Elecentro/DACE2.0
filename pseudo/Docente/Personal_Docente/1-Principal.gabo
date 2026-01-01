@@ -19,24 +19,24 @@ Inicio
         Fin_Mientras
         En_Caso (Opc > 0) Sea;
             Caso(Opc = 1);
-                Informacion_Personal_Prof(Prof[pos].Avatar, Prof[pos].Nombre, Prof[pos].Gmail, Prof[pos].CI);
-                Mostrar << Informacion_Personal_Prof;
+                Informacion_Docente(Prof[pos].Avatar, Prof[pos].Nombre, Prof[pos].Gmail, Prof[pos].CI);
+                Mostrar << Informacion_Docente;
             Caso(Opc = 2);
-                Seguridad_Personal_Prof(Prof[pos].Password, Prof[pos].Gmail);
-                Mostrar << Seguridad_Personal_Prof;
+                Seguridad_Docente(Prof[pos].Password, Prof[pos].Gmail);
+                Mostrar << Seguridad_Docente;
             Caso(Opc = 3);
-                Historial_Personal_Prof(Clase[I].Codigo_Materia, Clase[I].Nombre_Materia, Clase[I].Periodo, Clase[I].Nombre_Profesor, Clase[I].Dia, Clase[I].Hora_Inicio, Clase[I].Hora_Fin, Clase[I].Aula, Clase[I].Cant_Estudiantes);
-                Mostrar << Historial_Personal_Prof;
+                Historial_Docente(Clase[I].Codigo_Materia, Clase[I].Nombre_Materia, Clase[I].Periodo, Clase[I].Nombre_Profesor, Clase[I].Dia, Clase[I].Hora_Inicio, Clase[I].Hora_Fin, Clase[I].Aula, Clase[I].Cant_Estudiantes);
+                Mostrar << Historial_Docente;
             Caso(Opc = 4);
-                Oscuro_Personal_Prof(Tema);
-                Mostrar << Oscuro_Personal_Prof;
+                Modo_Oscuro(Tema);
+                Mostrar << Modo_Oscuro;
             Caso(Opc = 5);
                 Avatares (Avatares[I]);
-                Avatar_Personal_Prof(Avatares[I], Prof[pos].Avatar);
-                Mostrar << Avatar_Personal_Prof;
+                Avatar_Docente(Avatares[I], Prof[pos].Avatar);
+                Mostrar << Avatar_Docente;
             Caso (Opc = 6);
-                Salud_Personal_Prof(Prof[pos].Salud[pos].Transmisibles, Prof[pos].Salud[pos].Cronicas, Prof[pos].Salud[pos].Neurologicas, Prof[pos].Salud[pos].Neoplasias, Prof[pos].Salud[pos].Autoinmunes, Prof[pos].Salud[pos].Trastornos, Prof[pos].Salud[pos].Lesiones, Prof[pos].Salud[pos].Congenitas, Prof[pos].Salud[pos].Metabolicos, Prof[pos].Salud[pos].Ocupacionales);
-                Mostrar << Salud_Personal_Prof;
+                Salud_Docente(Prof[pos].Salud[pos].Transmisibles, Prof[pos].Salud[pos].Cronicas, Prof[pos].Salud[pos].Neurologicas, Prof[pos].Salud[pos].Neoplasias, Prof[pos].Salud[pos].Autoinmunes, Prof[pos].Salud[pos].Trastornos, Prof[pos].Salud[pos].Lesiones, Prof[pos].Salud[pos].Congenitas, Prof[pos].Salud[pos].Metabolicos, Prof[pos].Salud[pos].Ocupacionales);
+                Mostrar << Salud_Docente;
             Otro_Caso
                 R = 0;
         Fin_Caso
