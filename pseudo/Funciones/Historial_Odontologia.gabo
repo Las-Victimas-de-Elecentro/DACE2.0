@@ -1,0 +1,128 @@
+Procedimiento Historial_Odontologia (E/S: Suma, Datos.Materias.Odo[pos_usuario].Morfologia_Dentaria, Datos.Materias.Odo[pos_usuario].Formacion_Cultural_I, Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_I, Datos.Materias.Odo[pos_usuario].Iniciacion_Clinica, Datos.Materias.Odo[pos_usuario].Morfologia_Humana, Datos.Materias.Odo[pos_usuario].Formacion_Instrumental_I, Datos.Materias.Odo[pos_usuario].Bioquimica_Aplicada, Datos.Materias.Odo[pos_usuario].Histologia_Embriologia, Datos.Materias.Odo[pos_usuario].Deportes_I, Datos.Materias.Odo[pos_usuario].Investigacion_I, Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_II, Datos.Materias.Odo[pos_usuario].Formacion_Cultural_II, Datos.Materias.Odo[pos_usuario].Histofisiologia, Datos.Materias.Odo[pos_usuario].Clinica_Adulto_I, Datos.Materias.Odo[pos_usuario].Biomateriales, Datos.Materias.Odo[pos_usuario].Deportes_II, Datos.Materias.Odo[pos_usuario].Investigacion_II, Datos.Materias.Odo[pos_usuario].Microbiologia_Parasitologia, Datos.Materias.Odo[pos_usuario].Formacion_Instrumental_II, Datos.Materias.Odo[pos_usuario].Investigacion_III, Datos.Materias.Odo[pos_usuario].Clinica_Adulto_II, Datos.Materias.Odo[pos_usuario].Toxicologia, Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_III, Datos.Materias.Odo[pos_usuario].Atencion_Nino_I, Datos.Materias.Odo[pos_usuario].Medicina_Semiologia, Datos.Materias.Odo[pos_usuario].Fisiopatologia, Datos.Materias.Odo[pos_usuario].Gerontologia, Datos.Materias.Odo[pos_usuario].Farmacologia, Datos.Materias.Odo[pos_usuario].Investigacion_IV, Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_IV, Datos.Materias.Odo[pos_usuario].Atencion_Nino_II, Datos.Materias.Odo[pos_usuario].Clinica_Adulto_III, Datos.Materias.Odo[pos_usuario].Investigacion_V, Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_V: Real);
+Inicio
+
+    // Primer Año
+    Si (Datos[pos_usuario].Year >= 1) Entonces;
+        Mostrar << "Morfología Dentaria y Oclusión:...", Datos.Materias.Odo[pos_usuario].Morfologia_Dentaria;
+        Mostrar << "Formación Cultural y Artística:...", Datos.Materias.Odo[pos_usuario].Formacion_Cultural_I;
+        Mostrar << "Odontología Comunitaria I:...", Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_I;
+        Mostrar << "Iniciación a la Clínica:...", Datos.Materias.Odo[pos_usuario].Iniciacion_Clinica;
+        Mostrar << "Morfología Humana:...", Datos.Materias.Odo[pos_usuario].Morfologia_Humana;
+        Mostrar << "Formación Instrumental:...", Datos.Materias.Odo[pos_usuario].Formacion_Instrumental_I;
+        Mostrar << "Bioquímica Aplicada:...", Datos.Materias.Odo[pos_usuario].Bioquimica_Aplicada;
+        Mostrar << "Histol, Embriología y Genética:...", Datos.Materias.Odo[pos_usuario].Histologia_Embriologia;
+        Mostrar << "Educación Física y Deportes I:...", Datos.Materias.Odo[pos_usuario].Deportes_I;
+        Mostrar << "Investigación I:...", Datos.Materias.Odo[pos_usuario].Investigacion_I;
+
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Morfologia_Dentaria + Datos.Materias.Odo[pos_usuario].Formacion_Cultural_I + Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_I + Datos.Materias.Odo[pos_usuario].Iniciacion_Clinica + Datos.Materias.Odo[pos_usuario].Morfologia_Humana + Datos.Materias.Odo[pos_usuario].Formacion_Instrumental_I + Datos.Materias.Odo[pos_usuario].Bioquimica_Aplicada + Datos.Materias.Odo[pos_usuario].Histologia_Embriologia + Datos.Materias.Odo[pos_usuario].Deportes_I + Datos.Materias.Odo[pos_usuario].Investigacion_I);
+        Contador = Contador + 10;
+    Fin_Si
+
+    // Segundo Año
+    Si (Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_I > 5.5) Entonces;
+        Mostrar << "Odontología Comunitaria II:...", Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_II;
+        Mostrar << "Formac. Cultural y Artística II:...", Datos.Materias.Odo[pos_usuario].Formacion_Cultural_II;
+      
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_II + Datos.Materias.Odo[pos_usuario].Formacion_Cultural_II);
+        Contador = Contador + 2;
+    Fin_Si
+    Si (Datos.Materias.Odo[pos_usuario].Morfologia_Humana > 5.5) Entonces;
+        Mostrar << "Histofisiología:...", Datos.Materias.Odo[pos_usuario].Histofisiologia;
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Histofisiologia);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Odo[pos_usuario].Morfologia_Dentaria > 5.5) Entonces;
+        Mostrar << "Clínica Integral del Adulto I:...", Datos.Materias.Odo[pos_usuario].Clinica_Adulto_I;
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Clinica_Adulto_I);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Odo[pos_usuario].Iniciación_Clinica > 5.5) Entonces;
+        Mostrar << "Biomateriales Odontológicos:...", Datos.Materias.Odo[pos_usuario].Biomateriales;
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Biomateriales);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Odo[pos_usuario].Deportes_I > 5.5) Entonces;
+        Mostrar << "Educación Física y Deportes II:...", Datos.Materias.Odo[pos_usuario].Deportes_II;
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Deportes_II);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Odo[pos_usuario].Investigacion_I > 5.5) Entonces;
+        Mostrar << "Investigación II:...", Datos.Materias.Odo[pos_usuario].Investigacion_II;
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Investigacion_II);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Odo[pos_usuario].Histologia_Embriologia > 5.5) Entonces;
+        Mostrar << "Microbiología y Parasitología:...", Datos.Materias.Odo[pos_usuario].Microbiologia_Parasitologia;
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Microbiologia_Parasitologia);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Odo[pos_usuario].Formacion_Instrumental_I > 5.5) Entonces;
+        Mostrar << "Formación Instrumental II:...", Datos.Materias.Odo[pos_usuario].Formacion_Instrumental_II;
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Formacion_Instrumental_II);
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Tercer Año
+    Si (Datos.Materias.Odo[pos_usuario].Investigacion_II > 5.5) Entonces;
+        Mostrar << "Investigación III:...", Datos.Materias.Odo[pos_usuario].Investigacion_III;
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Investigacion_III);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Odo[pos_usuario].Histofisiologia > 5.5) Entonces;
+        Mostrar << "Clínica Integral del Adulto II:...", Datos.Materias.Odo[pos_usuario].Clinica_Adulto_II;
+        Mostrar << "Toxicología:...", Datos.Materias.Odo[pos_usuario].Toxicologia;
+
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Clinica_Adulto_II + Datos.Materias.Odo[pos_usuario].Toxicologia);
+        Contador = Contador + 2;
+    Fin_Si
+    Si (Datos.Materias.Odo[pos_usuario].Clinica_Adulto_I > 5.5) Entonces;
+        Mostrar << "Odontología Comunitaria III:...", Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_III;
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_III);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_III > 5.5) Entonces;
+        Mostrar << "Atención Integral del Niño I:...", Datos.Materias.Odo[pos_usuario].Atencion_Nino_I;
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Atencion_Nino_I);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_I > 5.5) Entonces;
+        Mostrar << "Medicina Interna y Semiología:...", Datos.Materias.Odo[pos_usuario].Medicina_Semiologia;
+        Mostrar << "Fisiopatología:...", Datos.Materias.Odo[pos_usuario].Fisiopatologia;
+        Mostrar << "Gerontología:...", Datos.Materias.Odo[pos_usuario].Gerontologia;
+     
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Medicina_Semiologia + Datos.Materias.Odo[pos_usuario].Fisiopatologia + Datos.Materias.Odo[pos_usuario].Gerontologia);
+        Contador = Contador + 3;
+    Fin_Si
+    Si (Datos.Materias.Odo[pos_usuario].Formacion_Cultural_II > 5.5) Entonces;
+        Mostrar << "Farmacología:...", Datos.Materias.Odo[pos_usuario].Farmacologia;
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Farmacologia);
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Cuarto Año
+    Si (Datos.Materias.Odo[pos_usuario].Investigacion_III > 5.5) Entonces;
+        Mostrar << "Investigación IV:...", Datos.Materias.Odo[pos_usuario].Investigacion_IV;
+        Mostrar << "Odontología Comunitaria IV:...", Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_IV;
+        Mostrar << "Atención Integral del Niño II:...", Datos.Materias.Odo[pos_usuario].Atencion_Nino_II;
+      
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Investigacion_IV + Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_IV + Datos.Materias.Odo[pos_usuario].Atencion_Nino_II);
+        Contador = Contador + 3;
+    Fin_Si
+    Si (Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_III > 5.5) Entonces;
+        Mostrar << "Clínica Integ. del Adulto III:...", Datos.Materias.Odo[pos_usuario].Clinica_Adulto_III;
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Clinica_Adulto_III);
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Quinto Año
+    Si (Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_IV > 5.5) Entonces;
+        Mostrar << "Investigación V:...", Datos.Materias.Odo[pos_usuario].Investigacion_V;
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Investigacion_V);
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Odo[pos_usuario].Gerontologia > 5.5) Entonces;
+        Mostrar << "Odontología Comunitaria V:...", Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_V;
+        Suma = Suma + (Datos.Materias.Odo[pos_usuario].Odontologia_Comunitaria_V);
+        Contador = Contador + 1;
+    Fin_Si
+Fin_Procedimiento

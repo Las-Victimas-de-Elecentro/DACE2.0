@@ -1,0 +1,227 @@
+Procedimiento Historial_Comunicacion (E/S: Suma, Datos.Materias.Soc[pos_usuario].Morfosintaxis, Datos.Materias.Soc[pos_usuario].Com_Social_Periodismo, Datos.Materias.Soc[pos_usuario].Psicologia_Com, Datos.Materias.Soc[pos_usuario].Estadistica, Datos.Materias.Soc[pos_usuario].Deporte_Arte_Cultura, Datos.Materias.Soc[pos_usuario].Pensamiento_Bolivariano, Datos.Materias.Soc[pos_usuario].Periodismo_Informativo, Datos.Materias.Soc[pos_usuario].Com_Social_Radio, Datos.Materias.Soc[pos_usuario].Com_Social_Cine, Datos.Materias.Soc[pos_usuario].Com_Social_TV, Datos.Materias.Soc[pos_usuario].Com_Social_Foto, Datos.Materias.Soc[pos_usuario].Taller_Redaccion_I, Datos.Materias.Soc[pos_usuario].Proyecto_I, Datos.Materias.Soc[pos_usuario].Taller_Redaccion_II, Datos.Materias.Soc[pos_usuario].Com_Grafica, Datos.Materias.Soc[pos_usuario].Periodismo_Radiofonico, Datos.Materias.Soc[pos_usuario].Lenguaje_Cine, Datos.Materias.Soc[pos_usuario].Periodismo_TV, Datos.Materias.Soc[pos_usuario].Teoria_Comunicacion, Datos.Materias.Soc[pos_usuario].Opinion_Publica, Datos.Materias.Soc[pos_usuario].Formacion_Sociopolitica, Datos.Materias.Soc[pos_usuario].Etica_Legislacion, Datos.Materias.Soc[pos_usuario].Estetica_Imagen_Sonido, Datos.Materias.Soc[pos_usuario].Proyecto_II, Datos.Materias.Soc[pos_usuario].Investigacion_Comunicacion, Datos.Materias.Soc[pos_usuario].Periodismo_Interpretativo, Datos.Materias.Soc[pos_usuario].Economia_Politica, Datos.Materias.Soc[pos_usuario].Proyecto_III, Datos.Materias.Soc[pos_usuario].Sociologia_Comunicacion, Datos.Materias.Soc[pos_usuario].Periodismo_Opinion, Datos.Materias.Soc[pos_usuario].Produccion_Radio, Datos.Materias.Soc[pos_usuario].Produccion_Cine, Datos.Materias.Soc[pos_usuario].Seminario_Critica_I, Datos.Materias.Soc[pos_usuario].Produccion_TV, Datos.Materias.Soc[pos_usuario].Proyecto_IV, Datos.Materias.Soc[pos_usuario].Semiologia, Datos.Materias.Soc[pos_usuario].Fotoperiodismo, Datos.Materias.Soc[pos_usuario].Periodismo_Cientifico, Datos.Materias.Soc[pos_usuario].Relaciones_Publicas, Datos.Materias.Soc[pos_usuario].Tecnologia_Informacion, Datos.Materias.Soc[pos_usuario].Seminario_Critica_II, Datos.Materias.Soc[pos_usuario].Montajes_Audiovisuales, Datos.Materias.Soc[pos_usuario].Proyecto_V, Datos.Materias.Soc[pos_usuario].Locucion_Basica, Datos.Materias.Soc[pos_usuario].Idioma_Moderno, Datos.Materias.Soc[pos_usuario].Periodismo_Economico, Datos.Materias.Soc[pos_usuario].Orientacion_Profesional, Datos.Materias.Soc[pos_usuario].Publicidad, Datos.Materias.Soc[pos_usuario].Seminario_Critica_III, Datos.Materias.Soc[pos_usuario].Proyecto_VI, Datos.Materias.Soc[pos_usuario].Gerencia_Corporativa, Datos.Materias.Soc[pos_usuario].Periodismo_Politico, Datos.Materias.Soc[pos_usuario].Mercadeo, Datos.Materias.Soc[pos_usuario].Locucion_Profesional, Datos.Materias.Soc[pos_usuario].Proyecto_VII, Datos.Materias.Soc[pos_usuario].Orientacion_Prof_I, Datos.Materias.Soc[pos_usuario].Vinculacion_Profesional, Datos.Materias.Soc[pos_usuario].Trabajo_Grado: Real);
+
+Inicio
+
+    // Primer Semestre
+    Si (Datos[pos_usuario].Semestre >= 1) Entonces;
+        Mostrar << "Morfosintaxis del castellano:...", Datos.Materias.Soc[pos_usuario].Morfosintaxis;
+        Mostrar << "Comunicación Social en el periodismo:...", Datos.Materias.Soc[pos_usuario].Com_Social_Periodismo;
+        Mostrar << "Psicología de la Comunicación:...", Datos.Materias.Soc[pos_usuario].Psicologia_Com;
+        Mostrar << "Estadística:...", Datos.Materias.Soc[pos_usuario].Estadistica;
+        Mostrar << "Deporte, Arte y cultura:...", Datos.Materias.Soc[pos_usuario].Deporte_Arte_Cultura;
+        Mostrar << "Pensamiento Bolivariano:...", Datos.Materias.Soc[pos_usuario].Pensamiento_Bolivariano;
+
+        Suma = Suma + (Datos.Materias.Soc[pos_usuario].Morfosintaxis + Datos.Materias.Soc[pos_usuario].Com_Social_Periodismo + Datos.Materias.Soc[pos_usuario].Psicologia_Com + Datos.Materias.Soc[pos_usuario].Estadistica + Datos.Materias.Soc[pos_usuario].Deporte_Arte_Cultura + Datos.Materias.Soc[pos_usuario].Pensamiento_Bolivariano);
+        Contador = Contador + 6;
+    Fin_Si
+
+    // Segundo Semestre
+    Si (Datos[pos_usuario].Semestre >= 2) Entonces;
+        Mostrar << "Periodismo Informativo:...", Datos.Materias.Soc[pos_usuario].Periodismo_Informativo; 
+        Mostrar << "Comunicación Social en la Radio:...", Datos.Materias.Soc[pos_usuario].Com_Social_Radio; 
+        Mostrar << "Comunicación Social en cine:...", Datos.Materias.Soc[pos_usuario].Com_Social_Cine;
+        Mostrar << "Comunicación Social en la televisión:...", Datos.Materias.Soc[pos_usuario].Com_Social_TV; 
+        Mostrar << "Comunicación Social en la Fotografía:...", Datos.Materias.Soc[pos_usuario].Com_Social_Foto;
+       
+        Suma = Suma + (Datos.Materias.Soc[pos_usuario].Periodismo_Informativo + Datos.Materias.Soc[pos_usuario].Com_Social_Radio + Datos.Materias.Soc[pos_usuario].Com_Social_Cine + Datos.Materias.Soc[pos_usuario].Com_Social_TV + Datos.Materias.Soc[pos_usuario].Com_Social_Foto);
+        Contador = Contador + 5;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Morfosintaxis > 5.5) Entonces;
+        Mostrar << "Taller de Redacción y Estilo I:...", Datos.Materias.Soc[pos_usuario].Taller_Redaccion_I;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Taller_Redaccion_I;
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Tercer Semestre
+    Si (Datos[pos_usuario].Semestre >= 3) Entonces;
+        Mostrar << "Proyecto comunitario socio comunicacional I:...", Datos.Materias.Soc[pos_usuario].Proyecto_I;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Proyecto_I;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Taller_Redaccion_I > 5.5) Entonces;
+        Mostrar << "Taller de redacción y Estilo II:...", Datos.Materias.Soc[pos_usuario].Taller_Redaccion_II;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Taller_Redaccion_II;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Com_Social_Foto > 5.5) Entonces;
+        Mostrar << "Comunicación grafica:...", Datos.Materias.Soc[pos_usuario].Com_Grafica;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Com_Grafica;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Com_Social_Radio > 5.5) Entonces;
+        Mostrar << "Periodismo radiofónico:...", Datos.Materias.Soc[pos_usuario].Periodismo_Radiofonico;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Periodismo_Radiofonico;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Com_Social_Cine > 5.5) Entonces;
+        Mostrar << "Lenguaje y planificación cinematográfica:...", Datos.Materias.Soc[pos_usuario].Lenguaje_Cine;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Lenguaje_Cine;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Com_Social_TV > 5.5) Entonces;
+        Mostrar << "Periodismo Televisivo:...", Datos.Materias.Soc[pos_usuario].Periodismo_TV;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Periodismo_TV;
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Cuarto Semestre
+    Si (Datos[pos_usuario].Semestre >= 4) Entonces;
+        Mostrar << "Teoría de la Comunicación:...", Datos.Materias.Soc[pos_usuario].Teoria_Comunicacion;
+        Mostrar << "Opinión Pública:...", Datos.Materias.Soc[pos_usuario].Opinion_Publica;
+        Mostrar << "Formación Sociopolítica:...", Datos.Materias.Soc[pos_usuario].Formacion_Sociopolitica;
+        Mostrar << "Ética y Legislación de Medios y del Periodismo:...", Datos.Materias.Soc[pos_usuario].Etica_Legislacion;
+      
+        Suma = Suma + (Datos.Materias.Soc[pos_usuario].Teoria_Comunicacion + Datos.Materias.Soc[pos_usuario].Opinion_Publica + Datos.Materias.Soc[pos_usuario].Formacion_Sociopolitica + Datos.Materias.Soc[pos_usuario].Etica_Legislacion);
+        Contador = Contador + 4;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Com_Grafica > 5.5) Entonces;
+        Mostrar << "Estética de la Imagen y el Sonido:...", Datos.Materias.Soc[pos_usuario].Estetica_Imagen_Sonido;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Estetica_Imagen_Sonido;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Proyecto_I > 5.5) Entonces;
+        Mostrar << "Proyecto comunitario socio comunicacional II:...", Datos.Materias.Soc[pos_usuario].Proyecto_II;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Proyecto_II;
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Quinto Semestre
+    Si (Datos[pos_usuario].Semestre >= 5) Entonces;
+        Mostrar << "Investigación de la Comunicación:...", Datos.Materias.Soc[pos_usuario].Investigacion_Comunicacion;
+        Mostrar << "Periodismo Interpretativo:...", Datos.Materias.Soc[pos_usuario].Periodismo_Interpretativo;
+        Mostrar << "Economía Política:...", Datos.Materias.Soc[pos_usuario].Economia_Politica;
+       
+        Suma = Suma + (Datos.Materias.Soc[pos_usuario].Investigacion_Comunicacion + Datos.Materias.Soc[pos_usuario].Periodismo_Interpretativo + Datos.Materias.Soc[pos_usuario].Economia_Politica);
+        Contador = Contador + 3;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Proyecto_II > 5.5) Entonces;
+        Mostrar << "Proyecto comunitario sociocomunicacional III:...", Datos.Materias.Soc[pos_usuario].Proyecto_III;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Proyecto_III;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Teoria_Comunicacion > 5.5) Entonces;
+        Mostrar << "Sociología de la Comunicación:...", Datos.Materias.Soc[pos_usuario].Sociologia_Comunicacion;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Sociologia_Comunicacion;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Opinion_Publica > 5.5) Entonces;
+        Mostrar << "Periodismo de Opinión:...", Datos.Materias.Soc[pos_usuario].Periodismo_Opinion;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Periodismo_Opinion;
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Sexto Semestre
+    Si (Datos[pos_usuario].Semestre >= 6) Entonces;
+        Mostrar << "Producción de Radio:...", Datos.Materias.Soc[pos_usuario].Produccion_Radio;
+        Mostrar << "Producción de Cine:...", Datos.Materias.Soc[pos_usuario].Produccion_Cine;
+        Mostrar << "Seminario de formación socio critica I:...", Datos.Materias.Soc[pos_usuario].Seminario_Critica_I;
+        
+        Suma = Suma + (Datos.Materias.Soc[pos_usuario].Produccion_Radio + Datos.Materias.Soc[pos_usuario].Produccion_Cine + Datos.Materias.Soc[pos_usuario].Seminario_Critica_I);
+        Contador = Contador + 3;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Estetica_Imagen_Sonido > 5.5) Entonces;
+        Mostrar << "Producción de Televisión:...", Datos.Materias.Soc[pos_usuario].Produccion_TV;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Produccion_TV;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Proyecto_III > 5.5) Entonces;
+        Mostrar << "Proyecto comunitario sociocomunicacional IV:...", Datos.Materias.Soc[pos_usuario].Proyecto_IV;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Proyecto_IV;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Sociologia_Comunicacion > 5.5) Entonces;
+        Mostrar << "Semiología:...", Datos.Materias.Soc[pos_usuario].Semiologia;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Semiologia;
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Séptimo Semestre
+    Si (Datos[pos_usuario].Semestre >= 7) Entonces;
+        Mostrar << "Fotoperiodismo:...", Datos.Materias.Soc[pos_usuario].Fotoperiodismo;
+        Mostrar << "Periodismo Científico:...", Datos.Materias.Soc[pos_usuario].Periodismo_Cientifico; 
+        Mostrar << "Relaciones Públicas:...", Datos.Materias.Soc[pos_usuario].Relaciones_Publicas; 
+        Mostrar << "Tecnología de la Información:...", Datos.Materias.Soc[pos_usuario].Tecnologia_Informacion;
+        
+        Suma = Suma + (Datos.Materias.Soc[pos_usuario].Fotoperiodismo + Datos.Materias.Soc[pos_usuario].Periodismo_Cientifico + Datos.Materias.Soc[pos_usuario].Relaciones_Publicas + Datos.Materias.Soc[pos_usuario].Tecnologia_Informacion);
+        Contador = Contador + 4;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Seminario_Critica_I > 5.5) Entonces;
+        Mostrar << "Seminario de formación socio critica II:...", Datos.Materias.Soc[pos_usuario].Seminario_Critica_II;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Seminario_Critica_II;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Produccion_Cine > 5.5 AND Datos.Materias.Soc[pos_usuario].Produccion_TV > 5.5) Entonces;
+        Mostrar << "Montajes Audiovisuales:...", Datos.Materias.Soc[pos_usuario].Montajes_Audiovisuales;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Montajes_Audiovisuales;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Proyecto_IV > 5.5) Entonces;
+        Mostrar << "Proyecto comunitario sociocomunicacional V:...", Datos.Materias.Soc[pos_usuario].Proyecto_V; 
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Proyecto_V;
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Octavo Semestre
+    Si (Datos[pos_usuario].Semestre >= 8) Entonces;
+        Mostrar << "Locución Básica:...", Datos.Materias.Soc[pos_usuario].Locucion_Basica;
+        Mostrar << "Idioma Moderno:...", Datos.Materias.Soc[pos_usuario].Idioma_Moderno; 
+        Mostrar << "Periodismo Económico:...", Datos.Materias.Soc[pos_usuario].Periodismo_Economico; 
+        Mostrar << "Orientación Profesional:...", Datos.Materias.Soc[pos_usuario].Orientacion_Profesional;
+       
+        Suma = Suma + (Datos.Materias.Soc[pos_usuario].Locucion_Basica + Datos.Materias.Soc[pos_usuario].Idioma_Moderno + Datos.Materias.Soc[pos_usuario].Periodismo_Economico + Datos.Materias.Soc[pos_usuario].Orientacion_Profesional);
+        Contador = Contador + 4;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Relaciones_Publicas > 5.5) Entonces;
+        Mostrar << "Publicidad:...", Datos.Materias.Soc[pos_usuario].Publicidad; 
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Publicidad;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Seminario_Critica_II > 5.5) Entonces;
+        Mostrar << "Seminario de formación socio critica III:...", Datos.Materias.Soc[pos_usuario].Seminario_Critica_III; 
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Seminario_Critica_III;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Proyecto_V > 5.5) Entonces;
+        Mostrar << "Proyecto comunitario sociocomunicacional VI:...", Datos.Materias.Soc[pos_usuario].Proyecto_VI;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Proyecto_VI;
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Noveno Semestre
+    Si (Datos[pos_usuario].Semestre >= 9) Entonces;
+        Mostrar << "Gerencia Corporativa:...", Datos.Materias.Soc[pos_usuario].Gerencia_Corporativa;
+        Mostrar << "Periodismo Político:...", Datos.Materias.Soc[pos_usuario].Periodismo_Politico; 
+        
+        Suma = Suma + (Datos.Materias.Soc[pos_usuario].Gerencia_Corporativa + Datos.Materias.Soc[pos_usuario].Periodismo_Politico);
+        Contador = Contador + 2;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Publicidad > 5.5) Entonces;
+        Mostrar << "Mercadeo:...", Datos.Materias.Soc[pos_usuario].Mercadeo; 
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Mercadeo;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Locucion_Basica > 5.5) Entonces;
+        Mostrar << "Locución Profesional:...", Datos.Materias.Soc[pos_usuario].Locucion_Profesional;
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Locucion_Profesional;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Proyecto_VI > 5.5) Entonces;
+        Mostrar << "Proyecto comunitario socio comunicacional VII:...", Datos.Materias.Soc[pos_usuario].Proyecto_VII; 
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Proyecto_VII;
+        Contador = Contador + 1;
+    Fin_Si
+    Si (Datos.Materias.Soc[pos_usuario].Orientacion_Profesional > 5.5) Entonces;
+        Mostrar << "Orientación Profesional I:...", Datos.Materias.Soc[pos_usuario].Orientacion_Prof_I; 
+        Suma = Suma + Datos.Materias.Soc[pos_usuario].Orientacion_Prof_I;
+        Contador = Contador + 1;
+    Fin_Si
+
+    // Décimo Semestre
+    Si (Datos[pos_usuario].Semestre >= 10) Entonces;
+        Mostrar << "Vinculación Profesional en el campo socio comunicacional:...", Datos.Materias.Soc[pos_usuario].Vinculacion_Profesional;
+        Mostrar << "Trabajo Especial de Grado:...", Datos.Materias.Soc[pos_usuario].Trabajo_Grado;
+    
+        Suma = Suma + (Datos.Materias.Soc[pos_usuario].Vinculacion_Profesional + Datos.Materias.Soc[pos_usuario].Trabajo_Grado);
+        Contador = Contador + 2;
+    Fin_Si
+Fin_Procedimiento

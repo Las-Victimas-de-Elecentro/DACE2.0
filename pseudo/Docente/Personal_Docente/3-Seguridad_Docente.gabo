@@ -1,0 +1,55 @@
+Procedimiento Seguridad_Docente(E/S:Prof[pos].Password, Prof[pos].Gmail: Cadena);
+Inicio
+    var Opc: entero, NewC, NewG: Cadena, S = 0, R: Booleano;
+    
+    Repetir
+        Mostrar << "Gestión de seguridad";
+        Mostrar << "Aquí puedes cambiar tu contraseña o actualizar tu correo de contacto";
+        Mostrar << "Seleccione una opción de seguridad";
+        Mostrar << "1: Cambiar Contraseña";
+        Mostrar << "2: Actualizar Correo";
+        Leer >> Opc;
+        Mientras (Opc < 1 Or Opc > 2) Hacer;
+            Mostrar << "Ingrese solo opciones entre 1-2";
+            Leer >> Opc;
+        Fin_Mientras
+
+        En_Caso (Opc > 0) Sea;
+            Caso(Opc = 1);
+                Mostrar << "Ingrese la nueva contraseña:";
+                Leer >> NewC;
+                Mostrar << "¿Estás seguro de que quieres usar esta contraseña? Ingrese 1:Sí / 0:No";
+                Leer >> S;
+                Mientras (S < 0 Or S > 1) Hacer;
+                    Mostrar << "Ingrese solo opciones entre 0-1";
+                    Leer >> S;
+                Fin_Mientras
+            Otro_Caso
+                Mostrar << "Ingrese el nuevo correo electrónico";
+                Leer >> NewG;
+                Mostrar << "¿Estás seguro de que quieres usar este correo? Ingrese 1:Sí / 0:No";
+                Leer >> S;
+                Mientras (S < 0 Or S > 1) Hacer;
+                    Mostrar << "Ingrese solo opciones entre 0-1";
+                    Leer >> S;
+                Fin_Mientras
+            Fin_Caso
+
+        En_Caso (S > 0) Sea;
+            Caso(Opc = 1);
+                Mostrar << "Contraseña actualizada con éxito";
+                Prof[pos].Password = NewC;
+            Otro_Caso
+                Mostrar << "Correo actualizado con éxito";
+                Prof[pos].Gmail = NewG;
+        Fin_Caso
+
+        Si (S = 0) Entonces;
+            Mostrar << "Cambios de seguridad cancelados";
+        Fin_Si
+
+        Mostrar << "¿Desea cambiar otro dato de seguridad? Ingrese 1:Sí, 0:No";
+        Leer >> R;
+        Hasta(R = 0);
+    Fin_Repetir
+Fin_Procedimiento

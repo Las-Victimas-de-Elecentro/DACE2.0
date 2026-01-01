@@ -1,0 +1,94 @@
+Procedimiento Historial_Derecho (E/S: Suma, Datos.Materias.Der[pos_usuario].Derecho_Civil_I, Datos.Materias.Der[pos_usuario].Derecho_Constitucional, Datos.Materias.Der[pos_usuario].Pensamiento_Bolivariano, Datos.Materias.Der[pos_usuario].Introduccion_Derecho, Datos.Materias.Der[pos_usuario].Economia_Politica, Datos.Materias.Der[pos_usuario].Sociologia_Juridica, Datos.Materias.Der[pos_usuario].Lenguaje_Comunicacion, Datos.Materias.Der[pos_usuario].Metodologia_I, Datos.Materias.Der[pos_usuario].Proyecto_I, Datos.Materias.Der[pos_usuario].Practicas_I, Datos.Materias.Der[pos_usuario].Electiva_I, Datos.Materias.Der[pos_usuario].Derecho_Civil_II, Datos.Materias.Der[pos_usuario].Derecho_Admin_I, Datos.Materias.Der[pos_usuario].Derecho_Penal_I, Datos.Materias.Der[pos_usuario].Derecho_Romano_I, Datos.Materias.Der[pos_usuario].Derecho_Ambiental, Datos.Materias.Der[pos_usuario].Medicina_Legal, Datos.Materias.Der[pos_usuario].Derecho_Agrario, Datos.Materias.Der[pos_usuario].Derechos_Humanos, Datos.Materias.Der[pos_usuario].Metodologia_II, Datos.Materias.Der[pos_usuario].Proyecto_II, Datos.Materias.Der[pos_usuario].Practicas_II, Datos.Materias.Der[pos_usuario].Electiva_II, Datos.Materias.Der[pos_usuario].Obligaciones_I, Datos.Materias.Der[pos_usuario].Derecho_Admin_II, Datos.Materias.Der[pos_usuario].Derecho_Penal_II, Datos.Materias.Der[pos_usuario].Derecho_Romano_II, Datos.Materias.Der[pos_usuario].Derecho_Trabajo_I, Datos.Materias.Der[pos_usuario].Criminologia, Datos.Materias.Der[pos_usuario].Derecho_Inter_Publico, Datos.Materias.Der[pos_usuario].Derecho_Proc_Penal_I, Datos.Materias.Der[pos_usuario].Filosofia_Derecho, Datos.Materias.Der[pos_usuario].Hacienda_Publica, Datos.Materias.Der[pos_usuario].Electiva_III, Datos.Materias.Der[pos_usuario].Derecho_Civil_IV, Datos.Materias.Der[pos_usuario].Derecho_Trabajo_II, Datos.Materias.Der[pos_usuario].Derecho_Civil_V, Datos.Materias.Der[pos_usuario].Derecho_Tributario, Datos.Materias.Der[pos_usuario].Obligaciones_II, Datos.Materias.Der[pos_usuario].Derecho_Proc_Civil_I, Datos.Materias.Der[pos_usuario].Derecho_Probatorio_I, Datos.Materias.Der[pos_usuario].Proyecto_III, Datos.Materias.Der[pos_usuario].Practicas_III, Datos.Materias.Der[pos_usuario].Electiva_IV, Datos.Materias.Der[pos_usuario].Derecho_Proc_Penal_II, Datos.Materias.Der[pos_usuario].Obligaciones_III, Datos.Materias.Der[pos_usuario].Derecho_Proc_Civil_II, Datos.Materias.Der[pos_usuario].Derecho_Mercantil, Datos.Materias.Der[pos_usuario].Derecho_Probatorio_II, Datos.Materias.Der[pos_usuario].Derecho_Internacional_Priv, Datos.Materias.Der[pos_usuario].Etica_Deontologia, Datos.Materias.Der[pos_usuario].Derecho_Registral, Datos.Materias.Der[pos_usuario].Seminario_Grado, Datos.Materias.Der[pos_usuario].Proyecto_IV, Datos.Materias.Der[pos_usuario].Practicas_IV, Datos.Materias.Der[pos_usuario].Electiva_V: Real);
+Inicio
+
+    // Primer Año
+    Si (Datos[pos_usuario].Year >= 1) Entonces;
+        Mostrar << "Derecho Civil I:...", Datos.Materias.Der[pos_usuario].Derecho_Civil_I;
+        Mostrar << "Derecho Constitucional:...", Datos.Materias.Der[pos_usuario].Derecho_Constitucional;
+        Mostrar << "Pensamiento Bolivariano:...", Datos.Materias.Der[pos_usuario].Pensamiento_Bolivariano;
+        Mostrar << "Introduccion al Derecho:...", Datos.Materias.Der[pos_usuario].Introduccion_Derecho;
+        Mostrar << "Economia Politica:...", Datos.Materias.Der[pos_usuario].Economia_Politica;
+        Mostrar << "Sociologia Juridica:...", Datos.Materias.Der[pos_usuario].Sociologia_Juridica;
+        Mostrar << "Lenguaje y Comunicacion:...", Datos.Materias.Der[pos_usuario].Lenguaje_Comunicacion;
+        Mostrar << "Metodologia de la Investigacion I:...", Datos.Materias.Der[pos_usuario].Metodologia_I;
+        Mostrar << "Proyecto Socio Juridico I:...", Datos.Materias.Der[pos_usuario].Proyecto_I;
+        Mostrar << "Practicas Juridicas I:...", Datos.Materias.Der[pos_usuario].Practicas_I;
+        Mostrar << "Electiva I:...", Datos.Materias.Der[pos_usuario].Electiva_I;
+
+        Suma = Suma + (Datos.Materias.Der[pos_usuario].Derecho_Civil_I + Datos.Materias.Der[pos_usuario].Derecho_Constitucional + Datos.Materias.Der[pos_usuario].Pensamiento_Bolivariano + Datos.Materias.Der[pos_usuario].Introduccion_Derecho + Datos.Materias.Der[pos_usuario].Economia_Politica + Datos.Materias.Der[pos_usuario].Sociologia_Juridica + Datos.Materias.Der[pos_usuario].Lenguaje_Comunicacion + Datos.Materias.Der[pos_usuario].Metodologia_I + Datos.Materias.Der[pos_usuario].Proyecto_I + Datos.Materias.Der[pos_usuario].Practicas_I + Datos.Materias.Der[pos_usuario].Electiva_I);
+        Contador = Contador + 11;
+    Fin_Si
+
+    // Segundo Año
+    Si (Datos[pos_usuario].Year >= 2) Entonces;
+        Mostrar << "Derecho Civil II (Personas):...", Datos.Materias.Der[pos_usuario].Derecho_Civil_II;
+        Mostrar << "Derecho Administrativo I:...", Datos.Materias.Der[pos_usuario].Derecho_Admin_I;
+        Mostrar << "Derecho Penal I:...", Datos.Materias.Der[pos_usuario].Derecho_Penal_I;
+        Mostrar << "Derecho Romano I:...", Datos.Materias.Der[pos_usuario].Derecho_Romano_I;
+        Mostrar << "Derecho Ambiental:...", Datos.Materias.Der[pos_usuario].Derecho_Ambiental;
+        Mostrar << "Medicina Legal:...", Datos.Materias.Der[pos_usuario].Medicina_Legal;
+        Mostrar << "Derecho Agrario:...", Datos.Materias.Der[pos_usuario].Derecho_Agrario;
+        Mostrar << "Derecho de los Derechos Humanos:...", Datos.Materias.Der[pos_usuario].Derechos_Humanos;
+        Mostrar << "Metodologia de la Investigacion II:...", Datos.Materias.Der[pos_usuario].Metodologia_II;
+        Mostrar << "Proyecto Socio Juridico II:...", Datos.Materias.Der[pos_usuario].Proyecto_II;
+        Mostrar << "Practicas Juridicas II:...", Datos.Materias.Der[pos_usuario].Practicas_II;
+        Mostrar << "Electiva II:...", Datos.Materias.Der[pos_usuario].Electiva_II;
+
+        Suma = Suma + (Datos.Materias.Der[pos_usuario].Derecho_Civil_II + Datos.Materias.Der[pos_usuario].Derecho_Admin_I + Datos.Materias.Der[pos_usuario].Derecho_Penal_I + Datos.Materias.Der[pos_usuario].Derecho_Romano_I + Datos.Materias.Der[pos_usuario].Derecho_Ambiental + Datos.Materias.Der[pos_usuario].Medicina_Legal + Datos.Materias.Der[pos_usuario].Derecho_Agrario + Datos.Materias.Der[pos_usuario].Derechos_Humanos + Datos.Materias.Der[pos_usuario].Metodologia_II + Datos.Materias.Der[pos_usuario].Proyecto_II + Datos.Materias.Der[pos_usuario].Practicas_II + Datos.Materias.Der[pos_usuario].Electiva_II);
+        Contador = Contador + 12;
+    Fin_Si
+
+    // Tercer Año
+    Si (Datos[pos_usuario].Year >= 3) Entonces;
+        Mostrar << "Derecho Civil III (Obligaciones I):...", Datos.Materias.Der[pos_usuario].Obligaciones_I;
+        Mostrar << "Derecho Administrativo II:...", Datos.Materias.Der[pos_usuario].Derecho_Admin_II;
+        Mostrar << "Derecho Penal II:...", Datos.Materias.Der[pos_usuario].Derecho_Penal_II;
+        Mostrar << "Derecho Romano II:...", Datos.Materias.Der[pos_usuario].Derecho_Romano_II;
+        Mostrar << "Derecho del Trabajo I:...", Datos.Materias.Der[pos_usuario].Derecho_Trabajo_I;
+        Mostrar << "Criminologia:...", Datos.Materias.Der[pos_usuario].Criminologia;
+        Mostrar << "Derecho Internacional Publico:...", Datos.Materias.Der[pos_usuario].Derecho_Inter_Publico;
+        Mostrar << "Derecho Procesal Penal I:...", Datos.Materias.Der[pos_usuario].Derecho_Proc_Penal_I;
+        Mostrar << "Filosofia del Derecho:...", Datos.Materias.Der[pos_usuario].Filosofia_Derecho;
+        Mostrar << "Hacienda Publica:...", Datos.Materias.Der[pos_usuario].Hacienda_Publica;
+        Mostrar << "Electiva III:...", Datos.Materias.Der[pos_usuario].Electiva_III;
+
+        Suma = Suma + (Datos.Materias.Der[pos_usuario].Obligaciones_I + Datos.Materias.Der[pos_usuario].Derecho_Admin_II + Datos.Materias.Der[pos_usuario].Derecho_Penal_II + Datos.Materias.Der[pos_usuario].Derecho_Romano_II + Datos.Materias.Der[pos_usuario].Derecho_Trabajo_I + Datos.Materias.Der[pos_usuario].Criminologia + Datos.Materias.Der[pos_usuario].Derecho_Inter_Publico + Datos.Materias.Der[pos_usuario].Derecho_Proc_Penal_I + Datos.Materias.Der[pos_usuario].Filosofia_Derecho + Datos.Materias.Der[pos_usuario].Hacienda_Publica + Datos.Materias.Der[pos_usuario].Electiva_III);
+        Contador = Contador + 11;
+    Fin_Si
+
+    // Cuarto Año
+    Si (Datos[pos_usuario].Year >= 4) Entonces;
+        Mostrar << "Derecho Civil IV (Contratos):...", Datos.Materias.Der[pos_usuario].Derecho_Civil_IV;
+        Mostrar << "Derecho del Trabajo II:...", Datos.Materias.Der[pos_usuario].Derecho_Trabajo_II;
+        Mostrar << "Derecho Civil V (Familia):...", Datos.Materias.Der[pos_usuario].Derecho_Civil_V;
+        Mostrar << "Derecho Tributario:...", Datos.Materias.Der[pos_usuario].Derecho_Tributario;
+        Mostrar << "Obligaciones II:...", Datos.Materias.Der[pos_usuario].Obligaciones_II;
+        Mostrar << "Derecho Procesal Civil I:...", Datos.Materias.Der[pos_usuario].Derecho_Proc_Civil_I;
+        Mostrar << "Derecho Probatorio I:...", Datos.Materias.Der[pos_usuario].Derecho_Probatorio_I;
+        Mostrar << "Proyecto Socio Juridico III:...", Datos.Materias.Der[pos_usuario].Proyecto_III;
+        Mostrar << "Practicas Juridicas III:...", Datos.Materias.Der[pos_usuario].Practicas_III;
+        Mostrar << "Electiva IV:...", Datos.Materias.Der[pos_usuario].Electiva_IV;
+
+        Suma = Suma + (Datos.Materias.Der[pos_usuario].Derecho_Civil_IV + Datos.Materias.Der[pos_usuario].Derecho_Trabajo_II + Datos.Materias.Der[pos_usuario].Derecho_Civil_V + Datos.Materias.Der[pos_usuario].Derecho_Tributario + Datos.Materias.Der[pos_usuario].Obligaciones_II + Datos.Materias.Der[pos_usuario].Derecho_Proc_Civil_I + Datos.Materias.Der[pos_usuario].Derecho_Probatorio_I + Datos.Materias.Der[pos_usuario].Proyecto_III + Datos.Materias.Der[pos_usuario].Practicas_III + Datos.Materias.Der[pos_usuario].Electiva_IV);
+        Contador = Contador + 10;
+    Fin_Si
+
+    // Quinto Año
+    Si (Datos[pos_usuario].Year >= 5) Entonces;
+        Mostrar << "Derecho Procesal Penal II:...", Datos.Materias.Der[pos_usuario].Derecho_Proc_Penal_II;
+        Mostrar << "Obligaciones III:...", Datos.Materias.Der[pos_usuario].Obligaciones_III;
+        Mostrar << "Derecho Procesal Civil II:...", Datos.Materias.Der[pos_usuario].Derecho_Proc_Civil_II;
+        Mostrar << "Derecho Mercantil:...", Datos.Materias.Der[pos_usuario].Derecho_Mercantil;
+        Mostrar << "Derecho Probatorio II:...", Datos.Materias.Der[pos_usuario].Derecho_Probatorio_II;
+        Mostrar << "Derecho Internacional Privado:...", Datos.Materias.Der[pos_usuario].Derecho_Internacional_Priv;
+        Mostrar << "Etica y Deontologia:...", Datos.Materias.Der[pos_usuario].Etica_Deontologia;
+        Mostrar << "Derecho Registral y Notarial:...", Datos.Materias.Der[pos_usuario].Derecho_Registral;
+        Mostrar << "Seminario de Trabajo de Grado:...", Datos.Materias.Der[pos_usuario].Seminario_Grado;
+        Mostrar << "Proyecto Socio Juridico IV:...", Datos.Materias.Der[pos_usuario].Proyecto_IV;
+        Mostrar << "Practicas Juridicas IV:...", Datos.Materias.Der[pos_usuario].Practicas_IV;
+        Mostrar << "Electiva V:...", Datos.Materias.Der[pos_usuario].Electiva_V;
+
+        Suma = Suma + (Datos.Materias.Der[pos_usuario].Derecho_Proc_Penal_II + Datos.Materias.Der[pos_usuario].Obligaciones_III + Datos.Materias.Der[pos_usuario].Derecho_Proc_Civil_II + Datos.Materias.Der[pos_usuario].Derecho_Mercantil + Datos.Materias.Der[pos_usuario].Derecho_Probatorio_II + Datos.Materias.Der[pos_usuario].Derecho_Internacional_Priv + Datos.Materias.Der[pos_usuario].Etica_Deontologia + Datos.Materias.Der[pos_usuario].Derecho_Registral + Datos.Materias.Der[pos_usuario].Seminario_Grado + Datos.Materias.Der[pos_usuario].Proyecto_IV + Datos.Materias.Der[pos_usuario].Practicas_IV + Datos.Materias.Der[pos_usuario].Electiva_V);
+        Contador = Contador + 12;
+    Fin_Si
+Fin_Procedimiento

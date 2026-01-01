@@ -1,0 +1,212 @@
+Procedimiento Rellenado (E/S: I, Admin[I].CI: Entero, Admin[I].Usuario, Admin[I].Gmail, Admin[I].Password: Cadena);
+Inicio
+    Admin.CI[1] = 789512345;
+    Admin.Usuario[1] = "Cuatromino Guitarrizo Pérez González";
+    Admin.Cargo[1] = "Docente";
+    Admin.Gmail[1] = "cuaguirezlez2345@gmail.com";
+    Admin.Password[1] = "cuaguirezlez*2345";
+
+    Admin.CI[2] = 641987523;
+    Admin.Usuario[2] = "Potracio Georfido Rodríguez López";
+    Admin.Cargo[2] = "Docente";
+    Admin.Gmail[2] = "pogeorguezpez7523@outlook.com";
+    Admin.Password[2] = "pogeorguezpez*7523";
+
+    Admin.CI[3] = 905348167;
+    Admin.Usuario[3] = "Nicida Ivanisaurio Fernández García";
+    Admin.Cargo[3] = "Docente";
+    Admin.Gmail[3] = "niidezcía8167@yahoo.com";
+    Admin.Password[3] = "niidezcía*8167";
+
+    Admin.CI[4] = 213764890;
+    Admin.Usuario[4] = "Epimenio Eufrasio Díaz Sánchez";
+    Admin.Cargo[4] = "Docente";
+    Admin.Gmail[4] = "eeudíchez4890@gmail.com";
+    Admin.Password[4] = "eeudíchez*4890";
+
+    Admin.CI[5] = 834590126;
+    Admin.Usuario[5] = "Fericodrilo Diogracio Flores Ramírez";
+    Admin.Cargo[5] = "Docente";
+    Admin.Gmail[5] = "fedioresrez0126@outlook.com";
+    Admin.Password[5] = "fedioresrez*0126";
+
+    Admin.CI[6] = 470251938;
+    Admin.Usuario[6] = "Melpomenes Clodomiro Torres Rojas";
+    Admin.Cargo[6] = "Docente";
+    Admin.Gmail[6] = "melcloresjas1938@yahoo.com";
+    Admin.Password[6] = "melcloresjas*1938";
+
+    Admin.CI[7] = 156829470;
+    Admin.Usuario[7] = "Concha Celso Castro Morales";
+    Admin.Cargo[7] = "Docente";
+    Admin.Gmail[7] = "conceltroles9470@gmail.com";
+    Admin.Password[7] = "conceltroles*9470";
+
+    Admin.CI[8] = 592036714;
+    Admin.Usuario[8] = "Sinibaldo Kilintwon Vargas Herrera";
+    Admin.Cargo[8] = "Docente";
+    Admin.Gmail[8] = "sikiigasra6714@outlook.com";
+    Admin.Password[8] = "sikiigasra*6714";
+
+    Admin.CI[9] = 368175042;
+    Admin.Usuario[9] = "Cleiber Ritce Ruíz Jiménez";
+    Admin.Cargo[9] = "Docente";
+    Admin.Gmail[9] = "cleiritíznez5042@yahoo.com";
+    Admin.Password[9] = "cleiritíznez*5042";
+
+    Admin.CI[10] = 724603951;
+    Admin.Usuario[10] = "Wilianñelys Wuandy Moreno Cruz";
+    Admin.Cargo[10] = "Docente";
+    Admin.Gmail[10] = "wiwuannocruz0951@gmail.com";
+    Admin.Password[10] = "wiwuannocruz*0951";
+
+    Admin.CI[11] = 980417235;
+    Admin.Usuario[11] = "Pragedia Epaminondas Gutiérrez Delgado";
+    Admin.Cargo[11] = "Docente";
+    Admin.Gmail[11] = "praerezdo7235@outlook.com";
+    Admin.Password[11] = "praerezdo*7235";
+
+    Admin.CI[12] = 651382709;
+    Admin.Usuario[12] = "Arnetty Yoryimar Mendoza Ramos";
+    Admin.Cargo[12] = "Docente";
+    Admin.Gmail[12] = "aryorzaramos2709@yahoo.com";
+    Admin.Password[12] = "aryorzaramos*2709";
+
+    Admin.CI[13] = 427950681;
+    Admin.Usuario[13] = "Yosi Aguileo Rivera Chávez";
+    Admin.Cargo[13] = "Docente";
+    Admin.Gmail[13] = "yoaraver0681@gmail.com";
+    Admin.Password[13] = "yoaraver*0681";
+
+    Admin.CI[14] = 193068574;
+    Admin.Usuario[14] = "Divasy Teódulo Romero Espinoza";
+    Admin.Cargo[14] = "Docente";
+    Admin.Gmail[14] = "diteóroza8574@outlook.com";
+    Admin.Password[14] = "diteóroza*8574";
+
+    Admin.CI[15] = 548721093;
+    Admin.Usuario[15] = "Yubisay Markewi Soto Aguilar";
+    Admin.Cargo[15] = "Docente";
+    Admin.Gmail[15] = "yumarstolar1093@yahoo.com";
+    Admin.Password[15] = "yumarstolar*1093";
+
+    Admin.CI[16] = 204593186;
+    Admin.Usuario[16] = "Wayira Weys Núñez Paredes";
+    Admin.Cargo[16] = "Docente";
+    Admin.Gmail[16] = "wawaysñezdes3186@gmail.com";
+    Admin.Password[16] = "wawaysñezdes*3186";
+
+    Admin.CI[17] = 876140329;
+    Admin.Usuario[17] = "Wilker Joedeima Salgado Castillo";
+    Admin.Cargo[17] = "Docente";
+    Admin.Gmail[17] = "wiljoedollo0329@outlook.com";
+    Admin.Password[17] = "wiljoedollo*0329";
+
+    Admin.CI[18] = 332857904;
+    Admin.Usuario[18] = "Radegunda Laicireth Bravo Guerrero";
+    Admin.Cargo[18] = "Docente";
+    Admin.Gmail[18] = "ralaiivoro7904@yahoo.com";
+    Admin.Password[18] = "ralaiivoro*7904";
+
+    Admin.CI[19] = 709462518;
+    Admin.Usuario[19] = "Eucarilde Oxálida Fuentes Rojas";
+    Admin.Cargo[19] = "Docente";
+    Admin.Gmail[19] = "euotesjas2518@gmail.com";
+    Admin.Password[19] = "euotesjas*2518";
+
+    Admin.CI[20] = 951634872;
+    Admin.Usuario[20] = "Heromides Duxlan Silva Calderón";
+    Admin.Cargo[20] = "Docente";
+    Admin.Gmail[20] = "heduxvarón4872@outlook.com";
+    Admin.Password[20] = "heduxvarón*4872";
+
+    Admin.CI[21] = 623079451;
+    Admin.Usuario[21] = "Roscarvi Milaidys Miranda Reyes";
+    Admin.Cargo[21] = "Docente";
+    Admin.Gmail[21] = "rosmididaes9451@yahoo.com ";
+    Admin.Password[21] = "rosmididaes*9451";
+
+    Admin.CI[22] = 489216035;
+    Admin.Usuario[22] = "Exomila Alimoxe Acosta Luna";
+    Admin.Cargo[22] = "Director Administrativo ";
+    Admin.Gmail[22] = "eatana6035@gmail.com";
+    Admin.Password[22] = "eatana*6035";
+
+    Admin.CI[23] = 145783260;
+    Admin.Usuario[23] = "Blacina Noyisguamiles Salazar León";
+    Admin.Cargo[23] = "Vicerrector Académico ";
+    Admin.Gmail[23] = "blanozarón3260@outlook.com";
+    Admin.Password[23] = "blanozarón*3260";
+
+    Admin.CI[24] = 506398127;
+    Admin.Usuario[24] = "Enexágoras Eliaquin Ortiz Méndez";
+    Admin.Cargo[24] = "Docente";
+    Admin.Gmail[24] = "eeortizdeez8127@yahoo.com";
+    Admin.Password[24] = "eeortizdeez*8127";
+
+    Admin.CI[25] = 261805743;
+    Admin.Usuario[25] = "Liduina Kyaxny Marín Peña";
+    Admin.Cargo[25] = "Docente";
+    Admin.Gmail[25] = "likyaxrínña5743@gmail.com";
+    Admin.Password[25] = "likyaxrínña*5743";
+
+    Admin.CI[26] = 817429650;
+    Admin.Usuario[26] = "Wayshell Escolasita Godoy Ayala";
+    Admin.Cargo[26] = "Docente";
+    Admin.Gmail[26] = "wayesdoyala9650@outlook.com";
+    Admin.Password[26] = "wayesdoyala*9650";
+
+    Admin.CI[27] = 373954086;
+    Admin.Usuario[27] = "Jhomledil Quioma Orellana Soto";
+    Admin.Cargo[27] = "Docente";
+    Admin.Gmail[27] = "jhomquionaato4086@yahoo.com";
+    Admin.Password[27] = "jhomquionaato*4086";
+
+    Admin.CI[28] = 739021548;
+    Admin.Usuario[28] = "Keyrling Aculeya Cárdenas Valdés";
+    Admin.Cargo[28] = "Docente";
+    Admin.Gmail[28] = "keyraconasdés1548@gmail.com";
+    Admin.Password[28] = "keyraconasdés*1548";
+
+    Admin.CI[29] = 904518637;
+    Admin.Usuario[29] = "Verecunda Rumiando Gallardo Vidal";
+    Admin.Cargo[29] = "Docente";
+    Admin.Gmail[29] = "veruradall8637@outlook.com";
+    Admin.Password[29] = "veruradall*8637";
+
+    Admin.CI[30] = 660193274;
+    Admin.Usuario[30] = "Mayllerlyn Wilquenderlysmar Campos Saavedra";
+    Admin.Cargo[30] = "Docente";
+    Admin.Gmail[30] = "maywilposdra3274@yahoo.com ";
+    Admin.Password[30] = "maywilposdra*3274";
+
+    Admin.CI[31] = 436750912;
+    Admin.Usuario[31] = "Juyá Kasanáy Rojas Muñoz";
+    Admin.Cargo[31] = "Asistente Administrativo";
+    Admin.Gmail[31] = "jukajasañoz0912@gmail.com";
+    Admin.Password[31] = "jukajasañoz*0912";
+
+    Admin.CI[32] = 102835496;
+    Admin.Usuario[32] = "Sumaiwa Chiliwara Vera Donoso";
+    Admin.Cargo[32] = "Docente";
+    Admin.Gmail[32] = "suchiraso5496@outlook.com";
+    Admin.Password[32] = "suchiraso*5496";
+
+    Admin.CI[33] = 558907321;
+    Admin.Usuario[33] = "Weldys Margelerus Baeza Leiva";
+    Admin.Cargo[33] = "Docente";
+    Admin.Gmail[33] = "welmarzava7321@yahoo.com";
+    Admin.Password[33] = "welmarzava*7321";
+
+    Admin.CI[34] = 224076189;
+    Admin.Usuario[34] = "Kasandra Meyderines Cornejo Moya";
+    Admin.Cargo[34] = "Docente";
+    Admin.Gmail[34] = "kameycornoya6189@gmail.com";
+    Admin.Password[34] = "kameycornoya*6189";
+
+    Admin.CI[35] = 228161051;
+    Admin.Usuario[35] = "Diego Julio Duarte Cetrangolo";
+    Admin.Cargo[35] = "Rector General";
+    Admin.Gmail[35] = "diejuduace1051@gmail.com";
+    Admin.Password[35] = "diejuduace*1051";
+Fin_Procedimiento

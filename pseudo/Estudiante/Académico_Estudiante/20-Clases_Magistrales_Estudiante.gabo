@@ -1,0 +1,43 @@
+Procedimiento Clases_Magistrales_Estudiante(E/S: Mag[I].Autorizacion: Booleano, Mag[I].Nombre_Profesor, Mag[I].Nombre_Materia, Mag[I].Dia, Mag[I].Hora_Inicio, Mag[I].Hora_Fin, Mag[I].Aula, Lista_M[M].Nombre: Cadena, Lista_M[M].Cedula, Mag[I].Cant_Estudiantes, M: Entero);
+Inicio
+    Var R, R2: Booleano;
+    Var I: Entero;
+    Repetir
+        Mostrar << "¡Bienvenido al apartado de las Clases Magistrales!";
+        Mostrar << "Aquí tiene las clases magistrales disponibles:";
+        Para (I = 1 Hasta I = 500) Hacer;
+            Si (Mag[I].Autorizacion = 1) Entonces;
+                Si (Mag[I].Cant_Estudiantes >= 100) Entonces;
+                    Mostrar << "Se acabaron los cupos para esta clase magistral";
+                Sino
+                    Mostrar << Mag[I].Nombre_Profesor;
+                    Mostrar << Mag[I].Nombre_Materia;
+                    Mostrar << Mag[I].Dia;
+                    Mostrar << Mag[I].Hora_Inicio;
+                    Mostrar << Mag[I].Hora_Fin;
+                    Mostrar << Mag[I].Aula;
+                    Mostrar << Mag[I].Precio;
+                    Mostrar << "¿Desea inscribirse en esta clase magistral? 1: Sí, 0: No";
+                    Leer >> R;
+                    Si (R = 1) Entonces;
+                        Mostrar << "Perfecto, entonces proceda a su metodo de pago";
+                        Mostrar << metodo_pago;
+                        Si (validacion_pago = 1) Entonces;
+                            Lista_M[M].Nombre = Datos[pos_usuario].Nombre;
+                            Lista_M[M].Cedula = Datos[pos_usuario].CI;
+                            M = M + 1;
+                            Mag[I].Cant_Estudiantes = Mag[I].Cant_Estudiantes + 1;
+                        Sino
+                            Mostrar << "No se ha efectuado el pago";
+                        Fin_Si
+                    Sino
+                        Mostrar << "Siguiente.";
+                    Fin_Si
+                Fin_Si
+            Fin_Si
+        Fin_Para
+        Mostrar << "¿Desea volver al menú principal? 1: Sí, 0: No";
+        Leer >> R2;
+        Hasta(R2 = 1);
+    Fin_Repetir
+Fin_Procedimiento

@@ -1,27 +1,3 @@
-Registro: Eventos;          //Llave: Even; Ruta: Even.Campo;
-    ID: Entero;     
-    Nombre: Cadena;                               
-    Fecha: Cadena;
-    Descripcion: Cadena;
-Fin_Registro
-
-Registro: Clubes;           //Llave: Club; Ruta: Club.Campo;
-    Nombre: Cadena;
-    Descripcion: Cadena;
-    Capacidad_Maxima: Entero;
-    Miembros_Inscritos: Entero;
-    Horarios_Disponibles: Cadena;
-    Activo: Booleano;
-Fin_Registro
-
-Registro: Celebraciones;    //Llave: Cel; Ruta: Cel.Campo;
-    Nombre: Cadena; 
-    Fecha: Cadena;
-    Tipo: Cadena;
-    Descripcion: Cadena;
-Fin_Registro
-
-
 Procedimiento Extracurricular_Estudiante(E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion, Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
 Inicio
     Var opc: Entero;

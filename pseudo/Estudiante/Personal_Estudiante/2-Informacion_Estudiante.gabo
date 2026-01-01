@@ -1,0 +1,12 @@
+Procedimiento Informacion_Estudiante(E: Datos[pos_usuario].Avatar, Datos[pos_usuario].Nombre, Datos[pos_usuario].Gmail, Datos[pos_usuario].Carrera:Cadena, Datos[pos_usuario].CI, Datos[pos_usuario].Semestre, Datos[pos_usuario].Year, Datos[pos_usuario].Tarjeta: Entero);
+Inicio
+    Mostrar << "Información Personal";
+    Mostrar << "Aquí se muestran todos tus datos registrados en el sistema";
+    Mostrar << "Avatar:...", Datos[pos_usuario].Avatar;
+    Mostrar << "Nombre:...", Datos[pos_usuario].Nombre;
+    Mostrar << "Cédula de Identidad:... ". Datos[pos_usuario].CI;
+    Mostrar << "Correo Electrónico:...", Datos[pos_usuario].Gmail;
+    Mostrar << "Carrera:...", Datos[pos_usuario].Carrera;
+    Mostrar << "Semestre:...", Datos[pos_usuario].Semestre;
+    Mostrar << "Año de Curso:...", Datos[pos_usuario].Year;
+Fin_Procedimiento

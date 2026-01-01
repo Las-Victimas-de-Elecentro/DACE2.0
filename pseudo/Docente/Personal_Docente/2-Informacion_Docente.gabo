@@ -1,0 +1,9 @@
+Procedimiento Informacion_Docente(E/S: Prof[pos].Avatar, Prof[pos].Nombre, Prof[pos].Gmail:Cadena, Prof[pos].CI: Entero);
+Inicio
+    Mostrar << "Información Personal";
+    Mostrar << "Aquí se muestran todos tus Datos registrados en el sistema";
+    Mostrar << "Avatar:...", Prof[pos].Avatar;
+    Mostrar << "Nombre:...", Prof[pos].Nombre;
+    Mostrar << "Cédula de Identidad:... ". Prof[pos].CI;
+    Mostrar << "Correo Electrónico:...", Prof[pos].Gmail;
+Fin_Procedimiento
