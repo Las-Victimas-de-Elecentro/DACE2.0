@@ -27,12 +27,12 @@ int Year_User ()
 
         if (Espacio_Year == false)
         {
-            cout << "Los Años no llevan espacios" << endl;
+            cout << RED << "Los Años no llevan espacios" << RESET << endl;
             Y_Valido = false;
         }
         else if (Letra_Year == false)
         {
-            cout << "Los Años no llevan numeros o simbolos" << endl;
+            cout << RED << "Los Años no llevan numeros o simbolos" << RESET << endl;
             Y_Valido = false;
         }
 
@@ -42,7 +42,7 @@ int Year_User ()
             
             if (Year < 1900 || Year > 2026)
             {
-                cout << "Año invalido" << endl;
+                cout << RED << "Año invalido" << RESET << endl;
                 Y_Valido = false;
             }
         }

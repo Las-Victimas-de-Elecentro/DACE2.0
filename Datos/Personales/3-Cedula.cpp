@@ -28,17 +28,17 @@ long Cedula_User ()
 
         if (Cedula_S.length() < 7 || Cedula_S.length() > 8)
         {
-            cout << "Cedula invalida" << endl;
+            cout << RED << "Cedula invalida" << RESET << endl;
             CI_Valido = false;
         }
         else if (Espacio_Cedula == false)
         {
-            cout << "Las Cedulas no pueden llevar espacios" << endl;
+            cout << RED << "Las Cedulas no pueden llevar espacios" << RESET << endl;
             CI_Valido = false;
         }
         else if (Letra_Cedula == false)
         {
-            cout << "Las Cedulas no pueden llevar letras" << endl;
+            cout << RED << "Las Cedulas no pueden llevar letras" << RESET << endl;
             CI_Valido = false;
         }
         
@@ -48,7 +48,7 @@ long Cedula_User ()
 
             if (Cedula < 10000000)
             {
-                cout << "Cedula invalida" << endl;
+                cout << RED << "Cedula invalida" << RESET << endl;
                 CI_Valido = false;
             }
         }

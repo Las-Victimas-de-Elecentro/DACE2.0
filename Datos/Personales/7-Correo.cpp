@@ -33,28 +33,28 @@ string Correo_User ()
 
         if (Correo.length() < 3)
         {
-            cout << "El Correo es muy corto" << endl;
+            cout << RED << "El Correo es muy corto" << RESET << endl;
             C_Valido = false;
         }
         else if (Espacio_Correo == false)
         {
-            cout << "El Correo no puede llevar espacios" << endl;
+            cout << RED << "El Correo no puede llevar espacios" << RESET << endl;
             C_Valido = false;
         }
         else if (Cont != 1)
         {
-            cout << "El Correo solo puede llevar un @" << endl;
+            cout << RED << "El Correo solo puede llevar un @" << RESET << endl;
             C_Valido = false;
         }
         else if (Correo[0] == '@' || Correo[Correo.length() - 1] == '@')
         {
-            cout << "El Correo no puede llevar un @ al inicio o final del Correo" << endl;
+            cout << RED << "El Correo no puede llevar un @ al inicio o final del Correo" << RESET << endl;
             C_Valido = false;
 
         }
         else if (Punto == false)
         {
-            cout << "El Correo debe contener un punto despues del @" << endl;
+            cout << RED << "El Correo debe contener un punto despues del @" << RESET << endl;
             C_Valido = false;
         }
 

@@ -1,7 +1,7 @@
 #include "../Main/Header.h"
 using namespace std;
 
-void Registro (Usuario (&User)[500])
+void Registro (Usuario (&User)[500], int &N)
 {
     string Nombre, Apellido, Correo, Password;
     long Cedula;
@@ -10,38 +10,45 @@ void Registro (Usuario (&User)[500])
     
     Limpiar();
 
+    Dibujo = "Register"; Art();
     cout << "Ingrese su Nombre: ";
     Nombre = Nombre_User();
     Limpiar();
 
+    Dibujo = "Register"; Art();
     cout << "Ingrese su Apellido: ";
     Apellido = Apellido_User();
     Limpiar();
 
+    Dibujo = "Register"; Art();
     cout << "Ingrese su Cedula: ";
     Cedula = Cedula_User();
     Limpiar();
 
+    Dibujo = "Register"; Art();
     cout << "Ingrese su fecha de nacimiento" << endl;
     cout << "Ingrese Dia: ";
     Dia = Dia_User();
     Limpiar();
 
+    Dibujo = "Register"; Art();
     cout << "Ingrese Mes: ";
     Mes = Mes_User();
     Limpiar();
 
+    Dibujo = "Register"; Art();
     cout << "Ingrese Año: ";
     Year = Year_User();
     Limpiar();
 
+    Dibujo = "Register"; Art();
     cout << "Ingrese su Correo: ";
     Correo = Correo_User();
     Limpiar();
 
+    Dibujo = "Register"; Art();
     cout << "Ingrese su Contraseña: ";
     Password = Password_User();
-    Limpiar();
 
     // Registros
 
@@ -49,19 +56,19 @@ void Registro (Usuario (&User)[500])
     {
         if (User[I].Nombre == "")
         {
-            P = I;
+            N = I;
             break;
         }
     }
 
-    User[P].Nombre = Nombre;
-    User[P].Apellido = Apellido;
-    User[P].Cedula = Cedula;
-    User[P].Fecha.Dia = Dia;
-    User[P].Fecha.Mes = Mes;
-    User[P].Fecha.Year = Year;
-    User[P].Correo = Correo;
-    User[P].Password = Password;
+    User[N].Nombre = Nombre;
+    User[N].Apellido = Apellido;
+    User[N].Cedula = Cedula;
+    User[N].Fecha.Dia = Dia;
+    User[N].Fecha.Mes = Mes;
+    User[N].Fecha.Year = Year;
+    User[N].Correo = Correo;
+    User[N].Password = Password;
 
-    cout << "Registro Completado" << endl;
+    cout << GREEN << "Registro Completado" << RESET << endl;
 }

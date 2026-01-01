@@ -27,17 +27,17 @@ string Apellido_User ()
 
         if (Apellido.length() < 3)
         {
-            cout << "Apellido invalido" << endl;
+            cout << RED << "Apellido invalido" << RESET << endl;
             A_Valido = false;
         }
         else if (Espacio_Apellido == false)
         {
-            cout << "Los Apellidos no pueden tener espacios" << endl;
+            cout << RED << "Los Apellidos no pueden tener espacios" << RESET << endl;
             A_Valido = false;
         }
         else if (Letra_Apellido == false)
         {
-            cout << "Los Apellidos no pueden tener numeros o simbolos" << endl;
+            cout << RED << "Los Apellidos no pueden tener numeros o simbolos" << RESET << endl;
             A_Valido = false;
         }
 

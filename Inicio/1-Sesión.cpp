@@ -1,14 +1,14 @@
 #include "../Main/Header.h"
 using namespace std;
 
-void Sesion (Usuario (&User)[500], int &N, int Opc_F, string Rol, bool &Oscuro)
+void Sesion (Usuario (&User)[500], int &N, int Opc_F, string Rol)
 {
     string Correo, Password;
     int I;
     bool User_Valido;
 
     Limpiar();
-
+    Dibujo = "Login"; Art();
     cout << "Ingrese su Correo: ";
     cin >> Correo;
     cout << "Ingrese su Contraseña: ";
@@ -25,7 +25,9 @@ void Sesion (Usuario (&User)[500], int &N, int Opc_F, string Rol, bool &Oscuro)
 
         if (User_Valido == false)
         {
-            cout << "Correo o Contraseña incorrecta" << endl;
+            Limpiar();
+            Dibujo = "Login"; Art();
+            cout << RED << "Correo o Contraseña incorrecta" << RESET << endl;
             cout << "Ingrese su Correo nuevamente: ";
             cin >> Correo;
             cout << "Ingrese su Contraseña nuevamente: ";
@@ -33,10 +35,10 @@ void Sesion (Usuario (&User)[500], int &N, int Opc_F, string Rol, bool &Oscuro)
         }
         else
         {
-            cout << "Inicio de Sesión exitoso" << endl;
+            cout << GREEN << "Inicio de Sesión exitoso" << RESET << endl;
         }
 
     } while (User_Valido == false);
 
-    Menu_Est_Personal(User, N, Opc_F, Rol, Oscuro);
+    Menu_Est_Personal(User, N, Opc_F, Rol);
 }

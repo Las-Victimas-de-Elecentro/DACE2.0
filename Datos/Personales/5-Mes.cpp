@@ -27,12 +27,12 @@ int Mes_User ()
 
         if (Espacio_Mes == false)
         {
-            cout << "Los meses no llevan espacios" << endl;
+            cout << RED << "Los meses no llevan espacios" << RESET << endl;
             M_Valido = false;
         }
         else if (Letra_Mes == false)
         {
-            cout << "Los meses no llevan numeros o simbolos" << endl;
+            cout << RED << "Los meses no llevan numeros o simbolos" << RESET << endl;
             M_Valido = false;
         }
 
@@ -42,7 +42,7 @@ int Mes_User ()
             
             if (Mes < 1 || Mes > 12)
             {
-                cout << "Mes invalido" << endl;
+                cout << RED << "Mes invalido" << RESET << endl;
                 M_Valido = false;
             }
         }

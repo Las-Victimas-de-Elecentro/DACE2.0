@@ -27,17 +27,17 @@ string Nombre_User ()
 
         if (Nombre.length() < 3)
         {
-            cout << "Nombre invalido" << endl;
+            cout << RED << "Nombre invalido" << RESET << endl;
             N_Valido = false;
         }
         else if (Espacio_Nombre == false)
         {
-            cout << "Los Nombres no pueden llevar espacios" << endl;
+            cout << RED << "Los Nombres no pueden llevar espacios" << RESET << endl;
             N_Valido = false;
         }
         else if (Letra_Nombre == false)
         {
-            cout << "Los Nombres no pueden llevar numeros o simbolos" << endl;
+            cout << RED << "Los Nombres no pueden llevar numeros o simbolos" << RESET << endl;
             N_Valido = false;
         }
 

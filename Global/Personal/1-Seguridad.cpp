@@ -7,13 +7,12 @@ void Seguridad_Global_Personal (Usuario (&User)[500], int &N, int Opc_F, string 
     bool Opc2, R;
     string Password, Correo;
 
-    Opc_F = 2;
-
-    Limpiar();
-
-    cout << "Gestión de seguridad" << endl;
-    cout << "Aquí puedes cambiar tu contraseña o actualizar tu correo de contacto" << endl;
     do {
+        Opc_F = 2;
+        Limpiar();
+        Dibujo = "Security"; Art();
+        cout << "Gestión de seguridad" << endl;
+        cout << "Aquí puedes cambiar tu contraseña o actualizar tu correo de contacto" << endl;
         cout << "Seleccione una opción de seguridad" << endl;
         cout << "1: Cambiar Contraseña" << endl;
         cout << "2: Actualizar Correo" << endl;
@@ -41,10 +40,10 @@ void Seguridad_Global_Personal (Usuario (&User)[500], int &N, int Opc_F, string 
             switch (Opc)
             {
                 case 1:
-                    cout << "Contraseña actualizada con éxito" << endl;
+                    cout << GREEN << "Contraseña actualizada con éxito" << RESET << endl;
                     break;
                 default:
-                    cout << "Correo actualizado con éxito" << endl;
+                    cout << GREEN << "Correo actualizado con éxito" << RESET << endl;
                     break;
             }
             
@@ -63,7 +62,7 @@ void Seguridad_Global_Personal (Usuario (&User)[500], int &N, int Opc_F, string 
         }
         else
         {
-            cout << "Cambios de seguridad cancelados" << endl;
+            cout << RED << "Cambios de seguridad cancelados" << RESET << endl;
         }
 
         cout << "¿Desea cambiar otro dato de seguridad? Ingrese 1:Sí, 0:No : ";

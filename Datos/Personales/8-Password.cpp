@@ -41,32 +41,32 @@ string Password_User ()
 
         if (Password.length() < 8)
         {
-            cout << "La Contraseña debe de tener minimo 8 caracteres" << endl;
+            cout << RED << "La Contraseña debe de tener minimo 8 caracteres" << RESET << endl;
             P_Valido = false;
         }
         else if (Espacio_Password == false)
         {
-            cout << "La Contraseña no puede tener espacios" << endl;
+            cout << RED << "La Contraseña no puede tener espacios" << RESET << endl;
             P_Valido = false;
         }
         else if (Mayuscula == false)
         {
-            cout << "La Contraseña debe de tener letras Mayusculas" << endl;
+            cout << RED << "La Contraseña debe de tener letras Mayusculas" << RESET << endl;
             P_Valido = false;
         }
         else if (Minuscula == false)
         {
-            cout << "La Contraseña debe de tener letras Minusculas" << endl;
+            cout << RED << "La Contraseña debe de tener letras Minusculas" << RESET << endl;
             P_Valido = false;
         }
         else if (Numero == false)
         {
-            cout << "La Contraseña debe de tener Numeros" << endl;
+            cout << RED << "La Contraseña debe de tener Numeros" << RESET << endl;
             P_Valido = false;
         }
         else if (Simbolo == false)
         {
-            cout << "La Contraseña debe de tener Simbolos" << endl;
+            cout << RED << "La Contraseña debe de tener Simbolos" << RESET << endl;
             P_Valido = false;
         }
 

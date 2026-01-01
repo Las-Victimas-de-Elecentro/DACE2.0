@@ -7,7 +7,7 @@ int Opc_Menu (int Opc_F)
     string Opc_S;
     bool Opc_Valido;
 
-    getline(cin >> ws, Opc_S);
+    cin >> Opc_S;
     do {
         Opc_Valido = true;
 
@@ -31,9 +31,9 @@ int Opc_Menu (int Opc_F)
 
         if (Opc_Valido == false)
         {
-            cout << "Opción invalida" << endl;
+            cout << RED << "Opción invalida" << RESET << endl;
             cout << "Ingrese nuevamente: ";
-            getline(cin >> ws, Opc_S);
+            cin >> Opc_S;
         }
 
     } while (Opc_Valido == false);

@@ -27,12 +27,12 @@ int Dia_User ()
 
         if (Espacio_Dia == false)
         {
-            cout << "Los días no llevan espacios" << endl;
+            cout << RED << "Los días no llevan espacios" << RESET << endl;
             D_Valido = false;
         }
         else if (Letra_Dia == false)
         {
-            cout << "Los días no llevan numeros o simbolos" << endl;
+            cout << RED << "Los días no llevan numeros o simbolos" << RESET << endl;
             D_Valido = false;
         }
 
@@ -42,7 +42,7 @@ int Dia_User ()
             
             if (Dia < 1 || Dia > 31)
             {
-                cout << "Dia invalido" << endl;
+                cout << RED << "Dia invalido" << RESET << endl;
                 D_Valido = false;
             }
         }

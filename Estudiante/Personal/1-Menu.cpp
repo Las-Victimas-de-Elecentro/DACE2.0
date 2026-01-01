@@ -1,7 +1,7 @@
 #include "../../Main/Header.h"
 using namespace std;
 
-void Menu_Est_Personal (Usuario (&User)[500], int &N, int Opc_F, string Rol, bool &Oscuro)
+void Menu_Est_Personal (Usuario (&User)[500], int &N, int Opc_F, string Rol)
 {
     int I, Opc;
     string Opc_S;
@@ -10,9 +10,12 @@ void Menu_Est_Personal (Usuario (&User)[500], int &N, int Opc_F, string Rol, boo
     //Validación de opciones
     Opc_F = 7;
 
+    Limpiar();
+    
     do {
         Limpiar();
-        
+
+        Avatares(User, N);
         cout << "Bienvenido a tu perfil personal de estudiante" << endl;
         cout << "Aqui puedes gestionar tu informacion, seguridad y preferencias" << endl;
         cout << "1: Información personal" << endl;
@@ -34,7 +37,17 @@ void Menu_Est_Personal (Usuario (&User)[500], int &N, int Opc_F, string Rol, boo
                 Seguridad_Global_Personal (User, N, Opc_F, Rol);
                 break;
             case 4:
-                Oscuro_Global_Personal (Oscuro);
+                Oscuro_Global_Personal ();
+                break;
+            case 5:
+                Avatar_Global_Personal (User, N, Opc_F);
+                break;
+            case 6:
+                Salud_Global_Personal(User, N, Opc_F);
+                break;
+            default:
+                cout << "Cerrando Sesión";
+                break;
         }
 
     } while (Opc != 7);

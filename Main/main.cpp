@@ -1,6 +1,11 @@
 #include "Header.h"
 #include <windows.h>
 using namespace std;
+
+//Var Global
+string Dibujo;
+bool Oscuro;
+
 int main()
 {
     //Caracteres Especiales
@@ -8,22 +13,26 @@ int main()
     SetConsoleCP(65001);
 
     string Rol;
-    bool Oscuro = 0;
+    bool Oscuro;
     int N, Opc_F;
     Usuario User[500];
     Nacimiento Fecha[500];
 
+    User[0].Avatar = "Default";
     User[0].Nombre = "Carlos";
     User[0].Apellido = "Anton";
     User[0].Cedula = 32922274;
     User[0].Fecha.Dia = 29;
     User[0].Fecha.Mes = 3;
     User[0].Fecha.Year = 2007;
-    User[0].Correo = "xyz.antcar@gmail.com";
-    User[0].Password = "ANT.car.123:";
+    User[0].Correo = "1";
+    User[0].Password = "1";
 
     int Opc;
     do {
+        Limpiar();
+        Dibujo = "Dace"; Art();
+        cout << endl;
         cout << "Bienvenido a Dace" << endl;
         cout << "Ingrese una opción" << endl;
         cout << "1: Iniciar Sesión" << endl;
@@ -40,9 +49,9 @@ int main()
         switch (Opc)
         {
             case 1:
-                Sesion (User, N, Opc_F, Rol, Oscuro);
+                Sesion (User, N, Opc_F, Rol);
             case 2:
-                Registro (User);
+                Registro (User, N);
                 break;
             default:
                 cout << "Saliendo de Dace" << endl;

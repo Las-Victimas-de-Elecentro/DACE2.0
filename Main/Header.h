@@ -4,6 +4,15 @@
 // Librerias
 #include <iostream>
 #include <string>
+
+//Var Global
+extern std::string Dibujo;
+extern bool Oscuro;
+
+//Registros
+#include "../Estudiante/Registro Estudiante.h"
+
+//Funciones
 #include "../Funciones/Funciones.h"
 
 // Datos
@@ -11,13 +20,11 @@
 #include "../Datos/Personales/Personales.h"
 
 // Estudiante
-#include "../Estudiante/Registro Estudiante.h"
 #include "../Estudiante/Personal/Personal.h"
-
-// Global
-#include "../Global/Personal/Global.h"
 
 // Inicio
 #include "../Inicio/Inicio.h"
 
+// Global
+#include "../Global/Personal/Global.h"
 #endif
