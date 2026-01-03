@@ -1,6 +1,7 @@
 Procedimiento Informacion_Personal_Admin(E/S: Admin[pos_admin].Usuario: Cadena, Admin[pos_admin].CI: Entero, Admin[pos_admin].Gmail, Admin[pos_admin].Cargo: Cadena);
 Inicio
     Mostrar << "A continuación sus datos personales";
+    Mostrar << "Avatar: ", Admin[pos_admin].Avatar;
     Mostrar << "Usuario: ", Admin[pos_admin].Usuario;
     Mostrar << "Cédula de Identidad: ", Admin[pos_admin].CI;
     Mostrar << "Correo Electrónico: ", Admin[pos_admin].Gmail;

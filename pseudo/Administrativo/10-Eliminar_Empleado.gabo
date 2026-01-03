@@ -1,32 +1,62 @@
-Procedimiento Eliminar_Empleado (E/S: Lim, Admin[I].CI: Entero, Admin[I].Usuario, Admin[I].Cargo, Admin[I].Gmail, Admin[I].Password: Cadena);
+Procedimiento Eliminar_Empleado (E/S: Lim, prof, Admin[I].CI, Prof[I].CI: Entero, Admin[I].Usuario, Admin[I].Cargo, Admin[I].Gmail, Admin[I].Password, Prof[I].Nombre, Prof[I].Gmail, Prof[I].Password: Cadena);
 Inicio
-	Var R: Booleano;
+	Var R, R2: Booleano;
 	Var Eliminar: Entero;
 	Repetir
 		Mostrar << "Bienvenido a la eliminación de información de la base de datos";
-		Mostrar << "A continuación se le mostrará la base de datos para que pueda seleccionar la posición del empleado que desea eliminar";
-		Para (I = 1 hasta I = 35) hacer;
-			Mostrar << I, Admin[I].Usuario;
-			Mostrar << Admin[I].CI;
-			Mostrar << Admin[I].Cargo;
-			Mostrar << Admin[I].Gmail;
-			Mostrar << Admin[I].Password;
-		Fin_Para
-		Mostrar << "Ingrese la posición del empleado que desea borrar de la base de datos";
-		Leer >> Eliminar;
-		Mientras (Eliminar < 1 or Eliminar > Lim) hacer;
-			Mostrar << "Posición ingresada erronea, intente nuevamente";
+		Mostrar << "¿Desea eliminar un administrativo o un profesor? 1: Administrativo, 0: Profesor";
+		Leer >> R2;
+		Mostrar << "A continuación se le mostrará la base de datos para que pueda seleccionar la posición del administrativo/profesor que desea eliminar";
+		Si (R2 = 1) Entonces;
+			Para (I = 1 Hasta I = Lim) Hacer;
+				Mostrar << I, Admin[I].Usuario;
+				Mostrar << Admin[I].CI;
+				Mostrar << Admin[I].Cargo;
+				Mostrar << Admin[I].Gmail;
+			Fin_Para
+			Mostrar << "Ingrese la posición del empleado que desea borrar de la base de datos";
 			Leer >> Eliminar;
-		Fin_Mientras
-		Para (I = 1 hasta I = Lim) hacer;
-			Si (Eliminar = I) entonces;
-				Admin[I].Usuario = " " ;
-				Admin[I].CI = null;
-				Admin[I].Cargo = " ";
-				Admin[I].Gmail = " " ;
-				Admin[I].Password = " ";
-			Fin_Si
-		Fin_Para
+			Mientras (Eliminar < 1 or Eliminar > Lim) Hacer;
+				Mostrar << "Posición ingresada erronea, intente nuevamente";
+				Leer >> Eliminar;
+			Fin_Mientras
+
+			Admin[Eliminar].Usuario = Admin[Lim - 1].Usuario;
+			Admin[Eliminar].CI = Admin[Lim - 1].CI;
+			Admin[Eliminar].Cargo = Admin[Lim - 1].Cargo;
+			Admin[Eliminar].Gmail = Admin[Lim - 1].Gmail;
+			Admin[Eliminar].Password = Admin[Lim - 1].Password;
+
+			Admin[Lim - 1].Usuario = "";
+			Admin[Lim - 1].CI = 0;
+			Admin[Lim - 1].Cargo = "";
+			Admin[Lim - 1].Gmail = "";
+			Admin[Lim - 1].Password = "";
+			Lim = Lim - 1;
+		Sino
+			Para (I = 1 Hasta I = prof) Hacer;
+				Mostrar << I, Prof[I].Nombre;
+				Mostrar << Prof[I].CI;
+				Mostrar << Prof[I].Gmail;
+			Fin_Para
+			Mostrar << "Ingrese la posición del empleado que desea borrar de la base de datos";
+			Leer >> Eliminar;
+			Mientras (Eliminar < 1 or Eliminar > prof) Hacer;
+				Mostrar << "Posición ingresada erronea, intente nuevamente";
+				Leer >> Eliminar;
+			Fin_Mientras
+
+			Prof[Eliminar].Nombre = Prof[prof - 1].Nombre;
+			Prof[Eliminar].CI = Prof[prof - 1].CI;
+			Prof[Eliminar].Gmail = Prof[prof - 1].Gmail;
+			Prof[Eliminar].Password = Prof[prof - 1].Password;
+
+			Prof[prof - 1].Usuario = "";
+			Prof[prof - 1].CI = 0;
+			Prof[prof - 1].Gmail = "";
+			Prof[prof - 1].Password = "";
+			prof = prof - 1;
+		Fin_Si
 		Mostrar << "¿Desea eliminar algún otro empleado?, 1: Sí, 0: No";
 		Leer >> R;
 		Hasta (R = 0);

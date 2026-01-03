@@ -1,0 +1,34 @@
+Procedimiento Relleno_Clubes(E/S: Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero, Club[I].Nombre, Club[I].Horarios_Disponibles: Cadena, Club[I].Activo: Booleano);
+Inicio
+    Var I: Entero;
+    Para (I = 1 Hasta I = 500) Hacer;
+        Club[I].Miembros_Inscritos = 0;
+        Club[I].Capacidad_Maxima = 0;
+        Club[I].Horarios_Disponibles = " ";
+        Club[I].Nombre = " ";
+    Fin_Para
+    Club[1].Nombre = "Fútbol";
+    Club[1].Horarios_Disponibles = "Lunes: 9:00am-10:30am, Miércoles: 8:00am-9:30am";
+    Club[1].Capacidad_Maxima = 88;
+    Club[1].Activo = 1;
+
+    Club[2].Nombre = "Basquét";
+    Club[2].Horarios_Disponibles = "Martes: 10:00am-11:30am, Jueves: 7:30am-9:00am";
+    Club[2].Capacidad_Maxima = 50;
+    Club[2].Activo = 1;
+
+    Club[3].Nombre = "Voleibol";
+    Club[3].Horarios_Disponibles = "Miércoles: 12:00pm-1:30pm, Viernes: 10:00am-11:30am";
+    Club[3].Capacidad_Maxima = 60;
+    Club[3].Activo = 1;
+
+    Club[4].Nombre = "Béisbol";
+    Club[4].Horarios_Disponibles = "Lunes: 10:30am-12:00pm, Jueves: 9:00am-10:30am";
+    Club[4].Capacidad_Maxima = 70;
+    Club[4].Activo = 1;
+
+    Club[5].Nombre = "Arte";
+    Club[5].Horarios_Disponibles = "Martes: 8:30am-10:00am, Viernes: 8:30am-10:00am";
+    Club[5].Capacidad_Maxima = 50;
+    Club[5].Activo = 1;
+Fin_Procedimiento

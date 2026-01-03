@@ -1,12 +1,16 @@
-Procedimiento Generar_Tarjeta_Coordenadas(E/S: I, J, Minimo, Maximo, Tarjeta[I, J]: Entero);
+Procedimiento Generar_Tarjeta_Coordenadas(E/S: ID, Tarjeta[I].ID, Minimo, Maximo, Tarjeta[J].Fila, Tarjeta[J].Columna: Entero);
 Inicio
-	Var coordenada: Entero;
+	Var I, J coordenada_fila, coordenada_columna: Entero;
 	Minimo = 1;
 	Maximo = 99;
-	Para (I = 1 Hasta I = 5) Hacer;
-		Para (J = 1 Hasta J =10) Hacer;
-			coordenada = Aleatorio(1, 99);
-			Tarjeta[I,J] = coordenada;
-        Fin_Para
+	Para (I = 1 Hasta I = 25000) Hacer;
+		Si (ID = Tarjeta[I].ID) Entonces;
+			Para (J = I Hasta J = I+5) Hacer;
+				coordenada_fila = Aleatorio(Minimo, Maximo);
+				Tarjeta[J].Fila = coordenada_fila;
+				coordenada_columna = Aleatorio(Minimo, Maximo);
+				Tarjeta[J].Columna = coordenada_columna;
+			Fin_Para
+		Fin_Si
 	Fin_Para
 Fin_Procedimiento

@@ -8,7 +8,7 @@ Inicio
                     Si (Lista[F].ID_Lista = Clase[K].ID_Clase) Entonces;
                         Si (Prof[pos].Cedula = Clase[K].CI_Profesor) Entonces;
                             Para (L = F Hasta L = F+49) Hacer;
-                                Mostrar << Clase[K].Seccion;
+                                Mostrar << Clase[L].Seccion;
                                 Mostrar << Datos[L].Nombre;
                                 Mostrar << Datos[L].CI;
                                 Mostrar << "¿Cuánta nota desea ponerle a este estudiante?";

@@ -1,14 +1,13 @@
-Procedimiento Validar_Coordenada(E/S: I, J: Entero, Acceso: Booleano);
+Procedimiento Validar_Coordenada(E/S: Tarjeta[I].Fila, Tarjeta[I].Columna: Entero, Acceso: Booleano);
 Inicio
 	Var Coordenada, Fila, Columna: Entero;
 	Minimo = 1;
 	Maximo = 5;
 	Fila = Aleatorio(Minimo, Maximo);
-	Maximo = 10;
 	Columna = Aleatorio(Minimo, Maximo);
-    Mostrar << "Introduzca la coordenada ubicada en la fila: ", Fila, " y columna: ", Columna, " de su tarjeta de coordenadas.";
+    Mostrar << "Introduzca la coordenada ubicada en la fila: ", Fila, " y en la columna: ", Columna, " de su tarjeta de coordenadas.";
 	Leer >> Coordenada;
-	Si (Coordenada = Tarjeta[Fila, Columna]) Entonces;
+	Si (Coordenada = Tarjeta[Fila].Fila or Coordenada = Tarjeta[Columna].Columna) Entonces;
 		Mostrar << "Coordenada válida, acceso permitido";
 		Acceso = 1;
 	Sino

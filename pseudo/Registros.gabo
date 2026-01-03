@@ -26,6 +26,7 @@ Registro: Docente;      //Docente: Prof;
     Cant_Materias: Entero;
     Cant_Clases: Entero;
     Club: Cadena;
+    Esta_en_Club: Booleano;
 Fin_Registro
 
 Registro: Estudiantes;      //Estudiantes: Datos;
