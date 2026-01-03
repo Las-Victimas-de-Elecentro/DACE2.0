@@ -1,0 +1,89 @@
+Procedimiento Agregar_Celebraciones(E/S: cel: Entero, Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion: Cadena);
+Inicio
+    Var I, ID, opc: Entero;
+    Var R: Booleano;
+    Mostrar << "¡Bienvenido al apartado de Celebraciones!";
+    Repetir
+        Mostrar << "¿Qué desea hacer?";
+        Mostrar << "1: Ver las Celebraciones";
+        Mostrar << "2: Añadir Celebraciones nuevas";
+        Mostrar << "3: Modificar alguna celebración";
+        Mostrar << "4: Eliminar alguna celebración";
+        Leer >> opc;
+        Mientras (opc < 1 or opc > 4) Hacer;
+            Mostrar << "Es invalido, no está en el rango entre 1-4";
+            Leer >> opc;
+        Fin_Mientras
+        En_Caso (opc > 0) Sea;
+            Caso(opc = 1);
+                Para (I = 1 Hasta I = cel) Hacer;
+                    Mostrar << Cel[I].Nombre;
+                    Mostrar << Cel[I].Fecha;
+                    Mostrar << Cel[I].Tipo;
+                    Mostrar << Cel[I].Descripcion;
+                Fin_Para
+            Caso(opc = 2);
+                Mostrar << "Ingrese el nombre de la nueva celebración";
+                Leer >> Cel[cel].Nombre;
+                Mostrar << "Ingrese la fecha en que se realizará la celebración (DD/MM/YYYY)";
+                Leer >> Cel[cel].Fecha;
+                Mostrar << "Ingrese el tipo de celebración que será";
+                Leer >> Cel[cel].Tipo;
+                Mostrar << "Ingrese la descripción de la celebración";
+                Leer >> Cel[cel].Descripcion;
+                Mostrar << "Celebración agregada correctamente";
+                cel = cel + 1;
+            Caso(opc = 3);
+                Para (I = 1 Hasta I = cel) Hacer;
+                    Mostrar << I;
+                    Mostrar << Cel[I].Nombre;
+                    Mostrar << Cel[I].Fecha;
+                    Mostrar << Cel[I].Tipo;
+                    Mostrar << Cel[I].Descripcion;
+                Fin_Para
+                Mostrar << "Ingrese la posición de la celebración que desea modificar";
+                Leer >> ID;
+                Mientras (ID < 1 or ID > cel) Hacer;
+                    Mostrar << "Es invalido, ingrese una posición válida";
+                    Leer >> ID;
+                Fin_Mientras
+                Mostrar << "Ingrese el nombre de la celebración modificada";
+                Leer >> Cel[ID].Nombre;
+                Mostrar << "Ingrese la fecha modificada de la celebración (DD/MM/YYYY)";
+                Mostrar << Cel[ID].Fecha;
+                Mostrar << "Ingrese el tipo modificado de la celebración";
+                Leer >> Cel[ID].Tipo;
+                Mostrar << "Ingrese la descripción modificada de la celebración";
+                Leer >> Cel[ID].Descripcion;
+                Mostrar << "Celebración modificada correctamente";
+            Otro_Caso
+                Para (I = 1 Hasta I = cel) Hacer;
+                    Mostrar << Cel[I].Nombre;
+                    Mostrar << Cel[I].Fecha;
+                    Mostrar << Cel[I].Tipo;
+                    Mostrar << Cel[I].Descripcion;
+                Fin_Para
+                Mostrar << "Ingrese la posición de la celebración que desea modificar";
+                Leer >> ID;
+                Mientras (ID < 1 or ID > cel) Hacer;
+                    Mostrar << "Es invalido, ingrese una posición válida";
+                    Leer >> ID;
+                Fin_Mientras
+
+                Cel[ID].Nombre = Cel[cel - 1].Nombre;
+                Cel[ID].Fecha = Cel[cel - 1].Fecha;
+                Cel[ID].Tipo = Cel[cel - 1].Tipo;
+                Cel[ID].Descripcion = Cel[cel - 1].Descripcion;
+
+                Cel[cel - 1].Nombre = " ";
+                Cel[cel - 1].Fecha = " ";
+                Cel[cel - 1].Tipo = " ";
+                Cel[cel - 1].Descripcion = " ";
+                cel = cel - 1;
+                Mostrar << "Celebración borrada correctamente.";
+        Fin_Caso
+        Mostrar << "¿Desea volver al menú principal? 1: Sí, 0: No";
+        Leer >> R;
+        Hasta(R = 0);
+    Fin_Repetir
+Fin_Procedimiento

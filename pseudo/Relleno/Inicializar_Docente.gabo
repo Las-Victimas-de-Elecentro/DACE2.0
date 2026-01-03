@@ -1,7 +1,0 @@
-Procedimiento Inicializar_Docente(E/S: Prof[I].Cant_Materias, Prof[I].Cant_Clases: Entero);
-Inicio
-    Para (I = 1 Hasta I = 500) Hacer;
-        Prof[I].Cant_Materias = 0;    
-        Prof[I].Cant_Clases = 0;
-    Fin_Para
-Fin_Procedimiento

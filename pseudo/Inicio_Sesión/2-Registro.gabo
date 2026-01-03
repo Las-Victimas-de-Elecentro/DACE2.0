@@ -1,51 +1,48 @@
-Procedimiento Registro(E/S: Admin[I].Gmail, Datos[I].Gmail, Admin[I].Usuario, Datos[I].Usuario, Admin[I].Password, Datos[I].Password: Cadena, Admin.CI[I], Datos[I].CI, I, Lim, C, I, J, Tarjeta[I, J]: Entero);
+Procedimiento Registro(E/S: ID, v, C, Minimo, Maximo, Tarjeta[I].ID, Tarjeta[J].Fila, Tarjeta[J].Columna, Gestion[I].CI, Gestion[I].Semestre, Gestion[I].Year, Datos[v].CI, Datos[v].Semestre, Datos[v].Year: Entero, Gestion[I].Nombre, Gestion[I].Gmail, Gestion[I].Password, Gestion[I].Carrera, Gestion[C].Telefono, Datos[v].Nombre, Datos[v].Gmail, Datos[v].Password, Datos[v].Carrera, Datos[v].Telefono: Cadena, Gestion[I].Verificado: Booleano);
 Inicio
-    Var usu, gmail, password: Cadena;
-    Var CI, Des: Entero;
-
-    Repetir
-        Mostrar << "Ingrese su nombre completo para su nueva cuenta";
-        Leer >> usu;
-
-        Mostrar << "Ingrese su cedula para su nueva cuenta";
+    Var Nombre, Gmail, Password: Cadena;
+    Var CI: Entero;
+    Var R, encontrado = 0: Booleano;
+    Mostrar << "Ingrese su Nombre";
+    Leer >> Nombre;
+    Mostrar << "Ingrese su Dirección de Correo Electrónico";
+    Leer >> Gmail;
+    Mostrar << "Ingrese su Cédula de identidad";
+    Leer >> CI;
+    Mientras (CI < 1000000 or CI > 50000000) Hacer;
+        Mostrar << "Es invalido, solo positivos o que existan";
         Leer >> CI;
-
-        Mostrar << "Ingrese su gmail para su nueva cuenta";
-        Leer >> gmail;
-
-        Para (I = 1 Hasta I = 500) Hacer;
-            Si (Admin[I].Gmail = gmail) or (Datos[I].Gmail = gmail) Entonces;
-                Mostrar << "Su correo ya existe en nuestra base de datos, intente nuevamente";
-                Leer >> gmail;
-                gmailApto = 1;     
-            Fin_Si
-        Fin_Para
-        Si (gmailApto = 0) Entonces;
-            Mostrar << "¿Qué perfil desea seleccionar? 1: Docente, 2: Estudiante";
-            Leer >> Des;
-            Mientras (Des < 1 or Des > 2) Hacer;
-                Mostrar << "Error en dato, intente de nuevo";
-                Leer >> Des;
-            Fin_Mientras
-            Si (Des = 1) Entonces;
-                Admin.Usuario[Lim] = usu;
-                Admin.CI[Lim] = CI;
-                Admin.Gmail[Lim] = gmail;
-                Admin.Password[Lim] = password;
-                Lim = Lim + 1;
-            Sino
-                Datos.Usuario[C] = usu;
-                Datos.CI[C] = CI;
-                Datos.Gmail[C] = gmail;
-                Datos.Password[C] = password;
-                C = C + 1;
-            Fin_Si
-	
-            Generar_Tarjeta_Coordenadas(I, J, Tarjeta[I, J]);
-            Mostrar_Tarjeta_Coordenadas(I, J, Tarjeta[I, J]);
-            Mostrar << Mostrar_Tarjeta_Coordenadas;
+    Fin_Mientras
+    Para (I = 1 Hasta I = C) Hacer;
+        Si (CI = Gestion[I].CI) Entonces;  
+            Mostrar << "Solicitud de Inscripción encontrada";
+            Repetir
+                Mostrar << "Ingrese una contraseña para su cuenta para continuar.";
+                Leer >> Password;
+                Mostrar << "Confirme la contraseña";
+                Leer >> Password2;
+                Mostrar << "¿Está seguro que quiere que esa sea su contraseña? 1: Sí, 0: No";
+                Leer >> R;
+                Hasta(R = 1);
+            Fin_Repetir
+            Datos[v].Nombre = Gestion[I].Nombre;
+            Datos[v].CI = Gestion[I].CI;
+            Datos[v].Gmail = Gestion[I].Gmail;
+            Datos[v].Carrera = Gestion[I].Carrera;
+            Datos[v].Year = Gestion[I].Year;
+            Datos[v].Semestre = Gestion[I].Semestre;
+            Datos[v].Telefono = Gestion[I].Telefono;
+            ID = v;
+            Gestion[I].Verificado = 1;
+            v = v + 1;
+            encontrado = 1;
         Fin_Si
+    Fin_Para
+    Si (encontrado = 0) Entonces;
+        Mostrar << "No se encontró tu solicitud de inscripción en el sistema. Ve a una de las sedes para verificar que tus datos estén ingresados correctamente en la universidad o intente nuevamente ingresando bien sus datos";
+    Fin_Si
+    Generar_Tarjeta_Coordenadas(ID, Tarjeta[I].ID, Minimo, Maximo, Tarjeta[J].Fila, Tarjeta[J].Columna);
+    Mostrar_Tarjeta_Coordenadas(ID, Tarjeta[I].ID, Tarjeta[J].Fila, Tarjeta[J].Columna);
+    Mostrar << Mostrar_Tarjeta_Coordenadas;
 
-        Hasta (gmailApto = 0);
-    Fin_Repetir
 Fin_Procedimiento

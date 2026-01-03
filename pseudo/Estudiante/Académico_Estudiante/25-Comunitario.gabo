@@ -58,7 +58,7 @@ Inicio
                 Mostrar << "Tus horas fueron añadidas exitosamente";
                 Si (SerC[I].Horas_Realizadas >= 120) entonces;
                     Mostrar << "Usted a completado el servicio comunitario";
-                    Datos[pos_usuario].Servicio_comunitario = 1;
+                    Datos[pos_usuario].Servicio_Comunitario = 1;
                     SerC[I].Nombre =          " ";
                     SerC[I].Edad =              0;
                     SerC[I].Cedula =            0;

@@ -1,0 +1,11 @@
+Procedimiento Relleno_Coordenada();
+Inicio
+    Para (I = 1 Hasta I = 100) Hacer;
+        Para (J = 1 Hasta J = 5) Hacer;
+            K = (I - 1) * 5 + J;
+            Tarjeta[K].ID = I;
+            Tarjeta_A[K].ID = I;
+            Tarjeta_P[K].ID = I;
+        Fin_Para
+    Fin_Para
+Fin_Procedimiento

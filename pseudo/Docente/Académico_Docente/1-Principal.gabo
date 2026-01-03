@@ -2,8 +2,6 @@ Procedimiento Docente_Academico(E/S: Prof[pos].Materias, Materias[I].Nombre, Mat
 Inicio
     Var opc: Entero;
     Mostrar << "Bienvenido al sistema DACE - Sección Académica (Docente)";
-    Inicializar_Docente(Prof[I].Cant_Materias, Prof[I].Cant_Clases);
-    Inicializar_Bloques_Base(Base.Lista[I].Hora_Inicio, Base.Lista[I].Hora_Fin, Base.Lista[I].Dia, Base.Lista[I].Aula, Base.Lista[I].Codigo_Materia, Base.Lista[I].Estado, Base.Lista[I].ID_Bloque);
     Repetir
         Mostrar << "========================================";
         Mostrar << "Seleccione su acción, Maestro:";

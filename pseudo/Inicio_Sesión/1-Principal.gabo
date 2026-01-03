@@ -1,7 +1,7 @@
-Procedimiento Menu_Registro_Login(E/S: Opcion: Entero);
+Procedimiento Menu_Registro_Login(E/S: ID, v, C, Minimo, Maximo, Tarjeta[I].ID, Tarjeta[J].Fila, Tarjeta[J].Columna, Gestion[I].CI, Gestion[I].Semestre, Gestion[I].Year, Datos[v].CI, Datos[v].Semestre, Datos[v].Year, pos, pos_admin, pos_usuario, Admin[I].CI, Tarjeta[I].Fila, Tarjeta[I].Columna: Entero, Gestion[I].Nombre, Gestion[I].Gmail, Gestion[I].Password, Gestion[I].Carrera, Gestion[C].Telefono, Datos[v].Nombre, Datos[v].Gmail, Datos[v].Password, Datos[v].Carrera, Datos[v].Telefono, Rol, Admin[I].Gmail, Prof[I].Gmail, Admin[I].Usuario, Prof[I].Nombre, Admin[I].Password, Prof[I].Password: Cadena, Gestion[I].Verificado, Acceso: Booleano);
 Inicio
     Mostrar << "==============================================";
-    Mostrar << "       		BIENVENIDO A U-nergizate";
+    Mostrar << "       		BIENVENIDO A DACE";
     Mostrar << "==============================================";
 	Mostrar << "1. Registrarse";
     Mostrar << "2. Iniciar sesión";
@@ -13,10 +13,10 @@ Inicio
 	Fin_Mientras
 	En_Caso (Opcion > 0) Sea;
 		Caso (Opcion = 1);
-            Registro(Admin[I].Gmail, Datos[I].Gmail, Admin[I].Usuario, Datos[I].Usuario, Admin[I].Password, Datos[I].Password, Admin.CI[I], Datos[I].CI, I, Lim, C, I, J, Tarjeta[I, J]);
+            Registro(ID, v, C, Minimo, Maximo, Tarjeta[I].ID, Tarjeta[J].Fila, Tarjeta[J].Columna, Gestion[I].CI, Gestion[I].Semestre, Gestion[I].Year, Datos[v].CI, Datos[v].Semestre, Datos[v].Year, Gestion[I].Nombre, Gestion[I].Gmail, Gestion[I].Password, Gestion[I].Carrera, Gestion[C].Telefono, Datos[v].Nombre, Datos[v].Gmail, Datos[v].Password, Datos[v].Carrera, Datos[v].Telefono, Gestion[I].Verificado);
             Mostrar << Registro;
 		Otro_Caso
-            Iniciar_Sesion(Datos[I].Gmail, Admin[I].Gmail, Datos[I].Usuario, Admin[I].Usuario, Datos[I].Password, Admin[I].Password, Datos[I].CI, Admin[I].CI, I, J, Tarjeta[I, J]);
+            Iniciar_Sesion(Rol, Datos[I].Gmail, Admin[I].Gmail, Prof[I].Gmail, Datos[I].Nombre, Admin[I].Usuario, Prof[I].Nombre, Datos[I].Password, Admin[I].Password, Prof[I].Password, pos, pos_admin, pos_usuario, Datos[I].CI, Admin[I].CI, Tarjeta[I].Fila, Tarjeta[I].Columna, Acceso);
             Mostrar << Iniciar_Sesion;
 	Fin_Caso
 Fin_Procedimiento

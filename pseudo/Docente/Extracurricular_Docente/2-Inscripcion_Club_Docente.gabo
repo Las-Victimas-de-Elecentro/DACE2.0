@@ -3,7 +3,7 @@ Inicio
     Var Nombre_Club, opcion_horario: Cadena;
     Mostrar << "Ingrese el nombre del club que desee inscribirse";
     Leer >> Nombre_Club;
-    Para (I = 1 Hasta I = Club) Hacer;
+    Para (I = 1 Hasta I = club) Hacer;
         Si (Nombre_Club = Club[I].Nombre) Entonces;
             Si (Club[I].Miembros_Inscritos < Club[I].Capacidad_Maxima) Entonces;
                 Mostrar << " Horarios disponibles para:..,", Club[I].Nombre, ":";

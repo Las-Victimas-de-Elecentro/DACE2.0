@@ -1,0 +1,137 @@
+Procedimiento Relleno_Prof(E/S: Prof[I].CI, Prof[I].Edad, Prof[I].Cant_Clases, Prof[I].Cant_Materias: Entero, Prof[I].Avatar, Prof[I].Nombre, Prof[I].Gmail. Prof[I].Password, Prof[I].Materias, Prof[I].Club, Prof[I].Enfermedad: Cadena, Prof[I].Esta_en_Club: Booleano);
+Inicio
+    Var I: Entero;
+    Para (I = 1 Hasta I = 5000) Hacer;
+        Prof[I].CI = 0;
+        Prof[I].Edad = 0;
+        Prof[I].Avatar = " ";
+        Prof[I].Nombre = " ";
+        Prof[I].Gmail = " ";
+        Prof[I].Password = " ";
+        Prof[I].Materias = " ";
+        Prof[I].Cant_Materias = 0;
+        Prof[I].Cant_Clases = 0;
+        Prof[I].Club = " ";
+        Prof[I].Enfermedad " ";
+        Prof[I].Esta_en_Club = 0;
+    Fin_Para
+    Prof[1].CI = 789512345;
+    Prof[1].Nombre = "Cuatromino Guitarrizo Pérez González";
+    Prof[1].Gmail = "cuaguirezlez2345@gmail.com";
+    Prof[1].Password = "cuaguirezlez*2345";
+    Prof[1].Edad = 54;
+
+    Prof[2].CI = 641987523;
+    Prof[2].Nombre = "Potracio Georfido Rodríguez López";
+    Prof[2].Gmail = "pogeorguezpez7523@outlook.com";
+    Prof[2].Password = "pogeorguezpez*7523";
+    Prof[2].Edad = 46;
+
+    Prof[3].CI = 905348167;
+    Prof[3].Nombre = "Nicida Ivanisaurio Fernández García";
+    Prof[3].Gmail = "niidezcía8167@yahoo.com";
+    Prof[3].Password = "niidezcía*8167";
+    Prof[3].Edad = 48;
+
+    Prof[4].CI = 213764890;
+    Prof[4].Nombre = "Epimenio Eufrasio Díaz Sánchez";
+    Prof[4].Gmail = "eeudíchez4890@gmail.com";
+    Prof[4].Password = "eeudíchez*4890";
+    Prof[4].Edad = 49;
+
+    Prof[5].CI = 834590126;
+    Prof[5].Nombre = "Fericodrilo Diogracio Flores Ramírez";
+    Prof[5].Gmail = "fedioresrez0126@outlook.com";
+    Prof[5].Password = "fedioresrez*0126";
+    Prof[5].Edad = 43;
+
+    Prof[6].CI = 470251938;
+    Prof[6].Nombre = "Melpomenes Clodomiro Torres Rojas";
+    Prof[6].Gmail = "melcloresjas1938@yahoo.com";
+    Prof[6].Password = "melcloresjas*1938";
+    Prof[6].Edad = 36;
+
+    Prof[7].CI = 156829470;
+    Prof[7].Nombre = "Concha Celso Castro Morales";
+    Prof[7].Gmail = "conceltroles9470@gmail.com";
+    Prof[7].Password = "conceltroles*9470";
+    Prof[7].Edad = 32;
+
+    Prof[8].CI = 592036714;
+    Prof[8].Nombre = "Sinibaldo Kilintwon Vargas Herrera";
+    Prof[8].Gmail = "sikiigasra6714@outlook.com";
+    Prof[8].Password = "sikiigasra*6714";
+    Prof[8].Edad = 50;
+
+    Prof[9].CI = 368175042;
+    Prof[9].Nombre = "Cleiber Ritce Ruíz Jiménez";
+    Prof[9].Gmail = "cleiritíznez5042@yahoo.com";
+    Prof[9].Password = "cleiritíznez*5042";
+    Prof[9].Edad = 55;
+
+    Prof[10].CI = 724603951;
+    Prof[10].Nombre = "Wilianñelys Wuandy Moreno Cruz";
+    Prof[10].Gmail = "wiwuannocruz0951@gmail.com";
+    Prof[10].Password = "wiwuannocruz*0951";
+    Prof[10].Edad = 40;
+
+    Prof[11].CI = 980417235;
+    Prof[11].Nombre = "Pragedia Epaminondas Gutiérrez Delgado";
+    Prof[11].Gmail = "praerezdo7235@outlook.com";
+    Prof[11].Password = "praerezdo*7235";
+    Prof[11].Edad = 44;
+
+    Prof[12].CI = 651382709;
+    Prof[12].Nombre = "Arnetty Yoryimar Mendoza Ramos";
+    Prof[12].Gmail = "aryorzaramos2709@yahoo.com";
+    Prof[12].Password = "aryorzaramos*2709";
+    Prof[12].Edad = 37;
+
+    Prof[13].CI = 427950681;
+    Prof[13].Nombre = "Yosi Aguileo Rivera Chávez";
+    Prof[13].Gmail = "yoaraver0681@gmail.com";
+    Prof[13].Password = "yoaraver*0681";
+    Prof[13].Edad = 38;
+
+    Prof[14].CI = 193068574;
+    Prof[14].Nombre = "Divasy Teódulo Romero Espinoza";
+    Prof[14].Gmail = "diteóroza8574@outlook.com";
+    Prof[14].Password = "diteóroza*8574";
+    Prof[14].Edad = 39;
+
+    Prof[15].CI = 548721093;
+    Prof[15].Nombre = "Yubisay Markewi Soto Aguilar";
+    Prof[15].Gmail = "yumarstolar1093@yahoo.com";
+    Prof[15].Password = "yumarstolar*1093";
+    Prof[15].Edad = 33;
+
+    Prof[16].CI = 204593186;
+    Prof[16].Nombre = "Wayira Weys Núñez Paredes";
+    Prof[16].Gmail = "wawaysñezdes3186@gmail.com";
+    Prof[16].Password = "wawaysñezdes*3186";
+    Prof[16].Edad = 35;
+
+    Prof[17].CI = 876140329;
+    Prof[17].Nombre = "Wilker Joedeima Salgado Castillo";
+    Prof[17].Gmail = "wiljoedollo0329@outlook.com";
+    Prof[17].Password = "wiljoedollo*0329";
+    Prof[17].Edad = 36;
+
+    Prof[18].CI = 332857904;
+    Prof[18].Nombre = "Radegunda Laicireth Bravo Guerrero";
+    Prof[18].Gmail = "ralaiivoro7904@yahoo.com";
+    Prof[18].Password = "ralaiivoro*7904";
+    Prof[18].Edad = 32;
+
+    Prof[19].CI = 709462518;
+    Prof[19].Nombre = "Eucarilde Oxálida Fuentes Rojas";
+    Prof[19].Gmail = "euotesjas2518@gmail.com";
+    Prof[19].Password = "euotesjas*2518";
+    Prof[19].Edad = 31;
+
+    Prof[20].CI = 951634872;
+    Prof[20].Nombre = "Heromides Duxlan Silva Calderón";
+    Prof[20].Gmail = "heduxvarón4872@outlook.com";
+    Prof[20].Password = "heduxvarón*4872";
+    Prof[20].Edad = 30;
+Fin_Procedimiento

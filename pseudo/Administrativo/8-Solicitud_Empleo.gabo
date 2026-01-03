@@ -57,14 +57,24 @@ Inicio
     Fin_Si
     Para (I = 1 Hasta I = K) Hacer;
         Si (Empleo.Estado[I] = 0) Entonces;
-            Empleo[I].Usuario = " ";
-            Empleo[I].CI = null;
-            Empleo[I].Gmail = " ";
-            Empleo[I].Password = " ";
-            Empleo[I].Edad = null;;
-            Empleo[I].Experiencia = " ";
-            Empleo[I].Titulo = " ";
-            Empleo[I].Descripcion = " ";
+            Empleo[I].Usuario = Empleo[K - 1].Usuario;
+            Empleo[I].CI = Empleo[K - 1].CI;
+            Empleo[I].Gmail = Empleo[K - 1].Gmail;
+            Empleo[I].Password = Empleo[K - 1].Password;
+            Empleo[I].Edad = Empleo[K - 1].Edad;
+            Empleo[I].Experiencia = Empleo[K - 1].Experiencia;
+            Empleo[I].Titulo = Empleo[K - 1].Titulo;
+            Empleo[I].Descripcion = Empleo[K - 1].Descripcion;
+
+            Empleo[K - 1].Usuario = " ";
+            Empleo[K - 1].CI = null;
+            Empleo[K - 1].Gmail = " ";
+            Empleo[K - 1].Password = " ";
+            Empleo[K - 1].Edad = null;;
+            Empleo[K - 1].Experiencia = " ";
+            Empleo[K - 1].Titulo = " ";
+            Empleo[K - 1].Descripcion = " ";
+            K = K - 1;
         Fin_Si
     Fin_Para
 Fin_Procedimiento

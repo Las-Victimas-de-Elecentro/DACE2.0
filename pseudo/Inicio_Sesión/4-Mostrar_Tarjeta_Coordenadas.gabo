@@ -1,15 +1,16 @@
-Procedimiento Mostrar_Tarjeta_Coordenadas(E/S: I, J: Entero);
+Procedimiento Mostrar_Tarjeta_Coordenadas(E/S: ID, Tarjeta[I].ID, Tarjeta[J].Fila, Tarjeta[J].Columna: Entero);
 Inicio
+	Var encontrado = 1: Entero;
 	Mostrar<"A continuación le mostraremos su tarjeta de coordenadas:";
     Mostrar << "------------------------------------------";
-    Para (I = 1 Hasta I = 5) Hacer;
-		Para (J = 1 Hasta J = 10) Hacer;
-			Si (Tarjeta[I, J] < 10) Entonces;
-				Mostrar << "0", Tarjeta[I, J];		
-			Sino
-				Mostrar << Tarjeta[I, J];
-			Fin_Si
-        Fin_Para
+    Para (I = 1 Hasta I = 25000) Hacer;
+		Si (ID = Tarjeta[I].ID) and (encontrado = 1) Entonces;
+			Para (J = I Hasta J = I+5) Hacer;
+				Mostrar << Tarjeta[J].Fila;
+				Mostrar << Tarjeta[J].Columna;
+			Fin_Para
+			encontrado = 0;
+		Fin_Si
 	Fin_Para
 	Mostrar << "------------------------------------------";
 Fin_Procedimiento

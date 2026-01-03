@@ -1,0 +1,89 @@
+Procedimiento Agregar_Eventos(E/S: eve: Entero, Even[I].Nombre, Even[I].Fecha, Even[I].Tipo, Even[I].Descripcion: Cadena);
+Inicio
+    Var I, ID, opc: Entero;
+    Var R: Booleano;
+    Mostrar << "¡Bienvenido al apartado de Eventos!";
+    Repetir
+        Mostrar << "¿Qué desea hacer?";
+        Mostrar << "1: Ver los eventos";
+        Mostrar << "2: Agregar un evento";
+        Mostrar << "3: Modificar un evento";
+        Mostrar << "4: Eliminar un evento";
+        Leer >> opc;
+        Mientras (opc < 1 or opc > 4) Hacer;
+            Mostrar << "Es invalido, fuera del rango entre 1-4";
+            Leer >> opc;
+        Fin_Mientras
+        En_Caso (opc > 0) Sea;
+            Caso(opc = 1);
+                Para (I = 1 Hasta I = eve) Hacer;
+                    Mostrar << Even[I].Nombre;
+                    Mostrar << Even[I].Fecha;
+                    Mostrar << Even[I].Tipo
+                    Mostrar << Even[I].Descripcion;
+                Fin_Para
+            Caso(opc = 2);
+                Mostrar << "Ingrese el nombre del nuevo evento";
+                Leer >> Even[eve].Nombre;
+                Mostrar << "Ingrese la fecha del evento (DD/MM/YYYY)";
+                Leer >> Even[eve].Fecha;
+                Mostrar << "Ingrese el tipo de evento que es";
+                Leer >> Even[eve].Tipo;
+                Mostrar << "Ingrese la descripción del evento";
+                Leer >> Even[eve].Descripcion;
+                eve = eve + 1;
+                Mostrar << "Evento agregado correctamente.";
+            Caso(opc = 3);
+                Para (I = 1 Hasta I = eve) Hacer;
+                    Mostrar << I;
+                    Mostrar << Even[I].Nombre;
+                    Mostrar << Even[I].Fecha;
+                    Mostrar << Even[I].Tipo
+                    Mostrar << Even[I].Descripcion;
+                Fin_Para
+                Mostrar << "Ingrese la posición del evento que quiere modificar";
+                Leer >> ID;
+                Mientras (ID < 1 or ID > eve) Hacer;
+                    Mostrar << "Es invalido";
+                    Leer >> ID;
+                Fin_Mientras
+                Mostrar << "Ingrese el nombre modificado del evento";
+                Leer >> Even[ID].Nombre;
+                Mostrar << "Ingrese la fecha modificada del evento (DD/MM/YYYY)";
+                Leer >> Even[ID].Fecha;
+                Mostrar << "Ingrese el tipo modificado del evento";
+                Leer >> Even[ID].Tipo;
+                Mostrar << "Ingrese la descripción del evento";
+                Leer >> Even[ID].Descripcion;
+                Mostrar << "Evento modificado correctamente";
+            Otro_Caso
+                Para (I = 1 Hasta I = eve) Hacer;
+                    Mostrar << Even[I].Nombre;
+                    Mostrar << Even[I].Fecha;
+                    Mostrar << Even[I].Tipo;
+                    Mostrar << Even[I].Descripcion;
+                Fin_Para
+                Mostrar << "Ingrese la posición del evento que desea modificar";
+                Leer >> ID;
+                Mientras (ID < 1 or ID > eve) Hacer;
+                    Mostrar << "Es invalido, ingrese una posición válida";
+                    Leer >> ID;
+                Fin_Mientras
+                
+                Even[ID].Nombre = Even[eve - 1].Nombre;
+                Even[ID].Fecha = Even[eve - 1].Fecha;
+                Even[ID].Tipo = Even[eve - 1].Tipo;
+                Even[ID].Descripcion = Even[eve - 1].Descripcion;
+
+                Even[eve - 1].Nombre = " ";
+                Even[eve - 1].Fecha = " ";
+                Even[eve - 1].Tipo = " ";
+                Even[eve - 1].Descripcion = " ";
+                eve = eve - 1;
+                Mostrar << "Evento borrado correctamente.";
+        Fin_Caso
+        Mostrar << "¿Desea volver al menú principal? 1: Sí, 0: No";
+        Leer >> R;
+        Hasta(R = 1);
+    Fin_Repetir
+Fin_Procedimiento

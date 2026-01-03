@@ -1,12 +1,12 @@
-Procedimiento Iniciar_Sesion(E/S: Datos[I].Gmail, Admin[I].Gmail, Datos[I].Usuario, Admin[I].Usuario, Datos[I].Password, Admin[I].Password: Cadena, Datos[I].CI, Admin[I].CI, I, J, Tarjeta[I, J]: Entero);
+Procedimiento Iniciar_Sesion(E/S: Rol, Datos[I].Gmail, Admin[I].Gmail, Prof[I].Gmail, Datos[I].Nombre, Admin[I].Usuario, Prof[I].Nombre, Datos[I].Password, Admin[I].Password, Prof[I].Password: Cadena, pos, pos_admin, pos_usuario, Datos[I].CI, Admin[I].CI, Tarjeta[I].Fila, Tarjeta[I].Columna: Entero, Acceso: Booleano);
 Inicio
     Var gmail_ingresado, password_ingresado: Cadena;
-    Var encontrado, encontradoAdmin: Booleano;
-    Var I, pos_usuario, pos_admin, Intentos_Fallidos: Entero;
-    Var Acceso: Booleano;
+    Var encontrado, encontradoAdmin, encontradoProf: Booleano;
+    Var I, Intentos_Fallidos: Entero;
     
     Intentos_Fallidos = 0;
     encontrado = 0;
+    encontradoProf = 0;
     encontradoAdmin = 0;
     Acceso = 0;
     
@@ -19,8 +19,7 @@ Inicio
         Leer >> password_ingresado;
         
         // Buscar en arreglo de Estudiantes y docentes
-        encontrado = 0;
-        Para (I = 1 hasta I = Lim) Hacer;
+        Para (I = 1 hasta I = 5000) Hacer;
             Si (Datos[I].Gmail = gmail_ingresado and Datos[I].Password = password_ingresado) Entonces;
                 encontrado = 1;
                 pos_usuario = I;
@@ -29,39 +28,45 @@ Inicio
                 encontradoAdmin = 1;
                 pos_admin = I;
             Fin_Si
+            Si (Prof[I].Gmail = gmail_ingresado and Prof[I].Password = password_ingresado) Entonces;
+                encontradoProf = 1;
+                pos = I;
+            Fin_Si
         Fin_Para
         
-        Si (encontrado = 1) or (encontradoAdmin = 1) Entonces;
+        Si (encontrado = 1) or (encontradoAdmin = 1) or (encontradoProf = 1) Entonces;
             Si (Intentos_Fallidos >= 0) Entonces;
-                Validar_Coordenada(I, Acceso);
+                Validar_Coordenada(Tarjeta[I].Fila, Tarjeta[I].Columna, Acceso);
                 Mostrar << Validar_Coordenada;
-            Sino
-                Acceso = 1;
             Fin_Si
             
             Si (Acceso = 1) and (encontrado = 1) Entonces;
-                Mostrar << "¡Bienvenido ", Datos.Nombre[pos_usuario], "!";
-                Mostrar << "Cédula: ", Datos.CI[pos_usuario];
+                Mostrar << "¡Bienvenido ", Datos[pos_usuario].Nombre, "!";
+                Mostrar << "Cédula: ", Datos[pos_usuario].CI;
                 Intentos_Fallidos = 0;
                 Rol = "Estudiante";
             Fin_Si
-            Si (Acceso = 1) and (encontradoAdmin = 1) Entonces;
-                Mostrar << "¡Bienvenido ", Admin.Nombre[pos_admin], "!";
-                Mostrar << "Cédula: ", Admin.CI[pos_admin];
+            Si (Acceso = 1) and (encontradoProf = 1) Entonces;
+                Mostrar << "¡Bienvenido ", Prof[pos].Nombre, "!";
+                Mostrar << "Cédula: ", Prof[pos].CI;
                 Intentos_Fallidos = 0;
-                Si (pos_admin = 35 or pos_admin = 23 or pos_admin = 22) Entonces;
-                    Rol = "Administrativo";
-                Sino
-                    Rol = "Docente";
-                Fin_Si
+                Rol = "Docente";
+            Fin_Si
+            Si (Acceso = 1) and (encontradoAdmin = 1) Entonces;
+                Mostrar << "¡Bienvenido ", Admin[pos_admin].Nombre, "!";
+                Mostrar << "Cédula: ", Admin[pos_admin].CI;
+                Intentos_Fallidos = 0;
+                Rol = "Administrativo";
+            Fin_Si
 
-        Sino
-            Intentos_Fallidos = Intentos_Fallidos + 1;
-            Mostrar << "Credenciales incorrectas. Intento: ", Intentos_Fallidos;
+            Si (Acceso = 0) Entonces;
+                Intentos_Fallidos = Intentos_Fallidos + 1;
+                Mostrar << "Credenciales incorrectas. Intento: ", Intentos_Fallidos;
+            Fin_Si
             
             Si (Intentos_Fallidos >= 3) Entonces;
                 Mostrar << "Demasiados intentos fallidos.";
-                Recuperar_Password(I, Intentos_Fallidos, Acceso);
+                Recuperar_Password(Tarjeta[I].Fila, Tarjeta[I].Columna, Acceso);
                 Mostrar << Recuperar_Password;
             Fin_Si
         Fin_Si
@@ -69,6 +74,6 @@ Inicio
         Hasta (encontrado = 1 AND Acceso = 1) OR (Intentos_Fallidos >= 3 AND Acceso = 0);
     Fin_Repetir
     Si (Intentos_Fallidos >= 3 AND Acceso = 0) Entonces;
-        Mostrar<<"No se pudo iniciar sesión. Contacte soporte.";
+        Mostrar << "No se pudo iniciar sesión. Contacte soporte.";
     Fin_Si
 Fin_Procedimiento
