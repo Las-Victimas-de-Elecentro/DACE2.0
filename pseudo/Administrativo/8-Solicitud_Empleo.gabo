@@ -1,4 +1,4 @@
-Procedimiento Solicitud_Empleo(E/S: K, Empleo[K].Edad, Empleo[K].CI: Entero, Empleo[K].Usuario, Empleo[K].Gmail, Empleo[K].Password, Empleo[K].Experiencia, Empleo[K].Titulo, Empleo[K].Descripcion: Cadena, Empleo[K].Estado: Booleano);
+Procedimiento Solicitud_Empleo(E/S: K, Empleo[K].Edad, Empleo[K].CI: Entero, Empleo[K].Usuario, Empleo[K].Gmail, Empleo[K].Experiencia, Empleo[K].Titulo, Empleo[K].Descripcion: Cadena, Empleo[K].Estado: Booleano);
 Inicio
 	Var Rep: Entero;
 	Var R: Booleano;
@@ -11,8 +11,6 @@ Inicio
         Leer >> Empleo[K].CI;
         Mostrar << "Ingrese el correo electrónico";
         Leer >> Empleo[K].Gmail;
-        Mostrar << "Ingrese la contraseña";
-        Leer >> Empleo[K].Password;
         Mostrar << "Ingrese la edad";
         Leer >> Empleo[K].Edad;
         Mientras (Empleo[K].Edad < 18) Hacer;
@@ -43,7 +41,6 @@ Inicio
             Mostrar << Empleo[I].Usuario;
             Mostrar << Empleo[I].CI;
             Mostrar << Empleo[I].Gmail;
-            Mostrar << Empleo[I].Password;
             Mostrar << Empleo[I].Edad;
             Mostrar << Empleo[I].Experiencia;
             Mostrar << Empleo[I].Titulo;
@@ -60,7 +57,6 @@ Inicio
             Empleo[I].Usuario = Empleo[K - 1].Usuario;
             Empleo[I].CI = Empleo[K - 1].CI;
             Empleo[I].Gmail = Empleo[K - 1].Gmail;
-            Empleo[I].Password = Empleo[K - 1].Password;
             Empleo[I].Edad = Empleo[K - 1].Edad;
             Empleo[I].Experiencia = Empleo[K - 1].Experiencia;
             Empleo[I].Titulo = Empleo[K - 1].Titulo;
@@ -69,7 +65,6 @@ Inicio
             Empleo[K - 1].Usuario = " ";
             Empleo[K - 1].CI = null;
             Empleo[K - 1].Gmail = " ";
-            Empleo[K - 1].Password = " ";
             Empleo[K - 1].Edad = null;;
             Empleo[K - 1].Experiencia = " ";
             Empleo[K - 1].Titulo = " ";

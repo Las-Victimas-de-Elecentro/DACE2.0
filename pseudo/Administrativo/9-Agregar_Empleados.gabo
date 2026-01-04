@@ -1,7 +1,8 @@
-Procedimiento Agregar_Empleados(E/S: Lim, prof, Admin[Lim].CI, Prof[prof].CI, Empleo[I].CI: Entero, Admin[Lim].Usuario, Admin[Lim].Cargo, Admin[Lim].Gmail, Admin[Lim].Password, Prof[prof].Nombre, Prof[prof].Gmail, Prof[prof].Password, Empleo[I].Usuario, Empleo[I].Gmail, Empleo[I].Password: Cadena);
+Procedimiento Agregar_Empleados(E/S: ID, Lim, prof, Admin[Lim].CI, Prof[prof].CI, Empleo[I].CI, Tarjeta_A[I].ID, Minimo, Maximo, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna: Entero, Admin[Lim].Usuario, Admin[Lim].Cargo, Admin[Lim].Gmail, Admin[Lim].Password, Prof[prof].Nombre, Prof[prof].Gmail, Prof[prof].Password, Empleo[I].Usuario, Empleo[I].Gmail: Cadena);
 Inicio
     Var I, Pos, Opcion: Entero;
-    Var R, R2: Booleano;
+    Var Password, Password2: Cadena;
+    Var R, R2, R3: Booleano;
 	Repetir
 		Mostrar << "Bienvenido a la sección de administración de empleados";
         Mostrar << "¿Desea agregar un nuevo empleado? 1: Sí, 0: No";
@@ -15,14 +16,40 @@ Inicio
                         Admin[Lim].Usuario = Empleo[I].Usuario;
                         Admin[Lim].CI = Empleo[I].CI;
                         Admin[Lim].Gmail = Empleo[I].Gmail;
-                        Admin[Lim].Password = Empleo[I].Password;
+                        Repetir
+                            Mostrar << "Ingrese su contraseña que usará para iniciar sesión:";
+                            Leer >> Password;
+                            Mostrar << "Confirme la contraseña";
+                            Leer >> Password2;
+                            Mostrar << "¿Seguro que quiere que esa sea su contraseña? 1: Sí, 0: No";
+                            Leer >> R3;
+                            Hasta(R3 = 1);
+                        Fin_Repetir
+                        Admin[Lim].Password = Password
                         Admin[Lim].Cargo = "Administrativo";
+                        ID = Lim;
+                        Generar_Tarjeta_Coordenadas_Admin(ID, Tarjeta_A[I].ID, Minimo, Maximo, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna);
+                        Mostrar_Tarjeta_Coordenadas_Admin(ID, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna);
+                        Mostrar << Mostrar_Tarjeta_Coordenadas_Admin;
                         Lim = Lim + 1;
                     Sino
                         Prof[prof].Nombre = Empleo[I].Usuario;
                         Prof[prof].CI = Empleo[I].CI;
                         Prof[prof].Gmail = Empleo[I].Gmail;
-                        Prof[prof].Password = Empleo[I].Password;
+                        Repetir
+                            Mostrar << "Ingrese su contraseña que usará para iniciar sesión:";
+                            Leer >> Password;
+                            Mostrar << "Confirme la contraseña";
+                            Leer >> Password2;
+                            Mostrar << "¿Seguro que quiere que esa sea su contraseña? 1: Sí, 0: No";
+                            Leer >> R3;
+                            Hasta(R3 = 1);
+                        Fin_Repetir
+                        Prof[prof].Password = Password;
+                        ID = prof;
+                        Generar_Tarjeta_Coordenadas_Prof(ID, Tarjeta_P[I].ID, Minimo, Maximo, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna);
+                        Mostrar_Tarjeta_Coordenadas_Prof(ID, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna);
+                        Mostrar << Mostrar_Tarjeta_Coordenadas_Prof;
                         prof = prof + 1;
                     Fin_Si
                 Fin_Si
