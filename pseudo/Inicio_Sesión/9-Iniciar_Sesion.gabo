@@ -1,4 +1,4 @@
-Procedimiento Iniciar_Sesion(E/S: Rol, Datos[I].Gmail, Admin[I].Gmail, Prof[I].Gmail, Datos[I].Nombre, Admin[I].Usuario, Prof[I].Nombre, Datos[I].Password, Admin[I].Password, Prof[I].Password: Cadena, pos, pos_admin, pos_usuario, Datos[I].CI, Admin[I].CI, Tarjeta[I].Fila, Tarjeta[I].Columna: Entero, Acceso: Booleano);
+Procedimiento Iniciar_Sesion(E/S: Rol, Datos[I].Gmail, Admin[I].Gmail, Prof[I].Gmail, Datos[I].Nombre, Admin[I].Usuario, Prof[I].Nombre, Datos[I].Password, Admin[I].Password, Prof[I].Password: Cadena, pos, pos_admin, pos_usuario, Datos[I].CI, Admin[I].CI, Tarjeta[I].Fila, Tarjeta[I].Columna, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna: Entero, Acceso, encontrado, encontradoProf, encontradoAdmin: Booleano);
 Inicio
     Var gmail_ingresado, password_ingresado: Cadena;
     Var encontrado, encontradoAdmin, encontradoProf: Booleano;
@@ -35,9 +35,17 @@ Inicio
         Fin_Para
         
         Si (encontrado = 1) or (encontradoAdmin = 1) or (encontradoProf = 1) Entonces;
-            Si (Intentos_Fallidos >= 0) Entonces;
+            Si (Intentos_Fallidos >= 0) and (encontrado = 1) Entonces;
                 Validar_Coordenada(Tarjeta[I].Fila, Tarjeta[I].Columna, Acceso);
                 Mostrar << Validar_Coordenada;
+            Fin_Si
+            Si (Intentos_Fallidos >= 0) and (encontradoAdmin = 1) Entonces;
+                Validar_Coordenada_Admin(Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Acceso);
+                Mostrar << Validar_Coordenada_Admin;
+            Fin_Si
+            Si (Intentos_Fallidos >= 0) and (encontradoProf = 1) Entonces;
+                Validar_Coordenada_Prof(Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Acceso);
+                Mostrar << Validar_Coordenada_Prof;
             Fin_Si
             
             Si (Acceso = 1) and (encontrado = 1) Entonces;
@@ -66,7 +74,7 @@ Inicio
             
             Si (Intentos_Fallidos >= 3) Entonces;
                 Mostrar << "Demasiados intentos fallidos.";
-                Recuperar_Password(Tarjeta[I].Fila, Tarjeta[I].Columna, Acceso);
+                Recuperar_Password(Tarjeta[I].Fila, Tarjeta[I].Columna, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Acceso, encontrado, encontradoProf, encontradoAdmin);
                 Mostrar << Recuperar_Password;
             Fin_Si
         Fin_Si

@@ -1,0 +1,17 @@
+Procedimiento Validar_Coordenada_Prof(E/S: Tarjeta_P[I].Fila, Tarjeta_P[I].Columna: Entero, Acceso: Booleano);
+Inicio
+	Var Coordenada, Fila, Columna: Entero;
+	Minimo = 1;
+	Maximo = 5;
+	Fila = Aleatorio(Minimo, Maximo);
+	Columna = Aleatorio(Minimo, Maximo);
+    Mostrar << "Introduzca la coordenada ubicada en la fila: ", Fila, " y en la columna: ", Columna, " de su tarjeta de coordenadas.";
+	Leer >> Coordenada;
+	Si (Coordenada = Tarjeta_P[Fila].Fila or Coordenada = Tarjeta_P[Columna].Columna) Entonces;
+		Mostrar << "Coordenada válida, acceso permitido";
+		Acceso = 1;
+	Sino
+		Mostrar << "Coordenada incorrecta. Acceso denegado";
+		Acceso = 0;
+	Fin_Si
+Fin_Procedimiento

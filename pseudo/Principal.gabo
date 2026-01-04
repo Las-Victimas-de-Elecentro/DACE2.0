@@ -998,7 +998,7 @@ Inicio
     //Admin
     Var Administrativos: Admin[5000];
     Var Salud_Administrativo: Salud_Admin[5000];
-    Var Materia: Materias[547];
+    Var Materia: Materias[522];
     Var Solicitud_Inscripcion: Gestion[5000];
     Var Solicitud_Empleo: Empleo[5000];
 
@@ -1055,7 +1055,7 @@ Inicio
     Var Opcion, Minimo, Maximo: Entero;
     Var Rol, cod, Avatares[11]: Cadena;
     Var R, R2, Acceso: Booleano;
-    Var Tema = 0, validacion_pago, Inscripciones: Booleano;
+    Var Tema = 0, validacion_pago, Inscripciones, encontrado, encontradoProf, encontradoAdmin: Booleano;
     Var Suma, monto_pago, Ingresos, Egresos: Real;
 
     Relleno_Admin(Admin[I].CI, Admin[I].Edad, Admin[I].Avatar, Admin[I].Usuario, Admin[I].Gmail, Admin[I].Password, Admin[I].Cargo);

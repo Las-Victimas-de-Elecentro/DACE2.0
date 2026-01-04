@@ -1,6 +1,7 @@
-Procedimiento Relleno_Coordenada();
+Procedimiento Relleno_Coordenada(E/S: Tarjeta[I].ID, Tarjeta_A[I].ID, Tarjeta_P[I].ID: Entero);
 Inicio
-    Para (I = 1 Hasta I = 100) Hacer;
+    Var I, K, J: Entero;
+    Para (I = 1 Hasta I = 5000) Hacer;
         Para (J = 1 Hasta J = 5) Hacer;
             K = (I - 1) * 5 + J;
             Tarjeta[K].ID = I;
