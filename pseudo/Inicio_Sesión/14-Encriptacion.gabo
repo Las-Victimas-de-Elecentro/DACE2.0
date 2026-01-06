@@ -1,0 +1,181 @@
+Procedimiento Encriptacion(E: indice: Entero, E/S: pass: Cadena);
+Inicio
+    //Al multiplicar una cadena por un indice entero, debería ver esa cadena esa cantidad de veces, por ejemplo, si la cadena es "xd", entonces si lo multiplica por 2, debería tener "xdxd" en la contraseña encriptada, algo así funcionaría
+    Si (indice < 100) Entonces;
+        pass = pass * indice + "bienvenidos_a_algoritmo_2";
+    Fin_Si
+    Si (indice >= 100 and indice < 200) Entonces;
+        pass = pass * indice + "abusadol";
+    Fin_Si
+    Si (indice >= 200 and indice < 300) Entonces;
+        pass = pass * indice + "viva_el_vicio";
+    Fin_Si
+    Si (indice >= 300 and indice < 400) Entonces;
+        pass = pass * indice + "al_sendero_voy";
+    Fin_Si
+    Si (indice >= 400 and indice < 500) Entonces;
+        pass = pass * indice + "bruja_bruja_soy";
+    Fin_Si
+    Si (indice >= 500 and indice < 600) Entonces;
+        pass = pass * indice + "mardito_corpoelec";
+    Fin_Si
+    Si (indice >= 600 and indice < 700) Entonces;
+        pass = pass * indice + "EL_ONE_PIECE_EXISTE";
+    Fin_Si
+    Si (indice >= 700 and indice < 800) Entonces;
+        pass = pass * indice + "Los_Sueños_De_Una_Persona_Nunca_Mueren";
+    Fin_Si
+    Si (indice >= 800 and indice < 900) Entonces;
+        pass = pass * indice + "Nada_Aquí_No_Ha_Pasado_Nada";
+    Fin_Si
+    Si (indice >= 900 and indice < 1000) Entonces;
+        pass = pass * indice + "No_se_habla_de_Bruno";
+    Fin_Si
+    Si (indice >= 500 and indice < 1000) Entonces;
+        pass = pass * indice + "God_of_Algorithm";
+    Fin_Si
+    Si (indice >= 1000 and indice < 1100) Entonces;
+        pass = pass * indice + "Destripando_la_Historia";
+    Fin_Si
+    Si (indice >= 1100 and indice < 1200) Entonces;
+        pass = pass * indice + "No_morire";
+    Fin_Si
+    Si (indice >= 1200 and indice < 1300) Entonces;
+        pass = pass * indice + "no_importa_que_mi_cuerpo_sea_destruido_por_completo";
+    Fin_Si
+    Si (indice >= 1300 and indice < 1400) Entonces;
+        pass = pass * indice + "mis_ganas_de_pelear_me_levantarán_porque_son_muy_grandes";
+    Fin_Si
+    Si (indice >= 1400 and indice < 1500) Entonces;
+        pass = pass * indice + "Rascu_y_Podri";
+    Fin_Si
+    Si (indice >= 1000 and indice < 1500) Entonces;
+        pass = pass * indice + "gabogod";
+    Fin_Si
+    Si (indice >= 1500 and indice < 1600) Entonces;
+        pass = pass * indice + "soy_mas_fuerte_que_tu";
+    Fin_Si
+    Si (indice >= 1600 and indice < 1700) Entonces;
+        pass = pass * indice + "Diagrama_Flujo";
+    Fin_Si
+    Si (indice >= 1700 and indice < 1800) Entonces;
+        pass = pass * indice + "madurocoñoetumadre";
+    Fin_Si
+    Si (indice >= 1800 and indice < 1900) Entonces;
+        pass = pass * indice + "Six_Seven";
+    Fin_Si
+    Si (indice >= 1900 and indice < 2000) Entonces;
+        pass = pass * indice + "World_Of_Warcraft";
+    Fin_Si
+    Si (indice >= 1500 and indice < 2000) Entonces;
+        pass = pass * indice + "metienenlavidatriste";
+    Fin_Si
+    Si (indice >= 2000 and indice < 2100) Entonces;
+        pass = pass * indice + "Y_pa_que_te_digo_que_no?";
+    Fin_Si
+    Si (indice >= 2100 and indice < 2200) Entonces;
+        pass = pass * indice + "paz_y_amor";
+    Fin_Si
+    Si (indice >= 2200 and indice < 2300) Entonces;
+        pass = pass * indice + "esa_fue_la_noche_mas_linda_del_mundo";
+    Fin_Si
+    Si (indice >= 2300 and indice < 2400) Entonces;
+        pass = pass * indice + "que_tan_solo_duro_un_segundo";
+    Fin_Si
+    Si (indice >= 2400 and indice < 2500) Entonces;
+        pass = pass * indice + "LANZALLAMAS";
+    Fin_Si
+    Si (indice >= 2000 and indice < 2500) Entonces;
+        pass = pass * indice + "1200_paginas_no_es_poca_cosa";
+    Fin_Si
+    Si (indice >= 2500 and indice < 2600) Entonces;
+        pass = pass * indice + "IMPACTRUENO";
+    Fin_Si
+    Si (indice >= 2600 and indice < 2700) Entonces;
+        pass = pass * indice + "No_preguntes_como_funciona_solo_confía";
+    Fin_Si
+    Si (indice >= 2700 and indice < 2800) Entonces;
+        pass = pass * indice + "este_algoritmo_es_mas_misterioso_que_mi_vida_amorosa";
+    Fin_Si
+    Si (indice >= 2800 and indice < 2900) Entonces;
+        pass = pass * indice + "aquí_yace_mi_paciencia_y_aun_faltan_2000_indices";
+    Fin_Si
+    Si (indice >= 2900 and indice < 3000) Entonces;
+        pass = pass * indice + "el_codigo_es_como_el_universo:_infinito_y_lleno_de_errores";
+    Fin_Si
+    Si (indice >= 2500 and indice < 3000) Entonces;
+        pass = pass * indice + "Felipe:uste_sabe_que_estos_son_maricos";
+    Fin_Si
+    Si (indice >= 3000 and indice < 3100) Entonces;
+        pass = pass * indice + "boss_final:_el_compilador(inexistente)";
+    Fin_Si
+    Si (indice >= 3100 and indice < 3200) Entonces;
+        pass = pass * indice + "no_leas_esto_sigue_bajando";
+    Fin_Si
+    Si (indice >= 3200 and indice < 3300) Entonces;
+        pass = pass * indice + "*no_hace_nada*";
+    Fin_Si
+    Si (indice >= 3300 and indice > 3400) Entonces;
+        pass = pass * indice + "este_codigo_fue_escrito_a_las_3am";
+    Fin_Si
+    Si (indice >= 3400 and indice < 3500) Entonces;
+        pass = pass * indice + "si_funciona_mándame_un_café";
+    Fin_Si
+    Si (indice >= 3000 and indice < 3500) Entonces;
+        pass = pass * indice + "gabo_con_las_meseras_es_un_caso_serio";
+    Fin_Si
+    Si (indice >= 3500 and indice < 3600) Entonces;
+        pass = pass * indice + "el_codigo_duerme_yo_no";
+    Fin_Si
+    Si (indice >= 3600 and indice < 3700) Entonces;
+        pass = pass * indice + "este_comentario_fue_traído_por_un_unicornio";
+    Fin_Si
+    Si (indice >= 3700 and indice < 3800) Entonces;
+        pass = pass * indice + "Hakuna_Matata_No_hay_bugs";
+    Fin_Si
+    Si (indice >= 3800 and indice < 3900) Entonces;
+        pass = pass * indice + "el_codigo_piensa_luego_existe";
+    Fin_Si
+    Si (indice >= 3900 and indice < 4000) Entonces;
+        pass = pass * indice + "aquí_debería_ir_un_algoritmo_pero_puse_fe";
+    Fin_Si
+    Si (indice >= 3500 and indice < 4000) Entonces;
+        pass = pass * indice + "kaizoku_ouni_ore_wa_naru"; //Vivan las referencias.
+    Fin_Si
+    Si (indice >= 4000 and indice < 4100) Entonces;
+        pass = pass * indice + "Aquí_yace_un_tesoro:_un_semicolon.";
+    Fin_Si
+    Si (indice >= 4100 and indice < 4200) Entonces;
+        pass = pass * indice + "Loading...paciencia_infinita_requerida";
+    Fin_Si
+    Si (indice >= 4200 and indice < 4300) Entonces;
+        pass = pass * indice + "aquí_debería_ir_un_pato_pero_no_quiso";
+    Fin_Si
+    Si (indice >= 4300 and indice < 4400) Entonces;
+        pass = pass * indice + "este_codigo_fue_revisado_por_un_perro"; //como el que está a tu lado leyendo esto
+    Fin_Si
+    Si (indice >= 4400 and indice < 4500) Entonces;
+        pass = pass * indice + "esto_actúa_mejor_bajo_presión";
+    Fin_Si
+    Si (indice >= 4000 and indice < 4500) Entonces;
+        pass = pass * indice + "que_lastima_pero_adios";
+    Fin_Si
+    Si (indice >= 4500 and indice < 4600) Entonces;
+        pass = pass * indice + "yo_era_como_tú...";
+    Fin_Si
+    Si (indice >= 4600 and indice < 4700) Entonces;
+        pass = pass * indice + "esto_funciona_gracias_al_chakra_del_que_lo_programó";
+    Fin_Si
+    Si (indice >= 4700 and indice < 4800) Entonces;
+        pass = pass * indice + "nunca_faltaré_a_mi_palabra,porque_ese_es_mi_camino_ninja";
+    Fin_Si
+    Si (indice >= 4800 and indice < 4900) Entonces;
+        pass = pass * indice + "No_tienen_que_gustarte_cosas_solo_porque_la_gente_diga_que_se_supone_que_deberían_gustarte.-Jonathan";
+    Fin_Si
+    Si (indice >= 4900 and indice < 5000) Entonces;
+        pass = pass * indice + "Huele_a_insomnio_y_mucho_café...";
+    Fin_Si
+    Si (indice >= 4500 and indice < 5000) Entonces;
+        pass = pass * indice + "me_despido_de_ti_y_me_voy...";
+    Fin_Si
+Fin_Procedimiento

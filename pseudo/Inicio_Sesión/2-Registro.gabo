@@ -1,4 +1,4 @@
-Procedimiento Registro(E/S: ID, v, C, Minimo, Maximo, Tarjeta[I].ID, Tarjeta[J].Fila, Tarjeta[J].Columna, Gestion[I].CI, Gestion[I].Semestre, Gestion[I].Year, Datos[v].CI, Datos[v].Semestre, Datos[v].Year: Entero, Gestion[I].Nombre, Gestion[I].Gmail, Gestion[I].Password, Gestion[I].Carrera, Gestion[C].Telefono, Datos[v].Nombre, Datos[v].Gmail, Datos[v].Password, Datos[v].Carrera, Datos[v].Telefono: Cadena, Gestion[I].Verificado: Booleano);
+Procedimiento Registro(E/S: indice, ID, v, C, Minimo, Maximo, Tarjeta[I].ID, Tarjeta[J].Fila, Tarjeta[J].Columna, Gestion[I].CI, Gestion[I].Semestre, Gestion[I].Year, Datos[v].CI, Datos[v].Semestre, Datos[v].Year: Entero, Gestion[I].Nombre, Gestion[I].Gmail, Gestion[I].Password, Gestion[I].Carrera, Gestion[C].Telefono, Datos[v].Nombre, Datos[v].Gmail, Datos[v].Password, Datos[v].Carrera, Datos[v].Telefono, pass: Cadena, Gestion[I].Verificado: Booleano);
 Inicio
     Var Nombre, Gmail, Password: Cadena;
     Var CI: Entero;
@@ -25,9 +25,13 @@ Inicio
                 Leer >> R;
                 Hasta(R = 1);
             Fin_Repetir
+            indice = v;
+            pass = Password;
+            Encriptacion(indice, pass);
             Datos[v].Nombre = Gestion[I].Nombre;
             Datos[v].CI = Gestion[I].CI;
             Datos[v].Gmail = Gestion[I].Gmail;
+            Datos[v].Password = pass;
             Datos[v].Carrera = Gestion[I].Carrera;
             Datos[v].Year = Gestion[I].Year;
             Datos[v].Semestre = Gestion[I].Semestre;

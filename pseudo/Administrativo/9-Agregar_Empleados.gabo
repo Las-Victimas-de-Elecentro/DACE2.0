@@ -1,4 +1,4 @@
-Procedimiento Agregar_Empleados(E/S: ID, Lim, prof, Admin[Lim].CI, Prof[prof].CI, Empleo[I].CI, Tarjeta_A[I].ID, Minimo, Maximo, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna: Entero, Admin[Lim].Usuario, Admin[Lim].Cargo, Admin[Lim].Gmail, Admin[Lim].Password, Prof[prof].Nombre, Prof[prof].Gmail, Prof[prof].Password, Empleo[I].Usuario, Empleo[I].Gmail: Cadena);
+Procedimiento Agregar_Empleados(E/S: indice, ID, Lim, prof, Admin[Lim].CI, Prof[prof].CI, Empleo[I].CI, Tarjeta_A[I].ID, Minimo, Maximo, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna: Entero, Admin[Lim].Usuario, Admin[Lim].Cargo, Admin[Lim].Gmail, Admin[Lim].Password, Prof[prof].Nombre, Prof[prof].Gmail, Prof[prof].Password, Empleo[I].Usuario, Empleo[I].Gmail, pass: Cadena);
 Inicio
     Var I, Pos, Opcion: Entero;
     Var Password, Password2: Cadena;
@@ -25,7 +25,10 @@ Inicio
                             Leer >> R3;
                             Hasta(R3 = 1);
                         Fin_Repetir
-                        Admin[Lim].Password = Password
+                        indice = Lim;
+                        pass = Password;
+                        Encriptacion(indice, pass);
+                        Admin[Lim].Password = pass;
                         Admin[Lim].Cargo = "Administrativo";
                         ID = Lim;
                         Generar_Tarjeta_Coordenadas_Admin(ID, Tarjeta_A[I].ID, Minimo, Maximo, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna);
@@ -45,7 +48,10 @@ Inicio
                             Leer >> R3;
                             Hasta(R3 = 1);
                         Fin_Repetir
-                        Prof[prof].Password = Password;
+                        indice = prof;
+                        pass = Password;
+                        Encriptacion(indice, pass);
+                        Prof[prof].Password = pass;
                         ID = prof;
                         Generar_Tarjeta_Coordenadas_Prof(ID, Tarjeta_P[I].ID, Minimo, Maximo, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna);
                         Mostrar_Tarjeta_Coordenadas_Prof(ID, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna);
