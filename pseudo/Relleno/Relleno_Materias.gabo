@@ -6,203 +6,203 @@ Inicio
     Hidrocarburos: 118-173
     Medicina: 174-224
     Odontología: 225-258
-    Veterinaria: 259-304
-    Derecho: 305-360
-    Comunicación: 361-418
-    Contaduría: 419-470
-    Economía: 471-527
+    Veterinaria: 259-301
+    Derecho: 302-355
+    Comunicación: 356-413
+    Contaduría: 414-465
+    Economía: 466-522
     */
     //Informática (59)
     //Primer Semestre
-    Materias[1].Nombre = "Matemática I";
-    Materias[1].Codigo = "IM1421";
-    Materias[1].Creditos = 5;
-    
-    Materias[2].Nombre = "Fundamentos de la Informática";
-    Materias[2].Codigo = "IC1222";
-    Materias[2].Creditos = 3;
+    Materias[1].Nombre = "Fundamentos de la Informática";
+    Materias[1].Codigo = "IC1222";
+    Materias[1].Creditos = 3;
 
-    Materias[3].Nombre = "Lógica Matemática";
-    Materias[3].Codigo = "IM1223";
-    Materias[3].Creditos = 3;
+    Materias[2].Nombre = "Deporte";
+    Materias[2].Codigo = "DP0001";
+    Materias[2].Creditos = 2;
 
-    Materias[4].Nombre = "Lenguaje y Comunicación";
-    Materias[4].Codigo = "IH1124";
-    Materias[4].Creditos = 2;
+    Materias[3].Nombre = "Matemática I";
+    Materias[3].Codigo = "IM1421";
+    Materias[3].Creditos = 5;
 
-    Materias[5].Nombre = "Ingles I";
-    Materias[5].Codigo = "IH1125";
+    Materias[4].Nombre = "Lógica Matemática";
+    Materias[4].Codigo = "IM1223";
+    Materias[4].Creditos = 3;
+
+    Materias[5].Nombre = "Formacion Constitucional";
+    Materias[5].Codigo = "FC0001";
     Materias[5].Creditos = 2;
 
-    Materias[6].Nombre = "Formacion Constitucional";
-    Materias[6].Codigo = "FC0001";
+    Materias[6].Nombre = "Lenguaje y Comunicación";
+    Materias[6].Codigo = "IH1124";
     Materias[6].Creditos = 2;
 
-    Materias[7].Nombre = "Economía Digital";
-    Materias[7].Codigo = "ED0001";
-    Materias[7].Creditos = 3;
+    Materias[7].Nombre = "Ingles I";
+    Materias[7].Codigo = "IH1125";
+    Materias[7].Creditos = 2;
+
+    Materias[8].Nombre = "Economía Digital";
+    Materias[8].Codigo = "EC005";
+    Materias[8].Creditos = 3;
 
     //Segundo Semestre
-    Materias[8].Nombre = "Matemática II";
-    Materias[8].Codigo = "IM2421";
-    Materias[8].Creditos = 5;
+    Materias[9].Nombre = "Matemática II";
+    Materias[9].Codigo = "IM2421";
+    Materias[9].Creditos = 5;
 
-    Materias[9].Nombre = "Física I";
-    Materias[9].Codigo = "IB2322";
-    Materias[9].Creditos = 4;
+    Materias[10].Nombre = "Problemática Científica Tecnológica";
+    Materias[10].Codigo = "IH2124";
+    Materias[10].Creditos = 2;
 
-    Materias[10].Nombre = "Algoritmos I";
-    Materias[10].Codigo = "IC2323";
-    Materias[10].Creditos = 3;
+    Materias[11].Nombre = "Física I";
+    Materias[11].Codigo = "IB2322";
+    Materias[11].Creditos = 4;
 
-    Materias[11].Nombre = "Problemática Científica Tecnológica";
-    Materias[11].Codigo = "IH2124";
-    Materias[11].Creditos = 2;
-
-    Materias[12].Nombre = "Ingles II";
-    Materias[12].Codigo = "IH2125";
+    Materias[12].Nombre = "Electiva I";
+    Materias[12].Codigo = "IME320";
     Materias[12].Creditos = 2;
 
-    Materias[13].Nombre = "Electiva I";
-    Materias[13].Codigo = "IME120";
-    Materias[13].Creditos = 2;
+    Materias[13].Nombre = "Algoritmos I";
+    Materias[13].Codigo = "IC2323";
+    Materias[13].Creditos = 3;
 
     Materias[14].Nombre = "Arte y Cultura";
     Materias[14].Codigo = "AC0001";
     Materias[14].Creditos = 2;
 
+    Materias[15].Nombre = "Ingles II";
+    Materias[15].Codigo = "IH2125";
+    Materias[15].Creditos = 2;
+
     //Tercer Semestre
-    Materias[15].Nombre = "Matemática III";
-    Materias[15].Codigo = "IM3421";
-    Materias[15].Creditos = 5;
+    Materias[16].Nombre = "Algoritmos II";
+    Materias[16].Codigo = "IC3323";
+    Materias[16].Creditos = 3;
 
-    Materias[16].Nombre = "Física II";
-    Materias[16].Codigo = "IB3322";
-    Materias[16].Creditos = 4;
-
-    Materias[17].Nombre = "Algoritmos II";
-    Materias[17].Codigo = "IC3323";
-    Materias[17].Creditos = 3;
+    Materias[17].Nombre = "Electiva II";
+    Materias[17].Codigo = "IME520";
+    Materias[17].Creditos = 2;
 
     Materias[18].Nombre = "Programación I";
     Materias[18].Codigo = "IC3244";
     Materias[18].Creditos = 4;
 
-    Materias[19].Nombre = "Metodología y Técnicas de Investigación";
-    Materias[19].Codigo = "IH3125";
-    Materias[19].Creditos = 2;
+    Materias[19].Nombre = "Matemática III";
+    Materias[19].Codigo = "IM3421";
+    Materias[19].Creditos = 5;
 
-    Materias[20].Nombre = "Electiva II";
-    Materias[20].Codigo = "IME620";
-    Materias[20].Creditos = 2;
+    Materias[20].Nombre = "Física II";
+    Materias[20].Codigo = "IB3322";
+    Materias[20].Creditos = 4;
+
+    Materias[21].Nombre = "Metodología y Técnicas de Investigación";
+    Materias[21].Codigo = "IH3125";
+    Materias[21].Creditos = 2;
 
     //Cuarto Semestre
-    Materias[21].Nombre = "Matemática IV";
-    Materias[21].Codigo = "IM5421";
-    Materias[21].Creditos = 5;
-
     Materias[22].Nombre = "Probabilidad y Estadística";
     Materias[22].Codigo = "IM5421";
     Materias[22].Creditos = 3;
 
-    Materias[23].Nombre = "Estructuras Discretas I";
-    Materias[23].Codigo = "IM4323";
-    Materias[23].Creditos = 4;
+    Materias[23].Nombre = "Matemática IV";
+    Materias[23].Codigo = "IM4421";
+    Materias[23].Creditos = 5;
 
     Materias[24].Nombre = "Programación II";
     Materias[24].Codigo = "IC4244";
     Materias[24].Creditos = 4;
 
-    Materias[25].Nombre = "Base de Datos";
-    Materias[25].Codigo = "IS4225";
-    Materias[25].Creditos = 3;
+    Materias[25].Nombre = "Electiva III";
+    Materias[25].Codigo = "IME720";
+    Materias[25].Creditos = 2;
 
-    Materias[26].Nombre = "Electiva III";
-    Materias[26].Codigo = "IME720";
-    Materias[26].Creditos = 2;
+    Materias[26].Nombre = "Estructuras Discretas I";
+    Materias[26].Codigo = "IM4323";
+    Materias[26].Creditos = 4;
+
+    Materias[27].Nombre = "Base de Datos";
+    Materias[27].Codigo = "IS4225";
+    Materias[27].Creditos = 3;
 
     //Quinto Semestre
-    Materias[27].Nombre = "Organización del Computador";
-    Materias[27].Codigo = "IC5422";
-    Materias[27].Creditos = 5;
+    Materias[28].Nombre = "Teoría de Sistemas";
+    Materias[28].Codigo = "IS5205";
+    Materias[28].Creditos = 2;
 
-    Materias[28].Nombre = "Algebra Booleana";
-    Materias[28].Codigo = "IM5221";
-    Materias[28].Creditos = 3;
+    Materias[29].Nombre = "Algebra Booleana";
+    Materias[29].Codigo = "IM5221";
+    Materias[29].Creditos = 3;
 
-    Materias[29].Nombre = "Estructuras Discretas II";
-    Materias[29].Codigo = "IM5323";
-    Materias[29].Creditos = 4;
-
-    Materias[30].Nombre = "Programación III";
-    Materias[30].Codigo = "IC5244";
+    Materias[30].Nombre = "Estructuras Discretas II";
+    Materias[30].Codigo = "IM5323";
     Materias[30].Creditos = 4;
 
-    Materias[31].Nombre = "Teoría de Sistemas";
-    Materias[31].Codigo = "IS5205";
-    Materias[31].Creditos = 2;
+    Materias[31].Nombre = "Programación III";
+    Materias[31].Codigo = "IC5244";
+    Materias[31].Creditos = 4;
 
     Materias[32].Nombre = "Electiva IV";
     Materias[32].Codigo = "IMEIV";
     Materias[32].Creditos = 2;
 
-    //Sexto Semestre
-    Materias[33].Nombre = "Arquitectura del Computador";
-    Materias[33].Codigo = "IC6322";
-    Materias[33].Creditos = 4;
+    Materias[33].Nombre = "Organización del Computador";
+    Materias[33].Codigo = "IC5422";
+    Materias[33].Creditos = 5;
 
-    Materias[34].Nombre = "Métodos Numéricos";
-    Materias[34].Codigo = "IM6243";
+    //Sexto Semestre
+    Materias[34].Nombre = "Investigación de Operaciones";
+    Materias[34].Codigo = "ID6241";
     Materias[34].Creditos = 4;
 
-    Materias[35].Nombre = "Investigación de Operaciones";
-    Materias[35].Codigo = "ID6241";
+    Materias[35].Nombre = "Arquitectura del Computador";
+    Materias[35].Codigo = "IC6322";
     Materias[35].Creditos = 4;
 
-    Materias[36].Nombre = "Ingeniería Económica";
-    Materias[36].Codigo = "ID6124";
-    Materias[36].Creditos = 2;
+    Materias[36].Nombre = "Sistemas de Información I";
+    Materias[36].Codigo = "IS6425";
+    Materias[36].Creditos = 5;
 
-    Materias[37].Nombre = "Sistemas de Información I";
-    Materias[37].Codigo = "IS6425";
-    Materias[37].Creditos = 5;
+    Materias[37].Nombre = "Métodos Numéricos";
+    Materias[37].Codigo = "IM6243";
+    Materias[37].Creditos = 4;
 
-    Materias[38].Nombre = "Electiva V";
-    Materias[38].Codigo = "IMEV";
+    Materias[38].Nombre = "Ingeniería Económica";
+    Materias[38].Codigo = "ID6124";
     Materias[38].Creditos = 2;
 
-    //Séptimo Semestre
-    Materias[39].Nombre = "Sistemas Operativos";
-    Materias[39].Codigo = "IC7322";
-    Materias[39].Creditos = 4;
+    Materias[39].Nombre = "Electiva V";
+    Materias[39].Codigo = "IMEV";
+    Materias[39].Creditos = 2;
 
-    Materias[40].Nombre = "Control de Proyectos";
-    Materias[40].Codigo = "ID7322";
+    //Séptimo Semestre
+    Materias[40].Nombre = "Gestión Empresarial";
+    Materias[40].Codigo = "ID7323";
     Materias[40].Creditos = 4;
 
-    Materias[41].Nombre = "Gestión Empresarial";
-    Materias[41].Codigo = "ID7323";
+    Materias[41].Nombre = "Traductores e Interpretes";
+    Materias[41].Codigo = "IS7244";
     Materias[41].Creditos = 4;
 
-    Materias[42].Nombre = "Traductores e Interpretes";
-    Materias[42].Codigo = "IS7244";
+    Materias[42].Nombre = "Sistemas Operativos";
+    Materias[42].Codigo = "IC7322";
     Materias[42].Creditos = 4;
 
     Materias[43].Nombre = "Sistemas de Información II";
     Materias[43].Codigo = "IS7324";
     Materias[43].Creditos = 5;
 
-    //Octavo Semestre
-    Materias[44].Nombre = "Redes";
-    Materias[44].Codigo = "IT8241";
+    Materias[44].Nombre = "Control de Proyectos";
+    Materias[44].Codigo = "ID7322";
     Materias[44].Creditos = 4;
 
-    Materias[45].Nombre = "Pasantías";
-    Materias[45].Codigo = "ID8082";
+    //Octavo Semestre
+    Materias[45].Nombre = "Electiva de Área I";
+    Materias[45].Codigo = "EA";
     Materias[45].Creditos = 4;
 
-    Materias[46].Nombre = "Electiva de Área I";
-    Materias[46].Codigo = "EA";
+    Materias[46].Nombre = "Pasantías";
+    Materias[46].Codigo = "ID8082";
     Materias[46].Creditos = 4;
 
     Materias[47].Nombre = "Lenguajes de Programación";
@@ -213,51 +213,53 @@ Inicio
     Materias[48].Codigo = "IS8424";
     Materias[48].Creditos = 5;
 
-    //Noveno Semestre
-    Materias[49].Nombre = "Sistemas Distribuidos";
-    Materias[49].Codigo = "IT9241";
+    Materias[49].Nombre = "Redes";
+    Materias[49].Codigo = "IT8241";
     Materias[49].Creditos = 4;
 
-    Materias[50].Nombre = "Proyecto de Grado I";
-    Materias[50].Codigo = "PG9083";
+    //Noveno Semestre
+    Materias[50].Nombre = "Electiva Libre I";
+    Materias[50].Codigo = "EL9325";
     Materias[50].Creditos = 4;
 
-    Materias[51].Nombre = "Electiva de Área II";
-    Materias[51].Codigo = "EA0244";
+    Materias[51].Nombre = "Sistemas Distribuidos";
+    Materias[51].Codigo = "IT9241";
     Materias[51].Creditos = 4;
 
-    Materias[52].Nombre = "Electiva Libre I";
-    Materias[52].Codigo = "EL9325";
+    Materias[52].Nombre = "Electiva de Área II";
+    Materias[52].Codigo = "EA9244";
     Materias[52].Creditos = 4;
 
     Materias[53].Nombre = "Ética Profesional";
     Materias[53].Codigo = "IH9202";
     Materias[53].Creditos = 2;
 
-    Materias[54].Nombre = "Deportes";
-    Materias[54].Codigo = "DP0001";
-    Materias[54].Creditos = 2;
+    Materias[54].Nombre = "Proyecto de Grado I";
+    Materias[54].Codigo = "PG9083";
+    Materias[54].Creditos = 4;
+
 
     //Décimo Semestre
-    Materias[55].Nombre = "Gerencia de Proyectos";
-    Materias[55].Codigo = "ID0221";
-    Materias[55].Creditos = 3;
+    Materias[55].Nombre = "Electiva de Área III";
+    Materias[55].Codigo = "EA0244";
+    Materias[55].Creditos = 4;
 
-    Materias[56].Nombre = "Proyecto de Grado II";
-    Materias[56].Codigo = "PG0083";
-    Materias[56].Creditos = 4;
+    Materias[56].Nombre = "Electiva Libre II";
+    Materias[56].Codigo = "EL";
+    Materias[56].Creditos = 3;
 
-    Materias[57].Nombre = "Electiva de Área III";
-    Materias[57].Codigo = "EA9244";
+    Materias[57].Nombre = "Proyecto de Grado II";
+    Materias[57].Codigo = "PG0083";
     Materias[57].Creditos = 4;
 
-    Materias[58].Nombre = "Electiva Libre II";
-    Materias[58].Codigo = "EL";
+    Materias[58].Nombre = "Informática Educativa";
+    Materias[58].Codigo = "IS0222";
     Materias[58].Creditos = 3;
 
-    Materias[59].Nombre = "Informática Educativa";
-    Materias[59].Codigo = "IS0222";
+    Materias[59].Nombre = "Gerencia de Proyectos";
+    Materias[59].Codigo = "ID0221";
     Materias[59].Creditos = 3;
+
 
     //Civil (57)
     //Primer Semestre
@@ -513,7 +515,7 @@ Inicio
     Materias[120].Creditos = 3;
 
     Materias[121].Nombre = "Matemática I";
-    Materias[121].Codigo = "MAT184";
+    Materias[121].Codigo = "MAT164";
     Materias[121].Creditos = 4;
 
     Materias[122].Nombre = "Ingles Técnico";
@@ -538,7 +540,7 @@ Inicio
     Materias[126].Creditos = 2;
 
     Materias[127].Nombre = "Matemática II";
-    Materias[127].Codigo = "MAT284";
+    Materias[127].Codigo = "MAT264";
     Materias[127].Creditos = 4;
 
     Materias[128].Nombre = "Física I";
@@ -546,7 +548,7 @@ Inicio
     Materias[128].Creditos = 4;
 
     Materias[129].Nombre = "Química Orgánica";
-    Materias[129].Codigo = "QUO263";
+    Materias[129].Codigo = "QUO273";
     Materias[129].Creditos = 4;
 
     Materias[130].Nombre = "Formación Socio Política II";
@@ -579,7 +581,7 @@ Inicio
     Materias[136].Creditos = 4;
 
     Materias[137].Nombre = "Matemática III";
-    Materias[137].Codigo = "MAT384";
+    Materias[137].Codigo = "MAT364";
     Materias[137].Creditos = 4;
 
     Materias[138].Nombre = "Laboratorio de Física";
@@ -604,7 +606,7 @@ Inicio
     Materias[142].Creditos = 4;
 
     Materias[143].Nombre = "Termodinámica General y Aplicada";
-    Materias[143].Codigo = "TGA644";
+    Materias[143].Codigo = "TGA444";
     Materias[143].Creditos = 4;
 
     Materias[144].Nombre = "Caracterización Física de los Yacimientos";
@@ -661,7 +663,7 @@ Inicio
     Materias[156].Codigo = "PEP634";
     Materias[156].Creditos = 3;
 
-    Materias[157].Nombre = "Competación de Pozos";
+    Materias[157].Nombre = "Completación de Pozos";
     Materias[157].Codigo = "COP634";
     Materias[157].Creditos = 3;
 
@@ -712,7 +714,7 @@ Inicio
     Materias[168].Creditos = 2;
 
     Materias[169].Nombre = "Ingeniería de Producción II";
-    Materias[169].Codigo = "INP644";
+    Materias[169].Codigo = "INP844";
     Materias[169].Creditos = 4;
 
     Materias[170].Nombre = "Simulación Numérica de Yacimientos";
@@ -736,208 +738,208 @@ Inicio
     //Primer Año
     Materias[174].Nombre = "Histología Embriología y Genética";
     Materias[174].Codigo = "MG5107";
-    Materias[174].Creditos = 4;
+    Materias[174].Creditos = 10;
 
-    Materias[175].Nombre = "Bioética I";
-    Materias[175].Codigo = "MG5702";
-    Materias[175].Creditos = 0;
+    Materias[175].Nombre = "Anatomía Humana";
+    Materias[175].Codigo = "MG5106";
+    Materias[175].Creditos = 10;
 
-    Materias[176].Nombre = "Medicina General I";
-    Materias[176].Codigo = "MG5701";
-    Materias[176].Creditos = 2;
+    Materias[176].Nombre = "Medicina Preventiva, Comunitaria y Familiar I";
+    Materias[176].Codigo = "MG5304";
+    Materias[176].Creditos = 4;
 
     Materias[177].Nombre = "Deportes, Arte y Cultura";
     Materias[177].Codigo = "MG5812";
-    Materias[177].Creditos = 2;
+    Materias[177].Creditos = 3;
 
     Materias[178].Nombre = "Metodología de la Investigación Científica";
     Materias[178].Codigo = "MG5310";
-    Materias[178].Creditos = 2;
+    Materias[178].Creditos = 3;
 
-    Materias[179].Nombre = "Ingles Instrumental";
-    Materias[179].Codigo = "MG5809";
+    Materias[179].Nombre = "Bioética I";
+    Materias[179].Codigo = "MG5702";
     Materias[179].Creditos = 2;
 
-    Materias[180].Nombre = "Medicina Preventiva, Comunitaria y Familiar I";
-    Materias[180].Codigo = "MG5304";
+    Materias[180].Nombre = "Historia de la Medicina";
+    Materias[180].Codigo = "MG5508";
     Materias[180].Creditos = 2;
 
-    Materias[181].Nombre = "Anatomía Humana";
-    Materias[181].Codigo = "MG5106";
-    Materias[181].Creditos = 3;
+    Materias[181].Nombre = "Antropología";
+    Materias[181].Codigo = "MG5411";
+    Materias[181].Creditos = 2;
 
-    Materias[182].Nombre = "Historia de la Medicina";
-    Materias[182].Codigo = "MG5508";
-    Materias[182].Creditos = 1;
+    Materias[182].Nombre = "Ingles Instrumental";
+    Materias[182].Codigo = "MG5809";
+    Materias[182].Creditos = 3;
 
-    Materias[183].Nombre = "Antropología";
-    Materias[183].Codigo = "MG5411";
-    Materias[183].Creditos = 2;
+    Materias[183].Nombre = "Medicina General I";
+    Materias[183].Codigo = "MG5701";
+    Materias[183].Creditos = 6;
 
     //Segundo Año
-    Materias[184].Nombre = "Microbiología";
-    Materias[184].Codigo = "MG5516";
-    Materias[184].Creditos = 3;
+    Materias[184].Nombre = "Medicina Preventiva, Comunitaria y Familiar II";
+    Materias[184].Codigo = "MG5115";
+    Materias[184].Creditos = 4;
 
-    Materias[185].Nombre = "Deportes, Arte y Cultura II";
-    Materias[185].Codigo = "MG0012";
-    Materias[185].Creditos = 2;
+    Materias[185].Nombre = "Psicología y Sociología Gral";
+    Materias[185].Codigo = "MG5220";
+    Materias[185].Creditos = 4;
 
-    Materias[186].Nombre = "Bioquímica";
-    Materias[186].Codigo = "MG5418";
-    Materias[186].Creditos = 4;
+    Materias[186].Nombre = "Microbiología";
+    Materias[186].Codigo = "MG5516";
+    Materias[186].Creditos = 7;
 
-    Materias[187].Nombre = "Medicina General II";
-    Materias[187].Codigo = "MG5714";
+    Materias[187].Nombre = "Informática";
+    Materias[187].Codigo = "MG5119";
     Materias[187].Creditos = 3;
 
-    Materias[188].Nombre = "Psicología y Sociología Gral";
-    Materias[188].Codigo = "MG5220";
-    Materias[188].Creditos = 2;
+    Materias[188].Nombre = "Fisiología y Biofísica";
+    Materias[188].Codigo = "MG5417";
+    Materias[188].Creditos = 10;
 
-    Materias[189].Nombre = "Estadística y Demografía Médica II";
-    Materias[189].Codigo = "MG5324";
-    Materias[189].Creditos = 2;
+    Materias[189].Nombre = "Deportes, Arte y Cultura II";
+    Materias[189].Codigo = "MG0012";
+    Materias[189].Creditos = 3;
 
-    Materias[190].Nombre = "Fisiología y Biofísica";
-    Materias[190].Codigo = "MG5417";
-    Materias[190].Creditos = 4;
+    Materias[190].Nombre = "Bioquímica";
+    Materias[190].Codigo = "MG5418";
+    Materias[190].Creditos = 9;
 
-    Materias[191].Nombre = "Informática";
-    Materias[191].Codigo = "MG5119";
-    Materias[191].Creditos = 2;
+    Materias[191].Nombre = "Medicina General II";
+    Materias[191].Codigo = "MG5714";
+    Materias[191].Creditos = 6;
 
-    Materias[192].Nombre = "Medicina Preventiva, Comunitaria y Familiar II";
-    Materias[192].Codigo = "MG5115";
-    Materias[192].Creditos = 2;
+    Materias[192].Nombre = "Estadística y Demografía Médica II";
+    Materias[192].Codigo = "MG5324";
+    Materias[192].Creditos = 3;
 
     //Tercer Año
-    Materias[193].Nombre = "Derecho Constitucional";
-    Materias[193].Codigo = "MG5245";
-    Materias[193].Creditos = 2;
+    Materias[193].Nombre = "Medicina Preventiva, Comunitaria y Familiar III";
+    Materias[193].Codigo = "MG5117";
+    Materias[193].Creditos = 5;
 
-    Materias[194].Nombre = "Medicina Preventiva, Comunitaria y Familiar III";
-    Materias[194].Codigo = "MG5117";
-    Materias[194].Creditos = 4;
+    Materias[194].Nombre = "Nutrición";
+    Materias[194].Codigo = "MG5429";
+    Materias[194].Creditos = 2;
 
-    Materias[195].Nombre = "Parasitología";
-    Materias[195].Codigo = "MG5521";
-    Materias[195].Creditos = 2;
+    Materias[195].Nombre = "Farmacología";
+    Materias[195].Codigo = "MG5722";
+    Materias[195].Creditos = 8;
 
-    Materias[196].Nombre = "Semiología Médico Quirúrgica";
-    Materias[196].Codigo = "MG5420";
-    Materias[196].Creditos = 4;
+    Materias[196].Nombre = "Derecho Constitucional";
+    Materias[196].Codigo = "MG5245";
+    Materias[196].Creditos = 2;
 
-    Materias[197].Nombre = "Farmacología";
-    Materias[197].Codigo = "MG5722";
-    Materias[197].Creditos = 4;
+    Materias[197].Nombre = "Medicina General III";
+    Materias[197].Codigo = "MG5716";
+    Materias[197].Creditos = 6;
 
-    Materias[198].Nombre = "Inteligencia Ética/Deontología Práctica Médica";
-    Materias[198].Codigo = "MG5641";
-    Materias[198].Creditos = 2;
+    Materias[198].Nombre = "Psicología Médica General";
+    Materias[198].Codigo = "MG5223";
+    Materias[198].Creditos = 4;
 
-    Materias[199].Nombre = "Fisiopatología";
-    Materias[199].Codigo = "MG5419";
-    Materias[199].Creditos = 4;
+    Materias[199].Nombre = "Semiología Médico Quirúrgica";
+    Materias[199].Codigo = "MG5420";
+    Materias[199].Creditos = 12;
 
-    Materias[200].Nombre = "Nutrición";
-    Materias[200].Codigo = "MG5429";
-    Materias[200].Creditos = 2;
+    Materias[200].Nombre = "Fisiopatología";
+    Materias[200].Codigo = "MG5419";
+    Materias[200].Creditos = 8;
 
-    Materias[201].Nombre = "Psicología Médica General";
-    Materias[201].Codigo = "MG5223";
-    Materias[201].Creditos = 2;
+    Materias[201].Nombre = "Parasitología";
+    Materias[201].Codigo = "MG5521";
+    Materias[201].Creditos = 4;
 
-    Materias[202].Nombre = "Medicina General III";
-    Materias[202].Codigo = "MG5716";
-    Materias[202].Creditos = 2;
+    Materias[202].Nombre = "Inteligencia Ética/Deontología Práctica Médica";
+    Materias[202].Codigo = "MG5641";
+    Materias[202].Creditos = 3;
 
     //Cuarto Año
-    Materias[203].Nombre = "Psicopatología";
-    Materias[203].Codigo = "MG0001";
-    Materias[203].Creditos = 2;
+    Materias[203].Nombre = "Medicina General IV";
+    Materias[203].Codigo = "MG5724";
+    Materias[203].Creditos = 6;
+    
+    Materias[204].Nombre = "Clínica Quirúrgica I";
+    Materias[204].Codigo = "MG5729";
+    Materias[204].Creditos = 10;
 
-    Materias[204].Nombre = "Clínica Obstetrica y Ginecología I";
-    Materias[204].Codigo = "MG5727";
-    Materias[204].Creditos = 3;
-
-    Materias[205].Nombre = "Clínica Quirúrgica I";
-    Materias[205].Codigo = "MG5729";
+    Materias[205].Nombre = "Anatomía Patológica";
+    Materias[205].Codigo = "MG5326";
     Materias[205].Creditos = 3;
 
-    Materias[206].Nombre = "Clínica Pediátrica I";
-    Materias[206].Codigo = "MG5728";
-    Materias[206].Creditos = 3;
+    Materias[206].Nombre = "Medicina Preventiva Comunitaria y Familiar IV";
+    Materias[206].Codigo = "MG5125";
+    Materias[206].Creditos = 4;
 
-    Materias[207].Nombre = "Anatomía Patológica";
-    Materias[207].Codigo = "MG5326";
-    Materias[207].Creditos = 3;
+    Materias[207].Nombre = "Clínica Obstetrica y Ginecología I";
+    Materias[207].Codigo = "MG5727";
+    Materias[207].Creditos = 10;
 
-    Materias[208].Nombre = "Medicina Preventiva Comunitaria y Familiar IV";
-    Materias[208].Codigo = "MG5125";
-    Materias[208].Creditos = 2;
+    Materias[208].Nombre = "Clínica Médica I";
+    Materias[208].Codigo = "MG0003";
+    Materias[208].Creditos = 10;
 
-    Materias[209].Nombre = "Medicina General IV";
-    Materias[209].Codigo = "MG5724";
-    Materias[209].Creditos = 3;
+    Materias[209].Nombre = "Clínica Pediátrica I";
+    Materias[209].Codigo = "MG5728";
+    Materias[209].Creditos = 10;
 
-    Materias[210].Nombre = "Clínica Médica I";
-    Materias[210].Codigo = "MG0003";
-    Materias[210].Creditos = 3;
+    Materias[210].Nombre = "Psicopatología";
+    Materias[210].Codigo = "MG0001";
+    Materias[210].Creditos = 5;
 
     //Quinto Año
-    Materias[211].Nombre = "Clínica Quirúrgica II";
-    Materias[211].Codigo = "MG5736";
-    Materias[211].Creditos = 3;
+    Materias[211].Nombre = "Clínica Pediátrica II";
+    Materias[211].Codigo = "MG5735";
+    Materias[211].Creditos = 12;
 
-    Materias[212].Nombre = "Medicina General V";
-    Materias[212].Codigo = "MG5731";
-    Materias[212].Creditos = 2;
+    Materias[212].Nombre = "Clínica Médica II";
+    Materias[212].Codigo = "MG0005";
+    Materias[212].Creditos = 12;
 
-    Materias[213].Nombre = "Clínica Pediátrica II";
-    Materias[213].Codigo = "MG5735";
+    Materias[213].Nombre = "Clínica Obstetrica y Ginecológica II";
+    Materias[213].Codigo = "MG5734";
     Materias[213].Creditos = 3;
 
-    Materias[214].Nombre = "Medicina Legal";
-    Materias[214].Codigo = "MG5633";
-    Materias[214].Creditos = 2;
+    Materias[214].Nombre = "Clínica Psiquiátrica";
+    Materias[214].Codigo = "MG5238";
+    Materias[214].Creditos = 8;
 
-    Materias[215].Nombre = "Medicina Preventiva, Comunitaria y Familiar V";
-    Materias[215].Codigo = "MG5132";
-    Materias[215].Creditos = 2;
+    Materias[215].Nombre = "Medicina Legal";
+    Materias[215].Codigo = "MG5633";
+    Materias[215].Creditos = 5;
 
-    Materias[216].Nombre = "Clínica Psiquiátrica";
-    Materias[216].Codigo = "MG5238";
-    Materias[216].Creditos = 3;
+    Materias[216].Nombre = "Medicina General V";
+    Materias[216].Codigo = "MG5731";
+    Materias[216].Creditos = 6;
 
-    Materias[217].Nombre = "Clínica Obstetrica y Ginecológica II";
-    Materias[217].Codigo = "MG5734";
-    Materias[217].Creditos = 3;
+    Materias[217].Nombre = "Medicina Preventiva, Comunitaria y Familiar V";
+    Materias[217].Codigo = "MG5132";
+    Materias[217].Creditos = 4;
 
-    Materias[218].Nombre = "Clínica Médica II";
-    Materias[218].Codigo = "MG0005";
-    Materias[218].Creditos = 3;
+    Materias[218].Nombre = "Clínica Quirúrgica II";
+    Materias[218].Codigo = "MG5736";
+    Materias[218].Creditos = 12;
 
     //Sexto Año
-    Materias[219].Nombre = "Internado Rural";
-    Materias[219].Codigo = "MG0006";
-    Materias[219].Creditos = 3;
+    Materias[219].Nombre = "Clínica Pediátrica III";
+    Materias[219].Codigo = "MG0008";
+    Materias[219].Creditos = 14;
 
     Materias[220].Nombre = "Clínica Médica III";
     Materias[220].Codigo = "MG0007";
-    Materias[220].Creditos = 3;
+    Materias[220].Creditos = 14;
 
-    Materias[221].Nombre = "Clínica Quirúrgica III";
-    Materias[221].Codigo = "MG0010";
+    Materias[221].Nombre = "Clínica Obstetrica III";
+    Materias[221].Codigo = "MG0009";
     Materias[221].Creditos = 3;
 
-    Materias[222].Nombre = "Clínica Obstetrica III";
-    Materias[222].Codigo = "MG0009";
-    Materias[222].Creditos = 3;
+    Materias[222].Nombre = "Clínica Quirúrgica III";
+    Materias[222].Codigo = "MG0010";
+    Materias[222].Creditos = 14;
 
-    Materias[223].Nombre = "Clínica Pediátrica III";
-    Materias[223].Codigo = "MG0008";
-    Materias[223].Creditos = 3;
+    Materias[223].Nombre = "Internado Rural";
+    Materias[223].Codigo = "MG0006";
+    Materias[223].Creditos = 14;
 
     Materias[224].Nombre = "Trabajo de Grado";
     Materias[224].Codigo = "MG5143";
@@ -1086,1128 +1088,1107 @@ Inicio
     Materias[258].Codigo = "OD4231";
     Materias[258].Creditos = 1;
 
-    //Veterinaria (46)
+    //Veterinaria (43)
     //Primer Año
-    Materias[259].Nombre = "Faenas Pecuarias";
-    Materias[259].Codigo = "MV1007";
-    Materias[259].Creditos = 0;
+    Materias[259].Nombre = "Computación";
+    Materias[259].Codigo = "MV1004";
+    Materias[259].Creditos = 1;
 
-    Materias[260].Nombre = "Ingles Instrumental";
-    Materias[260].Codigo = "MV1008";
-    Materias[260].Creditos = 0;
+    Materias[260].Nombre = "Educación Física y Deportes";
+    Materias[260].Codigo = "MV1005";
+    Materias[260].Creditos = 2;
 
-    Materias[261].Nombre = "Ecología Agrícola";
-    Materias[261].Codigo = "MV1006";
-    Materias[261].Creditos = 0;
+    Materias[261].Nombre = "Análisis del Perfil Profesional";
+    Materias[261].Codigo = "MV1002";
+    Materias[261].Creditos = 1;
 
-    Materias[262].Nombre = "Análisis del Perfil Profesional";
-    Materias[262].Codigo = "MV1002";
-    Materias[262].Creditos = 0;
+    Materias[262].Nombre = "Ecología Agrícola";
+    Materias[262].Codigo = "MV1006";
+    Materias[262].Creditos = 2;
 
-    Materias[263].Nombre = "Educación Física y Deportes";
-    Materias[263].Codigo = "MV1005";
-    Materias[263].Creditos = 0;
+    Materias[263].Nombre = "Ingles Instrumental";
+    Materias[263].Codigo = "MV1008";
+    Materias[263].Creditos = 4;
 
-    Materias[264].Nombre = "Bioquímica";
-    Materias[264].Codigo = "MV1003";
-    Materias[264].Creditos = 0;
+    Materias[264].Nombre = "Anatomía de los Animales Domesticos";
+    Materias[264].Codigo = "MV1001";
+    Materias[264].Creditos = 6;
 
-    Materias[265].Nombre = "Computación";
-    Materias[265].Codigo = "MV1004";
-    Materias[265].Creditos = 0;
+    Materias[265].Nombre = "Faenas Pecuarias";
+    Materias[265].Codigo = "MV1007";
+    Materias[265].Creditos = 3;
 
-    Materias[266].Nombre = "Zoología";
-    Materias[266].Codigo = "MV1009";
-    Materias[266].Creditos = 0;
+    Materias[266].Nombre = "Bioquímica";
+    Materias[266].Codigo = "MV1003";
+    Materias[266].Creditos = 6;
 
-    Materias[267].Nombre = "Anatomía de los Animales Domesticos";
-    Materias[267].Codigo = "MV1001";
-    Materias[267].Creditos = ;
+    Materias[267].Nombre = "Electiva Complementaria";
+    Materias[267].Codigo = "MV1010";
+    Materias[267].Creditos = 1;
+
+    Materias[268].Nombre = "Zoología";
+    Materias[268].Codigo = "MV1009";
+    Materias[268].Creditos = 3;
 
     //Segundo Año
-    Materias[268].Nombre = "Histología Veterinaria";
-    Materias[268].Codigo = "MV2004";
-    Materias[268].Creditos = 0;
+    Materias[269].Nombre = "Histología Veterinaria";
+    Materias[269].Codigo = "MV2004";
+    Materias[269].Creditos = 3;
 
-    Materias[269].Nombre = "Arte y Cultura";
-    Materias[269].Codigo = "MV2007";
-    Materias[269].Creditos = 0;
-
-    Materias[270].Nombre = "Bioestadística";
-    Materias[270].Codigo = "MV2001";
-    Materias[270].Creditos = 0;
+    Materias[270].Nombre = "Microbiología";
+    Materias[270].Codigo = "MV2005";
+    Materias[270].Creditos = 6;
 
     Materias[271].Nombre = "Genética";
     Materias[271].Codigo = "MV2003";
-    Materias[271].Creditos = 0;
+    Materias[271].Creditos = 2;
 
-    Materias[272].Nombre = "Fisiología Animal";
-    Materias[272].Codigo = "MV2002";
-    Materias[272].Creditos = 0;
+    Materias[272].Nombre = "Zootecnia";
+    Materias[272].Codigo = "MV2006";
+    Materias[272].Creditos = 5;
 
-    Materias[273].Nombre = "Zootecnia";
-    Materias[273].Codigo = "MV2006";
-    Materias[273].Creditos = 0;
+    Materias[273].Nombre = "Bioestadística";
+    Materias[273].Codigo = "MV2001";
+    Materias[273].Creditos = 2;
 
-    Materias[274].Nombre = "Microbiología";
-    Materias[274].Codigo = "MV2005";
-    Materias[274].Creditos = 0;
+    Materias[274].Nombre = "Arte y Cultura";
+    Materias[274].Codigo = "MV2007";
+    Materias[274].Creditos = 1;
+
+    Materias[275].Nombre = "Fisiología Animal";
+    Materias[275].Codigo = "MV2002";
+    Materias[275].Creditos = 3;
+
 
     //Tercer Año
-    Materias[275].Nombre = "Patología Clínica Veterinaria";
-    Materias[275].Codigo = "MV3005";
-    Materias[275].Creditos = 0;
+    Materias[276].Nombre = "Patología Clínica Veterinaria";
+    Materias[276].Codigo = "MV3005";
+    Materias[276].Creditos = 3;
 
-    Materias[276].Nombre = "Farmacología Veterinaria";
-    Materias[276].Codigo = "MV3002";
-    Materias[276].Creditos = 0;
+    Materias[277].Nombre = "Reproducción Animal";
+    Materias[277].Codigo = "MV3006";
+    Materias[277].Creditos = 6;
 
-    Materias[277].Nombre = "Semiología Veterinaria";
-    Materias[277].Codigo = "MV3007";
-    Materias[277].Creditos = 0;
+    Materias[278].Nombre = "Farmacología Veterinaria";
+    Materias[278].Codigo = "MV3002";
+    Materias[278].Creditos = 6;
 
-    Materias[278].Nombre = "Nutrición y Alimentación Animal";
-    Materias[278].Codigo = "MV3003";
-    Materias[278].Creditos = 0;
+    Materias[279].Nombre = "Semiología Veterinaria";
+    Materias[279].Codigo = "MV3007";
+    Materias[279].Creditos = 3;
 
-    Materias[279].Nombre = "Reproducción Animal";
-    Materias[279].Codigo = "MV3006";
-    Materias[279].Creditos = 0;
+    Materias[280].Nombre = "Nutrición y Alimentación Animal";
+    Materias[280].Codigo = "MV3003";
+    Materias[280].Creditos = 2;
 
-    Materias[280].Nombre = "Parasitología Veterinaria";
-    Materias[280].Codigo = "MV3004";
-    Materias[280].Creditos = 0;
+    Materias[281].Nombre = "Parasitología Veterinaria";
+    Materias[281].Codigo = "MV3004";
+    Materias[281].Creditos = 3;
 
-    Materias[281].Nombre = "Anatomía Patológica Veterinaria";
-    Materias[281].Codigo = "MV3001";
-    Materias[281].Creditos = 0;
+    Materias[282].Nombre = "Anatomía Patológica Veterinaria";
+    Materias[282].Codigo = "MV3001";
+    Materias[282].Creditos = 3;
 
     //Cuarto Año
-    Materias[282].Nombre = "Gerencia de Servicio Veterinaria";
-    Materias[282].Codigo = "MV4002";
-    Materias[282].Creditos = 0;
+    Materias[283].Nombre = "Investigación Veterinaria I";
+    Materias[283].Codigo = "MV4003";
+    Materias[283].Creditos = 3;
 
-    Materias[283].Nombre = "Saneamiento Ambiental";
-    Materias[283].Codigo = "MV4007";
-    Materias[283].Creditos = 0;
+    Materias[284].Nombre = "Medicina de Caninos y Felinos";
+    Materias[284].Codigo = "MV4006";
+    Materias[284].Creditos = 3;
 
-    Materias[284].Nombre = "Medicina de Rumiantes y Equino";
-    Materias[284].Codigo = "MV4005";
-    Materias[284].Creditos = 0;
+    Materias[285].Nombre = "Gerencia de Servicio Veterinaria";
+    Materias[285].Codigo = "MV4002";
+    Materias[285].Creditos = 2;
 
-    Materias[285].Nombre = "Mejoramiento Animal";
-    Materias[285].Codigo = "MV4004";
-    Materias[285].Creditos = 0;
+    Materias[286].Nombre = "Mejoramiento Animal";
+    Materias[286].Codigo = "MV4004";
+    Materias[286].Creditos = 2;
 
-    Materias[286].Nombre = "Medicina de Caninos y Felinos";
-    Materias[286].Codigo = "MV4006";
-    Materias[286].Creditos = 0;
+    Materias[287].Nombre = "Medicina de Rumiantes y Equino";
+    Materias[287].Codigo = "MV4005";
+    Materias[287].Creditos = 6;
 
-    Materias[287].Nombre = "Investigación Veterinaria I";
-    Materias[287].Codigo = "MV4003";
-    Materias[287].Creditos = 0;
+    Materias[288].Nombre = "Cirugía Veterinaria";
+    Materias[288].Codigo = "MV4001";
+    Materias[288].Creditos = 6;
 
-    Materias[288].Nombre = "Extensión Profesional I";
-    Materias[288].Codigo = "MV4008";
-    Materias[288].Creditos = 0;
+    Materias[289].Nombre = "Saneamiento Ambiental";
+    Materias[289].Codigo = "MV4007";
+    Materias[289].Creditos = 2;
 
-    Materias[289].Nombre = "Cirugía Veterinaria";
-    Materias[289].Codigo = "MV4001";
-    Materias[289].Creditos = 0;
+    Materias[290].Nombre = "Extensión Profesional I";
+    Materias[290].Codigo = "MV4008";
+    Materias[290].Creditos = 2;
 
     //Quinto Año
-    Materias[290].Nombre = "Servicio Comunitario";
-    Materias[290].Codigo = "MV5111";
-    Materias[290].Creditos = 0;
-
     Materias[291].Nombre = "Medicina Preventiva y Clínica Hospitalaria";
     Materias[291].Codigo = "MV5006";
-    Materias[291].Creditos = 0;
+    Materias[291].Creditos = 2;
 
-    Materias[292].Nombre = "Extensión Profesional II";
-    Materias[292].Codigo = "MV5009";
-    Materias[292].Creditos = 0;
+    Materias[292].Nombre = "Proceso de Producción Ind e Inp San";
+    Materias[292].Codigo = "MV5007";
+    Materias[292].Creditos = 3;
 
-    Materias[293].Nombre = "Investigación Veterinaria II";
-    Materias[293].Codigo = "MV5002";
-    Materias[293].Creditos = 0;
+    Materias[293].Nombre = "Derecho Constitucional";
+    Materias[293].Codigo = "MV5010";
+    Materias[293].Creditos = 1;
 
-    Materias[294].Nombre = "Medicina, Conejo, Peces, Especies Silvestres Laboratorio";
-    Materias[294].Codigo = "MV5005";
-    Materias[294].Creditos = 0;
+    Materias[294].Nombre = "Medicina de Suinos y Aves";
+    Materias[294].Codigo = "MV5004";
+    Materias[294].Creditos = 6;
 
-    Materias[295].Nombre = "Legislación y Deontología Veterinaria";
-    Materias[295].Codigo = "MV5003";
-    Materias[295].Creditos = 0;
+    Materias[295].Nombre = "Medicina, Conejo, Peces, Especies Silvestres Laboratorio";
+    Materias[295].Codigo = "MV5005";
+    Materias[295].Creditos = 3;
 
-    Materias[296].Nombre = "Proceso de Producción Ind e Inp San";
-    Materias[296].Codigo = "MV5007";
-    Materias[296].Creditos = 0;
+    Materias[296].Nombre = "Legislación y Deontología Veterinaria";
+    Materias[296].Codigo = "MV5003";
+    Materias[296].Creditos = 1;
 
-    Materias[297].Nombre = "Derecho Constitucional";
-    Materias[297].Codigo = "MV5110";
+    Materias[297].Nombre = "Servicio Comunitario";
+    Materias[297].Codigo = "MV5011";
     Materias[297].Creditos = 0;
 
-    Materias[298].Nombre = "Epidemiología General";
-    Materias[298].Codigo = "MV5001";
-    Materias[298].Creditos = 0;
+    Materias[298].Nombre = "Pasantías Profesionales";
+    Materias[298].Codigo = "MV5008";
+    Materias[298].Creditos = 8;
 
-    Materias[299].Nombre = "Medicina de Suinos y Aves";
-    Materias[299].Codigo = "MV5004";
-    Materias[299].Creditos = 0;
+    Materias[299].Nombre = "Epidemiología General";
+    Materias[299].Codigo = "MV5001";
+    Materias[299].Creditos = 2;
 
-    Materias[300].Nombre = "Pasantías Profesionales";
-    Materias[300].Codigo = "MV5008";
-    Materias[300].Creditos = ;
+    Materias[300].Nombre = "Investigación Veterinaria II";
+    Materias[300].Codigo = "MV5002";
+    Materias[300].Creditos = 3;
 
-    //Sexto Año
-    Materias[301].Nombre = "Invitación del Patrimonio Cultural";
-    Materias[301].Codigo = "MV6017";
-    Materias[301].Creditos = 0;
+    Materias[301].Nombre = "Extensión Profesional II";
+    Materias[301].Codigo = "MV5009";
+    Materias[301].Creditos = 3;
 
-    Materias[302].Nombre = "Ortografía y Redacción";
-    Materias[302].Codigo = "MV6025";
-    Materias[302].Creditos = 0;
-
-    Materias[303].Nombre = "Música Coral";
-    Materias[303].Codigo = "MV6023";
-    Materias[303].Creditos = 0;
-
-    Materias[304].Nombre = "Probabilidad y Organización Especial del Agro Venezolano";
-    Materias[304].Codigo = "MV6009";
-    Materias[304].Creditos = 0;
-
-    //Derecho (56)
+    //Derecho (54)
     //Primer Año
-    Materias[305].Nombre = "Derecho Civil I";
-    Materias[305].Codigo = "DCI101";
+    Materias[302].Nombre = "Derecho Civil I";
+    Materias[302].Codigo = "DCI101";
+    Materias[302].Creditos = 2;
+
+    Materias[303].Nombre = "Derecho Constitucional";
+    Materias[303].Codigo = "DCO121";
+    Materias[303].Creditos = 2;
+
+    Materias[304].Nombre = "Pensamiento Bolivariano";
+    Materias[304].Codigo = "PBO151";
+    Materias[304].Creditos = 2;
+
+    Materias[305].Nombre = "Introducción al Derecho";
+    Materias[305].Codigo = "IDN161";
     Materias[305].Creditos = 2;
 
-    Materias[306].Nombre = "Derecho Constitucional";
-    Materias[306].Codigo = "DCO121";
+    Materias[306].Nombre = "Economía Política";
+    Materias[306].Codigo = "EPO171";
     Materias[306].Creditos = 2;
 
-    Materias[307].Nombre = "Pensamiento Bolivariano";
-    Materias[307].Codigo = "PBO151";
+    Materias[307].Nombre = "Métodos de Investigación Jurídica";
+    Materias[307].Codigo = "MIJ181";
     Materias[307].Creditos = 2;
 
-    Materias[308].Nombre = "Introducción al Derecho";
-    Materias[308].Codigo = "IDN161";
+    Materias[308].Nombre = "Derecho Popular";
+    Materias[308].Codigo = "DEP191";
     Materias[308].Creditos = 2;
 
-    Materias[309].Nombre = "Economía Política";
-    Materias[309].Codigo = "EPO171";
+    Materias[309].Nombre = "Derecho Romano";
+    Materias[309].Codigo = "DRO110";
     Materias[309].Creditos = 2;
 
-    Materias[310].Nombre = "Métodos de Investigación Jurídica";
-    Materias[310].Codigo = "MIJ181";
+    Materias[310].Nombre = "Lógica Jurídica";
+    Materias[310].Codigo = "LJU111";
     Materias[310].Creditos = 2;
 
-    Materias[311].Nombre = "Derecho Popular";
-    Materias[311].Codigo = "DEP191";
+    Materias[311].Nombre = "Deontología Jurídica";
+    Materias[311].Codigo = "DJU112";
     Materias[311].Creditos = 2;
 
-    Materias[312].Nombre = "Derecho Romano";
-    Materias[312].Codigo = "DRO110";
+    Materias[312].Nombre = "Arte y Cultura";
+    Materias[312].Codigo = "ACU141";
     Materias[312].Creditos = 2;
 
-    Materias[313].Nombre = "Lógica Jurídica";
-    Materias[313].Codigo = "LJU111";
+    Materias[313].Nombre = "Deporte";
+    Materias[313].Codigo = "DDP131";
     Materias[313].Creditos = 2;
 
-    Materias[314].Nombre = "Deontología Jurídica";
-    Materias[314].Codigo = "DJU112";
+    //Segundo Año
+    Materias[314].Nombre = "Derecho Agrario";
+    Materias[314].Codigo = "DAG237";
     Materias[314].Creditos = 2;
 
-    Materias[315].Nombre = "Arte y Cultura";
-    Materias[315].Codigo = "ACU141";
+    Materias[315].Nombre = "Derecho Ambiental";
+    Materias[315].Codigo = "DEA235";
     Materias[315].Creditos = 2;
 
-    Materias[316].Nombre = "Deporte";
-    Materias[316].Codigo = "DDP131";
+    Materias[316].Nombre = "Medicina Legal";
+    Materias[316].Codigo = "MLE233";
     Materias[316].Creditos = 2;
 
-    //Segundo Año
-    Materias[317].Nombre = "Derecho Agrario";
-    Materias[317].Codigo = "DAG237";
+    Materias[317].Nombre = "Criminología";
+    Materias[317].Codigo = "CRL234";
     Materias[317].Creditos = 2;
 
-    Materias[318].Nombre = "Derecho Ambiental";
-    Materias[318].Codigo = "DEA235";
+    Materias[318].Nombre = "Derecho Penal I";
+    Materias[318].Codigo = "DEP222";
     Materias[318].Creditos = 2;
 
-    Materias[319].Nombre = "Medicina Legal";
-    Materias[319].Codigo = "MLE233";
+    Materias[319].Nombre = "Filosofía del Derecho";
+    Materias[319].Codigo = "FID236";
     Materias[319].Creditos = 2;
 
-    Materias[320].Nombre = "Criminología";
-    Materias[320].Codigo = "CRL234";
+    Materias[320].Nombre = "Derecho Registral";
+    Materias[320].Codigo = "DRE238";
     Materias[320].Creditos = 2;
 
-    Materias[321].Nombre = "Derecho Penal I";
-    Materias[321].Codigo = "DEP222";
+    Materias[321].Nombre = "Proyecto Socio Jurídico Comunitario I";
+    Materias[321].Codigo = "PSJ239";
     Materias[321].Creditos = 2;
 
-    Materias[322].Nombre = "Filosofía del Derecho";
-    Materias[322].Codigo = "FID236";
+    Materias[322].Nombre = "Derecho Civil II";
+    Materias[322].Codigo = "DCI202";
     Materias[322].Creditos = 2;
 
-    Materias[323].Nombre = "Derecho Registral";
-    Materias[323].Codigo = "DRE238";
+    Materias[323].Nombre = "Prácticas Jurídicas I";
+    Materias[323].Codigo = "PJU240";
     Materias[323].Creditos = 2;
 
-    Materias[324].Nombre = "Proyecto Socio Jurídico Comunitario I";
-    Materias[324].Codigo = "PSJ239";
+    Materias[324].Nombre = "Electiva I";
+    Materias[324].Codigo = "ELT241";
     Materias[324].Creditos = 2;
 
-    Materias[325].Nombre = "Derecho Civil II";
-    Materias[325].Codigo = "DCI202";
+    //Tercer Año
+    Materias[325].Nombre = "Derecho Administrativo";
+    Materias[325].Codigo = "DAD323";
     Materias[325].Creditos = 2;
 
-    Materias[326].Nombre = "Prácticas Jurídicas I";
-    Materias[326].Codigo = "PJU240";
+    Materias[326].Nombre = "Derecho Penal II";
+    Materias[326].Codigo = "DEP333";
     Materias[326].Creditos = 2;
 
-    Materias[327].Nombre = "Electiva I";
-    Materias[327].Codigo = "ELT241";
+    Materias[327].Nombre = "Derecho Laboral";
+    Materias[327].Codigo = "DLA343";
     Materias[327].Creditos = 2;
 
-    //Tercer Año
-    Materias[328].Nombre = "Derecho Administrativo";
-    Materias[328].Codigo = "DAD323";
+    Materias[328].Nombre = "Derecho Familiar";
+    Materias[328].Codigo = "DDF353";
     Materias[328].Creditos = 2;
 
-    Materias[329].Nombre = "Derecho Penal II";
-    Materias[329].Codigo = "DEP333";
+    Materias[329].Nombre = "Obligaciones I";
+    Materias[329].Codigo = "OBL363";
     Materias[329].Creditos = 2;
 
-    Materias[330].Nombre = "Derecho Laboral";
-    Materias[330].Codigo = "DLA343";
+    Materias[330].Nombre = "Derecho Internacional Público";
+    Materias[330].Codigo = "DIP373";
     Materias[330].Creditos = 2;
 
-    Materias[331].Nombre = "Derecho Familiar";
-    Materias[331].Codigo = "DDF353";
+    Materias[331].Nombre = "Teoría General del Proceso";
+    Materias[331].Codigo = "TGP383";
     Materias[331].Creditos = 2;
 
-    Materias[332].Nombre = "Obligaciones I";
-    Materias[332].Codigo = "OBL363";
+    Materias[332].Nombre = "Derecho Tributario";
+    Materias[332].Codigo = "DTR393";
     Materias[332].Creditos = 2;
 
-    Materias[333].Nombre = "Derecho Internacional Público";
-    Materias[333].Codigo = "DIP373";
+    Materias[333].Nombre = "Proyecto Socio Jurídico II";
+    Materias[333].Codigo = "PSJ339";
     Materias[333].Creditos = 2;
 
-    Materias[334].Nombre = "Teoría General del Proceso";
-    Materias[334].Codigo = "TGP383";
-    Materias[334].Creditos = 2;
+    Materias[334].Nombre = "Prácticas Jurídicas II";
+    Materias[334].Codigo = "PJU340";
+    Materias[334].Creditos = 0;
 
-    Materias[335].Nombre = "Derecho Tributario";
-    Materias[335].Codigo = "DPR393";
-    Materias[335].Creditos = 2;
-
-    Materias[336].Nombre = "Proyecto Socio Jurídico II";
-    Materias[336].Codigo = "PSJ339";
-    Materias[336].Creditos = 2;
-
-    Materias[337].Nombre = "Prácticas Jurídicas II";
-    Materias[337].Codigo = "PJU340";
-    Materias[337].Creditos = 0;
-
-    Materias[338].Nombre = "Electiva II";
-    Materias[338].Codigo = "ELT341";
-    Materias[338].Creditos = 1;
+    Materias[335].Nombre = "Electiva II";
+    Materias[335].Codigo = "ELT341";
+    Materias[335].Creditos = 1;
 
     //Cuarto Año
-    Materias[339].Nombre = "Derecho Contencioso Administrativo";
-    Materias[339].Codigo = "DCA414";
+    Materias[336].Nombre = "Derecho Contencioso Administrativo";
+    Materias[336].Codigo = "DCA414";
+    Materias[336].Creditos = 2;
+
+    Materias[337].Nombre = "Derecho Procesal Penal I";
+    Materias[337].Codigo = "DPP424";
+    Materias[337].Creditos = 2;
+
+    Materias[338].Nombre = "Derecho Procesal Laboral I";
+    Materias[338].Codigo = "DPL434";
+    Materias[338].Creditos = 2;
+
+    Materias[339].Nombre = "Derecho en Sucesiones";
+    Materias[339].Codigo = "DSU454";
     Materias[339].Creditos = 2;
 
-    Materias[340].Nombre = "Derecho Procesal Penal I";
-    Materias[340].Codigo = "DPP424";
+    Materias[340].Nombre = "Obligaciones II";
+    Materias[340].Codigo = "OBL464";
     Materias[340].Creditos = 2;
 
-    Materias[341].Nombre = "Derecho Procesal Laboral I";
-    Materias[341].Codigo = "DPL434";
+    Materias[341].Nombre = "Derecho Internacional Privado";
+    Materias[341].Codigo = "DIP474";
     Materias[341].Creditos = 2;
 
-    Materias[342].Nombre = "Derecho en Sucesiones";
-    Materias[342].Codigo = "DSU454";
+    Materias[342].Nombre = "Derecho Procesal Civil I";
+    Materias[342].Codigo = "DPC484";
     Materias[342].Creditos = 2;
 
-    Materias[343].Nombre = "Obligaciones II";
-    Materias[343].Codigo = "OBL464";
+    Materias[343].Nombre = "Derecho Probatorio I";
+    Materias[343].Codigo = "DPR494";
     Materias[343].Creditos = 2;
 
-    Materias[344].Nombre = "Derecho Internacional Privado";
-    Materias[344].Codigo = "DIP474";
+    Materias[344].Nombre = "Proyecto Socio Jurídico III";
+    Materias[344].Codigo = "PSJ439";
     Materias[344].Creditos = 2;
 
-    Materias[345].Nombre = "Derecho Procesal Civil I";
-    Materias[345].Codigo = "DPC484";
+    Materias[345].Nombre = "Prácticas Jurídicas III";
+    Materias[345].Codigo = "PJU440";
     Materias[345].Creditos = 2;
 
-    Materias[346].Nombre = "Derecho Probatorio I";
-    Materias[346].Codigo = "DPR494";
-    Materias[346].Creditos = 2;
-
-    Materias[347].Nombre = "Proyecto Socio Jurídico III";
-    Materias[347].Codigo = "PSJ439";
-    Materias[347].Creditos = 2;
-
-    Materias[348].Nombre = "Prácticas Jurídicas III";
-    Materias[348].Codigo = "PJU440";
-    Materias[348].Creditos = 2;
-
-    Materias[349].Nombre = "Electiva III";
-    Materias[349].Codigo = "ELT441";
-    Materias[349].Creditos = 1;
+    Materias[346].Nombre = "Electiva III";
+    Materias[346].Codigo = "ELT441";
+    Materias[346].Creditos = 1;
 
     //Quinto Año
-    Materias[350].Nombre = "Derecho Procesal Penal II";
-    Materias[350].Codigo = "DPP515";
+    Materias[347].Nombre = "Derecho Procesal Penal II";
+    Materias[347].Codigo = "DPP515";
+    Materias[347].Creditos = 2;
+
+    Materias[348].Nombre = "Obligaciones III";
+    Materias[348].Codigo = "OBL525";
+    Materias[348].Creditos = 2;
+
+    Materias[349].Nombre = "Derecho Procesal Civil II";
+    Materias[349].Codigo = "DPC535";
+    Materias[349].Creditos = 2;
+
+    Materias[350].Nombre = "Derecho Mercantil";
+    Materias[350].Codigo = "DME545";
     Materias[350].Creditos = 2;
 
-    Materias[351].Nombre = "Obligaciones III";
-    Materias[351].Codigo = "OBL525";
+    Materias[351].Nombre = "Derecho Probatorio II";
+    Materias[351].Codigo = "DPR555";
     Materias[351].Creditos = 2;
 
-    Materias[352].Nombre = "Derecho Procesal Civil II";
-    Materias[352].Codigo = "DPC535";
+    Materias[352].Nombre = "Contratos y Garantías";
+    Materias[352].Codigo = "CGA565";
     Materias[352].Creditos = 2;
 
-    Materias[353].Nombre = "Derecho Mercantil";
-    Materias[353].Codigo = "DME545";
+    Materias[353].Nombre = "Proyecto Socio Jurídico IV";
+    Materias[353].Codigo = "PSJ539";
     Materias[353].Creditos = 2;
 
-    Materias[354].Nombre = "Derecho Probatorio II";
-    Materias[354].Codigo = "DPR555";
+    Materias[354].Nombre = "Prácticas Jurídicas IV";
+    Materias[354].Codigo = "PJU540";
     Materias[354].Creditos = 2;
 
-    Materias[355].Nombre = "Contratos y Garantías";
-    Materias[355].Codigo = "CGA565";
+    Materias[355].Nombre = "Electiva IV";
+    Materias[355].Codigo = "ELT541";
     Materias[355].Creditos = 2;
-
-    Materias[356].Nombre = "Proyecto Socio Jurídico IV";
-    Materias[356].Codigo = "PSJ539";
-    Materias[356].Creditos = 2;
-
-    Materias[357].Nombre = "Prácticas Jurídicas IV";
-    Materias[357].Codigo = "PJU540";
-    Materias[357].Creditos = 2;
-
-    Materias[358].Nombre = "Electiva IV";
-    Materias[358].Codigo = "ELT541";
-    Materias[358].Creditos = 2;
-
-    Materias[359].Nombre = "Pasantías";
-    Materias[359].Codigo = "PAS509";
-    Materias[359].Creditos = 2;
-
-    Materias[360].Nombre = "Seminario Tesina de Grado";
-    Materias[360].Codigo = "STG510";
-    Materias[360].Creditos = 1;
-
 
     //Comunicación (58)
     //Primer Semestre
-    Materias[361].Nombre = "Morfosintaxis del Castellano";
-    Materias[361].Codigo = "MOC143";
-    Materias[361].Creditos = 3;
+    Materias[356].Nombre = "Morfosintaxis del Castellano";
+    Materias[356].Codigo = "MOC143";
+    Materias[356].Creditos = 3;
 
-    Materias[362].Nombre = "Comunicación Social en el Periodismo";
-    Materias[362].Codigo = "CSP122";
-    Materias[362].Creditos = 2;
+    Materias[357].Nombre = "Comunicación Social en el Periodismo";
+    Materias[357].Codigo = "CSP122";
+    Materias[357].Creditos = 2;
 
-    Materias[363].Nombre = "Psicología de la Comunicación";
-    Materias[363].Codigo = "PSC122";
-    Materias[363].Creditos = 2;
+    Materias[358].Nombre = "Psicología de la Comunicación";
+    Materias[358].Codigo = "PSC122";
+    Materias[358].Creditos = 2;
 
-    Materias[364].Nombre = "Estadística";
-    Materias[364].Codigo = "EST122";
-    Materias[364].Creditos = 2;
+    Materias[359].Nombre = "Estadística";
+    Materias[359].Codigo = "EST122";
+    Materias[359].Creditos = 2;
 
-    Materias[365].Nombre = "Deporte, Arte y Cultura";
-    Materias[365].Codigo = "DAC143";
-    Materias[365].Creditos = 3;
+    Materias[360].Nombre = "Deporte, Arte y Cultura";
+    Materias[360].Codigo = "DAC143";
+    Materias[360].Creditos = 3;
 
-    Materias[366].Nombre = "Pensamiento Bolivariano";
-    Materias[366].Codigo = "PEB122";
-    Materias[366].Creditos = 2;
+    Materias[361].Nombre = "Pensamiento Bolivariano";
+    Materias[361].Codigo = "PEB122";
+    Materias[361].Creditos = 2;
 
     //Segundo Semestre
-    Materias[367].Nombre = "Periodismo Informativo";
-    Materias[367].Codigo = "PRI222";
-    Materias[367].Creditos = 2;
+    Materias[362].Nombre = "Periodismo Informativo";
+    Materias[362].Codigo = "PRI222";
+    Materias[362].Creditos = 2;
 
-    Materias[368].Nombre = "Comunicación Social en la Radio";
-    Materias[368].Codigo = "CSR233";
-    Materias[368].Creditos = 3;
+    Materias[363].Nombre = "Comunicación Social en la Radio";
+    Materias[363].Codigo = "CSR233";
+    Materias[363].Creditos = 3;
 
-    Materias[369].Nombre = "Comunicación Social en Cine";
-    Materias[369].Codigo = "CSC233";
-    Materias[369].Creditos = 3;
+    Materias[364].Nombre = "Comunicación Social en Cine";
+    Materias[364].Codigo = "CSC233";
+    Materias[364].Creditos = 3;
 
-    Materias[370].Nombre = "Comunicación Social en la Televisión";
-    Materias[370].Codigo = "CST233";
-    Materias[370].Creditos = 3;
+    Materias[365].Nombre = "Comunicación Social en la Televisión";
+    Materias[365].Codigo = "CST233";
+    Materias[365].Creditos = 3;
 
-    Materias[371].Nombre = "Comunicación Social en la Fotografía";
-    Materias[371].Codigo = "CSF233";
-    Materias[371].Creditos = 3;
+    Materias[366].Nombre = "Comunicación Social en la Fotografía";
+    Materias[366].Codigo = "CSF233";
+    Materias[366].Creditos = 3;
 
-    Materias[372].Nombre = "Taller de Redacción y Estilo I";
-    Materias[372].Codigo = "TREI243";
-    Materias[372].Creditos = 3;
+    Materias[367].Nombre = "Taller de Redacción y Estilo I";
+    Materias[367].Codigo = "TREI243";
+    Materias[367].Creditos = 3;
 
     //Tercer Semestre
-    Materias[373].Nombre = "Proyecto Comunitario Socio Comunicacional I";
-    Materias[373].Codigo = "PCSI343";
+    Materias[368].Nombre = "Proyecto Comunitario Socio Comunicacional I";
+    Materias[368].Codigo = "PCSI343";
+    Materias[368].Creditos = 3;
+
+    Materias[369].Nombre = "Taller de Redacción y Estilo II";
+    Materias[369].Codigo = "TREII343";
+    Materias[369].Creditos = 3;
+
+    Materias[370].Nombre = "Comunicación Gráfica";
+    Materias[370].Codigo = "COG322";
+    Materias[370].Creditos = 2;
+
+    Materias[371].Nombre = "Periodismo Radiofónico";
+    Materias[371].Codigo = "PER322";
+    Materias[371].Creditos = 2;
+
+    Materias[372].Nombre = "Lenguaje y Planificación Cinematográfica";
+    Materias[372].Codigo = "LPC343";
+    Materias[372].Creditos = 3;
+
+    Materias[373].Nombre = "Periodismo Televisivo";
+    Materias[373].Codigo = "PRT343";
     Materias[373].Creditos = 3;
 
-    Materias[374].Nombre = "Taller de Redacción y Estilo II";
-    Materias[374].Codigo = "TREII343";
+    //Cuarto Semestre
+    Materias[374].Nombre = "Estética de la Imagen y el Sonido";
+    Materias[374].Codigo = "EIS443";
     Materias[374].Creditos = 3;
 
-    Materias[375].Nombre = "Comunicación Gráfica";
-    Materias[375].Codigo = "COG322";
+    Materias[375].Nombre = "Teoría de la Comunicación";
+    Materias[375].Codigo = "TEC422";
     Materias[375].Creditos = 2;
 
-    Materias[376].Nombre = "Periodismo Radiofónico";
-    Materias[376].Codigo = "PER322";
+    Materias[376].Nombre = "Opinión Pública";
+    Materias[376].Codigo = "OPP422";
     Materias[376].Creditos = 2;
 
-    Materias[377].Nombre = "Lenguaje y Planificación Cinematográfica";
-    Materias[377].Codigo = "LPC343";
-    Materias[377].Creditos = 3;
+    Materias[377].Nombre = "Formación Sociopolítica";
+    Materias[377].Codigo = "FS422";
+    Materias[377].Creditos = 2;
 
-    Materias[378].Nombre = "Periodismo Televisivo";
-    Materias[378].Codigo = "PRT343";
-    Materias[378].Creditos = 3;
+    Materias[378].Nombre = "Proyecto Comunitario Socio Comunicacional II";
+    Materias[378].Codigo = "PCSII464";
+    Materias[378].Creditos = 4;
 
-    //Cuarto Semestre
-    Materias[379].Nombre = "Estética de la Imagen y el Sonido";
-    Materias[379].Codigo = "EIS443";
-    Materias[379].Creditos = 3;
-
-    Materias[380].Nombre = "Teoría de la Comunicación";
-    Materias[380].Codigo = "TEC422";
-    Materias[380].Creditos = 2;
-
-    Materias[381].Nombre = "Opinión Pública";
-    Materias[381].Codigo = "OPP422";
-    Materias[381].Creditos = 2;
-
-    Materias[382].Nombre = "Formación Sociopolítica";
-    Materias[382].Codigo = "FS422";
-    Materias[382].Creditos = 2;
-
-    Materias[383].Nombre = "Proyecto Comunitario Socio Comunicacional II";
-    Materias[383].Codigo = "PCSII464";
-    Materias[383].Creditos = 4;
-
-    Materias[384].Nombre = "Ética y Legislación de Medios y del Periodismo";
-    Materias[384].Codigo = "ELM422";
-    Materias[384].Creditos = 2;
+    Materias[379].Nombre = "Ética y Legislación de Medios y del Periodismo";
+    Materias[379].Codigo = "ELM422";
+    Materias[379].Creditos = 2;
 
     //Quinto Semestre
-    Materias[385].Nombre = "Proyecto Comunitario Sociocomunicacional III";
-    Materias[385].Codigo = "PCSIII564";
-    Materias[385].Creditos = 4;
+    Materias[380].Nombre = "Proyecto Comunitario Sociocomunicacional III";
+    Materias[380].Codigo = "PCSIII564";
+    Materias[380].Creditos = 4;
 
-    Materias[386].Nombre = "Sociología de la Comunicación";
-    Materias[386].Codigo = "SOC522";
-    Materias[386].Creditos = 2;
+    Materias[381].Nombre = "Sociología de la Comunicación";
+    Materias[381].Codigo = "SOC522";
+    Materias[381].Creditos = 2;
 
-    Materias[387].Nombre = "Investigación de la Comunicación";
-    Materias[387].Codigo = "INC543";
-    Materias[387].Creditos = 3;
+    Materias[382].Nombre = "Investigación de la Comunicación";
+    Materias[382].Codigo = "INC543";
+    Materias[382].Creditos = 3;
 
-    Materias[388].Nombre = "Periodismo Interpretativo";
-    Materias[388].Codigo = "PRI522";
-    Materias[388].Creditos = 2;
+    Materias[383].Nombre = "Periodismo Interpretativo";
+    Materias[383].Codigo = "PRI522";
+    Materias[383].Creditos = 2;
 
-    Materias[389].Nombre = "Periodismo de Opinión";
-    Materias[389].Codigo = "PEO543";
-    Materias[389].Creditos = 3;
+    Materias[384].Nombre = "Periodismo de Opinión";
+    Materias[384].Codigo = "PEO543";
+    Materias[384].Creditos = 3;
 
-    Materias[390].Nombre = "Economía Política";
-    Materias[390].Codigo = "EP522";
-    Materias[390].Creditos = 2;
+    Materias[385].Nombre = "Economía Política";
+    Materias[385].Codigo = "EP522";
+    Materias[385].Creditos = 2;
 
     //Sexto Semestre
-    Materias[391].Nombre = "Producción de Televisión";
-    Materias[391].Codigo = "PRT643";
-    Materias[391].Creditos = 3;
+    Materias[386].Nombre = "Producción de Televisión";
+    Materias[386].Codigo = "PRT643";
+    Materias[386].Creditos = 3;
 
-    Materias[392].Nombre = "Producción de Radio";
-    Materias[392].Codigo = "PRR643";
-    Materias[392].Creditos = 3;
+    Materias[387].Nombre = "Producción de Radio";
+    Materias[387].Codigo = "PRR643";
+    Materias[387].Creditos = 3;
 
-    Materias[393].Nombre = "Producción de Cine";
-    Materias[393].Codigo = "PRC643";
-    Materias[393].Creditos = 3;
+    Materias[388].Nombre = "Producción de Cine";
+    Materias[388].Codigo = "PRC643";
+    Materias[388].Creditos = 3;
 
-    Materias[394].Nombre = "Seminario de Formación Socio Crítica I";
-    Materias[394].Codigo = "SFSCI622";
-    Materias[394].Creditos = 2;
+    Materias[389].Nombre = "Seminario de Formación Socio Crítica I";
+    Materias[389].Codigo = "SFSCI622";
+    Materias[389].Creditos = 2;
 
-    Materias[395].Nombre = "Proyecto Comunitario Sociocomunicacional IV";
-    Materias[395].Codigo = "PCSIV643";
-    Materias[395].Creditos = 3;
+    Materias[390].Nombre = "Proyecto Comunitario Sociocomunicacional IV";
+    Materias[390].Codigo = "PCSIV643";
+    Materias[390].Creditos = 3;
 
-    Materias[396].Nombre = "Semiología";
-    Materias[396].Codigo = "SEM622";
-    Materias[396].Creditos = 2;
+    Materias[391].Nombre = "Semiología";
+    Materias[391].Codigo = "SEM622";
+    Materias[391].Creditos = 2;
 
     //Séptimo Semestre
-    Materias[397].Nombre = "Fotoperiodismo";
-    Materias[397].Codigo = "FOT722";
-    Materias[397].Creditos = 2;
+    Materias[392].Nombre = "Fotoperiodismo";
+    Materias[392].Codigo = "FOT722";
+    Materias[392].Creditos = 2;
 
-    Materias[398].Nombre = "Seminario de Formación Socio Crítica II";
-    Materias[398].Codigo = "SFSCII732";
+    Materias[393].Nombre = "Seminario de Formación Socio Crítica II";
+    Materias[393].Codigo = "SFSCII732";
+    Materias[393].Creditos = 2;
+
+    Materias[394].Nombre = "Periodismo Científico";
+    Materias[394].Codigo = "PEC722";
+    Materias[394].Creditos = 2;
+
+    Materias[395].Nombre = "Montajes Audiovisuales";
+    Materias[395].Codigo = "MOA743";
+    Materias[395].Creditos = 3;
+
+    Materias[396].Nombre = "Relaciones Públicas";
+    Materias[396].Codigo = "REP722";
+    Materias[396].Creditos = 2;
+
+    Materias[397].Nombre = "Proyecto Comunitario Sociocomunicacional V";
+    Materias[397].Codigo = "PCSV743";
+    Materias[397].Creditos = 3;
+
+    Materias[398].Nombre = "Tecnología de la Información";
+    Materias[398].Codigo = "TEI732";
     Materias[398].Creditos = 2;
 
-    Materias[399].Nombre = "Periodismo Científico";
-    Materias[399].Codigo = "PEC722";
+    //Octavo Semestre
+    Materias[399].Nombre = "Locución Básica";
+    Materias[399].Codigo = "LOB832";
     Materias[399].Creditos = 2;
 
-    Materias[400].Nombre = "Montajes Audiovisuales";
-    Materias[400].Codigo = "MOA743";
+    Materias[400].Nombre = "Publicidad";
+    Materias[400].Codigo = "PUB843";
     Materias[400].Creditos = 3;
 
-    Materias[401].Nombre = "Relaciones Públicas";
-    Materias[401].Codigo = "REP722";
+    Materias[401].Nombre = "Idioma Moderno";
+    Materias[401].Codigo = "IDM822";
     Materias[401].Creditos = 2;
 
-    Materias[402].Nombre = "Proyecto Comunitario Sociocomunicacional V";
-    Materias[402].Codigo = "PCSV743";
+    Materias[402].Nombre = "Seminario de Formación Socio Crítica III";
+    Materias[402].Codigo = "SFSCIII843";
     Materias[402].Creditos = 3;
 
-    Materias[403].Nombre = "Tecnología de la Información";
-    Materias[403].Codigo = "TEI732";
+    Materias[403].Nombre = "Periodismo Económico";
+    Materias[403].Codigo = "PE822";
     Materias[403].Creditos = 2;
 
-    //Octavo Semestre
-    Materias[404].Nombre = "Locución Básica";
-    Materias[404].Codigo = "LOB832";
-    Materias[404].Creditos = 2;
+    Materias[404].Nombre = "Proyecto Comunitario Sociocomunicacional VI";
+    Materias[404].Codigo = "PCSVI843";
+    Materias[404].Creditos = 3;
 
-    Materias[405].Nombre = "Publicidad";
-    Materias[405].Codigo = "PUB843";
-    Materias[405].Creditos = 3;
-
-    Materias[406].Nombre = "Idioma Moderno";
-    Materias[406].Codigo = "IDM822";
-    Materias[406].Creditos = 2;
-
-    Materias[407].Nombre = "Seminario de Formación Socio Crítica III";
-    Materias[407].Codigo = "SFSCIII843";
-    Materias[407].Creditos = 3;
-
-    Materias[408].Nombre = "Periodismo Económico";
-    Materias[408].Codigo = "PE822";
-    Materias[408].Creditos = 2;
-
-    Materias[409].Nombre = "Proyecto Comunitario Sociocomunicacional VI";
-    Materias[409].Codigo = "PCSVI843";
-    Materias[409].Creditos = 3;
-
-    Materias[410].Nombre = "Orientación Profesional I";
-    Materias[410].Codigo = "OPI822";
-    Materias[410].Creditos = 2;
+    Materias[405].Nombre = "Orientación Profesional I";
+    Materias[405].Codigo = "OPI822";
+    Materias[405].Creditos = 2;
 
     //Noveno Semestre
-    Materias[411].Nombre = "Gerencia Corporativa";
-    Materias[411].Codigo = "GEC943";
-    Materias[411].Creditos = 3;
+    Materias[406].Nombre = "Gerencia Corporativa";
+    Materias[406].Codigo = "GEC943";
+    Materias[406].Creditos = 3;
 
-    Materias[412].Nombre = "Mercadeo";
-    Materias[412].Codigo = "MER943";
-    Materias[412].Creditos = 3;
+    Materias[407].Nombre = "Mercadeo";
+    Materias[407].Codigo = "MER943";
+    Materias[407].Creditos = 3;
 
-    Materias[413].Nombre = "Locución Profesional";
-    Materias[413].Codigo = "LP932";
-    Materias[413].Creditos = 2;
+    Materias[408].Nombre = "Locución Profesional";
+    Materias[408].Codigo = "LP932";
+    Materias[408].Creditos = 2;
 
-    Materias[414].Nombre = "Proyecto Comunitario Sociocomunicacional VII";
-    Materias[414].Codigo = "PCSVII943";
-    Materias[414].Creditos = 4;
+    Materias[409].Nombre = "Proyecto Comunitario Sociocomunicacional VII";
+    Materias[409].Codigo = "PCSVII943";
+    Materias[409].Creditos = 4;
 
-    Materias[415].Nombre = "Periodismo Político";
-    Materias[415].Codigo = "PPOL922";
-    Materias[415].Creditos = 2;
+    Materias[410].Nombre = "Periodismo Político";
+    Materias[410].Codigo = "PPOL922";
+    Materias[410].Creditos = 2;
 
-    Materias[416].Nombre = "Orientación Profesional";
-    Materias[416].Codigo = "OPII922";
-    Materias[416].Creditos = 2;
+    Materias[411].Nombre = "Orientación Profesional II";
+    Materias[411].Codigo = "OPII922";
+    Materias[411].Creditos = 2;
 
     //Décimo Semestre
-    Materias[417].Nombre = "Vinculación Profesional en el Campo Sociocomunicacional";
-    Materias[417].Codigo = "VPCSC1084";
-    Materias[417].Creditos = 4;
+    Materias[412].Nombre = "Vinculación Profesional en el Campo Sociocomunicacional";
+    Materias[412].Codigo = "VPCSC1084";
+    Materias[412].Creditos = 4;
 
-    Materias[418].Nombre = "Trabajo Especial de Grado";
-    Materias[418].Codigo = "TGE1020";
-    Materias[418].Creditos = 9;
+    Materias[413].Nombre = "Trabajo Especial de Grado";
+    Materias[413].Codigo = "TGE1020";
+    Materias[413].Creditos = 9;
 
     //Contaduría (52)
     //Primer Semestre
-    Materias[419].Nombre = "Matemática I";
-    Materias[419].Codigo = "MAT1125";
-    Materias[419].Creditos = 5;
+    Materias[414].Nombre = "Matemática I";
+    Materias[414].Codigo = "MAT1125";
+    Materias[414].Creditos = 5;
 
-    Materias[420].Nombre = "Lenguaje y Comunicación";
-    Materias[420].Codigo = "LYC162";
+    Materias[415].Nombre = "Lenguaje y Comunicación";
+    Materias[415].Codigo = "LYC162";
+    Materias[415].Creditos = 2;
+
+    Materias[416].Nombre = "Legislación Mercantil";
+    Materias[416].Codigo = "LM162";
+    Materias[416].Creditos = 2;
+
+    Materias[417].Nombre = "Contabilidad I";
+    Materias[417].Codigo = "CONTI1187";
+    Materias[417].Creditos = 7;
+
+    Materias[418].Nombre = "Sociopolítica Productiva";
+    Materias[418].Codigo = "SOCPP162";
+    Materias[418].Creditos = 2;
+
+    Materias[419].Nombre = "Metodología de la Investigación";
+    Materias[419].Codigo = "METI162";
+    Materias[419].Creditos = 2;
+
+    Materias[420].Nombre = "Deporte y Recreación";
+    Materias[420].Codigo = "DYR162";
     Materias[420].Creditos = 2;
 
-    Materias[421].Nombre = "Legislación Mercantil";
-    Materias[421].Codigo = "LM162";
-    Materias[421].Creditos = 2;
+    //Segundo Semestre
+    Materias[421].Nombre = "Matemática II";
+    Materias[421].Codigo = "MATII2125";
+    Materias[421].Creditos = 5;
 
-    Materias[422].Nombre = "Contabilidad I";
-    Materias[422].Codigo = "CONTI1187";
+    Materias[422].Nombre = "Contabilidad II";
+    Materias[422].Codigo = "CONTII2187";
     Materias[422].Creditos = 7;
 
-    Materias[423].Nombre = "Sociopolítica Productiva";
-    Materias[423].Codigo = "SOCPP162";
-    Materias[423].Creditos = 2;
+    Materias[423].Nombre = "Inglés";
+    Materias[423].Codigo = "ING283";
+    Materias[423].Creditos = 3;
 
-    Materias[424].Nombre = "Metodología de la Investigación";
-    Materias[424].Codigo = "METI162";
+    Materias[424].Nombre = "Legislación Laboral";
+    Materias[424].Codigo = "LEGL262";
     Materias[424].Creditos = 2;
 
-    Materias[425].Nombre = "Deporte y Recreación";
-    Materias[425].Codigo = "DYR162";
-    Materias[425].Creditos = 2;
+    Materias[425].Nombre = "Estadística I";
+    Materias[425].Codigo = "ESTI294";
+    Materias[425].Creditos = 4;
 
-    //Segundo Semestre
-    Materias[426].Nombre = "Matemática II";
-    Materias[426].Codigo = "MATII2125";
-    Materias[426].Creditos = 5;
+    Materias[426].Nombre = "Introducción a la Adminstración";
+    Materias[426].Codigo = "IADM262";
+    Materias[426].Creditos = 2;
 
-    Materias[427].Nombre = "Contabilidad II";
-    Materias[427].Codigo = "CONTII2187";
-    Materias[427].Creditos = 7;
-
-    Materias[428].Nombre = "Inglés";
-    Materias[428].Codigo = "ING283";
-    Materias[428].Creditos = 3;
-
-    Materias[429].Nombre = "Legislación Laboral";
-    Materias[429].Codigo = "LEGL262";
-    Materias[429].Creditos = 2;
-
-    Materias[430].Nombre = "Estadística I";
-    Materias[430].Codigo = "ESTI294";
-    Materias[430].Creditos = 4;
-
-    Materias[431].Nombre = "Introducción a la Adminstración";
-    Materias[431].Codigo = "IADM262";
-    Materias[431].Creditos = 2;
-
-    Materias[432].Nombre = "Arte y Cultura";
-    Materias[432].Codigo = "AYC262";
-    Materias[432].Creditos = 2;
+    Materias[427].Nombre = "Arte y Cultura";
+    Materias[427].Codigo = "AYC262";
+    Materias[427].Creditos = 2;
 
     //Tercer Semestre
-    Materias[433].Nombre = "Informática";
-    Materias[433].Codigo = "INF362";
+    Materias[428].Nombre = "Informática";
+    Materias[428].Codigo = "INF362";
+    Materias[428].Creditos = 2;
+
+    Materias[429].Nombre = "Calculo Financiero";
+    Materias[429].Codigo = "CALCF394";
+    Materias[429].Creditos = 4;
+
+    Materias[430].Nombre = "Introducción a la Teoría Económica";
+    Materias[430].Codigo = "ITE362";
+    Materias[430].Creditos = 2;
+
+    Materias[431].Nombre = "Estadística II";
+    Materias[431].Codigo = "ESTII394";
+    Materias[431].Creditos = 4;
+
+    Materias[432].Nombre = "Contabilidad III";
+    Materias[432].Codigo = "CONTIII3187";
+    Materias[432].Creditos = 7;
+
+    Materias[433].Nombre = "Procesos Administrativos";
+    Materias[433].Codigo = "PADM362";
     Materias[433].Creditos = 2;
 
-    Materias[434].Nombre = "Calculo Financiero";
-    Materias[434].Codigo = "CALCF394";
-    Materias[434].Creditos = 4;
+    //Cuarto Semestre
+    Materias[434].Nombre = "Contabilidad de Costos I";
+    Materias[434].Codigo = "CCI4125";
+    Materias[434].Creditos = 5;
 
-    Materias[435].Nombre = "Introducción a la Teoría Económica";
-    Materias[435].Codigo = "ITE362";
-    Materias[435].Creditos = 2;
+    Materias[435].Nombre = "Práctica Profesional I";
+    Materias[435].Codigo = "PPI4187";
+    Materias[435].Creditos = 7;
 
-    Materias[436].Nombre = "Estadística II";
-    Materias[436].Codigo = "ESTII394";
-    Materias[436].Creditos = 4;
+    Materias[436].Nombre = "Auditoría I";
+    Materias[436].Codigo = "AUDI4125";
+    Materias[436].Creditos = 5;
 
-    Materias[437].Nombre = "Contabilidad III";
-    Materias[437].Codigo = "CONTIII3187";
-    Materias[437].Creditos = 7;
+    Materias[437].Nombre = "Contabilidad Especializada I";
+    Materias[437].Codigo = "CEI4125";
+    Materias[437].Creditos = 5;
 
-    Materias[438].Nombre = "Procesos Administrativos";
-    Materias[438].Codigo = "PADM362";
+    Materias[438].Nombre = "Finanzas y Gestión Presupuestaria";
+    Materias[438].Codigo = "FGP462";
     Materias[438].Creditos = 2;
 
-    //Cuarto Semestre
-    Materias[439].Nombre = "Contabilidad de Costos I";
-    Materias[439].Codigo = "CCI4125";
-    Materias[439].Creditos = 5;
-
-    Materias[440].Nombre = "Práctica Profesional I";
-    Materias[440].Codigo = "PPI4187";
-    Materias[440].Creditos = 7;
-
-    Materias[441].Nombre = "Auditoría I";
-    Materias[441].Codigo = "AUDI4125";
-    Materias[441].Creditos = 5;
-
-    Materias[442].Nombre = "Contabilidad Especializada I";
-    Materias[442].Codigo = "CEI4125";
-    Materias[442].Creditos = 5;
-
-    Materias[443].Nombre = "Finanzas y Gestión Presupuestaria";
-    Materias[443].Codigo = "FGP462";
-    Materias[443].Creditos = 2;
-
-    Materias[444].Nombre = "Administración Pública";
-    Materias[444].Codigo = "ADMP462";
-    Materias[444].Creditos = 2;
+    Materias[439].Nombre = "Administración Pública";
+    Materias[439].Codigo = "ADMP462";
+    Materias[439].Creditos = 2;
 
     //Quinto Semestre
-    Materias[445].Nombre = "Sistemas de Información Gerencial";
-    Materias[445].Codigo = "SIG582";
-    Materias[445].Creditos = 2;
+    Materias[440].Nombre = "Sistemas de Información Gerencial";
+    Materias[440].Codigo = "SIG582";
+    Materias[440].Creditos = 2;
 
-    Materias[446].Nombre = "Investigación de Operaciones";
-    Materias[446].Codigo = "IDO594";
-    Materias[446].Creditos = 4;
+    Materias[441].Nombre = "Investigación de Operaciones";
+    Materias[441].Codigo = "IDO594";
+    Materias[441].Creditos = 4;
 
-    Materias[447].Nombre = "Auditoría II";
-    Materias[447].Codigo = "AUDII5125";
-    Materias[447].Creditos = 5;
+    Materias[442].Nombre = "Auditoría II";
+    Materias[442].Codigo = "AUDII5125";
+    Materias[442].Creditos = 5;
 
-    Materias[448].Nombre = "Contabilidad Especializada II";
-    Materias[448].Codigo = "CEII5125";
-    Materias[448].Creditos = 5;
+    Materias[443].Nombre = "Contabilidad Especializada II";
+    Materias[443].Codigo = "CEII5125";
+    Materias[443].Creditos = 5;
 
-    Materias[449].Nombre = "Contabilidad de Costos II";
-    Materias[449].Codigo = "CCII5125";
-    Materias[449].Creditos = 5;
+    Materias[444].Nombre = "Contabilidad de Costos II";
+    Materias[444].Codigo = "CCII5125";
+    Materias[444].Creditos = 5;
 
     //Electiva I
-    Materias[450].Nombre = "Gerencia de Proyectos";
-    Materias[450].Codigo = "EGDP562";
-    Materias[450].Creditos = 2;
+    Materias[445].Nombre = "Gerencia de Proyectos";
+    Materias[445].Codigo = "EGDP562";
+    Materias[445].Creditos = 2;
 
-    Materias[451].Nombre = "Habilidades Gerenciales";
-    Materias[451].Codigo = "EHABG662";
-    Materias[451].Creditos = 2;
+    Materias[446].Nombre = "Habilidades Gerenciales";
+    Materias[446].Codigo = "EHABG662";
+    Materias[446].Creditos = 2;
 
-    Materias[452].Nombre = "Contabilidad Ambiental";
-    Materias[452].Codigo = "ECONTA662";
-    Materias[452].Creditos = 2;
+    Materias[447].Nombre = "Contabilidad Ambiental";
+    Materias[447].Codigo = "ECONTA662";
+    Materias[447].Creditos = 2;
 
     //Sexto Semestre
-    Materias[453].Nombre = "Sistemas Tributarios I";
-    Materias[453].Codigo = "STI6125";
-    Materias[453].Creditos = 5;
+    Materias[448].Nombre = "Sistemas Tributarios I";
+    Materias[448].Codigo = "STI6125";
+    Materias[448].Creditos = 5;
 
-    Materias[454].Nombre = "Mercadeo";
-    Materias[454].Codigo = "MERC662";
-    Materias[454].Creditos = 2;
+    Materias[449].Nombre = "Mercadeo";
+    Materias[449].Codigo = "MERC662";
+    Materias[449].Creditos = 2;
 
-    Materias[455].Nombre = "Presupuesto";
-    Materias[455].Codigo = "PRES662";
-    Materias[455].Creditos = 2;
+    Materias[450].Nombre = "Presupuesto";
+    Materias[450].Codigo = "PRES662";
+    Materias[450].Creditos = 2;
 
-    Materias[456].Nombre = "Contabilidad de Costos III";
-    Materias[456].Codigo = "CCIII6125";
-    Materias[456].Creditos = 5;
+    Materias[451].Nombre = "Contabilidad de Costos III";
+    Materias[451].Codigo = "CCIII6125";
+    Materias[451].Creditos = 5;
 
-    Materias[457].Nombre = "Seminario I";
-    Materias[457].Codigo = "SEMI662";
-    Materias[457].Creditos = 2;
+    Materias[452].Nombre = "Seminario I";
+    Materias[452].Codigo = "SEMI662";
+    Materias[452].Creditos = 2;
 
-    Materias[458].Nombre = "Práctica Profesional II";
-    Materias[458].Codigo = "PPII6187";
-    Materias[458].Creditos = 7;
+    Materias[453].Nombre = "Práctica Profesional II";
+    Materias[453].Codigo = "PPII6187";
+    Materias[453].Creditos = 7;
 
     //Séptimo Semestre
-    Materias[459].Nombre = "Sistemas Tributarios II";
-    Materias[459].Codigo = "STII7125";
-    Materias[459].Creditos = 5;
+    Materias[454].Nombre = "Sistemas Tributarios II";
+    Materias[454].Codigo = "STII7125";
+    Materias[454].Creditos = 5;
 
-    Materias[460].Nombre = "Gestión de Talento Humano";
-    Materias[460].Codigo = "GTH762";
-    Materias[460].Creditos = 2;
+    Materias[455].Nombre = "Gestión de Talento Humano";
+    Materias[455].Codigo = "GTH762";
+    Materias[455].Creditos = 2;
 
-    Materias[461].Nombre = "Auditoría III";
-    Materias[461].Codigo = "AUDIII7125";
-    Materias[461].Creditos = 5;
+    Materias[456].Nombre = "Auditoría III";
+    Materias[456].Codigo = "AUDIII7125";
+    Materias[456].Creditos = 5;
 
-    Materias[462].Nombre = "Análisis de Estados Financieros";
-    Materias[462].Codigo = "AEF794";
-    Materias[462].Creditos = 4;
+    Materias[457].Nombre = "Análisis de Estados Financieros";
+    Materias[457].Codigo = "AEF794";
+    Materias[457].Creditos = 4;
 
-    Materias[463].Nombre = "Ética y Desarrollo Profesional";
-    Materias[463].Codigo = "EDP762";
-    Materias[463].Creditos = 2;
+    Materias[458].Nombre = "Ética y Desarrollo Profesional";
+    Materias[458].Codigo = "EDP762";
+    Materias[458].Creditos = 2;
 
-    Materias[464].Nombre = "Seminario II";
-    Materias[464].Codigo = "SEMII762";
-    Materias[464].Creditos = 2;
+    Materias[459].Nombre = "Seminario II";
+    Materias[459].Codigo = "SEMII762";
+    Materias[459].Creditos = 2;
 
     //Electiva II
-    Materias[465].Nombre = "Tributación Aduanera";
-    Materias[465].Codigo = "ETRIBA762";
-    Materias[465].Creditos = 2;
+    Materias[460].Nombre = "Tributación Aduanera";
+    Materias[460].Codigo = "ETRIBA762";
+    Materias[460].Creditos = 2;
 
-    Materias[466].Nombre = "Técnicas de Negociación y Conciliación";
-    Materias[466].Codigo = "ETNC762";
-    Materias[466].Creditos = 2;
+    Materias[461].Nombre = "Técnicas de Negociación y Conciliación";
+    Materias[461].Codigo = "ETNC762";
+    Materias[461].Creditos = 2;
 
-    Materias[467].Nombre = "Avalúos";
-    Materias[467].Codigo = "EAV7862";
-    Materias[467].Creditos = 2;
+    Materias[462].Nombre = "Avalúos";
+    Materias[462].Codigo = "EAV7862";
+    Materias[462].Creditos = 2;
 
     //Octavo Semestre
-    Materias[468].Nombre = "Instituciones Financieras";
-    Materias[468].Codigo = "INSTF862";
-    Materias[468].Creditos = 2;
+    Materias[463].Nombre = "Instituciones Financieras";
+    Materias[463].Codigo = "INSTF862";
+    Materias[463].Creditos = 2;
 
-    Materias[469].Nombre = "Tesina de Grado";
-    Materias[469].Codigo = "TDG8187";
-    Materias[469].Creditos = 7;
+    Materias[464].Nombre = "Tesina de Grado";
+    Materias[464].Codigo = "TDG8187";
+    Materias[464].Creditos = 7;
 
-    Materias[470].Nombre = "Pasantías";
-    Materias[470].Codigo = "PAS82410";
-    Materias[470].Creditos = 10;
+    Materias[465].Nombre = "Pasantías";
+    Materias[465].Codigo = "PAS82410";
+    Materias[465].Creditos = 10;
 
     //Economía (57)
     //Primer Semestre
-    Materias[471].Nombre = "Introducción a la Economía";
-    Materias[471].Codigo = "IALEC1125";
-    Materias[471].Creditos = 5;
+    Materias[466].Nombre = "Introducción a la Economía";
+    Materias[466].Codigo = "IALEC1125";
+    Materias[466].Creditos = 5;
 
-    Materias[472].Nombre = "Análisis Matemático I";
-    Materias[472].Codigo = "ATI1125";
-    Materias[472].Creditos = 5;
+    Materias[467].Nombre = "Análisis Matemático I";
+    Materias[467].Codigo = "ATI1125";
+    Materias[467].Creditos = 5;
 
-    Materias[473].Nombre = "Lenguaje y Comunicación";
-    Materias[473].Codigo = "LYC194";
-    Materias[473].Creditos = 4;
+    Materias[468].Nombre = "Lenguaje y Comunicación";
+    Materias[468].Codigo = "LYC194";
+    Materias[468].Creditos = 4;
 
-    Materias[474].Nombre = "Fundamentos del Derecho";
-    Materias[474].Codigo = "FD162";
-    Materias[474].Creditos = 2;
+    Materias[469].Nombre = "Fundamentos del Derecho";
+    Materias[469].Codigo = "FD162";
+    Materias[469].Creditos = 2;
 
-    Materias[475].Nombre = "Metodología de la Investigación";
-    Materias[475].Codigo = "MI1125";
-    Materias[475].Creditos = 4;
+    Materias[470].Nombre = "Metodología de la Investigación";
+    Materias[470].Codigo = "MI1125";
+    Materias[470].Creditos = 4;
 
-    Materias[476].Nombre = "Deporte y Recreación";
-    Materias[476].Codigo = "DYR162";
-    Materias[476].Creditos = 2;
+    Materias[471].Nombre = "Deporte y Recreación";
+    Materias[471].Codigo = "DYR162";
+    Materias[471].Creditos = 2;
 
-    Materias[477].Nombre = "Ingles Instrumental";
-    Materias[477].Codigo = "IINST162";
-    Materias[477].Creditos = 2;
+    Materias[472].Nombre = "Ingles Instrumental";
+    Materias[472].Codigo = "IINST162";
+    Materias[472].Creditos = 2;
 
     //Segundo Semestre
-    Materias[478].Nombre = "Economía I";
-    Materias[478].Codigo = "ECONI2125";
-    Materias[478].Creditos = 5;
+    Materias[473].Nombre = "Economía I";
+    Materias[473].Codigo = "ECONI2125";
+    Materias[473].Creditos = 5;
 
-    Materias[479].Nombre = "Sociología";
-    Materias[479].Codigo = "SOC294";
-    Materias[479].Creditos = 4;
+    Materias[474].Nombre = "Sociología";
+    Materias[474].Codigo = "SOC294";
+    Materias[474].Creditos = 4;
 
-    Materias[480].Nombre = "Análisis Matemático II";
-    Materias[480].Codigo = "AMATII2125";
-    Materias[480].Creditos = 5;
+    Materias[475].Nombre = "Análisis Matemático II";
+    Materias[475].Codigo = "AMATII2125";
+    Materias[475].Creditos = 5;
 
-    Materias[481].Nombre = "Contabilidad General I";
-    Materias[481].Codigo = "CGI2125";
-    Materias[481].Creditos = 5;
+    Materias[476].Nombre = "Contabilidad General I";
+    Materias[476].Codigo = "CGI2125";
+    Materias[476].Creditos = 5;
 
-    Materias[482].Nombre = "Informática";
-    Materias[482].Codigo = "INF294";
-    Materias[482].Creditos = 4;
+    Materias[477].Nombre = "Informática";
+    Materias[477].Codigo = "INF294";
+    Materias[477].Creditos = 4;
 
-    Materias[483].Nombre = "Arte y Cultura";
-    Materias[483].Codigo = "AYC262";
-    Materias[483].Creditos = 2;
+    Materias[478].Nombre = "Arte y Cultura";
+    Materias[478].Codigo = "AYC262";
+    Materias[478].Creditos = 2;
 
-    Materias[484].Nombre = "Estadística I";
-    Materias[484].Codigo = "ESTI2125";
-    Materias[484].Creditos = 5;
+    Materias[479].Nombre = "Estadística I";
+    Materias[479].Codigo = "ESTI2125";
+    Materias[479].Creditos = 5;
 
     //Tercer Semestre
-    Materias[485].Nombre = "Economía II";
-    Materias[485].Codigo = "ECONII3125";
+    Materias[480].Nombre = "Economía II";
+    Materias[480].Codigo = "ECONII3125";
+    Materias[480].Creditos = 5;
+
+    Materias[481].Nombre = "Sociopolítica Productiva";
+    Materias[481].Codigo = "SPP362";
+    Materias[481].Creditos = 2;
+
+    Materias[482].Nombre = "Estadística II";
+    Materias[482].Codigo = "ESTII3125";
+    Materias[482].Creditos = 5;
+
+    Materias[483].Nombre = "Contabilidad General II";
+    Materias[483].Codigo = "CGII3125";
+    Materias[483].Creditos = 5;
+
+    Materias[484].Nombre = "Introducción a la Administración";
+    Materias[484].Codigo = "IADM362";
+    Materias[484].Creditos = 2;
+
+    Materias[485].Nombre = "Historia y Doctrina Económica";
+    Materias[485].Codigo = "HDE3125";
     Materias[485].Creditos = 5;
 
-    Materias[486].Nombre = "Sociopolítica Productiva";
-    Materias[486].Codigo = "SPP362";
-    Materias[486].Creditos = 2;
-
-    Materias[487].Nombre = "Estadística II";
-    Materias[487].Codigo = "ESTII3125";
-    Materias[487].Creditos = 5;
-
-    Materias[488].Nombre = "Contabilidad General II";
-    Materias[488].Codigo = "CGII3125";
-    Materias[488].Creditos = 5;
-
-    Materias[489].Nombre = "Introducción a la Administración";
-    Materias[489].Codigo = "IADM362";
-    Materias[489].Creditos = 2;
-
-    Materias[490].Nombre = "Historia y Doctrina Económica";
-    Materias[490].Codigo = "HDE3125";
-    Materias[490].Creditos = 5;
-
-    Materias[491].Nombre = "Informática Aplicada";
-    Materias[491].Codigo = "INFA3125";
-    Materias[491].Creditos = 4;
+    Materias[486].Nombre = "Informática Aplicada";
+    Materias[486].Codigo = "INFA3125";
+    Materias[486].Creditos = 4;
 
     //Cuarto Semestre
-    Materias[492].Nombre = "Macroeconomía I";
-    Materias[492].Codigo = "MACEI4125";
-    Materias[492].Creditos = 5;
+    Materias[487].Nombre = "Macroeconomía I";
+    Materias[487].Codigo = "MACEI4125";
+    Materias[487].Creditos = 5;
 
-    Materias[493].Nombre = "Análisis Financiero";
-    Materias[493].Codigo = "AFIN4125";
+    Materias[488].Nombre = "Análisis Financiero";
+    Materias[488].Codigo = "AFIN4125";
+    Materias[488].Creditos = 5;
+
+    Materias[489].Nombre = "Matemática III";
+    Materias[489].Codigo = "MATIII4125";
+    Materias[489].Creditos = 5;
+
+    Materias[490].Nombre = "Microeconomía I";
+    Materias[490].Codigo = "MICEI4125";
+    Materias[490].Creditos = 5;
+
+    Materias[491].Nombre = "Teoría e Investigación de Mercado";
+    Materias[491].Codigo = "TIM4125";
+    Materias[491].Creditos = 5;
+
+    Materias[492].Nombre = "Seminario I";
+    Materias[492].Codigo = "SEMI494";
+    Materias[492].Creditos = 4;
+
+    Materias[493].Nombre = "Estadística Aplicada";
+    Materias[493].Codigo = "ESTA4125";
     Materias[493].Creditos = 5;
 
-    Materias[494].Nombre = "Matemática III";
-    Materias[494].Codigo = "MATIII4125";
+    //Quinto Semestre
+    Materias[494].Nombre = "Macroeconomía II";
+    Materias[494].Codigo = "MACEII525";
     Materias[494].Creditos = 5;
 
-    Materias[495].Nombre = "Microeconomía I";
-    Materias[495].Codigo = "MICEI4125";
+    Materias[495].Nombre = "Microeconomía II";
+    Materias[495].Codigo = "MICEII512";
     Materias[495].Creditos = 5;
 
-    Materias[496].Nombre = "Teoría e Investigación de Mercado";
-    Materias[496].Codigo = "TIM4125";
+    Materias[496].Nombre = "Matemática Financiera";
+    Materias[496].Codigo = "MATFI5125";
     Materias[496].Creditos = 5;
 
-    Materias[497].Nombre = "Seminario I";
-    Materias[497].Codigo = "SEMI494";
-    Materias[497].Creditos = 4;
+    Materias[497].Nombre = "Contabilidad Social";
+    Materias[497].Codigo = "CONTS5125";
+    Materias[497].Creditos = 5;
 
-    Materias[498].Nombre = "Estadística Aplicada";
-    Materias[498].Codigo = "ESTA4125";
+    Materias[498].Nombre = "Desarrollo Económico";
+    Materias[498].Codigo = "DE5125";
     Materias[498].Creditos = 5;
 
-    //Quinto Semestre
-    Materias[499].Nombre = "Macroeconomía II";
-    Materias[499].Codigo = "MACEII525";
-    Materias[499].Creditos = 5;
-
-    Materias[500].Nombre = "Microeconomía II";
-    Materias[500].Codigo = "MICEII512";
-    Materias[500].Creditos = 5;
-
-    Materias[501].Nombre = "Matemática Financiera";
-    Materias[501].Codigo = "MATFI5125";
-    Materias[501].Creditos = 5;
-
-    Materias[502].Nombre = "Contabilidad Social";
-    Materias[502].Codigo = "CONTS5125";
-    Materias[502].Creditos = 5;
-
-    Materias[503].Nombre = "Desarrollo Económico";
-    Materias[503].Codigo = "DE5125";
-    Materias[503].Creditos = 5;
-
-    Materias[504].Nombre = "Análisis Económico Regional";
-    Materias[504].Codigo = "AER5125";
-    Materias[504].Creditos = 4;
+    Materias[499].Nombre = "Análisis Económico Regional";
+    Materias[499].Codigo = "AER5125";
+    Materias[499].Creditos = 4;
 
     //Sexto Semestre
-    Materias[505].Nombre = "Economía Política";
-    Materias[505].Codigo = "ECONP6125";
-    Materias[505].Creditos = 5;
+    Materias[500].Nombre = "Economía Política";
+    Materias[500].Codigo = "ECONP6125";
+    Materias[500].Creditos = 5;
 
-    Materias[506].Nombre = "Formulación y Evaluación de Proyectos";
-    Materias[506].Codigo = "FEP6125";
-    Materias[506].Creditos = 5;
+    Materias[501].Nombre = "Formulación y Evaluación de Proyectos";
+    Materias[501].Codigo = "FEP6125";
+    Materias[501].Creditos = 5;
 
-    Materias[507].Nombre = "Investigación de Operaciones";
-    Materias[507].Codigo = "IDO6125";
-    Materias[507].Creditos = 5;
+    Materias[502].Nombre = "Investigación de Operaciones";
+    Materias[502].Codigo = "IDO6125";
+    Materias[502].Creditos = 5;
 
-    Materias[508].Nombre = "Teoría y Política Fiscal";
-    Materias[508].Codigo = "TPF6125";
-    Materias[508].Creditos = 5;
+    Materias[503].Nombre = "Teoría y Política Fiscal";
+    Materias[503].Codigo = "TPF6125";
+    Materias[503].Creditos = 5;
 
-    Materias[509].Nombre = "Seminario II";
-    Materias[509].Codigo = "SEMII694";
-    Materias[509].Creditos = 4;
+    Materias[504].Nombre = "Seminario II";
+    Materias[504].Codigo = "SEMII694";
+    Materias[504].Creditos = 4;
 
     //Electiva I
-    Materias[510].Nombre = "Economía y Política Agrícola";
-    Materias[510].Codigo = "EEPA662";
-    Materias[510].Creditos = 2;
+    Materias[505].Nombre = "Economía y Política Agrícola";
+    Materias[505].Codigo = "EEPA662";
+    Materias[505].Creditos = 2;
 
-    Materias[511].Nombre = "Economía Industrial";
-    Materias[511].Codigo = "EEI662";
-    Materias[511].Creditos = 2;
+    Materias[506].Nombre = "Economía Industrial";
+    Materias[506].Codigo = "EEI662";
+    Materias[506].Creditos = 2;
 
-    Materias[512].Nombre = "Economía Minera y Petrolera";
-    Materias[512].Codigo = "EMYP662";
-    Materias[512].Creditos = 2;
+    Materias[507].Nombre = "Economía Minera y Petrolera";
+    Materias[507].Codigo = "EMYP662";
+    Materias[507].Creditos = 2;
 
-    Materias[513].Nombre = "Economía Ambiente y Sociedad";
-    Materias[513].Codigo = "EAYS662";
-    Materias[513].Creditos = 2;
+    Materias[508].Nombre = "Economía Ambiente y Sociedad";
+    Materias[508].Codigo = "EAYS662";
+    Materias[508].Creditos = 2;
 
     //Séptimo Semestre
-    Materias[514].Nombre = "Seminario III";
-    Materias[514].Codigo = "SEMIII794";
-    Materias[514].Creditos = 4;
+    Materias[509].Nombre = "Seminario III";
+    Materias[509].Codigo = "SEMIII794";
+    Materias[509].Creditos = 4;
 
-    Materias[515].Nombre = "Econometría";
-    Materias[515].Codigo = "ECONM7125";
-    Materias[515].Creditos = 5;
+    Materias[510].Nombre = "Econometría";
+    Materias[510].Codigo = "ECONM7125";
+    Materias[510].Creditos = 5;
 
-    Materias[516].Nombre = "Teoría y Política Monetaria";
-    Materias[516].Codigo = "TYPE7125";
-    Materias[516].Creditos = 5;
+    Materias[511].Nombre = "Teoría y Política Monetaria";
+    Materias[511].Codigo = "TYPE7125";
+    Materias[511].Creditos = 5;
 
-    Materias[517].Nombre = "Planificación";
-    Materias[517].Codigo = "PLAN7125";
-    Materias[517].Creditos = 5;
+    Materias[512].Nombre = "Planificación";
+    Materias[512].Codigo = "PLAN7125";
+    Materias[512].Creditos = 5;
 
-    Materias[518].Nombre = "Economía Internacional";
-    Materias[518].Codigo = "ECONI7125";
-    Materias[518].Creditos = 5;
+    Materias[513].Nombre = "Economía Internacional";
+    Materias[513].Codigo = "ECONI7125";
+    Materias[513].Creditos = 5;
 
     //Electiva II
-    Materias[519].Nombre = "Formulación y Evaluación de Proyectos Agrícolas";
-    Materias[519].Codigo = "EFEPA762";
-    Materias[519].Creditos = 2;
+    Materias[514].Nombre = "Formulación y Evaluación de Proyectos Agrícolas";
+    Materias[514].Codigo = "EFEPA762";
+    Materias[514].Creditos = 2;
 
-    Materias[520].Nombre = "Gestión Comunitaria";
-    Materias[520].Codigo = "EGC762";
-    Materias[520].Creditos = 2;
+    Materias[515].Nombre = "Gestión Comunitaria";
+    Materias[515].Codigo = "EGC762";
+    Materias[515].Creditos = 2;
 
-    Materias[521].Nombre = "Contabilidad de Costos";
-    Materias[521].Codigo = "ECDC762";
-    Materias[521].Creditos = 2;
+    Materias[516].Nombre = "Contabilidad de Costos";
+    Materias[516].Codigo = "ECDC762";
+    Materias[516].Creditos = 2;
 
-    Materias[522].Nombre = "Presupuesto";
-    Materias[522].Codigo = "EPRES762";
-    Materias[522].Creditos = 2;
+    Materias[517].Nombre = "Presupuesto";
+    Materias[517].Codigo = "EPRES762";
+    Materias[517].Creditos = 2;
 
     //Octavo Semestre
-    Materias[523].Nombre = "Trabajo Final de Grado";
-    Materias[523].Codigo = "TFG8187";
-    Materias[523].Creditos = 7;
+    Materias[518].Nombre = "Trabajo Final de Grado";
+    Materias[518].Codigo = "TFG8187";
+    Materias[518].Creditos = 7;
 
     //Electiva III
-    Materias[524].Nombre = "Finanzas Internacionales";
-    Materias[524].Codigo = "EFINI862";
-    Materias[524].Creditos = 2;
+    Materias[519].Nombre = "Finanzas Internacionales";
+    Materias[519].Codigo = "EFINI862";
+    Materias[519].Creditos = 2;
 
-    Materias[525].Nombre = "Estructura Económica Mundial";
-    Materias[525].Codigo = "EEEM862";
-    Materias[525].Creditos = 2;
+    Materias[520].Nombre = "Estructura Económica Mundial";
+    Materias[520].Codigo = "EEEM862";
+    Materias[520].Creditos = 2;
 
-    Materias[526].Nombre = "Gestión de Riesgo";
-    Materias[526].Codigo = "EGDR862";
-    Materias[526].Creditos = 2;
+    Materias[521].Nombre = "Gestión de Riesgo";
+    Materias[521].Codigo = "EGDR862";
+    Materias[521].Creditos = 2;
 
-    Materias[527].Nombre = "Economía y Crisis";
-    Materias[527].Codigo = "ECYC862";
-    Materias[527].Creditos = 2;
+    Materias[522].Nombre = "Economía y Crisis";
+    Materias[522].Codigo = "ECYC862";
+    Materias[522].Creditos = 2;
 
 Fin_Procedimiento

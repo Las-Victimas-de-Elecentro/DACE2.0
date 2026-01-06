@@ -1,0 +1,316 @@
+Procedimiento Cant_Reacciones(E/S: react, pub, com, re, Rea[I].ID_Publicacion, Rea[I].ID_Comentario, Rea[I].ID_Respuesta, Publi[J].ID_Publicacion, Com[J].ID_Comentario, Res[J].ID_Respuesta, Rea[I].Cant_Gusta, Rea[I].Cant_Encanta, Rea[I].Cant_Importa, Rea[I].Cant_Divierte, Rea[I].Cant_Asombra, Rea[I].Cant_Entristece, Rea[I].Cant_Molesta: Entero, Rea[I].Me_Gusta, Rea[I].Me_Encanta, Rea[I].Me_Importa, Rea[I].Me_Divierte, Rea[I].Me_Asombra, Rea[I].Me_Entristece, Rea[I].Me_Molesta: Cadena);
+Inicio
+    Var I, J: Entero;
+    Var M1[react]: Entero;
+    Var M2[react]: Entero;
+    Var M3[react]: Entero;
+    Var G1[react]: Cadena;
+    Var G2[react]: Cadena;
+    Var G3[react]: Cadena;
+    Para (I = 1 Hasta I = react) Hacer;
+        M1[I] = Rea[I].Cant_Gusta;
+        M2[I] = Rea[I].Cant_Gusta;
+        M3[I] = Rea[I].Cant_Gusta;
+        G1[I] = Rea[I].Me_Gusta;
+        G2[I] = Rea[I].Me_Gusta;
+        G3[I] = Rea[I].Me_Gusta;
+    Fin_Para
+    Para (I = 1 Hasta I = react) Hacer;
+        Para (J = 1 Hasta J = pub) Hacer;
+            Si (Rea[I].ID_Publicacion = Publi[J].ID_Publicacion) Entonces;
+                Si (Rea[I].Cant_Encanta > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Encanta;
+                    G1[I] = Rea[I].Me_Encanta;
+                Sino
+                    Si (Rea[I].Cant_Encanta > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Encanta;
+                        G2[I] = Rea[I].Me_Encanta;
+                    Sino
+                        Si (Rea[I].Cant_Encanta > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Encanta;
+                            G3[I] = Rea[I].Me_Encanta;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Importa > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Importa;
+                    G1[I] = Rea[I].Me_Importa;
+                Sino
+                    Si (Rea[I].Cant_Importa > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Importa;
+                        G2[I] = Rea[I].Me_Importa;
+                    Sino
+                        Si (Rea[I].Cant_Importa > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Importa;
+                            G3[I] = Rea[I].Me_Importa;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Divierte > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Divierte;
+                    G1[I] = Rea[I].Me_Divierte;
+                Sino
+                    Si (Rea[I].Cant_Divierte > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Divierte;
+                        G2[I] = Rea[I].Me_Divierte;
+                    Sino
+                        Si (Rea[I].Cant_Divierte > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Divierte;
+                            G3[I] = Rea[I].Me_Divierte;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Asombra > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Asombra;
+                    G1[I] = Rea[I].Me_Asombra;
+                Sino
+                    Si (Rea[I].Cant_Asombra > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Asombra;
+                        G2[I] = Rea[I].Me_Asombra;
+                    Sino
+                        Si (Rea[I].Cant_Asombra > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Asombra;
+                            G3[I] = Rea[I].Me_Asombra;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Entristece > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Entristece;
+                    G1[I] = Rea[I].Me_Entristece;
+                Sino
+                    Si (Rea[I].Cant_Entristece > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Entristece;
+                        G2[I] = Rea[I].Me_Entristece;
+                    Sino
+                        Si (Rea[I].Cant_Entristece > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Entristece;
+                            G3[I] = Rea[I].Me_Entristece;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Molesta > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Molesta;
+                    G1[I] = Rea[I].Me_Molesta;
+                Sino
+                    Si (Rea[I].Cant_Molesta > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Molesta;
+                        G2[I] = Rea[I].Me_Molesta;
+                    Sino
+                        Si (Rea[I].Cant_Molesta > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Molesta;
+                            G3[I] = Rea[I].Me_Molesta;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+            Fin_Si
+        Fin_Para
+    Fin_Para
+    Para (I = 1 Hasta I = react) Hacer;
+        Para (J = 1 Hasta J = pub) Hacer;
+            Si (Rea[I].ID_Publicacion = Publi[J].ID_Publicacion) Entonces;
+                Publi[J].Tipo_Reaccion1 = G1[I];
+                Publi[J].Tipo_Reaccion2 = G2[I];
+                Publi[J].Tipo_Reaccion3 = G3[I];
+            Fin_Si
+        Fin_Para
+    Fin_Para
+
+    Para (I = 1 Hasta I = react) Hacer;
+        Para (J = 1 Hasta J = com) Hacer;
+            Si (Rea[I].ID_Comentario = Com[J].ID_Comentario) Entonces;
+                Si (Rea[I].Cant_Encanta > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Encanta;
+                    G1[I] = Rea[I].Me_Encanta;
+                Sino
+                    Si (Rea[I].Cant_Encanta > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Encanta;
+                        G2[I] = Rea[I].Me_Encanta;
+                    Sino
+                        Si (Rea[I].Cant_Encanta > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Encanta;
+                            G3[I] = Rea[I].Me_Encanta;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Importa > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Importa;
+                    G1[I] = Rea[I].Me_Importa;
+                Sino
+                    Si (Rea[I].Cant_Importa > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Importa;
+                        G2[I] = Rea[I].Me_Importa;
+                    Sino
+                        Si (Rea[I].Cant_Importa > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Importa;
+                            G3[I] = Rea[I].Me_Importa;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Divierte > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Divierte;
+                    G1[I] = Rea[I].Me_Divierte;
+                Sino
+                    Si (Rea[I].Cant_Divierte > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Divierte;
+                        G2[I] = Rea[I].Me_Divierte;
+                    Sino
+                        Si (Rea[I].Cant_Divierte > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Divierte;
+                            G3[I] = Rea[I].Me_Divierte;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Asombra > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Asombra;
+                    G1[I] = Rea[I].Me_Asombra;
+                Sino
+                    Si (Rea[I].Cant_Asombra > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Asombra;
+                        G2[I] = Rea[I].Me_Asombra;
+                    Sino
+                        Si (Rea[I].Cant_Asombra > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Asombra;
+                            G3[I] = Rea[I].Me_Asombra;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Entristece > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Entristece;
+                    G1[I] = Rea[I].Me_Entristece;
+                Sino
+                    Si (Rea[I].Cant_Entristece > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Entristece;
+                        G2[I] = Rea[I].Me_Entristece;
+                    Sino
+                        Si (Rea[I].Cant_Entristece > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Entristece;
+                            G3[I] = Rea[I].Me_Entristece;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Molesta > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Molesta;
+                    G1[I] = Rea[I].Me_Molesta;
+                Sino
+                    Si (Rea[I].Cant_Molesta > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Molesta;
+                        G2[I] = Rea[I].Me_Molesta;
+                    Sino
+                        Si (Rea[I].Cant_Molesta > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Molesta;
+                            G3[I] = Rea[I].Me_Molesta;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+            Fin_Si
+        Fin_Para
+    Fin_Para
+    Para (I = 1 Hasta I = react) Hacer;
+        Para (J = 1 Hasta J = com) Hacer;
+            Si (Rea[I].ID_Comentario = Com[J].ID_Comentario) Entonces;
+                Com[J].Tipo_Reaccion1 = G1[I];
+                Com[J].Tipo_Reaccion2 = G2[I];
+                Com[J].Tipo_Reaccion3 = G3[I];
+            Fin_Si
+        Fin_Para
+    Fin_Para
+    Para (I = 1 Hasta I = react) Hacer;
+        Para (J = 1 Hasta J = re) Hacer;
+            Si (Rea[I].ID_Respuesta = Res[J].ID_Respuesta) Entonces;
+                Si (Rea[I].Cant_Encanta > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Encanta;
+                    G1[I] = Rea[I].Me_Encanta;
+                Sino
+                    Si (Rea[I].Cant_Encanta > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Encanta;
+                        G2[I] = Rea[I].Me_Encanta;
+                    Sino
+                        Si (Rea[I].Cant_Encanta > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Encanta;
+                            G3[I] = Rea[I].Me_Encanta;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Importa > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Importa;
+                    G1[I] = Rea[I].Me_Importa;
+                Sino
+                    Si (Rea[I].Cant_Importa > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Importa;
+                        G2[I] = Rea[I].Me_Importa;
+                    Sino
+                        Si (Rea[I].Cant_Importa > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Importa;
+                            G3[I] = Rea[I].Me_Importa;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Divierte > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Divierte;
+                    G1[I] = Rea[I].Me_Divierte;
+                Sino
+                    Si (Rea[I].Cant_Divierte > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Divierte;
+                        G2[I] = Rea[I].Me_Divierte;
+                    Sino
+                        Si (Rea[I].Cant_Divierte > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Divierte;
+                            G3[I] = Rea[I].Me_Divierte;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Asombra > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Asombra;
+                    G1[I] = Rea[I].Me_Asombra;
+                Sino
+                    Si (Rea[I].Cant_Asombra > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Asombra;
+                        G2[I] = Rea[I].Me_Asombra;
+                    Sino
+                        Si (Rea[I].Cant_Asombra > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Asombra;
+                            G3[I] = Rea[I].Me_Asombra;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Entristece > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Entristece;
+                    G1[I] = Rea[I].Me_Entristece;
+                Sino
+                    Si (Rea[I].Cant_Entristece > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Entristece;
+                        G2[I] = Rea[I].Me_Entristece;
+                    Sino
+                        Si (Rea[I].Cant_Entristece > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Entristece;
+                            G3[I] = Rea[I].Me_Entristece;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+                Si (Rea[I].Cant_Molesta > M1[I]) Entonces;
+                    M1[I] = Rea[I].Cant_Molesta;
+                    G1[I] = Rea[I].Me_Molesta;
+                Sino
+                    Si (Rea[I].Cant_Molesta > M2[I]) Entonces;
+                        M2[I] = Rea[I].Cant_Molesta;
+                        G2[I] = Rea[I].Me_Molesta;
+                    Sino
+                        Si (Rea[I].Cant_Molesta > M3[I]) Entonces;
+                            M3[I] = Rea[I].Cant_Molesta;
+                            G3[I] = Rea[I].Me_Molesta;
+                        Fin_Si
+                    Fin_Si
+                Fin_Si
+            Fin_Si
+        Fin_Para
+    Fin_Para
+    Para (I = 1 Hasta I = react) Hacer;
+        Para (J = 1 Hasta J = re) Hacer;
+            Si (Rea[I].ID_Respuesta = Res[J].ID_Respuesta) Entonces;
+                Res[J].Tipo_Reaccion1 = G1[I];
+                Res[J].Tipo_Reaccion2 = G2[I];
+                Res[J].Tipo_Reaccion3 = G3[I];
+            Fin_Si
+        Fin_Para
+    Fin_Para
+Fin_Procedimiento

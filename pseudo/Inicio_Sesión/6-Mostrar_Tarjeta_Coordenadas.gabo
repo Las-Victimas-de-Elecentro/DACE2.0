@@ -1,0 +1,13 @@
+Procedimiento Mostrar_Tarjeta_Coordenadas(E/S: ID, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna: Entero);
+Inicio
+	Var I: Entero;
+	Mostrar<"A continuación le mostraremos su tarjeta de coordenadas:";
+    Mostrar << "------------------------------------------";
+    Para (I = 1 Hasta I = 25000) Hacer;
+		Si (ID = Tarjeta[I].ID) Entonces;
+			Mostrar << Tarjeta[I].Fila;
+			Mostrar << Tarjeta[I].Columna;
+		Fin_Si
+	Fin_Para
+	Mostrar << "------------------------------------------";
+Fin_Procedimiento

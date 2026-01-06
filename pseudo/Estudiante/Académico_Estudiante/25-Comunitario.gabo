@@ -21,33 +21,33 @@ Inicio
             Leer >> Cedula;
         Fin_Mientras
         En_Caso (Cedula > 0) sea;
-                Caso (Datos[pos_usuario].Carrera = "Informatica");
-                    Pensum = (56);
-                Caso (Datos[pos_usuario].Carrera = "Civil");
-                    Pensum = (63);
-                Caso (Datos[pos_usuario].Carrera = "Hidrocarburo");
-                    Pensum = (36);
-                Caso (Datos[pos_usuario].Carrera = "Medicina");
-                    Pensum = (48);
-                Caso (Datos[pos_usuario].Carrera = "Odontologia");
-                    Pensum = (48);
-                Caso (Datos[pos_usuario].Carrera = "Veterianaria");
-                    Pensum = (41);
-                Caso (Datos[pos_usuario].Carrera = "Derecho");
-                    Pensum = (55);
-                Caso (Datos[pos_usuario].Carrera = "Comunicacion");
-                    Pensum = (58);
-                Caso (Datos[pos_usuario].Carrera = "Contaduria");
-                    Pensum = (48);
+            Caso (Datos[pos_usuario].Carrera = "Informática");
+                Pensum = (59);
+            Caso (Datos[pos_usuario].Carrera = "Civil");
+                Pensum = (57);
+            Caso (Datos[pos_usuario].Carrera = "Hidrocarburos");
+                Pensum = (56);
+            Caso (Datos[pos_usuario].Carrera = "Medicina");
+                Pensum = (51);
+            Caso (Datos[pos_usuario].Carrera = "Odontología");
+                Pensum = (34);
+            Caso (Datos[pos_usuario].Carrera = "Veterinaria");
+                Pensum = (43);
+            Caso (Datos[pos_usuario].Carrera = "Derecho");
+                Pensum = (54);
+            Caso (Datos[pos_usuario].Carrera = "Comunicación");
+                Pensum = (58);
+            Caso (Datos[pos_usuario].Carrera = "Contaduría");
+                Pensum = (52);
             Otro_Caso
-                    Pensum = (45);
+                Pensum = (57);
         Fin_Caso
         mitad = (Pensum / 2);
         Materias_Aprobadas = Datos[pos_usuario].Materias_Aprobadas;
         Repetir
-            Si (Cedula = SerC[I].Cedula) entonces;
+            Si (Cedula = SerC[I].Cedula) Entonces;
                 Mostrar << "Hola: ", SerC[I].Nombre, ", Bienvenido al sistema de añadir horas al servivio comunitario";
-                Mostrar << "A continuacion agrega tu horas realizadas en la ultima jornada";
+                Mostrar << "A continuacion agrega tus horas realizadas en la ultima jornada";
                 Mostrar << "Recuerda que cada jornada tiene un duracion de entre 1 y 3 horas";
                 Leer >> Horas;
                 Mientras (Horas < 1) or (Horas > 3) hacer,
@@ -56,8 +56,8 @@ Inicio
                 Fin_Mientras
                 SerC[I].Horas_Realizadas = SerC[I].Horas_Realizadas + Horas;
                 Mostrar << "Tus horas fueron añadidas exitosamente";
-                Si (SerC[I].Horas_Realizadas >= 120) entonces;
-                    Mostrar << "Usted a completado el servicio comunitario";
+                Si (SerC[I].Horas_Realizadas >= 120) Entonces;
+                    Mostrar << "Usted ha completado el servicio comunitario";
                     Datos[pos_usuario].Servicio_Comunitario = 1;
                     SerC[I].Nombre =          " ";
                     SerC[I].Edad =              0;
@@ -68,11 +68,11 @@ Inicio
                     SerC[I].Horas_Realizadas =  0;
                 Fin_Si
             Fin_Si
-            Si (Cedula = SerC[I].Cedula) entonces;
+            Si (Cedula = SerC[I].Cedula) Entonces;
                 H = 1;
             Fin_Si
-            Si (Materias_Aprobadas > mitad) and (Datos[pos_usuario].Servicio_Comunitario = 0) and (H = 0)  entonces;
-                Si (SerC[I].Cedula = 0) entonces;
+            Si (Materias_Aprobadas >= mitad) and (Datos[pos_usuario].Servicio_Comunitario = 0) and (H = 0)  Entonces;
+                Si (SerC[I].Cedula = 0) Entonces;
                     SerC[I].Nombre =                Datos[pos_usuario].Nombre;
                     SerC[I].Edad =                  Datos[pos_usuario].Edad;
                     SerC[I].Cedula =                Datos[pos_usuario].CI;
@@ -82,7 +82,7 @@ Inicio
                     SerC[I].Horas_Realizadas =      0;
                     Mostrar << "Ahora usted se encuentra en la base de datos del servicio comunitario";
                 Sino
-                    Si (N = 2) and (Ad.Servicio_Comunitario = 0) entonces;
+                    Si (N = 2) and (Ad.Servicio_Comunitario = 0) Entonces;
                         SerC[N].Nombre =            Datos[pos_usuario].Nombre;
                         SerC[N].Edad =              Datos[pos_usuario].Edad;
                         SerC[N].Cedula =            Datos[pos_usuario].CI;
@@ -106,14 +106,17 @@ Inicio
                 Fin_Si
             Fin_Si
             I = I + 1;
-        Hasta (I = J); 
+            Hasta (I = J); 
         Fin_Repetir
-        Si (Materias_Aprobadas < mitad) entonces;
+        Si (Materias_Aprobadas < mitad) Entonces;
             Mostrar << "Usted no califica para realizar servicio comunitario";
-            Mostrar << "Para realizar el servicio comunitario debe tener el 50% de las amterias aprobadas (", Pensum, "), usted tiene: ", cantidad ," que es menor al minimo nescesario ", (Pensum /2);  
-            Mostrar << "Apruebe el minimo nescesario para poder intentarlo nuevamente";
+            Mostrar << "Para realizar el servicio comunitario debe tener el 50% de las materias aprobadas (", Pensum, "), usted tiene: ", cantidad ," que es menor al minimo necesario ", (Pensum /2);  
+            Mostrar << "Apruebe el minimo necesario para poder intentarlo nuevamente";
         Fin_Si
     Sino 
         Mostrar << "Las inscripciones estan cerradas, espera al proximo ciclo";
+    Fin_Si
+    Si (Datos[pos_usuario].Servicio_Comunitario = 1) Entonces;
+        Mostrar << "Ya hiciste el servicio comunitario.";
     Fin_Si
 Fin_Procedimiento

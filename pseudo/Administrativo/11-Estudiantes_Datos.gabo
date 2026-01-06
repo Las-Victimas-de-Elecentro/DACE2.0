@@ -1,8 +1,7 @@
 Procedimiento Estudiantes_Datos(E/S: C, Gestion[C].CI, Gestion[C].Edad, Gestion[C].Year, Gestion[C].Semestre: Entero, Gestion[C].Usuario, Gestion[C].Password, Gestion[C].Carrera, Gestion[C].Telefono: Cadena);
 Inicio
-	Var C = 1, Es: Entero;
+	Var op: Entero;
 	Var Z: Booleano;
-	Var opc2, Apr2: Booleano;
     Repetir
         Mostrar << "Ingrese el nombre del estudiante";
         Leer >> Gestion[C].Usuario;
@@ -17,7 +16,43 @@ Inicio
         Mostrar << "Ingrese el número de teléfono";
         Leer >> Gestion[C].Telefono;
         Mostrar << "Ingrese la carrera del estudiante";
-        Leer >> Gestion[C].Carrera;
+        Mostrar << "1: Ingeniería en Informática";
+        Mostrar << "2: Ingeniería Civil";
+        Mostrar << "3: Ingeniería en Hidrocarburos";
+        Mostrar << "4: Medicina";
+        Mostrar << "5: Odontología";
+        Mostrar << "6: Veterinaria";
+        Mostrar << "7: Derecho";
+        Mostrar << "8: Comunicación Social";
+        Mostrar << "9: Contaduría";
+        Mostrar << "10: Economía";
+        Leer >> op;
+        Mientras (op < 1 or op > 10) Hacer;
+            Mostrar << "Es invalido, solo rango entre 1-10";
+            Leer >> op;
+        Fin_Mientras
+        En_Caso (op > 0) Sea;
+            Caso(op = 1);
+                Gestion[C].Carrera = "Informática";
+            Caso(op = 2);
+                Gestion[C].Carrera = "Civil";
+            Caso(op = 3);
+                Gestion[C].Carrera = "Hidrocarburos";
+            Caso(op = 4);
+                Gestion[C].Carrera = "Medicina";
+            Caso(op = 5);
+                Gestion[C].Carrera = "Odontología";
+            Caso(op = 6);
+                Gestion[C].Carrera = "Veterinaria";
+            Caso(op = 7);
+                Gestion[C].Carrera = "Derecho";
+            Caso(op = 8);
+                Gestion[C].Carrera = "Comunicación";
+            Caso(op = 9);
+                Gestion[C].Carrera = "Contaduría";
+            Otro_Caso
+                Gestion[C].Carrera = "Economía";
+        Fin_Caso
         Mostrar << "Ingrese el año del estudiante";
         Leer >> Gestion[C].Year;
         Mostrar << "Ingrese el semestre del estudiante";

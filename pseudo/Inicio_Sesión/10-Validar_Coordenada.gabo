@@ -1,0 +1,33 @@
+Procedimiento Validar_Coordenada(E/S: pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, Minimo, Maximo: Entero, Acceso: Booleano);
+Inicio
+	Var I, J, Coordenada, Coordenada2, Fila, Columna: Entero;
+	Minimo = 1;
+	Maximo = 5;
+	Fila = Aleatorio(Minimo, Maximo);
+	Columna = Aleatorio(Minimo, Maximo);
+    Mostrar << "Introduzca la coordenada ubicada en la posición: ", Fila, " de la fila";
+	Leer >> Coordenada;
+	Mientras (Coordenada < 1 or Coordenada > 99) Hacer;
+		Mostrar << "Es invalido, no está en el rango";
+		Leer >> Coordenada;
+	Fin_Mientras
+	Mostrar << "Introduzca la coordenada ubicada en la posición: ", Columna, " de la columna";
+	Leer >> Coordenada2;
+	Mientras (Coordenada2 < 1 or Coordenada2 > 99) Hacer;
+		Mostrar << "Es invalido, no está en el rango";
+		Leer >> Coordenada2;
+	Fin_Mientras
+	Para (I = 1 Hasta I = 25000) Hacer;
+		Si (pos_usuario = Tarjeta[I].ID) Entonces;
+			Para (J = pos_usuario Hasta J = pos_usuario + 5) Hacer;
+				Si (Coordenada = Tarjeta[J].Fila or Coordenada2 = Tarjeta[J].Columna) Entonces;
+					Mostrar << "Coordenada válida, acceso permitido";
+					Acceso = 1;
+				Sino
+					Mostrar << "Coordenada incorrecta. Acceso denegado";
+					Acceso = 0;
+				Fin_Si
+			Fin_Para
+		Fin_Si
+	Fin_Para
+Fin_Procedimiento

@@ -1,4 +1,4 @@
-Procedimiento Menu_Registro_Login(E/S: ID, v, C, Minimo, Maximo, Tarjeta[I].ID, Tarjeta[J].Fila, Tarjeta[J].Columna, Gestion[I].CI, Gestion[I].Semestre, Gestion[I].Year, Datos[v].CI, Datos[v].Semestre, Datos[v].Year, pos, pos_admin, pos_usuario, Admin[I].CI, Tarjeta[I].Fila, Tarjeta[I].Columna: Entero, Gestion[I].Nombre, Gestion[I].Gmail, Gestion[I].Password, Gestion[I].Carrera, Gestion[C].Telefono, Datos[v].Nombre, Datos[v].Gmail, Datos[v].Password, Datos[v].Carrera, Datos[v].Telefono, Rol, Admin[I].Gmail, Prof[I].Gmail, Admin[I].Usuario, Prof[I].Nombre, Admin[I].Password, Prof[I].Password: Cadena, Gestion[I].Verificado, Acceso: Booleano);
+Procedimiento Menu_Registro_Login(E/S: indice, ID, v, C, Minimo, Maximo, Tarjeta[I].ID, Tarjeta_A[I].ID, Tarjeta_P[I].ID, Gestion[I].CI, Gestion[I].Semestre, Gestion[I].Year, Datos[v].CI, Datos[v].Semestre, Datos[v].Year, pos, pos_admin, pos_usuario, Admin[I].CI, , Tarjeta[I].Fila, Tarjeta[I].Columna, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna: Entero, Gestion[I].Nombre, Gestion[I].Gmail, Gestion[I].Password, Gestion[I].Carrera, Gestion[C].Telefono, Datos[v].Nombre, Datos[v].Gmail, Datos[v].Password, Datos[v].Carrera, Datos[v].Telefono, Rol, Admin[I].Gmail, Prof[I].Gmail, Admin[I].Usuario, Prof[I].Nombre, Admin[I].Password, Prof[I].Password, pass: Cadena, Gestion[I].Verificado, Acceso, encontrado, encontradoProf, encontradoAdmin: Booleano);
 Inicio
     Mostrar << "==============================================";
     Mostrar << "       		BIENVENIDO A DACE";
@@ -13,10 +13,10 @@ Inicio
 	Fin_Mientras
 	En_Caso (Opcion > 0) Sea;
 		Caso (Opcion = 1);
-            Registro(ID, v, C, Minimo, Maximo, Tarjeta[I].ID, Tarjeta[J].Fila, Tarjeta[J].Columna, Gestion[I].CI, Gestion[I].Semestre, Gestion[I].Year, Datos[v].CI, Datos[v].Semestre, Datos[v].Year, Gestion[I].Nombre, Gestion[I].Gmail, Gestion[I].Password, Gestion[I].Carrera, Gestion[C].Telefono, Datos[v].Nombre, Datos[v].Gmail, Datos[v].Password, Datos[v].Carrera, Datos[v].Telefono, Gestion[I].Verificado);
+            Registro(indice, ID, v, C, Minimo, Maximo, Tarjeta[I].ID, Tarjeta[J].Fila, Tarjeta[J].Columna, Gestion[I].CI, Gestion[I].Semestre, Gestion[I].Year, Datos[v].CI, Datos[v].Semestre, Datos[v].Year, Gestion[I].Nombre, Gestion[I].Gmail, Gestion[I].Password, Gestion[I].Carrera, Gestion[C].Telefono, Datos[v].Nombre, Datos[v].Gmail, Datos[v].Password, Datos[v].Carrera, Datos[v].Telefono, pass, Gestion[I].Verificado);
             Mostrar << Registro;
 		Otro_Caso
-            Iniciar_Sesion(Rol, Datos[I].Gmail, Admin[I].Gmail, Prof[I].Gmail, Datos[I].Nombre, Admin[I].Usuario, Prof[I].Nombre, Datos[I].Password, Admin[I].Password, Prof[I].Password, pos, pos_admin, pos_usuario, Datos[I].CI, Admin[I].CI, Tarjeta[I].Fila, Tarjeta[I].Columna, Acceso);
+            Iniciar_Sesion(Rol, Datos[I].Gmail, Admin[I].Gmail, Prof[I].Gmail, Datos[I].Nombre, Admin[I].Usuario, Prof[I].Nombre, Datos[I].Password, Admin[I].Password, Prof[I].Password, pass, indice, pos, pos_admin, pos_usuario, Datos[I].CI, Admin[I].CI, Tarjeta[I].ID, Tarjeta_A[I].ID, Tarjeta_P[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Acceso, encontrado, encontradoProf, encontradoAdmin);
             Mostrar << Iniciar_Sesion;
 	Fin_Caso
 Fin_Procedimiento

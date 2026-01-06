@@ -3,6 +3,7 @@ Inicio
     Var opc: Entero;
     Var R: Booleano;
     Repetir
+        Cant_Reacciones(react, pub, com, re, Rea[I].ID_Publicacion, Rea[I].ID_Comentario, Rea[I].ID_Respuesta, Publi[J].ID_Publicacion, Com[J].ID_Comentario, Res[J].ID_Respuesta, Rea[I].Cant_Gusta, Rea[I].Cant_Encanta, Rea[I].Cant_Importa, Rea[I].Cant_Divierte, Rea[I].Cant_Asombra, Rea[I].Cant_Entristece, Rea[I].Cant_Molesta: Entero, Rea[I].Me_Gusta, Rea[I].Me_Encanta, Rea[I].Me_Importa, Rea[I].Me_Divierte, Rea[I].Me_Asombra, Rea[I].Me_Entristece, Rea[I].Me_Molesta);
         Mostrar << "¡Bienvenido al Foro de Estudiantes!";
         Mostrar << "1: Crear publicación";
         Mostrar << "2: Ver publicaciones";
