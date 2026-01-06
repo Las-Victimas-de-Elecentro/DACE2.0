@@ -1,6 +1,52 @@
 import glob
 import re
 
+# Algunos contadores
+structs_total = 0
+procedures_total = 0
+func_total = 0
+in_param_total = 0
+in_out_param_total = 0
+out_param_total = 0
+
+
+def clasify_params(params:  str) -> dict[str, list[str]]:
+    in_type: list[str] = []
+    int_out_type: list[str] = []
+    out_type: list[str] = []
+
+    current_type = 'S'
+
+    parts = [p.strip() for p in params.split(',')]
+
+    for i, part in enumerate(parts):
+        if part.startswith('E/S:'):
+            current_type = 'E/S'
+            part = part[4:].strip()
+        elif part.startswith('E:'):
+            current_type = 'E'
+            part = part[2:].strip()
+        elif part.startswith('S:'):
+            current_type = 'S'
+            part = part[2:].strip()
+        elif i == 0 and not any(part.startswith(p) for p in ['E/S:', 'E:', 'S:']):
+            current_type = 'S'
+
+        if part:
+            if current_type == 'E':
+                in_type.append(part)
+            elif current_type == 'E/S':
+                int_out_type.append(part)
+            elif current_type == 'S':
+                out_type.append(part)
+
+    return {
+        'Entrada': in_type,
+        'Entrada/Salida': int_out_type,
+        'Salida': out_type
+    }
+
+
 gabo_files = glob.glob("./pseudo/**/*.gabo", recursive=True)
 # gabo_files = ["./pseudo/Estudiante/Social_Estudiante/13-Comentar.gabo"]
 report: list[str] = []
@@ -13,10 +59,6 @@ procedure_header_regex = r"(\w+)\s*\(\s*(.*)\s*\);?"
 func_regex = r"Funcion\s*([^;]+);([\s\S]*?)Fin_Funcion"
 func_header_regex = r"(\w+)\s*\(\s*(.+)\s*\)\s*:\s*(\w+);?"
 
-# Algunos contadores
-structs_total = 0
-procedures_total = 0
-func_total = 0
 
 for file in gabo_files:
     with open(file, 'r', encoding='utf-8') as output:
@@ -45,7 +87,27 @@ for file in gabo_files:
                 procedure_header_regex, declaration)
             identifier, params = procedure_header[0]
 
-            report.append(f"  - Procedimiento: {identifier}.\n    - Parametros: ")
+            report.append(
+                f"  - Procedimiento: {identifier}.\n    - Parametros: ")
+            parsed_params = clasify_params(params)
+
+            if len(parsed_params['Entrada']) > 0:
+                report.append("      - Entrada")
+                for p in parsed_params['Entrada']:
+                    report.append(f"        - {p}")
+                    in_param_total += 1
+
+            if len(parsed_params['Entrada/Salida']) > 0:
+                report.append("      - Entrada/Salida")
+                for p in parsed_params['Entrada/Salida']:
+                    report.append(f"        - {p}")
+                    in_out_param_total += 1
+
+            if len(parsed_params['Salida']) > 0:
+                report.append("      - Salida")
+                for p in parsed_params['Salida']:
+                    report.append(f"        - {p}")
+                    out_param_total += 1
 
         # Extraemos las funciones
         functions: list[tuple[str, str]] = re.findall(
@@ -56,13 +118,19 @@ for file in gabo_files:
                 func_header_regex, declaration)
             identifier, params, return_type = func_header[0]
 
-            report.append(f"\n  - Funcion: {identifier}. Retorno: {return_type}.\n    - Parametros: ")
+            report.append(
+                f"\n  - Funcion: {identifier}. Retorno: {return_type}.\n    - Parametros: ")
 
         report.append("\n" + "-"*40 + "\n")
 
 
 header = f"{"-" * 20} REPORTE DE TODO EL PSEUDO {"-" * 20}"
 report.insert(0, "-" * len(header))
+report.insert(0, f"  - De Entrada/Salida: {in_out_param_total}")
+report.insert(0, f"  - De Salida: {out_param_total}")
+report.insert(0, f"  - De Entrada: {in_param_total}")
+report.insert(
+    0, f"Total de parametros en procedimientos: {in_param_total + in_out_param_total + out_param_total}")
 report.insert(0, f"Total de procedimientos: {procedures_total}")
 report.insert(0, f"Total de registros: {structs_total}")
 report.insert(0, f"Total de funciones: {func_total}")
