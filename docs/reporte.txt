@@ -1,0 +1,1922 @@
+-------------------- REPORTE DE TODO EL PSEUDO --------------------
+Total de archivos: 146
+Total de funciones: 1
+Total de registros: 77
+Total de procedimientos: 143
+-------------------------------------------------------------------
+
+ARCHIVO: .\Principal.gabo
+========================================
+
+  - Registro: Administrativos.
+    - Campos: 
+      - Avatar: Cadena
+      - Usuario: Cadena
+      - Edad: Entero
+      - Cargo: Cadena
+      - CI: Entero
+      - Gmail: Cadena
+      - Password: Cadena
+
+  - Registro: Admin.
+    - Campos: 
+      - Servicio_Comunitario: Booleano
+      - Inscripciones: Booleano
+
+  - Registro: Docente.
+    - Campos: 
+      - Avatar: Cadena
+      - Nombre: Cadena
+      - CI: Entero
+      - Edad: Entero
+      - Gmail: Cadena
+      - Password: Cadena
+      - Materias: Cadena
+      - Cant_Materias: Entero
+      - Cant_Clases: Entero
+      - Club: Cadena
+      - Enfermedad: Cadena
+      - Esta_en_Club: Booleano
+
+  - Registro: Estudiantes.
+    - Campos: 
+      - Avatar: Cadena
+      - Nombre: Cadena
+      - CI: Entero
+      - Edad: Entero
+      - Telefono: Cadena
+      - Gmail: Cadena
+      - Password: Cadena
+      - Carrera: Cadena
+      - Semestre: Entero
+      - Year: Entero
+      - Materias_Aprobadas: Entero
+      - Servicio_Comunitario: Booleano
+      - Pasantias: Booleano
+      - Notas: Real
+      - UC: Entero
+      - UC_Aprobadas: Entero
+      - Actas: Cadena
+      - Club: Cadena
+      - Esta_en_Club: Booleano
+      - Enfermedad: Cadena
+
+  - Registro: Tarjeta_Coordenadas.
+    - Campos: 
+      - ID: Entero
+      - Fila: Entero
+      - Columna: Entero
+
+  - Registro: Tarjeta_Coordenadas_Admin.
+    - Campos: 
+      - ID: Entero
+      - Fila: Entero
+      - Columna: Entero
+
+  - Registro: Tarjeta_Coordenadas_Profe.
+    - Campos: 
+      - ID: Entero
+      - Fila: Entero
+      - Columna: Entero
+
+  - Registro: Solicitud_Empleo.
+    - Campos: 
+      - Usuario: Cadena
+      - CI: Entero
+      - Gmail: Cadena
+      - Password: Cadena
+      - Edad: Entero
+      - Experiencia: Cadena
+      - Titulo: Cadena
+      - Descripcion: Cadena
+      - Estado: Booleano
+
+  - Registro: Solicitud_Inscripcion.
+    - Campos: 
+      - Nombre: Cadena
+      - CI: Entero
+      - Edad: Entero
+      - Telefono: Cadena
+      - Gmail: Cadena
+      - Carrera: Cadena
+      - Semestre: Entero
+      - Year: Entero
+      - Verificado: Booleano
+
+  - Registro: Materia.
+    - Campos: 
+      - Codigo: Cadena
+      - Nombre: Cadena
+      - Creditos: Entero
+
+  - Registro: Bloque_Horario.
+    - Campos: 
+      - ID_Bloque: Entero
+      - Dia: Cadena
+      - Hora_Inicio: Cadena
+      - Hora_Fin: Cadena
+      - Aula: Cadena
+      - Codigo_Materia: Cadena
+      - Estado: Cadena
+
+  - Registro: Lista.
+    - Campos: 
+      - ID_Lista: Entero
+      - Nombre: Cadena
+      - Cedula: Entero
+
+  - Registro: Clase.
+    - Campos: 
+      - ID_Clase: Entero
+      - Nombre_Profesor: Cadena
+      - CI_Profesor: Entero
+      - Codigo_Materia: Cadena
+      - Nombre_Materia: Cadena
+      - Periodo: Cadena
+      - Dia: Cadena
+      - Hora_Inicio: Cadena
+      - Hora_Fin: Cadena
+      - Aula: Entero
+      - Seccion: Entero
+      - Cant_Estudiantes: Entero
+      - Virtual: Booleano
+      - Plataforma: Cadena
+
+  - Registro: Lista_Magistral.
+    - Campos: 
+      - ID_Lista: Entero
+      - Nombre: Cadena
+      - Cedula: Entero
+
+  - Registro: Clase_Magistral.
+    - Campos: 
+      - ID_Clase: Entero
+      - Nombre_Profesor: Cadena
+      - CI_Profesor: Entero
+      - Codigo_Materia: Cadena
+      - Nombre_Materia: Cadena
+      - Fecha: Cadena
+      - Horas: Real
+      - Aula: Cadena
+      - Cant_Estudiantes: Entero
+      - Precio: Real
+      - Autorizacion: Booleano
+
+  - Registro: Plan_Evaluacion.
+    - Campos: 
+      - ID_Plan: Entero
+      - Nombre_Profesor: Cadena
+      - CI_Profesor: Entero
+      - Codigo_Materia: Cadena
+      - Nombre_Materia: Cadena
+      - Fecha: Cadena
+      - Tema: Cadena
+      - Estrategia: Cadena
+      - Ponderacion: Entero
+      - Firmado: Booleano
+
+  - Registro: Asignacion.
+    - Campos: 
+      - ID_Asignacion: Entero
+      - Nombre_Profesor: Cadena
+      - Codigo_Materia: Cadena
+      - Titulo: Cadena
+      - Descripcion: Cadena
+      - Fecha_Publicacion: Cadena
+      - Fecha_Entrega: Cadena
+      - Estado: Cadena
+
+  - Registro: Grupos.
+    - Campos: 
+      - Nombre_Profesor: Cadena
+      - CI_Profesor: Entero
+      - Codigo_Materia: Cadena
+      - Materia: Cadena
+      - Miembros: Entero
+      - Seccion: Entero
+
+  - Registro: Bloques_Base.
+    - Campos: 
+      - Cant: Entero
+
+  - Registro: Solicitudes.
+    - Campos: 
+      - Titulo: Cadena
+      - Descripcion: Cadena
+      - Titular: Cadena
+      - Destinatario: Cadena
+      - Fecha: Cadena
+      - Estado: Booleano
+
+  - Registro: Reportes.
+    - Campos: 
+      - Titulo: Cadena
+      - Descripcion: Cadena
+      - Titular: Cadena
+      - Problema: Cadena
+      - Fecha: Cadena
+      - Recibido: Booleano
+
+  - Registro: Eventos.
+    - Campos: 
+      - Nombre: Cadena
+      - Fecha: Cadena
+      - Tipo: Cadena
+      - Descripcion: Cadena
+
+  - Registro: Clubes.
+    - Campos: 
+      - Nombre: Cadena
+      - Descripcion: Cadena
+      - Capacidad_Maxima: Entero
+      - Miembros_Inscritos: Entero
+      - Horarios_Disponibles: Cadena
+
+  - Registro: Celebraciones.
+    - Campos: 
+      - Nombre: Cadena
+      - Fecha: Cadena
+      - Tipo: Cadena
+      - Descripcion: Cadena
+
+  - Registro: Carnetizacion.
+    - Campos: 
+      - Lugar: Cadena
+      - Carrera: Cadena
+      - Precio: Real
+      - Activo: Booleano
+
+  - Registro: Carnet.
+    - Campos: 
+      - Nombre: Cadena
+      - CI: Entero
+      - Carrera: Cadena
+      - Fecha_Vencimiento: Cadena
+
+  - Registro: Amigos.
+    - Campos: 
+      - Nombre_Emisor: Cadena
+      - CI_Emisor: Entero
+      - Nombre_Receptor: Cadena
+      - CI_Receptor: Entero
+      - Avatar_Receptor: Cadena
+
+  - Registro: Novedades.
+    - Campos: 
+      - Hecho: Cadena
+      - Fecha: Cadena
+      - Responsables: Cadena
+      - Contexto: Cadena
+      - Lugar: Cadena
+
+  - Registro: Chatbot.
+    - Campos: 
+      - Preguntas: Cadena
+      - Respuesta1: Cadena
+      - Respuesta2: Cadena
+      - Respuesta3: Cadena
+      - Respuesta4: Cadena
+
+  - Registro: Salud_Administrativo.
+    - Campos: 
+      - Enfermedad_Cronica: Cadena
+      - Discapacidad: Cadena
+      - Corazon: Cadena
+      - Asma: Booleano
+      - Cancer: Cadena
+
+  - Registro: Enfermedad_Docente.
+    - Campos: 
+      - Transmisibles: Cadena
+      - Cronicas: Cadena
+      - Neurologicas: Cadena
+      - Neoplasias: Cadena
+      - Autoinmunes: Cadena
+      - Trastornos: Cadena
+      - Lesiones: Cadena
+      - Congenitas: Cadena
+      - Metabolicos: Cadena
+      - Ocupacionales: Cadena
+
+  - Registro: Enfermedad_Estudiante.
+    - Campos: 
+      - Transmisibles: Cadena
+      - Cronicas: Cadena
+      - Neurologicas: Cadena
+      - Neoplasias: Cadena
+      - Autoinmunes: Cadena
+      - Trastornos: Cadena
+      - Lesiones: Cadena
+      - Congenitas: Cadena
+      - Metabolicos: Cadena
+      - Ocupacionales: Cadena
+
+  - Registro: Pasantias.
+    - Campos: 
+      - Nombre: Cadena
+      - Edad, Cedula: Entero
+      - Password: Cadena
+      - Carrera: Cadena
+      - Semestre: Entero
+      - Year: Entero
+      - Empresa: Cadena
+      - Estado_Solicitud: Entero
+      - Horas: Real
+
+  - Registro: Servicio_Comunitario.
+    - Campos: 
+      - Nombre: Cadena
+      - Edad, Cedula: Entero
+      - Area: Cadena
+      - Semestre: Entero
+      - Year: Entero
+      - Horas_Realizadas: Real
+
+  - Registro: Market_Place.
+    - Campos: 
+      - Usuario: Cadena
+      - Cedula: Entero
+      - Contacto: Cadena
+      - Password: Cadena
+      - Datos_Bancarios: Cadena
+      - Area: Cadena
+      - Boveda: Real
+      - Ingresos: Real
+      - Egresos: Real
+      - Bitacora: Cadena
+
+  - Registro: Comida_MP.
+    - Campos: 
+      - Vendedor: Cadena
+      - Cedula: Entero
+      - Contacto: Cadena
+      - Datos_Bancarios: Cadena
+      - Producto: Cadena
+      - Stock: Entero
+      - Precio: Real
+
+  - Registro: Articulos_MP.
+    - Campos: 
+      - Vendedor: Cadena
+      - Cedula: Entero
+      - Contacto: Cadena
+      - Datos_Bancarios: Cadena
+      - Producto: Cadena
+      - Stock: Entero
+      - Precio: Real
+
+  - Registro: Servicios_MP.
+    - Campos: 
+      - Vendedor: Cadena
+      - Cedula: Entero
+      - Disp: Booleano
+      - Precio: Real
+      - Contacto: Cadena
+      - Datos_Bancarios: Cadena
+      - Producto: Cadena
+
+  - Registro: Publicaciones.
+    - Campos: 
+      - ID_Publicacion: Entero
+      - Autor: Cadena
+      - Normas: Cadena
+      - Tema: Cadena
+      - Texto: Cadena
+      - Fecha: Cadena
+      - Comentarios: Entero
+      - Cant_Reacciones: Entero
+      - Tipo_Reaccion1: Cadena
+      - Tipo_Reaccion2: Cadena
+      - Tipo_Reaccion3: Cadena
+      - Etiqueta: Cadena
+      - Activo: Booleano
+
+  - Registro: Comentarios.
+    - Campos: 
+      - ID_Publicacion: Entero
+      - ID_Comentario: Entero
+      - Autor: Cadena
+      - Comentario: Cadena
+      - Fecha: Cadena
+      - Cant_Reacciones: Entero
+      - Tipo_Reaccion1: Cadena
+      - Tipo_Reaccion2: Cadena
+      - Tipo_Reaccion3: Cadena
+
+  - Registro: Respuesta.
+    - Campos: 
+      - ID_Comentario: Entero
+      - ID_Respuesta: Entero
+      - Autor: Cadena
+      - Respuesta: Cadena
+      - Fecha: Cadena
+      - Cant_Reacciones: Entero
+      - Tipo_Reaccion1: Cadena
+      - Tipo_Reaccion2: Cadena
+      - Tipo_Reaccion3: Cadena
+
+  - Registro: Reacciones.
+    - Campos: 
+      - ID_Publicacion: Entero
+      - ID_Comentario: Entero
+      - ID_Respuesta: Entero
+      - ID_Reacciones: Entero
+      - Me_Gusta: Cadena
+      - Cant_Gusta: Entero
+      - Me_Encanta: Cadena
+      - Cant_Encanta: Entero
+      - Me_Importa: Cadena
+      - Cant_Importa: Entero
+      - Me_Divierte: Cadena
+      - Cant_Divierte: Entero
+      - Me_Asombra: Cadena
+      - Cant_Asombra: Entero
+      - Me_Entristece: Cadena
+      - Cant_Entristece: Entero
+      - Me_Molesta: Cadena
+      - Cant_Molesta: Entero
+
+  - Registro: Notas.
+    - Campos: 
+      - Informatica: Real
+      - Civil: Real
+      - Hidrocarburo: Real
+      - Medicina: Real
+      - Odontologia: Real
+      - Veterinaria: Real
+      - Derecho: Real
+      - Comunicacion: Real
+      - Contaduria: Real
+      - Economia: Real
+
+----------------------------------------
+
+
+ARCHIVO: .\Registros.gabo
+========================================
+
+  - Registro: Administrativos.
+    - Campos: 
+      - Usuario: Cadena
+      - CI: Entero
+      - Edad: Entero
+      - Cargo: Cadena
+      - Gmail: Cadena
+      - Password: Cadena
+      - Tarjeta: Entero
+
+  - Registro: Admin.
+    - Campos: 
+      - Servicio_Comunitario: Booleano
+      - Inscripciones: Booleano
+      - Pasantias: Booleano
+
+  - Registro: Docente.
+    - Campos: 
+      - Nombre: Cadena
+      - Cedula: Entero
+      - Edad: Entero
+      - Gmail: Cadena
+      - Password: Cadena
+      - Tarjeta: Entero
+      - Materias: Cadena
+      - Cant_Materias: Entero
+      - Cant_Clases: Entero
+      - Club: Cadena
+      - Esta_en_Club: Booleano
+
+  - Registro: Estudiantes.
+    - Campos: 
+      - Avatar: Cadena
+      - Nombre: Cadena
+      - CI: Entero
+      - Edad: Entero
+      - Gmail: Cadena
+      - Password: Cadena
+      - Carrera: Cadena
+      - Semestre: Entero
+      - Year: Entero
+      - Tarjeta: Entero
+      - Notas: Real
+      - UC: Entero
+      - UC_Aprobadas: Entero
+      - Actas: Cadena
+      - Club: Cadena
+      - Esta_en_Club: Booleano
+      - Enfermedad: Cadena
+
+  - Registro: Enfermedad.
+    - Campos: 
+      - Transmisibles: Cadena
+      - Cronicas: Cadena
+      - Neurologicas: Cadena
+      - Neoplasias: Cadena
+      - Autoinmunes: Cadena
+      - Trastornos: Cadena
+      - Lesiones: Cadena
+      - Congenitas: Cadena
+      - Metabolicos: Cadena
+      - Ocupacionales: Cadena
+
+  - Registro: Materia.
+    - Campos: 
+      - Codigo: Cadena
+      - Nombre: Cadena
+      - Creditos: Entero
+
+  - Registro: Bloque_Horario.
+    - Campos: 
+      - ID_Bloque: Entero
+      - Dia: Cadena
+      - Hora_Inicio: Cadena
+      - Hora_Fin: Cadena
+      - Aula: Cadena
+      - Codigo_Materia: Cadena
+      - Estado: Cadena
+
+  - Registro: Lista.
+    - Campos: 
+      - Nombre: Cadena
+      - Cedula: Entero
+
+  - Registro: Clase.
+    - Campos: 
+      - Nombre_Profesor: Cadena
+      - CI_Profesor: Entero
+      - Codigo_Materia: Cadena
+      - Nombre_Materia: Cadena
+      - Periodo: Cadena
+      - Dia: Cadena
+      - Hora_Inicio: Cadena
+      - Hora_Fin: Cadena
+      - Aula: Entero
+      - Seccion: Entero
+      - Cant_Estudiantes: Entero
+
+  - Registro: Asignacion.
+    - Campos: 
+      - Nombre_Profesor: Cadena
+      - Codigo_Materia: Cadena
+      - Titulo: Cadena
+      - Descripcion: Cadena
+      - Fecha_Publicacion: Cadena
+      - Fecha_Entrega: Cadena
+      - Estado: Cadena
+
+  - Registro: Docente.
+    - Campos: 
+      - Nombre: Cadena
+      - Cedula: Entero
+      - Gmail: Cadena
+      - Password: Cadena
+      - Tarjeta: Entero
+      - Materias: Cadena
+      - Cant_Materias: Entero
+      - Cant_Clases: Entero
+      - Club: Cadena
+      - Amigos: Entero
+
+  - Registro: Grupos.
+    - Campos: 
+      - Nombre_Profesor: Cadena
+      - CI_Profesor: Entero
+      - Codigo_Materia: Cadena
+      - Materia: Cadena
+      - Miembros: Entero
+      - Seccion: Entero
+
+  - Registro: Amigos.
+    - Campos: 
+      - Nombre_Emisor: Cadena
+      - CI_Emisor: Entero
+      - Nombre_Receptor: Cadena
+      - CI_Receptor: Entero
+      - Avatar_Receptor: Cadena
+
+  - Registro: Bloques_Base.
+    - Campos: 
+      - Cant: Entero
+
+  - Registro: Servicio_Comunitario.
+    - Campos: 
+      - Nombre: Cadena
+      - Edad, Cedula: Entero
+      - Area: Cadena
+      - Semestre: Entero
+      - Year: Entero
+      - Horas_Realizadas: Real
+
+  - Registro: Notas.
+    - Campos: 
+      - Informatica: Real
+      - Civil: Real
+      - Hidrocarburo: Real
+      - Medicina: Real
+      - Odontologia: Real
+      - Veterinaria: Real
+      - Derecho: Real
+      - Comunicacion: Real
+      - Contaduria: Real
+      - Economia: Real
+
+  - Registro: Informatica.
+    - Campos: 
+      - Informatica_Pre1: Real
+      - Informatica_Pre2: Real
+      - Informatica_Pre3: Real
+      - Informatica_Pre4: Real
+      - Informatica_Pre5: Real
+
+  - Registro: Civil.
+    - Campos: 
+      - Civil_Pre1: Real
+      - Civil_Pre2: Real
+      - Civil_Pre3: Real
+      - Civil_Pre4: Real
+      - Civil_Pre5: Real
+
+  - Registro: Hidrocarburo.
+    - Campos: 
+      - Hidrocarburo_Pre1: Real
+      - Hidrocarburo_Pre2: Real
+      - Hidrocarburo_Pre3: Real
+      - Hidrocarburo_Pre4: Real
+
+  - Registro: Medicina.
+    - Campos: 
+      - Medicina_Pre1: Real
+      - Medicina_Pre2: Real
+      - Medicina_Pre3: Real
+      - Medicina_Pre4: Real
+      - Medicina_Pre5: Real
+
+  - Registro: Odontologia.
+    - Campos: 
+      - Odontologia_Pre1: Real
+      - Odontologia_Pre2: Real
+      - Odontologia_Pre3: Real
+      - Odontologia_Pre4: Real
+      - Odontologia_Pre5: Real
+
+  - Registro: Veterinaria.
+    - Campos: 
+      - Veterinaria_Pre1: Real
+      - Veterinaria_Pre2: Real
+      - Veterinaria_Pre3: Real
+      - Veterinaria_Pre4: Real
+      - Veterinaria_Pre5: Real
+
+  - Registro: Derecho.
+    - Campos: 
+      - Derecho_Pre1: Real
+      - Derecho_Pre2: Real
+      - Derecho_Pre3: Real
+      - Derecho_Pre4: Real
+      - Derecho_Pre5: Real
+
+  - Registro: Comunicacion.
+    - Campos: 
+      - Comunicacion_Pre1: Real
+      - Comunicacion_Pre2: Real
+      - Comunicacion_Pre3: Real
+      - Comunicacion_Pre4: Real
+      - Comunicacion_Pre5: Real
+
+  - Registro: Contaduria.
+    - Campos: 
+      - Contaduria_Pre1: Real
+      - Contaduria_Pre2: Real
+      - Contaduria_Pre3: Real
+      - Contaduria_Pre4: Real
+      - Contaduria_Pre5: Real
+
+  - Registro: Economia.
+    - Campos: 
+      - Economia_Pre1: Real
+      - Economia_Pre2: Real
+      - Economia_Pre3: Real
+      - Economia_Pre4: Real
+      - Economia_Pre5: Real
+
+  - Registro: Novedades.
+    - Campos: 
+      - Hecho: Cadena
+      - Fecha: Cadena
+      - Responsables: Cadena
+      - Contexto: Cadena
+      - Lugar: Cadena
+
+  - Registro: Grupos.
+    - Campos: 
+      - Nombre_Profesor: Cadena
+      - CI_Profesor: Entero
+      - Codigo_Materia: Cadena
+      - Materia: Cadena
+      - Miembros: Entero
+      - Seccion: Entero
+
+  - Registro: Amigos.
+    - Campos: 
+      - Nombre_Emisor: Cadena
+      - CI_Emisor: Entero
+      - Nombre_Receptor: Cadena
+      - CI_Receptor: Entero
+      - Avatar_Receptor: Cadena
+
+  - Registro: Eventos.
+    - Campos: 
+      - ID: Entero
+      - Nombre: Cadena
+      - Fecha: Cadena
+      - Descripcion: Cadena
+
+  - Registro: Clubes.
+    - Campos: 
+      - Nombre: Cadena
+      - Descripcion: Cadena
+      - Capacidad_Maxima: Entero
+      - Miembros_Inscritos: Entero
+      - Horarios_Disponibles: Cadena
+
+  - Registro: Celebraciones.
+    - Campos: 
+      - Nombre: Cadena
+      - Fecha: Cadena
+      - Tipo: Cadena
+      - Descripcion: Cadena
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\1-Menu_Administrativo.gabo
+========================================
+  - Procedimiento: Menu_Administrativo.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\10-Eliminar_Empleado.gabo
+========================================
+  - Procedimiento: Eliminar_Empleado.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\11-Estudiantes_Datos.gabo
+========================================
+  - Procedimiento: Estudiantes_Datos.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\12-Agregar_Estudiantes.gabo
+========================================
+  - Procedimiento: Agregar_Estudiantes.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\13-Eliminar_Estudiante.gabo
+========================================
+  - Procedimiento: Eliminar_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\14-Solicitudes.gabo
+========================================
+  - Procedimiento: Solicitudes_Admin.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\15-Reportes.gabo
+========================================
+  - Procedimiento: Reportes.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\16-Novedades.gabo
+========================================
+  - Procedimiento: Novedades.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\17-Servicio_Comunitario.gabo
+========================================
+  - Procedimiento: Servicio_Comunitario.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\18-Pasantias.gabo
+========================================
+  - Procedimiento: Pasantias.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\19-Carnetizacion_Admin.gabo
+========================================
+  - Procedimiento: Carnetizacion_Admin.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\2-Informacion_Personal_Admin.gabo
+========================================
+  - Procedimiento: Informacion_Personal_Admin.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\20-Clases-Magistrales_Admin.gabo
+========================================
+  - Procedimiento: Clases_Magistrales_Admin.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\21-Planes_Evaluacion.gabo
+========================================
+  - Procedimiento: Planes_Evaluacion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\22-Adicionar_Clubes.gabo
+========================================
+  - Procedimiento: Adicionar_Clubes.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\23-Agregar_Celebraciones.gabo
+========================================
+  - Procedimiento: Agregar_Celebraciones.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\24-Agregar_Eventos.gabo
+========================================
+  - Procedimiento: Agregar_Eventos.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\3-Seguridad.gabo
+========================================
+  - Procedimiento: Seguridad.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\4-Historial_Labor_Docente.gabo
+========================================
+  - Procedimiento: Historial_Labor_Docente.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\5-Avatar.gabo
+========================================
+  - Procedimiento: Avatar_Admin.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\6-Salud.gabo
+========================================
+  - Procedimiento: Salud_Admin.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\7-Estadisticas.gabo
+========================================
+  - Procedimiento: Estadisticas.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\8-Solicitud_Empleo.gabo
+========================================
+  - Procedimiento: Solicitud_Empleo.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Administrativo\9-Agregar_Empleados.gabo
+========================================
+  - Procedimiento: Agregar_Empleados.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Principal_Docente.gabo
+========================================
+  - Procedimiento: Menu_Docente.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\1-Principal.gabo
+========================================
+  - Procedimiento: Docente_Academico.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\10-Crear_Asignacion.gabo
+========================================
+  - Procedimiento: Crear_Asignacion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\11-Publicar_Asignacion.gabo
+========================================
+  - Procedimiento: Publicar_Asignacion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\12-Cerrar_Asignacion.gabo
+========================================
+  - Procedimiento: Cerrar_Asignacion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\13-Listar_Asignaciones.gabo
+========================================
+  - Procedimiento: Listar_Asignaciones.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\14-Clases_Magistrales_Docente.gabo
+========================================
+  - Procedimiento: Clases_Magistrales_Docente.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\15-Plan_Evaluacion_Docente.gabo
+========================================
+  - Procedimiento: Plan_Evaluacion_Docente.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\16-Cargar_Notas.gabo
+========================================
+  - Procedimiento: Cargar_Notas.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\17-Buscar_Materia_Lista.gabo
+========================================
+  - Procedimiento: Buscar_Materia_Lista.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\2-Agregar_Materia.gabo
+========================================
+  - Procedimiento: Agregar_Materia.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\3-Asignar_Horario.gabo
+========================================
+  - Procedimiento: Asignar_Horario.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\4-Buscar_Materia.gabo
+========================================
+  - Procedimiento: Buscar_Materia.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\5-Mostrar_Bloques_Disponibles.gabo
+========================================
+  - Procedimiento: Mostrar_Bloques_Disponibles.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\6-Validar_Choque_Bloque.gabo
+========================================
+  - Procedimiento: Validar_Choque_Bloque.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\7-Listar_Horario.gabo
+========================================
+  - Procedimiento: Listar_Horario.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\8-Registrar_Solicitud_Docente.gabo
+========================================
+  - Procedimiento: Registrar_Solicitud_Docente.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Académico_Docente\9-Registrar_Reporte_Docente.gabo
+========================================
+  - Procedimiento: Registrar_Reporte_Docente.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Extracurricular_Docente\1-Principal.gabo
+========================================
+  - Procedimiento: Docente_Extracurricular.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Extracurricular_Docente\2-Inscripcion_Club_Docente.gabo
+========================================
+  - Procedimiento: Inscripcion_Club_Docente.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Extracurricular_Docente\3-Salir_Club_Docente.gabo
+========================================
+  - Procedimiento: Salir_Club.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Extracurricular_Docente\4-Informacion_Club_Docente.gabo
+========================================
+  - Procedimiento: Informacion_Club_Docente.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Personal_Docente\1-Principal.gabo
+========================================
+  - Procedimiento: Docente_Personal.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Personal_Docente\2-Informacion_Docente.gabo
+========================================
+  - Procedimiento: Informacion_Docente.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Personal_Docente\3-Seguridad_Docente.gabo
+========================================
+  - Procedimiento: Seguridad_Docente.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Personal_Docente\4-Historial_Docente.gabo
+========================================
+  - Procedimiento: Historial_Docente.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Personal_Docente\5-Avatar_Docente.gabo
+========================================
+  - Procedimiento: Avatar_Docente.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Personal_Docente\6-Salud_Docente.gabo
+========================================
+  - Procedimiento: Salud_Docente.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Social_Docente\1-Principal.gabo
+========================================
+  - Procedimiento: Docente_Social.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Docente\Social_Docente\2-Amigos_Docente.gabo
+========================================
+  - Procedimiento: Amigos_Docente.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Principal_Estudiante.gabo
+========================================
+  - Procedimiento: Menu_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\1-Principal.gabo
+========================================
+  - Procedimiento: Academico_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\10-Derecho.gabo
+========================================
+  - Procedimiento: Derecho.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\11-Comunicacion.gabo
+========================================
+  - Procedimiento: Comunicacion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\12-Contaduria.gabo
+========================================
+  - Procedimiento: Contaduria.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\13-Economia.gabo
+========================================
+  - Procedimiento: Economia.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\14-Inscripcion.gabo
+========================================
+  - Procedimiento: Inscripcion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\15-Buscar_Materia_Inscripcion.gabo
+========================================
+  - Procedimiento: Buscar_Materia_Inscripcion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\16-Asignaciones.gabo
+========================================
+  - Procedimiento: Asignaciones.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\17-Buscar_Asignacion.gabo
+========================================
+  - Procedimiento: Buscar_Asignacion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\18-Registrar_Solicitud_Estudiante.gabo
+========================================
+  - Procedimiento: Registrar_Solicitud_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\19-Registrar_Reporte_Estudiante.gabo
+========================================
+  - Procedimiento: Registrar_Reporte_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\2-Ver_Horario.gabo
+========================================
+  - Procedimiento: Ver_Horario.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\20-Clases_Magistrales_Estudiante.gabo
+========================================
+  - Procedimiento: Clases_Magistrales_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\21-Plan_Evaluacion_Estudiante.gabo
+========================================
+  - Procedimiento: Plan_Evaluacion_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\22-Buscar_Materia_Plan.gabo
+========================================
+  - Procedimiento: Buscar_Materia_Plan.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\23-Carnetizacion.gabo
+========================================
+  - Procedimiento: Carnetizacion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\24-Pasantias.gabo
+========================================
+
+  - Registro: Pasantias.
+    - Campos: 
+      - Nombre: Cadena
+      - Edad, Cedula: Entero
+      - Password: Cadena
+      - Carrera: Cadena
+      - Semestre: Entero
+      - Year: Entero
+      - Empresa: Cadena
+      - Estado_Solicitud: Entero
+      - Horas: Real
+  - Procedimiento: Pasantias.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\25-Comunitario.gabo
+========================================
+
+  - Registro: Servicio_Comunitario.
+    - Campos: 
+      - Nombre: Cadena
+      - Edad, Cedula: Entero
+      - Area: Cadena
+      - Semestre: Entero
+      - Year: Entero
+      - Horas_Realizadas: Real
+  - Procedimiento: Comunitario.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\3-Inscripciones.gabo
+========================================
+  - Procedimiento: Inscripciones.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\4-Informatica.gabo
+========================================
+  - Procedimiento: Informatica.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\5-Civil.gabo
+========================================
+  - Procedimiento: Civil.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\6-Hidrocarburos.gabo
+========================================
+  - Procedimiento: Hidrocarburos.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\7-Medicina.gabo
+========================================
+  - Procedimiento: Medicina.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\8-Odontologia.gabo
+========================================
+  - Procedimiento: Odontologia.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Académico_Estudiante\9-Veterinaria.gabo
+========================================
+  - Procedimiento: Veterinaria.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Extracurricular_Estudiante\1-Principal.gabo
+========================================
+  - Procedimiento: Extracurricular_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Extracurricular_Estudiante\2-Inscripcion_Club_Estudiante.gabo
+========================================
+  - Procedimiento: Inscripcion_Club.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Extracurricular_Estudiante\3-Salir_Club_Estudiante.gabo
+========================================
+  - Procedimiento: Salir_Club.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Extracurricular_Estudiante\4-Informacion_Club_Estudiante.gabo
+========================================
+  - Procedimiento: Informacion_Club.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Personal_Estudiante\1-Principal.gabo
+========================================
+  - Procedimiento: Menu_Personal_Est.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Personal_Estudiante\2-Informacion_Estudiante.gabo
+========================================
+  - Procedimiento: Informacion_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Personal_Estudiante\3-Seguridad_Estudiante.gabo
+========================================
+  - Procedimiento: Seguridad_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Personal_Estudiante\4-Avatar_Estudiante.gabo
+========================================
+  - Procedimiento: Avatar_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Personal_Estudiante\5-Salud_Estudiante.gabo
+========================================
+  - Procedimiento: Salud_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Personal_Estudiante\6-Chatbot.gabo
+========================================
+  - Procedimiento: Chatbot.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\1-Principal.gabo
+========================================
+  - Procedimiento: Social_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\10-Buscar_Publicacion.gabo
+========================================
+  - Procedimiento: Buscar_Publicacion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\11-Agregar_Reaccion.gabo
+========================================
+  - Procedimiento: Agregar_Reaccion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\12-Comentarios.gabo
+========================================
+  - Procedimiento: Comentarios.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\13-Comentar.gabo
+========================================
+  - Procedimiento: Comentar.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\14-Opciones_Publicacion.gabo
+========================================
+  - Procedimiento: Opciones_Publicacion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\15-Propias_Publicaciones.gabo
+========================================
+  - Procedimiento: Propias_Publicaciones.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\16-Ranking.gabo
+========================================
+  - Procedimiento: Ranking.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\2-Amigos_Estudiante.gabo
+========================================
+  - Procedimiento: Amigos_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\3-Market_Place.gabo
+========================================
+  - Procedimiento: Market_Place.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\4-Ingresar_Producto.gabo
+========================================
+  - Procedimiento: Ingresar_Producto.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\5-Comprar_Producto.gabo
+========================================
+  - Procedimiento: Comprar_Producto.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\6-Editar_Producto.gabo
+========================================
+  - Procedimiento: Editar_Producto.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\7-Foro_Estudiantes.gabo
+========================================
+  - Procedimiento: Foro_Estudiantes.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\8-Crear_Publicacion.gabo
+========================================
+  - Procedimiento: Crear_Publicacion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Estudiante\Social_Estudiante\9-Publicaciones.gabo
+========================================
+  - Procedimiento: Publicaciones.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Aleatorio.gabo
+========================================
+
+  - Funcion: Aleatorio. Retorno: Entero.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Avatares.gabo
+========================================
+  - Procedimiento: Avatares.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Celebraciones.gabo
+========================================
+  - Procedimiento: Celebraciones.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Eventos.gabo
+========================================
+  - Procedimiento: Eventos.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Historial_Carreras.gabo
+========================================
+  - Procedimiento: Historial_Carreras.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Historial_Civil.gabo
+========================================
+  - Procedimiento: Historial_Civil.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Historial_Comunicacion.gabo
+========================================
+  - Procedimiento: Historial_Comunicacion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Historial_Contaduria.gabo
+========================================
+  - Procedimiento: Historial_Contaduria.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Historial_Derecho.gabo
+========================================
+  - Procedimiento: Historial_Derecho.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Historial_Economia.gabo
+========================================
+  - Procedimiento: Historial_Economia.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Historial_Hidrocarburos.gabo
+========================================
+  - Procedimiento: Historial_Hidrocarburos.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Historial_Informatica.gabo
+========================================
+  - Procedimiento: Historial_Informatica.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Historial_Medicina.gabo
+========================================
+  - Procedimiento: Historial_Medicina.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Historial_Odontologia.gabo
+========================================
+  - Procedimiento: Historial_Odontologia.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Historial_Veterinaria.gabo
+========================================
+  - Procedimiento: Historial_Veterinaria.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\metodo_pago.gabo
+========================================
+  - Procedimiento: metodo_pago.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Modo_Oscuro.gabo
+========================================
+  - Procedimiento: Modo_Oscuro.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Mostrar_Clubes.gabo
+========================================
+  - Procedimiento: Mostrar_Clubes.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Mostrar_Grupos.gabo
+========================================
+  - Procedimiento: Mostrar_Grupos.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Funciones\Mostrar_Novedades.gabo
+========================================
+  - Procedimiento: Mostrar_Novedades.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Inicio_Sesión\1-Principal.gabo
+========================================
+  - Procedimiento: Menu_Registro_Login.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Inicio_Sesión\2-Registro.gabo
+========================================
+  - Procedimiento: Registro.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Inicio_Sesión\3-Generar_Tarjeta_Coordenadas.gabo
+========================================
+  - Procedimiento: Generar_Tarjeta_Coordenadas.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Inicio_Sesión\4-Mostrar_Tarjeta_Coordenadas.gabo
+========================================
+  - Procedimiento: Mostrar_Tarjeta_Coordenadas.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Inicio_Sesión\5-Iniciar_Sesion.gabo
+========================================
+  - Procedimiento: Iniciar_Sesion.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Inicio_Sesión\6-Validar_Coordenada.gabo
+========================================
+  - Procedimiento: Validar_Coordenada.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Inicio_Sesión\7-Recuperar_Password.gabo
+========================================
+  - Procedimiento: Recuperar_Password.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Relleno\Inicializar_Bloques_Base.gabo
+========================================
+  - Procedimiento: Inicializar_Bloques_Base.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Relleno\Relleno_Admin.gabo
+========================================
+  - Procedimiento: Relleno_Admin.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Relleno\Relleno_Bot.gabo
+========================================
+  - Procedimiento: Relleno_Bot.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Relleno\Relleno_Clase.gabo
+========================================
+  - Procedimiento: Relleno_Clase.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Relleno\Relleno_Clubes.gabo
+========================================
+  - Procedimiento: Relleno_Clubes.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Relleno\Relleno_Coordenada.gabo
+========================================
+  - Procedimiento: Relleno_Coordenada.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Relleno\Relleno_Estudiante.gabo
+========================================
+  - Procedimiento: Relleno_Estudiante.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Relleno\Relleno_Materias.gabo
+========================================
+  - Procedimiento: Relleno_Materias.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Relleno\Relleno_Prof.gabo
+========================================
+  - Procedimiento: Relleno_Prof.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Relleno\Relleno_Salud.gabo
+========================================
+  - Procedimiento: Relleno_Salud.
+    - Parametros: 
+
+----------------------------------------
+
+
+ARCHIVO: .\Relleno\UC_Aprobadas.gabo
+========================================
+  - Procedimiento: UC_Aprobadas.
+    - Parametros: 
+
+----------------------------------------

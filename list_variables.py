@@ -1,56 +1,73 @@
-#!/usr/bin/env python3
-
-import re
 import glob
+import re
 
 gabo_files = glob.glob("./pseudo/**/*.gabo", recursive=True)
+# gabo_files = ["./pseudo/Estudiante/Social_Estudiante/13-Comentar.gabo"]
 report: list[str] = []
 
-block_regex = r"(Procedimiento|Funcion)\s+(\w+).*?Inicio(.*?)Fin_\1"
-param_regex = r"\((.*?)\)\s*(?::\s*\w+)?\s*;"
-variables_regex = r"var\s+([^:]+):\s*(\w+);"
+# Demasiadas expresiones regulares
+struct_regex = r"Registro:\s*([^;\n]+);([\s\S]*?)Fin_Registro"
+field_regex = r"^\s+(?!(?:Registro|Fin_Registro))([\w\s,]+)\s*:\s*(\w+);"
+procedure_regex = r"Procedimiento\s*([^;\n]+);([\s\S]*?)Fin_Procedimiento"
+procedure_header_regex = r"(\w+)\s*\(\s*(.*)\s*\);?"
+func_regex = r"Funcion\s*([^;]+);([\s\S]*?)Fin_Funcion"
+func_header_regex = r"(\w+)\s*\(\s*(.+)\s*\)\s*:\s*(\w+);?"
+
+# Algunos contadores
+structs_total = 0
+procedures_total = 0
+func_total = 0
 
 for file in gabo_files:
-    with open(file, 'r', encoding='utf-8') as f:
-        content = f.read()
-        report.append(f"ARCHIVO: {file}")
+    with open(file, 'r', encoding='utf-8') as output:
+        content = output.read()
+        report.append(f"\nARCHIVO: {file.replace("./pseudo", ".")}")
         report.append("=" * 40)
 
-        blocks = re.finditer(block_regex, content, re.DOTALL)
+        # Extraemos los registros
+        structs: list[tuple[str, str]] = re.findall(struct_regex, content)
+        for struct_name, struct_content in structs:
+            structs_total += 1
+            report.append(f"\n  - Registro: {struct_name}.\n    - Campos: ")
 
-        for block in blocks:
-            block_type = block.group(1)
-            block_identifier = block.group(2)
-            block_body = block.group(3)
+            fields: list[tuple[str, str]] = re.findall(
+                field_regex, struct_content, re.MULTILINE)
 
-            report.append(f"\n[{block_type} {block_identifier}]")
+            for field, data_type in fields:
+                report.append(f"      - {field}: {data_type}")
 
-            header = content[block.start(): block.start() +
-                             content[block.start():].find("Inicio")]
-            params_match = re.search(param_regex, header, re.DOTALL)
+        # Extraemos los procedimientos
+        procedures: list[tuple[str, str]] = re.findall(
+            procedure_regex, content)
+        for declaration, body in procedures:
+            procedures_total += 1
+            procedure_header: list[tuple[str, str]] = re.findall(
+                procedure_header_regex, declaration)
+            identifier, params = procedure_header[0]
 
-            if params_match:
-                report.append("  - Parámetros/Argumentos:")
-                block_params = re.sub(r"E/S:|E:|S:", "", params_match.group(1))
-                for line in block_params.split('\n'):
-                    if ':' in line:
-                        var_ids, var_type = line.split(':')
-                        for v in var_ids.split(','):
-                            if v.strip():
-                                report.append(
-                                    f"    * {v.strip()} ({var_type.strip()})")
+            report.append(f"  - Procedimiento: {identifier}.\n    - Parametros: ")
 
-            local_variables: list[tuple[str, str]] = re.findall(
-                variables_regex, block_body)
-            if local_variables:
-                report.append("  - Variables Internas:")
-                for v, t in local_variables:
-                    nombres = [n.strip() for n in v.split(',')]
-                    for n in nombres:
-                        if n:
-                            report.append(f"    * {n} ({t})")
+        # Extraemos las funciones
+        functions: list[tuple[str, str]] = re.findall(
+            func_regex, content)
+        for declaration, body in functions:
+            func_total += 1
+            func_header: list[tuple[str, str, str]] = re.findall(
+                func_header_regex, declaration)
+            identifier, params, return_type = func_header[0]
+
+            report.append(f"\n  - Funcion: {identifier}. Retorno: {return_type}.\n    - Parametros: ")
 
         report.append("\n" + "-"*40 + "\n")
 
-with open('./docs/reporte.txt', 'w', encoding='utf-8') as f:
-    _ = f.write("\n".join(report))
+
+header = f"{"-" * 20} REPORTE DE TODO EL PSEUDO {"-" * 20}"
+report.insert(0, "-" * len(header))
+report.insert(0, f"Total de procedimientos: {procedures_total}")
+report.insert(0, f"Total de registros: {structs_total}")
+report.insert(0, f"Total de funciones: {func_total}")
+report.insert(0, f"Total de archivos: {len(gabo_files)}")
+report.insert(0, header)
+
+with open('./docs/reporte.txt', 'w', encoding='utf-8') as output:
+    _ = output.write("\n".join(report))
