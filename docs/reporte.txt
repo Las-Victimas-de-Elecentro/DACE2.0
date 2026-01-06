@@ -8605,6 +8605,8 @@ ARCHIVO: .\Funciones\Aleatorio.gabo
 
   - Funcion: Aleatorio. Retorno: Entero.
     - Parametros: 
+        - Minimo: Entero
+        - Maximo: Entero
 
 ----------------------------------------
 

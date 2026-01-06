@@ -9,6 +9,18 @@ in_param_total = 0
 in_out_param_total = 0
 out_param_total = 0
 
+gabo_files = glob.glob("./pseudo/**/*.gabo", recursive=True)
+# gabo_files = ["./pseudo/Estudiante/Social_Estudiante/13-Comentar.gabo"]
+report: list[str] = []
+
+# Demasiadas expresiones regulares
+struct_regex = r"Registro:\s*([^;\n]+);([\s\S]*?)Fin_Registro"
+field_regex = r"^\s+(?!(?:Registro|Fin_Registro))([\w\s,]+)\s*:\s*(\w+);"
+procedure_regex = r"(?s)(?s)Procedimiento\s*([^;]+);([\s\S]*?)Fin_Procedimiento"
+procedure_header_regex = r"(?s)(\w+)\s*\(\s*(.*)\s*\);?"
+func_regex = r"(?s)Funcion\s*([^;]+);([\s\S]*?)Fin_Funcion"
+func_header_regex = r"(?s)(\w+)\s*\(\s*(.+)\s*\)\s*:\s*(\w+);?"
+
 
 def clasify_params(params:  str) -> dict[str, list[str]]:
     in_type: list[str] = []
@@ -47,19 +59,6 @@ def clasify_params(params:  str) -> dict[str, list[str]]:
     }
 
 
-gabo_files = glob.glob("./pseudo/**/*.gabo", recursive=True)
-# gabo_files = ["./pseudo/Estudiante/Social_Estudiante/13-Comentar.gabo"]
-report: list[str] = []
-
-# Demasiadas expresiones regulares
-struct_regex = r"Registro:\s*([^;\n]+);([\s\S]*?)Fin_Registro"
-field_regex = r"^\s+(?!(?:Registro|Fin_Registro))([\w\s,]+)\s*:\s*(\w+);"
-procedure_regex = r"Procedimiento\s*([^;\n]+);([\s\S]*?)Fin_Procedimiento"
-procedure_header_regex = r"(\w+)\s*\(\s*(.*)\s*\);?"
-func_regex = r"Funcion\s*([^;]+);([\s\S]*?)Fin_Funcion"
-func_header_regex = r"(\w+)\s*\(\s*(.+)\s*\)\s*:\s*(\w+);?"
-
-
 for file in gabo_files:
     with open(file, 'r', encoding='utf-8') as output:
         content = output.read()
@@ -84,7 +83,7 @@ for file in gabo_files:
         for declaration, body in procedures:
             procedures_total += 1
             procedure_header: list[tuple[str, str]] = re.findall(
-                procedure_header_regex, declaration)
+                procedure_header_regex, declaration.replace("\n", ""))
             identifier, params = procedure_header[0]
 
             report.append(
@@ -115,11 +114,15 @@ for file in gabo_files:
         for declaration, body in functions:
             func_total += 1
             func_header: list[tuple[str, str, str]] = re.findall(
-                func_header_regex, declaration)
+                func_header_regex, declaration.replace("\n", ""))
             identifier, params, return_type = func_header[0]
 
             report.append(
                 f"\n  - Funcion: {identifier}. Retorno: {return_type}.\n    - Parametros: ")
+
+            parsed_params = [p.strip() for p in params.split(',')]
+            for p in parsed_params:
+                report.append(f"        - {p}")
 
         report.append("\n" + "-"*40 + "\n")
 
