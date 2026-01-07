@@ -1,10 +1,10 @@
-Procedimiento Inscripcion(E/S: Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, List[L].Nombre, Datos[I].Nombre: Cadena, Clase[K].Seccion, List[L].Cedula, Datos[I].CI, Clase[K].Cant_Estudiantes, L: Entero);
+Procedimiento Inscripcion(E/S: Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, Lista[I].Nombre, Datos[I].Nombre: Cadena, Clase[K].Seccion, Lista[I].Cedula, Datos[I].CI, Clase[K].Cant_Estudiantes, I: Entero);
 Inicio
     Var cod: Cadena;
     Var J, K: Entero;
     Mostrar << "Ingrese el código de la materia que quiere inscribir:";
     Leer >> cod;
-    Buscar_Materia_Inscripcion(cod, Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, List[L].Nombre, Datos[I].Nombre, Clase[K].Cant_Estudiantes, Clase[K].Seccion, List[L].Cedula, Datos[I].CI, J, L);
+    Buscar_Materia_Inscripcion(cod, Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, Lista[I].Nombre, Datos[I].Nombre, Clase[K].Cant_Estudiantes, Clase[K].Seccion, Lista[I].Cedula, Datos[I].CI, J, I);
     En_Caso (Datos[pos_usuario].Carrera <> "Ninguna") Sea;
         Caso(Datos[pos_usuario].Carrera = "Informatica");
             Para (J = 1 Hasta J = 59) Hacer;
@@ -27,23 +27,23 @@ Inicio
                 Mostrar << Buscar_Materia_Inscripcion;
             Fin_Para
         Caso(Datos[pos_usuario].Carrera = "Veterinaria");
-            Para (J = 259 Hasta J = 304) Hacer;
+            Para (J = 259 Hasta J = 301) Hacer;
                 Mostrar << Buscar_Materia_Inscripcion;
             Fin_Para
         Caso(Datos[pos_usuario].Carrera = "Derecho");
-            Para (J = 305 Hasta J = 360) Hacer;
+            Para (J = 302 Hasta J = 355) Hacer;
                 Mostrar << Buscar_Materia_Inscripcion;
             Fin_Para
         Caso(Datos[pos_usuario].Carrera = "Comunicación");
-            Para (J = 361 Hasta J = 418) Hacer;
+            Para (J = 356 Hasta J = 413) Hacer;
                 Mostrar << Buscar_Materia_Inscripcion;
             Fin_Para
         Caso(Datos[pos_usuario].Carrera = "Contaduría");
-            Para (J = 419 Hasta J = 470) Hacer;
+            Para (J = 414 Hasta J = 465) Hacer;
                 Mostrar << Buscar_Materia_Inscripcion;
             Fin_Para
         Otro_Caso
-            Para (J = 471 Hasta J = 527) Hacer;
+            Para (J = 466 Hasta J = 522) Hacer;
                 Mostrar << Buscar_Materia_Inscripcion;
             Fin_Para
     Fin_Caso

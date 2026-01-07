@@ -29,23 +29,23 @@ Inicio
                     Mostrar << Buscar_Materia_Plan;
                 Fin_Para
             Caso(Datos[pos_usuario].Carrera = "Veterinaria");
-                Para (J = 259 Hasta J = 304) Hacer;
+                Para (J = 259 Hasta J = 301) Hacer;
                     Mostrar << Buscar_Materia_Plan;
                 Fin_Para
             Caso(Datos[pos_usuario].Carrera = "Derecho");
-                Para (J = 305 Hasta J = 360) Hacer;
+                Para (J = 302 Hasta J = 355) Hacer;
                     Mostrar << Buscar_Materia_Plan;
                 Fin_Para
             Caso(Datos[pos_usuario].Carrera = "Comunicación");
-                Para (J = 361 Hasta J = 418) Hacer;
+                Para (J = 356 Hasta J = 413) Hacer;
                     Mostrar << Buscar_Materia_Plan;
                 Fin_Para
             Caso(Datos[pos_usuario].Carrera = "Contaduría");
-                Para (J = 419 Hasta J = 470) Hacer;
+                Para (J = 414 Hasta J = 465) Hacer;
                     Mostrar << Buscar_Materia_Plan;
                 Fin_Para
             Otro_Caso
-                Para (J = 471 Hasta J = 527) Hacer;
+                Para (J = 466 Hasta J = 522) Hacer;
                     Mostrar << Buscar_Materia_Plan;
                 Fin_Para
         Fin_Caso
