@@ -999,39 +999,39 @@ Inicio
     Var Administrativos: Admin[5000];
     Var Salud_Administrativo: Salud_Admin[5000];
     Var Materia: Materias[522];
-    Var Solicitud_Inscripcion: Gestion[5000];
+    Var Solicitud_Inscripcion: Gestion[80000];
     Var Solicitud_Empleo: Empleo[5000];
 
     //Docente
     Var Docente: Prof[5000];
     Var Bloque_Horario: Lista[48];
-    Var Lista: Lista[5000];
-    Var Clase: Clase[5000];
-    Var Lista_Magistral: Lista_M[5000];
-    Var Clase_Magistral: Mag[5000];
-    Var Plan_Evaluacion: Plan[5000];
+    Var Lista: Lista[80000];
+    Var Clase: Clase[1600];
+    Var Lista_Magistral: Lista_M[80000];
+    Var Clase_Magistral: Mag[1600];
+    Var Plan_Evaluacion: Plan[1600];
     Var Asignacion: Asig[5000];
     Var Grupos: Gru[5000];
     Var Enfermedad_Docente: Salud[5000];
 
     //Estudiante
-    Var Estudiantes: Datos[5000], Enfermedad_Estudiante: Salud[5000];
+    Var Estudiantes: Datos[80000], Enfermedad_Estudiante: Salud[80000];
     Var Notas: Materias,
-    Var Informatica: Info[5000], Civil: Civ[5000], Hidrocarburos: Hid[5000];
-    Var Medicina: Med[5000], Odontologia: Odo[5000], Veterinaria: Vet[5000];
-    Var Derecho: Der[5000], Comunicacion: Soc[5000];
-    Var Contaduria: Con[5000], Economia: Eco[5000];
-    Var Carnet: Car[5000];
+    Var Informatica: Info[80000], Civil: Civ[80000], Hidrocarburos: Hid[80000];
+    Var Medicina: Med[80000], Odontologia: Odo[80000], Veterinaria: Vet[80000];
+    Var Derecho: Der[80000], Comunicacion: Soc[80000];
+    Var Contaduria: Con[80000], Economia: Eco[80000];
+    Var Carnet: Car[80000];
     Var Pasantias: Pas[P];
     Var Servicio_Comunitario: SerC[N];
     Var Market_Place: MP[M];
     Var Comida_MP: C_MP[M];
     Var Articulos_MP: A_MP[M];
     Var Servicios_MP: S_MP[M];
-    Var Publicaciones: Publi[5000];
-    Var Comentarios: Com[5000];
-    Var Respuestas: Res[5000];
-    Var Reacciones: Rea[5000];
+    Var Publicaciones: Publi[80000];
+    Var Comentarios: Com[8000];
+    Var Respuestas: Res[80000];
+    Var Reacciones: Rea[80000];
     
     //General
     Var Solicitudes: Soli[5000];
@@ -1039,16 +1039,16 @@ Inicio
     Var Clubes: Club[5000];
     Var Celebraciones: Cel[5000];
     Var Carnetizacion: Carn[5000];
-    Var Amigos: Amig[5000];
+    Var Amigos: Amig[2000000];
     Var Novedades: Nov[5000];
     Var Chatbot: Bot[10];
-    Var Tarjeta_Coordenadas: Tarjeta[25000];
+    Var Tarjeta_Coordenadas: Tarjeta[400000];
     Var Tarjeta_Coordenadas_Admin: Tarjeta_A[25000];
     Var Tarjeta_Coordenadas_Profe: Tarjeta_P[25000];
     
     //Variables Globales
     //Iteradores
-    Var I, J, indice, club = 6, carnet = 0, Nov = 0, Re = 0, S = 0, v = 0, C = 0, Lim = 16, K = 0, w = 0, re = 0, M = 0, P = 0, L = 0, Am = 0, N = 2, Aux = 0, Ver = 0, react = 0, com = 0, eve = 0, cel = 0: Entero;
+    Var I, J, indice, club = 6, carnet = 0, Nov = 0, Re = 0, S = 0, v = 0, C = 0, Lim = 16, K = 0, w = 0, re = 0, P = 0, Am = 0, N = 2, Aux = 0, Ver = 0, react = 0, com = 0, eve = 0, cel = 0: Entero;
     //Posiciones al iniciar sesión
     Var pos_admin, pos, pos_usuario: Entero;
     //Generales

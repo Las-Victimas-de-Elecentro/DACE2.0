@@ -10,7 +10,7 @@ Inicio
         Si (R = 1) Entonces;
             Mostrar << "Ingrese el código de la materia que impartirá en dicha clase magistral";
             Leer >> cod;
-            Para (I = 1 Hasta I = 500) Hacer;
+            Para (I = 1 Hasta I = 522) Hacer;
                 Si (cod = Materias[I].Codigo) Entonces;
                     Mostrar << "Materia encontrada.";
                     Mostrar << "¿Qué fecha escogerá para la clase magistral? (DD/MM/YYYY)";
@@ -34,7 +34,6 @@ Inicio
                     Mag[magis].Codigo_Materia = Materias[I].Codigo;
                     Mag[magis].Nombre_Profesor = Prof[pos].Nombre;
                     Mag[magis].CI_Profesor = Prof[pos].Cedula;
-                    Mag[magis].ID_Clase = Mag[magis].ID_Clase + 1;
                     magis = magis + 1;
                 Fin_Si
             Fin_Para

@@ -1,4 +1,4 @@
-Procedimiento Asignar_Horario(E/S: class, Base.Lista[i].ID_Bloque, Clase[i].CI_Profesor, Gru[i].Seccion, Clase[i].Seccion, Prof[i].Cant_Clases, Gru[i].Miembros: Entero, Materias[i].Codigo, Prof[pos].Nombre, Clase[i].Nombre_Profesor, Gru[i].Nombre_Profesor, Gru[i].Codigo_Materia, Gru[i].Materia, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Clase[i].Periodo, Clase[i].Codigo_Materia, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Dia, Base.Lista[i].Aula, Base.Lista[i].Estado, : Cadena, es_valido: Booleano);
+Procedimiento Asignar_Horario(E/S: class, Base.Lista[i].ID_Bloque, Clase[i].CI_Profesor, Gru[i].Seccion, Clase[i].Seccion, Prof[i].Cant_Clases, Gru[i].Miembros: Entero, Materias[i].Codigo, Prof[pos].Nombre, Clase[i].Nombre_Profesor, Gru[i].Nombre_Profesor, Gru[i].Codigo_Materia, Gru[i].Materia, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Clase[i].Periodo, Clase[i].Codigo_Materia, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Dia, Base.Lista[i].Aula, Base.Lista[i].Estado: Cadena, es_valido: Booleano);
 Inicio
     Var cod: Cadena; 
     Var pos, idb: Entero;

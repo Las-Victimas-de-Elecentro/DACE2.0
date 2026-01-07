@@ -1,11 +1,11 @@
-Procedimiento Clases_Magistrales_Estudiante(E/S: Mag[I].Autorizacion: Booleano, Mag[I].Nombre_Profesor, Mag[I].Nombre_Materia, Mag[I].Dia, Mag[I].Hora_Inicio, Mag[I].Hora_Fin, Mag[I].Aula, Lista_M[M].Nombre: Cadena, Lista_M[M].Cedula, Mag[I].Cant_Estudiantes, M: Entero);
+Procedimiento Clases_Magistrales_Estudiante(E/S: Mag[I].Autorizacion: Booleano, Mag[I].Nombre_Profesor, Mag[I].Nombre_Materia, Mag[I].Dia, Mag[I].Hora_Inicio, Mag[I].Hora_Fin, Mag[I].Aula, Lista_M[M].Nombre: Cadena, Lista_M[M].Cedula, Mag[I].Cant_Estudiantes: Entero);
 Inicio
     Var R, R2: Booleano;
     Var I: Entero;
     Repetir
         Mostrar << "¡Bienvenido al apartado de las Clases Magistrales!";
         Mostrar << "Aquí tiene las clases magistrales disponibles:";
-        Para (I = 1 Hasta I = 500) Hacer;
+        Para (I = 1 Hasta I = 1600) Hacer;
             Si (Mag[I].Autorizacion = 1) Entonces;
                 Si (Mag[I].Cant_Estudiantes >= 100) Entonces;
                     Mostrar << "Se acabaron los cupos para esta clase magistral";
@@ -23,9 +23,14 @@ Inicio
                         Mostrar << "Perfecto, entonces proceda a su metodo de pago";
                         Mostrar << metodo_pago;
                         Si (validacion_pago = 1) Entonces;
-                            Lista_M[M].Nombre = Datos[pos_usuario].Nombre;
-                            Lista_M[M].Cedula = Datos[pos_usuario].CI;
-                            M = M + 1;
+                            Para (J = 1 Hasta J = 1600) Hacer;
+                                Si (Lista_M[J].ID_Lista = Mag[I].ID_Clase) Entonces;
+                                    Si (Lista_M[J].Cedula = 0) Entonces;
+                                        Lista_M[J].Nombre = Datos[pos_usuario].Nombre;
+                                        Lista_M[J].Cedula = Datos[pos_usuario].CI;
+                                    Fin_Si
+                                Fin_Si
+                            Fin_Para
                             Mag[I].Cant_Estudiantes = Mag[I].Cant_Estudiantes + 1;
                         Sino
                             Mostrar << "No se ha efectuado el pago";

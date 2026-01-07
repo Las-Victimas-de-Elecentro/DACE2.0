@@ -10,10 +10,10 @@ Inicio
         Si (R = 1) Entonces;
             Mostrar << "Ingrese el código de la materia a la que le quiere agregar una evaluación.";
             Leer >> cod;
-            Para (I = 1 Hasta I = 500) Hacer;
+            Para (I = 1 Hasta I = 522) Hacer;
                 Si (cod = Materias[I].Codigo) Entonces;
                     Mostrar << "Materia encontrada";
-                    Para (J = 1 Hasta I = 500) Hacer;
+                    Para (J = 1 Hasta I = 1600) Hacer;
                         Si (cod = Clase[J].Codigo_Materia) and (Prof[pos].Nombre = Clase[J].Nombre_Profesor) Entonces;
                             Mostrar << "Ingrese la fecha de la evaluación (DD/MM/YYYY)";
                             Leer >> Plan[P].Fecha;

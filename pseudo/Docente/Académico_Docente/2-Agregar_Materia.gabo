@@ -31,7 +31,7 @@ Inicio
             Leer >> Materias;
             Mostrar << "Ingrese el código de la materia";
             Leer >> Codigo;
-            Para (i = 1 Hasta i = 527) Hacer;
+            Para (i = 1 Hasta i = 522) Hacer;
                 Si (Materias = Materias[I].Nombre) or (Codigo = Materias[I].Codigo) Entonces;
                     Mostrar << "Materias encontrada.";
                     Mostrar << "Impartirá la materia llamada: ", Materias[I].Nombre;
