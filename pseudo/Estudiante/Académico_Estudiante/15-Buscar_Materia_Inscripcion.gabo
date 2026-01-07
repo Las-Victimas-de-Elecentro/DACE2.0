@@ -1,9 +1,9 @@
-Procedimiento Buscar_Materia_Inscripcion(E/S: cod, Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, Lista[I].Nombre, Datos[I].Nombre: Cadena, Clase[K].Cant_Estudiantes, Clase[K].Seccion, Lista[I].Cedula, Datos[I].CI, J: Entero);
+Procedimiento Buscar_Materia_Inscripcion(E/S: cod, Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, Lista[I].Nombre, Datos[I].Nombre: Cadena, Clase[K].Cant_Estudiantes, Clase[K].Seccion, Lista[I].Cedula, Datos[I].CI, J, class: Entero);
 Inicio
     Var q: Booleano;
     Var I, K: Entero;
     Si (cod = Materias[J].Codigo) Entonces;
-        Para (K = 1 Hasta K = 1600) Hacer;
+        Para (K = 1 Hasta K = class) Hacer;
             Si (Clase[K].Codigo = cod) Entonces;
                 Si (Clase[K].Cant_Estudiantes >= 50) Entonces;
                     Mostrar << "Profesor: ", Clase[K].Nombre_Profesor;

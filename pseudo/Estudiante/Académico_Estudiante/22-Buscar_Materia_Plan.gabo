@@ -2,7 +2,7 @@ Procedimiento Buscar_Materia_Plan(E/S: cod, Materias[J].Codigo, Clase[K].Codigo,
 Inicio
     Var K, F, Q, L: Entero;
     Si (cod = Materias[J].Codigo) Entonces;
-        Para (K = 1 Hasta K = 1600) Hacer;
+        Para (K = 1 Hasta K = class) Hacer;
             Si (Clase[K].Codigo = cod) Entonces;
                 Para (F = 1 Hasta F = 80000) Hacer;
                     Si (Lista[F].ID_Lista = Clase[K].ID_Clase) Entonces;

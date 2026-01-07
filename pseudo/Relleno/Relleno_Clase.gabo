@@ -1,7 +1,7 @@
 Procedimiento Relleno_Clase(E/S: Lista[I].ID_Lista, Lista_M[I].ID_Lista, Mag[I].ID_Clase, Clase[I].ID_Clase: Entero);
 Inicio
     Var I, K, J: Entero;
-    Para (I = 1 Hasta I = 5000) Hacer;
+    Para (I = 1 Hasta I = 1600) Hacer;
         Para (J = 1 Hasta J = 50) Hacer;
             K = (I - 1) * 50 + J;
             Lista[K].ID_Lista = I;
