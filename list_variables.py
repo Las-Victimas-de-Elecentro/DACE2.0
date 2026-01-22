@@ -73,8 +73,7 @@ for filename in gabo_files:
 
         main: list[tuple[str, str]] = re.findall(algo_regex, content)
         if main:
-            report.append(
-                f"\n  - Variables globales: {filename.replace("./pseudo", ".")}")
+            report.append("\n  - Variables globales:")
 
             _, main_body = main[0]
             not_comments = re.sub(r"\/\/.+", "", main_body)
@@ -135,8 +134,7 @@ for filename in gabo_files:
             procedure_variables: list[tuple[str, str]
                                       ] = re.findall(var_regex, body)
             if procedure_variables:
-                report.append(
-                    f"\n    - Variables locales: {filename.replace("./pseudo", ".")}")
+                report.append("\n    - Variables locales:")
 
                 for identifiers, data_type in procedure_variables:
                     parsed_identifiers = [i.strip()
@@ -165,8 +163,7 @@ for filename in gabo_files:
 
             func_variables: list[tuple[str, str]] = re.findall(var_regex, body)
             if func_variables:
-                report.append(
-                    f"\n    - Variables locales: {filename.replace("./pseudo", ".")}")
+                report.append("\n    - Variables locales:")
 
                 for identifiers, data_type in func_variables:
                     parsed_identifiers = [i.strip()
