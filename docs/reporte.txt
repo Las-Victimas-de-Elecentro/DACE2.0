@@ -1,8 +1,10 @@
 -------------------- REPORTE DE TODO EL PSEUDO --------------------
 Total de archivos: 146
+Total de lineas: 21274
 Total de funciones: 1
 Total de registros: 77
 Total de procedimientos: 143
+Total de variables: 405 
 Total de parametros en procedimientos: 9184
   - De Entrada: 10
   - De Salida: 0
@@ -11,6 +13,88 @@ Total de parametros en procedimientos: 9184
 
 ARCHIVO: .\Principal.gabo
 ========================================
+
+  - Variables globales: .\Principal.gabo
+      - Administrativos:  Admin[5000]
+      - Salud_Administrativo:  Salud_Admin[5000]
+      - Materia:  Materias[547]
+      - Solicitud_Inscripcion:  Gestion[5000]
+      - Solicitud_Empleo:  Empleo[5000]
+      - Docente:  Prof[5000]
+      - Bloque_Horario:  Lista[48]
+      - Lista:  Lista[5000]
+      - Clase:  Clase[5000]
+      - Lista_Magistral:  Lista_M[5000]
+      - Clase_Magistral:  Mag[5000]
+      - Plan_Evaluacion:  Plan[5000]
+      - Asignacion:  Asig[5000]
+      - Grupos:  Gru[5000]
+      - Enfermedad_Docente:  Salud[5000]
+      - Carnet:  Car[5000]
+      - Pasantias:  Pas[P]
+      - Servicio_Comunitario:  SerC[N]
+      - Market_Place:  MP[M]
+      - Comida_MP:  C_MP[M]
+      - Articulos_MP:  A_MP[M]
+      - Servicios_MP:  S_MP[M]
+      - Publicaciones:  Publi[5000]
+      - Comentarios:  Com[5000]
+      - Respuestas:  Res[5000]
+      - Reacciones:  Rea[5000]
+      - Solicitudes:  Soli[5000]
+      - Reportes:  Rep[5000]
+      - Clubes:  Club[5000]
+      - Celebraciones:  Cel[5000]
+      - Carnetizacion:  Carn[5000]
+      - Amigos:  Amig[5000]
+      - Novedades:  Nov[5000]
+      - Chatbot:  Bot[10]
+      - Tarjeta_Coordenadas:  Tarjeta[25000]
+      - Tarjeta_Coordenadas_Admin:  Tarjeta_A[25000]
+      - Tarjeta_Coordenadas_Profe:  Tarjeta_P[25000]
+      - I:  Entero
+      - J:  Entero
+      - club = 6:  Entero
+      - carnet = 0:  Entero
+      - Nov = 0:  Entero
+      - Re = 0:  Entero
+      - S = 0:  Entero
+      - v = 0:  Entero
+      - C = 0:  Entero
+      - Lim = 16:  Entero
+      - K = 0:  Entero
+      - w = 0:  Entero
+      - re = 0:  Entero
+      - M = 0:  Entero
+      - P = 0:  Entero
+      - L = 0:  Entero
+      - Am = 0:  Entero
+      - N = 2:  Entero
+      - Aux = 0:  Entero
+      - Ver = 0:  Entero
+      - react = 0:  Entero
+      - com = 0:  Entero
+      - eve = 0:  Entero
+      - cel = 0:  Entero
+      - pos_admin:  Entero
+      - pos:  Entero
+      - pos_usuario:  Entero
+      - Opcion:  Entero
+      - Minimo:  Entero
+      - Maximo:  Entero
+      - Rol:  Cadena
+      - cod:  Cadena
+      - Avatares[11]:  Cadena
+      - R:  Booleano
+      - R2:  Booleano
+      - Acceso:  Booleano
+      - Tema = 0:  Booleano
+      - validacion_pago:  Booleano
+      - Inscripciones:  Booleano
+      - Suma:  Real
+      - monto_pago:  Real
+      - Ingresos:  Real
+      - Egresos:  Real
 
   - Registro: Administrativos.
     - Campos: 
@@ -876,6 +960,16 @@ ARCHIVO: .\Administrativo\1-Menu_Administrativo.gabo
         - Tema
         - Salud_Admin[pos_admin].Asma: Booleano
 
+    - Variables locales: .\Administrativo\1-Menu_Administrativo.gabo
+      - Opcion:  Entero
+      - opc:  Entero
+      - opc2:  Entero
+      - R Booleano;
+	Repetir
+		Mostrar << "Bienvenido Administrador:  Ver las opciones de su perfil"
+      - ¿Qué desea hacer?";
+		Mostrar << "1:  Ver las opciones de su perfil"
+
 ----------------------------------------
 
 
@@ -896,6 +990,11 @@ ARCHIVO: .\Administrativo\10-Eliminar_Empleado.gabo
         - Prof[I].Gmail
         - Prof[I].Password: Cadena
 
+    - Variables locales: .\Administrativo\10-Eliminar_Empleado.gabo
+      - R:  Booleano
+      - R2:  Booleano
+      - Eliminar:  Entero
+
 ----------------------------------------
 
 
@@ -913,6 +1012,13 @@ ARCHIVO: .\Administrativo\11-Estudiantes_Datos.gabo
         - Gestion[C].Password
         - Gestion[C].Carrera
         - Gestion[C].Telefono: Cadena
+
+    - Variables locales: .\Administrativo\11-Estudiantes_Datos.gabo
+      - C = 1:  Entero
+      - Es:  Entero
+      - Z:  Booleano
+      - opc2:  Booleano
+      - Apr2:  Booleano
 
 ----------------------------------------
 
@@ -939,6 +1045,14 @@ ARCHIVO: .\Administrativo\12-Agregar_Estudiantes.gabo
         - Gestion[I].Carrera: Cadena
         - Gestion[I].Estado: Booleano
 
+    - Variables locales: .\Administrativo\12-Agregar_Estudiantes.gabo
+      - I:  Entero
+      - Pos:  Entero
+      - Opcion:  Entero
+      - R:  Booleano
+      - R2:  Booleano
+      - Lim = 500:  Entero
+
 ----------------------------------------
 
 
@@ -955,6 +1069,10 @@ ARCHIVO: .\Administrativo\13-Eliminar_Estudiante.gabo
         - Datos[I].Gmail
         - Datos[I].Password: Cadena
 
+    - Variables locales: .\Administrativo\13-Eliminar_Estudiante.gabo
+      - R:  Booleano
+      - Eliminar:  Entero
+
 ----------------------------------------
 
 
@@ -970,6 +1088,10 @@ ARCHIVO: .\Administrativo\14-Solicitudes.gabo
         - Soli[I].Destinatario: Cadena
         - Soli[I].Estado: Booleano
 
+    - Variables locales: .\Administrativo\14-Solicitudes.gabo
+      - ele:  Entero
+      - elec:  Entero
+
 ----------------------------------------
 
 
@@ -984,6 +1106,10 @@ ARCHIVO: .\Administrativo\15-Reportes.gabo
         - Rep[I].Titular
         - Rep[I].Problema: Cadena
         - Rep[I].Recibido: Booleano
+
+    - Variables locales: .\Administrativo\15-Reportes.gabo
+      - ele:  Entero
+      - elec:  Entero
 
 ----------------------------------------
 
@@ -1010,6 +1136,9 @@ ARCHIVO: .\Administrativo\17-Servicio_Comunitario.gabo
       - Entrada/Salida
         - Ad.Servicio_Comunitario
         - Inscripciones: Booleano
+
+    - Variables locales: .\Administrativo\17-Servicio_Comunitario.gabo
+      - r:  Booleano
 
 ----------------------------------------
 
@@ -1045,6 +1174,14 @@ ARCHIVO: .\Administrativo\19-Carnetizacion_Admin.gabo
         - Carn[carnet].Precio: Real
         - Carn[carnet].Activo: Booleano
 
+    - Variables locales: .\Administrativo\19-Carnetizacion_Admin.gabo
+      - R:  Booleano
+      - R2:  Booleano
+      - R3:  Booleano
+      - R4:  Booleano
+      - opc:  Entero
+      - I:  Entero
+
 ----------------------------------------
 
 
@@ -1073,6 +1210,12 @@ ARCHIVO: .\Administrativo\20-Clases-Magistrales_Admin.gabo
         - Mag[I].Nombre_Profesor: Cadena
         - Mag[I].Autorizacion: Booleano
 
+    - Variables locales: .\Administrativo\20-Clases-Magistrales_Admin.gabo
+      - R:  Booleano
+      - R2:  Booleano
+      - I:  Entero
+      - ID:  Entero
+
 ----------------------------------------
 
 
@@ -1091,6 +1234,13 @@ ARCHIVO: .\Administrativo\21-Planes_Evaluacion.gabo
         - Plan[I].Estrategia: Cadena
         - Plan[I].Firmado: Booleano
 
+    - Variables locales: .\Administrativo\21-Planes_Evaluacion.gabo
+      - opc:  Entero
+      - ID:  Entero
+      - CI:  Entero
+      - I:  Entero
+      - R:  Booleano
+
 ----------------------------------------
 
 
@@ -1107,6 +1257,11 @@ ARCHIVO: .\Administrativo\22-Adicionar_Clubes.gabo
         - Club[I].Capacidad_Maxima: Entero
         - Club[I].Activo: Booleano
 
+    - Variables locales: .\Administrativo\22-Adicionar_Clubes.gabo
+      - opc:  Entero
+      - I:  Entero
+      - ID:  Entero
+
 ----------------------------------------
 
 
@@ -1120,6 +1275,12 @@ ARCHIVO: .\Administrativo\23-Agregar_Celebraciones.gabo
         - Cel[I].Fecha
         - Cel[I].Tipo
         - Cel[I].Descripcion: Cadena
+
+    - Variables locales: .\Administrativo\23-Agregar_Celebraciones.gabo
+      - I:  Entero
+      - ID:  Entero
+      - opc:  Entero
+      - R:  Booleano
 
 ----------------------------------------
 
@@ -1135,6 +1296,12 @@ ARCHIVO: .\Administrativo\24-Agregar_Eventos.gabo
         - Even[I].Tipo
         - Even[I].Descripcion: Cadena
 
+    - Variables locales: .\Administrativo\24-Agregar_Eventos.gabo
+      - I:  Entero
+      - ID:  Entero
+      - opc:  Entero
+      - R:  Booleano
+
 ----------------------------------------
 
 
@@ -1146,6 +1313,16 @@ ARCHIVO: .\Administrativo\3-Seguridad.gabo
         - Admin[pos_admin].Password
         - Admin[pos_admin].Usuario
         - Admin[pos_admin].Gmail: Cadena
+
+    - Variables locales: .\Administrativo\3-Seguridad.gabo
+      - opc:  Entero
+      - op:  Entero
+      - contra:  Cadena
+      - contraNueva:  Cadena
+      - cargo:  Cadena
+      - user:  Cadena
+      - R:  Booleano
+      - Re:  Booleano
 
 ----------------------------------------
 
@@ -1190,6 +1367,20 @@ ARCHIVO: .\Administrativo\6-Salud.gabo
         - Cancer[I]: Cadena
         - Salud_Admin[pos_admin].Asma: Booleano
 
+    - Variables locales: .\Administrativo\6-Salud.gabo
+      - R:  Booleano
+      - Re:  Booleano
+      - Rep:  Booleano
+      - Repe:  Booleano
+      - Repet:  Booleano
+      - Repeti:  Booleano
+      - R2:  Booleano
+      - enf:  Entero
+      - dis:  Entero
+      - cora:  Entero
+      - cancer:  Entero
+      - enf2:  Cadena
+
 ----------------------------------------
 
 
@@ -1214,6 +1405,9 @@ ARCHIVO: .\Administrativo\7-Estadisticas.gabo
         - Datos[I].Year
         - Datos[I].Semestre: Entero
 
+    - Variables locales: .\Administrativo\7-Estadisticas.gabo
+      - I:  Entero
+
 ----------------------------------------
 
 
@@ -1232,6 +1426,12 @@ ARCHIVO: .\Administrativo\8-Solicitud_Empleo.gabo
         - Empleo[K].Titulo
         - Empleo[K].Descripcion: Cadena
         - Empleo[K].Estado: Booleano
+
+    - Variables locales: .\Administrativo\8-Solicitud_Empleo.gabo
+      - Rep:  Entero
+      - R:  Booleano
+      - opc:  Booleano
+      - Apr:  Booleano
 
 ----------------------------------------
 
@@ -1256,6 +1456,13 @@ ARCHIVO: .\Administrativo\9-Agregar_Empleados.gabo
         - Empleo[I].Usuario
         - Empleo[I].Gmail
         - Empleo[I].Password: Cadena
+
+    - Variables locales: .\Administrativo\9-Agregar_Empleados.gabo
+      - I:  Entero
+      - Pos:  Entero
+      - Opcion:  Entero
+      - R:  Booleano
+      - R2:  Booleano
 
 ----------------------------------------
 
@@ -1908,6 +2115,10 @@ ARCHIVO: .\Docente\Principal_Docente.gabo
         - Plan[P].Firmado
         - Tema: Booleano
 
+    - Variables locales: .\Docente\Principal_Docente.gabo
+      - opc:  Entero
+      - R:  Booleano
+
 ----------------------------------------
 
 
@@ -2503,6 +2714,9 @@ ARCHIVO: .\Docente\Académico_Docente\1-Principal.gabo
         - Datos[L].Materias.Eco[L].Economia_Crisis: Real
         - Plan[P].Firmado: Booleano
 
+    - Variables locales: .\Docente\Académico_Docente\1-Principal.gabo
+      - opc:  Entero
+
 ----------------------------------------
 
 
@@ -2521,6 +2735,9 @@ ARCHIVO: .\Docente\Académico_Docente\10-Crear_Asignacion.gabo
         - As: Entero
         - ok: Booleano
 
+    - Variables locales: .\Docente\Académico_Docente\10-Crear_Asignacion.gabo
+      - ok:  Booleano
+
 ----------------------------------------
 
 
@@ -2535,6 +2752,10 @@ ARCHIVO: .\Docente\Académico_Docente\11-Publicar_Asignacion.gabo
         - Asig[i].Titulo
         - Asig[i].Estado
         - Asig[i].Codigo_Materia: Cadena
+
+    - Variables locales: .\Docente\Académico_Docente\11-Publicar_Asignacion.gabo
+      - i:  Entero
+      - asig[pos2]:  Entero
 
 ----------------------------------------
 
@@ -2552,6 +2773,10 @@ ARCHIVO: .\Docente\Académico_Docente\12-Cerrar_Asignacion.gabo
         - Asig[i].Codigo_Materia
         - Asig[i].Fecha_Entrega: Cadena
 
+    - Variables locales: .\Docente\Académico_Docente\12-Cerrar_Asignacion.gabo
+      - i:  Entero
+      - asig[pos2]:  Entero
+
 ----------------------------------------
 
 
@@ -2567,6 +2792,9 @@ ARCHIVO: .\Docente\Académico_Docente\13-Listar_Asignaciones.gabo
         - Asig[i].Codigo_Materia
         - Asig[i].Estado
         - Asig[i].Fecha_Entrega: Cadena
+
+    - Variables locales: .\Docente\Académico_Docente\13-Listar_Asignaciones.gabo
+      - i:  Entero
 
 ----------------------------------------
 
@@ -2591,6 +2819,12 @@ ARCHIVO: .\Docente\Académico_Docente\14-Clases_Magistrales_Docente.gabo
         - Mag[magis].Horas
         - Mag[magis].Precio: Real
 
+    - Variables locales: .\Docente\Académico_Docente\14-Clases_Magistrales_Docente.gabo
+      - cod:  Cadena
+      - I:  Entero
+      - R:  Booleano
+      - R2:  Booleano
+
 ----------------------------------------
 
 
@@ -2614,6 +2848,14 @@ ARCHIVO: .\Docente\Académico_Docente\15-Plan_Evaluacion_Docente.gabo
         - Clase[J].ID_Clase
         - P: Entero
         - Plan[P].Firmado: Booleano
+
+    - Variables locales: .\Docente\Académico_Docente\15-Plan_Evaluacion_Docente.gabo
+      - I:  Entero
+      - J:  Entero
+      - cod:  Cadena
+      - R:  Booleano
+      - R2:  Booleano
+      - R3:  Booleano
 
 ----------------------------------------
 
@@ -3157,6 +3399,11 @@ ARCHIVO: .\Docente\Académico_Docente\16-Cargar_Notas.gabo
         - Datos[L].Materias.Eco[L].Gestion_Riesgo
         - Datos[L].Materias.Eco[L].Economia_Crisis: Real
 
+    - Variables locales: .\Docente\Académico_Docente\16-Cargar_Notas.gabo
+      - ID:  Entero
+      - J:  Entero
+      - R:  Booleano
+
 ----------------------------------------
 
 
@@ -3699,6 +3946,12 @@ ARCHIVO: .\Docente\Académico_Docente\17-Buscar_Materia_Lista.gabo
         - Datos[L].Materias.Eco[L].Gestion_Riesgo
         - Datos[L].Materias.Eco[L].Economia_Crisis: Real
 
+    - Variables locales: .\Docente\Académico_Docente\17-Buscar_Materia_Lista.gabo
+      - K:  Entero
+      - F:  Entero
+      - L:  Entero
+      - nota:  Entero
+
 ----------------------------------------
 
 
@@ -3711,6 +3964,12 @@ ARCHIVO: .\Docente\Académico_Docente\2-Agregar_Materia.gabo
         - Materias[I].Nombre
         - Materias[I].Codigo: Cadena
         - Prof[pos].Cant_Materias: Entero
+
+    - Variables locales: .\Docente\Académico_Docente\2-Agregar_Materia.gabo
+      - Cant:  Entero
+      - I:  Entero
+      - Materias:  Cadena
+      - Codigo:  Cadena
 
 ----------------------------------------
 
@@ -3746,6 +4005,15 @@ ARCHIVO: .\Docente\Académico_Docente\3-Asignar_Horario.gabo
         - : Cadena
         - es_valido: Booleano
 
+    - Variables locales: .\Docente\Académico_Docente\3-Asignar_Horario.gabo
+      - pos:  Entero
+      - idb:  Entero
+      - ok:  Booleano
+      - R:  Booleano
+      - R2:  Booleano
+      - es_valido:  Booleano
+      - virtual:  Booleano
+
 ----------------------------------------
 
 
@@ -3759,6 +4027,9 @@ ARCHIVO: .\Docente\Académico_Docente\4-Buscar_Materia.gabo
       - Entrada/Salida
         - pos: Entero
         - encontrado: Booleano
+
+    - Variables locales: .\Docente\Académico_Docente\4-Buscar_Materia.gabo
+      - i:  Entero
 
 ----------------------------------------
 
@@ -3774,6 +4045,9 @@ ARCHIVO: .\Docente\Académico_Docente\5-Mostrar_Bloques_Disponibles.gabo
         - Base.Lista[i].Hora_Fin
         - Base.Lista[i].Aula
         - Base.Lista[i].Estado: Cadena
+
+    - Variables locales: .\Docente\Académico_Docente\5-Mostrar_Bloques_Disponibles.gabo
+      - i:  Entero
 
 ----------------------------------------
 
@@ -3792,6 +4066,10 @@ ARCHIVO: .\Docente\Académico_Docente\6-Validar_Choque_Bloque.gabo
         - Base.Lista[i].Hora_Fin
         - Base.Lista[i].Dia: Cadena
         - es_valido: Booleano
+
+    - Variables locales: .\Docente\Académico_Docente\6-Validar_Choque_Bloque.gabo
+      - i:  Entero
+      - cant:  Entero
 
 ----------------------------------------
 
@@ -3812,6 +4090,9 @@ ARCHIVO: .\Docente\Académico_Docente\7-Listar_Horario.gabo
         - Clase[i].Aula
         - Clase[i].Materia
         - Clase[i].Codigo_Materia: Cadena
+
+    - Variables locales: .\Docente\Académico_Docente\7-Listar_Horario.gabo
+      - i:  Entero
 
 ----------------------------------------
 
@@ -3868,6 +4149,9 @@ ARCHIVO: .\Docente\Extracurricular_Docente\1-Principal.gabo
         - Club[I].Miembros_Inscritos
         - Club[I].Capacidad_Maxima: Entero
 
+    - Variables locales: .\Docente\Extracurricular_Docente\1-Principal.gabo
+      - opc:  Entero
+
 ----------------------------------------
 
 
@@ -3882,6 +4166,10 @@ ARCHIVO: .\Docente\Extracurricular_Docente\2-Inscripcion_Club_Docente.gabo
         - Club[I].Miembros_Inscritos
         - Club[I].Capacidad_Maxima: Entero
 
+    - Variables locales: .\Docente\Extracurricular_Docente\2-Inscripcion_Club_Docente.gabo
+      - Nombre_Club:  Cadena
+      - opcion_horario:  Cadena
+
 ----------------------------------------
 
 
@@ -3893,6 +4181,9 @@ ARCHIVO: .\Docente\Extracurricular_Docente\3-Salir_Club_Docente.gabo
         - Club[I].Miembros_Inscritos: Entero
         - Club[I].Nombre
         - Prof[I].Club: Cadena
+
+    - Variables locales: .\Docente\Extracurricular_Docente\3-Salir_Club_Docente.gabo
+      - Nombre_Club:  Entero
 
 ----------------------------------------
 
@@ -3907,6 +4198,9 @@ ARCHIVO: .\Docente\Extracurricular_Docente\4-Informacion_Club_Docente.gabo
         - Club[I].Horarios_Disponibles: Cadena
         - Club[I].Miembros_Inscritos
         - Club[I].Capacidad_Maxima: Entero
+
+    - Variables locales: .\Docente\Extracurricular_Docente\4-Informacion_Club_Docente.gabo
+      - Nombre_Club:  Cadena
 
 ----------------------------------------
 
@@ -4053,6 +4347,10 @@ ARCHIVO: .\Docente\Social_Docente\1-Principal.gabo
         - Datos[J].Year
         - Prof[J].Cant_Materias: Entero
 
+    - Variables locales: .\Docente\Social_Docente\1-Principal.gabo
+      - opc:  Entero
+      - R:  Booleano
+
 ----------------------------------------
 
 
@@ -4079,6 +4377,15 @@ ARCHIVO: .\Docente\Social_Docente\2-Amigos_Docente.gabo
         - Datos[J].Semestre
         - Datos[J].Year
         - Prof[J].Cant_Materias: Entero
+
+    - Variables locales: .\Docente\Social_Docente\2-Amigos_Docente.gabo
+      - opc:  Entero
+      - opc2:  Entero
+      - Nombre:  Cadena
+      - CI:  Entero
+      - R:  Booleano
+      - r:  Booleano
+      - R2:  Booleano
 
 ----------------------------------------
 
@@ -4874,6 +5181,10 @@ ARCHIVO: .\Estudiante\Principal_Estudiante.gabo
         - S_MP[I].Disp
         - Publi[I].Activo: Booleano
 
+    - Variables locales: .\Estudiante\Principal_Estudiante.gabo
+      - opc:  Entero
+      - R:  Booleano
+
 ----------------------------------------
 
 
@@ -5519,6 +5830,10 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\1-Principal.gabo
         - K
         - Datos[pos_usuario].Pasantias: Booleano
 
+    - Variables locales: .\Estudiante\Académico_Estudiante\1-Principal.gabo
+      - opc:  Entero
+      - R:  Booleano
+
 ----------------------------------------
 
 
@@ -5603,6 +5918,9 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\10-Derecho.gabo
         - Datos[pos_usuario].Materias.Der[pos_usuario].Proyecto_IV
         - Datos[pos_usuario].Materias.Der[pos_usuario].Practicas_Juridicas_IV
         - Datos[pos_usuario].Materias.Der[pos_usuario].Electiva_IV: Real
+
+    - Variables locales: .\Estudiante\Académico_Estudiante\10-Derecho.gabo
+      - UC:  Entero
 
 ----------------------------------------
 
@@ -5693,6 +6011,9 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\11-Comunicacion.gabo
         - Datos[pos_usuario].Materias.Soc[pos_usuario].Vinculacion_Profesional
         - Datos[pos_usuario].Materias.Soc[pos_usuario].Trabajo_Grado: Real
 
+    - Variables locales: .\Estudiante\Académico_Estudiante\11-Comunicacion.gabo
+      - UC:  Entero
+
 ----------------------------------------
 
 
@@ -5775,6 +6096,9 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\12-Contaduria.gabo
         - Datos[pos_usuario].Materias.Con[pos_usuario].Instituciones_Financieras
         - Datos[pos_usuario].Materias.Con[pos_usuario].Tesis_Grado
         - Datos[pos_usuario].Materias.Con[pos_usuario].Pasantias: Real
+
+    - Variables locales: .\Estudiante\Académico_Estudiante\12-Contaduria.gabo
+      - UC:  Entero
 
 ----------------------------------------
 
@@ -5865,6 +6189,9 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\13-Economia.gabo
         - Datos[pos_usuario].Materias.Eco[pos_usuario].Gestion_Riesgo
         - Datos[pos_usuario].Materias.Eco[pos_usuario].Economia_Crisis: Real
 
+    - Variables locales: .\Estudiante\Académico_Estudiante\13-Economia.gabo
+      - UC:  Entero
+
 ----------------------------------------
 
 
@@ -5887,6 +6214,11 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\14-Inscripcion.gabo
         - Datos[I].CI
         - Clase[K].Cant_Estudiantes
         - L: Entero
+
+    - Variables locales: .\Estudiante\Académico_Estudiante\14-Inscripcion.gabo
+      - cod:  Cadena
+      - J:  Entero
+      - K:  Entero
 
 ----------------------------------------
 
@@ -5912,6 +6244,10 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\15-Buscar_Materia_Inscripcion.gabo
         - Datos[I].CI
         - J
         - L: Entero
+
+    - Variables locales: .\Estudiante\Académico_Estudiante\15-Buscar_Materia_Inscripcion.gabo
+      - q:  Booleano
+      - K:  Entero
 
 ----------------------------------------
 
@@ -5939,6 +6275,9 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\16-Asignaciones.gabo
         - Lista[L].Cedula
         - Asig[Q].ID_Asignacion: Entero
 
+    - Variables locales: .\Estudiante\Académico_Estudiante\16-Asignaciones.gabo
+      - J:  Entero
+
 ----------------------------------------
 
 
@@ -5962,6 +6301,12 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\17-Buscar_Asignacion.gabo
         - Datos[pos_usuario].CI
         - Lista[L].Cedula
         - Asig[Q].ID_Asignacion: Entero
+
+    - Variables locales: .\Estudiante\Académico_Estudiante\17-Buscar_Asignacion.gabo
+      - J:  Entero
+      - K:  Entero
+      - F:  Entero
+      - Q:  Entero
 
 ----------------------------------------
 
@@ -6017,6 +6362,10 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\2-Ver_Horario.gabo
         - Clase[J].Hora_Fin
         - Clase[J].Aula: Cadena
 
+    - Variables locales: .\Estudiante\Académico_Estudiante\2-Ver_Horario.gabo
+      - I:  Entero
+      - J:  Entero
+
 ----------------------------------------
 
 
@@ -6036,6 +6385,11 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\20-Clases_Magistrales_Estudiante.gab
         - Lista_M[M].Cedula
         - Mag[I].Cant_Estudiantes
         - M: Entero
+
+    - Variables locales: .\Estudiante\Académico_Estudiante\20-Clases_Magistrales_Estudiante.gabo
+      - R:  Booleano
+      - R2:  Booleano
+      - I:  Entero
 
 ----------------------------------------
 
@@ -6062,6 +6416,10 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\21-Plan_Evaluacion_Estudiante.gabo
         - Plan[Q].Ponderacion: Entero
         - Plan[Q].Firmado: Booleano
 
+    - Variables locales: .\Estudiante\Académico_Estudiante\21-Plan_Evaluacion_Estudiante.gabo
+      - J:  Entero
+      - R:  Booleano
+
 ----------------------------------------
 
 
@@ -6086,6 +6444,11 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\22-Buscar_Materia_Plan.gabo
         - Plan[Q].Ponderacion: Entero
         - Plan[Q].Firmado: Booleano
 
+    - Variables locales: .\Estudiante\Académico_Estudiante\22-Buscar_Materia_Plan.gabo
+      - K:  Entero
+      - F:  Entero
+      - Q:  Entero
+
 ----------------------------------------
 
 
@@ -6107,6 +6470,10 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\23-Carnetizacion.gabo
         - Carn[I].Precio
         - monto_pago: Real
         - validacion_pago: Booleano
+
+    - Variables locales: .\Estudiante\Académico_Estudiante\23-Carnetizacion.gabo
+      - I:  Entero
+      - R:  Booleano
 
 ----------------------------------------
 
@@ -6151,6 +6518,18 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\24-Pasantias.gabo
         - K
         - Datos[pos_usuario].Pasantias: Booleano
 
+    - Variables locales: .\Estudiante\Académico_Estudiante\24-Pasantias.gabo
+      - R = 3:  Entero
+      - Cedula:  Entero
+      - opc:  Entero
+      - Password1:  Cadena
+      - Password2:  Cadena
+      - Nombre:  Cadena
+      - Justificacion:  Cadena
+      - Horas:  Real
+      - R3:  Booleano
+      - R4:  Booleano
+
 ----------------------------------------
 
 
@@ -6186,6 +6565,16 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\25-Comunitario.gabo
         - Ad.Servicio_Comunitario
         - Inscripciones: Booleano
         - SerC[N].Horas_Realizadas: Real
+
+    - Variables locales: .\Estudiante\Académico_Estudiante\25-Comunitario.gabo
+      - Cedula = 0:  Entero
+      - J = 0:  Entero
+      - I = 1:  Entero
+      - Materias_Aprobadas:  Entero
+      - Pensum:  Entero
+      - Horas:  Real
+      - mitad:  Real
+      - H = 1:  Booleano
 
 ----------------------------------------
 
@@ -6741,6 +7130,9 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\3-Inscripciones.gabo
         - Datos[pos_usuario].Materias.Eco[pos_usuario].Gestion_Riesgo
         - Datos[pos_usuario].Materias.Eco[pos_usuario].Economia_Crisis: Real
 
+    - Variables locales: .\Estudiante\Académico_Estudiante\3-Inscripciones.gabo
+      - UC:  Entero
+
 ----------------------------------------
 
 
@@ -6831,6 +7223,11 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\4-Informatica.gabo
         - Datos[pos_usuario].Materias.Info[pos_usuario].Proyecto_Grado_II
         - Datos[pos_usuario].Materias.Info[pos_usuario].Electiva_Area_III: Real
 
+    - Variables locales: .\Estudiante\Académico_Estudiante\4-Informatica.gabo
+      - q:  Booleano
+      - I:  Booleano
+      - UC:  Entero
+
 ----------------------------------------
 
 
@@ -6919,6 +7316,9 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\5-Civil.gabo
         - Datos[pos_usuario].Materias.Civ[pos_usuario].Pavimentos
         - Datos[pos_usuario].Materias.Civ[pos_usuario].Puentes: Real
 
+    - Variables locales: .\Estudiante\Académico_Estudiante\5-Civil.gabo
+      - UC:  Entero
+
 ----------------------------------------
 
 
@@ -7006,6 +7406,9 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\6-Hidrocarburos.gabo
         - Datos[pos_usuario].Materias.Hid[pos_usuario].TEG
         - Datos[pos_usuario].Materias.Hid[pos_usuario].Recuperacion_Mejorada: Real
 
+    - Variables locales: .\Estudiante\Académico_Estudiante\6-Hidrocarburos.gabo
+      - UC:  Entero
+
 ----------------------------------------
 
 
@@ -7086,6 +7489,9 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\7-Medicina.gabo
         - Datos[pos_usuario].Materias.Med[pos_usuario].Clinica_Pediatrica_III
         - Datos[pos_usuario].Materias.Med[pos_usuario].Trabajo_Grado: Real
 
+    - Variables locales: .\Estudiante\Académico_Estudiante\7-Medicina.gabo
+      - UC:  Entero
+
 ----------------------------------------
 
 
@@ -7150,6 +7556,9 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\8-Odontologia.gabo
         - Datos[pos_usuario].Materias.Odo[pos_usuario].Gerontologia
         - Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_V
         - Datos[pos_usuario].Materias.Odo[pos_usuario].Toxicologia: Real
+
+    - Variables locales: .\Estudiante\Académico_Estudiante\8-Odontologia.gabo
+      - UC:  Entero
 
 ----------------------------------------
 
@@ -7245,6 +7654,9 @@ ARCHIVO: .\Estudiante\Extracurricular_Estudiante\1-Principal.gabo
         - Club[I].Miembros_Inscritos
         - Club[I].Capacidad_Maxima: Entero
 
+    - Variables locales: .\Estudiante\Extracurricular_Estudiante\1-Principal.gabo
+      - opc:  Entero
+
 ----------------------------------------
 
 
@@ -7259,6 +7671,10 @@ ARCHIVO: .\Estudiante\Extracurricular_Estudiante\2-Inscripcion_Club_Estudiante.g
         - Club[I].Miembros_Inscritos
         - Club[I].Capacidad_Maxima: Entero
 
+    - Variables locales: .\Estudiante\Extracurricular_Estudiante\2-Inscripcion_Club_Estudiante.gabo
+      - Nombre_Club:  Cadena
+      - opcion_horario:  Cadena
+
 ----------------------------------------
 
 
@@ -7270,6 +7686,9 @@ ARCHIVO: .\Estudiante\Extracurricular_Estudiante\3-Salir_Club_Estudiante.gabo
         - Club[I].Miembros_Inscritos: Entero
         - Club[I].Nombre
         - Datos[I].Club: Cadena
+
+    - Variables locales: .\Estudiante\Extracurricular_Estudiante\3-Salir_Club_Estudiante.gabo
+      - Nombre_Club:  Entero
 
 ----------------------------------------
 
@@ -7284,6 +7703,9 @@ ARCHIVO: .\Estudiante\Extracurricular_Estudiante\4-Informacion_Club_Estudiante.g
         - Club[I].Horarios_Disponibles: Cadena
         - Club[I].Miembros_Inscritos
         - Club[I].Capacidad_Maxima: Entero
+
+    - Variables locales: .\Estudiante\Extracurricular_Estudiante\4-Informacion_Club_Estudiante.gabo
+      - Nombre_Club:  Cadena
 
 ----------------------------------------
 
@@ -7907,6 +8329,12 @@ ARCHIVO: .\Estudiante\Personal_Estudiante\6-Chatbot.gabo
         - Bot[I].Respuesta3
         - Bot[I].Respuesta4: Cadena
 
+    - Variables locales: .\Estudiante\Personal_Estudiante\6-Chatbot.gabo
+      - I:  Entero
+      - ID:  Entero
+      - num:  Entero
+      - R:  Booleano
+
 ----------------------------------------
 
 
@@ -8034,6 +8462,10 @@ ARCHIVO: .\Estudiante\Social_Estudiante\1-Principal.gabo
         - S_MP[I].Disp
         - Publi[I].Activo: Booleano
 
+    - Variables locales: .\Estudiante\Social_Estudiante\1-Principal.gabo
+      - opc:  Entero
+      - R:  Booleano
+
 ----------------------------------------
 
 
@@ -8092,6 +8524,18 @@ ARCHIVO: .\Estudiante\Social_Estudiante\10-Buscar_Publicacion.gabo
         - Publi[I].Tipo_Reaccion3: Cadena
         - Publi[I].Activo: Booleano
 
+    - Variables locales: .\Estudiante\Social_Estudiante\10-Buscar_Publicacion.gabo
+      - R:  Booleano
+      - R2:  Booleano
+      - R3:  Booleano
+      - R4:  Booleano
+      - R5:  Booleano
+      - opc:  Entero
+      - I:  Entero
+      - Autor:  Cadena
+      - Tema:  Cadena
+      - Etiqueta:  Cadena
+
 ----------------------------------------
 
 
@@ -8115,6 +8559,9 @@ ARCHIVO: .\Estudiante\Social_Estudiante\11-Agregar_Reaccion.gabo
         - Rea[react].Me_Asombra
         - Rea[react].Me_Entristece
         - Rea[react].Me_Molesta: Cadena
+
+    - Variables locales: .\Estudiante\Social_Estudiante\11-Agregar_Reaccion.gabo
+      - opc:  Entero
 
 ----------------------------------------
 
@@ -8161,6 +8608,11 @@ ARCHIVO: .\Estudiante\Social_Estudiante\12-Comentarios.gabo
         - Rea[react].Me_Entristece
         - Rea[react].Me_Molesta: Cadena
 
+    - Variables locales: .\Estudiante\Social_Estudiante\12-Comentarios.gabo
+      - J:  Entero
+      - K:  Entero
+      - opc:  Entero
+
 ----------------------------------------
 
 
@@ -8177,6 +8629,9 @@ ARCHIVO: .\Estudiante\Social_Estudiante\13-Comentar.gabo
         - Com[com].Comentario
         - Com[com].Fecha
         - Com[com].Autor: Cadena
+
+    - Variables locales: .\Estudiante\Social_Estudiante\13-Comentar.gabo
+      - R:  Booleano
 
 ----------------------------------------
 
@@ -8229,6 +8684,9 @@ ARCHIVO: .\Estudiante\Social_Estudiante\14-Opciones_Publicacion.gabo
         - Res[re].Autor
         - Res[re].Fecha: Cadena
 
+    - Variables locales: .\Estudiante\Social_Estudiante\14-Opciones_Publicacion.gabo
+      - opc:  Entero
+
 ----------------------------------------
 
 
@@ -8251,6 +8709,21 @@ ARCHIVO: .\Estudiante\Social_Estudiante\15-Propias_Publicaciones.gabo
         - Publi[I].Tipo_Reaccion2
         - Publi[I].Tipo_Reaccion3: Cadena
         - Publi[I].Activo: Booleano
+
+    - Variables locales: .\Estudiante\Social_Estudiante\15-Propias_Publicaciones.gabo
+      - I:  Entero
+      - R:  Entero
+      - R2:  Entero
+      - R4:  Entero
+      - K = 2:  Entero
+      - Jose_Lozano[K]:  Entero
+      - K5:  Entero
+      - K4:  Entero
+      - Tema:  Cadena
+      - Etiqueta:  Cadena
+      - R3:  Booleano
+      - R5:  Booleano
+      - R6:  Booleano
 
 ----------------------------------------
 
@@ -8278,6 +8751,14 @@ ARCHIVO: .\Estudiante\Social_Estudiante\16-Ranking.gabo
         - Publi[I].Tipo_Reaccion3
         - Publi[I].Etiqueta: Cadena
 
+    - Variables locales: .\Estudiante\Social_Estudiante\16-Ranking.gabo
+      - I:  Entero
+      - J:  Entero
+      - J2:  Entero
+      - aux:  Entero
+      - Jose_Lozano[pub]:  Entero
+      - Jose_Lozano2[pub]:  Entero
+
 ----------------------------------------
 
 
@@ -8304,6 +8785,15 @@ ARCHIVO: .\Estudiante\Social_Estudiante\2-Amigos_Estudiante.gabo
         - Datos[J].Semestre
         - Datos[J].Year
         - Prof[J].Cant_Materias: Entero
+
+    - Variables locales: .\Estudiante\Social_Estudiante\2-Amigos_Estudiante.gabo
+      - opc:  Entero
+      - opc2:  Entero
+      - Nombre:  Cadena
+      - CI:  Entero
+      - R:  Booleano
+      - r:  Booleano
+      - R2:  Booleano
 
 ----------------------------------------
 
@@ -8356,6 +8846,19 @@ ARCHIVO: .\Estudiante\Social_Estudiante\3-Market_Place.gabo
         - validacion_pago
         - S_MP[I].Disp: Booleano
 
+    - Variables locales: .\Estudiante\Social_Estudiante\3-Market_Place.gabo
+      - Cedula:  Entero
+      - J3 = 3:  Entero
+      - Opc:  Entero
+      - I:  Entero
+      - Numero:  Cadena
+      - Cedula2:  Cadena
+      - Banco:  Cadena
+      - Password1:  Cadena
+      - Password2:  Cadena
+      - C_true:  Booleano
+      - R1:  Booleano
+
 ----------------------------------------
 
 
@@ -8387,6 +8890,11 @@ ARCHIVO: .\Estudiante\Social_Estudiante\4-Ingresar_Producto.gabo
         - S_MP[I].Datos_Bancarios
         - S_MP[I].Producto: Cadena
         - S_MP[I].Disp: Booleano
+
+    - Variables locales: .\Estudiante\Social_Estudiante\4-Ingresar_Producto.gabo
+      - I:  Entero
+      - R3:  Entero
+      - R4:  Booleano
 
 ----------------------------------------
 
@@ -8434,6 +8942,15 @@ ARCHIVO: .\Estudiante\Social_Estudiante\5-Comprar_Producto.gabo
         - S_MP[I].Disp
         - validacion_pago: Booleano
 
+    - Variables locales: .\Estudiante\Social_Estudiante\5-Comprar_Producto.gabo
+      - I:  Entero
+      - Opc3:  Entero
+      - Q1:  Entero
+      - Unidades:  Entero
+      - Q2:  Booleano
+      - Q3:  Booleano
+      - Q4:  Booleano
+
 ----------------------------------------
 
 
@@ -8461,6 +8978,17 @@ ARCHIVO: .\Estudiante\Social_Estudiante\6-Editar_Producto.gabo
         - A_MP[I].Contacto
         - A_MP[I].Datos_Bancarios: Cadena
         - S_MP[I].Disp: Booleano
+
+    - Variables locales: .\Estudiante\Social_Estudiante\6-Editar_Producto.gabo
+      - I:  Entero
+      - Opc2:  Entero
+      - Jose_Lozano[K]:  Entero
+      - K = 2:  Entero
+      - K2:  Entero
+      - K3:  Entero
+      - R7:  Booleano
+      - K4:  Booleano
+      - K6 = 0:  Booleano
 
 ----------------------------------------
 
@@ -8521,6 +9049,10 @@ ARCHIVO: .\Estudiante\Social_Estudiante\7-Foro_Estudiantes.gabo
         - Res[re].Fecha: Cadena
         - Publi[Ver].Activo: Booleano
 
+    - Variables locales: .\Estudiante\Social_Estudiante\7-Foro_Estudiantes.gabo
+      - opc:  Entero
+      - R:  Booleano
+
 ----------------------------------------
 
 
@@ -8537,6 +9069,10 @@ ARCHIVO: .\Estudiante\Social_Estudiante\8-Crear_Publicacion.gabo
         - Publi[pub].Texto
         - Publi[pub].Etiqueta
         - Publi[pub].Autor: Cadena
+
+    - Variables locales: .\Estudiante\Social_Estudiante\8-Crear_Publicacion.gabo
+      - R:  Booleano
+      - R2:  Booleano
 
 ----------------------------------------
 
@@ -8596,6 +9132,14 @@ ARCHIVO: .\Estudiante\Social_Estudiante\9-Publicaciones.gabo
         - Res[re].Autor
         - Res[re].Fecha: Cadena
         - Publi[Ver].Activo: Booleano
+
+    - Variables locales: .\Estudiante\Social_Estudiante\9-Publicaciones.gabo
+      - R:  Booleano
+      - R2:  Booleano
+      - R3:  Booleano
+      - Ver = 1:  Entero
+      - opc = 0:  Entero
+      - J:  Entero
 
 ----------------------------------------
 
@@ -9164,6 +9708,9 @@ ARCHIVO: .\Funciones\Historial_Carreras.gabo
         - Datos[pos_usuario].Materias.Eco[pos_usuario].Seminario_III
         - Datos[pos_usuario].Materias.Eco[pos_usuario].Electiva_III
         - Datos[pos_usuario].Materias.Eco[pos_usuario].Trabajo_Final_Grado: Real
+
+    - Variables locales: .\Funciones\Historial_Carreras.gabo
+      - Promedio:  Real
 
 ----------------------------------------
 
@@ -9790,6 +10337,10 @@ ARCHIVO: .\Funciones\metodo_pago.gabo
         - DTB: Cadena
         - validacion_pago: Booleano
 
+    - Variables locales: .\Funciones\metodo_pago.gabo
+      - opc_pago:  Entero
+      - referencia:  Entero
+
 ----------------------------------------
 
 
@@ -9828,6 +10379,9 @@ ARCHIVO: .\Funciones\Mostrar_Grupos.gabo
         - Gru[I].Miembros
         - Gru[I].Seccion: Entero
 
+    - Variables locales: .\Funciones\Mostrar_Grupos.gabo
+      - R:  Booleano
+
 ----------------------------------------
 
 
@@ -9841,6 +10395,10 @@ ARCHIVO: .\Funciones\Mostrar_Novedades.gabo
         - Nov[I].Responsables
         - Nov[I].Contexto
         - Nov[I].Lugar: Cadena
+
+    - Variables locales: .\Funciones\Mostrar_Novedades.gabo
+      - R:  Booleano
+      - I:  Entero
 
 ----------------------------------------
 
@@ -9924,6 +10482,14 @@ ARCHIVO: .\Inicio_Sesión\2-Registro.gabo
         - Datos[v].Telefono: Cadena
         - Gestion[I].Verificado: Booleano
 
+    - Variables locales: .\Inicio_Sesión\2-Registro.gabo
+      - Nombre:  Cadena
+      - Gmail:  Cadena
+      - Password:  Cadena
+      - CI:  Entero
+      - R:  Booleano
+      - encontrado = 0:  Booleano
+
 ----------------------------------------
 
 
@@ -9939,6 +10505,11 @@ ARCHIVO: .\Inicio_Sesión\3-Generar_Tarjeta_Coordenadas.gabo
         - Tarjeta[J].Fila
         - Tarjeta[J].Columna: Entero
 
+    - Variables locales: .\Inicio_Sesión\3-Generar_Tarjeta_Coordenadas.gabo
+      - I:  Entero
+      - J coordenada_fila:  Entero
+      - coordenada_columna:  Entero
+
 ----------------------------------------
 
 
@@ -9951,6 +10522,9 @@ ARCHIVO: .\Inicio_Sesión\4-Mostrar_Tarjeta_Coordenadas.gabo
         - Tarjeta[I].ID
         - Tarjeta[J].Fila
         - Tarjeta[J].Columna: Entero
+
+    - Variables locales: .\Inicio_Sesión\4-Mostrar_Tarjeta_Coordenadas.gabo
+      - encontrado = 1:  Entero
 
 ----------------------------------------
 
@@ -9979,6 +10553,15 @@ ARCHIVO: .\Inicio_Sesión\5-Iniciar_Sesion.gabo
         - Tarjeta[I].Columna: Entero
         - Acceso: Booleano
 
+    - Variables locales: .\Inicio_Sesión\5-Iniciar_Sesion.gabo
+      - gmail_ingresado:  Cadena
+      - password_ingresado:  Cadena
+      - encontrado:  Booleano
+      - encontradoAdmin:  Booleano
+      - encontradoProf:  Booleano
+      - I:  Entero
+      - Intentos_Fallidos:  Entero
+
 ----------------------------------------
 
 
@@ -9991,6 +10574,11 @@ ARCHIVO: .\Inicio_Sesión\6-Validar_Coordenada.gabo
         - Tarjeta[I].Columna: Entero
         - Acceso: Booleano
 
+    - Variables locales: .\Inicio_Sesión\6-Validar_Coordenada.gabo
+      - Coordenada:  Entero
+      - Fila:  Entero
+      - Columna:  Entero
+
 ----------------------------------------
 
 
@@ -10002,6 +10590,11 @@ ARCHIVO: .\Inicio_Sesión\7-Recuperar_Password.gabo
         - Tarjeta[I].Fila
         - Tarjeta[I].Columna: Entero
         - Acceso: Booleano
+
+    - Variables locales: .\Inicio_Sesión\7-Recuperar_Password.gabo
+      - Aciertos = 0:  Entero
+      - K:  Entero
+      - Intentos_Fallidos = 0:  Entero
 
 ----------------------------------------
 
@@ -10019,6 +10612,9 @@ ARCHIVO: .\Relleno\Inicializar_Bloques_Base.gabo
         - Base.Lista[I].Estado: Cadena
         - Base.Lista[I].ID_Bloque: Entero
 
+    - Variables locales: .\Relleno\Inicializar_Bloques_Base.gabo
+      - dias[6]:  Cadena
+
 ----------------------------------------
 
 
@@ -10034,6 +10630,9 @@ ARCHIVO: .\Relleno\Relleno_Admin.gabo
         - Admin[I].Gmail
         - Admin[I].Password
         - Admin[I].Cargo: Cadena
+
+    - Variables locales: .\Relleno\Relleno_Admin.gabo
+      - I:  Entero
 
 ----------------------------------------
 
@@ -10060,6 +10659,11 @@ ARCHIVO: .\Relleno\Relleno_Clase.gabo
         - Lista[I].ID_Lista
         - Lista_M[I].ID_Lista: Entero
 
+    - Variables locales: .\Relleno\Relleno_Clase.gabo
+      - I:  Entero
+      - K:  Entero
+      - J:  Entero
+
 ----------------------------------------
 
 
@@ -10073,6 +10677,9 @@ ARCHIVO: .\Relleno\Relleno_Clubes.gabo
         - Club[I].Nombre
         - Club[I].Horarios_Disponibles: Cadena
         - Club[I].Activo: Booleano
+
+    - Variables locales: .\Relleno\Relleno_Clubes.gabo
+      - I:  Entero
 
 ----------------------------------------
 
@@ -10710,6 +11317,9 @@ ARCHIVO: .\Relleno\Relleno_Prof.gabo
         - Prof[I].Enfermedad: Cadena
         - Prof[I].Esta_en_Club: Booleano
 
+    - Variables locales: .\Relleno\Relleno_Prof.gabo
+      - I:  Entero
+
 ----------------------------------------
 
 
@@ -11251,5 +11861,9 @@ ARCHIVO: .\Relleno\UC_Aprobadas.gabo
         - Datos[pos_usuario].Materias.Eco[pos_usuario].Estructura_Economica_Mundial
         - Datos[pos_usuario].Materias.Eco[pos_usuario].Gestion_Riesgo
         - Datos[pos_usuario].Materias.Eco[pos_usuario].Economia_Crisis: Real
+
+    - Variables locales: .\Relleno\UC_Aprobadas.gabo
+      - UC:  Entero
+      - UC_Aprobadas:  Entero
 
 ----------------------------------------

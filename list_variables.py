@@ -8,18 +8,21 @@ func_total = 0
 in_param_total = 0
 in_out_param_total = 0
 out_param_total = 0
+vars_total = 0
+lines_count = 0
 
 gabo_files = glob.glob("./pseudo/**/*.gabo", recursive=True)
-# gabo_files = ["./pseudo/Estudiante/Social_Estudiante/13-Comentar.gabo"]
 report: list[str] = []
 
 # Demasiadas expresiones regulares
+algo_regex = r"(?s)^Algoritmo\s+([\s\S])*\s*Inicio\s+([\s\S]*?)Fin"
 struct_regex = r"Registro:\s*([^;\n]+);([\s\S]*?)Fin_Registro"
 field_regex = r"^\s+(?!(?:Registro|Fin_Registro))([\w\s,]+)\s*:\s*(\w+);"
-procedure_regex = r"(?s)(?s)Procedimiento\s*([^;]+);([\s\S]*?)Fin_Procedimiento"
+procedure_regex = r"(?s)Procedimiento\s*([^;]+);([\s\S]*?)Fin_Procedimiento"
 procedure_header_regex = r"(?s)(\w+)\s*\(\s*(.*)\s*\);?"
 func_regex = r"(?s)Funcion\s*([^;]+);([\s\S]*?)Fin_Funcion"
 func_header_regex = r"(?s)(\w+)\s*\(\s*(.+)\s*\)\s*:\s*(\w+);?"
+var_regex = r"(?i)var\s+([^:]+):([^:\n]+)\s*;\n"
 
 
 def clasify_params(params:  str) -> dict[str, list[str]]:
@@ -59,11 +62,32 @@ def clasify_params(params:  str) -> dict[str, list[str]]:
     }
 
 
-for file in gabo_files:
-    with open(file, 'r', encoding='utf-8') as output:
-        content = output.read()
-        report.append(f"\nARCHIVO: {file.replace("./pseudo", ".")}")
+# Que spagheti mas horrible, hermano
+for filename in gabo_files:
+    with open(filename, 'r', encoding='utf-8') as file:
+        content = file.read()
+        lines_in = content.split("\n")
+        lines_count += len(lines_in) - 1
+        report.append(f"\nARCHIVO: {filename.replace("./pseudo", ".")}")
         report.append("=" * 40)
+
+        main: list[tuple[str, str]] = re.findall(algo_regex, content)
+        if main:
+            report.append(
+                f"\n  - Variables globales: {filename.replace("./pseudo", ".")}")
+
+            _, main_body = main[0]
+            not_comments = re.sub(r"\/\/.+", "", main_body)
+            main_variables: list[tuple[str, str]] = re.findall(
+                var_regex, not_comments)
+
+            for identifiers, data_type in main_variables:
+                parsed_identifiers = [i.strip()
+                                      for i in identifiers.split(',')]
+
+                for identifier in parsed_identifiers:
+                    vars_total += 1
+                    report.append(f"      - {identifier}: {data_type}")
 
         # Extraemos los registros
         structs: list[tuple[str, str]] = re.findall(struct_regex, content)
@@ -108,6 +132,21 @@ for file in gabo_files:
                     report.append(f"        - {p}")
                     out_param_total += 1
 
+            procedure_variables: list[tuple[str, str]
+                                      ] = re.findall(var_regex, body)
+            if procedure_variables:
+                report.append(
+                    f"\n    - Variables locales: {filename.replace("./pseudo", ".")}")
+
+                for identifiers, data_type in procedure_variables:
+                    parsed_identifiers = [i.strip()
+                                          for i in identifiers.split(',')]
+
+                    for identifier in parsed_identifiers:
+                        vars_total += 1
+                        report.append(
+                            f"      - {identifier}: {data_type}")
+
         # Extraemos las funciones
         functions: list[tuple[str, str]] = re.findall(
             func_regex, content)
@@ -124,6 +163,20 @@ for file in gabo_files:
             for p in parsed_params:
                 report.append(f"        - {p}")
 
+            func_variables: list[tuple[str, str]] = re.findall(var_regex, body)
+            if func_variables:
+                report.append(
+                    f"\n    - Variables locales: {filename.replace("./pseudo", ".")}")
+
+                for identifiers, data_type in func_variables:
+                    parsed_identifiers = [i.strip()
+                                          for i in identifiers.split(',')]
+
+                    for identifier in parsed_identifiers:
+                        vars_total += 1
+                        report.append(
+                            f"      - {identifier}: {data_type}")
+
         report.append("\n" + "-"*40 + "\n")
 
 
@@ -134,11 +187,13 @@ report.insert(0, f"  - De Salida: {out_param_total}")
 report.insert(0, f"  - De Entrada: {in_param_total}")
 report.insert(
     0, f"Total de parametros en procedimientos: {in_param_total + in_out_param_total + out_param_total}")
+report.insert(0, f"Total de variables: {vars_total} ")
 report.insert(0, f"Total de procedimientos: {procedures_total}")
 report.insert(0, f"Total de registros: {structs_total}")
 report.insert(0, f"Total de funciones: {func_total}")
+report.insert(0, f"Total de lineas: {lines_count}")
 report.insert(0, f"Total de archivos: {len(gabo_files)}")
 report.insert(0, header)
 
-with open('./docs/reporte.txt', 'w', encoding='utf-8') as output:
-    _ = output.write("\n".join(report))
+with open('./docs/reporte.txt', 'w', encoding='utf-8') as file:
+    _ = file.write("\n".join(report))
