@@ -21,7 +21,7 @@ field_regex = r"^\s+(?!(?:Registro|Fin_Registro))([\w\s,]+)\s*:\s*(\w+);"
 procedure_regex = r"(?s)Procedimiento\s*([^;]+);([\s\S]*?)Fin_Procedimiento"
 procedure_header_regex = r"(?s)(\w+)\s*\(\s*(.*)\s*\);?"
 func_regex = r"(?s)Funcion\s*([^;]+);([\s\S]*?)Fin_Funcion"
-func_header_regex = r"(?s)(\w+)\s*\(\s*(.+)\s*\)\s*:\s*(\w+);?"
+func_header_regex = r"(?s)(\w+)\s*\(\s*(.*)\s*\)\s*:\s*(\w+);?"
 var_regex = r"(?i)var\s+([^:]+):([^:\n]+)\s*;\n"
 
 
@@ -69,6 +69,7 @@ for filename in gabo_files:
         lines_in = content.split("\n")
         lines_count += len(lines_in) - 1
         report.append(f"\nARCHIVO: {filename.replace("./pseudo", ".")}")
+        # print(f"\nARCHIVO: {filename.replace("./pseudo", ".")}")
         report.append("=" * 40)
 
         main: list[tuple[str, str]] = re.findall(algo_regex, content)
@@ -86,7 +87,7 @@ for filename in gabo_files:
 
                 for identifier in parsed_identifiers:
                     vars_total += 1
-                    report.append(f"      - {identifier}: {data_type}")
+                    report.append(f"    - {identifier}: {data_type}")
 
         # Extraemos los registros
         structs: list[tuple[str, str]] = re.findall(struct_regex, content)
