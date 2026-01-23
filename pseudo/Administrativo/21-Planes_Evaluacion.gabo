@@ -1,4 +1,4 @@
-Procedimiento Planes_Evaluacion(E/S: Plan[I].ID_Plan, Plan[I].Ponderacion: Entero, Plan[I].Nombre_Profesor, Plan[I].Codigo_Materia, Plan[I].Nombre_Materia, Plan[I].Fecha, Plan[I].Tema, Plan[I].Estrategia: Cadena, Plan[I].Firmado: Booleano);
+Procedimiento Planes_Evaluacion(E/S: plan, Plan[I].ID_Plan, Plan[I].Ponderacion: Entero, Plan[I].Nombre_Profesor, Plan[I].Codigo_Materia, Plan[I].Nombre_Materia, Plan[I].Fecha, Plan[I].Tema, Plan[I].Estrategia: Cadena, Plan[I].Firmado: Booleano);
 Inicio
     Var opc, ID, CI, I: Entero;
     Var R: Booleano;
@@ -8,14 +8,15 @@ Inicio
         Mostrar << "1: Ver todos los planes de evaluación";
         Mostrar << "2: Buscar un plan de evaluación por código de materia";
         Mostrar << "3: Buscar un plan de evaluación por cédula del profesor";
+        Mostrar << "4: Borrar algún plan de evaluación";
         Leer >> opc;
-        Mientras (opc < 1 or opc > 3) Hacer;
+        Mientras (opc < 1 or opc > 4) Hacer;
             Mostrar << "Es invalido";
             Leer >> opc;
         Fin_Mientras
         En_Caso (opc > 0) Sea;
             Caso(opc = 1);
-                Para (I = 1 Hasta I = 5000) Hacer;
+                Para (I = 1 Hasta I = plan) Hacer;
                     Mostrar << Plan[I].ID_Plan;
                     Mostrar << Plan[I].Nombre_Profesor;
                     Mostrar << Plan[I].Codigo_Materia;
@@ -42,7 +43,7 @@ Inicio
             Caso(opc = 2);
                 Mostrar << "Ingrese el código de la materia que desea buscar su plan de evaluación";
                 Leer >> cod;
-                Para (I = 1 Hasta I = 500) Hacer;
+                Para (I = 1 Hasta I = plan) Hacer;
                     Si (cod = Plan[I].Codigo_Materia) Entonces;
                         Mostrar << Plan[I].ID_Plan;
                         Mostrar << Plan[I].Nombre_Profesor;
@@ -64,14 +65,14 @@ Inicio
                         Mostrar << "Siguiente.";
                     Fin_Si
                 Fin_Para
-            Otro_Caso
+            Caso(opc = 3);
                 Mostrar << "Ingrese la cédula del profesor que desea buscar para ver los planes de evaluación";
                 Leer >> CI;
                 Mientras (CI < 1000000 or CI > 50000000) Hacer;
                     Mostrar << "Es invalido, solo positivos o cédulas existentes";
                     Leer >> CI;
                 Fin_Mientras
-                Para (I = 1 Hasta I = 500) Hacer;
+                Para (I = 1 Hasta I = plan) Hacer;
                     Si (CI = Plan[I].CI_Profesor) Entonces;
                         Mostrar << Plan[I].ID_Plan;
                         Mostrar << Plan[I].Nombre_Profesor;
@@ -93,6 +94,45 @@ Inicio
                         Mostrar << "Siguiente.";
                     Fin_Si
                 Fin_Para
+            Otro_Caso
+                Para (I = 1 Hasta I = plan) Hacer;
+                    Mostrar << I;
+                    Mostrar << Plan[I].ID_Plan;
+                    Mostrar << Plan[I].Nombre_Profesor;
+                    Mostrar << Plan[I].Codigo_Materia;
+                    Mostrar << Plan[I].Nombre_Materia;
+                    Mostrar << Plan[I].Fecha;
+                    Mostrar << Plan[I].Tema;
+                    Mostrar << Plan[I].Estrategia;
+                    Mostrar << Plan[I].Ponderacion;
+                    Mostrar << Plan[I].Firmado;
+                Fin_Para
+                Mostrar << "Ingrese el número del plan que desea eliminar";
+                Leer >> Elim;
+                Mientras (Elim < 1 or Elim > plan) Hacer;
+                    Mostrar << "Es invalido";
+                    Leer >> Elim;
+                Fin_Mientras
+                Plan[Elim].ID_Plan = Plan[plan - 1].ID_Plan;
+                Plan[Elim].Nombre_Profesor = Plan[plan - 1].Nombre_Profesor;
+                Plan[Elim].Codigo_Materia = Plan[plan - 1].Codigo_Materia;
+                Plan[Elim].Nombre_Materia = Plan[plan - 1].Nombre_Materia;
+                Plan[Elim].Fecha = Plan[plan - 1].Fecha;
+                Plan[Elim].Tema = Plan[plan - 1].Tema;
+                Plan[Elim].Estrategia = Plan[plan - 1].Estrategia;
+                Plan[Elim].Ponderacion = Plan[plan - 1].Ponderacion;
+                Plan[Elim].Firmado = Plan[plan - 1].Firmado;
+                
+                Plan[plan - 1].ID_Plan = 0;
+                Plan[plan - 1].Nombre_Profesor = null;
+                Plan[plan - 1].Codigo_Materia = null;
+                Plan[plan - 1].Nombre_Materia = null;
+                Plan[plan - 1].Fecha = null;
+                Plan[plan - 1].Tema = null;
+                Plan[plan - 1].Estrategia = null;
+                Plan[plan - 1].Ponderacion = 0;
+                Plan[plan - 1].Firmado = null;
+                plan = plan - 1;
         Fin_Caso
         Mostrar << "¿Desea volver al menú principal? 1: Sí, 0: No";
         Leer >> R2;

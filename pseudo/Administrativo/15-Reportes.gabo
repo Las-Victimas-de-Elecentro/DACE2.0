@@ -36,11 +36,18 @@ Inicio
                 Mostrar << "Elija un reporte válido";
                 Leer >> ele;
             Fin_Mientras
-            Rep[ele].Titulo = null;
-            Rep[ele].Descripcion = null;
-            Rep[ele].Titular = null;
-            Rep[ele].Problema = null;
-            Rep[ele].Fecha = null;
+            Rep[ele].Titulo = Rep[Re - 1].Titulo;
+            Rep[ele].Descripcion = Rep[Re - 1].Descripcion;
+            Rep[ele].Titular = Rep[Re - 1].Titular;
+            Rep[ele].Problema = Rep[Re - 1].Problema;
+            Rep[ele].Fecha = Rep[Re - 1].Fecha;
+
+            Rep[Re - 1].Titulo = null;
+            Rep[Re - 1].Descripcion = null;
+            Rep[Re - 1].Titular = null;
+            Rep[Re - 1].Problema = null;
+            Rep[Re - 1].Fecha = null;
+            Re = Re - 1;
         Otro_Caso
             Para (I = 1 Hasta I = Re) Hacer;
                 Mostrar << I, Rep[I].Titulo;

@@ -1,4 +1,4 @@
-Procedimiento Eliminar_Empleado (E/S: Lim, prof, Admin[I].CI, Prof[I].CI: Entero, Admin[I].Usuario, Admin[I].Cargo, Admin[I].Gmail, Admin[I].Password, Prof[I].Nombre, Prof[I].Gmail, Prof[I].Password: Cadena);
+Procedimiento Eliminar_Empleado (E/S: Lim, prof, Admin[I].Edad, Prof[I].Edad, Admin[I].CI, Prof[I].CI: Entero, Admin[I].Usuario, Admin[I].Cargo, Admin[I].Gmail, Admin[I].Password, Prof[I].Nombre, Prof[I].Gmail, Prof[I].Password: Cadena);
 Inicio
 	Var R, R2: Booleano;
 	Var Eliminar: Entero;
@@ -23,12 +23,14 @@ Inicio
 
 			Admin[Eliminar].Usuario = Admin[Lim - 1].Usuario;
 			Admin[Eliminar].CI = Admin[Lim - 1].CI;
+			Admin[Eliminar].Edad = Admin[Lim - 1].Edad;
 			Admin[Eliminar].Cargo = Admin[Lim - 1].Cargo;
 			Admin[Eliminar].Gmail = Admin[Lim - 1].Gmail;
 			Admin[Eliminar].Password = Admin[Lim - 1].Password;
 
 			Admin[Lim - 1].Usuario = "";
 			Admin[Lim - 1].CI = 0;
+			Admin[Lim - 1].Edad = 0;
 			Admin[Lim - 1].Cargo = "";
 			Admin[Lim - 1].Gmail = "";
 			Admin[Lim - 1].Password = "";
@@ -48,11 +50,13 @@ Inicio
 
 			Prof[Eliminar].Nombre = Prof[prof - 1].Nombre;
 			Prof[Eliminar].CI = Prof[prof - 1].CI;
+			Prof[Eliminar].Edad = Prof[prof - 1].Edad;
 			Prof[Eliminar].Gmail = Prof[prof - 1].Gmail;
 			Prof[Eliminar].Password = Prof[prof - 1].Password;
 
 			Prof[prof - 1].Usuario = "";
 			Prof[prof - 1].CI = 0;
+			Prof[prof - 1].Edad = 0;
 			Prof[prof - 1].Gmail = "";
 			Prof[prof - 1].Password = "";
 			prof = prof - 1;

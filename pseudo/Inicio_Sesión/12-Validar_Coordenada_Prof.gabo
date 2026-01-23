@@ -1,4 +1,4 @@
-Procedimiento Validar_Coordenada(E/S: pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo: Entero, Acceso: Booleano);
+Procedimiento Validar_Coordenada_Prof(E/S: pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo: Entero, Acceso: Booleano);
 Inicio
 	Var I, J, Coordenada, Coordenada2, Fila, Columna: Entero;
 	Minimo = 1;

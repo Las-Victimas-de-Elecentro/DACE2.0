@@ -1,18 +1,19 @@
 Procedimiento Novedades(E/S: Nov: Entero, Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar: Cadena);
 Inicio
-    Var opc: Entero, R: Booleano;
+    Var opc, Elim: Entero, R: Booleano;
     Repetir
         Mostrar << "¡Bienvenido a la sección de Novedades!";
         Mostrar << "¿Qué desea hacer?";
         Mostrar << "1: Ver las novedades actuales";
         Mostrar << "2: Ingresar novedades de la universidad";
+        Mostrar << "3: Borrar novedades de la universidad";
         Leer >> opc;
         Mientras (opc < 1 or opc > 2) Hacer;
-            Mostrar << "Es invalido, solo entre el rango de 1-2";
+            Mostrar << "Es invalido, solo entre el rango de 1-3";
             Leer >> opc;
         Fin_Mientras
         Si (opc = 1) Entonces;
-            Para (I = 1 Hasta I = 500) Hacer;
+            Para (I = 1 Hasta I = Nov) Hacer;
                 Mostrar << Nov[I].Hecho;            
                 Mostrar << Nov[I].Fecha;            
                 Mostrar << Nov[I].Responsables;
@@ -21,19 +22,45 @@ Inicio
             Fin_Para
             Mostrar << "Esas fueron todas las novedades.";
         Sino
-            //Nov debe ser agregada al principal que es la que controla las novedades
-            Nov = Nov + 1;
-            Mostrar << "Ingrese de qué hecho trata esta nueva novedad:";
-            Leer >> Nov[Nov].Hecho;
-            Mostrar << "¿En qué fecha sucedió? (DD/MM/YYYY)";
-            Leer >> Nov[Nov].Fecha;
-            Mostrar << "¿Quiénes fueron los responsables?";
-            Leer >> Nov[Nov].Responsables;
-            Mostrar << "¿Cuál fue el contexto?";
-            Leer >> Nov[Nov].Contexto;
-            Mostrar << "¿Cuál fue el lugar?";
-            Leer >> Nov[Nov].Lugar;
-            Mostrar << "Novedad insertada correctamente.";
+            Si (opc = 2) Entonces;
+                Nov = Nov + 1;
+                Mostrar << "Ingrese de qué hecho trata esta nueva novedad:";
+                Leer >> Nov[Nov].Hecho;
+                Mostrar << "¿En qué fecha sucedió? (DD/MM/YYYY)";
+                Leer >> Nov[Nov].Fecha;
+                Mostrar << "¿Quiénes fueron los responsables?";
+                Leer >> Nov[Nov].Responsables;
+                Mostrar << "¿Cuál fue el contexto?";
+                Leer >> Nov[Nov].Contexto;
+                Mostrar << "¿Cuál fue el lugar?";
+                Leer >> Nov[Nov].Lugar;
+                Mostrar << "Novedad insertada correctamente.";
+            Sino
+                Para (I = 1 Hasta I = Nov) Hacer;
+                    Mostrar << I, Nov[I].Hecho;            
+                    Mostrar << Nov[I].Fecha;            
+                    Mostrar << Nov[I].Responsables;
+                    Mostrar << Nov[I].Contexto;
+                    Mostrar << Nov[I].Lugar;           
+                Fin_Para
+                Mostrar << "Ingrese el número de la novedad que desea borrar: ";
+                Leer >> Elim;
+                Mientras (Elim < 1 or Elim > Nov) Hacer;
+                    Mostrar << "Es invalido";
+                    Leer >> Elim;
+                Fin_Mientras
+                Nov[I].Fecha = Nov[Nov].Fecha;
+                Nov[I].Hecho = Nov[Nov].Hecho;
+                Nov[I].Responsables = Nov[Nov].Responsables;
+                Nov[I].Contexto = Nov[Nov].Contexto;
+                Nov[I].Lugar = Nov[Nov].Lugar;
+
+                Nov[Nov].Fecha = null;
+                Nov[Nov].Hecho = null;
+                Nov[Nov].Responsables = null;
+                Nov[Nov].Contexto = null;
+                Nov[Nov].Lugar = null;
+                Nov = Nov - 1;
         Fin_Si
         Mostrar << "¿Desea ver todas las novedades o ingresar otra nuevamente? 1: Sí, 0: No";
         Leer >> R;

@@ -15,7 +15,7 @@ Inicio
         Fin_Mientras
         En_Caso (opc > 0) Sea;
             Caso(opc = 1);
-                Para (I = 1 Hasta I = 500) Hacer;
+                Para (I = 1 Hasta I = club) Hacer;
                     Si (Club[I].Activo = 1) Entonces;
                         Mostrar << Club[I].Nombre;
                         Mostrar << Club[I].Descripcion;
@@ -77,6 +77,7 @@ Inicio
             Otro_Caso
                 Para (I = 1 Hasta I = 500) Hacer;
                     Si (Club[I].Activo = 1) Entonces;
+                        Mostrar << I;
                         Mostrar << Club[I].Nombre;
                         Mostrar << Club[I].Descripcion;
                         Mostrar << "Miembros Inscritos:";
@@ -93,13 +94,17 @@ Inicio
                     Mostrar << "Es invalido, no está en el rango";
                     Leer >> ID;
                 Fin_Mientras
-                Para (I = ID Hasta I = 500) Hacer;
-                    Club[I].Nombre = Club[I + 1].Nombre;
-                    Club[I].Descripcion = Club[I + 1].Descripcion;
-                    Club[I].Miembros_Inscritos = Club[I + 1].Miembros_Inscritos;
-                    Club[I].Capacidad_Maxima = Club[I + 1].Capacidad_Maxima;
-                    Club[I].Horarios_Disponibles = Club[I + 1].Horarios_Disponibles;
-                Fin_Para
+                Club[ID].Nombre = Club[club - 1].Nombre;
+                Club[ID].Descripcion = Club[club - 1].Descripcion;
+                Club[ID].Miembros_Inscritos = Club[club - 1].Miembros_Inscritos;
+                Club[ID].Capacidad_Maxima = Club[club - 1].Capacidad_Maxima;
+                Club[ID].Horarios_Disponibles = Club[club - 1].Horarios_Disponibles;
+                
+                Club[club - 1].Nombre = null;
+                Club[club - 1].Descripcion = null;
+                Club[club - 1].Miembros_Inscritos = 0;
+                Club[club - 1].Capacidad_Maxima = 0;
+                Club[club - 1].Horarios_Disponibles = null;
                 Mostrar << "Club borrado correctamente.";
         Fin_Caso
         Mostrar << "¿Desea volver al menú principal? 1: Sí, 0: No";

@@ -1,4 +1,4 @@
-Procedimiento Agregar_Estudiantes(E/S: v, Datos[I].CI, Datos[I].Year, Datos[I].Semestre, Gestion[I].CI, Gestion[I].Year, Gestion[I].Semestre: Entero, Datos[I].Usuario, Datos[I].Gmail, Datos[I].Password, Datos[I].Carrera, Gestion[I].Usuario, Gestion[I].Gmail, Gestion[I].Password, Gestion[I].Carrera: Cadena, Gestion[I].Estado: Booleano);
+Procedimiento Agregar_Estudiantes(E/S: v, Datos[I].CI, Datos[I].Year, Datos[I].Semestre, Gestion[I].CI, Gestion[I].Year, Gestion[I].Semestre: Entero, Datos[I].Nombre, Datos[I].Gmail, Datos[I].Password, Datos[I].Carrera, Gestion[I].Usuario, Gestion[I].Gmail, Gestion[I].Password, Gestion[I].Carrera: Cadena, Gestion[I].Estado: Booleano);
 Inicio
 	Var I, Pos, Opcion: Entero;
 	Var R, R2: Booleano;
@@ -13,8 +13,8 @@ Inicio
 			Mostrar << "Error en dato, intente nuevamente";
 			Leer >> Opcion;
 		Fin_Mientras
-		Para (I = 1 hasta I = 5000) Hacer;
-            Mostrar << I, Datos[I].Usuario;
+		Para (I = 1 Hasta I = v) Hacer;
+            Mostrar << I, Datos[I].Nombre;
             Mostrar << Datos[I].CI;
 			Mostrar << Datos[I].Gmail;
             Mostrar << Datos[I].Password;
@@ -25,12 +25,12 @@ Inicio
 		Si (Opcion = 1) Entonces;
 			Mostrar << "Ingrese la posición del estudiante del cual desea modificar su información en la base de datos";
 			Leer >> Pos;
-			Mientras (Pos < 1 or Pos > 5000) Hacer;
+			Mientras (Pos < 1 or Pos > v) Hacer;
 				Mostrar << "Fuera del rango de la base de datos, intente nuevamente";
 				Leer >> Pos;
 			Fin_Mientras
 			Mostrar << "Ingrese el nombre modificado";
-			Leer >> Datos[Pos].Usuario;
+			Leer >> Datos[Pos].Nombre;
 			Mostrar << "Ingrese la cédula del estudiante modificado";
 			Leer >> Datos[Pos].CI;
 			Mostrar << "Ingrese la contraseña del estudiante modificado";
@@ -44,12 +44,12 @@ Inicio
 		Sino
 			Mostrar << "Ingrese la posición del estudiante del cual quiere reemplazarlo por otro";
 			Leer >> Pos;
-			Mientras (Pos < 1 or Pos > 500) Hacer;
+			Mientras (Pos < 1 or Pos > v) Hacer;
 				Mostrar << "Fuera del rango";
 				Leer >> Pos;
 			Fin_Mientras
 			Mostrar << "Ingrese el nombre del nuevo estudiante";
-			Leer >> Datos[Pos].Usuario;
+			Leer >> Datos[Pos].Nombre;
 			Mostrar << "Ingrese la cédula del nuevo estudiante";
 			Leer >> Datos[Pos].CI;
 			Mostrar << "Ingrese la contraseña del nuevo estudiante";
@@ -61,7 +61,6 @@ Inicio
 			Mostrar << "Ingrese el semestre del nuevo estudiante";
 			Leer >> Datos[Pos].Semestre;
 		Fin_Si
-	Fin_Si
 		Mostrar << "¿Desea volver al menú principal? 1: Sí, 0: No";
 		Leer >> R;
         Hasta(R = 0);

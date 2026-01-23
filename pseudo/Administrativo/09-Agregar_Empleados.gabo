@@ -1,4 +1,4 @@
-Procedimiento Agregar_Empleados(E/S: indice, ID, Lim, prof, Admin[Lim].CI, Prof[prof].CI, Empleo[I].CI, Tarjeta_A[I].ID, Minimo, Maximo, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna: Entero, Admin[Lim].Usuario, Admin[Lim].Cargo, Admin[Lim].Gmail, Admin[Lim].Password, Prof[prof].Nombre, Prof[prof].Gmail, Prof[prof].Password, Empleo[I].Usuario, Empleo[I].Gmail, pass: Cadena);
+Procedimiento Agregar_Empleados(E/S: indice, ID, Lim, prof, Admin[Lim].Edad, Empleo[I].Edad, Prof[prof].CI, Admin[Lim].CI, Prof[prof].CI, Empleo[I].CI, Tarjeta_A[I].ID, Minimo, Maximo, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna: Entero, Admin[Lim].Usuario, Admin[Lim].Cargo, Admin[Lim].Gmail, Admin[Lim].Password, Prof[prof].Nombre, Prof[prof].Gmail, Prof[prof].Password, Empleo[I].Usuario, Empleo[I].Gmail, pass: Cadena);
 Inicio
     Var I, Pos, Opcion: Entero;
     Var Password, Password2: Cadena;
@@ -15,6 +15,7 @@ Inicio
                     Si (R2 = 1) Entonces;
                         Admin[Lim].Usuario = Empleo[I].Usuario;
                         Admin[Lim].CI = Empleo[I].CI;
+                        Admin[Lim].Edad = Empleo[I].Edad;
                         Admin[Lim].Gmail = Empleo[I].Gmail;
                         Repetir
                             Mostrar << "Ingrese su contraseña que usará para iniciar sesión:";
@@ -38,6 +39,7 @@ Inicio
                     Sino
                         Prof[prof].Nombre = Empleo[I].Usuario;
                         Prof[prof].CI = Empleo[I].CI;
+                        Prof[prof].Edad = Empleo[I].Edad;
                         Prof[prof].Gmail = Empleo[I].Gmail;
                         Repetir
                             Mostrar << "Ingrese su contraseña que usará para iniciar sesión:";

@@ -1,4 +1,4 @@
-Procedimiento Plan_Evaluacion_Docente(E/S: Materias[I].Codigo, Clase[J].Codigo_Materia, Prof[pos].Nombre, Clase[J].Nombre_Profesor, Plan[P].Fecha, Plan[P].Tema, Plan[P].Estrategia, Plan[P].Nombre_Profesor, Plan[P].Nombre_Materia, Plan[P].Codigo_Materia: Cadena, Plan[P].Ponderacion, Plan[P].ID_Plan, Clase[J].ID_Clase, P: Entero, Plan[P].Firmado: Booleano);
+Procedimiento Plan_Evaluacion_Docente(E/S: Materias[I].Codigo, Clase[J].Codigo_Materia, Prof[pos].Nombre, Clase[J].Nombre_Profesor, Plan[plan].Fecha, Plan[plan].Tema, Plan[plan].Estrategia, Plan[plan].Nombre_Profesor, Plan[plan].Nombre_Materia, Plan[plan].Codigo_Materia: Cadena, Plan[plan].Ponderacion, Plan[plan].ID_Plan, Clase[J].ID_Clase, plan: Entero, Plan[plan].Firmado: Booleano);
 Inicio
     Var I, J: Entero;
     Var cod: Cadena;
@@ -16,40 +16,40 @@ Inicio
                     Para (J = 1 Hasta I = 1600) Hacer;
                         Si (cod = Clase[J].Codigo_Materia) and (Prof[pos].Nombre = Clase[J].Nombre_Profesor) Entonces;
                             Mostrar << "Ingrese la fecha de la evaluación (DD/MM/YYYY)";
-                            Leer >> Plan[P].Fecha;
+                            Leer >> Plan[plan].Fecha;
                             Mostrar << "De acuerdo, ingrese el tema de la evaluación:";
-                            Leer >> Plan[P].Tema;
+                            Leer >> Plan[plan].Tema;
                             Mostrar << "Ingrese la estrategia de la evaluación que se usará";
-                            Leer >> Plan[P].Estrategia;
+                            Leer >> Plan[plan].Estrategia;
                             Mostrar << "Ingrese la ponderación que tendrá esa evaluación:";
-                            Leer >> Plan[P].Ponderacion;
-                            Mientras (Plan[P].Ponderacion < 1) Hacer;
+                            Leer >> Plan[plan].Ponderacion;
+                            Mientras (Plan[plan].Ponderacion < 1) Hacer;
                                 Mostrar << "Es invalido, solo positivos";
-                                Leer >> Plan[P].Ponderacion;
+                                Leer >> Plan[plan].Ponderacion;
                             Fin_Mientras
                             Mostrar << "¿Está correcto? 1: Sí, 0: No";
                             Leer >> R3;
                             Si (R3 = 0) Entonces;
                                 Mostrar << "Ingrese la fecha de la evaluación (DD/MM/YYYY)";
-                                Leer >> Plan[P].Fecha;
+                                Leer >> Plan[plan].Fecha;
                                 Mostrar << "De acuerdo, ingrese el tema de la evaluación:";
-                                Leer >> Plan[P].Tema;
+                                Leer >> Plan[plan].Tema;
                                 Mostrar << "Ingrese la estrategia de la evaluación que se usará";
-                                Leer >> Plan[P].Estrategia;
+                                Leer >> Plan[plan].Estrategia;
                                 Mostrar << "Ingrese la ponderación que tendrá esa evaluación:";
-                                Leer >> Plan[P].Ponderacion;
-                                Mientras (Plan[P].Ponderacion < 1) Hacer;
+                                Leer >> Plan[plan].Ponderacion;
+                                Mientras (Plan[plan].Ponderacion < 1) Hacer;
                                     Mostrar << "Es invalido, solo positivos";
-                                    Leer >> Plan[P].Ponderacion;
+                                    Leer >> Plan[plan].Ponderacion;
                                 Fin_Mientras
                             Fin_Si
                             Mostrar << "Perfecto. Evaluación añadida a la espera para ser aprobada por el consejo";
-                            Plan[P].ID_Plan = Clase[J].ID_Clase;
-                            Plan[P].Nombre_Profesor = Prof[pos].Nombre;
-                            Plan[P].Codigo_Materia = cod;
-                            Plan[P].Nombre_Materia = Materias[I].Nombre;
-                            Plan[P].Firmado = 0;
-                            P = P + 1;
+                            Plan[plan].ID_Plan = Clase[J].ID_Clase;
+                            Plan[plan].Nombre_Profesor = Prof[pos].Nombre;
+                            Plan[plan].Codigo_Materia = cod;
+                            Plan[plan].Nombre_Materia = Materias[I].Nombre;
+                            Plan[plan].Firmado = 0;
+                            plan = plan + 1;
                         Fin_Si
                     Fin_Para
                 Fin_Si

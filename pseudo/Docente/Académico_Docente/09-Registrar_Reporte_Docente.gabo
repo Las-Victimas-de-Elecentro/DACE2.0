@@ -1,50 +1,46 @@
 Procedimiento Registrar_Reporte_Docente(E/S: Re: Entero, Rep[i].Titulo, Rep[i].Descripcion, Rep[i].Titular, Rep[i].Problema, Rep[i].Fecha, Prof[pos].Nombre: Cadena, Rep[i].Recibido: Booleano);
 Inicio
-    r: Entero;
+    Var r: Entero;
     Mostrar << "¿Desea revisar algún reporte suyo? 1: Sí, 2: No, 3: Registrar nuevo reporte";
     Leer >> r;
     Mientras (r < 1 or r > 3) Hacer;
         Mostrar << "Es invalido, está fuera del rango";
         Leer >> r;
     Fin_Mientras
-    Si (R >= 200) Entonces;
-        Mostrar << "No es posible registrar más reportes.";
-    Sino
-        Si (r = 1) Entonces;
-            Para (i = 1 Hasta i = Re) Hacer;
-                Si (Prof[pos].Nombre = Rep[i].Titular) Entonces;
-                    Mostrar << "Se encontró el reporte.";
-                    Mostrar << Rep[i].Titulo;
-                    Mostrar << Rep[i].Descripcion;
-                    Mostrar << Rep[i].Titular;
-                    Mostrar << Rep[i].Problema;
-                    Mostrar << Rep[i].Fecha;
-                    Si (Rep[i].Recibido = 1) Entonces;
-                        Mostrar << "Reporte recibido, se tomará en cuenta para su posible solución.";
-                    Sino
-                        Mostrar << "Reporte sin recibir, siga esperando respuesta.";
-                    Fin_Si
+    Si (r = 1) Entonces;
+        Para (i = 1 Hasta i = Re) Hacer;
+            Si (Prof[pos].Nombre = Rep[i].Titular) Entonces;
+                Mostrar << "Se encontró el reporte.";
+                Mostrar << Rep[i].Titulo;
+                Mostrar << Rep[i].Descripcion;
+                Mostrar << Rep[i].Titular;
+                Mostrar << Rep[i].Problema;
+                Mostrar << Rep[i].Fecha;
+                Si (Rep[i].Recibido = 1) Entonces;
+                    Mostrar << "Reporte recibido, se tomará en cuenta para su posible solución.";
+                Sino
+                    Mostrar << "Reporte sin recibir, siga esperando respuesta.";
                 Fin_Si
-            Fin_Para
-        Sino
-            Si (r = 2) Entonces;
-                Mostrar << "Vuelva pronto.";
-            Sino
-                Mostrar << "=== Registro de Reporte Académico ===";
-                Mostrar << "Título del reporte:";
-                Leer >> Rep[Re].Titulo;
-                Mostrar << "Describa el problema o incidencia:";
-                Leer >> Rep[Re].Descripcion;
-                Mostrar << "Títular:", Prof[pos].Nombre;
-                Rep[Re].Titular = Prof[pos].Nombre;
-                Mostrar << "Problema en cuestión: ";
-                Leer >> Rep[Re].Problema;
-                Mostrar << "Fecha (YYYY-MM-DD):";
-                Leer >> Rep[Re].Fecha;
-                Re = Re + 1;
-                Rep[Re].Recibido = 0;
-                Mostrar << "El reporte ha sido enviado. La institución escuchará su voz.";
             Fin_Si
+        Fin_Para
+    Sino
+        Si (r = 2) Entonces;
+            Mostrar << "Vuelva pronto.";
+        Sino
+            Mostrar << "=== Registro de Reporte Académico ===";
+            Mostrar << "Título del reporte:";
+            Leer >> Rep[Re].Titulo;
+            Mostrar << "Describa el problema o incidencia:";
+            Leer >> Rep[Re].Descripcion;
+            Mostrar << "Títular:", Prof[pos].Nombre;
+            Rep[Re].Titular = Prof[pos].Nombre;
+            Mostrar << "Problema en cuestión: ";
+            Leer >> Rep[Re].Problema;
+            Mostrar << "Fecha (YYYY-MM-DD):";
+            Leer >> Rep[Re].Fecha;
+            Re = Re + 1;
+            Rep[Re].Recibido = 0;
+            Mostrar << "El reporte ha sido enviado. La institución escuchará su voz.";
         Fin_Si
     Fin_Si
 Fin_Procedimiento

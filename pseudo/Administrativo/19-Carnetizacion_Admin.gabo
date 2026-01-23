@@ -1,85 +1,120 @@
 Procedimiento Carnetizacion_Admin(E/S: carnet: Entero, Carn[carnet].Carrera, Carn[carnet].Lugar, Carn[carnet].Fecha: Cadena, Carn[carnet].Precio: Real, Carn[carnet].Activo: Booleano);
 Inicio
-    Var R, R2, R3, R4: Booleano;
-    Var opc, I: Entero;
+    Var R2, R3, R4: Booleano;
+    Var opc2, opc, I: Entero;
     Repetir
         Mostrar << "¡Bienvenido a la sección de Carnetización!";
-        Mostrar << "¿Desea aperturar una jornada de carnetización o ver las que hay? 1: Aperturar, 0: Ver";
-        Leer >> R;
-        Si (R = 1) Entonces;
-            Mostrar << "¿En qué carrera desea realizar la jornada?";
-            Mostrar << "1: Informática";
-            Mostrar << "2: Civil";
-            Mostrar << "3: Hidrocarburos";
-            Mostrar << "4: Medicina";
-            Mostrar << "5: Odontología";
-            Mostrar << "6: Veterinaria";
-            Mostrar << "7: Derecho";
-            Mostrar << "8: Comunicación Social";
-            Mostrar << "9: Contaduría";
-            Mostrar << "10: Economía";
-            Leer >> opc;
-            Mientras (opc < 1 or opc > 10) Hacer;
-                Mostrar << "Es invalido, solo números en el rango entre 1 y 10";
+        Mostrar << "¿Desea aperturar una jornada de carnetización o ver las que hay?";
+        Mostrar << "1: Aperturar una jornada";
+        Mostrar << "2: Ver las jornadas que hay";
+        Mostrar << "3: Eliminar una jornada ya existente";
+        Leer >> opc2;
+        Mientras (opc2 < 1 or opc2 > 3) Hacer;
+            Mostrar << "Es invalido";
+            Leer >> opc2;
+        Fin_Mientras
+        En_Caso (opc2 > 0) Sea;
+            Caso(opc2 = 1);
+                Mostrar << "¿En qué carrera desea realizar la jornada?";
+                Mostrar << "1: Informática";
+                Mostrar << "2: Civil";
+                Mostrar << "3: Hidrocarburos";
+                Mostrar << "4: Medicina";
+                Mostrar << "5: Odontología";
+                Mostrar << "6: Veterinaria";
+                Mostrar << "7: Derecho";
+                Mostrar << "8: Comunicación Social";
+                Mostrar << "9: Contaduría";
+                Mostrar << "10: Economía";
                 Leer >> opc;
-            Fin_Mientras
-            En_Caso (opc > 0) Sea;
-                Caso(opc = 1);
-                    Carn[carnet].Carrera = "Informática";
-                Caso(opc = 2);
-                    Carn[carnet].Carrera = "Civil";
-                Caso(opc = 3);
-                    Carn[carnet].Carrera = "Hidrocarburos";
-                Caso(opc = 4);
-                    Carn[carnet].Carrera = "Medicina";
-                Caso(opc = 5);
-                    Carn[carnet].Carrera = "Odontología";
-                Caso(opc = 6);
-                    Carn[carnet].Carrera = "Veterinaria";
-                Caso(opc = 7);
-                    Carn[carnet].Carrera = "Derecho";
-                Caso(opc = 8);
-                    Carn[carnet].Carrera = "Comunicación";
-                Caso(opc = 9);
-                    Carn[carnet].Carrera = "Contaduría";
-                Otro_Caso
-                    Carn[carnet].Carrera = "Economía";
-            Fin_Caso
-            Mostrar << "¿En cuál lugar desea realizar la jornada?";
-            Leer >> Carn[carnet].Lugar;
-            Mostrar << "Ingrese la fecha en la que se realizará (DD/MM/YYYY)";
-            Leer >> Carn[carnet].Fecha;
-            Mostrar << "Ingrese el precio que costará el carnet";
-            Leer >> Carn[carnet].Precio;
-            Mientras (Carn[carnet].Precio < 1) Hacer;
-                Mostrar << "Es invalido, solo positivos";
+                Mientras (opc < 1 or opc > 10) Hacer;
+                    Mostrar << "Es invalido, solo números en el rango entre 1 y 10";
+                    Leer >> opc;
+                Fin_Mientras
+                En_Caso (opc > 0) Sea;
+                    Caso(opc = 1);
+                        Carn[carnet].Carrera = "Informática";
+                    Caso(opc = 2);
+                        Carn[carnet].Carrera = "Civil";
+                    Caso(opc = 3);
+                        Carn[carnet].Carrera = "Hidrocarburos";
+                    Caso(opc = 4);
+                        Carn[carnet].Carrera = "Medicina";
+                    Caso(opc = 5);
+                        Carn[carnet].Carrera = "Odontología";
+                    Caso(opc = 6);
+                        Carn[carnet].Carrera = "Veterinaria";
+                    Caso(opc = 7);
+                        Carn[carnet].Carrera = "Derecho";
+                    Caso(opc = 8);
+                        Carn[carnet].Carrera = "Comunicación";
+                    Caso(opc = 9);
+                        Carn[carnet].Carrera = "Contaduría";
+                    Otro_Caso
+                        Carn[carnet].Carrera = "Economía";
+                Fin_Caso
+                Mostrar << "¿En cuál lugar desea realizar la jornada?";
+                Leer >> Carn[carnet].Lugar;
+                Mostrar << "Ingrese la fecha en la que se realizará (DD/MM/YYYY)";
+                Leer >> Carn[carnet].Fecha;
+                Mostrar << "Ingrese el precio que costará el carnet";
                 Leer >> Carn[carnet].Precio;
-            Fin_Mientras
-            Mostrar << "¿Desea aprobar la jornada? 1: Sí, 0: No";
-            Leer >> R3;
-            Si (R3 = 1) Entonces;
-                Carn[carnet].Activo = 1;
-            Sino
-                Carn[carnet].Activo = 0;
-            Fin_Si
-            carnet = carnet + 1;
-        Sino
-            Para (I = 1 Hasta I = 500) Hacer;
-                Mostrar << Carn[I].Carrera;
-                Mostrar << Carn[I].Lugar;
-                Mostrar << Carn[I].Fecha;
-                Mostrar << Carn[I].Precio;
-                Si (Carn[I].Activo = 0) Entonces;
-                    Mostrar << "¿Desea aprobar la jornada? 1: Sí, 0: No";
-                    Leer >> R4;
-                    Si (R4 = 1) Entonces;
-                        Carn[I].Activo = 1;
-                    Sino
-                        Carn[I].Activo = 0;
-                    Fin_Si
+                Mientras (Carn[carnet].Precio < 1) Hacer;
+                    Mostrar << "Es invalido, solo positivos";
+                    Leer >> Carn[carnet].Precio;
+                Fin_Mientras
+                Mostrar << "¿Desea aprobar la jornada? 1: Sí, 0: No";
+                Leer >> R3;
+                Si (R3 = 1) Entonces;
+                    Carn[carnet].Activo = 1;
+                Sino
+                    Carn[carnet].Activo = 0;
                 Fin_Si
-            Fin_Para
-        Fin_Si
+                carnet = carnet + 1;
+            Caso(opc2 = 2);
+                Para (I = 1 Hasta I = carnet) Hacer;
+                    Mostrar << Carn[I].Carrera;
+                    Mostrar << Carn[I].Lugar;
+                    Mostrar << Carn[I].Fecha;
+                    Mostrar << Carn[I].Precio;
+                    Si (Carn[I].Activo = 0) Entonces;
+                        Mostrar << "¿Desea aprobar la jornada? 1: Sí, 0: No";
+                        Leer >> R4;
+                        Si (R4 = 1) Entonces;
+                            Carn[I].Activo = 1;
+                        Sino
+                            Carn[I].Activo = 0;
+                        Fin_Si
+                    Fin_Si
+                Fin_Para
+            Otro_Caso
+                Para (I = 1 Hasta I = carnet) Hacer;
+                    Mostrar << I, Carn[I].Carrera;
+                    Mostrar << Carn[I].Lugar;
+                    Mostrar << Carn[I].Fecha;
+                    Mostrar << Carn[I].Precio;
+                    Mostrar << Carn[I].Activo;
+                Fin_Para
+                Mostrar << "Ingrese el número de la jornada que desea eliminar";
+                Leer >> Elim;
+                Mientras (Elim < 1 or Elim > carnet) Hacer;
+                    Mostrar << "Es invalido";
+                    Leer >> Elim;
+                Fin_Mientras
+                Carn[Elim].Carrera = Carn[carnet - 1].Carrera;
+                Carn[Elim].Lugar = Carn[carnet - 1].Lugar;
+                Carn[Elim].Fecha = Carn[carnet - 1].Fecha;
+                Carn[Elim].Precio = Carn[carnet - 1].Precio;
+                Carn[Elim].Activo = Carn[carnet - 1].Activo;
+
+                Carn[carnet - 1].Carrera = null;
+                Carn[carnet - 1].Lugar = null;
+                Carn[carnet - 1].Fecha = null;
+                Carn[carnet - 1].Precio = 0;
+                Carn[carnet - 1].Activo = null;
+                carnet = carnet - 1;
+        Fin_Caso
+        
         Mostrar << "¿Desea aperturar otra jornada? 1: Sí, 0: No";
         Leer >> R2;
         Hasta(R2 = 0);

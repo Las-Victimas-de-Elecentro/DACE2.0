@@ -16,7 +16,7 @@ Inicio
 
         En_Caso (Opc > 0) Sea;
             Caso(Opc = 1);
-                Validar_Coordenada_Prof(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, Minimo, Maximo, Acceso);
+                Validar_Coordenada_Prof(pos_usuario, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso);
                 Mostrar << Validar_Coordenada_Prof;
                 Si (Acceso = 1) Entonces;
                     Mostrar << "Ingrese su contraseña actual: ";

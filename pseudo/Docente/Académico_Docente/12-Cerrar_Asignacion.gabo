@@ -8,7 +8,7 @@ Inicio
     Sino
         Mostrar << "=== Asignaciones Publicadas ===";
         Para (i = 1 Hasta i = As) Hacer;
-            Si (Prof[pos].Nombre = Asig[i].Nombre_Profesor)and (Asig[i].Estado = "Publicada") Entonces;
+            Si (Prof[pos].Nombre = Asig[i].Nombre_Profesor) and (Asig[i].Estado = "Publicada") Entonces;
                 Mostrar << " | ", Asig[i].Titulo, " | Materia: ", Asig[i].Codigo_Materia, " | Entrega: ", Asig[i].Fecha_Entrega;
                 asig[pos2] = i;
                 pos2 = pos2 + 1;
@@ -33,4 +33,26 @@ Inicio
             Mostrar << "Asignación cerrada. Se detienen entregas.";
         Fin_Si
     Fin_Si
+    Para (I = 1 Hasta I = As) Hacer;
+        Si (Asig[I].Estado = "Cerrada") Entonces;
+            Asig[I].ID_Asignacion = Asig[As - 1].ID_Asignacion;
+            Asig[I].Nombre_Profesor = Asig[As - 1].Nombre_Profesor;
+            Asig[I].Codigo_Materia = Asig[As - 1].Codigo_Materia;
+            Asig[I].Titulo = Asig[As - 1].Titulo;
+            Asig[I].Descripcion = Asig[As - 1].Descripcion;
+            Asig[I].Fecha_Publicacion = Asig[As - 1].Fecha_Publicacion;
+            Asig[I].Fecha_Entrega = Asig[As - 1].Fecha_Entrega;
+            Asig[I].Estado = Asig[As - 1].Estado;
+
+            Asig[As - 1].ID_Asignacion = 0;
+            Asig[As - 1].Nombre_Profesor = null;
+            Asig[As - 1].Codigo_Materia = null;
+            Asig[As - 1].Titulo = null;
+            Asig[As - 1].Descripcion = null;
+            Asig[As - 1].Fecha_Publicacion = null;
+            Asig[As - 1].Fecha_Entrega = null;
+            Asig[As - 1].Estado = null;
+            As = As - 1;
+        Fin_Si
+    Fin_Para
 Fin_Procedimiento

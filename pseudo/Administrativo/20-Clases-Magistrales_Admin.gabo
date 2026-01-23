@@ -4,11 +4,11 @@ Inicio
     Var I, ID: Entero;
     Repetir
         Mostrar << "¡Bienvenido a la sección de Clases Magistrales!";
-        Mostrar << "¿Desea ver las clases magistrales? 1: Sí, 0: No";
+        Mostrar << "¿Desea ver las clases magistrales o borrar alguna? 1: Ver, 0: Borrar";
         Leer >> R;
         Si (R = 1) Entonces;
-            Para (I = 1 Hasta I = 500) Hacer;
-                Mostrar << Mag[I].ID_Clase;
+            Para (I = 1 Hasta I = magis) Hacer;
+                Mostrar << I, Mag[I].ID_Clase;
                 Mostrar << Mag[I].Nombre_Materia;
                 Mostrar << Mag[I].Codigo_Materia;
                 Mostrar << Mag[I].Nombre_Profesor;
@@ -23,7 +23,34 @@ Inicio
             Fin_Mientras
             Mag[ID].Autorizacion = 1;
         Sino
-            Mostrar << "Vuelva pronto";
+            Para (I = 1 Hasta I = magis) Hacer;
+                Mostrar << Mag[I].ID_Clase;
+                Mostrar << Mag[I].Nombre_Materia;
+                Mostrar << Mag[I].Codigo_Materia;
+                Mostrar << Mag[I].Nombre_Profesor;
+                Mostrar << Mag[I].CI_Profesor;
+                Mostrar << Mag[I].Autorizacion;
+            Fin_Para
+            Mostrar << "Ingrese la posición de la clase magistral que desea borrar";
+            Leer >> Elim;
+            Mientras (Elim < 1 or Elim > magis) Hacer;
+                Mostrar << "Es invalido";
+                Leer >> Elim;
+            Fin_Mientras
+            Mag[Elim].ID_Clase = Mag[magis - 1].ID_Clase;
+            Mag[Elim].Nombre_Materia = Mag[magis - 1].Nombre_Materia;
+            Mag[Elim].Codigo_Materia = Mag[magis - 1].Codigo_Materia;
+            Mag[Elim].Nombre_Profesor = Mag[magis - 1].Nombre_Profesor;
+            Mag[Elim].CI_Profesor = Mag[magis - 1].CI_Profesor;
+            Mag[Elim].Autorizacion = Mag[magis - 1].Autorizacion;
+
+            Mag[magis - 1].ID_Clase = 0;
+            Mag[magis - 1].Nombre_Materia = null;
+            Mag[magis - 1].Codigo_Materia = null;
+            Mag[magis - 1].Nombre_Profesor = null;
+            Mag[magis - 1].CI_Profesor = 0;
+            Mag[magis - 1].Autorizacion = null;
+            magis = magis - 1;
         Fin_Si
         Mostrar << "¿Desea aprobar otra Clase Magistral? 1: Sí, 0: No";
         Leer >> R2;

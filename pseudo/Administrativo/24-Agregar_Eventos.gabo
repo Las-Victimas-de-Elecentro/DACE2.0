@@ -75,10 +75,10 @@ Inicio
                 Even[ID].Tipo = Even[eve - 1].Tipo;
                 Even[ID].Descripcion = Even[eve - 1].Descripcion;
 
-                Even[eve - 1].Nombre = " ";
-                Even[eve - 1].Fecha = " ";
-                Even[eve - 1].Tipo = " ";
-                Even[eve - 1].Descripcion = " ";
+                Even[eve - 1].Nombre = null;
+                Even[eve - 1].Fecha = null;
+                Even[eve - 1].Tipo = null;
+                Even[eve - 1].Descripcion = null;
                 eve = eve - 1;
                 Mostrar << "Evento borrado correctamente.";
         Fin_Caso
