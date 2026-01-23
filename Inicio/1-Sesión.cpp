@@ -1,11 +1,13 @@
 #include "../Main/Header.h"
 using namespace std;
 
-void Sesion (Usuario (&User)[500], int &N, int Opc_F, string Rol)
+void Sesion (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Plan)[D], Reportes (&Rep)[D], Asignacion (&Asig)[D], Clase_Magistral (&Mag)[D], Solicitudes (&Soli)[D], Grupos (&Gru)[D], Clase (&Class)[D], Bloque_Horario (&List)[48], Materias (&Mat)[527], Profesor (&Prof)[D], Administrativo (&Admin)[D], Carnet (&Car)[D], Carnetizacion (&Carn)[D])
 {
+    int& N = Var.N;
+
     string Correo, Password;
     int I;
-    bool User_Valido;
+    bool Est_Valido;
 
     Limpiar();
     Dibujo = "Login"; Art();
@@ -14,16 +16,32 @@ void Sesion (Usuario (&User)[500], int &N, int Opc_F, string Rol)
     cout << "Ingrese su Contraseña: ";
     cin >> Password;
     do {
-        for (I = 0 ; I < 500 ; I++)
+        for (I = 0 ; I < D ; I++)
         {
-            if (User[I].Correo == Correo && User[I].Password == Password)
+            if (Est[I].Correo == Correo && Est[I].Password == Password)
             {
-                User_Valido = true;
+                Est_Valido = true;
                 N = I;
+                Rol = "Est";
+                break;
+            }
+            else if (Prof[I].Correo == Correo && Prof[I].Password == Password)
+            {
+                Est_Valido = true;
+                N = I;
+                Rol = "Prof";
+                break;
+            }
+            else if (Admin[I].Correo == Correo && Admin[I].Password == Password)
+            {
+                Est_Valido = true;
+                N = I;
+                Rol = "Admin";
+                break;
             }
         }
 
-        if (User_Valido == false)
+        if (Est_Valido == false)
         {
             Limpiar();
             Dibujo = "Login"; Art();
@@ -36,9 +54,45 @@ void Sesion (Usuario (&User)[500], int &N, int Opc_F, string Rol)
         else
         {
             cout << GREEN << "Inicio de Sesión exitoso" << RESET << endl;
+            Continue();
         }
 
-    } while (User_Valido == false);
+    } while (Est_Valido == false);
 
-    Menu_Est_Personal(User, N, Opc_F, Rol);
+    if (Rol == "Est")
+    {
+        if (Est[N].Oscuro == 0)
+        {
+            Oscuro = 0;
+        }
+        else
+        {
+            Oscuro = 1;
+        }
+    }
+    else if (Rol == "Prof")
+    {
+        if (Prof[N].Oscuro == 0)
+        {
+            Oscuro = 0;
+        }
+        else
+        {
+            Oscuro = 1;
+        }
+    }
+    else if (Rol == "Admin")
+    {
+        if (Admin[N].Oscuro == 0)
+        {
+            Oscuro = 0;
+        }
+        else
+        {
+            Oscuro = 1;
+        }
+    }
+
+    Principal_Global (Var, Est, Plan, Rep, Asig, Mag, Soli, Gru, Class, List, Mat, Prof, Admin, Car, Carn);
+
 }

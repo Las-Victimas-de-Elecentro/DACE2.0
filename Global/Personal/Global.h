@@ -2,12 +2,17 @@
 #ifndef GLOBAL_H
 #define GLOBAL_H
 
-void Seguridad_Global_Personal (Usuario (&User)[500], int &N, int Opc_F, string Rol);
-void Oscuro_Global_Personal ();
-void Avatares (Usuario (&User)[500], int &N);
-void Avatar_Global_Personal (Usuario (&User)[500], int &N, int Opc_F);
-void Salud_Global_Personal (Usuario (&User)[500], int &N, int Opc_F);
-void Enfermedades_Global_Personal (Usuario (&User)[500], int &N, int Opc_F);
-void Ver_Enfermedades_Global_Personal (Usuario (&User)[500], int &N);
+void Menu_Global_Personal (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
+void Seguridad_Global_Personal (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
+void Oscuro_Global_Personal (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
+void Avatares (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
+void Avatar_Global_Personal (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
+void Salud_Global_Personal (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
+void Enfermedades_Global_Personal (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
+void Ver_Enfermedades_Global_Personal (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
+void Datos_Global (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
+void Info_Global_Personal (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
+void Datos_Extras_Global (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
+void Modificar_Datos_Global (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
 
 #endif

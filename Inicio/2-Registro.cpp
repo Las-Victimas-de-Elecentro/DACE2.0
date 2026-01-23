@@ -1,8 +1,10 @@
 #include "../Main/Header.h"
 using namespace std;
 
-void Registro (Usuario (&User)[500], int &N)
+void Registro (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D])
 {
+    int& N = Var.N;
+
     string Nombre, Apellido, Correo, Password;
     long Cedula;
     int Dia, Mes, Year;
@@ -49,26 +51,39 @@ void Registro (Usuario (&User)[500], int &N)
     Dibujo = "Register"; Art();
     cout << "Ingrese su Contraseña: ";
     Password = Password_User();
+    Limpiar();
 
     // Registros
 
-    for (I = 0 ; I < 500 ; I++)
+    for (I = 0 ; I < D ; I++)
     {
-        if (User[I].Nombre == "")
+        if (Est[I].Nombre == "")
         {
             N = I;
             break;
         }
     }
 
-    User[N].Nombre = Nombre;
-    User[N].Apellido = Apellido;
-    User[N].Cedula = Cedula;
-    User[N].Fecha.Dia = Dia;
-    User[N].Fecha.Mes = Mes;
-    User[N].Fecha.Year = Year;
-    User[N].Correo = Correo;
-    User[N].Password = Password;
+    Rol = "Est";
+    
+    Est[N].Avatar = "Default";
+    Est[N].Nombre = Nombre;
+    Est[N].Apellido = Apellido;
+    Est[N].Cedula = Cedula;
+    Est[N].Fecha.Dia = Dia;
+    Est[N].Fecha.Mes = Mes;
+    Est[N].Fecha.Year = Year;
+    Est[N].Correo = Correo;
+    Est[N].Password = Password;
+    Est[N].Oscuro = 0;
+
+    Est[N].Carrera = "Informática";
+
+    Registrar (Var, Est, Prof, Admin);
+    Generar_Tarjeta (Var, Est, Prof, Admin);
+    Guardar_Tarjetas(Est, Prof, Admin);
+    Mostrar_Tarjeta (Var, Est, Prof, Admin);
 
     cout << GREEN << "Registro Completado" << RESET << endl;
+    Continue();
 }
