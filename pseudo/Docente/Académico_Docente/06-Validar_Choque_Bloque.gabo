@@ -4,7 +4,7 @@ Inicio
     es_valido = 1;
     Var i: Entero;
     Var cant: Entero;
-    Para (i = 1 Hasta i = 500) Hacer;
+    Para (i = 1 Hasta i = 1600) Hacer;
         Si (Clase[i].Nombre_Profesor = Prof[pos].Nombre) Entonces;
             Si (Clase[i].Dia = Base.Lista[i].Dia) Entonces;
                 // Simplificación: si coincide hora de inicio o fin, consideramos choque

@@ -44,14 +44,14 @@ Inicio
                     Clase[class].Dia = Base.Lista[idb].Dia;
                     Clase[class].Hora_Inicio = Base.Lista[idb].Hora_Inicio;
                     Clase[class].Hora_Fin = Base.Lista[idb].Hora_Fin;
-                    Para (i = 1 Hasta i = 500) Hacer;
+                    Para (i = 1 Hasta i = class) Hacer;
                         Si (Clase[i].Codigo_Materia = cod) Entonces;
                             Si (Clase[i].Seccion > 0) Entonces;
                                 Seccion = Seccion + 1;
                             Fin_Si
                         Fin_Si
                     Fin_Para
-                    Para (i = 1 Hasta i = 500) Hacer;
+                    Para (i = 1 Hasta i = class) Hacer;
                         Si (Clase[i].Aula = Aula) Entonces;
                             Aula = Aula + 1;
                         Fin_Si
@@ -66,7 +66,7 @@ Inicio
                     Gru[G].Nombre_Profesor = Prof[pos].Nombre;
                     Gru[G].CI_Profesor = Prof[pos].CI;
                     Gru[G].Codigo_Materia = cod;
-                    Para (I = 1 Hasta I = 500) Hacer;
+                    Para (I = 1 Hasta I = 522) Hacer;
                         Si (cod = Materia[I].Codigo_Materia) Entonces;
                             Clase[class].Materia = Materia[I].Nombre;
                             Gru[G].Materia = Materia[I].Nombre;

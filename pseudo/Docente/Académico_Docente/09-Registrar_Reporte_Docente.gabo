@@ -11,7 +11,7 @@ Inicio
         Mostrar << "No es posible registrar más reportes.";
     Sino
         Si (r = 1) Entonces;
-            Para (i = 1 Hasta i = 200) Hacer;
+            Para (i = 1 Hasta i = Re) Hacer;
                 Si (Prof[pos].Nombre = Rep[i].Titular) Entonces;
                     Mostrar << "Se encontró el reporte.";
                     Mostrar << Rep[i].Titulo;

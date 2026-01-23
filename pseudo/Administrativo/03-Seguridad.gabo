@@ -3,6 +3,7 @@ Inicio
     Var opc, op: Entero;
     Var contra, contraNueva, cargo, user: Cadena;
     Var R, Re: Booleano;
+    Var Intentos_Fallidos = 3: Entero;
     Repetir
         Mostrar << "¡Bienvenido al apartado de Seguridad!";
         Mostrar << "¿Qué desea hacer?";
@@ -14,17 +15,31 @@ Inicio
             Leer >> opc;
         Fin_Mientras
         Si (opc = 1) Entonces;
-            Mostrar << "Ingrese su contraseña actual: ";
-            Leer >> contra;
-            Si (contra = Admin[pos_admin].Password) Entonces;
-                Repetir
-                    Mostrar << "Perfecto, ahora ingrese su nueva contraseña: ";
-                    Leer >> contraNueva;
-                    Mostrar << "¿Está seguro de que quiere que esa sea su nueva contraseña? 1: Sí, 0: No";
-                    Leer >> Re;
-                    Hasta(Re = 1);
-                Fin_Repetir
-                Admin[pos_admin].Password = contraNueva;
+            Validar_Coordenada_Admin(pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Minimo, Maximo, Acceso);
+            Mostrar << Validar_Coordenada_Admin;
+            Si (Acceso = 1) Entonces;
+                Mostrar << "Ingrese su contraseña actual: ";
+                Leer >> contra;
+                Si (contra = Admin[pos_admin].Password) Entonces;
+                    Repetir
+                        Mostrar << "Perfecto, ahora ingrese su nueva contraseña: ";
+                        Leer >> contraNueva;
+                        Mostrar << "¿Está seguro de que quiere que esa sea su nueva contraseña? 1: Sí, 0: No";
+                        Leer >> Re;
+                        Hasta(Re = 1);
+                    Fin_Repetir
+                    indice = pos_admin;
+                    pass = contraNueva;
+                    Encriptacion(indice, pass);
+                    Admin[pos_admin].Password = pass;
+                Fin_Si
+            Sino
+                Si (Intentos_Fallidos = 0) Entonces;
+                    Mostrar << "Te quedaste sin intentos, intenta más tarde";
+                Sino
+                    Intentos_Fallidos = Intentos_Fallidos - 1;
+                    Mostrar << "Intento Fallido, te quedan ", Intentos_Fallidos;
+                Fin_Si
             Fin_Si
         Sino
             Mostrar << "Eligió actualizar sus datos. Perfecto.";

@@ -11,7 +11,7 @@ Inicio
         Mostrar<<"No es posible registrar más solicitudes.";
     Sino
         Si (r = 1) Entonces;
-            Para (i = 1 Hasta i = 200) Hacer;
+            Para (i = 1 Hasta i = S) Hacer;
                 Si (Prof[pos].Nombre = Soli[i].Titular) Entonces;
                     Mostrar << "Se encontró el reporte.";
                     Mostrar << Soli[i].Titulo;

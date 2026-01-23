@@ -5,7 +5,7 @@ Inicio
     Si (Prof[i].Cant_Materias = 0) Entonces;
         Mostrar << "Aún no tiene bloques asignados.";
     Sino
-        Para (i = 1 Hasta i = 1000) Hacer;
+        Para (i = 1 Hasta i = 1600) Hacer;
             Si (Prof[pos].Nombre = Clase[i].Nombre_Profesor) Entonces;
                 Mostrar << "[", i, "] ", Clase[i].Dia, " ", Clase[i].Hora_Inicio, "-", Clase[i].Hora_Fin, " | Aula: ", Clase[i].Aula, " | Materia: ", Clase[i].Materia, " | Código Materia: ", Clase[i].Codigo_Materia, " | Sección: ", Clases[i].Seccion, " | Inscritos: ", Clases[i].Cant_Estudiantes;
             Fin_Si
