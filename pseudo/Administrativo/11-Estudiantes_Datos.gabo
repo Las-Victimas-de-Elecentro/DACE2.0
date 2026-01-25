@@ -53,10 +53,23 @@ Inicio
             Otro_Caso
                 Gestion[C].Carrera = "Economía";
         Fin_Caso
-        Mostrar << "Ingrese el año del estudiante";
-        Leer >> Gestion[C].Year;
-        Mostrar << "Ingrese el semestre del estudiante";
-        Leer >> Gestion[C].Semestre;
+        Si (Gestion[C].Carrera = "Informática") or (Gestion[C].Carrera = "Civil") or (Gestion[C].Carrera = "Hidrocarburos") or (Gestion[C].Carrera = "Comunicación") or (Gestion[C].Carrera = "Contaduría") or (Gestion[C].Carrera = "Economía") Entonces;
+            Gestion[C].Year = 0;
+            Mostrar << "Ingrese el semestre del estudiante";
+            Leer >> Gestion[C].Semestre;
+            Mientras (Gestion[C].Semestre < 1 or Gestion[C].Semestre > 10) Hacer;
+                Mostrar << "Es invalido";
+                Leer >> Gestion[C].Semestre;
+            Fin_Mientras
+        Sino
+            Gestion[C].Semestre = 0;
+            Mostrar << "Ingrese el año del estudiante";
+            Leer >> Gestion[C].Year;
+            Mientras (Gestion[C].Year < 1 or Gestion[C].Year > 6) Hacer;
+                Mostrar << "Es invalido";
+                Leer >> Gestion[C].Year;
+            Fin_Mientras
+        Fin_Si
         Mostrar << "¿Desea anotar otra inscripción estudiantil? 1: Sí, 0: No";
         Leer >> Z;
         C = C + 1;
@@ -65,12 +78,20 @@ Inicio
 
     Para (I = 1 Hasta I = C) Hacer;
         Si (Gestion[I].Verificado = 1) Entonces;
-            Gestion[I].Usuario = " ";
-            Gestion[I].CI = null;
-            Gestion[I].Edad = null;
-            Gestion[I].Carrera= " ";
-            Gestion[I].Year = " ";
-            Gestion[I].Semestre = " ";
+            Gestion[I].Usuario = = Gestion[C - 1].Usuario;
+            Gestion[I].CI = Gestion[C - 1].CI;
+            Gestion[I].Edad = Gestion[C - 1].Edad;
+            Gestion[I].Carrera= Gestion[C - 1].Carrera;
+            Gestion[I].Year = Gestion[C - 1].Year;
+            Gestion[I].Semestre = Gestion[C - 1].Semestre;
+            
+            Gestion[C - 1].Usuario = null;
+            Gestion[C - 1].CI = 0;
+            Gestion[C - 1].Edad = 0;
+            Gestion[C - 1].Carrera = null;
+            Gestion[C - 1].Year = 0;
+            Gestion[C - 1].Semestre = 0;
+            C = C - 1;
         Fin_Si
     Fin_Para
 Fin_Procedimiento

@@ -50,7 +50,7 @@ Inicio
                 Mostrar << "Ingrese el nombre de la celebración modificada";
                 Leer >> Cel[ID].Nombre;
                 Mostrar << "Ingrese la fecha modificada de la celebración (DD/MM/YYYY)";
-                Mostrar << Cel[ID].Fecha;
+                Leer >> Cel[ID].Fecha;
                 Mostrar << "Ingrese el tipo modificado de la celebración";
                 Leer >> Cel[ID].Tipo;
                 Mostrar << "Ingrese la descripción modificada de la celebración";
@@ -75,10 +75,10 @@ Inicio
                 Cel[ID].Tipo = Cel[cel - 1].Tipo;
                 Cel[ID].Descripcion = Cel[cel - 1].Descripcion;
 
-                Cel[cel - 1].Nombre = " ";
-                Cel[cel - 1].Fecha = " ";
-                Cel[cel - 1].Tipo = " ";
-                Cel[cel - 1].Descripcion = " ";
+                Cel[cel - 1].Nombre = null;
+                Cel[cel - 1].Fecha = null;
+                Cel[cel - 1].Tipo = null;
+                Cel[cel - 1].Descripcion = null;
                 cel = cel - 1;
                 Mostrar << "Celebración borrada correctamente.";
         Fin_Caso

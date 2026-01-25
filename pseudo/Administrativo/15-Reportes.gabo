@@ -1,60 +1,72 @@
-Procedimiento Reportes(E/S: Re: Entero, Rep[I].Titulo, Rep[I].Descripcion, Rep[I].Titular, Rep[I].Problema: Cadena, Rep[I].Recibido: Booleano);
+Procedimiento Reportes_Admin(E/S: Re: Entero, Rep[I].Titulo, Rep[I].Descripcion, Rep[I].Titular, Rep[I].Problema: Cadena, Rep[I].Recibido: Booleano);
 Inicio
     Var opc, I: Entero, R: Booleano;
     Var ele, elec: Entero;
-    Mostrar << "¡Bienvenido a la sección de Repcitudes!";
-    Mostrar << "¿Qué desea hacer?";
-    Mostrar << "1: Ver los reportes actuales";
-    Mostrar << "2: Borrar reporte en específico";
-    Mostrar << "3: Aprobar reporte como recibido";
-    Leer >> opc;
-    Mientras (opc < 1 or opc > 3) Hacer;
-        Mostrar << "Elija una de las opciones disponibles.";
+    Repetir
+        Mostrar << "¡Bienvenido a la sección de Repcitudes!";
+        Mostrar << "¿Qué desea hacer?";
+        Mostrar << "1: Ver los reportes actuales";
+        Mostrar << "2: Borrar reporte en específico";
+        Mostrar << "3: Aprobar reporte como recibido";
         Leer >> opc;
-    Fin_Mientras
-    En_Caso (opc > 0) Sea;
-        Caso(opc = 1);
-            Para (I = 1 Hasta I = Re) Hacer;
-                Mostrar << Rep[I].Titulo;
-                Mostrar << Rep[I].Descripcion;
-                Mostrar << Rep[I].Titular;
-                Mostrar << Rep[I].Problema;
-                Mostrar << Rep[I].Fecha;
-            Fin_Para
-            Mostrar << "Esas fueron todos los reportes.";
-        Caso(opc = 2);
-            Para (I = 1 Hasta I = Re) Hacer;
-                Mostrar << I, Rep[I].Titulo;
-                Mostrar << Rep[I].Descripcion;
-                Mostrar << Rep[I].Titular;
-                Mostrar << Rep[I].Problema;
-                Mostrar << Rep[I].Fecha;
-            Fin_Para
-            Mostrar << "Ingrese el número del reporte que desea borrar";
-            Leer >> ele;
-            Mientras (ele < 1 or ele > Re) Hacer;
-                Mostrar << "Elija un reporte válido";
+        Mientras (opc < 1 or opc > 3) Hacer;
+            Mostrar << "Elija una de las opciones disponibles.";
+            Leer >> opc;
+        Fin_Mientras
+        En_Caso (opc > 0) Sea;
+            Caso(opc = 1);
+                Para (I = 1 Hasta I = Re) Hacer;
+                    Mostrar << Rep[I].Titulo;
+                    Mostrar << Rep[I].Descripcion;
+                    Mostrar << Rep[I].Titular;
+                    Mostrar << Rep[I].Problema;
+                    Mostrar << Rep[I].Fecha;
+                Fin_Para
+                Mostrar << "Esas fueron todos los reportes.";
+            Caso(opc = 2);
+                Para (I = 1 Hasta I = Re) Hacer;
+                    Mostrar << I, Rep[I].Titulo;
+                    Mostrar << Rep[I].Descripcion;
+                    Mostrar << Rep[I].Titular;
+                    Mostrar << Rep[I].Problema;
+                    Mostrar << Rep[I].Fecha;
+                Fin_Para
+                Mostrar << "Ingrese el número del reporte que desea borrar";
                 Leer >> ele;
-            Fin_Mientras
-            Rep[ele].Titulo = null;
-            Rep[ele].Descripcion = null;
-            Rep[ele].Titular = null;
-            Rep[ele].Problema = null;
-            Rep[ele].Fecha = null;
-        Otro_Caso
-            Para (I = 1 Hasta I = Re) Hacer;
-                Mostrar << I, Rep[I].Titulo;
-                Mostrar << Rep[I].Descripcion;
-                Mostrar << Rep[I].Titular;
-                Mostrar << Rep[I].Problema;
-                Mostrar << Rep[I].Fecha;
-            Fin_Para
-            Mostrar << "Ingrese el reporte que desea aprobar como recibido";
-            Leer >> elec;
-            Mientras (elec < 1 or elec > S) Hacer;
-                Mostrar << "Debe elegir una reporte válida";
+                Mientras (ele < 1 or ele > Re) Hacer;
+                    Mostrar << "Elija un reporte válido";
+                    Leer >> ele;
+                Fin_Mientras
+                Rep[ele].Titulo = Rep[Re - 1].Titulo;
+                Rep[ele].Descripcion = Rep[Re - 1].Descripcion;
+                Rep[ele].Titular = Rep[Re - 1].Titular;
+                Rep[ele].Problema = Rep[Re - 1].Problema;
+                Rep[ele].Fecha = Rep[Re - 1].Fecha;
+
+                Rep[Re - 1].Titulo = null;
+                Rep[Re - 1].Descripcion = null;
+                Rep[Re - 1].Titular = null;
+                Rep[Re - 1].Problema = null;
+                Rep[Re - 1].Fecha = null;
+                Re = Re - 1;
+            Otro_Caso
+                Para (I = 1 Hasta I = Re) Hacer;
+                    Mostrar << I, Rep[I].Titulo;
+                    Mostrar << Rep[I].Descripcion;
+                    Mostrar << Rep[I].Titular;
+                    Mostrar << Rep[I].Problema;
+                    Mostrar << Rep[I].Fecha;
+                Fin_Para
+                Mostrar << "Ingrese el reporte que desea aprobar como recibido";
                 Leer >> elec;
-            Fin_Mientras
-            Rep[elec].Recibido = 1;
-    Fin_Caso
+                Mientras (elec < 1 or elec > S) Hacer;
+                    Mostrar << "Debe elegir una reporte válida";
+                    Leer >> elec;
+                Fin_Mientras
+                Rep[elec].Recibido = 1;
+        Fin_Caso
+        Mostrar << "¿Desea volver al menú principal? 1: Sí, 0: No";
+        Leer >> R;
+        Hasta(R = 1);
+    Fin_Repetir
 Fin_Procedimiento

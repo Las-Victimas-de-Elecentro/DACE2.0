@@ -1,0 +1,15 @@
+Procedimiento Ver_Horario(E/S: pos_usuario, Datos[pos_usuario].CI, Lista[I].CI, Lista[I].ID_Lista, Clase[J].ID_Clase, Clase[J].Seccion: Entero, Clase[J].Codigo_Materia, Clase[J].Nombre_Materia, Clase[J].Dia, Clase[J].Hora_Inicio, Clase[J].Hora_Fin, Clase[J].Aula: Cadena);
+Inicio
+    Var I, J: Entero;
+    Mostrar << "Aquí tiene su horario.";
+    Para (I = 1 Hasta I = 80000) Hacer;
+        Si (Datos[pos_usuario].CI = Lista[I].CI) Entonces;
+            Para (J = 1 Hasta J = 1600) Hacer;
+                Si (Lista[I].ID_Lista = Clase[J].ID_Clase) Entonces;
+                    Mostrar << "Código Materia           |        Nombre Materia       |        Sección       |                          Clase                            |      Aula";
+                    Mostrar << Clase[J].Codigo_Materia, "|", Clase[J].Nombre_Materia, "|", Clase[J].Seccion, "|", Clase[J].Dia, Clase[J].Hora_Inicio, Clase[J].Hora_Fin, "|", Clase[J].Aula;
+                Fin_Si
+            Fin_Para
+        Fin_Si
+    Fin_Para
+Fin_Procedimiento

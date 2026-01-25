@@ -9,12 +9,14 @@ Inicio
         Leer >> r;
         Si (r = 1) Entonces;
             Inscripciones = 1;
+            Ad.Servicio_Comunitario = 1;
         Sino
             Inscripciones = 0;
+            Ad.Servicio_Comunitario = 0;
         Fin_Si
     Sino
         Si (Inscripciones = 1) Entonces;
-            Mostrar << "¿Desea deshabilitar las inscripciones?";
+            Mostrar << "¿Desea deshabilitar las inscripciones? 1: Sí, 0: No";
             Leer >> r2;
             Si (r2 = 1) Entonces;
                 Inscripciones = 0;

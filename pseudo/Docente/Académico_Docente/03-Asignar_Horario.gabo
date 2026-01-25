@@ -1,0 +1,88 @@
+Procedimiento Asignar_Horario(E/S: pos, class, G, Clase[i].CI_Profesor, Gru[i].CI_Profesor, Gru[i].Seccion, Clase[i].Seccion, Prof[i].CI, Prof[i].Cant_Clases, Gru[i].Miembros: Entero, cod, Materias[i].Codigo, Prof[pos].Nombre, Clase[i].Nombre_Profesor, Gru[i].Nombre_Profesor, Gru[i].Codigo_Materia, Gru[i].Materia, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Clase[i].Periodo, Clase[i].Nombre_Materia, Clase[i].Codigo_Materia, Clase[i].Aula, Clase[i].Plataforma, Base.Lista[idb].Dia, Base.Lista[idb].Hora_Inicio, Base.Lista[idb].Hora_Fin, Base.Lista[idb].Aula: Cadena, es_valido, Clase[i].Virtual: Booleano, [Procedimiento Buscar_Materia(Materias[i].Codigo, cod, ok)], [Procedimiento Mostrar_Bloques_Disponibles(Base.Lista[i].ID_Bloque, Base.Lista[i].Dia, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Aula, Base.Lista[i].Estado)], [Procedimiento Validar_Choque_Bloque(class, Prof[pos].Nombre, Clase[i].Nombre_Profesor, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Dia, es_valido)]);
+Inicio
+    Var pos, idb: Entero;
+    Var ok, R, R2, es_valido, virtual: Booleano;
+    Repetir
+        Mostrar << "=== Ritual de Asignación de Horario ===";
+        Mostrar << "¿Desea asignar una clase normal o una clase virtual? 1: Clase Normal, 0: Clase Virtual";
+        Leer >> virtual;
+        Mostrar << "Ingrese el código de la materia que desea impartir:";
+        Leer >> cod;
+        Buscar_Materia(Materias[i].Codigo, cod, ok);
+        Si (ok = 0) Entonces;
+            Mostrar << "Materia no encontrada.";
+        Sino
+            Mostrar_Bloques_Disponibles(Base.Lista[i].ID_Bloque, Base.Lista[i].Dia, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Aula, Base.Lista[i].Estado);
+            Mostrar << Mostrar_Bloques_Disponibles;
+            Mostrar << "Ingrese el ID del bloque que desea ocupar:";
+            Leer >> idb;
+            Mientras (idb < 1) Hacer;
+                Mostrar << "ID inválido, intente nuevamente:";
+                Leer >> idb;
+            Fin_Mientras
+            Si (Base.Lista[idb].Estado = "Ocupado") Entonces;
+                Mostrar << "Bloque ya ocupado, seleccione otro.";
+            Sino
+                Validar_Choque_Bloque(class, Prof[pos].Nombre, Clase[i].Nombre_Profesor, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Dia, es_valido);
+                Si (es_valido = 0) Entonces;
+                    Mostrar << "El bloque genera choque con su horario actual. Seleccione otro.";
+                Sino
+                    class = class + 1;
+                    G = G + 1;
+                    Repetir
+                        Mostrar << "Ingrese el período actual:";
+                        Leer >> Clase[class].Periodo;
+                        Mostrar << "¿Está seguro de que es correcto? 1: Sí, 0: No";
+                        Leer >> R;
+                        Hasta(R = 1);
+                    Fin_Repetir
+                    Clase[class].Codigo_Materia = cod;
+                    Clase[class].Dia = Base.Lista[idb].Dia;
+                    Clase[class].Hora_Inicio = Base.Lista[idb].Hora_Inicio;
+                    Clase[class].Hora_Fin = Base.Lista[idb].Hora_Fin;
+                    Para (i = 1 Hasta i = class) Hacer;
+                        Si (Clase[i].Codigo_Materia = cod) Entonces;
+                            Si (Clase[i].Seccion > 0) Entonces;
+                                Seccion = Seccion + 1;
+                            Fin_Si
+                        Fin_Si
+                    Fin_Para
+                    
+                    Clase[class].Aula = Base.Lista[idb].Aula;
+                    Clase[class].Seccion = Seccion;
+                    Clase[class].Virtual = 0;
+                    Gru[G].Seccion = Seccion;
+                    Prof[pos].Cant_Clases = Prof[pos].Cant_Clases + 1;
+                    Clase[class].Nombre_Profesor = Prof[pos].Nombre;
+                    Clase[class].CI_Profesor = Prof[pos].CI;
+                    Gru[G].Nombre_Profesor = Prof[pos].Nombre;
+                    Gru[G].CI_Profesor = Prof[pos].CI;
+                    Gru[G].Codigo_Materia = cod;
+                    Para (I = 1 Hasta I = 522) Hacer;
+                        Si (cod = Materias[I].Codigo) Entonces;
+                            Clase[class].Nombre_Materia = Materias[I].Nombre;
+                            Gru[G].Materia = Materias[I].Nombre;
+                        Fin_Si
+                    Fin_Para
+                    Gru[G].Miembros = Gru[G].Miembros + 1;
+                    Mostrar << "La materia ha sido inscrita en el tiempo. El aula espera su presencia.";
+                Fin_Si
+            Fin_Si
+            Si (virtual = 1) Entonces;
+                Clase[class].Virtual = 0;
+                Clase[class].Plataforma = "";
+            Sino
+                Clase[class].Virtual = 1;
+                Repetir
+                    Mostrar << "Indique la plataforma a través de la cual se realizarán las clases virtuales";
+                    Leer >> Clase[class].Plataforma;
+                    Mostrar << "¿Está seguro de que esa es la plataforma? 1: Sí, 0: No";
+                    Leer >> R;
+                    Hasta(R = 1);
+                Fin_Repetir
+            Fin_Si
+        Fin_Si
+        Mostrar << "¿Desea asignar otra clase o desea volver al menú principal? 1: Asignar clase, 0: Volver al menú principal";
+        Hasta(R2 = 0);
+    Fin_Repetir
+Fin_Procedimiento

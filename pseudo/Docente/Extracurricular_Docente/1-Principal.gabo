@@ -1,6 +1,7 @@
-Procedimiento Docente_Extracurricular(E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion, Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
+Procedimiento Docente_Extracurricular([Procedimiento Eventos(Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion)], [Procedimiento Mostrar_Clubes(Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima)], [Procedimiento Inscripcion_Club_Docente(Prof[pos].Club, Club[I].Nombre, Club[I].Horarios_Disponibles, pos, club, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima, Prof[pos].Esta_en_Club)], [Procedimiento Salir_Club_Docente(club, pos, Club[I].Miembros_Inscritos, Club[I].Nombre, Prof[I].Club, Prof[pos].Esta_en_Club)], [Procedimiento Informacion_Club_Docente(Prof[pos].Club, Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, pos, club, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima, Prof[pos].Esta_en_Club)], [Procedimiento Celebraciones(Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion)]);
 Inicio
-    Var opc: Entero;
+    Var opc, opcion: Entero;
+    Var R: Booleano;
     Repetir
         Mostrar << "=== SISTEMA EXTRACURRICULAR ===";
         Mostrar << "1. Eventos";
@@ -34,13 +35,13 @@ Inicio
                         Mostrar_Clubes(Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima);
                         Mostrar << Clubes;
                     Caso(opcion = 2);
-                        Inscripcion_Club_Docente(Prof[I].Club, Club[I].Nombre, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima);
+                        Inscripcion_Club_Docente(Prof[pos].Club, Club[I].Nombre, Club[I].Horarios_Disponibles, pos, club, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima, Prof[pos].Esta_en_Club);
                         Mostrar << Inscripcion_Club;
                     Caso(opcion = 3);
-                        Salir_Club_Docente(Club[I].Miembros_Inscritos, Club[I].Nombre, Prof[I].Club);
+                        Salir_Club_Docente(club, pos, Club[I].Miembros_Inscritos, Club[I].Nombre, Prof[I].Club, Prof[pos].Esta_en_Club);
                         Mostrar << Salir_Club;
                     Otro_Caso
-                        Informacion_Club_Docente(Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima);
+                        Informacion_Club_Docente(Prof[pos].Club, Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, pos, club, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima, Prof[pos].Esta_en_Club);
                         Mostrar << Informacion_Club;
                 Fin_Caso
             Caso(opc = 3);

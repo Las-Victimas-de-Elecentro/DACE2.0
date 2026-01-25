@@ -1,6 +1,6 @@
-Procedimiento Seguridad_Estudiante(E/S:Datos[pos_usuario].Password, Datos[pos_usuario].Gmail: Cadena);
+Procedimiento Seguridad_Estudiante(E/S: indice, pos_usuario: Entero, Datos[pos_usuario].Password, Datos[pos_usuario].Gmail, pass: Cadena, [Procedimiento Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, Minimo, Maximo, Acceso)], [Procedimiento Encriptacion(indice, pass)]);
 Inicio
-    var Opc: entero, NewC, NewG: Cadena, S = 0, R: Booleano;
+    Var Opc, Intentos_Fallidos = 3: Entero, contra, contraNueva, NewG: Cadena, S = 0, R, Re: Booleano;
     
     Repetir
         Mostrar << "Gestión de seguridad";
@@ -16,14 +16,32 @@ Inicio
 
         En_Caso (Opc > 0) Sea;
             Caso(Opc = 1);
-                Mostrar << "Ingrese la nueva contraseña:";
-                Leer >> NewC;
-                Mostrar << "¿Estás seguro de que quieres usar esta contraseña? Ingrese 1:Sí / 0:No";
-                Leer >> S;
-                Mientras (S < 0 Or S > 1) Hacer;
-                    Mostrar << "Ingrese solo opciones entre 0-1";
-                    Leer >> S;
-                Fin_Mientras
+                Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, Minimo, Maximo, Acceso);
+                Mostrar << Validar_Coordenada;
+                Si (Acceso = 1) Entonces;
+                    Mostrar << "Ingrese su contraseña actual: ";
+                    Leer >> contra;
+                    Si (contra = Datos[pos_usuario].Password) Entonces;
+                        Repetir
+                            Mostrar << "Perfecto, ahora ingrese su nueva contraseña: ";
+                            Leer >> contraNueva;
+                            Mostrar << "¿Está seguro de que quiere que esa sea su nueva contraseña? 1: Sí, 0: No";
+                            Leer >> Re;
+                            Hasta(Re = 1);
+                        Fin_Repetir
+                        indice = pos_usuario;
+                        pass = contraNueva;
+                        Encriptacion(indice, pass);
+                        Datos[pos_usuario].Password = pass;
+                    Fin_Si
+                Sino
+                    Si (Intentos_Fallidos = 0) Entonces;
+                        Mostrar << "Te quedaste sin intentos, intenta más tarde";
+                    Sino
+                        Intentos_Fallidos = Intentos_Fallidos - 1;
+                        Mostrar << "Intento Fallido, te quedan ", Intentos_Fallidos;
+                    Fin_Si
+                Fin_Si
             Otro_Caso
                 Mostrar << "Ingrese el nuevo correo electrónico";
                 Leer >> NewG;

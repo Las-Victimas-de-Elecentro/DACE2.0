@@ -1,4 +1,4 @@
-Procedimiento Docente_Social(E/S: I, J, Am: Entero, Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar, Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera: Cadena, Gru[I].Miembros, Gru[I].Seccion, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Datos[J].Semestre, Datos[J].Year, Prof[J].Cant_Materias: Entero);
+Procedimiento Docente_Social([Procedimiento Mostrar_Novedades(Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar)], [Procedimiento Mostrar_Grupos(I, Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia, Gru[I].Miembros, Gru[I].Seccion)], [Procedimiento Amigos_Docente(Am, pos, Lim, v, prof, Prof[J].Avatar, Admin[J].Avatar, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Datos[J].Semestre, Datos[J].Year, Prof[J].Cant_Materias)]);
 Inicio
     Var opc: Entero;
     Var R: Booleano;
@@ -17,7 +17,7 @@ Inicio
                 Mostrar_Grupos(I, Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia, Gru[I].Miembros, Gru[I].Seccion);
                 Mostrar << Mostrar_Grupos;
             Otro_Caso
-                Amigos_Docente(Am, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Datos[J].Semestre, Datos[J].Year, Prof[J].Cant_Materias);
+                Amigos_Docente(Am, pos, Lim, v, prof, Prof[J].Avatar, Admin[J].Avatar, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Datos[J].Semestre, Datos[J].Year, Prof[J].Cant_Materias);
                 Mostrar << Amigos_Docente;
         Fin_Caso
         Mostrar << "¿Desea salir del sistema? 1: Sí, 0: No";

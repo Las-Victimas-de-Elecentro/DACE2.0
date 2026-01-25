@@ -1,0 +1,45 @@
+Procedimiento Historial_Labor_Docente(E/S: Clase[I].Nombre_Profesor, Clase[I].Codigo_Materia, Clase[I].Periodo: Cadena, class, Clase[I].CI_Profesor, Clase[I].Cant_Estudiantes: Entero);
+Inicio
+    Var opc, CI, I: Entero, R: Booleano;
+    Repetir
+        Mostrar << "¡Bienvenido al Historial Labor Docente!";
+        Mostrar << "¿Qué desea hacer?";
+        Mostrar << "1: Ver el historial de cada profesor";
+        Mostrar << "2: Ver el historial de un profesor en específico";
+        Leer >> opc;
+        Mientras (opc < 1 or opc > 2) Hacer;
+            Mostrar << "Es invalido, solo entre el rango 1-2";
+            Leer >> opc;
+        Fin_Mientras
+        Si (opc = 1) Entonces;
+            Para (I = 1 Hasta I = class) Hacer;
+                Mostrar << Clase[I].Nombre_Profesor;
+                Mostrar << Clase[I].CI_Profesor;
+                Mostrar << Clase[I].Codigo_Materia;
+                Mostrar << Clase[I].Nombre_Materia;
+                Mostrar << Clase[I].Periodo;
+                Mostrar << Clase[I].Cant_Estudiantes;
+            Fin_Para
+        Sino
+            Mostrar << "Ingrese la cédula de identidad del profesor:";
+            Leer >> CI;
+            Mientras (CI < 1000000 or CI > 40000000) Hacer;
+                Mostrar << "Es invalido, solo cedulas positivas y que estén vivos";
+                Leer >> CI;
+            Fin_Mientras
+            Para (I = 1 Hasta I = class) Hacer;
+                Si (CI = Clase[I].CI_Profesor) Entonces;
+                    Mostrar << Clase[I].Nombre_Profesor;
+                    Mostrar << Clase[I].CI_Profesor;
+                    Mostrar << Clase[I].Codigo_Materia;
+                    Mostrar << Clase[I].Nombre_Materia;
+                    Mostrar << Clase[I].Periodo;
+                    Mostrar << Clase[I].Cant_Estudiantes;
+                Fin_Si
+            Fin_Para
+        Fin_Si
+        Mostrar << "¿Desea ver el historial de otro profesor o de todos de nuevo? 1: Sí, 0: No";
+        Leer >> R;
+        Hasta(R = 0);
+    Fin_Repetir
+Fin_Procedimiento

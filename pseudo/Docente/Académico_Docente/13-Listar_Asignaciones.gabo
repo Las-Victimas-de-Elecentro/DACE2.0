@@ -1,4 +1,4 @@
-Procedimiento Listar_Asignaciones(E/S: As: Entero, Prof[pos].Nombre, Asig[i].Nombre_Profesor, Asig[i].Titulo, Asig[i].Codigo_Materia, Asig[i].Estado, Asig[i].Fecha_Entrega: Cadena);
+Procedimiento Listar_Asignaciones(E/S: pos, As: Entero, Prof[pos].Nombre, Asig[i].Nombre_Profesor, Asig[i].Titulo, Asig[i].Codigo_Materia, Asig[i].Estado, Asig[i].Fecha_Entrega: Cadena);
 Inicio
     Var i: Entero;
     Mostrar << "=== Mis Asignaciones ===";

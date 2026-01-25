@@ -1,0 +1,41 @@
+Procedimiento Registrar_Solicitud_Docente(E/S: pos, S: Entero, Soli[i].Titulo, Soli[i].Descripcion, Soli[i].Titular, Soli[i].Destinatario, Soli[i].Fecha, Prof[pos].Nombre: Cadena, Soli[i].Estado: Booleano);
+Inicio
+    r: Entero;
+    Mostrar << "¿Desea revisar alguna solicitud suya? 1: Sí, 2: No, 3: Registrar nueva solicitud";
+    Leer >> r;
+    Mientras (r < 1 or r > 3) Hacer;
+        Mostrar << "Es invalido, está fuera del rango";
+        Leer >> r;
+    Fin_Mientras
+
+    Si (r = 1) Entonces;
+        Para (i = 1 Hasta i = S) Hacer;
+            Si (Prof[pos].Nombre = Soli[i].Titular) Entonces;
+                Mostrar << "Se encontró el reporte.";
+                Mostrar << Soli[i].Titulo;
+                Mostrar << Soli[i].Descripcion;
+                Mostrar << Soli[i].Titular;
+                Mostrar << Soli[i].Destinatario;
+                Mostrar << Soli[i].Fecha;
+                Si (Soli[i].Estado = 1) Entonces;
+                    Mostrar << "Solicitud aprobada, espere sus resultados.";
+                Sino
+                    Mostrar << "Solicitud sin aprobar aún, siga esperando respuesta.";
+                Fin_Si
+        Fin_Para
+    Sino
+        Mostrar << "=== Registro de Solicitud Académica ===";
+        Mostrar << "Título de la solicitud:";
+        Leer >> Soli[S].Titulo;
+        Mostrar << "Tipo de solicitud (Acta, Constancia, Soporte) y breve descripción:";
+        Leer >> Soli[S].Descripcion;
+        Mostrar << "Titular:", Prof[pos].Nombre;
+        Soli[S].Titular = Prof[pos].Nombre;
+        Mostrar << "Destinatario:";
+        Leer >> Soli[S].Destinatario;
+        Mostrar << "Fecha (YYYY-MM-DD):";
+        Leer >> Soli[S].Fecha;
+        Mostrar << "Su petición ha sido elevada. El sistema la custodiará hasta ser atendida.";
+        S = S + 1;
+    Fin_Si
+Fin_Procedimiento

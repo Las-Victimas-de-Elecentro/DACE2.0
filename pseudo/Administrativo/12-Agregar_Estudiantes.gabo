@@ -1,8 +1,7 @@
-Procedimiento Agregar_Estudiantes(E/S: v, Datos[I].CI, Datos[I].Year, Datos[I].Semestre, Gestion[I].CI, Gestion[I].Year, Gestion[I].Semestre: Entero, Datos[I].Usuario, Datos[I].Gmail, Datos[I].Password, Datos[I].Carrera, Gestion[I].Usuario, Gestion[I].Gmail, Gestion[I].Password, Gestion[I].Carrera: Cadena, Gestion[I].Estado: Booleano);
+Procedimiento Agregar_Estudiantes(E/S: v, Datos[I].CI, Datos[I].Year, Datos[I].Semestre: Entero, Datos[I].Nombre, Datos[I].Gmail, Datos[I].Password, Datos[I].Carrera: Cadena);
 Inicio
-	Var I, Pos, Opcion: Entero;
-	Var R, R2: Booleano;
-	Var Lim = 500: Entero;
+	Var I, op, Pos, Opcion: Entero;
+	Var R: Booleano;
 	Repetir
 		Mostrar << "Bienvenido a la sección de administración estudiantil";
 		Mostrar << "¿Qué desea hacer?";
@@ -13,8 +12,8 @@ Inicio
 			Mostrar << "Error en dato, intente nuevamente";
 			Leer >> Opcion;
 		Fin_Mientras
-		Para (I = 1 hasta I = 5000) Hacer;
-            Mostrar << I, Datos[I].Usuario;
+		Para (I = 1 Hasta I = v) Hacer;
+            Mostrar << I, Datos[I].Nombre;
             Mostrar << Datos[I].CI;
 			Mostrar << Datos[I].Gmail;
             Mostrar << Datos[I].Password;
@@ -25,43 +24,140 @@ Inicio
 		Si (Opcion = 1) Entonces;
 			Mostrar << "Ingrese la posición del estudiante del cual desea modificar su información en la base de datos";
 			Leer >> Pos;
-			Mientras (Pos < 1 or Pos > 5000) Hacer;
+			Mientras (Pos < 1 or Pos > v) Hacer;
 				Mostrar << "Fuera del rango de la base de datos, intente nuevamente";
 				Leer >> Pos;
 			Fin_Mientras
 			Mostrar << "Ingrese el nombre modificado";
-			Leer >> Datos[Pos].Usuario;
+			Leer >> Datos[Pos].Nombre;
 			Mostrar << "Ingrese la cédula del estudiante modificado";
 			Leer >> Datos[Pos].CI;
 			Mostrar << "Ingrese la contraseña del estudiante modificado";
 			Leer >> Datos[Pos].Password;
-			Mostrar << "Ingrese la carrera del estudiante modificado";
-			Leer >> Datos[Pos].Carrera;
-			Mostrar << "Ingrese el año del estudiante modificado";
-			Leer >> Datos[Pos].Year;
-			Mostrar << "Ingrese el semestre del estudiante modificado";
-			Leer >> Datos[Pos].Semestre;
+			Mostrar << "Ingrese la carrera del estudiante";
+			Mostrar << "1: Ingeniería en Informática";
+			Mostrar << "2: Ingeniería Civil";
+			Mostrar << "3: Ingeniería en Hidrocarburos";
+			Mostrar << "4: Medicina";
+			Mostrar << "5: Odontología";
+			Mostrar << "6: Veterinaria";
+			Mostrar << "7: Derecho";
+			Mostrar << "8: Comunicación Social";
+			Mostrar << "9: Contaduría";
+			Mostrar << "10: Economía";
+			Leer >> op;
+			Mientras (op < 1 or op > 10) Hacer;
+				Mostrar << "Es invalido, solo rango entre 1-10";
+				Leer >> op;
+			Fin_Mientras
+			En_Caso (op > 0) Sea;
+				Caso(op = 1);
+					Datos[Pos].Carrera = "Informática";
+				Caso(op = 2);
+					Datos[Pos].Carrera = "Civil";
+				Caso(op = 3);
+					Datos[Pos].Carrera = "Hidrocarburos";
+				Caso(op = 4);
+					Datos[Pos].Carrera = "Medicina";
+				Caso(op = 5);
+					Datos[Pos].Carrera = "Odontología";
+				Caso(op = 6);
+					Datos[Pos].Carrera = "Veterinaria";
+				Caso(op = 7);
+					Datos[Pos].Carrera = "Derecho";
+				Caso(op = 8);
+					Datos[Pos].Carrera = "Comunicación";
+				Caso(op = 9);
+					Datos[Pos].Carrera = "Contaduría";
+				Otro_Caso
+					Datos[Pos].Carrera = "Economía";
+			Fin_Caso
+			Si (Datos[Pos].Carrera = "Informática") or (Datos[Pos].Carrera = "Civil") or (Datos[Pos].Carrera = "Hidrocarburos") or (Datos[Pos].Carrera = "Comunicación") or (Datos[Pos].Carrera = "Contaduría") or (Datos[Pos].Carrera = "Economía") Entonces;
+				Datos[Pos].Year = 0;
+				Mostrar << "Ingrese el semestre del estudiante";
+				Leer >> Datos[Pos].Semestre;
+				Mientras (Datos[Pos].Semestre < 1 or Datos[Pos].Semestre > 10) Hacer;
+					Mostrar << "Es invalido";
+					Leer >> Datos[Pos].Semestre;
+				Fin_Mientras
+			Sino
+				Datos[Pos].Semestre = 0;
+				Mostrar << "Ingrese el año del estudiante";
+				Leer >> Datos[Pos].Year;
+				Mientras (Datos[Pos].Year < 1 or Datos[Pos].Year > 6) Hacer;
+					Mostrar << "Es invalido";
+					Leer >> Datos[Pos].Year;
+				Fin_Mientras
+			Fin_Si
 		Sino
 			Mostrar << "Ingrese la posición del estudiante del cual quiere reemplazarlo por otro";
 			Leer >> Pos;
-			Mientras (Pos < 1 or Pos > 500) Hacer;
+			Mientras (Pos < 1 or Pos > v) Hacer;
 				Mostrar << "Fuera del rango";
 				Leer >> Pos;
 			Fin_Mientras
 			Mostrar << "Ingrese el nombre del nuevo estudiante";
-			Leer >> Datos[Pos].Usuario;
+			Leer >> Datos[Pos].Nombre;
 			Mostrar << "Ingrese la cédula del nuevo estudiante";
 			Leer >> Datos[Pos].CI;
 			Mostrar << "Ingrese la contraseña del nuevo estudiante";
 			Leer >> Datos[Pos].Password;
-			Mostrar << "Ingrese la carrera del nuevo estudiante";
-			Leer >> Datos[Pos].Carrera;
-			Mostrar << "Ingrese el año del estudiante modificado";
-			Leer >> Datos[Pos].Year;
-			Mostrar << "Ingrese el semestre del nuevo estudiante";
-			Leer >> Datos[Pos].Semestre;
+			Mostrar << "Ingrese la carrera del estudiante";
+			Mostrar << "1: Ingeniería en Informática";
+			Mostrar << "2: Ingeniería Civil";
+			Mostrar << "3: Ingeniería en Hidrocarburos";
+			Mostrar << "4: Medicina";
+			Mostrar << "5: Odontología";
+			Mostrar << "6: Veterinaria";
+			Mostrar << "7: Derecho";
+			Mostrar << "8: Comunicación Social";
+			Mostrar << "9: Contaduría";
+			Mostrar << "10: Economía";
+			Leer >> op;
+			Mientras (op < 1 or op > 10) Hacer;
+				Mostrar << "Es invalido, solo rango entre 1-10";
+				Leer >> op;
+			Fin_Mientras
+			En_Caso (op > 0) Sea;
+				Caso(op = 1);
+					Datos[Pos].Carrera = "Informática";
+				Caso(op = 2);
+					Datos[Pos].Carrera = "Civil";
+				Caso(op = 3);
+					Datos[Pos].Carrera = "Hidrocarburos";
+				Caso(op = 4);
+					Datos[Pos].Carrera = "Medicina";
+				Caso(op = 5);
+					Datos[Pos].Carrera = "Odontología";
+				Caso(op = 6);
+					Datos[Pos].Carrera = "Veterinaria";
+				Caso(op = 7);
+					Datos[Pos].Carrera = "Derecho";
+				Caso(op = 8);
+					Datos[Pos].Carrera = "Comunicación";
+				Caso(op = 9);
+					Datos[Pos].Carrera = "Contaduría";
+				Otro_Caso
+					Datos[Pos].Carrera = "Economía";
+			Fin_Caso
+			Si (Datos[Pos].Carrera = "Informática") or (Datos[Pos].Carrera = "Civil") or (Datos[Pos].Carrera = "Hidrocarburos") or (Datos[Pos].Carrera = "Comunicación") or (Datos[Pos].Carrera = "Contaduría") or (Datos[Pos].Carrera = "Economía") Entonces;
+				Datos[Pos].Year = 0;
+				Mostrar << "Ingrese el semestre del estudiante";
+				Leer >> Datos[Pos].Semestre;
+				Mientras (Datos[Pos].Semestre < 1 or Datos[Pos].Semestre > 10) Hacer;
+					Mostrar << "Es invalido";
+					Leer >> Datos[Pos].Semestre;
+				Fin_Mientras
+			Sino
+				Datos[Pos].Semestre = 0;
+				Mostrar << "Ingrese el año del estudiante";
+				Leer >> Datos[Pos].Year;
+				Mientras (Datos[Pos].Year < 1 or Datos[Pos].Year > 6) Hacer;
+					Mostrar << "Es invalido";
+					Leer >> Datos[Pos].Year;
+				Fin_Mientras
+			Fin_Si
 		Fin_Si
-	Fin_Si
 		Mostrar << "¿Desea volver al menú principal? 1: Sí, 0: No";
 		Leer >> R;
         Hasta(R = 0);

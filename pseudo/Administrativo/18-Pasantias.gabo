@@ -1,4 +1,4 @@
-Procedimiento Pasantias(E/S: Pas[I].Edad, Pas[I].Cedula, Pas[I].Semestre, Pas[I].Year, Pas[I].Estado_Solicitud: Entero, Pas[I].Nombre, Pas[I].Password, Pas[I].Carrera, Pas[I].Empresa: Cadena, Pas[I].Horas: Real);
+Procedimiento Pasantias_Admin(E/S: Pas[I].Edad, Pas[I].Cedula, Pas[I].Semestre, Pas[I].Year, Pas[I].Estado_Solicitud: Entero, Pas[I].Nombre, Pas[I].Password, Pas[I].Carrera, Pas[I].Empresa, Pas[J].Solicitud: Cadena, Pas[I].Horas: Real);
 Inicio
     Mostrar << "¡Bienvenido a la sección de Pasantías!";
     Repetir
@@ -14,6 +14,7 @@ Inicio
                 Mostrar << Pas[I].Semestre;
                 Mostrar << Pas[I].Year;
                 Mostrar << Pas[I].Empresa;
+                Mostrar << Pas[I].Solicitud;
                 Mostrar << Pas[I].Estado_Solicitud;
                 Mostrar << Pas[I].Horas;
                 Si (Pas[I].Estado_Solicitud = 2) Entonces;

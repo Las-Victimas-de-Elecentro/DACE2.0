@@ -1,0 +1,89 @@
+Procedimiento Seguridad(E/S: pos_admin: Entero, Admin[pos_admin].Password, Admin[pos_admin].Usuario, Admin[pos_admin].Gmail: Cadena, [Procedimiento Validar_Coordenada_Admin(pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Minimo, Maximo, Acceso)], [Procedimiento Encriptacion(indice, pass)]);
+Inicio
+    Var opc, op: Entero;
+    Var contra, contraNueva, cargo, user: Cadena;
+    Var R, Re: Booleano;
+    Var Intentos_Fallidos = 3: Entero;
+    Repetir
+        Mostrar << "¡Bienvenido al apartado de Seguridad!";
+        Mostrar << "¿Qué desea hacer?";
+        Mostrar << "1. Cambiar su contraseña";
+        Mostrar << "2. Actualizar sus datos";
+        Leer >> opc;
+        Mientras (opc < 1 or opc > 2) Hacer;
+            Mostrar << "Es invalido";
+            Leer >> opc;
+        Fin_Mientras
+        Si (opc = 1) Entonces;
+            Validar_Coordenada_Admin(pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Minimo, Maximo, Acceso)
+            Mostrar << Validar_Coordenada_Admin;
+            Si (Acceso = 1) Entonces;
+                Mostrar << "Ingrese su contraseña actual: ";
+                Leer >> contra;
+                Si (contra = Admin[pos_admin].Password) Entonces;
+                    Repetir
+                        Mostrar << "Perfecto, ahora ingrese su nueva contraseña: ";
+                        Leer >> contraNueva;
+                        Mostrar << "¿Está seguro de que quiere que esa sea su nueva contraseña? 1: Sí, 0: No";
+                        Leer >> Re;
+                        Hasta(Re = 1);
+                    Fin_Repetir
+                    indice = pos_admin;
+                    pass = contraNueva;
+                    Encriptacion(indice, pass);
+                    Admin[pos_admin].Password = pass;
+                Fin_Si
+            Sino
+                Si (Intentos_Fallidos = 0) Entonces;
+                    Mostrar << "Te quedaste sin intentos, intenta más tarde";
+                Sino
+                    Intentos_Fallidos = Intentos_Fallidos - 1;
+                    Mostrar << "Intento Fallido, te quedan ", Intentos_Fallidos;
+                Fin_Si
+            Fin_Si
+        Sino
+            Mostrar << "Eligió actualizar sus datos. Perfecto.";
+            Mostrar << "¿Qué desea actualizar?";
+            Mostrar << "1. Usuario";
+            Mostrar << "2. Gmail";
+            Leer >> op;
+            Mientras (op < 1 or op > 2) Hacer;
+                Mostrar << "Es invalido, intente nuevamente";
+                Leer >> op;
+            Fin_Mientras
+            En_Caso (op > 0) Sea;
+                Caso(op = 1);
+                    Repetir
+                        Mostrar << "Su usuario actual: ";
+                        Mostrar << Admin[pos_admin].Usuario;
+                        Mostrar << "Ingrese su nuevo usuario";
+                        Leer >> user;
+                        Mostrar << "¿Es correcto lo que escribió? 1: Sí, 0: No";
+                        Leer >> Re;
+                        Si (Re = 1) Entonces;
+                            Admin[pos_admin].Usuario = user;
+                            Mostrar << "Dato cargado correctamente";
+                        Fin_Si
+                        Hasta(Re = 1);
+                    Fin_Repetir
+                Caso(op = 2);
+                    Repetir
+                        Mostrar << "Dirección de correo electrónico actual: ";
+                        Mostrar << Admin[pos_admin].Gmail;
+                        Mostrar << "Ingrese su dirección de correo electrónico nuevo";
+                        Leer >> gmail;
+                        Mostrar << "¿Es correcto el correo electrónico? 1: Sí, 0: No";
+                        Leer >> Re;
+                        Si (Re = 1) Entonces;
+                            Admin[pos_admin].Gmail = gmail;
+                            Mostrar << "Dato cargado correctamente.";
+                        Fin_Si
+                        Hasta(Re = 1);
+                    Fin_Repetir
+            Fin_Caso
+        Fin_Si
+        Mostrar << "¿Desea salir de este menú? 1: Sí, 0: No";
+        Leer >> R;
+        Hasta(R = 1);
+    Fin_Repetir
+Fin_Procedimiento

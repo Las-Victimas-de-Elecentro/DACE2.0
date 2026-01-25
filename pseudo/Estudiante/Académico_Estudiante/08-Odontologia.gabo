@@ -1,0 +1,204 @@
+Procedimiento Odontologia(E/S: Base.Lista[i].Estado, Base.Lista[i].ID_Bloque, Base.Lista[i].Dia, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Aula: Cadena, pos_usuario, Datos[pos_usuario].UC_Aprobadas, Datos[pos_usuario].UC: Entero, Datos[pos_usuario].Materias.Odo[pos_usuario].Morfologia_Dentaria, Datos[pos_usuario].Materias.Odo[pos_usuario].Formacion_Cultural_I, Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_I, Datos[pos_usuario].Materias.Odo[pos_usuario].Iniciacion_Clinica, Datos[pos_usuario].Materias.Odo[pos_usuario].Morfologia_Humana, Datos[pos_usuario].Materias.Odo[pos_usuario].Formacion_Instrumental_I, Datos[pos_usuario].Materias.Odo[pos_usuario].Bioquimica_Aplicada, Datos[pos_usuario].Materias.Odo[pos_usuario].Histologia_Embriologia, Datos[pos_usuario].Materias.Odo[pos_usuario].Deportes_I, Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_I, Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_II, Datos[pos_usuario].Materias.Odo[pos_usuario].Histofisiologia, Datos[pos_usuario].Materias.Odo[pos_usuario].Clinica_Adulto_I, Datos[pos_usuario].Materias.Odo[pos_usuario].Biomateriales, Datos[pos_usuario].Materias.Odo[pos_usuario].Deportes_II, Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_II, Datos[pos_usuario].Materias.Odo[pos_usuario].Microbiologia_Parasitologia, Datos[pos_usuario].Materias.Odo[pos_usuario].Formacion_Instrumental_II, Datos[pos_usuario].Materias.Odo[pos_usuario].Formacion_Cultural_II, Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_III, Datos[pos_usuario].Materias.Odo[pos_usuario].Clinica_Adulto_II, Datos[pos_usuario].Materias.Odo[pos_usuario].Atencion_Nino_I, Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_III, Datos[pos_usuario].Materias.Odo[pos_usuario].Medicina_Semiologia, Datos[pos_usuario].Materias.Odo[pos_usuario].Fisiopatologia, Datos[pos_usuario].Materias.Odo[pos_usuario].Farmacologia, Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_IV, Datos[pos_usuario].Materias.Odo[pos_usuario].Clinica_Adulto_III, Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_IV, Datos[pos_usuario].Materias.Odo[pos_usuario].Atencion_Nino_II, Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_V, Datos[pos_usuario].Materias.Odo[pos_usuario].Gerontologia, Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_V, Datos[pos_usuario].Materias.Odo[pos_usuario].Toxicologia: Real, [Procedimiento Inscripcion(cod, J, [Procedimiento Buscar_Materia_Inscripcion(cod, Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, Lista[I].Nombre, Datos[I].Nombre, Clase[K].Cant_Estudiantes, Clase[K].Seccion, Lista[I].Cedula, Datos[I].CI, J, I)])]);
+Inicio
+    Var UC: Entero;
+    Inscripcion(cod, J, [Procedimiento Buscar_Materia_Inscripcion(cod, Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, Lista[I].Nombre, Datos[I].Nombre, Clase[K].Cant_Estudiantes, Clase[K].Seccion, Lista[I].Cedula, Datos[I].CI, J, I)]);
+    Mostrar << "Aquí los bloques disponibles para que pueda organizar sus materias:";
+    Para (i = 1 Hasta i = 48) Hacer;
+        Si (Base.Lista[i].Estado = "Libre") Entonces;
+            Mostrar << "ID: ", Base.Lista[i].ID_Bloque, " | ", Base.Lista[i].Dia, " ", Base.Lista[i].Hora_Inicio, "-", Base.Lista[i].Hora_Fin, " | Aula: ", Base.Lista[i].Aula;
+        Fin_Si
+    Fin_Para
+    UC = 19;
+    Datos[pos_usuario].UC = Datos[pos_usuario].UC + UC;
+
+    //Primer Año
+    Si (Datos[pos_usuario].UC_Aprobadas = 0) Entonces;
+        Mostrar << "Morfología Dentaria y Oclusión";
+        Mostrar << "Formación Cultural y Artística";
+        Mostrar << "Odontología Comunitaria I";
+        Mostrar << "Iniciación a la Clínica";
+        Mostrar << "Morfología Humana";
+        Mostrar << "Formación Instrumental";
+        Mostrar << "Bioquímica Aplicada";
+        Mostrar << "Histología, Embriología y Genética";
+        Mostrar << "Educación Física y Deportes I";
+        Mostrar << "Investigación I";
+        Para (I = 1 Hasta I = 10) Hacer;
+            Mostrar << Inscripcion;
+        Fin_Para
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Morfologia_Dentaria < 5.5) Entonces;
+        Mostrar << "Morfología Dentaria y Oclusión";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Formacion_Cultural_I < 5.5) Entonces;
+        Mostrar << "Formación Cultural y Artística I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_I < 5.5) Entonces;
+        Mostrar << "Odontología Comunitaria I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Iniciacion_Clinica < 5.5) Entonces;
+        Mostrar << "Iniciación a la Clínica";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Morfologia_Humana < 5.5) Entonces;
+        Mostrar << "Morfología Humana";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Formacion_Instrumental_I < 5.5) Entonces;
+        Mostrar << "Formación Instrumental I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Bioquimica_Aplicada < 5.5) Entonces;
+        Mostrar << "Bioquímica Aplicada";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Histologia_Embriologia < 5.5) Entonces;
+        Mostrar << "Histología, Embriología y Genética";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Deportes_I < 5.5) Entonces;
+        Mostrar << "Educación Física y Deportes I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].UC_Aprobadas > 0) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_I < 5.5) Entonces;
+        Mostrar << "Investigación I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Segundo Año
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_I > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_II < 5.5) Entonces;
+        Mostrar << "Odontología Comunitaria II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Morfologia_Humana > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Histofisiologia < 5.5) Entonces;
+        Mostrar << "Histofisiología";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Morfologia_Dentaria > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Clinica_Adulto_I < 5.5) Entonces;
+        Mostrar << "Clínica Integral del Adulto I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Iniciacion_Clinica > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Biomateriales < 5.5) Entonces;
+        Mostrar << "Biomateriales Odontológicos";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Deportes_I > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Deportes_II < 5.5) Entonces;
+        Mostrar << "Educación Física y Deportes II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_I > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_II < 5.5) Entonces;
+        Mostrar << "Investigación II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Histologia_Embriologia > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Microbiologia_Parasitologia < 5.5) Entonces;
+        Mostrar << "Microbiología y Parasitología";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Formacion_Instrumental_I > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Formacion_Instrumental_II < 5.5) Entonces;
+        Mostrar << "Formación Instrumental II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_I > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Formacion_Cultural_II < 5.5) Entonces;
+        Mostrar << "Formación Cultural y Artística II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Tercer Año
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_II > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_III < 5.5) Entonces;
+        Mostrar << "Investigación III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Histofisiologia > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Clinica_Adulto_II < 5.5) Entonces;
+        Mostrar << "Clínica Integral del Adulto II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_II > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Atencion_Nino_I < 5.5) Entonces;
+        Mostrar << "Atención Integral de Niño I";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Clinica_Adulto_I > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_III < 5.5) Entonces;
+        Mostrar << "Odontología Comunitaria III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_I > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Medicina_Semiologia < 5.5) Entonces;
+        Mostrar << "Medicina Interna y Semiología";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_I > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Fisiopatologia < 5.5) Entonces;
+        Mostrar << "Fisiopatología";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Formacion_Cultural_II > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Farmacologia < 5.5) Entonces;
+        Mostrar << "Farmacología";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Cuarto Año
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_III > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_IV < 5.5) Entonces;
+        Mostrar << "Investigación IV";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_III > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Clinica_Adulto_III < 5.5) Entonces;
+        Mostrar << "Clínica Integral del Adulto III";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_III > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_IV < 5.5) Entonces;
+        Mostrar << "Odontología Comunitaria IV";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_III > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Atencion_Nino_II < 5.5) Entonces;
+        Mostrar << "Atención Integral de Niño II";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    //Quinto Año
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_IV > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Investigacion_V < 5.5) Entonces;
+        Mostrar << "Investigación V";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_I > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Gerontologia < 5.5) Entonces;
+        Mostrar << "Gerontología";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Gerontologia > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Odontologia_Comunitaria_V < 5.5) Entonces;
+        Mostrar << "Odontología Comunitaria V";
+        Mostrar << Inscripcion;
+    Fin_Si
+
+    Si (Datos[pos_usuario].Materias.Odo[pos_usuario].Histofisiologia > 5.5) and (Datos[pos_usuario].Materias.Odo[pos_usuario].Toxicologia < 5.5) Entonces;
+        Mostrar << "Toxicología";
+        Mostrar << Inscripcion;
+    Fin_Si
+Fin_Procedimiento

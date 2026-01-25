@@ -1,4 +1,4 @@
-Procedimiento Eliminar_Empleado (E/S: Lim, prof, Admin[I].CI, Prof[I].CI: Entero, Admin[I].Usuario, Admin[I].Cargo, Admin[I].Gmail, Admin[I].Password, Prof[I].Nombre, Prof[I].Gmail, Prof[I].Password: Cadena);
+Procedimiento Eliminar_Empleado (E/S: Lim, prof, Admin[I].Edad, Prof[I].Edad, Admin[I].CI, Prof[I].CI, Prof[I].Cant_Clases, Prof[I].Cant_Materias: Entero, Admin[I].Avatar, Admin[I].Usuario, Admin[I].Cargo, Admin[I].Gmail, Admin[I].Password, Prof[I].Avatar, Prof[I].Nombre, Prof[I].Gmail, Prof[I].Password, Prof[I].Materias, Prof[I].Club, Prof[I].Enfermedad: Cadena, Prof[I].Esta_en_Club: Booleano);
 Inicio
 	Var R, R2: Booleano;
 	Var Eliminar: Entero;
@@ -9,10 +9,13 @@ Inicio
 		Mostrar << "A continuación se le mostrará la base de datos para que pueda seleccionar la posición del administrativo/profesor que desea eliminar";
 		Si (R2 = 1) Entonces;
 			Para (I = 1 Hasta I = Lim) Hacer;
-				Mostrar << I, Admin[I].Usuario;
-				Mostrar << Admin[I].CI;
-				Mostrar << Admin[I].Cargo;
-				Mostrar << Admin[I].Gmail;
+				Mostrar << I;
+				Mostrar << "Avatar: ", Admin[I].Avatar;
+				Mostrar << "Nombre: ", Admin[I].Usuario;
+				Mostrar << "Cédula: ", Admin[I].CI;
+				Mostrar << "Edad: ", Admin[I].Edad;
+				Mostrar << "Cargo: ", Admin[I].Cargo;
+				Mostrar << "Correo Electrónico: ", Admin[I].Gmail;
 			Fin_Para
 			Mostrar << "Ingrese la posición del empleado que desea borrar de la base de datos";
 			Leer >> Eliminar;
@@ -22,22 +25,31 @@ Inicio
 			Fin_Mientras
 
 			Admin[Eliminar].Usuario = Admin[Lim - 1].Usuario;
+			Admin[Eliminar].Avatar = Admin[Lim - 1].Avatar;
 			Admin[Eliminar].CI = Admin[Lim - 1].CI;
+			Admin[Eliminar].Edad = Admin[Lim - 1].Edad;
 			Admin[Eliminar].Cargo = Admin[Lim - 1].Cargo;
 			Admin[Eliminar].Gmail = Admin[Lim - 1].Gmail;
 			Admin[Eliminar].Password = Admin[Lim - 1].Password;
 
-			Admin[Lim - 1].Usuario = "";
+			Admin[Lim - 1].Usuario = null;
+			Admin[Lim - 1].Avatar = null;
 			Admin[Lim - 1].CI = 0;
-			Admin[Lim - 1].Cargo = "";
-			Admin[Lim - 1].Gmail = "";
-			Admin[Lim - 1].Password = "";
+			Admin[Lim - 1].Edad = 0;
+			Admin[Lim - 1].Cargo = null;
+			Admin[Lim - 1].Gmail = null;
+			Admin[Lim - 1].Password = null;
 			Lim = Lim - 1;
 		Sino
 			Para (I = 1 Hasta I = prof) Hacer;
-				Mostrar << I, Prof[I].Nombre;
-				Mostrar << Prof[I].CI;
-				Mostrar << Prof[I].Gmail;
+				Mostrar << I;
+				Mostrar << "Nombre: ", Prof[I].Nombre;
+				Mostrar << "Cédula: ", Prof[I].CI;
+				Mostrar << "Edad: ", Prof[I].Edad;
+				Mostrar << "Correo Electrónico: ", Prof[I].Gmail;
+				Mostrar << "Materias: ", Prof[I].Materias;
+				Mostrar << "Cantidad de Materias: ", Prof[I].Cant_Materias;
+				Mostrar << "Cantidad de clases: ", Prof[I].Cant_Clases;
 			Fin_Para
 			Mostrar << "Ingrese la posición del empleado que desea borrar de la base de datos";
 			Leer >> Eliminar;
@@ -48,13 +60,29 @@ Inicio
 
 			Prof[Eliminar].Nombre = Prof[prof - 1].Nombre;
 			Prof[Eliminar].CI = Prof[prof - 1].CI;
+			Prof[Eliminar].Edad = Prof[prof - 1].Edad;
 			Prof[Eliminar].Gmail = Prof[prof - 1].Gmail;
 			Prof[Eliminar].Password = Prof[prof - 1].Password;
+			Prof[Eliminar].Materias = Prof[prof - 1].Materias;
+			Prof[Eliminar].Cant_Materias = Prof[prof - 1].Cant_Materias;
+			Prof[Eliminar].Cant_Clases = Prof[prof - 1].Cant_Clases;
+			Prof[Eliminar].Avatar = Prof[prof - 1].Avatar;
+			Prof[Eliminar].Club = Prof[prof - 1].Club;
+			Prof[Eliminar].Enfermedad = Prof[prof - 1].Enfermedad;
+			Prof[Eliminar].Esta_en_Club = Prorf[prof - 1].Esta_en_Club;
 
-			Prof[prof - 1].Usuario = "";
+			Prof[prof - 1].Nombre = null;
 			Prof[prof - 1].CI = 0;
-			Prof[prof - 1].Gmail = "";
-			Prof[prof - 1].Password = "";
+			Prof[prof - 1].Edad = 0;
+			Prof[prof - 1].Gmail = null;
+			Prof[prof - 1].Password = null;
+			Prof[prof - 1].Materias = null;
+			Prof[prof - 1].Cant_Materias = 0;
+			Prof[prof - 1].Cant_Clases = 0;
+			Prof[prof - 1].Avatar = null;
+			Prof[prof - 1].Club = null;
+			Prof[prof - 1].Enfermedad = null;
+			Prof[prof - 1].Esta_en_Club = null;
 			prof = prof - 1;
 		Fin_Si
 		Mostrar << "¿Desea eliminar algún otro empleado?, 1: Sí, 0: No";

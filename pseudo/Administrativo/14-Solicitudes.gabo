@@ -2,59 +2,70 @@ Procedimiento Solicitudes_Admin(E/S: S: Entero, Soli[I].Titulo, Soli[I].Descripc
 Inicio
     Var I, opc: Entero, R: Booleano;
     Var ele, elec: Entero;
-    Mostrar << "¡Bienvenido a la sección de Solicitudes!";
-    Mostrar << "¿Qué desea hacer?";
-    Mostrar << "1: Ver las solicitudes actuales";
-    Mostrar << "2: Borrar solicitud en específico";
-    Mostrar << "3: Aprobar solicitudes";
-    Leer >> opc;
-    Mientras (opc < 1 or opc > 3) Hacer;
-        Mostrar << "Elija una de las opciones disponibles.";
+    Repetir
+        Mostrar << "¡Bienvenido a la sección de Solicitudes!";
+        Mostrar << "¿Qué desea hacer?";
+        Mostrar << "1: Ver las solicitudes actuales";
+        Mostrar << "2: Borrar solicitud en específico";
+        Mostrar << "3: Aprobar solicitudes";
         Leer >> opc;
-    Fin_Mientras
-    En_Caso (opc > 0) Sea;
-        Caso(opc = 1);
-            Para (I = 1 Hasta I = S) Hacer;
-                Mostrar << Soli[I].Titulo;
-                Mostrar << Soli[I].Descripcion;
-                Mostrar << Soli[I].Titular;
-                Mostrar << Soli[I].Destinatario;
-                Mostrar << Soli[I].Fecha;
-            Fin_Para
-            Mostrar << "Esas fueron todas las solicitudes.";
-        Caso(opc = 2);
-            Para (I = 1 Hasta I = S) Hacer;
-                Mostrar << I, Soli[I].Titulo;
-                Mostrar << Soli[I].Descripcion;
-                Mostrar << Soli[I].Titular;
-                Mostrar << Soli[I].Destinatario;
-                Mostrar << Soli[I].Fecha;
-            Fin_Para
-            Mostrar << "Ingrese el número de la solicitud que desea borrar";
-            Leer >> ele;
-            Mientras (ele < 1 or ele > S) Hacer;
-                Mostrar << "Elija una solicitud válida";
+        Mientras (opc < 1 or opc > 3) Hacer;
+            Mostrar << "Elija una de las opciones disponibles.";
+            Leer >> opc;
+        Fin_Mientras
+        En_Caso (opc > 0) Sea;
+            Caso(opc = 1);
+                Para (I = 1 Hasta I = S) Hacer;
+                    Mostrar << Soli[I].Titulo;
+                    Mostrar << Soli[I].Descripcion;
+                    Mostrar << Soli[I].Titular;
+                    Mostrar << Soli[I].Destinatario;
+                    Mostrar << Soli[I].Fecha;
+                Fin_Para
+                Mostrar << "Esas fueron todas las solicitudes.";
+            Caso(opc = 2);
+                Para (I = 1 Hasta I = S) Hacer;
+                    Mostrar << I, Soli[I].Titulo;
+                    Mostrar << Soli[I].Descripcion;
+                    Mostrar << Soli[I].Titular;
+                    Mostrar << Soli[I].Destinatario;
+                    Mostrar << Soli[I].Fecha;
+                Fin_Para
+                Mostrar << "Ingrese el número de la solicitud que desea borrar";
                 Leer >> ele;
-            Fin_Mientras
-            Soli[ele].Titulo = null;
-            Soli[ele].Descripcion = null;
-            Soli[ele].Titular = null;
-            Soli[ele].Destinatario = null;
-            Soli[ele].Fecha = null;
-        Otro_Caso
-            Para (I = 1 Hasta I = S) Hacer;
-                Mostrar << I, Soli[I].Titulo;
-                Mostrar << Soli[I].Descripcion;
-                Mostrar << Soli[I].Titular;
-                Mostrar << Soli[I].Destinatario;
-                Mostrar << Soli[I].Fecha;
-            Fin_Para
-            Mostrar << "Ingrese la solicitud que desea aprobar";
-            Leer >> elec;
-            Mientras (elec < 1 or elec > S) Hacer;
-                Mostrar << "Debe elegir una solicitud válida";
+                Mientras (ele < 1 or ele > S) Hacer;
+                    Mostrar << "Elija una solicitud válida";
+                    Leer >> ele;
+                Fin_Mientras
+                Soli[ele].Titulo = Soli[S - 1].Titulo;
+                Soli[ele].Descripcion = Soli[S - 1].Descripcion;
+                Soli[ele].Titular = Soli[S - 1].Titular;
+                Soli[ele].Destinatario = Soli[S - 1].Destinatario;
+                Soli[ele].Fecha = Soli[S - 1].Fecha;
+
+                Soli[S - 1].Titulo = null;
+                Soli[S - 1].Descripcion = null;
+                Soli[S - 1].Titular = null;
+                Soli[S - 1].Destinatario = null;
+                Soli[S - 1].Fecha = null;
+                S = S - 1;
+            Otro_Caso
+                Para (I = 1 Hasta I = S) Hacer;
+                    Mostrar << I, Soli[I].Titulo;
+                    Mostrar << Soli[I].Descripcion;
+                    Mostrar << Soli[I].Titular;
+                    Mostrar << Soli[I].Destinatario;
+                    Mostrar << Soli[I].Fecha;
+                Fin_Para
+                Mostrar << "Ingrese la solicitud que desea aprobar";
                 Leer >> elec;
-            Fin_Mientras
-            Soli[elec].Estado = 1;
-    Fin_Caso
+                Mientras (elec < 1 or elec > S) Hacer;
+                    Mostrar << "Debe elegir una solicitud válida";
+                    Leer >> elec;
+                Fin_Mientras
+                Soli[elec].Estado = 1;
+        Fin_Caso
+        Mostrar << "¿Desea ver otra solicitud? 1: Sí, 0: No";
+        Hasta(R = 0);
+    Fin_Repetir
 Fin_Procedimiento
