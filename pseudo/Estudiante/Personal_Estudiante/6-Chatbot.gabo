@@ -1,4 +1,4 @@
-Procedimiento Chatbot(E/S: Minimo, Maximo: Entero, Bot[I].Preguntas, Bot[I].Respuesta1, Bot[I].Respuesta2, Bot[I].Respuesta3, Bot[I].Respuesta4: Cadena);
+Procedimiento Chatbot(E/S: Minimo, Maximo: Entero, Bot[I].Preguntas, Bot[I].Respuesta1, Bot[I].Respuesta2, Bot[I].Respuesta3, Bot[I].Respuesta4: Cadena, [Funcion Aleatorio(Minimo, Maximo)]);
 Inicio
     Var I, ID, num: Entero;
     Var R: Booleano;

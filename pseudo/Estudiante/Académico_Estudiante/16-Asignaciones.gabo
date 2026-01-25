@@ -1,52 +1,54 @@
-Procedimiento Asignaciones(E/S: Datos[pos_usuario].Carrera, cod, Materias[J].Codigo, Clase[K].Codigo, Asig[Q].Estado, Asig[Q].Nombre_Profesor, Asig[Q].Codigo_Materia, Asig[Q].Titulo, Asig[Q].Descripcion, Asig[Q].Fecha_Publicacion, Asig[Q].Fecha_Entrega: Cadena, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Asig[Q].ID_Asignacion, As, class: Entero);
+Procedimiento Asignaciones(E/S: Datos[pos_usuario].Carrera, cod: Cadena, pos_usuario, J: Entero, [Procedimiento Buscar_Asignacion(cod, Materias[J].Codigo, Clase[K].Codigo, Asig[Q].Estado, Asig[Q].Nombre_Profesor, Asig[Q].Codigo_Materia, Asig[Q].Titulo, Asig[Q].Descripcion, Asig[Q].Fecha_Publicacion, Asig[Q].Fecha_Entrega, pos_usuario, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Asig[Q].ID_Asignacion, As, class)]);
 Inicio
-    Var J: Entero;
-    Mostrar << "Ingrese el código de la materia de la cual desea ver la asignación:";
-    Leer >> cod;
-    Buscar_Asignacion(cod, Materias[J].Codigo, Clase[K].Codigo, Asig[Q].Estado, Asig[Q].Nombre_Profesor, Asig[Q].Codigo_Materia, Asig[Q].Titulo, Asig[Q].Descripcion, Asig[Q].Fecha_Publicacion, Asig[Q].Fecha_Entrega, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Asig[Q].ID_Asignacion, As, class);
-    En_Caso (Datos[pos_usuario].Carrera <> "Ninguna") Sea;
-        Caso(Datos[pos_usuario].Carrera = "Informatica");
-            Para (J = 1 Hasta J = 59) Hacer;
-                Mostrar << Buscar_Asignacion;
-            Fin_Para
-        Caso(Datos[pos_usuario].Carrera = "Civil");
-            Para (J = 60 Hasta J = 117) Hacer;
-                Mostrar << Buscar_Asignacion;
-            Fin_Para
-        Caso(Datos[pos_usuario].Carrera = "Hidrocarburos");
-            Para (J = 118 Hasta J = 173) Hacer;
-                Mostrar << Buscar_Asignacion;
-            Fin_Para
-        Caso(Datos[pos_usuario].Carrera = "Medicina");
-            Para (J = 174 Hasta J = 224) Hacer;
-                Mostrar << Buscar_Asignacion;
-            Fin_Para
-        Caso(Datos[pos_usuario].Carrera = "Odontologia");
-            Para (J = 225 Hasta J = 258) Hacer;
-                Mostrar << Buscar_Asignacion;
-            Fin_Para
-        Caso(Datos[pos_usuario].Carrera = "Veterinaria");
-            Para (J = 259 Hasta J = 304) Hacer;
-                Mostrar << Buscar_Asignacion;
-            Fin_Para
-        Caso(Datos[pos_usuario].Carrera = "Derecho");
-            Para (J = 305 Hasta J = 360) Hacer;
-                Mostrar << Buscar_Asignacion;
-            Fin_Para
-        Caso(Datos[pos_usuario].Carrera = "Comunicación");
-            Para (J = 361 Hasta J = 418) Hacer;
-                Mostrar << Buscar_Asignacion;
-            Fin_Para
-        Caso(Datos[pos_usuario].Carrera = "Contaduría");
-            Para (J = 419 Hasta J = 470) Hacer;
-                Mostrar << Buscar_Asignacion;
-            Fin_Para
-        Otro_Caso
-            Para (J = 471 Hasta J = 527) Hacer;
-                Mostrar << Buscar_Asignacion;
-            Fin_Para
-    Fin_Caso
-    Si (w = 1) Entonces;
-        Mostrar << "No se encontró ninguna asignación";
-    Fin_Si
+    Var R: Booleano;
+    Repetir
+        Mostrar << "Ingrese el código de la materia de la cual desea ver la asignación:";
+        Leer >> cod;
+        Buscar_Asignacion(cod, Materias[J].Codigo, Clase[K].Codigo, Asig[Q].Estado, Asig[Q].Nombre_Profesor, Asig[Q].Codigo_Materia, Asig[Q].Titulo, Asig[Q].Descripcion, Asig[Q].Fecha_Publicacion, Asig[Q].Fecha_Entrega, pos_usuario, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Asig[Q].ID_Asignacion, As, class);
+        En_Caso (Datos[pos_usuario].Carrera <> "Ninguna") Sea;
+            Caso(Datos[pos_usuario].Carrera = "Informatica");
+                Para (J = 1 Hasta J = 59) Hacer;
+                    Mostrar << Buscar_Asignacion;
+                Fin_Para
+            Caso(Datos[pos_usuario].Carrera = "Civil");
+                Para (J = 60 Hasta J = 117) Hacer;
+                    Mostrar << Buscar_Asignacion;
+                Fin_Para
+            Caso(Datos[pos_usuario].Carrera = "Hidrocarburos");
+                Para (J = 118 Hasta J = 173) Hacer;
+                    Mostrar << Buscar_Asignacion;
+                Fin_Para
+            Caso(Datos[pos_usuario].Carrera = "Medicina");
+                Para (J = 174 Hasta J = 224) Hacer;
+                    Mostrar << Buscar_Asignacion;
+                Fin_Para
+            Caso(Datos[pos_usuario].Carrera = "Odontologia");
+                Para (J = 225 Hasta J = 258) Hacer;
+                    Mostrar << Buscar_Asignacion;
+                Fin_Para
+            Caso(Datos[pos_usuario].Carrera = "Veterinaria");
+                Para (J = 259 Hasta J = 304) Hacer;
+                    Mostrar << Buscar_Asignacion;
+                Fin_Para
+            Caso(Datos[pos_usuario].Carrera = "Derecho");
+                Para (J = 305 Hasta J = 360) Hacer;
+                    Mostrar << Buscar_Asignacion;
+                Fin_Para
+            Caso(Datos[pos_usuario].Carrera = "Comunicación");
+                Para (J = 361 Hasta J = 418) Hacer;
+                    Mostrar << Buscar_Asignacion;
+                Fin_Para
+            Caso(Datos[pos_usuario].Carrera = "Contaduría");
+                Para (J = 419 Hasta J = 470) Hacer;
+                    Mostrar << Buscar_Asignacion;
+                Fin_Para
+            Otro_Caso
+                Para (J = 471 Hasta J = 527) Hacer;
+                    Mostrar << Buscar_Asignacion;
+                Fin_Para
+        Fin_Caso
+        Mostrar << "¿Desea ver una asignación de otra materia? 1: Sí, 0: No";
+        Leer >> R;
+        Hasta(R = 0);
+    Fin_Repetir
 Fin_Procedimiento

@@ -1,6 +1,7 @@
-Procedimiento Estudiante_Extracurricular(E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion, Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
+Procedimiento Estudiante_Extracurricular([Procedimiento Eventos(Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion)], [Procedimiento Mostrar_Clubes(Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima)], [Procedimiento Inscripcion_Club(Datos[I].Club, Club[I].Nombre, Club[I].Horarios_Disponibles, Datos[pos_usuario].Club, club, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima, Datos[pos_usuario].Esta_en_Club)], [Procedimiento Salir_Club(pos_usuario, Club[I].Miembros_Inscritos, Club[I].Nombre, Datos[pos_usuario].Club, Datos[pos_usuario].Esta_en_Club)], [Procedimiento Informacion_Club(Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Datos[pos_usuario].Club, pos_usuario, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima, Datos[pos_usuario].Esta_en_Club)], [Procedimiento Celebraciones(Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion)]);
 Inicio
-    Var opc: Entero;
+    Var opc, opcion: Entero;
+    Var R: Booleano;
     Repetir
         Mostrar << "=== SISTEMA EXTRACURRICULAR ===";
         Mostrar << "1. Eventos";
@@ -18,13 +19,13 @@ Inicio
                 Eventos(Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion);
                 Mostrar << Eventos;
             Caso (opc = 2);
-                Mostrar<<"=== MENÚ DE CLUBES ===";
-                Mostrar<<"1. Ver clubes disponibles";
-                Mostrar<<"2. Inscribirse en un club";
-                Mostrar<<"3. Salir de un club";
-                Mostrar<<"4. Ver información de mi club";
-                Mostrar<<"Seleccione una opción: ";
-                Leer>>opcion;
+                Mostrar << "=== MENÚ DE CLUBES ===";
+                Mostrar << "1. Ver clubes disponibles";
+                Mostrar << "2. Inscribirse en un club";
+                Mostrar << "3. Salir de un club";
+                Mostrar << "4. Ver información de mi club";
+                Mostrar << "Seleccione una opción: ";
+                Leer >> opcion;
                 Mientras (opcion < 1 or opcion > 4) Hacer;
                     Mostrar << "Es invalido, solo rango entre 1-4";
                     Leer >> opcion;
@@ -34,13 +35,13 @@ Inicio
                         Mostrar_Clubes(Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima);
                         Mostrar << Clubes;
                     Caso(opcion = 2);
-                        Inscripcion_Club(Datos[I].Club, Club[I].Nombre, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima);
+                        Inscripcion_Club(Datos[I].Club, Club[I].Nombre, Club[I].Horarios_Disponibles, Datos[pos_usuario].Club, club, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima, Datos[pos_usuario].Esta_en_Club);
                         Mostrar << Inscripcion_Club;
                     Caso(opcion = 3);
-                        Salir_Club(Club[I].Miembros_Inscritos, Club[I].Nombre, Datos[I].Club);
+                        Salir_Club(pos_usuario, Club[I].Miembros_Inscritos, Club[I].Nombre, Datos[pos_usuario].Club, Datos[pos_usuario].Esta_en_Club);
                         Mostrar << Salir_Club;
                     Otro_Caso
-                        Informacion_Club(Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima);
+                        Informacion_Club(Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Datos[pos_usuario].Club, pos_usuario, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima, Datos[pos_usuario].Esta_en_Club);
                         Mostrar << Informacion_Club;
                 Fin_Caso
             Caso(opc = 3);

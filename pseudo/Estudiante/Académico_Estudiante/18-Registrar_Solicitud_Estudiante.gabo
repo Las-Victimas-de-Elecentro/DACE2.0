@@ -1,4 +1,4 @@
-Procedimiento Registrar_Solicitud_Estudiante(E/S: S: Entero, Soli[i].Titulo, Soli[i].Descripcion, Soli[i].Titular, Soli[i].Destinatario, Soli[i].Fecha, Datos[pos_usuario].Nombre: Cadena, Soli[i].Estado: Booleano);
+Procedimiento Registrar_Solicitud_Estudiante(E/S: pos_usuario, S: Entero, Soli[i].Titulo, Soli[i].Descripcion, Soli[i].Titular, Soli[i].Destinatario, Soli[i].Fecha, Datos[pos_usuario].Nombre: Cadena, Soli[i].Estado: Booleano);
 Inicio
     Var r: Entero;
     Mostrar << "¿Desea revisar alguna solicitud suya? 1: Sí, 2: No, 3: Registrar nueva solicitud";

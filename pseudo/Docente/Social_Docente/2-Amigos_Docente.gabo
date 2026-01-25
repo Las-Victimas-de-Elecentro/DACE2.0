@@ -1,9 +1,9 @@
-Procedimiento Amigos_Docente(E/S: Am: Entero, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera: Cadena, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Datos[J].Semestre, Datos[J].Year, Prof[J].Cant_Materias: Entero);
+Procedimiento Amigos_Docente(E/S: Am, pos, Lim, v, prof: Entero, Prof[J].Avatar, Admin[J].Avatar, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera: Cadena, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Datos[J].Semestre, Datos[J].Year, Prof[J].Cant_Materias: Entero);
 Inicio
     Var opc, opc2: Entero;
     Var Nombre: Cadena;
     Var CI: Entero;
-    Var R, r, R2: Booleano;
+    Var R, r, R2, encontrado = 0: Booleano;
     Repetir
         Mostrar << "¡Bienvenido a la sección de amigos!";
         Mostrar << "¿Qué desea hacer?";
@@ -13,8 +13,6 @@ Inicio
         Mostrar << "4: Eliminar un amigo";
         Mostrar << "5: Ver cuántos amigos tienes en total";
         Leer >> opc;
-        //Debe ir al principal porque controla el registro de amigos.
-        Am = Am + 1;
         Mientras (opc < 1 or opc > 5) Hacer;
             Mostrar << "Es invalido, solo es válido el rango entre 1-4";
             Leer >> opc;
@@ -30,43 +28,53 @@ Inicio
                     Leer >> opc2;
                 Fin_Mientras
                 Si (opc2 = 1) Entonces;
-                    Mostrar << "Ingrese el nombre de la persona";
-                    Leer >> Nombre;
-                    Mostrar << "¿Seguro de que ese sea el nombre correcto? 1: Sí, 0: No";
-                    Leer >> r;
-                    Si (r = 0) Entonces;
-                        Mostrar << "Ingrese de nuevo entonces.";
+                    Repetir
+                        Mostrar << "Ingrese el nombre de la persona";
                         Leer >> Nombre;
-                    Fin_Si
+                        Mostrar << "¿Seguro de que ese sea el nombre correcto? 1: Sí, 0: No";
+                        Leer >> r;
+                        Hasta(r = 1);
+                    Fin_Repetir
                     Si (Nombre = Prof[pos].Nombre) Entonces;
                         Mostrar << "No te puedes agregar a ti mismo.";
                     Sino
-                        Para (I = 1 Hasta I = 500) Hacer;
+                        Para (I = 1 Hasta I = v) Hacer;
                             Si (Nombre = Datos[I].Nombre) Entonces;
                                 Amig[Am].Nombre_Emisor = Prof[pos].Nombre;
                                 Amig[Am].CI_Emisor = Prof[pos].CI;
                                 Amig[Am].Nombre_Receptor = Datos[I].Nombre;
                                 Amig[Am].CI_Receptor = Datos[I].CI;
                                 Amig[Am].Avatar_Receptor = Datos[I].Avatar;
-                                Prof[pos].Amigos = Prof[pos].Amigos + 1;
+                                Datos[pos].Amigos = Datos[pos].Amigos + 1;
+                                encontrado = 1;
                             Fin_Si
+                        Fin_Para
+                        Para (I = 1 Hasta I = Lim) Hacer;
                             Si (Nombre = Admin[I].Usuario) Entonces;
                                 Amig[Am].Nombre_Emisor = Prof[pos].Nombre;
                                 Amig[Am].CI_Emisor = Prof[pos].CI;
                                 Amig[Am].Nombre_Receptor = Admin[I].Usuario;
                                 Amig[Am].CI_Receptor = Admin[I].CI;
                                 Amig[Am].Avatar_Receptor = Admin[I].Avatar;
-                                Prof[pos].Amigos = Prof[pos].Amigos + 1;
+                                Datos[pos].Amigos = Datos[pos].Amigos + 1;
                             Fin_Si
+                        Fin_Para
+                        Para (I = 1 Hasta I = prof) Hacer;
                             Si (Nombre = Prof[I].Nombre) Entonces;
                                 Amig[Am].Nombre_Emisor = Prof[pos].Nombre;
                                 Amig[Am].CI_Emisor = Prof[pos].CI;
                                 Amig[Am].Nombre_Receptor = Prof[I].Nombre;
                                 Amig[Am].CI_Receptor = Prof[I].CI;
                                 Amig[Am].Avatar_Receptor = Prof[I].Avatar;
-                                Prof[pos].Amigos = Prof[pos].Amigos + 1;
+                                Datos[pos].Amigos = Datos[pos].Amigos + 1;
+                                encontrado = 1;
                             Fin_Si
                         Fin_Para
+                        Si (encontrado = 1) Entonces;
+                            Am = Am + 1;
+                        Sino
+                            Mostrar << "No se encontró ese usuario.";
+                        Fin_Si
                     Fin_Si
                 Sino
                     Mostrar << "Ingrese la cedula de identidad de la persona que quiere agregar.";
@@ -78,38 +86,52 @@ Inicio
                     Si (CI = Prof[pos].CI) Entonces;
                         Mostrar << "No te puedes agregar a ti mismo.";
                     Sino
-                        Para (I = 1 Hasta I = 500) Hacer;
+                        Para (I = 1 Hasta I = v) Hacer;
                             Si (CI = Datos[I].CI) Entonces;
                                 Amig[Am].Nombre_Emisor = Prof[pos].Nombre;
                                 Amig[Am].CI_Emisor = Prof[pos].CI;
                                 Amig[Am].Nombre_Receptor = Datos[I].Nombre;
                                 Amig[Am].CI_Receptor = Datos[I].CI;
                                 Amig[Am].Avatar_Receptor = Datos[I].Avatar;
-                                Prof[pos].Amigos = Prof[pos].Amigos + 1;
+                                Datos[pos].Amigos = Datos[pos].Amigos + 1;
+                                encontrado = 1;
                             Fin_Si
+                        Fin_Para
+                        Para (I = 1 Hasta I = Lim) Hacer;
                             Si (CI = Admin[I].CI) Entonces;
                                 Amig[Am].Nombre_Emisor = Prof[pos].Nombre;
                                 Amig[Am].CI_Emisor = Prof[pos].CI;
                                 Amig[Am].Nombre_Receptor = Admin[I].Usuario;
                                 Amig[Am].CI_Receptor = Admin[I].CI;
                                 Amig[Am].Avatar_Receptor = Admin[I].Avatar;
-                                Prof[pos].Amigos = Prof[pos].Amigos + 1;
+                                Datos[pos].Amigos = Datos[pos].Amigos + 1;
+                                encontrado = 1;
                             Fin_Si
+                        Fin_Para
+                        Para (I = 1 Hasta I = prof) Hacer;
                             Si (CI = Prof[I].CI) Entonces;
                                 Amig[Am].Nombre_Emisor = Prof[pos].Nombre;
                                 Amig[Am].CI_Emisor = Prof[pos].CI;
                                 Amig[Am].Nombre_Receptor = Prof[I].Nombre;
                                 Amig[Am].CI_Receptor = Prof[I].CI;
                                 Amig[Am].Avatar_Receptor = Prof[I].Avatar;
-                                Prof[pos].Amigos = Prof[pos].Amigos + 1;
+                                Datos[pos].Amigos = Datos[pos].Amigos + 1;
+                                encontrado = 1;
                             Fin_Si
                         Fin_Para
+                        Si (encontrado = 1) Entonces;
+                            Am = Am + 1;
+                            encontrado = 0;
+                        Sino
+                            Mostrar << "No se encontró ese usuario.";
+                        Fin_Si
                     Fin_Si
                 Fin_Si
             Caso(opc = 2);
                 Mostrar << "Aquí tus amigos:";
-                Para (I = 1 Hasta I = 500) Hacer;
+                Para (I = 1 Hasta I = Am) Hacer;
                     Si (Amig[I].Nombre_Emisor = Prof[pos].Nombre) Entonces;
+                        Mostrar << Amig[I].Avatar_Receptor;
                         Mostrar << Amig[I].Nombre_Receptor;
                     Fin_Si
                 Fin_Para
@@ -123,24 +145,26 @@ Inicio
                     Leer >> opc2;
                 Fin_Mientras
                 Si (opc2 = 1) Entonces;
-                    Mostrar << "Ingrese el nombre de la persona";
-                    Leer >> Nombre;
-                    Mostrar << "¿Seguro de que ese sea el nombre correcto? 1: Sí, 0: No";
-                    Leer >> r;
-                    Si (r = 0) Entonces;
-                        Mostrar << "Ingrese de nuevo entonces.";
+                    Repetir
+                        Mostrar << "Ingrese el nombre de la persona";
                         Leer >> Nombre;
-                    Fin_Si
+                        Mostrar << "¿Seguro de que ese sea el nombre correcto? 1: Sí, 0: No";
+                        Leer >> r;
+                        Hasta(r = 1);
+                    Fin_Repetir
                     Si (Nombre = Prof[pos].Nombre) Entonces;
                         Mostrar << "¿Para qué quieres ver tu propia información acá si tienes información personal?";
                     Sino
-                        Para (I = 1 Hasta I = 500) Hacer;
+                        Para (I = 1 Hasta I = Am) Hacer;
                             Si (Nombre = Amig[I].Nombre_Receptor) and (Amig[I].Nombre_Emisor = Prof[pos].Nombre) Entonces;
-                                Para (J = 1 Hasta J = 500) Hacer;
+                                Para (J = 1 Hasta J = Lim) Hacer;
                                     Si (Nombre = Admin[J].Usuario) Entonces;
                                         Mostrar << Admin[J].Usuario;
                                         Mostrar << Admin[J].Cargo;
+                                        encontrado = 1;
                                     Fin_Si
+                                Fin_Para
+                                Para (J = 1 Hasta J = v) Hacer;
                                     Si (Nombre = Datos[J].Nombre) Entonces;
                                         Mostrar << Datos[J].Avatar;
                                         Mostrar << Datos[J].Nombre;
@@ -150,19 +174,28 @@ Inicio
                                         Si (Datos[J].Esta_en_Club = 1) Entonces;
                                             Mostrar << Datos[I].Club;
                                         Fin_Si
+                                        encontrado = 1;
                                     Fin_Si
+                                Fin_Para
+                                Para (J = 1 Hasta J = prof) Hacer;
                                     Si (Nombre = Prof[J].Nombre) Entonces;
                                         Mostrar << Prof[J].Nombre;
                                         Mostrar << Prof[J].Materias;
                                         Mostrar << Prof[J].Cant_Materias;
+                                        encontrado = 1;
                                     Fin_Si
                                 Fin_Para
                             Fin_Si
                         Fin_Para
+                        Si (encontrado = 0) Entonces;
+                            Mostrar << "No se encontró este usuario.";
+                        Sino
+                            encontrado = 0;
+                        Fin_Si
                     Fin_Si
                     
                 Sino
-                    Mostrar << "Ingrese la cedula de identidad de la persona que quiere agregar.";
+                    Mostrar << "Ingrese la cedula de identidad de la persona que quiere ver su información.";
                     Leer >> CI;
                     Mientras (CI < 1000000 or CI > 40000000) Hacer;
                         Mostrar << "Es invalido, solo cédulas vivas y válidas.";
@@ -171,13 +204,17 @@ Inicio
                     Si (CI = Prof[pos].CI) Entonces;
                         Mostrar << "¿Para que quieres ver tu propia información acá?";
                     Sino
-                        Para (I = 1 Hasta I = 500) Hacer;
+                        Para (I = 1 Hasta I = Am) Hacer;
                             Si (CI = Amig[I].CI_Receptor) and (Amig[I].CI_Emisor = Prof[pos].CI) Entonces;
-                                Para (J = 1 Hasta J = 500) Hacer;
+                                Para (J = 1 Hasta J = Lim) Hacer;
                                     Si (CI = Admin[J].CI) Entonces;
+                                        Mostrar << Admin[J].Avatar;
                                         Mostrar << Admin[J].Usuario;
                                         Mostrar << Admin[J].Cargo;
+                                        encontrado = 1;
                                     Fin_Si
+                                Fin_Para
+                                Para (J = 1 Hasta J = v) Hacer;
                                     Si (CI = Datos[J].CI) Entonces;
                                         Mostrar << Datos[J].Avatar;
                                         Mostrar << Datos[J].Nombre;
@@ -188,19 +225,28 @@ Inicio
                                             Mostrar << Datos[I].Club;
                                         Fin_Si
                                     Fin_Si
+                                Fin_Para
+                                Para (J = 1 Hasta J = prof) Hacer;
                                     Si (CI = Prof[J].CI) Entonces;
+                                        Mostrar << Prof[J].Avatar;
                                         Mostrar << Prof[J].Nombre;
                                         Mostrar << Prof[J].Materias;
                                         Mostrar << Prof[J].Cant_Materias;
+                                        encontrado = 1;
                                     Fin_Si
                                 Fin_Para
                             Fin_Si
                         Fin_Para
+                        Si (encontrado = 0) Entonces;
+                            Mostrar << "No se encontró el usuario.";
+                        Sino
+                            encontrado = 0;
+                        Fin_Si
                     Fin_Si
                 Fin_Si
             Caso(opc = 4);
                 Mostrar << "Aquí sus amigos, ingrese el ID para eliminarlo de su lista de amigos.";
-                Para (I = 1 Hasta I = 5000) Hacer;
+                Para (I = 1 Hasta I = Am) Hacer;
                     Si (Prof[pos].CI = Amig[I].CI_Emisor) Entonces;
                         Mostrar << I;
                         Mostrar << Amig[I].Avatar_Receptor;
@@ -208,18 +254,25 @@ Inicio
                     Fin_Si
                 Fin_Para
                 Leer >> ID;
-                Mientras (ID < 1) Hacer;
+                Mientras (ID < 1 or ID > Am) Hacer;
                     Mostrar << "Es invalido, solo se permiten positivos";
                     Leer >> ID;
                 Fin_Mientras
                 Mostrar << "¿Está seguro de que desea eliminarlo de su lista de amigos? 1: Sí, 0: No";
                 Leer >> R;
                 Si (R = 1) Entonces;
-                    Amig[ID].Nombre_Emisor = null;
-                    Amig[ID].CI_Emisor = null;
-                    Amig[ID].Nombre_Receptor = null;
-                    Amig[ID].CI_Receptor = null;
-                    Amig[ID].Avatar_Receptor = null;
+                    Amig[ID].Nombre_Emisor = Amig[Am].Nombre_Emisor;
+                    Amig[ID].CI_Emisor = Amig[Am].CI_Emisor;
+                    Amig[ID].Nombre_Receptor = Amig[Am].Nombre_Receptor;
+                    Amig[ID].CI_Receptor = Amig[Am].CI_Receptor;
+                    Amig[ID].Avatar_Receptor = Amig[Am].Avatar_Receptor;
+
+                    Amig[Am].Nombre_Emisor = null;
+                    Amig[Am].CI_Emisor = null;
+                    Amig[Am].Nombre_Receptor = null;
+                    Amig[Am].CI_Receptor = null;
+                    Amig[Am].Avatar_Receptor = null;
+                    Am = Am - 1;
                 Sino
                     Mostrar << "Vuelva pronto.";
                 Fin_Si

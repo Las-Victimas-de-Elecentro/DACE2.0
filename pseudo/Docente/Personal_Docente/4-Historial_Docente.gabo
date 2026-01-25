@@ -1,8 +1,8 @@
-Procedimiento Historial_Docente(E/S: Clase[I].Codigo_Materia, Clase[I].Nombre_Materia, Clase[I].Periodo, Clase[I].Nombre_Profesor, Clase[I].Dia, Clase[I].Hora_Inicio, Clase[I].Hora_Fin, Clase[I].Aula: Cadena, Clase[I].Cant_Estudiantes: Entero);
+Procedimiento Historial_Docente(E/S: Prof[pos].Nombre, Clase[I].Codigo_Materia, Clase[I].Nombre_Materia, Clase[I].Periodo, Clase[I].Nombre_Profesor, Clase[I].Dia, Clase[I].Hora_Inicio, Clase[I].Hora_Fin, Clase[I].Aula: Cadena, class, pos, Clase[I].Seccion, Clase[I].Cant_Estudiantes: Entero);
 Inicio
     Mostrar << "Historial Labor Docente";
     Mostrar << "Aquí se muestran tus materias impartidas y períodos correspondientes.";
-    Para (I = 1 Hasta I = 5000) Hacer;
+    Para (I = 1 Hasta I = class) Hacer;
         Si (Clase[I].Nombre_Profesor = Prof[pos].Nombre) Entonces;
             Mostrar << Clase[I].Codigo_Materia;
             Mostrar << Clase[I].Nombre_Materia;

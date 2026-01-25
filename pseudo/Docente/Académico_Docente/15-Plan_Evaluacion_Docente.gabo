@@ -1,4 +1,4 @@
-Procedimiento Plan_Evaluacion_Docente(E/S: Materias[I].Codigo, Clase[J].Codigo_Materia, Prof[pos].Nombre, Clase[J].Nombre_Profesor, Plan[plan].Fecha, Plan[plan].Tema, Plan[plan].Estrategia, Plan[plan].Nombre_Profesor, Plan[plan].Nombre_Materia, Plan[plan].Codigo_Materia: Cadena, Plan[plan].Ponderacion, Plan[plan].ID_Plan, Clase[J].ID_Clase, plan: Entero, Plan[plan].Firmado: Booleano);
+Procedimiento Plan_Evaluacion_Docente(E/S: Materias[I].Codigo, Clase[J].Codigo_Materia, Prof[pos].Nombre, Clase[J].Nombre_Profesor, Plan[plan].Fecha, Plan[plan].Tema, Plan[plan].Estrategia, Plan[plan].Nombre_Profesor, Plan[plan].Nombre_Materia, Plan[plan].Codigo_Materia: Cadena, Plan[plan].Ponderacion, Plan[plan].ID_Plan, Clase[J].ID_Clase, pos, class, plan: Entero, Plan[plan].Firmado: Booleano);
 Inicio
     Var I, J: Entero;
     Var cod: Cadena;
@@ -13,7 +13,7 @@ Inicio
             Para (I = 1 Hasta I = 522) Hacer;
                 Si (cod = Materias[I].Codigo) Entonces;
                     Mostrar << "Materia encontrada";
-                    Para (J = 1 Hasta I = 1600) Hacer;
+                    Para (J = 1 Hasta J = class) Hacer;
                         Si (cod = Clase[J].Codigo_Materia) and (Prof[pos].Nombre = Clase[J].Nombre_Profesor) Entonces;
                             Mostrar << "Ingrese la fecha de la evaluación (DD/MM/YYYY)";
                             Leer >> Plan[plan].Fecha;

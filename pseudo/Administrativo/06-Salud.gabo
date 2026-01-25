@@ -1,4 +1,4 @@
-Procedimiento Salud_Admin(E/S: Salud_Admin[pos_admin].Enfermedad_Cronica, Cronica[I], Salud_Admin[pos_admin].Discapacidad, Discapacidad[I], Salud_Admin[pos_admin].Corazon, Corazon[I], Salud_Admin[pos_admin].Cancer, Cancer[I]: Cadena, Salud_Admin[pos_admin].Asma: Booleano);
+Procedimiento Salud_Admin(E/S: pos_admin: Entero, Salud_Admin[pos_admin].Enfermedad_Cronica, Cronica[I], Salud_Admin[pos_admin].Discapacidad, Discapacidad[I], Salud_Admin[pos_admin].Corazon, Corazon[I], Salud_Admin[pos_admin].Cancer, Cancer[I]: Cadena, Salud_Admin[pos_admin].Asma: Booleano);
 Inicio
     Var R, Re, Rep, Repe, Repet, Repeti, R2: Booleano;
     Var enf, dis, cora, cancer: Entero;

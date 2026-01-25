@@ -1,4 +1,4 @@
-Procedimiento Registrar_Reporte_Docente(E/S: Re: Entero, Rep[i].Titulo, Rep[i].Descripcion, Rep[i].Titular, Rep[i].Problema, Rep[i].Fecha, Prof[pos].Nombre: Cadena, Rep[i].Recibido: Booleano);
+Procedimiento Registrar_Reporte_Docente(E/S: pos, Re: Entero, Rep[i].Titulo, Rep[i].Descripcion, Rep[i].Titular, Rep[i].Problema, Rep[i].Fecha, Prof[pos].Nombre: Cadena, Rep[i].Recibido: Booleano);
 Inicio
     Var r: Entero;
     Mostrar << "¿Desea revisar algún reporte suyo? 1: Sí, 2: No, 3: Registrar nuevo reporte";

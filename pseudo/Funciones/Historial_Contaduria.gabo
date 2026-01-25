@@ -1,165 +1,165 @@
-Procedimiento Historial_Contaduria (E/S: Suma, Datos.Materias.Con[pos_usuario].Matematica_I, Datos.Materias.Con[pos_usuario].Lenguaje_Comunicacion, Datos.Materias.Con[pos_usuario].Legislacion_Mercantil, Datos.Materias.Con[pos_usuario].Contabilidad_I, Datos.Materias.Con[pos_usuario].Sociopolitica_Productiva, Datos.Materias.Con[pos_usuario].Metodologia_Investigacion, Datos.Materias.Con[pos_usuario].Deporte_Recreacion, Datos.Materias.Con[pos_usuario].Ingles, Datos.Materias.Con[pos_usuario].Legislacion_Laboral, Datos.Materias.Con[pos_usuario].Estadistica_I, Datos.Materias.Con[pos_usuario].Introduccion_Administracion, Datos.Materias.Con[pos_usuario].Arte_Cultura, Datos.Materias.Con[pos_usuario].Matematica_II, Datos.Materias.Con[pos_usuario].Contabilidad_II, Datos.Materias.Con[pos_usuario].Informatica, Datos.Materias.Con[pos_usuario].Calculo_Financiero, Datos.Materias.Con[pos_usuario].Teoria_Economica, Datos.Materias.Con[pos_usuario].Procesos_Administrativos, Datos.Materias.Con[pos_usuario].Estadistica_II, Datos.Materias.Con[pos_usuario].Contabilidad_III, Datos.Materias.Con[pos_usuario].Practica_Profesional_I, Datos.Materias.Con[pos_usuario].Auditoria_I, Datos.Materias.Con[pos_usuario].Contabilidad_Especializada_I, Datos.Materias.Con[pos_usuario].Finanzas_Gestion_Presupuestaria, Datos.Materias.Con[pos_usuario].Administracion_Publica, Datos.Materias.Con[pos_usuario].Contabilidad_Costos_I, Datos.Materias.Con[pos_usuario].Sistemas_Informacion_Gerencial, Datos.Materias.Con[pos_usuario].Investigacion_Operaciones, Datos.Materias.Con[pos_usuario].Contabilidad_Especializada_II, Datos.Materias.Con[pos_usuario].Electiva_I, Datos.Materias.Con[pos_usuario].Auditoria_II, Datos.Materias.Con[pos_usuario].Contabilidad_Costos_II, Datos.Materias.Con[pos_usuario].Sistemas_Tributarios_I, Datos.Materias.Con[pos_usuario].Mercadeo, Datos.Materias.Con[pos_usuario].Presupuesto, Datos.Materias.Con[pos_usuario].Seminario_I, Datos.Materias.Con[pos_usuario].Electiva_I_2, Datos.Materias.Con[pos_usuario].Contabilidad_Costos_III, Datos.Materias.Con[pos_usuario].Practica_Profesional_II, Datos.Materias.Con[pos_usuario].Gestion_Talento_Humano, Datos.Materias.Con[pos_usuario].Etica_Desarrollo_Profesional, Datos.Materias.Con[pos_usuario].Electiva_II, Datos.Materias.Con[pos_usuario].Sistemas_Tributarios_II, Datos.Materias.Con[pos_usuario].Auditoria_III, Datos.Materias.Con[pos_usuario].Analisis_Estados_Financieros, Datos.Materias.Con[pos_usuario].Seminario_II, Datos.Materias.Con[pos_usuario].Instituciones_Financieras, Datos.Materias.Con[pos_usuario].Pasantias, Datos.Materias.Con[pos_usuario].Electiva_II_2, Datos.Materias.Con[pos_usuario].Tesis_Grado: Real);
+Procedimiento Historial_Contaduria (E/S: Contador: Entero, Suma, Datos[pos_usuario].Materias.Con[pos_usuario].Matematica_I, Datos[pos_usuario].Materias.Con[pos_usuario].Lenguaje_Comunicacion, Datos[pos_usuario].Materias.Con[pos_usuario].Legislacion_Mercantil, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_I, Datos[pos_usuario].Materias.Con[pos_usuario].Sociopolitica_Productiva, Datos[pos_usuario].Materias.Con[pos_usuario].Metodologia_Investigacion, Datos[pos_usuario].Materias.Con[pos_usuario].Deporte_Recreacion, Datos[pos_usuario].Materias.Con[pos_usuario].Ingles, Datos[pos_usuario].Materias.Con[pos_usuario].Legislacion_Laboral, Datos[pos_usuario].Materias.Con[pos_usuario].Estadistica_I, Datos[pos_usuario].Materias.Con[pos_usuario].Introduccion_Administracion, Datos[pos_usuario].Materias.Con[pos_usuario].Arte_Cultura, Datos[pos_usuario].Materias.Con[pos_usuario].Matematica_II, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_II, Datos[pos_usuario].Materias.Con[pos_usuario].Informatica, Datos[pos_usuario].Materias.Con[pos_usuario].Calculo_Financiero, Datos[pos_usuario].Materias.Con[pos_usuario].Teoria_Economica, Datos[pos_usuario].Materias.Con[pos_usuario].Procesos_Administrativos, Datos[pos_usuario].Materias.Con[pos_usuario].Estadistica_II, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_III, Datos[pos_usuario].Materias.Con[pos_usuario].Practica_Profesional_I, Datos[pos_usuario].Materias.Con[pos_usuario].Auditoria_I, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Especializada_I, Datos[pos_usuario].Materias.Con[pos_usuario].Finanzas_Gestion_Presupuestaria, Datos[pos_usuario].Materias.Con[pos_usuario].Administracion_Publica, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Costos_I, Datos[pos_usuario].Materias.Con[pos_usuario].Sistemas_Informacion_Gerencial, Datos[pos_usuario].Materias.Con[pos_usuario].Investigacion_Operaciones, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Especializada_II, Datos[pos_usuario].Materias.Con[pos_usuario].Electiva_I, Datos[pos_usuario].Materias.Con[pos_usuario].Auditoria_II, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Costos_II, Datos[pos_usuario].Materias.Con[pos_usuario].Sistemas_Tributarios_I, Datos[pos_usuario].Materias.Con[pos_usuario].Mercadeo, Datos[pos_usuario].Materias.Con[pos_usuario].Presupuesto, Datos[pos_usuario].Materias.Con[pos_usuario].Seminario_I, Datos[pos_usuario].Materias.Con[pos_usuario].Electiva_I_2, Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Costos_III, Datos[pos_usuario].Materias.Con[pos_usuario].Practica_Profesional_II, Datos[pos_usuario].Materias.Con[pos_usuario].Gestion_Talento_Humano, Datos[pos_usuario].Materias.Con[pos_usuario].Etica_Desarrollo_Profesional, Datos[pos_usuario].Materias.Con[pos_usuario].Electiva_II, Datos[pos_usuario].Materias.Con[pos_usuario].Sistemas_Tributarios_II, Datos[pos_usuario].Materias.Con[pos_usuario].Auditoria_III, Datos[pos_usuario].Materias.Con[pos_usuario].Analisis_Estados_Financieros, Datos[pos_usuario].Materias.Con[pos_usuario].Seminario_II, Datos[pos_usuario].Materias.Con[pos_usuario].Instituciones_Financieras, Datos[pos_usuario].Materias.Con[pos_usuario].Pasantias, Datos[pos_usuario].Materias.Con[pos_usuario].Electiva_II_2, Datos[pos_usuario].Materias.Con[pos_usuario].Tesis_Grado: Real);
 Inicio
 
     // Primer Semestre
     Si (Datos[pos_usuario].Semestre >= 1) Entonces;
-        Mostrar << "Matematica I:...", Datos.Materias.Con[pos_usuario].Matematica_I;
-        Mostrar << "Lenguaje y Comunicacion:...", Datos.Materias.Con[pos_usuario].Lenguaje_Comunicacion;
-        Mostrar << "Legislacion Mercantil:...", Datos.Materias.Con[pos_usuario].Legislacion_Mercantil;
-        Mostrar << "Contabilidad I:...", Datos.Materias.Con[pos_usuario].Contabilidad_I;
-        Mostrar << "Sociopolitica Productiva:...", Datos.Materias.Con[pos_usuario].Sociopolitica_Productiva;
-        Mostrar << "Metodologia de la Investigacion:...", Datos.Materias.Con[pos_usuario].Metodologia_Investigacion;
-        Mostrar << "Deporte y Recreacion:...", Datos.Materias.Con[pos_usuario].Deporte_Recreacion;
+        Mostrar << "Matematica I:...", Datos[pos_usuario].Materias.Con[pos_usuario].Matematica_I;
+        Mostrar << "Lenguaje y Comunicacion:...", Datos[pos_usuario].Materias.Con[pos_usuario].Lenguaje_Comunicacion;
+        Mostrar << "Legislacion Mercantil:...", Datos[pos_usuario].Materias.Con[pos_usuario].Legislacion_Mercantil;
+        Mostrar << "Contabilidad I:...", Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_I;
+        Mostrar << "Sociopolitica Productiva:...", Datos[pos_usuario].Materias.Con[pos_usuario].Sociopolitica_Productiva;
+        Mostrar << "Metodologia de la Investigacion:...", Datos[pos_usuario].Materias.Con[pos_usuario].Metodologia_Investigacion;
+        Mostrar << "Deporte y Recreacion:...", Datos[pos_usuario].Materias.Con[pos_usuario].Deporte_Recreacion;
 
-        Suma = Suma + (Datos.Materias.Con[pos_usuario].Matematica_I + Datos.Materias.Con[pos_usuario].Lenguaje_Comunicacion + Datos.Materias.Con[pos_usuario].Legislacion_Mercantil + Datos.Materias.Con[pos_usuario].Contabilidad_I + Datos.Materias.Con[pos_usuario].Sociopolitica_Productiva + Datos.Materias.Con[pos_usuario].Metodologia_Investigacion + Datos.Materias.Con[pos_usuario].Deporte_Recreacion);
+        Suma = Suma + (Datos[pos_usuario].Materias.Con[pos_usuario].Matematica_I + Datos[pos_usuario].Materias.Con[pos_usuario].Lenguaje_Comunicacion + Datos[pos_usuario].Materias.Con[pos_usuario].Legislacion_Mercantil + Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_I + Datos[pos_usuario].Materias.Con[pos_usuario].Sociopolitica_Productiva + Datos[pos_usuario].Materias.Con[pos_usuario].Metodologia_Investigacion + Datos[pos_usuario].Materias.Con[pos_usuario].Deporte_Recreacion);
         Contador = Contador + 7;
     Fin_Si
 
     // Segundo Semestre
     Si (Datos[pos_usuario].Semestre >= 2) Entonces;
-        Mostrar << "Ingles:...", Datos.Materias.Con[pos_usuario].Ingles;
-        Mostrar << "Legislacion Laboral:...", Datos.Materias.Con[pos_usuario].Legislacion_Laboral;
-        Mostrar << "Estadistica I:...", Datos.Materias.Con[pos_usuario].Estadistica_I;
-        Mostrar << "Introduccion a la Administracion:...", Datos.Materias.Con[pos_usuario].Introduccion_Administracion;
-        Mostrar << "Arte y Cultura:...", Datos.Materias.Con[pos_usuario].Arte_Cultura;
+        Mostrar << "Ingles:...", Datos[pos_usuario].Materias.Con[pos_usuario].Ingles;
+        Mostrar << "Legislacion Laboral:...", Datos[pos_usuario].Materias.Con[pos_usuario].Legislacion_Laboral;
+        Mostrar << "Estadistica I:...", Datos[pos_usuario].Materias.Con[pos_usuario].Estadistica_I;
+        Mostrar << "Introduccion a la Administracion:...", Datos[pos_usuario].Materias.Con[pos_usuario].Introduccion_Administracion;
+        Mostrar << "Arte y Cultura:...", Datos[pos_usuario].Materias.Con[pos_usuario].Arte_Cultura;
 
-        Suma = Suma + (Datos.Materias.Con[pos_usuario].Ingles + Datos.Materias.Con[pos_usuario].Legislacion_Laboral + Datos.Materias.Con[pos_usuario].Estadistica_I + Datos.Materias.Con[pos_usuario].Introduccion_Administracion + Datos.Materias.Con[pos_usuario].Arte_Cultura);
+        Suma = Suma + (Datos[pos_usuario].Materias.Con[pos_usuario].Ingles + Datos[pos_usuario].Materias.Con[pos_usuario].Legislacion_Laboral + Datos[pos_usuario].Materias.Con[pos_usuario].Estadistica_I + Datos[pos_usuario].Materias.Con[pos_usuario].Introduccion_Administracion + Datos[pos_usuario].Materias.Con[pos_usuario].Arte_Cultura);
         Contador = Contador + 5;
     Fin_Si
-    Si (Datos.Materias.Con[pos_usuario].Matematica_I > 5.5) Entonces;
-        Mostrar << "Matematica II:...", Datos.Materias.Con[pos_usuario].Matematica_II;
-        Suma = Suma + Datos.Materias.Con[pos_usuario].Matematica_II;
+    Si (Datos[pos_usuario].Materias.Con[pos_usuario].Matematica_I > 5.5) Entonces;
+        Mostrar << "Matematica II:...", Datos[pos_usuario].Materias.Con[pos_usuario].Matematica_II;
+        Suma = Suma + Datos[pos_usuario].Materias.Con[pos_usuario].Matematica_II;
         Contador = Contador + 1;
     Fin_Si
-    Si (Datos.Materias.Con[pos_usuario].Contabilidad_I > 5.5) Entonces;
-        Mostrar << "Contabilidad II:...", Datos.Materias.Con[pos_usuario].Contabilidad_II;
-        Suma = Suma + Datos.Materias.Con[pos_usuario].Contabilidad_II;
+    Si (Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_I > 5.5) Entonces;
+        Mostrar << "Contabilidad II:...", Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_II;
+        Suma = Suma + Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_II;
         Contador = Contador + 1;
     Fin_Si
 
     // Tercer Semestre
     Si (Datos[pos_usuario].Semestre >= 3) Entonces;
-        Mostrar << "Informatica:...", Datos.Materias.Con[pos_usuario].Informatica;
-        Mostrar << "Calculo Financiero:...", Datos.Materias.Con[pos_usuario].Calculo_Financiero;
-        Mostrar << "Introduccion a la Teoria Economica:...", Datos.Materias.Con[pos_usuario].Teoria_Economica;
-        Mostrar << "Procesos Administrativos:...", Datos.Materias.Con[pos_usuario].Procesos_Administrativos;
+        Mostrar << "Informatica:...", Datos[pos_usuario].Materias.Con[pos_usuario].Informatica;
+        Mostrar << "Calculo Financiero:...", Datos[pos_usuario].Materias.Con[pos_usuario].Calculo_Financiero;
+        Mostrar << "Introduccion a la Teoria Economica:...", Datos[pos_usuario].Materias.Con[pos_usuario].Teoria_Economica;
+        Mostrar << "Procesos Administrativos:...", Datos[pos_usuario].Materias.Con[pos_usuario].Procesos_Administrativos;
 
-        Suma = Suma + (Datos.Materias.Con[pos_usuario].Informatica + Datos.Materias.Con[pos_usuario].Calculo_Financiero + Datos.Materias.Con[pos_usuario].Teoria_Economica + Datos.Materias.Con[pos_usuario].Procesos_Administrativos);
+        Suma = Suma + (Datos[pos_usuario].Materias.Con[pos_usuario].Informatica + Datos[pos_usuario].Materias.Con[pos_usuario].Calculo_Financiero + Datos[pos_usuario].Materias.Con[pos_usuario].Teoria_Economica + Datos[pos_usuario].Materias.Con[pos_usuario].Procesos_Administrativos);
         Contador = Contador + 4;
     Fin_Si
-    Si (Datos.Materias.Con[pos_usuario].Estadistica_I > 5.5) Entonces;
-        Mostrar << "Estadistica II:...", Datos.Materias.Con[pos_usuario].Estadistica_II;
-        Suma = Suma + Datos.Materias.Con[pos_usuario].Estadistica_II;
+    Si (Datos[pos_usuario].Materias.Con[pos_usuario].Estadistica_I > 5.5) Entonces;
+        Mostrar << "Estadistica II:...", Datos[pos_usuario].Materias.Con[pos_usuario].Estadistica_II;
+        Suma = Suma + Datos[pos_usuario].Materias.Con[pos_usuario].Estadistica_II;
         Contador = Contador + 1;
     Fin_Si
-    Si (Datos.Materias.Con[pos_usuario].Contabilidad_II > 5.5) Entonces;
-        Mostrar << "Contabilidad III:...", Datos.Materias.Con[pos_usuario].Contabilidad_III;
-        Suma = Suma + Datos.Materias.Con[pos_usuario].Contabilidad_III;
+    Si (Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_II > 5.5) Entonces;
+        Mostrar << "Contabilidad III:...", Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_III;
+        Suma = Suma + Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_III;
         Contador = Contador + 1;
     Fin_Si
 
     // Cuarto Semestre
     Si (Datos[pos_usuario].Semestre >= 4) Entonces;
-        Mostrar << "Practica Profesional I:...", Datos.Materias.Con[pos_usuario].Practica_Profesional_I;
-        Mostrar << "Auditoria I:...", Datos.Materias.Con[pos_usuario].Auditoria_I;
-        Mostrar << "Contabilidad Especializada I:...", Datos.Materias.Con[pos_usuario].Contabilidad_Especializada_I;
-        Mostrar << "Finanzas y Gestion Presupuestaria:...", Datos.Materias.Con[pos_usuario].Finanzas_Gestion_Presupuestaria;
-        Mostrar << "Administracion Publica:...", Datos.Materias.Con[pos_usuario].Administracion_Publica;
+        Mostrar << "Practica Profesional I:...", Datos[pos_usuario].Materias.Con[pos_usuario].Practica_Profesional_I;
+        Mostrar << "Auditoria I:...", Datos[pos_usuario].Materias.Con[pos_usuario].Auditoria_I;
+        Mostrar << "Contabilidad Especializada I:...", Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Especializada_I;
+        Mostrar << "Finanzas y Gestion Presupuestaria:...", Datos[pos_usuario].Materias.Con[pos_usuario].Finanzas_Gestion_Presupuestaria;
+        Mostrar << "Administracion Publica:...", Datos[pos_usuario].Materias.Con[pos_usuario].Administracion_Publica;
 
-        Suma = Suma + (Datos.Materias.Con[pos_usuario].Practica_Profesional_I + Datos.Materias.Con[pos_usuario].Auditoria_I + Datos.Materias.Con[pos_usuario].Contabilidad_Especializada_I + Datos.Materias.Con[pos_usuario].Finanzas_Gestion_Presupuestaria + Datos.Materias.Con[pos_usuario].Administracion_Publica);
+        Suma = Suma + (Datos[pos_usuario].Materias.Con[pos_usuario].Practica_Profesional_I + Datos[pos_usuario].Materias.Con[pos_usuario].Auditoria_I + Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Especializada_I + Datos[pos_usuario].Materias.Con[pos_usuario].Finanzas_Gestion_Presupuestaria + Datos[pos_usuario].Materias.Con[pos_usuario].Administracion_Publica);
         Contador = Contador + 5;
     Fin_Si
-    Si (Datos.Materias.Con[pos_usuario].Contabilidad_II > 5.5) Entonces;
-        Mostrar << "Contabilidad de Costos I:...", Datos.Materias.Con[pos_usuario].Contabilidad_Costos_I;
-        Suma = Suma + Datos.Materias.Con[pos_usuario].Contabilidad_Costos_I;
+    Si (Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_II > 5.5) Entonces;
+        Mostrar << "Contabilidad de Costos I:...", Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Costos_I;
+        Suma = Suma + Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Costos_I;
         Contador = Contador + 1;
     Fin_Si
 
     // Quinto Semestre
     Si (Datos[pos_usuario].Semestre >= 5) Entonces;
-        Mostrar << "Sistemas de Informacion Gerencial:...", Datos.Materias.Con[pos_usuario].Sistemas_Informacion_Gerencial;
-        Mostrar << "Investigacion de Operaciones:...", Datos.Materias.Con[pos_usuario].Investigacion_Operaciones;
-        Mostrar << "Contabilidad Especializada II:...", Datos.Materias.Con[pos_usuario].Contabilidad_Especializada_II;
-        Mostrar << "Electiva I:...", Datos.Materias.Con[pos_usuario].Electiva_I;
+        Mostrar << "Sistemas de Informacion Gerencial:...", Datos[pos_usuario].Materias.Con[pos_usuario].Sistemas_Informacion_Gerencial;
+        Mostrar << "Investigacion de Operaciones:...", Datos[pos_usuario].Materias.Con[pos_usuario].Investigacion_Operaciones;
+        Mostrar << "Contabilidad Especializada II:...", Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Especializada_II;
+        Mostrar << "Electiva I:...", Datos[pos_usuario].Materias.Con[pos_usuario].Electiva_I;
 
-        Suma = Suma + (Datos.Materias.Con[pos_usuario].Sistemas_Informacion_Gerencial + Datos.Materias.Con[pos_usuario].Investigacion_Operaciones + Datos.Materias.Con[pos_usuario].Contabilidad_Especializada_II + Datos.Materias.Con[pos_usuario].Electiva_I);
+        Suma = Suma + (Datos[pos_usuario].Materias.Con[pos_usuario].Sistemas_Informacion_Gerencial + Datos[pos_usuario].Materias.Con[pos_usuario].Investigacion_Operaciones + Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Especializada_II + Datos[pos_usuario].Materias.Con[pos_usuario].Electiva_I);
         Contador = Contador + 4;
     Fin_Si
-    Si (Datos.Materias.Con[pos_usuario].Auditoria_I > 5.5) Entonces;
-        Mostrar << "Auditoria II:...", Datos.Materias.Con[pos_usuario].Auditoria_II;
-        Suma = Suma + Datos.Materias.Con[pos_usuario].Auditoria_II;
+    Si (Datos[pos_usuario].Materias.Con[pos_usuario].Auditoria_I > 5.5) Entonces;
+        Mostrar << "Auditoria II:...", Datos[pos_usuario].Materias.Con[pos_usuario].Auditoria_II;
+        Suma = Suma + Datos[pos_usuario].Materias.Con[pos_usuario].Auditoria_II;
         Contador = Contador + 1;
     Fin_Si
-    Si (Datos.Materias.Con[pos_usuario].Contabilidad_Costos_I > 5.5) Entonces;
-        Mostrar << "Contabilidad de Costos II:...", Datos.Materias.Con[pos_usuario].Contabilidad_Costos_II;
-        Suma = Suma + Datos.Materias.Con[pos_usuario].Contabilidad_Costos_II;
+    Si (Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Costos_I > 5.5) Entonces;
+        Mostrar << "Contabilidad de Costos II:...", Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Costos_II;
+        Suma = Suma + Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Costos_II;
         Contador = Contador + 1;
     Fin_Si
 
     // Sexto Semestre
     Si (Datos[pos_usuario].Semestre >= 6) Entonces;
-        Mostrar << "Sistemas Tributarios I:...", Datos.Materias.Con[pos_usuario].Sistemas_Tributarios_I;
-        Mostrar << "Mercadeo:...", Datos.Materias.Con[pos_usuario].Mercadeo;
-        Mostrar << "Presupuesto:...", Datos.Materias.Con[pos_usuario].Presupuesto;
-        Mostrar << "Seminario I:...", Datos.Materias.Con[pos_usuario].Seminario_I;
-        Mostrar << "Electiva I:...", Datos.Materias.Con[pos_usuario].Electiva_I_2;
+        Mostrar << "Sistemas Tributarios I:...", Datos[pos_usuario].Materias.Con[pos_usuario].Sistemas_Tributarios_I;
+        Mostrar << "Mercadeo:...", Datos[pos_usuario].Materias.Con[pos_usuario].Mercadeo;
+        Mostrar << "Presupuesto:...", Datos[pos_usuario].Materias.Con[pos_usuario].Presupuesto;
+        Mostrar << "Seminario I:...", Datos[pos_usuario].Materias.Con[pos_usuario].Seminario_I;
+        Mostrar << "Electiva I:...", Datos[pos_usuario].Materias.Con[pos_usuario].Electiva_I_2;
 
-        Suma = Suma + (Datos.Materias.Con[pos_usuario].Sistemas_Tributarios_I + Datos.Materias.Con[pos_usuario].Mercadeo + Datos.Materias.Con[pos_usuario].Presupuesto + Datos.Materias.Con[pos_usuario].Seminario_I + Datos.Materias.Con[pos_usuario].Electiva_I_2);
+        Suma = Suma + (Datos[pos_usuario].Materias.Con[pos_usuario].Sistemas_Tributarios_I + Datos[pos_usuario].Materias.Con[pos_usuario].Mercadeo + Datos[pos_usuario].Materias.Con[pos_usuario].Presupuesto + Datos[pos_usuario].Materias.Con[pos_usuario].Seminario_I + Datos[pos_usuario].Materias.Con[pos_usuario].Electiva_I_2);
         Contador = Contador + 5;
     Fin_Si
-    Si (Datos.Materias.Con[pos_usuario].Contabilidad_Costos_II > 5.5) Entonces;
-        Mostrar << "Contabilidad de Costos III:...", Datos.Materias.Con[pos_usuario].Contabilidad_Costos_III;
-        Suma = Suma + Datos.Materias.Con[pos_usuario].Contabilidad_Costos_III;
+    Si (Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Costos_II > 5.5) Entonces;
+        Mostrar << "Contabilidad de Costos III:...", Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Costos_III;
+        Suma = Suma + Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_Costos_III;
         Contador = Contador + 1;
     Fin_Si
-    Si (Datos.Materias.Con[pos_usuario].Practica_Profesional_I > 5.5) Entonces;
-        Mostrar << "Practica Profesional II:...", Datos.Materias.Con[pos_usuario].Practica_Profesional_II;
-        Suma = Suma + Datos.Materias.Con[pos_usuario].Practica_Profesional_II;
+    Si (Datos[pos_usuario].Materias.Con[pos_usuario].Practica_Profesional_I > 5.5) Entonces;
+        Mostrar << "Practica Profesional II:...", Datos[pos_usuario].Materias.Con[pos_usuario].Practica_Profesional_II;
+        Suma = Suma + Datos[pos_usuario].Materias.Con[pos_usuario].Practica_Profesional_II;
         Contador = Contador + 1;
     Fin_Si
 
     // Septimo Semestre
     Si (Datos[pos_usuario].Semestre >= 7) Entonces;
-        Mostrar << "Gestion de Talento Humano:...", Datos.Materias.Con[pos_usuario].Gestion_Talento_Humano;
-        Mostrar << "Etica y Desarrollo Profesional:...", Datos.Materias.Con[pos_usuario].Etica_Desarrollo_Profesional;
-        Mostrar << "Electiva II:...", Datos.Materias.Con[pos_usuario].Electiva_II;
+        Mostrar << "Gestion de Talento Humano:...", Datos[pos_usuario].Materias.Con[pos_usuario].Gestion_Talento_Humano;
+        Mostrar << "Etica y Desarrollo Profesional:...", Datos[pos_usuario].Materias.Con[pos_usuario].Etica_Desarrollo_Profesional;
+        Mostrar << "Electiva II:...", Datos[pos_usuario].Materias.Con[pos_usuario].Electiva_II;
 
-        Suma = Suma + (Datos.Materias.Con[pos_usuario].Gestion_Talento_Humano + Datos.Materias.Con[pos_usuario].Etica_Desarrollo_Profesional + Datos.Materias.Con[pos_usuario].Electiva_II);
+        Suma = Suma + (Datos[pos_usuario].Materias.Con[pos_usuario].Gestion_Talento_Humano + Datos[pos_usuario].Materias.Con[pos_usuario].Etica_Desarrollo_Profesional + Datos[pos_usuario].Materias.Con[pos_usuario].Electiva_II);
         Contador = Contador + 3;
     Fin_Si
-    Si (Datos.Materias.Con[pos_usuario].Sistemas_Tributarios_I > 5.5) Entonces;
-        Mostrar << "Sistemas Tributarios II:...", Datos.Materias.Con[pos_usuario].Sistemas_Tributarios_II;
-        Suma = Suma + Datos.Materias.Con[pos_usuario].Sistemas_Tributarios_II;
+    Si (Datos[pos_usuario].Materias.Con[pos_usuario].Sistemas_Tributarios_I > 5.5) Entonces;
+        Mostrar << "Sistemas Tributarios II:...", Datos[pos_usuario].Materias.Con[pos_usuario].Sistemas_Tributarios_II;
+        Suma = Suma + Datos[pos_usuario].Materias.Con[pos_usuario].Sistemas_Tributarios_II;
         Contador = Contador + 1;
     Fin_Si
-    Si (Datos.Materias.Con[pos_usuario].Auditoria_II > 5.5) Entonces;
-        Mostrar << "Auditoria III:...", Datos.Materias.Con[pos_usuario].Auditoria_III;
-        Suma = Suma + Datos.Materias.Con[pos_usuario].Auditoria_III;
+    Si (Datos[pos_usuario].Materias.Con[pos_usuario].Auditoria_II > 5.5) Entonces;
+        Mostrar << "Auditoria III:...", Datos[pos_usuario].Materias.Con[pos_usuario].Auditoria_III;
+        Suma = Suma + Datos[pos_usuario].Materias.Con[pos_usuario].Auditoria_III;
         Contador = Contador + 1;
     Fin_Si
-    Si (Datos.Materias.Con[pos_usuario].Contabilidad_I > 5.5 Y Datos.Materias.Con[pos_usuario].Contabilidad_II > 5.5 Y Datos.Materias.Con[pos_usuario].Contabilidad_III > 5.5) Entonces;
-        Mostrar << "Analisis de Estados Financieros:...", Datos.Materias.Con[pos_usuario].Analisis_Estados_Financieros;
-        Suma = Suma + Datos.Materias.Con[pos_usuario].Analisis_Estados_Financieros;
+    Si (Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_I > 5.5 Y Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_II > 5.5 Y Datos[pos_usuario].Materias.Con[pos_usuario].Contabilidad_III > 5.5) Entonces;
+        Mostrar << "Analisis de Estados Financieros:...", Datos[pos_usuario].Materias.Con[pos_usuario].Analisis_Estados_Financieros;
+        Suma = Suma + Datos[pos_usuario].Materias.Con[pos_usuario].Analisis_Estados_Financieros;
         Contador = Contador + 1;
     Fin_Si
-    Si (Datos.Materias.Con[pos_usuario].Seminario_I > 5.5) Entonces;
-        Mostrar << "Seminario II:...", Datos.Materias.Con[pos_usuario].Seminario_II;
-        Suma = Suma + Datos.Materias.Con[pos_usuario].Seminario_II;
+    Si (Datos[pos_usuario].Materias.Con[pos_usuario].Seminario_I > 5.5) Entonces;
+        Mostrar << "Seminario II:...", Datos[pos_usuario].Materias.Con[pos_usuario].Seminario_II;
+        Suma = Suma + Datos[pos_usuario].Materias.Con[pos_usuario].Seminario_II;
         Contador = Contador + 1;
     Fin_Si
 
     // Octavo Semestre
     Si (Datos[pos_usuario].Semestre >= 8) Entonces;
-        Mostrar << "Instituciones Financieras:...", Datos.Materias.Con[pos_usuario].Instituciones_Financieras;
-        Mostrar << "Pasantias:...", Datos.Materias.Con[pos_usuario].Pasantias;
-        Mostrar << "Electiva II:...", Datos.Materias.Con[pos_usuario].Electiva_II_2;
+        Mostrar << "Instituciones Financieras:...", Datos[pos_usuario].Materias.Con[pos_usuario].Instituciones_Financieras;
+        Mostrar << "Pasantias:...", Datos[pos_usuario].Materias.Con[pos_usuario].Pasantias;
+        Mostrar << "Electiva II:...", Datos[pos_usuario].Materias.Con[pos_usuario].Electiva_II_2;
 
-        Suma = Suma + (Datos.Materias.Con[pos_usuario].Instituciones_Financieras + Datos.Materias.Con[pos_usuario].Pasantias + Datos.Materias.Con[pos_usuario].Electiva_II_2);
+        Suma = Suma + (Datos[pos_usuario].Materias.Con[pos_usuario].Instituciones_Financieras + Datos[pos_usuario].Materias.Con[pos_usuario].Pasantias + Datos[pos_usuario].Materias.Con[pos_usuario].Electiva_II_2);
         Contador = Contador + 3;
     Fin_Si
-    Si (Datos.Materias.Con[pos_usuario].Seminario_II > 5.5) Entonces;
-        Mostrar << "Tesis de Grado:...", Datos.Materias.Con[pos_usuario].Tesis_Grado;
-        Suma = Suma + Datos.Materias.Con[pos_usuario].Tesis_Grado;
+    Si (Datos[pos_usuario].Materias.Con[pos_usuario].Seminario_II > 5.5) Entonces;
+        Mostrar << "Tesis de Grado:...", Datos[pos_usuario].Materias.Con[pos_usuario].Tesis_Grado;
+        Suma = Suma + Datos[pos_usuario].Materias.Con[pos_usuario].Tesis_Grado;
         Contador = Contador + 1;
     Fin_Si
 Fin_Procedimiento

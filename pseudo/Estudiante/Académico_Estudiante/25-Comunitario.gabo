@@ -1,26 +1,17 @@
-Registro: Servicio_Comunitario;  //Llave: SerC[N];
-    Nombre:             Cadena;
-    Edad, Cedula:       Entero;
-    Area:               Cadena;
-    Semestre:           Entero;
-    Year:               Entero;
-    Horas_Realizadas:   Real;
-Fin_Registro
-
-Procedimiento Comunitario (E/S: SerC[N].Nombre, SerC[N].Area, Datos[pos_usuario].Carrera, Datos[pos_usuario].Nombre: Cadena, SerC[N].Edad, SerC[N].Cedula, SerC[N].Semestre, SerC[N].Year, Datos[pos_usuario].Edad, Datos[pos_usuario].Semestre, Datos[pos_usuario].Year, Datos[pos_usuario].CI, Datos[pos_usuario].Materias_Aprobadas, N: Entero, Datos[pos_usuario].Servicio_Comunitario, Ad.Servicio_Comunitario, Inscripciones: Booleano, SerC[N].Horas_Realizadas: Real);
+Procedimiento Comunitario (E/S: SerC[N].Nombre, SerC[N].Area, Datos[pos_usuario].Carrera, Datos[pos_usuario].Nombre: Cadena, pos_usuario, SerC[N].Edad, SerC[N].Cedula, SerC[N].Semestre, SerC[N].Year, Datos[pos_usuario].Edad, Datos[pos_usuario].Semestre, Datos[pos_usuario].Year, Datos[pos_usuario].CI, Datos[pos_usuario].Materias_Aprobadas, N: Entero, Datos[pos_usuario].Servicio_Comunitario, Ad.Servicio_Comunitario, Inscripciones: Booleano, SerC[N].Horas_Realizadas: Real);
 Inicio
     Var Cedula = 0, J = 0, I = 1, Materias_Aprobadas, Pensum: Entero;
     Var Horas, mitad: Real;
     Var H = 1: Booleano;
     J = N;
-    Si (Incripciones = 1) Entonces;
+    Si (Inscripciones = 1) Entonces;
         Mostrar << "Ingrese su cedula";
         Leer >> Cedula;
         Mientras (Cedula != Datos[pos_usuario].CI) Hacer;
             Mostrar << "Error en los datos de su cedula, intentelo nuevamente";
             Leer >> Cedula;
         Fin_Mientras
-        En_Caso (Cedula > 0) sea;
+        En_Caso (Datos[pos_usuario].Carrera <> "Ninguno") sea;
             Caso (Datos[pos_usuario].Carrera = "Informática");
                 Pensum = (59);
             Caso (Datos[pos_usuario].Carrera = "Civil");

@@ -1,11 +1,11 @@
-Procedimiento Clases_Magistrales_Estudiante(E/S: Mag[I].Autorizacion: Booleano, Mag[I].Nombre_Profesor, Mag[I].Nombre_Materia, Mag[I].Dia, Mag[I].Hora_Inicio, Mag[I].Hora_Fin, Mag[I].Aula, Lista_M[M].Nombre: Cadena, Lista_M[M].Cedula, Mag[I].Cant_Estudiantes: Entero);
+Procedimiento Clases_Magistrales_Estudiante(E/S: validacion_pago, Mag[I].Autorizacion: Booleano, Mag[I].Nombre_Profesor, Mag[I].Nombre_Materia, Mag[I].Dia, Mag[I].Hora_Inicio, Mag[I].Hora_Fin, Mag[I].Aula, Lista_M[M].Nombre, Datos[pos_usuario].Nombre: Cadena, pos_usuario, Lista_M[M].Cedula, Mag[I].Cant_Estudiantes, Datos[pos_usuario].CI, magis: Entero, Precio: Real, [Procedimiento metodo_pago(Egresos, Ingresos, Precio, DTB, validacion_pago)]);
 Inicio
     Var R, R2: Booleano;
-    Var I: Entero;
+    Var I, J: Entero;
     Repetir
         Mostrar << "¡Bienvenido al apartado de las Clases Magistrales!";
         Mostrar << "Aquí tiene las clases magistrales disponibles:";
-        Para (I = 1 Hasta I = 1600) Hacer;
+        Para (I = 1 Hasta I = magis) Hacer;
             Si (Mag[I].Autorizacion = 1) Entonces;
                 Si (Mag[I].Cant_Estudiantes >= 100) Entonces;
                     Mostrar << "Se acabaron los cupos para esta clase magistral";
@@ -21,9 +21,10 @@ Inicio
                     Leer >> R;
                     Si (R = 1) Entonces;
                         Mostrar << "Perfecto, entonces proceda a su metodo de pago";
+                        Precio = Mag[I].Precio;
                         Mostrar << metodo_pago;
                         Si (validacion_pago = 1) Entonces;
-                            Para (J = 1 Hasta J = 1600) Hacer;
+                            Para (J = 1 Hasta J = 80000) Hacer;
                                 Si (Lista_M[J].ID_Lista = Mag[I].ID_Clase) Entonces;
                                     Si (Lista_M[J].Cedula = 0) Entonces;
                                         Lista_M[J].Nombre = Datos[pos_usuario].Nombre;

@@ -44,7 +44,7 @@ Inicio
                 club = club + 1;
                 Mostrar << "Club añadido correctamente.";
             Caso(opc = 3);
-                Para (I = 1 Hasta I = 500) Hacer;
+                Para (I = 1 Hasta I = club) Hacer;
                     Si (Club[I].Activo = 1) Entonces;
                         Mostrar << Club[I].Nombre;
                         Mostrar << Club[I].Descripcion;
@@ -58,7 +58,7 @@ Inicio
                 Fin_Para
                 Mostrar << "Ingrese el ID del club que desea modificar su información según el número mostrado";
                 Leer >> ID;
-                Mientras (ID < 1 or ID > 500) Hacer;
+                Mientras (ID < 1 or ID > club) Hacer;
                     Mostrar << "Es invalido, no está en el rango";
                     Leer >> ID;
                 Fin_Mientras
@@ -75,7 +75,7 @@ Inicio
                 Mostrar << "Ingrese los nuevos horarios disponibles (Formato: Lunes: 7:30am-9:00am, Martes: 12:00pm-1:30pm)";
                 Leer >> Club[ID].Horarios_Disponibles;
             Otro_Caso
-                Para (I = 1 Hasta I = 500) Hacer;
+                Para (I = 1 Hasta I = club) Hacer;
                     Si (Club[I].Activo = 1) Entonces;
                         Mostrar << I;
                         Mostrar << Club[I].Nombre;
@@ -90,7 +90,7 @@ Inicio
                 Fin_Para
                 Mostrar << "Ingrese el ID del club que desea borrar su información según el número mostrado";
                 Leer >> ID;
-                Mientras (ID < 1 or ID > 500) Hacer;
+                Mientras (ID < 1 or ID > club) Hacer;
                     Mostrar << "Es invalido, no está en el rango";
                     Leer >> ID;
                 Fin_Mientras

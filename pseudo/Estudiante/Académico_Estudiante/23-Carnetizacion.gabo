@@ -1,9 +1,9 @@
-Procedimiento Carnetizacion(E/S: Datos[pos_usuario].Carrera, Datos[pos_usuario].Nombre, Carn[I].Carrera, Carn[I].Lugar, Carn[I].Fecha, Car[pos_usuario].Nombre, Car[pos_usuario].Carrera, Car[pos_usuario].Fecha_Vencimiento: Cadena, Datos[pos_usuario].CI, Car[pos_usuario].CI: Entero, Carn[I].Precio, monto_pago: Real, validacion_pago: Booleano);
+Procedimiento Carnetizacion(E/S: Datos[pos_usuario].Carrera, Datos[pos_usuario].Nombre, Carn[I].Carrera, Carn[I].Lugar, Carn[I].Fecha, Car[pos_usuario].Nombre, Car[pos_usuario].Carrera, Car[pos_usuario].Fecha_Vencimiento: Cadena, pos_usuario, Datos[pos_usuario].CI, Car[pos_usuario].CI: Entero, Carn[I].Precio, Precio: Real, validacion_pago: Booleano, [Procedimiento metodo_pago(Egresos, Ingresos, Precio, DTB, validacion_pago)]);
 Inicio
     Var I: Entero;
     Var R: Booleano;
     Mostrar << "¡Bienvenido al apartado de Carnetización!";
-    Para (I = 1 Hasta I = 500) Hacer;
+    Para (I = 1 Hasta I = carnet) Hacer;
         Si (Carn[I].Activo = 1) and (Carn[I].Carrera = Datos[pos_usuario].Carrera) Entonces;
             Mostrar << Carn[I].Carrera;
             Mostrar << Carn[I].Lugar;
@@ -12,7 +12,7 @@ Inicio
             Mostrar << "¿Desea pagar el carnet? 1: Sí, 0: No";
             Leer >> R;
             Si (R = 1) Entonces;
-                monto_pago = Carn[I].Precio;
+                Precio = Carn[I].Precio;
                 Mostrar << metodo_pago;
             Fin_Si
     Fin_Para

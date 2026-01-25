@@ -1,4 +1,4 @@
-Procedimiento Registrar_Reporte_Estudiante(E/S: Re: Entero, Rep[i].Titulo, Rep[i].Descripcion, Rep[i].Titular, Rep[i].Problema, Rep[i].Fecha, Datos[pos_usuario].Nombre: Cadena, Rep[i].Recibido: Booleano);
+Procedimiento Registrar_Reporte_Estudiante(E/S: pos_usuario, Re: Entero, Rep[i].Titulo, Rep[i].Descripcion, Rep[i].Titular, Rep[i].Problema, Rep[i].Fecha, Datos[pos_usuario].Nombre: Cadena, Rep[i].Recibido: Booleano);
 Inicio
     Var r: Entero;
     Mostrar << "¿Desea revisar algún reporte suyo? 1: Sí, 2: No, 3: Registrar nuevo reporte";

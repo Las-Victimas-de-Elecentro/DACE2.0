@@ -4,28 +4,31 @@ Inicio
     Mostrar << "A continuación las estadísticas del sistema: ";
     Mostrar << "Administrativos: ";
     Para (I = 1 Hasta I = Lim) Hacer;
-        Mostrar << Admin[I].Usuario;
-        Mostrar << Admin[I].CI;
-        Mostrar << Admin[I].Cargo;
-        Mostrar << Admin[I].Gmail;
+        Mostrar << "Nombre: ", Admin[I].Usuario;
+        Mostrar << "Cédula: ", Admin[I].CI;
+        Mostrar << "Edad: ", Admin[I].Edad;
+        Mostrar << "Cargo: ", Admin[I].Cargo;
+        Mostrar << "Correo Electrónico: ", Admin[I].Gmail;
     Fin_Para
     Mostrar << "Docentes:";
     Para (I = 1 Hasta I = prof) Hacer;
-        Mostrar << Prof[I].Nombre;
-        Mostrar << Prof[I].CI;
-        Mostrar << Prof[I].Gmail;
-        Mostrar << Prof[I].Materias;
-        Mostrar << Prof[I].Cant_Materias;
-        Mostrar << Prof[I].Cant_Clases;
+        Mostrar << "Nombre: ", Prof[I].Nombre;
+        Mostrar << "Cédula: ", Prof[I].CI;
+        Mostrar << "Edad: ", Prof[I].Edad;
+        Mostrar << "Correo Electrónico: ", Prof[I].Gmail;
+        Mostrar << "Materias: ", Prof[I].Materias;
+        Mostrar << "Cantidad de Materias: ", Prof[I].Cant_Materias;
+        Mostrar << "Cantidad de clases: ", Prof[I].Cant_Clases;
     Fin_Para
     Mostrar << "Estudiantes: ";
     Para (I = 1 Hasta I = v) Hacer;
-        Mostrar << Datos[I].Nombre;
-        Mostrar << Datos[I].CI;
-        Mostrar << Datos[I].Gmail;
-        Mostrar << Datos[I].Carrera;
-        Mostrar << Datos[I].Year;
-        Mostrar << Datos[I].Semestre;
+        Mostrar << "Nombre: ", Datos[I].Nombre;
+        Mostrar << "Cédula: ", Datos[I].CI;
+        Mostrar << "Edad: ", Datos[I].Edad;
+        Mostrar << "Correo Electrónico: ", Datos[I].Gmail;
+        Mostrar << "Carrera: ", Datos[I].Carrera;
+        Mostrar << "Año: ", Datos[I].Year;
+        Mostrar << "Semestre: ", Datos[I].Semestre;
     Fin_Para
     
 Fin_Procedimiento

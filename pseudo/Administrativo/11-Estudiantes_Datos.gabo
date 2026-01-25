@@ -57,10 +57,18 @@ Inicio
             Gestion[C].Year = 0;
             Mostrar << "Ingrese el semestre del estudiante";
             Leer >> Gestion[C].Semestre;
+            Mientras (Gestion[C].Semestre < 1 or Gestion[C].Semestre > 10) Hacer;
+                Mostrar << "Es invalido";
+                Leer >> Gestion[C].Semestre;
+            Fin_Mientras
         Sino
             Gestion[C].Semestre = 0;
             Mostrar << "Ingrese el año del estudiante";
             Leer >> Gestion[C].Year;
+            Mientras (Gestion[C].Year < 1 or Gestion[C].Year > 6) Hacer;
+                Mostrar << "Es invalido";
+                Leer >> Gestion[C].Year;
+            Fin_Mientras
         Fin_Si
         Mostrar << "¿Desea anotar otra inscripción estudiantil? 1: Sí, 0: No";
         Leer >> Z;

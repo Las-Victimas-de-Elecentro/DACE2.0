@@ -1,6 +1,6 @@
-Procedimiento Salud_Estudiante(E/S: Datos.Salud[pos_usuario].Transmisibles, Datos.Salud[pos_usuario].Cronicas, Datos.Salud[pos_usuario].Neurologicas, Datos.Salud[pos_usuario].Neoplasias, Datos.Salud[pos_usuario].Autoinmunes, Datos.Salud[pos_usuario].Trastornos, Datos.Salud[pos_usuario].Lesiones, Datos.Salud[pos_usuario].Congenitas, Datos.Salud[pos_usuario].Metabolicos, Datos.Salud[pos_usuario].Ocupacionales: Cadena);
+Procedimiento Salud_Estudiante(E/S: pos_usuario: Entero, Datos[pos_usuario].Salud[pos_usuario].Transmisibles, Datos[pos_usuario].Salud[pos_usuario].Cronicas, Datos[pos_usuario].Salud[pos_usuario].Neurologicas, Datos[pos_usuario].Salud[pos_usuario].Neoplasias, Datos[pos_usuario].Salud[pos_usuario].Autoinmunes, Datos[pos_usuario].Salud[pos_usuario].Trastornos, Datos[pos_usuario].Salud[pos_usuario].Lesiones, Datos[pos_usuario].Salud[pos_usuario].Congenitas, Datos[pos_usuario].Salud[pos_usuario].Metabolicos, Datos[pos_usuario].Salud[pos_usuario].Ocupacionales: Cadena);
 Inicio
-    var Opc: Entero, R: Booleano;
+    Var Opc: Entero, R: Booleano;
     Repetir
         Mostrar << "Ingreso de información de salud";
         Mostrar << "¿Que tipo de enfermedad desea ingresar?";
@@ -23,34 +23,34 @@ Inicio
         En_Caso (Opc > 0) Sea;
             Caso(Opc = 1);
                 Mostrar << "Ingrese la enfermedad transmisible que padece";
-                Leer >> Datos.Salud[pos_usuario].Transmisibles;
+                Leer >> Datos[pos_usuario].Salud[pos_usuario].Transmisibles;
             Caso(Opc = 2);
                 Mostrar << "Ingrese la enfermedad cronica que padece";
-                Leer >> Datos.Salud[pos_usuario].Cronicas;
+                Leer >> Datos[pos_usuario].Salud[pos_usuario].Cronicas;
             Caso(Opc = 3);
                 Mostrar << "Ingrese la enfermedad neurologica que padece";
-                Leer >> Datos.Salud[pos_usuario].Neurologicas;
+                Leer >> Datos[pos_usuario].Salud[pos_usuario].Neurologicas;
             Caso(Opc = 4);
                 Mostrar << "Ingrese la enfermedad neoplasia que padece";
-                Leer >> Datos.Salud[pos_usuario].Neoplasias;
+                Leer >> Datos[pos_usuario].Salud[pos_usuario].Neoplasias;
             Caso(Opc = 5);
                 Mostrar << "Ingrese la enfermedad autoinmune que padece";
-                Leer >> Datos.Salud[pos_usuario].Autoinmunes;
+                Leer >> Datos[pos_usuario].Salud[pos_usuario].Autoinmunes;
             Caso(Opc = 6);
                 Mostrar << "Ingrese el transtorno que padece";
-                Leer >> Datos.Salud[pos_usuario].Trastornos;
+                Leer >> Datos[pos_usuario].Salud[pos_usuario].Trastornos;
             Caso(Opc = 7);
                 Mostrar << "Ingrese la lesión que padece";
-                Leer >> Datos.Salud[pos_usuario].Lesiones;
+                Leer >> Datos[pos_usuario].Salud[pos_usuario].Lesiones;
             Caso(Opc = 8);
                 Mostrar << "Ingrese la enfermedad congenita que padece";
-                Leer >> Datos.Salud[pos_usuario].Congenitas;
+                Leer >> Datos[pos_usuario].Salud[pos_usuario].Congenitas;
             Caso(Opc = 9);
                 Mostrar << "Ingrese el transtorno metabolico que padece";
-                Leer >> Datos.Salud[pos_usuario].Metabolicos;
+                Leer >> Datos[pos_usuario].Salud[pos_usuario].Metabolicos;
             Otro_Caso
                 Mostrar << "Ingrese la enfermedad ocupacional que padece";
-                Leer >> Datos.Salud[pos_usuario].Ocupacionales;
+                Leer >> Datos[pos_usuario].Salud[pos_usuario].Ocupacionales;
         Fin_Caso
         Mostrar << "Enfermedad ingresada con extio";
         Mostrar << "¿Desea ingresar otra enfermedad? Ingrese 1:Sí / 0:No";

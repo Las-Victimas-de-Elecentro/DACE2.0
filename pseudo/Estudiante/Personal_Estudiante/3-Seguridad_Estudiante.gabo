@@ -1,4 +1,4 @@
-Procedimiento Seguridad_Estudiante(E/S: Datos[pos_usuario].Password, Datos[pos_usuario].Gmail: Cadena);
+Procedimiento Seguridad_Estudiante(E/S: indice, pos_usuario: Entero, Datos[pos_usuario].Password, Datos[pos_usuario].Gmail, pass: Cadena, [Procedimiento Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, Minimo, Maximo, Acceso)], [Procedimiento Encriptacion(indice, pass)]);
 Inicio
     Var Opc, Intentos_Fallidos = 3: Entero, contra, contraNueva, NewG: Cadena, S = 0, R, Re: Booleano;
     

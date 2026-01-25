@@ -1,4 +1,4 @@
-Procedimiento Clases_Magistrales_Admin(E/S: Mag[I].ID_Clase, Mag[I].CI_Profesor: Entero, Mag[I].Nombre_Materia, Mag[I].Codigo_Materia, Mag[I].Nombre_Profesor: Cadena, Mag[I].Autorizacion: Booleano);
+Procedimiento Clases_Magistrales_Admin(E/S: magis, Mag[I].ID_Clase, Mag[I].CI_Profesor, Mag[I].Cant_Estudiantes: Entero, Mag[I].Nombre_Materia, Mag[I].Codigo_Materia, Mag[I].Nombre_Profesor, Mag[I].Fecha, Mag[I].Aula: Cadena, Mag[I].Horas, Mag[I].Precio: Real, Mag[I].Autorizacion: Booleano);
 Inicio
     Var R, R2: Booleano;
     Var I, ID: Entero;
@@ -43,6 +43,12 @@ Inicio
             Mag[Elim].Nombre_Profesor = Mag[magis - 1].Nombre_Profesor;
             Mag[Elim].CI_Profesor = Mag[magis - 1].CI_Profesor;
             Mag[Elim].Autorizacion = Mag[magis - 1].Autorizacion;
+            Mag[Elim].Fecha = Mag[magis - 1].Fecha;
+            Mag[Elim].Horas = Mag[magis - 1].Horas;
+            Mag[Elim].Aula = Mag[magis - 1].Aula;
+            Mag[Elim].Cant_Estudiantes = Mag[magis - 1].Cant_Estudiantes;
+            Mag[Elim].Precio = Mag[magis - 1].Precio;
+
 
             Mag[magis - 1].ID_Clase = 0;
             Mag[magis - 1].Nombre_Materia = null;
@@ -50,6 +56,11 @@ Inicio
             Mag[magis - 1].Nombre_Profesor = null;
             Mag[magis - 1].CI_Profesor = 0;
             Mag[magis - 1].Autorizacion = null;
+            Mag[magis - 1].Fecha = null;
+            Mag[magis - 1].Horas = 0;
+            Mag[magis - 1].Aula = null;
+            Mag[magis - 1].Cant_Estudiantes = 0;
+            Mag[magis - 1].Precio = 0;
             magis = magis - 1;
         Fin_Si
         Mostrar << "¿Desea aprobar otra Clase Magistral? 1: Sí, 0: No";

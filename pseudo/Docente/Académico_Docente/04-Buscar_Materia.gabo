@@ -1,8 +1,8 @@
-Procedimiento Buscar_Materia(E: Materias[i].Codigo, cod: Cadena, E/S: pos: Entero, encontrado: Booleano);
+Procedimiento Buscar_Materia(E: Materias[i].Codigo, cod: Cadena, E/S: encontrado: Booleano);
 Inicio
     Var i: Entero;
     encontrado = 0;
-    pos = 0;
+    Var pos = 0;
     Para (i = 1 Hasta i = 522) Hacer;
         Si (Materias[i].Codigo = cod) Entonces;
             encontrado = 1;

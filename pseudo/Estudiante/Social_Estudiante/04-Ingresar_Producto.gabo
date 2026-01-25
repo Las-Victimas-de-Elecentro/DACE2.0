@@ -1,4 +1,4 @@
-Procedimiento Ingresar_Producto(E/S: M, J2, C_MP[I].Cedula, A_MP[I].Cedula, S_MP[I].Cedula, C_MP[I].Stock, A_MP[I].Stock: Entero, C_MP[I].Precio, A_MP[I].Precio, S_MP[I].Precio: Real, C_MP[I].Vendedor, C_MP[I].Contacto, C_MP[I].Datos_Bancarios, C_MP[I].Producto, A_MP[I].Vendedor, A_MP[I].Contacto, A_MP[I].Datos_Bancarios, A_MP[I].Producto, S_MP[I].Vendedor, S_MP[I].Contacto, S_MP[I].Datos_Bancarios, S_MP[I].Producto: Cadena, S_MP[I].Disp: Booleano);
+Procedimiento Ingresar_Producto(E/S: M, J2, MP[J2].Cedula, C_MP[I].Cedula, A_MP[I].Cedula, S_MP[I].Cedula, C_MP[I].Stock, A_MP[I].Stock: Entero, C_MP[I].Precio, A_MP[I].Precio, S_MP[I].Precio: Real, MP[J2].Usuario, MP[J2].Contacto, MP[J2].Datos_Bancarios, C_MP[I].Vendedor, C_MP[I].Contacto, C_MP[I].Datos_Bancarios, C_MP[I].Producto, A_MP[I].Vendedor, A_MP[I].Contacto, A_MP[I].Datos_Bancarios, A_MP[I].Producto, S_MP[I].Vendedor, S_MP[I].Contacto, S_MP[I].Datos_Bancarios, S_MP[I].Producto: Cadena, S_MP[I].Disp: Booleano);
 Inicio
     Var I, R3: Entero;
     Var R4: Booleano;

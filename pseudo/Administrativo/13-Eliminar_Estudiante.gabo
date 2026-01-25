@@ -6,13 +6,14 @@ Inicio
         Mostrar << "Bienvenido a la eliminación de información de la base de Datos";
 		Mostrar << "A continuación se le mostrará la base de Datos para que pueda seleccionar la posición del estudiante que desea eliminar";
         Para (I = 1 hasta I = v) hacer;
-            Mostrar << I, Datos[I].Nombre;
-			Mostrar << Datos[I].CI;
-			Mostrar << Datos[I].Gmail;
-			Mostrar << Datos[I].Password;
-			Mostrar << Datos[I].Carrera;
-			Mostrar << Datos[I].Year;
-			Mostrar << Datos[I].Semestre;
+            Mostrar << I; 
+			Mostrar << "Nombre: ", Datos[I].Nombre;
+			Mostrar << "Cédula: ", Datos[I].CI;
+			Mostrar << "Correo Electrónico: ", Datos[I].Gmail;
+			Mostrar << "Contraseña: ", Datos[I].Password;
+			Mostrar << "Carrera: ", Datos[I].Carrera;
+			Mostrar << "Año: ", Datos[I].Year;
+			Mostrar << "Semestre: ", Datos[I].Semestre;
         Fin_Para
 		Mostrar << "Ingrese la posición del estudiante que usted desea borrar de la base de Datos";
 		Leer >> Eliminar;

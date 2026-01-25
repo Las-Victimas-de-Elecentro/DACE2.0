@@ -1,4 +1,4 @@
-Procedimiento Informacion_Club_Docente(E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles: Cadena, club, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
+Procedimiento Informacion_Club_Docente(E/S: Prof[pos].Club, Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles: Cadena, pos, club, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero, Prof[pos].Esta_en_Club: Booleano);
 Inicio
     Var Nombre_Club: Cadena;
     Si (Prof[pos].Esta_en_Club = 1) Entonces;

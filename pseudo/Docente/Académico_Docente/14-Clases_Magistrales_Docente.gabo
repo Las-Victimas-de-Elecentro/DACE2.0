@@ -1,4 +1,4 @@
-Procedimiento Clases_Magistrales_Docente(E/S: Materias[I].Codigo, Materias[I].Nombre, Prof[pos].Nombre, Mag[magis].Fecha, Mag[magis].Aula, Mag[magis].Nombre_Materia, Mag[magis].Codigo_Materia, Mag[magis].Nombre_Profesor: Cadena, Prof[pos].Cedula, Mag[magis].CI_Profesor, Mag[magis].ID_Clase, magis: Entero, Mag[magis].Horas, Mag[magis].Precio: Real);
+Procedimiento Clases_Magistrales_Docente(E/S: Materias[I].Codigo, Materias[I].Nombre, Prof[pos].Nombre, Mag[magis].Fecha, Mag[magis].Aula, Mag[magis].Nombre_Materia, Mag[magis].Codigo_Materia, Mag[magis].Nombre_Profesor: Cadena, pos, Prof[pos].CI, Mag[magis].CI_Profesor, Mag[magis].ID_Clase, magis: Entero, Mag[magis].Horas, Mag[magis].Precio: Real);
 Inicio
     Var cod: Cadena;
     Var I: Entero;
@@ -33,7 +33,7 @@ Inicio
                     Mag[magis].Nombre_Materia = Materias[I].Nombre;
                     Mag[magis].Codigo_Materia = Materias[I].Codigo;
                     Mag[magis].Nombre_Profesor = Prof[pos].Nombre;
-                    Mag[magis].CI_Profesor = Prof[pos].Cedula;
+                    Mag[magis].CI_Profesor = Prof[pos].CI;
                     magis = magis + 1;
                 Fin_Si
             Fin_Para

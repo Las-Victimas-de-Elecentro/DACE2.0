@@ -1,16 +1,4 @@
-Registro: Pasantias;  //Llave: Pas[P];
-    Nombre:             Cadena;
-    Edad, Cedula:       Entero;
-    Password:           Cadena;
-    Carrera:            Cadena;
-    Semestre:           Entero;
-    Year:               Entero;
-    Empresa:            Cadena;
-    Estado_Solicitud:   Entero;
-    Horas:              Real;
-Fin_Registro
-
-Procedimiento Pasantias (E/S: Pas[P].Nombre, Pas[P].Password, Pas[P].Carrera, Datos[pos_usuario].Carrera, Datos[pos_usuario].Nombre, Pas[I].Empresa: Cadena, Pas[P].Edad, Pas[P].Cedula, Pas[P].Semestre, Pas[P].Year, Datos[pos_usuario].Edad, Datos[pos_usuario].Semestre, Datos[pos_usuario].Year, Datos[pos_usuario].CI, Datos[pos_usuario].Materias_Aprobadas, Datos[pos_usuario].UC_Aprobadas, P, Pas[I].Estado_Solicitud: Entero, Pas[P].Horas: Real, Datos[pos_usuario].Servicio_Comunitario, K, Datos[pos_usuario].Pasantias: Booleano);
+Procedimiento Pasantias (E/S: Pas[P].Nombre, Pas[P].Password, Pas[P].Carrera, Datos[pos_usuario].Carrera, Datos[pos_usuario].Nombre, Pas[I].Empresa, Pas[J].Solicitud: Cadena, pos_usuario, Pas[P].Edad, Pas[P].Cedula, Pas[P].Semestre, Pas[P].Year, Datos[pos_usuario].Edad, Datos[pos_usuario].Semestre, Datos[pos_usuario].Year, Datos[pos_usuario].CI, Datos[pos_usuario].Materias_Aprobadas, Datos[pos_usuario].UC_Aprobadas, P, Pas[I].Estado_Solicitud: Entero, Pas[P].Horas: Real, Datos[pos_usuario].Servicio_Comunitario, K, Datos[pos_usuario].Pasantias: Booleano);
 Inicio
     Var R = 3, Cedula, opc: Entero;
     Var Password1, Password2, Nombre, Justificacion: Cadena;
@@ -367,8 +355,8 @@ Inicio
                                     Leer >> Nombre;
                                     Mostrar << "Ingrese la justificacion";
                                     Leer >> Justificacion;
-                                    Solicitud = "Nombre: ", Pas[J].Nombre, "Edad: ", Pas[J].Edad, "Cedula: ", Pas[J].Cedula, "Carrera: ", Pas[J].Carrera, "Semestre: ", Pas[J].Semestre, "Año: ", Pas[J].Year, "Estado de la solicitud: ",Pas[J].Estado_Solicitud;
-                                    Solicitud = Solicitud + Justificacion;    
+                                    Pas[J].Solicitud = "Nombre: ", Pas[J].Nombre, "Edad: ", Pas[J].Edad, "Cedula: ", Pas[J].Cedula, "Carrera: ", Pas[J].Carrera, "Semestre: ", Pas[J].Semestre, "Año: ", Pas[J].Year, "Estado de la solicitud: ", Pas[J].Estado_Solicitud;
+                                    Pas[J].Solicitud = Solicitud + Justificacion;    
                                     Pas[J].Estado_Solicitud = 2;
                                 Caso (R = 3);
                                     Mostrar << "Bienvenido a la sección de estado de solicitud, a continuación le diremos el estado actual de su solicitud";

@@ -1,4 +1,4 @@
-Procedimiento Cerrar_Asignacion(E/S: As: Entero, Prof[pos].Nombre, Asig[i].Nombre_Profesor, Asig[i].Estado, Asig[i].Titulo, Asig[i].Codigo_Materia, Asig[i].Fecha_Entrega: Cadena);
+Procedimiento Cerrar_Asignacion(E/S: pos, As, Asig[i].ID_Asignacion: Entero, Prof[pos].Nombre, Asig[i].Nombre_Profesor, Asig[i].Estado, Asig[i].Titulo, Asig[i].Codigo_Materia, Asig[i].Fecha_Entrega: Cadena);
 Inicio
     Var i: Entero;
     Var id: Entero, pos, pos2 = 1: Entero;

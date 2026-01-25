@@ -1,4 +1,4 @@
-Procedimiento Historial_Labor_Docente(E/S: Clase[I].Nombre_Profesor, Clase[I].Codigo_Materia, Clase[I].Periodo: Cadena, Clase[I].CI_Profesor, Clase[I].Cant_Estudiantes: Entero);
+Procedimiento Historial_Labor_Docente(E/S: Clase[I].Nombre_Profesor, Clase[I].Codigo_Materia, Clase[I].Periodo: Cadena, class, Clase[I].CI_Profesor, Clase[I].Cant_Estudiantes: Entero);
 Inicio
     Var opc, CI, I: Entero, R: Booleano;
     Repetir
@@ -12,7 +12,7 @@ Inicio
             Leer >> opc;
         Fin_Mientras
         Si (opc = 1) Entonces;
-            Para (I = 1 Hasta I = 500) Hacer;
+            Para (I = 1 Hasta I = class) Hacer;
                 Mostrar << Clase[I].Nombre_Profesor;
                 Mostrar << Clase[I].CI_Profesor;
                 Mostrar << Clase[I].Codigo_Materia;
@@ -27,7 +27,7 @@ Inicio
                 Mostrar << "Es invalido, solo cedulas positivas y que estén vivos";
                 Leer >> CI;
             Fin_Mientras
-            Para (I = 1 Hasta I = 500) Hacer;
+            Para (I = 1 Hasta I = class) Hacer;
                 Si (CI = Clase[I].CI_Profesor) Entonces;
                     Mostrar << Clase[I].Nombre_Profesor;
                     Mostrar << Clase[I].CI_Profesor;

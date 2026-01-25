@@ -1,4 +1,4 @@
-Procedimiento Agregar_Materia(E/S: Prof[pos].Materias, Materias[I].Nombre, Materias[I].Codigo: Cadena, Prof[pos].Cant_Materias: Entero);
+Procedimiento Agregar_Materia(E/S: pos: Entero, Prof[pos].Materias, Materias[I].Nombre, Materias[I].Codigo: Cadena, Prof[pos].Cant_Materias: Entero);
 Inicio
     Var Cant, I: Entero;
     Var Materias, Codigo: Cadena;

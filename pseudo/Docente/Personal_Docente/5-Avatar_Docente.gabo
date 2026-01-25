@@ -1,6 +1,6 @@
-Procedimiento Avatar_Docente(E/S: Avatares[I], Prof[pos].Avatar: Cadena);
+Procedimiento Avatar_Docente(E/S: pos: Entero, Avatares[I], Prof[pos].Avatar: Cadena);
 Inicio
-    var Opc: entero, A = 0, R:Booleano;
+    Var Opc: Entero, A = 0, R: Booleano;
     Repetir
         Mostrar << "Gestión de avatar";
         Mostrar << "Puedes seleccionar un avatar o dejar el predeterminado.";
@@ -24,10 +24,6 @@ Inicio
         
         Mostrar << "¿Estás seguro de que quieres usar este avatar? Ingrese 1:Sí / 0:No";
         Leer >> A;
-        Mientras (A < 0 Or A > 1) Hacer;
-            Mostrar << "Ingrese solo opciones entre 0-1";
-            Leer >> A;
-        Fin_Mientras
         
         En_Caso (A > 0) Sea;
             Caso(Opc = 1);

@@ -1,10 +1,8 @@
-Procedimiento Inscripcion(E/S: Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, Lista[I].Nombre, Datos[I].Nombre: Cadena, Clase[K].Seccion, Lista[I].Cedula, Datos[I].CI, Clase[K].Cant_Estudiantes, I: Entero);
+Procedimiento Inscripcion(E/S: Datos[pos_usuario].Carrera, cod: Cadena, pos_usuario, J: Entero, [Procedimiento Buscar_Materia_Inscripcion(cod, Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, Lista[I].Nombre, Datos[I].Nombre, pos_usuario, Clase[K].Cant_Estudiantes, Clase[K].Seccion, Lista[I].Cedula, Datos[I].CI, J, I)]);
 Inicio
-    Var cod: Cadena;
-    Var J, K: Entero;
     Mostrar << "Ingrese el código de la materia que quiere inscribir:";
     Leer >> cod;
-    Buscar_Materia_Inscripcion(cod, Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, Lista[I].Nombre, Datos[I].Nombre, Clase[K].Cant_Estudiantes, Clase[K].Seccion, Lista[I].Cedula, Datos[I].CI, J, I);
+    Buscar_Materia_Inscripcion(cod, Materias[J].Codigo, Clase[K].Codigo, Clase[K].Nombre_Profesor, Clase[K].Dia, Clase[K].Hora_Inicio, Clase[K].Hora_Fin, Clase[K].Aula, Lista[I].Nombre, Datos[I].Nombre, pos_usuario, Clase[K].Cant_Estudiantes, Clase[K].Seccion, Lista[I].Cedula, Datos[I].CI, J, I);
     En_Caso (Datos[pos_usuario].Carrera <> "Ninguna") Sea;
         Caso(Datos[pos_usuario].Carrera = "Informatica");
             Para (J = 1 Hasta J = 59) Hacer;
