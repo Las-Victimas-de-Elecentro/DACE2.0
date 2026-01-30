@@ -25,7 +25,7 @@ Inicio
             Publi[Ver].Cant_Reacciones = Publi[Ver].Cant_Reacciones + 1;
             react = react + 1;
         Caso(opc = 2);
-            Comentar(com, Com[com].ID_Publicacion, Com[com].ID_Comentario, Com[com].Comentario, Com[com].Fecha, Com[com].Autor);
+            Comentar(com, Com[com].ID_Publicacion, Com[com].ID_Comentario, Com[com].Comentario, Com[com].Fecha, Com[com].Autor, Com[com].Imagen);
             Mostrar << Comentar;
             Publi[Ver].Comentarios = Publi[Ver].Comentarios + 1;
         Caso(opc = 3);
@@ -33,7 +33,7 @@ Inicio
                 Mostrar << "¿Desea ver los comentarios? 1: Sí, 0: No";
                 Leer >> R2;
                 Si (R2 = 1) Entonces;
-                    Comentarios(Ver, re, react, Publi[Ver].ID_Publicacion, Publi[Ver].Comentarios, Com[J].ID_Publicacion, Com[J].ID_Comentario, Com[J].Cant_Reacciones, Res[K].Cant_Reacciones, Res[re].ID_Comentario, Res[re].ID_Respuesta, Rea[react].ID_Publicacion, Rea[react].ID_Comentario, Rea[react].ID_Respuesta, Rea[react].ID_Reacciones, Com[J].Respuestas, Com[J].Autor, Com[J].Fecha, Com[J].Tipo_Reaccion1, Com[J].Tipo_Reaccion2, Com[J].Tipo_Reaccion3, Com[J].Comentario, Res[re].Comentario, Res[re].Autor, Res[re].Fecha, [Procedimiento Agregar_Reaccion(Aux, Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[react].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[react].Cant_Molesta, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta)]);
+                    Comentarios(Ver, re, react, Publi[Ver].ID_Publicacion, Publi[Ver].Comentarios, Com[J].ID_Publicacion, Com[J].ID_Comentario, Com[J].Cant_Reacciones, Res[K].Cant_Reacciones, Res[re].ID_Comentario, Res[re].ID_Respuesta, Rea[react].ID_Publicacion, Rea[react].ID_Comentario, Rea[react].ID_Respuesta, Rea[react].ID_Reacciones, Com[J].Respuestas, Com[J].Autor, Com[J].Fecha, Com[J].Tipo_Reaccion1, Com[J].Tipo_Reaccion2, Com[J].Tipo_Reaccion3, Com[J].Comentario, Res[re].Comentario, Res[re].Autor, Res[re].Fecha, Com[J].Imagen, Res[re].Imagen, [Procedimiento Agregar_Reaccion(Aux, Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[react].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[react].Cant_Molesta, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta)]);
                     Mostrar << Comentarios;
                 Fin_Si
             Sino

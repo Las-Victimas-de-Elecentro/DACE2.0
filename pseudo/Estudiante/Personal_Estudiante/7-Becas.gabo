@@ -1,0 +1,38 @@
+Procedimiento Becas(E/S: be, pos_usuario, Beca[be].CI, Datos[pos_usuario].CI: Entero, Beca[be].Nombre, Datos[pos_usuario].Nombre, Beca[be].Carta_Motivacion, Beca[be].Carta_Recomendacion: Cadena);
+Inicio
+    Var Encontrado = 0, R: Booleano;
+    Var I: Entero;
+    Para (I = 1 Hasta I = be) Hacer;
+        Si (Datos[pos_usuario].CI = Beca[I].CI) Entonces;
+            Encontrado = 1;
+        Fin_Si
+    Fin_Para
+    Si (Encontrado = 1) Entonces;
+        Mostrar << "Usted ya tiene una beca registrada.";
+    Sino
+        Mostrar << "¡Bienvenido al apartado de solicitar becas!";
+        Beca[be].Nombre = Datos[pos_usuario].Nombre;
+        Beca[be].CI = Datos[pos_usuario].CI;
+        Mostrar << "Ingrese el motivo de la beca";
+        Mostrar << "¿Tiene carta de recomendación? 1: Sí, 0: No";
+        Leer >> R;
+        Si (R = 1) Entonces;
+            Mostrar << "Ingrese el texto de la carta.";
+            Leer >> Beca[be].Carta_Recomendacion;
+        Sino
+            Mostrar << "Perfecto, siga adelante.";
+            Beca[be].Carta_Recomendacion = null;
+        Fin_Si
+        Mostrar << "¿Tiene carta de Motivación? 1: Sí, 0: No";
+        Leer >> R;
+        Si (R = 1) Entonces;
+            Mostrar << "Ingrese el texto de la carta";
+            Leer >> Beca[be].Carta_Motivacion;
+        Sino
+            Mostrar << "Perfecto.";
+            Beca[be].Carta_Motivacion = null;
+        Fin_Si
+        Mostrar << "Beca registrada automáticamente.";
+        be = be + 1;
+    Fin_Si
+Fin_Procedimiento

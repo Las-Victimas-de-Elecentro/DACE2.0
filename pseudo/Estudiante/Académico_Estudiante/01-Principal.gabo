@@ -16,6 +16,7 @@ Inicio
         Mostrar << "9: Carnetización";
         Mostrar << "10: Pasantías";
         Mostrar << "11: Servicio Comunitario";
+        Mostrar << "12: Asesoría estudiantil";
         Leer >> opc;
         Mientras (opc < 1 or opc > 11) Hacer;
             Mostrar << "Es invalido";
@@ -52,9 +53,13 @@ Inicio
             Caso(opc = 10);
                 Pasantias(Pas[P].Nombre, Pas[P].Password, Pas[P].Carrera, Datos[pos_usuario].Carrera, Datos[pos_usuario].Nombre, Pas[I].Empresa, Pas[J].Solicitud, pos_usuario, Pas[P].Edad, Pas[P].Cedula, Pas[P].Semestre, Pas[P].Year, Datos[pos_usuario].Edad, Datos[pos_usuario].Semestre, Datos[pos_usuario].Year, Datos[pos_usuario].CI, Datos[pos_usuario].Materias_Aprobadas, Datos[pos_usuario].UC_Aprobadas, P, Pas[I].Estado_Solicitud, Pas[P].Horas, Datos[pos_usuario].Servicio_Comunitario, K, Datos[pos_usuario].Pasantias);
                 Mostrar << Pasantias;
-            Otro_Caso
+            Caso(opc = 11);
                 Comunitario(SerC[N].Nombre, SerC[N].Area, Datos[pos_usuario].Carrera, Datos[pos_usuario].Nombre, pos_usuario, SerC[N].Edad, SerC[N].Cedula, SerC[N].Semestre, SerC[N].Year, Datos[pos_usuario].Edad, Datos[pos_usuario].Semestre, Datos[pos_usuario].Year, Datos[pos_usuario].CI, Datos[pos_usuario].Materias_Aprobadas, N, Datos[pos_usuario].Servicio_Comunitario, Ad.Servicio_Comunitario, Inscripciones, SerC[N].Horas_Realizadas);
                 Mostrar << Comunitario;
+            Otro_Caso
+                Mostrar << "Bienvenido a la asesoría estudiantil.";
+                Mostrar << "Contáctese con este profesor para coordinar su asesoría con el profesor de la materia correspondiente.";
+                Mostrar << "0424-1493986";
         Fin_Caso
         Mostrar << "¿Desea salir del sistema? 1: Sí, 0: No";
         Leer >> R;

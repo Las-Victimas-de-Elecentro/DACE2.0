@@ -1,6 +1,7 @@
-Procedimiento Crear_Publicacion(E/S: pub, Publi[pub].ID_Publicacion: Entero, Publi[pub].Fecha, Publi[pub].Tema, Publi[pub].Normas, Publi[pub].Texto, Publi[pub].Etiqueta, Publi[pub].Autor: Cadena);
+Procedimiento Crear_Publicacion(E/S: pub, Publi[pub].ID_Publicacion: Entero, Publi[pub].Fecha, Publi[pub].Tema, Publi[pub].Normas, Publi[pub].Texto, Publi[pub].Etiqueta, Publi[pub].Autor, Publi[pub].Imagen: Cadena);
 Inicio
-    Var R, R2: Booleano;
+    Var R, R2, R_Img: Booleano;
+    Var Img: Entero;
     Mostrar << "|  Creación de Publicaciones  |";
     Repetir
         Repetir
@@ -14,7 +15,29 @@ Inicio
             Leer >> Publi[pub].Texto;
             Mostrar << "Ingrese la etiqueta que tendrá la publicación para poder ser encontrada";
             Leer >> Publi[pub].Etiqueta;
-            
+            Mostrar << "¿Desea ingresar una imagen a su publicacion? Ingrese: 1: Si / 0: No: ";
+            Leer >> R_Img;
+
+            Si (R_Img = 1) Entonces;
+                Mostrar << "Seleccione una imagen";
+                Mostrar << "1: Trollface";
+                Mostrar << "2: Among Us";
+                Mostrar << "3: Chill de Cojones";
+                Mostrar << "4: Shrek";
+                Mostrar << "5: Gato Pitufo";
+                Mostrar << "6: Mr: Increible";
+                Mostrar << "7: Spiderman";
+                Mostrar << "8: Sigma";
+                Mostrar << "9: Megamente";
+                Mostrar << "10: Freddy Fazbear";
+                Mostrar << "Ingrese: ";
+                Leer >> Img;
+                Mientras (Img < 1 Or Img > 10) Hacer;
+                    Mostrar << "Ingrese solo valores entre 1-10: ";
+                    Leer >> Img;
+                Fin_Mientras
+            Fin_Si
+            Publi[pub].Imagen = Imagenes[Img];
             Mostrar << Publi[pub].Fecha;
             Mostrar << Publi[pub].Tema;
             Mostrar << Publi[pub].Normas;

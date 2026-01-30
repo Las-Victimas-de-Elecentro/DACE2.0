@@ -1,9 +1,10 @@
-Procedimiento Comentarios(E/S: Ver, re, react, Publi[Ver].ID_Publicacion, Publi[Ver].Comentarios, Com[J].ID_Publicacion, Com[J].ID_Comentario, Com[J].Cant_Reacciones, Res[K].Cant_Reacciones, Res[re].ID_Comentario, Res[re].ID_Respuesta, Rea[react].ID_Publicacion, Rea[react].ID_Comentario, Rea[react].ID_Respuesta, Rea[react].ID_Reacciones, Com[J].Respuestas: Entero, Com[J].Autor, Com[J].Fecha, Com[J].Tipo_Reaccion1, Com[J].Tipo_Reaccion2, Com[J].Tipo_Reaccion3, Com[J].Comentario, Res[re].Comentario, Res[re].Autor, Res[re].Fecha: Cadena, [Procedimiento Agregar_Reaccion(Aux, Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[react].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[react].Cant_Molesta, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta)]);
+Procedimiento Comentarios(E/S: Ver, re, react, Publi[Ver].ID_Publicacion, Publi[Ver].Comentarios, Com[J].ID_Publicacion, Com[J].ID_Comentario, Com[J].Cant_Reacciones, Res[K].Cant_Reacciones, Res[re].ID_Comentario, Res[re].ID_Respuesta, Rea[react].ID_Publicacion, Rea[react].ID_Comentario, Rea[react].ID_Respuesta, Rea[react].ID_Reacciones, Com[J].Respuestas: Entero, Com[J].Autor, Com[J].Fecha, Com[J].Tipo_Reaccion1, Com[J].Tipo_Reaccion2, Com[J].Tipo_Reaccion3, Com[J].Comentario, Res[re].Comentario, Res[re].Autor, Res[re].Fecha, Com[J].Imagen, Res[re].Imagen: Cadena, [Procedimiento Agregar_Reaccion(Aux, Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[react].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[react].Cant_Molesta, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta)]);
 Inicio
     Var J, K, opc: Entero;
     Para (J = 1 Hasta J = com) Hacer;
         Si (Publi[Ver].ID_Publicacion = Com[J].ID_Publicacion) Entonces;
             Mostrar << Com[J].Autor;
+            Mostrar << Com[J].Imagen;
             Mostrar << Com[J].Fecha;
             Mostrar << Com[J].Comentario;
             Mostrar << Com[J].Cant_Reacciones;
@@ -28,6 +29,29 @@ Inicio
                         Leer >> R5;
                         Hasta(R5 = 1);
                     Fin_Repetir
+                    Mostrar << "¿Desea ingresar una imagen a su publicacion? Ingrese: 1: Si / 0: No: ";
+                    Leer >> R_Img;
+
+                    Si (R_Img = 1) Entonces;
+                        Mostrar << "Seleccione una imagen";
+                        Mostrar << "1: Trollface";
+                        Mostrar << "2: Among Us";
+                        Mostrar << "3: Chill de Cojones";
+                        Mostrar << "4: Shrek";
+                        Mostrar << "5: Gato Pitufo";
+                        Mostrar << "6: Mr: Increible";
+                        Mostrar << "7: Spiderman";
+                        Mostrar << "8: Sigma";
+                        Mostrar << "9: Megamente";
+                        Mostrar << "10: Freddy Fazbear";
+                        Mostrar << "Ingrese: ";
+                        Leer >> Img;
+                        Mientras (Img < 1 Or Img > 10) Hacer;
+                            Mostrar << "Ingrese solo valores entre 1-10: ";
+                            Leer >> Img;
+                        Fin_Mientras
+                    Fin_Si
+                    Res[re].Imagen = Imagenes[Img];
                     Res[re].ID_Comentario = Com[J].ID_Comentario;
                     Res[re].ID_Respuesta = re;
                     Res[re].Autor = Datos[pos_usuario].Nombre;
@@ -48,6 +72,7 @@ Inicio
                     Para (K = 1 Hasta K = re) Hacer;
                         Si (Com[J].ID_Comentario = Res[K].ID_Comentario) Entonces;
                             Mostrar << Res[K].Autor;
+                            Mostrar << Res[K].Imagen;
                             Mostrar << Res[K].Respuesta;
                             Mostrar << Res[K].Fecha;
                             Mostrar << Res[K].Cant_Reacciones;

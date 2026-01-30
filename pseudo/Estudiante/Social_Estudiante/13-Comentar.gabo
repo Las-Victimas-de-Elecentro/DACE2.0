@@ -1,6 +1,7 @@
-Procedimiento Comentar(E/S: com, Ver, Com[com].ID_Publicacion, Com[com].ID_Comentario, Publi[Ver].Comentarios: Entero, Com[com].Comentario, Com[com].Fecha, Com[com].Autor: Cadena);
+Procedimiento Comentar(E/S: com, Ver, Com[com].ID_Publicacion, Com[com].ID_Comentario, Publi[Ver].Comentarios: Entero, Com[com].Comentario, Com[com].Fecha, Com[com].Autor, Com[com].Imagen: Cadena);
 Inicio
-    Var R: Booleano;
+    Var R, R_Img: Booleano;
+    Var Img: Entero;
     Repetir
         Mostrar << "Ingrese su comentario";
         Leer >> Com[com].Comentario;
@@ -10,6 +11,29 @@ Inicio
         Leer >> R;
         Hasta(R = 1);
     Fin_Repetir
+    Mostrar << "¿Desea ingresar una imagen a su publicacion? Ingrese: 1: Si / 0: No: ";
+    Leer >> R_Img;
+
+    Si (R_Img = 1) Entonces;
+        Mostrar << "Seleccione una imagen";
+        Mostrar << "1: Trollface";
+        Mostrar << "2: Among Us";
+        Mostrar << "3: Chill de Cojones";
+        Mostrar << "4: Shrek";
+        Mostrar << "5: Gato Pitufo";
+        Mostrar << "6: Mr: Increible";
+        Mostrar << "7: Spiderman";
+        Mostrar << "8: Sigma";
+        Mostrar << "9: Megamente";
+        Mostrar << "10: Freddy Fazbear";
+        Mostrar << "Ingrese: ";
+        Leer >> Img;
+        Mientras (Img < 1 Or Img > 10) Hacer;
+            Mostrar << "Ingrese solo valores entre 1-10: ";
+            Leer >> Img;
+        Fin_Mientras
+    Fin_Si
+    Com[com].Imagen = Imagenes[Img];
     Com[com].ID_Publicacion = Publi[Ver].ID_Publicacion;
     Com[com].ID_Comentario = com;
     Com[com].Autor = Datos[pos_usuario].Nombre;
