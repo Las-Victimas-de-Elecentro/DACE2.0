@@ -1,14 +1,14 @@
 -------------------- REPORTE DE TODO EL PSEUDO --------------------
 Total de archivos: 153
-Total de lineas: 22406
+Total de lineas: 22405
 Total de funciones: 1
 Total de registros: 49
 Total de procedimientos: 151
 Total de variables: 465
-Total de parametros en procedimientos: 16045
+Total de parametros en procedimientos: 16043
   - De Entrada: 3
-  - De Salida: 8822
-  - De Entrada/Salida: 7220
+  - De Salida: 8821
+  - De Entrada/Salida: 7219
 --------------------------------------------------------------------
 
 ARCHIVO: .\Principal.gabo
@@ -9435,7 +9435,6 @@ ARCHIVO: .\Estudiante\Académico_Estudiante\01-Principal.gabo
         - Datos[pos_usuario].Nombre
         - Rep[i].Recibido)]
         - [Procedimiento Historial_Carreras(Datos[pos_usuario].Carrera
-        - Datos[pos_usuario].Actas
         - pos_usuario
         - Contador
         - Suma
@@ -17447,7 +17446,6 @@ ARCHIVO: .\Relleno\Relleno_Estudiante.gabo
         - Datos[I].Telefono
         - Datos[I].Gmail
         - Datos[I].Password
-        - Datos[I].Actas
         - Datos[I].Club
         - Datos[I].Enfermedad
         - Publi[I].Autor
