@@ -1,14 +1,14 @@
 -------------------- REPORTE DE TODO EL PSEUDO --------------------
-Total de archivos: 155
-Total de lineas: 21971
+Total de archivos: 156
+Total de lineas: 22245
 Total de funciones: 1
 Total de registros: 46
-Total de procedimientos: 153
-Total de variables: 460
-Total de parametros en procedimientos: 15729
+Total de procedimientos: 154
+Total de variables: 465
+Total de parametros en procedimientos: 15777
   - De Entrada: 3
-  - De Salida: 8637
-  - De Entrada/Salida: 7089
+  - De Salida: 8667
+  - De Entrada/Salida: 7107
 --------------------------------------------------------------------
 
 ARCHIVO: .\Principal.gabo
@@ -90,6 +90,7 @@ ARCHIVO: .\Principal.gabo
     - Rol:  Cadena
     - cod:  Cadena
     - Avatares[11]:  Cadena
+    - Imagenes[10]:  Cadena
     - pass:  Cadena
     - R:  Booleano
     - R2:  Booleano
@@ -7607,7 +7608,7 @@ ARCHIVO: .\Estudiante\Principal_Estudiante.gabo
         - Rea[I].Cant_Divierte
         - Rea[I].Cant_Asombra
         - Rea[I].Cant_Entristece
-        - Rea[I].Cant_Molesta: Entero
+        - Rea[I].Cant_Molesta
         - Rea[I].Me_Gusta
         - Rea[I].Me_Encanta
         - Rea[I].Me_Importa
@@ -7622,7 +7623,8 @@ ARCHIVO: .\Estudiante\Principal_Estudiante.gabo
         - Publi[pub].Normas
         - Publi[pub].Texto
         - Publi[pub].Etiqueta
-        - Publi[pub].Autor)]
+        - Publi[pub].Autor
+        - Publi[pub].Imagen)]
         - [Procedimiento Publicaciones(Aux
         - Ver
         - pos_usuario
@@ -7639,6 +7641,7 @@ ARCHIVO: .\Estudiante\Principal_Estudiante.gabo
         - Publi[Ver].Tipo_Reaccion2
         - Publi[Ver].Tipo_Reaccion3
         - Publi[Ver].Etiqueta
+        - Publi[Ver].Imagen
         - Publi[Ver].Activo
         - [Procedimiento Opciones_Publicacion(Aux
         - Ver
@@ -7673,7 +7676,8 @@ ARCHIVO: .\Estudiante\Principal_Estudiante.gabo
         - Com[com].ID_Comentario
         - Com[com].Comentario
         - Com[com].Fecha
-        - Com[com].Autor)]
+        - Com[com].Autor
+        - Com[com].Imagen)]
         - [Procedimiento Comentarios(Ver
         - re
         - react
@@ -7699,6 +7703,8 @@ ARCHIVO: .\Estudiante\Principal_Estudiante.gabo
         - Res[re].Comentario
         - Res[re].Autor
         - Res[re].Fecha
+        - Com[J].Imagen
+        - Res[re].Imagen
         - [Procedimiento Agregar_Reaccion(Aux
         - Rea[react].Cant_Gusta
         - Rea[react].Cant_Encanta
@@ -7812,6 +7818,7 @@ ARCHIVO: .\Estudiante\Principal_Estudiante.gabo
         - Publi[I].Tipo_Reaccion1
         - Publi[I].Tipo_Reaccion2
         - Publi[I].Tipo_Reaccion3
+        - Publi[I].Imagen
         - Publi[I].Activo)]
         - [Procedimiento Ranking(Ver
         - pub
@@ -7826,6 +7833,7 @@ ARCHIVO: .\Estudiante\Principal_Estudiante.gabo
         - Publi[I].Tipo_Reaccion2
         - Publi[I].Tipo_Reaccion3
         - Publi[I].Etiqueta
+        - Publi[I].Imagen
         - [Procedimiento Opciones_Publicacion(Aux
         - Ver
         - react
@@ -7859,7 +7867,8 @@ ARCHIVO: .\Estudiante\Principal_Estudiante.gabo
         - Com[com].ID_Comentario
         - Com[com].Comentario
         - Com[com].Fecha
-        - Com[com].Autor)]
+        - Com[com].Autor
+        - Com[com].Imagen)]
         - [Procedimiento Comentarios(Ver
         - re
         - react
@@ -7885,6 +7894,8 @@ ARCHIVO: .\Estudiante\Principal_Estudiante.gabo
         - Res[re].Comentario
         - Res[re].Autor
         - Res[re].Fecha
+        - Com[J].Imagen
+        - Res[re].Imagen
         - [Procedimiento Agregar_Reaccion(Aux
         - Rea[react].Cant_Gusta
         - Rea[react].Cant_Encanta
@@ -13729,7 +13740,7 @@ ARCHIVO: .\Estudiante\Social_Estudiante\01-Principal.gabo
         - Rea[I].Cant_Divierte
         - Rea[I].Cant_Asombra
         - Rea[I].Cant_Entristece
-        - Rea[I].Cant_Molesta: Entero
+        - Rea[I].Cant_Molesta
         - Rea[I].Me_Gusta
         - Rea[I].Me_Encanta
         - Rea[I].Me_Importa
@@ -13744,7 +13755,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\01-Principal.gabo
         - Publi[pub].Normas
         - Publi[pub].Texto
         - Publi[pub].Etiqueta
-        - Publi[pub].Autor)]
+        - Publi[pub].Autor
+        - Publi[pub].Imagen)]
         - [Procedimiento Publicaciones(Aux
         - Ver
         - pos_usuario
@@ -13761,6 +13773,7 @@ ARCHIVO: .\Estudiante\Social_Estudiante\01-Principal.gabo
         - Publi[Ver].Tipo_Reaccion2
         - Publi[Ver].Tipo_Reaccion3
         - Publi[Ver].Etiqueta
+        - Publi[Ver].Imagen
         - Publi[Ver].Activo
         - [Procedimiento Opciones_Publicacion(Aux
         - Ver
@@ -13795,7 +13808,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\01-Principal.gabo
         - Com[com].ID_Comentario
         - Com[com].Comentario
         - Com[com].Fecha
-        - Com[com].Autor)]
+        - Com[com].Autor
+        - Com[com].Imagen)]
         - [Procedimiento Comentarios(Ver
         - re
         - react
@@ -13821,6 +13835,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\01-Principal.gabo
         - Res[re].Comentario
         - Res[re].Autor
         - Res[re].Fecha
+        - Com[J].Imagen
+        - Res[re].Imagen
         - [Procedimiento Agregar_Reaccion(Aux
         - Rea[react].Cant_Gusta
         - Rea[react].Cant_Encanta
@@ -13934,6 +13950,7 @@ ARCHIVO: .\Estudiante\Social_Estudiante\01-Principal.gabo
         - Publi[I].Tipo_Reaccion1
         - Publi[I].Tipo_Reaccion2
         - Publi[I].Tipo_Reaccion3
+        - Publi[I].Imagen
         - Publi[I].Activo)]
         - [Procedimiento Ranking(Ver
         - pub
@@ -13948,6 +13965,7 @@ ARCHIVO: .\Estudiante\Social_Estudiante\01-Principal.gabo
         - Publi[I].Tipo_Reaccion2
         - Publi[I].Tipo_Reaccion3
         - Publi[I].Etiqueta
+        - Publi[I].Imagen
         - [Procedimiento Opciones_Publicacion(Aux
         - Ver
         - react
@@ -13981,7 +13999,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\01-Principal.gabo
         - Com[com].ID_Comentario
         - Com[com].Comentario
         - Com[com].Fecha
-        - Com[com].Autor)]
+        - Com[com].Autor
+        - Com[com].Imagen)]
         - [Procedimiento Comentarios(Ver
         - re
         - react
@@ -14007,6 +14026,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\01-Principal.gabo
         - Res[re].Comentario
         - Res[re].Autor
         - Res[re].Fecha
+        - Com[J].Imagen
+        - Res[re].Imagen
         - [Procedimiento Agregar_Reaccion(Aux
         - Rea[react].Cant_Gusta
         - Rea[react].Cant_Encanta
@@ -14374,7 +14395,7 @@ ARCHIVO: .\Estudiante\Social_Estudiante\07-Foro_Estudiantes.gabo
         - Rea[I].Cant_Divierte
         - Rea[I].Cant_Asombra
         - Rea[I].Cant_Entristece
-        - Rea[I].Cant_Molesta: Entero
+        - Rea[I].Cant_Molesta
         - Rea[I].Me_Gusta
         - Rea[I].Me_Encanta
         - Rea[I].Me_Importa
@@ -14389,7 +14410,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\07-Foro_Estudiantes.gabo
         - Publi[pub].Normas
         - Publi[pub].Texto
         - Publi[pub].Etiqueta
-        - Publi[pub].Autor)]
+        - Publi[pub].Autor
+        - Publi[pub].Imagen)]
         - [Procedimiento Publicaciones(Aux
         - Ver
         - pos_usuario
@@ -14406,6 +14428,7 @@ ARCHIVO: .\Estudiante\Social_Estudiante\07-Foro_Estudiantes.gabo
         - Publi[Ver].Tipo_Reaccion2
         - Publi[Ver].Tipo_Reaccion3
         - Publi[Ver].Etiqueta
+        - Publi[Ver].Imagen
         - Publi[Ver].Activo
         - [Procedimiento Opciones_Publicacion(Aux
         - Ver
@@ -14440,7 +14463,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\07-Foro_Estudiantes.gabo
         - Com[com].ID_Comentario
         - Com[com].Comentario
         - Com[com].Fecha
-        - Com[com].Autor)]
+        - Com[com].Autor
+        - Com[com].Imagen)]
         - [Procedimiento Comentarios(Ver
         - re
         - react
@@ -14466,6 +14490,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\07-Foro_Estudiantes.gabo
         - Res[re].Comentario
         - Res[re].Autor
         - Res[re].Fecha
+        - Com[J].Imagen
+        - Res[re].Imagen
         - [Procedimiento Agregar_Reaccion(Aux
         - Rea[react].Cant_Gusta
         - Rea[react].Cant_Encanta
@@ -14579,6 +14605,7 @@ ARCHIVO: .\Estudiante\Social_Estudiante\07-Foro_Estudiantes.gabo
         - Publi[I].Tipo_Reaccion1
         - Publi[I].Tipo_Reaccion2
         - Publi[I].Tipo_Reaccion3
+        - Publi[I].Imagen
         - Publi[I].Activo)]
         - [Procedimiento Ranking(Ver
         - pub
@@ -14593,6 +14620,7 @@ ARCHIVO: .\Estudiante\Social_Estudiante\07-Foro_Estudiantes.gabo
         - Publi[I].Tipo_Reaccion2
         - Publi[I].Tipo_Reaccion3
         - Publi[I].Etiqueta
+        - Publi[I].Imagen
         - [Procedimiento Opciones_Publicacion(Aux
         - Ver
         - react
@@ -14626,7 +14654,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\07-Foro_Estudiantes.gabo
         - Com[com].ID_Comentario
         - Com[com].Comentario
         - Com[com].Fecha
-        - Com[com].Autor)]
+        - Com[com].Autor
+        - Com[com].Imagen)]
         - [Procedimiento Comentarios(Ver
         - re
         - react
@@ -14652,6 +14681,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\07-Foro_Estudiantes.gabo
         - Res[re].Comentario
         - Res[re].Autor
         - Res[re].Fecha
+        - Com[J].Imagen
+        - Res[re].Imagen
         - [Procedimiento Agregar_Reaccion(Aux
         - Rea[react].Cant_Gusta
         - Rea[react].Cant_Encanta
@@ -14687,11 +14718,14 @@ ARCHIVO: .\Estudiante\Social_Estudiante\08-Crear_Publicacion.gabo
         - Publi[pub].Normas
         - Publi[pub].Texto
         - Publi[pub].Etiqueta
-        - Publi[pub].Autor: Cadena
+        - Publi[pub].Autor
+        - Publi[pub].Imagen: Cadena
 
     - Variables locales:
       - R:  Booleano
       - R2:  Booleano
+      - R_Img:  Booleano
+      - Img:  Entero
 
 ----------------------------------------
 
@@ -14716,7 +14750,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\09-Publicaciones.gabo
         - Publi[Ver].Tipo_Reaccion1
         - Publi[Ver].Tipo_Reaccion2
         - Publi[Ver].Tipo_Reaccion3
-        - Publi[Ver].Etiqueta: Cadena
+        - Publi[Ver].Etiqueta
+        - Publi[Ver].Imagen: Cadena
         - Publi[Ver].Activo: Booleano
         - [Procedimiento Opciones_Publicacion(Aux
         - Ver
@@ -14751,7 +14786,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\09-Publicaciones.gabo
         - Com[com].ID_Comentario
         - Com[com].Comentario
         - Com[com].Fecha
-        - Com[com].Autor)]
+        - Com[com].Autor
+        - Com[com].Imagen)]
         - [Procedimiento Comentarios(Ver
         - re
         - react
@@ -14777,6 +14813,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\09-Publicaciones.gabo
         - Res[re].Comentario
         - Res[re].Autor
         - Res[re].Fecha
+        - Com[J].Imagen
+        - Res[re].Imagen
         - [Procedimiento Agregar_Reaccion(Aux
         - Rea[react].Cant_Gusta
         - Rea[react].Cant_Encanta
@@ -14817,7 +14855,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\10-Buscar_Publicacion.gabo
         - Publi[I].Texto
         - Publi[I].Tipo_Reaccion1
         - Publi[I].Tipo_Reaccion2
-        - Publi[I].Tipo_Reaccion3: Cadena
+        - Publi[I].Tipo_Reaccion3
+        - Publi[I].Imagen: Cadena
         - Publi[I].Activo: Booleano
         - [Procedimiento Opciones_Publicacion(Aux
         - Ver
@@ -14852,7 +14891,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\10-Buscar_Publicacion.gabo
         - Com[com].ID_Comentario
         - Com[com].Comentario
         - Com[com].Fecha
-        - Com[com].Autor)]
+        - Com[com].Autor
+        - Com[com].Imagen)]
         - [Procedimiento Comentarios(Ver
         - re
         - react
@@ -14878,6 +14918,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\10-Buscar_Publicacion.gabo
         - Res[re].Comentario
         - Res[re].Autor
         - Res[re].Fecha
+        - Com[J].Imagen
+        - Res[re].Imagen
         - [Procedimiento Agregar_Reaccion(Aux
         - Rea[react].Cant_Gusta
         - Rea[react].Cant_Encanta
@@ -14965,7 +15007,9 @@ ARCHIVO: .\Estudiante\Social_Estudiante\12-Comentarios.gabo
         - Com[J].Comentario
         - Res[re].Comentario
         - Res[re].Autor
-        - Res[re].Fecha: Cadena
+        - Res[re].Fecha
+        - Com[J].Imagen
+        - Res[re].Imagen: Cadena
         - [Procedimiento Agregar_Reaccion(Aux
         - Rea[react].Cant_Gusta
         - Rea[react].Cant_Encanta
@@ -15002,10 +15046,13 @@ ARCHIVO: .\Estudiante\Social_Estudiante\13-Comentar.gabo
         - Publi[Ver].Comentarios: Entero
         - Com[com].Comentario
         - Com[com].Fecha
-        - Com[com].Autor: Cadena
+        - Com[com].Autor
+        - Com[com].Imagen: Cadena
 
     - Variables locales:
       - R:  Booleano
+      - R_Img:  Booleano
+      - Img:  Entero
 
 ----------------------------------------
 
@@ -15113,7 +15160,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\15-Propias_Publicaciones.gabo
         - Publi[I].Etiqueta
         - Publi[I].Tipo_Reaccion1
         - Publi[I].Tipo_Reaccion2
-        - Publi[I].Tipo_Reaccion3: Cadena
+        - Publi[I].Tipo_Reaccion3
+        - Publi[I].Imagen: Cadena
         - Publi[I].Activo: Booleano
 
     - Variables locales:
@@ -15151,7 +15199,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\16-Ranking.gabo
         - Publi[I].Tipo_Reaccion1
         - Publi[I].Tipo_Reaccion2
         - Publi[I].Tipo_Reaccion3
-        - Publi[I].Etiqueta: Cadena
+        - Publi[I].Etiqueta
+        - Publi[I].Imagen: Cadena
         - [Procedimiento Opciones_Publicacion(Aux
         - Ver
         - react
@@ -15185,7 +15234,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\16-Ranking.gabo
         - Com[com].ID_Comentario
         - Com[com].Comentario
         - Com[com].Fecha
-        - Com[com].Autor)]
+        - Com[com].Autor
+        - Com[com].Imagen)]
         - [Procedimiento Comentarios(Ver
         - re
         - react
@@ -15211,6 +15261,8 @@ ARCHIVO: .\Estudiante\Social_Estudiante\16-Ranking.gabo
         - Res[re].Comentario
         - Res[re].Autor
         - Res[re].Fecha
+        - Com[J].Imagen
+        - Res[re].Imagen
         - [Procedimiento Agregar_Reaccion(Aux
         - Rea[react].Cant_Gusta
         - Rea[react].Cant_Encanta
@@ -17005,6 +17057,16 @@ ARCHIVO: .\Inicio_Sesión\14-Encriptacion.gabo
         - indice: Entero
       - Entrada/Salida
         - pass: Cadena
+
+----------------------------------------
+
+
+ARCHIVO: .\Relleno\Imagenes.gabo
+========================================
+  - Procedimiento: Imagenes.
+    - Parametros: 
+      - Entrada/Salida
+        - Imagenes[I]: Cadena
 
 ----------------------------------------
 
