@@ -1,14 +1,14 @@
 -------------------- REPORTE DE TODO EL PSEUDO --------------------
 Total de archivos: 153
-Total de lineas: 22415
+Total de lineas: 22406
 Total de funciones: 1
 Total de registros: 49
 Total de procedimientos: 151
 Total de variables: 465
-Total de parametros en procedimientos: 16050
+Total de parametros en procedimientos: 16045
   - De Entrada: 3
-  - De Salida: 8826
-  - De Entrada/Salida: 7221
+  - De Salida: 8822
+  - De Entrada/Salida: 7220
 --------------------------------------------------------------------
 
 ARCHIVO: .\Principal.gabo
@@ -157,7 +157,6 @@ ARCHIVO: .\Principal.gabo
       - Notas: Real
       - UC: Entero
       - UC_Aprobadas: Entero
-      - Actas: Cadena
       - Club: Cadena
       - Esta_en_Club: Booleano
       - Enfermedad: Cadena
@@ -6185,7 +6184,6 @@ ARCHIVO: .\Estudiante\Principal_Estudiante.gabo
         - Datos[pos_usuario].Nombre
         - Rep[i].Recibido)]
         - [Procedimiento Historial_Carreras(Datos[pos_usuario].Carrera
-        - Datos[pos_usuario].Actas
         - pos_usuario
         - Contador
         - Suma
@@ -6900,9 +6898,7 @@ ARCHIVO: .\Estudiante\Principal_Estudiante.gabo
         - Acceso)]
         - [Procedimiento Encriptacion(indice
         - pass)])]
-        - [Procedimiento Historial_Carreras(Datos[pos_usuario].Carrera
-        - Datos[pos_usuario].Actas
-        - pos_usuario
+        - [Procedimiento Historial_Carreras(Datos[pos_usuario].Carrera pos_usuario
         - Contador
         - Suma
         - [Procedimiento Historial_Informatica(pos_usuario
@@ -12906,7 +12902,6 @@ ARCHIVO: .\Estudiante\Personal_Estudiante\1-Principal.gabo
         - [Procedimiento Encriptacion(indice
         - pass)])]
         - [Procedimiento Historial_Carreras(Datos[pos_usuario].Carrera
-        - Datos[pos_usuario].Actas
         - pos_usuario
         - Contador
         - Suma
@@ -15482,8 +15477,7 @@ ARCHIVO: .\Funciones\Historial_Carreras.gabo
   - Procedimiento: Historial_Carreras.
     - Parametros: 
       - Entrada/Salida
-        - Datos[pos_usuario].Carrera
-        - Datos[pos_usuario].Actas: Cadena
+        - Datos[pos_usuario].Carrera: Cadena
         - Contador: Entero
         - Suma: Real
         - [Procedimiento Historial_Informatica(Contador
