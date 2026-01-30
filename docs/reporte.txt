@@ -1,14 +1,14 @@
 -------------------- REPORTE DE TODO EL PSEUDO --------------------
-Total de archivos: 156
-Total de lineas: 22245
+Total de archivos: 153
+Total de lineas: 22415
 Total de funciones: 1
-Total de registros: 46
-Total de procedimientos: 154
+Total de registros: 49
+Total de procedimientos: 151
 Total de variables: 465
-Total de parametros en procedimientos: 15777
+Total de parametros en procedimientos: 16050
   - De Entrada: 3
-  - De Salida: 8667
-  - De Entrada/Salida: 7107
+  - De Salida: 8826
+  - De Entrada/Salida: 7221
 --------------------------------------------------------------------
 
 ARCHIVO: .\Principal.gabo
@@ -55,6 +55,9 @@ ARCHIVO: .\Principal.gabo
     - Tarjeta_Coordenadas:  Tarjeta[400000]
     - Tarjeta_Coordenadas_Admin:  Tarjeta_A[25000]
     - Tarjeta_Coordenadas_Profe:  Tarjeta_P[25000]
+    - Preguntas_Seguridad_Estudiante:  Preg[400000]
+    - Preguntas_Seguridad_Docente:  Preg_P[25000]
+    - Preguntas_Seguridad_Admin:  Preg_A[25000]
     - I:  Entero
     - J:  Entero
     - indice:  Entero
@@ -176,6 +179,27 @@ ARCHIVO: .\Principal.gabo
       - ID: Entero
       - Fila: Entero
       - Columna: Entero
+
+  - Registro: Preguntas_Seguridad_Estudiante.
+    - Campos: 
+      - ID: Entero
+      - Nombre: Cadena
+      - Pregunta: Cadena
+      - Respuesta: Cadena
+
+  - Registro: Preguntas_Seguridad_Docente.
+    - Campos: 
+      - ID: Entero
+      - Nombre: Cadena
+      - Pregunta: Cadena
+      - Respuesta: Cadena
+
+  - Registro: Preguntas_Seguridad_Admin.
+    - Campos: 
+      - ID: Entero
+      - Nombre: Cadena
+      - Pregunta: Cadena
+      - Respuesta: Cadena
 
   - Registro: Solicitud_Empleo.
     - Campos: 
@@ -669,28 +693,53 @@ ARCHIVO: .\Administrativo\01-Menu_Administrativo.gabo
         - Empleo[I].Usuario
         - Empleo[I].Gmail
         - pass
+        - encontradoAdmin
+        - encontradoProf
         - [Procedimiento Encriptacion(indice
         - pass)]
-        - [Procedimiento Generar_Tarjeta_Coordenadas_Admin(ID
-        - Tarjeta_A[I].ID
+        - [Procedimiento Generar_Tarjeta_Coordenadas(ID
         - Minimo
         - Maximo
-        - Tarjeta_A[I].Fila
-        - Tarjeta_A[I].Columna)]
-        - [Procedimiento Mostrar_Tarjeta_Coordenadas_Admin(ID
+        - Tarjeta[I].ID
+        - Tarjeta[I].Fila
+        - Tarjeta[I].Columna
         - Tarjeta_A[I].ID
         - Tarjeta_A[I].Fila
-        - Tarjeta_A[I].Columna)]
-        - [Procedimiento Generar_Tarjeta_Coordenadas_Prof(ID
-        - Tarjeta_P[I].ID
-        - Minimo
-        - Maximo
-        - Tarjeta_P[I].Fila
-        - Tarjeta_P[I].Columna)]
-        - [Procedimiento Mostrar_Tarjeta_Coordenadas_Prof(ID
+        - Tarjeta_A[I].Columna
         - Tarjeta_P[I].ID
         - Tarjeta_P[I].Fila
-        - Tarjeta_P[I].Columna)])]
+        - Tarjeta_P[I].Columna
+        - encontrado
+        - encontradoProf
+        - encontradoAdmin
+        - [Funcion Aleatorio(Minimo
+        - Maximo)])]
+        - [Procedimiento Mostrar_Tarjeta_Coordenadas(ID
+        - Tarjeta[I].ID
+        - Tarjeta[I].Fila
+        - Tarjeta[I].Columna
+        - Tarjeta_A[I].ID
+        - Tarjeta_A[I].Fila
+        - Tarjeta_A[I].Columna
+        - Tarjeta_P[I].ID
+        - Tarjeta_P[I].Fila
+        - Tarjeta_P[I].Columna
+        - encontrado
+        - encontradoAdmin
+        - encontradoProf)]
+        - [Procedimiento Preguntas(ID
+        - Preg[I].ID
+        - Preg_A[I].ID
+        - Preg_P[I].ID
+        - Preg[J].Pregunta
+        - Preg[J].Respuesta
+        - Preg_A[J].Pregunta
+        - Preg_A[J].Respuesta
+        - Preg_P[J].Pregunta
+        - Preg_P[J].Respuesta
+        - encontrado
+        - encontradoAdmin
+        - encontradoProf)])]
         - [Procedimiento Eliminar_Empleado(Lim
         - prof
         - Admin[I].Edad
@@ -1014,28 +1063,53 @@ ARCHIVO: .\Administrativo\09-Agregar_Empleados.gabo
         - Empleo[I].Usuario
         - Empleo[I].Gmail
         - pass: Cadena
+        - encontradoAdmin
+        - encontradoProf: Booleano
         - [Procedimiento Encriptacion(indice
         - pass)]
-        - [Procedimiento Generar_Tarjeta_Coordenadas_Admin(ID
-        - Tarjeta_A[I].ID
+        - [Procedimiento Generar_Tarjeta_Coordenadas(ID
         - Minimo
         - Maximo
-        - Tarjeta_A[I].Fila
-        - Tarjeta_A[I].Columna)]
-        - [Procedimiento Mostrar_Tarjeta_Coordenadas_Admin(ID
+        - Tarjeta[I].ID
+        - Tarjeta[I].Fila
+        - Tarjeta[I].Columna
         - Tarjeta_A[I].ID
         - Tarjeta_A[I].Fila
-        - Tarjeta_A[I].Columna)]
-        - [Procedimiento Generar_Tarjeta_Coordenadas_Prof(ID
-        - Tarjeta_P[I].ID
-        - Minimo
-        - Maximo
-        - Tarjeta_P[I].Fila
-        - Tarjeta_P[I].Columna)]
-        - [Procedimiento Mostrar_Tarjeta_Coordenadas_Prof(ID
+        - Tarjeta_A[I].Columna
         - Tarjeta_P[I].ID
         - Tarjeta_P[I].Fila
-        - Tarjeta_P[I].Columna)]
+        - Tarjeta_P[I].Columna
+        - encontrado
+        - encontradoProf
+        - encontradoAdmin
+        - [Funcion Aleatorio(Minimo
+        - Maximo)])]
+        - [Procedimiento Mostrar_Tarjeta_Coordenadas(ID
+        - Tarjeta[I].ID
+        - Tarjeta[I].Fila
+        - Tarjeta[I].Columna
+        - Tarjeta_A[I].ID
+        - Tarjeta_A[I].Fila
+        - Tarjeta_A[I].Columna
+        - Tarjeta_P[I].ID
+        - Tarjeta_P[I].Fila
+        - Tarjeta_P[I].Columna
+        - encontrado
+        - encontradoAdmin
+        - encontradoProf)]
+        - [Procedimiento Preguntas(ID
+        - Preg[I].ID
+        - Preg_A[I].ID
+        - Preg_P[I].ID
+        - Preg[J].Pregunta
+        - Preg[J].Respuesta
+        - Preg_A[J].Pregunta
+        - Preg_A[J].Respuesta
+        - Preg_P[J].Pregunta
+        - Preg_P[J].Respuesta
+        - encontrado
+        - encontradoAdmin
+        - encontradoProf)]
 
     - Variables locales:
       - I:  Entero
@@ -16696,32 +16770,22 @@ ARCHIVO: .\Inicio_Sesión\01-Principal.gabo
 ========================================
   - Procedimiento: Menu_Registro_Login.
     - Parametros: 
-      - Entrada/Salida
-        - indice
+      - Salida
+        - [Procedimiento Registro(indice
         - ID
         - v
         - C
         - Minimo
         - Maximo
         - Tarjeta[I].ID
-        - Tarjeta_A[I].ID
-        - Tarjeta_P[I].ID
+        - Tarjeta[J].Fila
+        - Tarjeta[J].Columna
         - Gestion[I].CI
         - Gestion[I].Semestre
         - Gestion[I].Year
         - Datos[v].CI
         - Datos[v].Semestre
         - Datos[v].Year
-        - pos
-        - pos_admin
-        - pos_usuario
-        - Admin[I].CI
-        - Tarjeta[I].Fila
-        - Tarjeta[I].Columna
-        - Tarjeta_A[I].Fila
-        - Tarjeta_A[I].Columna
-        - Tarjeta_P[I].Fila
-        - Tarjeta_P[I].Columna: Entero
         - Gestion[I].Nombre
         - Gestion[I].Gmail
         - Gestion[I].Password
@@ -16732,19 +16796,118 @@ ARCHIVO: .\Inicio_Sesión\01-Principal.gabo
         - Datos[v].Password
         - Datos[v].Carrera
         - Datos[v].Telefono
-        - Rol
+        - pass
+        - Gestion[I].Verificado
+        - encontrado
+        - [Procedimiento Encriptacion(indice
+        - pass)]
+        - [Procedimiento Generar_Tarjeta_Coordenadas(ID
+        - Minimo
+        - Maximo
+        - Tarjeta[I].ID
+        - Tarjeta[I].Fila
+        - Tarjeta[I].Columna
+        - Tarjeta_A[I].ID
+        - Tarjeta_A[I].Fila
+        - Tarjeta_A[I].Columna
+        - Tarjeta_P[I].ID
+        - Tarjeta_P[I].Fila
+        - Tarjeta_P[I].Columna
+        - encontrado
+        - encontradoProf
+        - encontradoAdmin
+        - [Funcion Aleatorio(Minimo
+        - Maximo)])]
+        - [Procedimiento Mostrar_Tarjeta_Coordenadas(ID
+        - Tarjeta[I].ID
+        - Tarjeta[I].Fila
+        - Tarjeta[I].Columna
+        - Tarjeta_A[I].ID
+        - Tarjeta_A[I].Fila
+        - Tarjeta_A[I].Columna
+        - Tarjeta_P[I].ID
+        - Tarjeta_P[I].Fila
+        - Tarjeta_P[I].Columna
+        - encontrado
+        - encontradoAdmin
+        - encontradoProf)]
+        - [Procedimiento Preguntas(ID
+        - Preg[I].ID
+        - Preg_A[I].ID
+        - Preg_P[I].ID
+        - Preg[J].Pregunta
+        - Preg[J].Respuesta
+        - Preg_A[J].Pregunta
+        - Preg_A[J].Respuesta
+        - Preg_P[J].Pregunta
+        - Preg_P[J].Respuesta
+        - encontrado
+        - encontradoAdmin
+        - encontradoProf)])]
+        - [Procedimiento Iniciar_Sesion(Rol
+        - Datos[I].Gmail
         - Admin[I].Gmail
         - Prof[I].Gmail
+        - Datos[I].Nombre
         - Admin[I].Usuario
         - Prof[I].Nombre
+        - Datos[I].Password
         - Admin[I].Password
         - Prof[I].Password
-        - pass: Cadena
-        - Gestion[I].Verificado
+        - pass
+        - indice
+        - pos
+        - pos_admin
+        - pos_usuario
+        - Datos[I].CI
+        - Admin[I].CI
+        - Prof[I].CI
         - Acceso
         - encontrado
         - encontradoProf
-        - encontradoAdmin: Booleano
+        - encontradoAdmin
+        - [Procedimiento Encriptacion(indice
+        - pass)]
+        - [Procedimiento Validar_Coordenada(pos_usuario
+        - Tarjeta[I].ID
+        - Tarjeta[I].Fila
+        - Tarjeta[I].Columna
+        - pos_admin
+        - Tarjeta_A[I].ID
+        - Tarjeta_A[I].Fila
+        - Tarjeta_A[I].Columna
+        - pos
+        - Tarjeta_P[I].ID
+        - Tarjeta_P[I].Fila
+        - Tarjeta_P[I].Columna
+        - Minimo
+        - Maximo
+        - Acceso
+        - encontrado
+        - encontradoProf
+        - encontradoAdmin
+        - [Funcion Aleatorio(Minimo
+        - Maximo)])]
+        - [Procedimiento Validar_Pregunta(Preg[I].ID
+        - Preg_P[I].ID
+        - Preg_A[I].ID
+        - Minimo
+        - Maximo
+        - pos_usuario
+        - pos
+        - pos_admin
+        - Preg[I].Pregunta
+        - Preg_P[I].Pregunta
+        - Preg_A[I].Pregunta
+        - encontrado
+        - encontradoAdmin
+        - encontradoProf
+        - Acceso
+        - [Funcion Aleatorio(Minimo
+        - Maximo)])])]
+
+    - Variables locales:
+      - Opcion:  Entero
 
 ----------------------------------------
 
@@ -16780,7 +16943,53 @@ ARCHIVO: .\Inicio_Sesión\02-Registro.gabo
         - Datos[v].Carrera
         - Datos[v].Telefono
         - pass: Cadena
-        - Gestion[I].Verificado: Booleano
+        - Gestion[I].Verificado
+        - encontrado: Booleano
+        - [Procedimiento Encriptacion(indice
+        - pass)]
+        - [Procedimiento Generar_Tarjeta_Coordenadas(ID
+        - Minimo
+        - Maximo
+        - Tarjeta[I].ID
+        - Tarjeta[I].Fila
+        - Tarjeta[I].Columna
+        - Tarjeta_A[I].ID
+        - Tarjeta_A[I].Fila
+        - Tarjeta_A[I].Columna
+        - Tarjeta_P[I].ID
+        - Tarjeta_P[I].Fila
+        - Tarjeta_P[I].Columna
+        - encontrado
+        - encontradoProf
+        - encontradoAdmin
+        - [Funcion Aleatorio(Minimo
+        - Maximo)])]
+        - [Procedimiento Mostrar_Tarjeta_Coordenadas(ID
+        - Tarjeta[I].ID
+        - Tarjeta[I].Fila
+        - Tarjeta[I].Columna
+        - Tarjeta_A[I].ID
+        - Tarjeta_A[I].Fila
+        - Tarjeta_A[I].Columna
+        - Tarjeta_P[I].ID
+        - Tarjeta_P[I].Fila
+        - Tarjeta_P[I].Columna
+        - encontrado
+        - encontradoAdmin
+        - encontradoProf)]
+        - [Procedimiento Preguntas(ID
+        - Preg[I].ID
+        - Preg_A[I].ID
+        - Preg_P[I].ID
+        - Preg[J].Pregunta
+        - Preg[J].Respuesta
+        - Preg_A[J].Pregunta
+        - Preg_A[J].Respuesta
+        - Preg_P[J].Pregunta
+        - Preg_P[J].Respuesta
+        - encontrado
+        - encontradoAdmin
+        - encontradoProf)]
 
     - Variables locales:
       - Nombre:  Cadena
@@ -16788,7 +16997,6 @@ ARCHIVO: .\Inicio_Sesión\02-Registro.gabo
       - Password:  Cadena
       - CI:  Entero
       - R:  Booleano
-      - encontrado = 0:  Booleano
 
 ----------------------------------------
 
@@ -16799,51 +17007,22 @@ ARCHIVO: .\Inicio_Sesión\03-Generar_Tarjeta_Coordenadas.gabo
     - Parametros: 
       - Entrada/Salida
         - ID
+        - Minimo
+        - Maximo
         - Tarjeta[I].ID
-        - Minimo
-        - Maximo
         - Tarjeta[I].Fila
-        - Tarjeta[I].Columna: Entero
-
-    - Variables locales:
-      - I:  Entero
-      - coordenada_fila:  Entero
-      - coordenada_columna:  Entero
-
-----------------------------------------
-
-
-ARCHIVO: .\Inicio_Sesión\04-Generar_Tarjeta_Coordenadas_Admin.gabo
-========================================
-  - Procedimiento: Generar_Tarjeta_Coordenadas_Admin.
-    - Parametros: 
-      - Entrada/Salida
-        - ID
+        - Tarjeta[I].Columna
         - Tarjeta_A[I].ID
-        - Minimo
-        - Maximo
         - Tarjeta_A[I].Fila
-        - Tarjeta_A[I].Columna: Entero
-
-    - Variables locales:
-      - I:  Entero
-      - coordenada_fila:  Entero
-      - coordenada_columna:  Entero
-
-----------------------------------------
-
-
-ARCHIVO: .\Inicio_Sesión\05-Generar_Tarjeta_Coordenadas_Prof.gabo
-========================================
-  - Procedimiento: Generar_Tarjeta_Coordenadas_Prof.
-    - Parametros: 
-      - Entrada/Salida
-        - ID
+        - Tarjeta_A[I].Columna
         - Tarjeta_P[I].ID
-        - Minimo
-        - Maximo
         - Tarjeta_P[I].Fila
         - Tarjeta_P[I].Columna: Entero
+        - encontrado
+        - encontradoProf
+        - encontradoAdmin: Booleano
+        - [Funcion Aleatorio(Minimo
+        - Maximo)]
 
     - Variables locales:
       - I:  Entero
@@ -16853,7 +17032,7 @@ ARCHIVO: .\Inicio_Sesión\05-Generar_Tarjeta_Coordenadas_Prof.gabo
 ----------------------------------------
 
 
-ARCHIVO: .\Inicio_Sesión\06-Mostrar_Tarjeta_Coordenadas.gabo
+ARCHIVO: .\Inicio_Sesión\04-Mostrar_Tarjeta_Coordenadas.gabo
 ========================================
   - Procedimiento: Mostrar_Tarjeta_Coordenadas.
     - Parametros: 
@@ -16861,39 +17040,16 @@ ARCHIVO: .\Inicio_Sesión\06-Mostrar_Tarjeta_Coordenadas.gabo
         - ID
         - Tarjeta[I].ID
         - Tarjeta[I].Fila
-        - Tarjeta[I].Columna: Entero
-
-    - Variables locales:
-      - I:  Entero
-
-----------------------------------------
-
-
-ARCHIVO: .\Inicio_Sesión\07-Mostrar_Tarjeta_Coordenadas_Admin.gabo
-========================================
-  - Procedimiento: Mostrar_Tarjeta_Coordenadas_Admin.
-    - Parametros: 
-      - Entrada/Salida
-        - ID
+        - Tarjeta[I].Columna
         - Tarjeta_A[I].ID
         - Tarjeta_A[I].Fila
-        - Tarjeta_A[I].Columna: Entero
-
-    - Variables locales:
-      - I:  Entero
-
-----------------------------------------
-
-
-ARCHIVO: .\Inicio_Sesión\08-Mostrar_Tarjeta_Coordenadas_Prof.gabo
-========================================
-  - Procedimiento: Mostrar_Tarjeta_Coordenadas_Prof.
-    - Parametros: 
-      - Entrada/Salida
-        - ID
+        - Tarjeta_A[I].Columna
         - Tarjeta_P[I].ID
         - Tarjeta_P[I].Fila
         - Tarjeta_P[I].Columna: Entero
+        - encontrado
+        - encontradoAdmin
+        - encontradoProf: Booleano
 
     - Variables locales:
       - I:  Entero
@@ -16901,7 +17057,37 @@ ARCHIVO: .\Inicio_Sesión\08-Mostrar_Tarjeta_Coordenadas_Prof.gabo
 ----------------------------------------
 
 
-ARCHIVO: .\Inicio_Sesión\09-Iniciar_Sesion.gabo
+ARCHIVO: .\Inicio_Sesión\05-Preguntas.gabo
+========================================
+  - Procedimiento: Preguntas.
+    - Parametros: 
+      - Entrada/Salida
+        - ID
+        - Preg[I].ID
+        - Preg_A[I].ID
+        - Preg_P[I].ID: Entero
+        - Preg[J].Pregunta
+        - Preg[J].Respuesta
+        - Preg_A[J].Pregunta
+        - Preg_A[J].Respuesta
+        - Preg_P[J].Pregunta
+        - Preg_P[J].Respuesta: Cadena
+        - encontrado
+        - encontradoAdmin
+        - encontradoProf: Booleano
+
+    - Variables locales:
+      - I:  Entero
+      - J:  Entero
+      - R = 1:  Booleano
+      - R2 = 1:  Booleano
+      - R3 = 1:  Booleano
+      - R4:  Booleano
+
+----------------------------------------
+
+
+ARCHIVO: .\Inicio_Sesión\06-Iniciar_Sesion.gabo
 ========================================
   - Procedimiento: Iniciar_Sesion.
     - Parametros: 
@@ -16923,19 +17109,50 @@ ARCHIVO: .\Inicio_Sesión\09-Iniciar_Sesion.gabo
         - pos_usuario
         - Datos[I].CI
         - Admin[I].CI
-        - Tarjeta[I].ID
-        - Tarjeta_A[I].ID
-        - Tarjeta_P[I].ID
-        - Tarjeta[I].Fila
-        - Tarjeta[I].Columna
-        - Tarjeta_A[I].Fila
-        - Tarjeta_A[I].Columna
-        - Tarjeta_P[I].Fila
-        - Tarjeta_P[I].Columna: Entero
+        - Prof[I].CI: Entero
         - Acceso
         - encontrado
         - encontradoProf
         - encontradoAdmin: Booleano
+        - [Procedimiento Encriptacion(indice
+        - pass)]
+        - [Procedimiento Validar_Coordenada(pos_usuario
+        - Tarjeta[I].ID
+        - Tarjeta[I].Fila
+        - Tarjeta[I].Columna
+        - pos_admin
+        - Tarjeta_A[I].ID
+        - Tarjeta_A[I].Fila
+        - Tarjeta_A[I].Columna
+        - pos
+        - Tarjeta_P[I].ID
+        - Tarjeta_P[I].Fila
+        - Tarjeta_P[I].Columna
+        - Minimo
+        - Maximo
+        - Acceso
+        - encontrado
+        - encontradoProf
+        - encontradoAdmin
+        - [Funcion Aleatorio(Minimo
+        - Maximo)])]
+        - [Procedimiento Validar_Pregunta(Preg[I].ID
+        - Preg_P[I].ID
+        - Preg_A[I].ID
+        - Minimo
+        - Maximo
+        - pos_usuario
+        - pos
+        - pos_admin
+        - Preg[I].Pregunta
+        - Preg_P[I].Pregunta
+        - Preg_A[I].Pregunta
+        - encontrado
+        - encontradoAdmin
+        - encontradoProf
+        - Acceso
+        - [Funcion Aleatorio(Minimo
+        - Maximo)])]
 
     - Variables locales:
       - gmail_ingresado:  Cadena
@@ -16947,7 +17164,7 @@ ARCHIVO: .\Inicio_Sesión\09-Iniciar_Sesion.gabo
 ----------------------------------------
 
 
-ARCHIVO: .\Inicio_Sesión\10-Validar_Coordenada.gabo
+ARCHIVO: .\Inicio_Sesión\07-Validar_Coordenada.gabo
 ========================================
   - Procedimiento: Validar_Coordenada.
     - Parametros: 
@@ -16956,57 +17173,22 @@ ARCHIVO: .\Inicio_Sesión\10-Validar_Coordenada.gabo
         - Tarjeta[I].ID
         - Tarjeta[I].Fila
         - Tarjeta[I].Columna
-        - Minimo
-        - Maximo: Entero
-        - Acceso: Booleano
-
-    - Variables locales:
-      - I:  Entero
-      - J:  Entero
-      - Coordenada:  Entero
-      - Coordenada2:  Entero
-      - Fila:  Entero
-      - Columna:  Entero
-
-----------------------------------------
-
-
-ARCHIVO: .\Inicio_Sesión\11-Validar_Coordenada_Admin.gabo
-========================================
-  - Procedimiento: Validar_Coordenada_Admin.
-    - Parametros: 
-      - Entrada/Salida
         - pos_admin
         - Tarjeta_A[I].ID
         - Tarjeta_A[I].Fila
         - Tarjeta_A[I].Columna
-        - Minimo
-        - Maximo: Entero
-        - Acceso: Booleano
-
-    - Variables locales:
-      - I:  Entero
-      - J:  Entero
-      - Coordenada:  Entero
-      - Coordenada2:  Entero
-      - Fila:  Entero
-      - Columna:  Entero
-
-----------------------------------------
-
-
-ARCHIVO: .\Inicio_Sesión\12-Validar_Coordenada_Prof.gabo
-========================================
-  - Procedimiento: Validar_Coordenada_Prof.
-    - Parametros: 
-      - Entrada/Salida
         - pos
         - Tarjeta_P[I].ID
         - Tarjeta_P[I].Fila
         - Tarjeta_P[I].Columna
         - Minimo
         - Maximo: Entero
-        - Acceso: Booleano
+        - Acceso
+        - encontrado
+        - encontradoProf
+        - encontradoAdmin: Booleano
+        - [Funcion Aleatorio(Minimo
+        - Maximo)]
 
     - Variables locales:
       - I:  Entero
@@ -17015,41 +17197,100 @@ ARCHIVO: .\Inicio_Sesión\12-Validar_Coordenada_Prof.gabo
       - Coordenada2:  Entero
       - Fila:  Entero
       - Columna:  Entero
+      - R = 1:  Booleano
 
 ----------------------------------------
 
 
-ARCHIVO: .\Inicio_Sesión\13-Recuperar_Password.gabo
+ARCHIVO: .\Inicio_Sesión\08-Validar_Pregunta.gabo
+========================================
+  - Procedimiento: Validar_Pregunta.
+    - Parametros: 
+      - Entrada/Salida
+        - Preg[I].ID
+        - Preg_P[I].ID
+        - Preg_A[I].ID
+        - Minimo
+        - Maximo
+        - pos_usuario
+        - pos
+        - pos_admin: Entero
+        - Preg[I].Pregunta
+        - Preg_P[I].Pregunta
+        - Preg_A[I].Pregunta: Cadena
+        - encontrado
+        - encontradoAdmin
+        - encontradoProf
+        - Acceso: Booleano
+        - [Funcion Aleatorio(Minimo
+        - Maximo)]
+
+    - Variables locales:
+      - respuesta:  Cadena
+      - num:  Entero
+      - I:  Entero
+      - R:  Booleano
+
+----------------------------------------
+
+
+ARCHIVO: .\Inicio_Sesión\09-Recuperar_Password.gabo
 ========================================
   - Procedimiento: Recuperar_Password.
     - Parametros: 
       - Entrada/Salida
-        - pos_admin
-        - pos
-        - pos_usuario
-        - Tarjeta[I].ID
-        - Tarjeta_A[I].ID
-        - Tarjeta_P[I].ID
-        - Tarjeta[I].Fila
-        - Tarjeta[I].Columna
-        - Tarjeta_A[I].Fila
-        - Tarjeta_A[I].Columna
-        - Tarjeta_P[I].Fila
-        - Tarjeta_P[I].Columna: Entero
         - Acceso
         - encontrado
         - encontradoAdmin
         - encontradoProf: Booleano
+        - [Procedimiento Validar_Coordenada(pos_usuario
+        - Tarjeta[I].ID
+        - Tarjeta[I].Fila
+        - Tarjeta[I].Columna
+        - pos_admin
+        - Tarjeta_A[I].ID
+        - Tarjeta_A[I].Fila
+        - Tarjeta_A[I].Columna
+        - pos
+        - Tarjeta_P[I].ID
+        - Tarjeta_P[I].Fila
+        - Tarjeta_P[I].Columna
+        - Minimo
+        - Maximo
+        - Acceso
+        - encontrado
+        - encontradoProf
+        - encontradoAdmin
+        - [Funcion Aleatorio(Minimo
+        - Maximo)])]
+        - [Procedimiento Validar_Pregunta(Preg[I].ID
+        - Preg_P[I].ID
+        - Preg_A[I].ID
+        - Minimo
+        - Maximo
+        - pos_usuario
+        - pos
+        - pos_admin
+        - Preg[I].Pregunta
+        - Preg_P[I].Pregunta
+        - Preg_A[I].Pregunta
+        - encontrado
+        - encontradoAdmin
+        - encontradoProf
+        - Acceso
+        - [Funcion Aleatorio(Minimo
+        - Maximo)])]
 
     - Variables locales:
       - Aciertos = 0:  Entero
       - K:  Entero
       - Intentos_Fallidos = 0:  Entero
+      - Re:  Booleano
 
 ----------------------------------------
 
 
-ARCHIVO: .\Inicio_Sesión\14-Encriptacion.gabo
+ARCHIVO: .\Inicio_Sesión\10-Encriptacion.gabo
 ========================================
   - Procedimiento: Encriptacion.
     - Parametros: 
@@ -17779,6 +18020,28 @@ ARCHIVO: .\Relleno\Relleno_Materias.gabo
         - Materias[I].Nombre
         - Materias[I].Codigo: Cadena
         - Materias[I].Creditos: Entero
+
+----------------------------------------
+
+
+ARCHIVO: .\Relleno\Relleno_Preguntas.gabo
+========================================
+  - Procedimiento: Relleno_Preguntas.
+    - Parametros: 
+      - Entrada/Salida
+        - Preg[I].ID
+        - Preg_P[I].ID
+        - Preg_A[I].ID: Entero
+        - Preg[I].Pregunta
+        - Preg_P[I].Pregunta
+        - Preg_A[I].Pregunta: Cadena
+
+    - Variables locales:
+      - Pregunta[5]:  Cadena
+      - posicion:  Entero
+      - I:  Entero
+      - K:  Entero
+      - J:  Entero
 
 ----------------------------------------
 
