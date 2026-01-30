@@ -1,4 +1,4 @@
-Procedimiento Propias_Publicaciones(E/S: Publi[I].ID_Publicacion, Publi[I].Comentarios, Publi[I].Cant_Reacciones: Entero, Datos[pos_usuario].Nombre, Publi[I].Autor, Publi[I].Texto, Publi[I].Normas, Publi[I].Tema, Publi[I].Fecha, Publi[I].Etiqueta, Publi[I].Tipo_Reaccion1, Publi[I].Tipo_Reaccion2, Publi[I].Tipo_Reaccion3: Cadena, Publi[I].Activo: Booleano);
+Procedimiento Propias_Publicaciones(E/S: Publi[I].ID_Publicacion, Publi[I].Comentarios, Publi[I].Cant_Reacciones: Entero, Datos[pos_usuario].Nombre, Publi[I].Autor, Publi[I].Texto, Publi[I].Normas, Publi[I].Tema, Publi[I].Fecha, Publi[I].Etiqueta, Publi[I].Tipo_Reaccion1, Publi[I].Tipo_Reaccion2, Publi[I].Tipo_Reaccion3, Publi[I].Imagen: Cadena, Publi[I].Activo: Booleano);
 Inicio
     Var I, R, R2, R4, K = 2, Jose_Lozano[K], K5, K4: Entero;
     Var Tema, Etiqueta: Cadena;
@@ -22,6 +22,7 @@ Inicio
                 Si (Publi[I].Autor = Datos[pos_usuario].Nombre) Entonces;
                     Mostrar << "Publicacion numero", K;
                     Mostrar << Publi[I].Texto;
+                    Mostrar << Publi[I].Imagen;
                     Mostrar << Publi[I].ID_Publicacion;    
                     Mostrar << Publi[I].Autor;               
                     Mostrar << Publi[I].Normas;        
@@ -48,6 +49,7 @@ Inicio
                     Si (Publi[I].Autor = Datos[pos_usuario].Nombre) and (Tema = Publi[I].Tema) entonces;
                         Mostrar << "Publicacion numero", K;
                         Mostrar << Publi[I].Texto;
+                        Mostrar << Publi[I].Imagen;
                         Mostrar << Publi[I].ID_Publicacion;    
                         Mostrar << Publi[I].Autor;               
                         Mostrar << Publi[I].Normas;        
@@ -78,6 +80,7 @@ Inicio
                     Si (Publi[I].Autor = Datos[pos_usuario].Nombre) and (Etiqueta = Publi[I].Etiqueta) entonces;
                         Mostrar << "Publicacion numero", K;
                         Mostrar << Publi[I].Texto;
+                        Mostrar << Publi[I].Imagen;
                         Mostrar << Publi[I].ID_Publicacion;    
                         Mostrar << Publi[I].Autor;               
                         Mostrar << Publi[I].Normas;        
@@ -106,6 +109,7 @@ Inicio
         Si (Publi[I].Autor = Datos[pos_usuario].Nombre) Entonces;
             Mostrar << "Publicacion numero", K;
             Mostrar << Publi[I].Texto;
+            Mostrar << Publi[I].Imagen;
             Mostrar << Publi[I].ID_Publicacion;    
             Mostrar << Publi[I].Autor;               
             Mostrar << Publi[I].Normas;        

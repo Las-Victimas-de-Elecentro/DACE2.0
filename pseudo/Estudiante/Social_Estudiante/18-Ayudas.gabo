@@ -1,0 +1,67 @@
+Procedimiento Ayudas(E/S: asoc, anim: Entero, Soci[I].Nombre_Afectado, Soci[I].Razon, Soci[I].Contacto, Anim[I].Nombre_Animal, Anim[I].Tipo_Animal, Anim[I].Raza, Anim[I].Razon, Anim[I].Contacto: Cadena);
+Inicio
+    Var opc: Entero;
+    Var R, R2: Booleano;
+    Repetir
+        Mostrar << "¡Bienvenido al apartado de ayudas!";
+        Mostrar << "Seleccione una opción.";
+        Mostrar << "1: Ayuda Social";
+        Mostrar << "2: Ayuda de Animales";
+        Mostrar << "3: Ver ayudas";
+        Leer >> opc;
+        Mientras (opc < 1 or opc > 3) Hacer;
+            Mostrar << "Es invalido";
+            Leer >> opc;
+        Fin_Mientras
+        En_Caso (opc > 0) Sea;
+            Caso(opc = 1);
+                Repetir
+                    Mostrar << "Ingrese el nombre de la persona afectada: ";
+                    Leer >> Soci[asoc].Nombre_Afectado;
+                    Mostrar << "Ingrese la razón del porqué necesita ayuda: ";
+                    Leer >> Soci[asoc].Razon;
+                    Mostrar << "Ingrese la información de contacto para que las personas puedan contactarse con usted para poder ayudarlo económicamente: ";
+                    Leer >> Soci[asoc].Contacto;
+                    Mostrar << "¿Los datos son correctos? 1: Sí, 0: No";
+                    Leer >> R;
+                    Hasta(R = 1);
+                Fin_Repetir
+                asoc = asoc + 1;
+            Caso(opc = 2);
+                Repetir
+                    Mostrar << "Ingrese el nombre del animal afectado: ";
+                    Leer >> Anim[anim].Nombre_Animal;
+                    Mostrar << "Ingrese el tipo del animal afectado: ";
+                    Leer >> Anim[anim].Tipo_Animal;
+                    Mostrar << "Ingrese la raza del animal afectado: ";
+                    Leer >> Anim[anim].Raza;
+                    Mostrar << "Ingrese la razón del porqué necesita ayuda: ";
+                    Leer >> Anim[anim].Razon;
+                    Mostrar << "Ingrese la información de contacto para que las personas puedan contactarse con usted para poder ayudarlo económicamente: ";
+                    Leer >> Anim[anim].Contacto;
+                    Mostrar << "¿Los datos son correctos? 1: Sï, 0: No";
+                    Leer >> R;
+                    Hasta(R = 1);
+                Fin_Repetir
+                anim = anim + 1;
+            Otro_Caso
+                Mostrar << "Ayudas Sociales:";
+                Para (I = 1 Hasta I = asoc) Hacer;
+                    Mostrar << "Nombre del afectado: ", Soci[I].Nombre_Afectado;
+                    Mostrar << "Razón: ", Soci[I].Razon;
+                    Mostrar << "Contacto: ", Soci[I].Contacto;
+                Fin_Para
+                Mostrar << "Ayudas Animales";
+                Para (I = 1 Hasta I = anim) Hacer;
+                    Mostrar << "Nombre del animal afectado: ", Anim[I].Nombre_Animal;
+                    Mostrar << "Tipo de Animal: ", Anim[I].Tipo_Animal;
+                    Mostrar << "Raza: ", Anim[I].Raza;
+                    Mostrar << "Razón: ", Anim[I].Razon;
+                    Mostrar << "Contacto: ", Anim[I].Contacto;
+                Fin_Para
+        Fin_Caso
+        Mostrar << "¿Desea añadir otra ayuda? 1: Sí, 0: No";
+        Leer >> R2;
+        Hasta(R2 = 0);
+    Fin_Repetir
+Fin_Procedimiento

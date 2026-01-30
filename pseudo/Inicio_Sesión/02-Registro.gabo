@@ -28,6 +28,7 @@ Inicio
             indice = v;
             pass = Password;
             Encriptacion(indice, pass);
+            
             Datos[v].Nombre = Gestion[I].Nombre;
             Datos[v].CI = Gestion[I].CI;
             Datos[v].Gmail = Gestion[I].Gmail;
