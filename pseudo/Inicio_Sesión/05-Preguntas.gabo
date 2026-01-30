@@ -1,0 +1,56 @@
+Procedimiento Preguntas(E/S: ID, Preg[I].ID, Preg_A[I].ID, Preg_P[I].ID: Entero, Preg[J].Pregunta, Preg[J].Respuesta, Preg_A[J].Pregunta, Preg_A[J].Respuesta, Preg_P[J].Pregunta, Preg_P[J].Respuesta: Cadena, encontrado, encontradoAdmin, encontradoProf: Booleano);
+Inicio
+    Var I, J: Entero;
+    Var R = 1, R2 = 1, R3 = 1, R4: Booleano;
+    Si (encontrado = 1) Entonces;
+        Para (I = 1 Hasta I = 80000) Hacer;
+            Si (ID = Preg[I].ID) and (R = 1) Entonces;
+                R = 0;
+                Para (J = ID Hasta J = ID + 5) Hacer;
+                    Repetir
+                        Mostrar << Preg[J].Pregunta;
+                        Mostrar << "Ingrese su respuesta para guardarla";
+                        Leer >> Preg[J].Respuesta;
+                        Mostrar << "¿Esa respuesta es correcta? 1: Sí, 0: No";
+                        Leer >> R4;
+                        Hasta(R4 = 1);
+                    Fin_Repetir
+                Fin_Para
+            Fin_Si
+        Fin_Para
+    Fin_Si
+    Si (encontradoAdmin = 1) Entonces;
+        Para (I = 1 Hasta I = 25000) Hacer;
+            Si (ID = Preg_A[I].ID) and (R2 = 1) Entonces;
+                R2 = 0;
+                Para (J = ID Hasta J = ID + 5) Hacer;
+                    Repetir
+                        Mostrar << Preg_A[J].Pregunta;
+                        Mostrar << "Ingrese su respuesta para guardarla";
+                        Leer >> Preg_A[J].Respuesta;
+                        Mostrar << "¿Esa respuesta es correcta? 1: Sí, 0: No";
+                        Leer >> R4;
+                        Hasta(R4 = 1);
+                    Fin_Repetir
+                Fin_Para
+            Fin_Si
+        Fin_Para
+    Fin_Si
+    Si (encontradoProf = 1) Entonces;
+        Para (I = 1 Hasta I = 25000) Hacer;
+            Si (ID = Preg_P[I].ID) and (R3 = 1) Entonces;
+                R3 = 0;
+                Para (J = ID Hasta J = ID + 5) Hacer;
+                    Repetir
+                        Mostrar << Preg_P[J].Pregunta;
+                        Mostrar << "Ingrese su respuesta para guardarla";
+                        Leer >> Preg_P[J].Respuesta;
+                        Mostrar << "¿Esa respuesta es correcta? 1: Sí, 0: No";
+                        Leer >> R4;
+                        Hasta(R4 = 1);
+                    Fin_Repetir
+                Fin_Para
+            Fin_Si
+        Fin_Para
+    Fin_Si
+Fin_Procedimiento

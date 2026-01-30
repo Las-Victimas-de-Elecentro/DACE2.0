@@ -1,8 +1,9 @@
-Procedimiento Registro(E/S: indice, ID, v, C, Minimo, Maximo, Tarjeta[I].ID, Tarjeta[J].Fila, Tarjeta[J].Columna, Gestion[I].CI, Gestion[I].Semestre, Gestion[I].Year, Datos[v].CI, Datos[v].Semestre, Datos[v].Year: Entero, Gestion[I].Nombre, Gestion[I].Gmail, Gestion[I].Password, Gestion[I].Carrera, Gestion[C].Telefono, Datos[v].Nombre, Datos[v].Gmail, Datos[v].Password, Datos[v].Carrera, Datos[v].Telefono, pass: Cadena, Gestion[I].Verificado: Booleano);
+Procedimiento Registro(E/S: indice, ID, v, C, Minimo, Maximo, Tarjeta[I].ID, Tarjeta[J].Fila, Tarjeta[J].Columna, Gestion[I].CI, Gestion[I].Semestre, Gestion[I].Year, Datos[v].CI, Datos[v].Semestre, Datos[v].Year: Entero, Gestion[I].Nombre, Gestion[I].Gmail, Gestion[I].Password, Gestion[I].Carrera, Gestion[C].Telefono, Datos[v].Nombre, Datos[v].Gmail, Datos[v].Password, Datos[v].Carrera, Datos[v].Telefono, pass: Cadena, Gestion[I].Verificado, encontrado: Booleano, [Procedimiento Encriptacion(indice, pass)], [Procedimiento Generar_Tarjeta_Coordenadas(ID, Minimo, Maximo, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, encontrado, encontradoProf, encontradoAdmin, [Funcion Aleatorio(Minimo, Maximo)])], [Procedimiento Mostrar_Tarjeta_Coordenadas(ID, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, encontrado, encontradoAdmin, encontradoProf)], [Procedimiento Preguntas(ID, Preg[I].ID, Preg_A[I].ID, Preg_P[I].ID, Preg[J].Pregunta, Preg[J].Respuesta, Preg_A[J].Pregunta, Preg_A[J].Respuesta, Preg_P[J].Pregunta, Preg_P[J].Respuesta, encontrado, encontradoAdmin, encontradoProf)]);
 Inicio
     Var Nombre, Gmail, Password: Cadena;
     Var CI: Entero;
-    Var R, encontrado = 0: Booleano;
+    Var R: Booleano;
+    encontrado = 0;
     Mostrar << "Ingrese su Nombre";
     Leer >> Nombre;
     Mostrar << "Ingrese su Dirección de Correo Electrónico";
@@ -45,9 +46,12 @@ Inicio
     Fin_Para
     Si (encontrado = 0) Entonces;
         Mostrar << "No se encontró tu solicitud de inscripción en el sistema. Ve a una de las sedes para verificar que tus datos estén ingresados correctamente en la universidad o intente nuevamente ingresando bien sus datos";
+    Sino
+        Generar_Tarjeta_Coordenadas(ID, Minimo, Maximo, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, encontrado, encontradoProf, encontradoAdmin, [Funcion Aleatorio(Minimo, Maximo)]);
+        Mostrar_Tarjeta_Coordenadas(ID, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, encontrado, encontradoAdmin, encontradoProf);
+        Mostrar << Mostrar_Tarjeta_Coordenadas;
+        Preguntas(ID, Preg[I].ID, Preg_A[I].ID, Preg_P[I].ID, Preg[J].Pregunta, Preg[J].Respuesta, Preg_A[J].Pregunta, Preg_A[J].Respuesta, Preg_P[J].Pregunta, Preg_P[J].Respuesta, encontrado, encontradoAdmin, encontradoProf);
+        Mostrar << Preguntas;
     Fin_Si
-    Generar_Tarjeta_Coordenadas(ID, Tarjeta[I].ID, Minimo, Maximo, Tarjeta[J].Fila, Tarjeta[J].Columna);
-    Mostrar_Tarjeta_Coordenadas(ID, Tarjeta[I].ID, Tarjeta[J].Fila, Tarjeta[J].Columna);
-    Mostrar << Mostrar_Tarjeta_Coordenadas;
 
 Fin_Procedimiento

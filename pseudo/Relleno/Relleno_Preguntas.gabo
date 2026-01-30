@@ -1,0 +1,24 @@
+Procedimiento Relleno_Preguntas(E/S: Preg[I].ID, Preg_P[I].ID, Preg_A[I].ID: Entero, Preg[I].Pregunta, Preg_P[I].Pregunta, Preg_A[I].Pregunta: Cadena);
+Inicio
+    Var Pregunta[5]: Cadena;
+    Var posicion, I, K, J: Entero;
+    Pregunta[1] = "¿Cuál es el nombre de tu primera mascota?";
+    Pregunta[2] = "¿Cuál es el segundo nombre de tu madre?";
+    Pregunta[3] = "¿Cuál era el nombre del artista que más escuchabas cuando tenías 10 años?";
+    Pregunta[4] = "¿En qué mes es el cumpleaños de tu padre?";
+    Pregunta[5] = "¿Cuál es tu color favorito?";
+    Para (I = 1 Hasta I = 400000) Hacer;
+        posicion = ((i - 1) MOD 5) + 1;
+        Preg[I].Pregunta = Pregunta[posicion];
+        Preg_P[I].Pregunta = Pregunta[posicion];
+        Preg_A[I].Pregunta = Pregunta[posicion];
+    Fin_Para
+    Para (I = 1 Hasta I = 80000) Hacer;
+        Para (J = 1 Hasta J = 5) Hacer;
+            K = (I - 1) * 50 + J;
+            Preg[K].ID = I;
+            Preg_P[K].ID = I;
+            Preg_A[K].ID = I;
+        Fin_Para
+    Fin_Para
+Fin_Procedimiento

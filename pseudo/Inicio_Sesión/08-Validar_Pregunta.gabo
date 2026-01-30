@@ -1,0 +1,55 @@
+Procedimiento Validar_Pregunta(E/S: Preg[I].ID, Preg_P[I].ID, Preg_A[I].ID, Minimo, Maximo, pos_usuario, pos, pos_admin: Entero, Preg[I].Pregunta, Preg_P[I].Pregunta, Preg_A[I].Pregunta: Cadena, encontrado, encontradoAdmin, encontradoProf, Acceso: Booleano, [Funcion Aleatorio(Minimo, Maximo)]);
+Inicio
+    Var respuesta: Cadena;
+    Var num: Entero;
+    Var I: Entero;
+    Var R: Booleano;
+    Si (encontrado = 1) Entonces;
+        Para (I = 1 Hasta I = 400000) Hacer;
+            Si (Preg[I].ID = pos_usuario) and (R = 1) Entonces;
+                R = 0;
+                Minimo = I;
+                Maximo = I + 4;
+                num = Aleatorio(Minimo, Maximo);
+                Mostrar << Preg[num].Pregunta;
+                Mostrar << "Ingrese su respuesta";
+                Leer >> respuesta;
+                Si (respuesta = Preg[num].Respuesta) Entonces;
+                    Acceso = 1;
+                Fin_Si
+            Fin_Si
+        Fin_Para
+    Fin_Si
+    Si (encontradoProf = 1) Entonces;
+        Para (I = 1 Hasta I = 25000) Hacer;
+            Si (Preg_P[I].ID = pos) and (R = 1) Entonces;
+                R = 0;
+                Minimo = I;
+                Maximo = I + 4;
+                num = Aleatorio(Minimo, Maximo);
+                Mostrar << Preg_P[num].Pregunta;
+                Mostrar << "Ingrese su respuesta";
+                Leer >> respuesta;
+                Si (respuesta = Preg_P[num].Respuesta) Entonces;
+                    Acceso = 1;
+                Fin_Si
+            Fin_Si
+        Fin_Para
+    Fin_Si
+    Si (encontradoAdmin = 1) Entonces;
+        Para (I = 1 Hasta I = 25000) Hacer;
+            Si (Preg_A[I].ID = pos_admin) and (R = 1) Entonces;
+                R = 0;
+                Minimo = I;
+                Maximo = I + 4;
+                num = Aleatorio(Minimo, Maximo);
+                Mostrar << Preg_A[num].Pregunta;
+                Mostrar << "Ingrese su respuesta";
+                Leer >> respuesta;
+                Si (respuesta = Preg_A[num].Respuesta) Entonces;
+                    Acceso = 1;
+                Fin_Si
+            Fin_Si
+        Fin_Para
+    Fin_Si
+Fin_Procedimiento

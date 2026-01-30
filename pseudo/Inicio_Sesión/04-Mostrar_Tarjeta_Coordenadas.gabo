@@ -1,0 +1,31 @@
+Procedimiento Mostrar_Tarjeta_Coordenadas(E/S: ID, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna: Entero, encontrado, encontradoAdmin, encontradoProf: Booleano);
+Inicio
+	Var I: Entero;
+	Mostrar << "A continuación le mostraremos su tarjeta de coordenadas:";
+    Mostrar << "------------------------------------------";
+	Si (encontrado = 1) Entonces;
+		Para (I = 1 Hasta I = 400000) Hacer;
+			Si (ID = Tarjeta[I].ID) Entonces;
+				Mostrar << Tarjeta[I].Fila;
+				Mostrar << Tarjeta[I].Columna;
+			Fin_Si
+		Fin_Para
+	Fin_Si
+	Si (encontradoAdmin = 1) Entonces;
+		Para (I = 1 Hasta I = 25000) Hacer;
+			Si (ID = Tarjeta_A[I].ID) Entonces;
+				Mostrar << Tarjeta_A[I].Fila;
+				Mostrar << Tarjeta_A[I].Columna;
+			Fin_Si
+		Fin_Para
+	Fin_Si
+	Si (encontradoProf = 1) Entonces;
+		Para (I = 1 Hasta I = 25000) Hacer;
+			Si (ID = Tarjeta_P[I].ID) Entonces;
+				Mostrar << Tarjeta_P[I].Fila;
+				Mostrar << Tarjeta_P[I].Columna;
+			Fin_Si
+		Fin_Para
+	Fin_Si
+	Mostrar << "------------------------------------------";
+Fin_Procedimiento

@@ -1,0 +1,101 @@
+Procedimiento Validar_Coordenada(E/S: pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo: Entero, Acceso, encontrado, encontradoProf, encontradoAdmin: Booleano, [Funcion Aleatorio(Minimo, Maximo)]);
+Inicio
+	Var I, J, Coordenada, Coordenada2, Fila, Columna: Entero;
+	Var R = 1: Booleano;
+	Si (encontrado = 1) Entonces;
+		Minimo = 1;
+		Maximo = 5;
+		Fila = Aleatorio(Minimo, Maximo);
+		Columna = Aleatorio(Minimo, Maximo);
+		Mostrar << "Introduzca la coordenada ubicada en la posición: ", Fila, " de la fila";
+		Leer >> Coordenada;
+		Mientras (Coordenada < 1 or Coordenada > 99) Hacer;
+			Mostrar << "Es invalido, no está en el rango";
+			Leer >> Coordenada;
+		Fin_Mientras
+		Mostrar << "Introduzca la coordenada ubicada en la posición: ", Columna, " de la columna";
+		Leer >> Coordenada2;
+		Mientras (Coordenada2 < 1 or Coordenada2 > 99) Hacer;
+			Mostrar << "Es invalido, no está en el rango";
+			Leer >> Coordenada2;
+		Fin_Mientras
+		Para (I = 1 Hasta I = 400000) Hacer;
+			Si (pos_usuario = Tarjeta[I].ID) and (R = 1) Entonces;
+				R = 0;
+				Para (J = pos_usuario Hasta J = pos_usuario + 5) Hacer;
+					Si (Coordenada = Tarjeta[J].Fila or Coordenada2 = Tarjeta[J].Columna) Entonces;
+						Mostrar << "Coordenada válida, acceso permitido";
+						Acceso = 1;
+					Sino
+						Mostrar << "Coordenada incorrecta. Acceso denegado";
+						Acceso = 0;
+					Fin_Si
+				Fin_Para
+			Fin_Si
+		Fin_Para
+	Fin_Si
+	Si (encontradoAdmin = 1) Entonces;
+		Minimo = 1;
+		Maximo = 5;
+		Fila = Aleatorio(Minimo, Maximo);
+		Columna = Aleatorio(Minimo, Maximo);
+		Mostrar << "Introduzca la coordenada ubicada en la posición: ", Fila, " de la fila";
+		Leer >> Coordenada;
+		Mientras (Coordenada < 1 or Coordenada > 99) Hacer;
+			Mostrar << "Es invalido, no está en el rango";
+			Leer >> Coordenada;
+		Fin_Mientras
+		Mostrar << "Introduzca la coordenada ubicada en la posición: ", Columna, " de la columna";
+		Leer >> Coordenada2;
+		Mientras (Coordenada2 < 1 or Coordenada2 > 99) Hacer;
+			Mostrar << "Es invalido, no está en el rango";
+			Leer >> Coordenada2;
+		Fin_Mientras
+		Para (I = 1 Hasta I = 25000) Hacer;
+			Si (pos_admin = Tarjeta_A[I].ID) and (R = 1) Entonces;
+				R = 0;
+				Para (J = pos_admin Hasta J = pos_admin + 5) Hacer;
+					Si (Coordenada = Tarjeta_A[J].Fila or Coordenada2 = Tarjeta_A[J].Columna) Entonces;
+						Mostrar << "Coordenada válida, acceso permitido";
+						Acceso = 1;
+					Sino
+						Mostrar << "Coordenada incorrecta. Acceso denegado";
+						Acceso = 0;
+					Fin_Si
+				Fin_Para
+			Fin_Si
+		Fin_Para
+	Fin_Si
+	Si (encontradoProf = 1) Entonces;
+		Minimo = 1;
+		Maximo = 5;
+		Fila = Aleatorio(Minimo, Maximo);
+		Columna = Aleatorio(Minimo, Maximo);
+		Mostrar << "Introduzca la coordenada ubicada en la posición: ", Fila, " de la fila";
+		Leer >> Coordenada;
+		Mientras (Coordenada < 1 or Coordenada > 99) Hacer;
+			Mostrar << "Es invalido, no está en el rango";
+			Leer >> Coordenada;
+		Fin_Mientras
+		Mostrar << "Introduzca la coordenada ubicada en la posición: ", Columna, " de la columna";
+		Leer >> Coordenada2;
+		Mientras (Coordenada2 < 1 or Coordenada2 > 99) Hacer;
+			Mostrar << "Es invalido, no está en el rango";
+			Leer >> Coordenada2;
+		Fin_Mientras
+		Para (I = 1 Hasta I = 25000) Hacer;
+			Si (pos = Tarjeta_P[I].ID) and (R = 1) Entonces;
+				R = 0;
+				Para (J = pos Hasta J = pos + 5) Hacer;
+					Si (Coordenada = Tarjeta_P[J].Fila or Coordenada2 = Tarjeta_P[J].Columna) Entonces;
+						Mostrar << "Coordenada válida, acceso permitido";
+						Acceso = 1;
+					Sino
+						Mostrar << "Coordenada incorrecta. Acceso denegado";
+						Acceso = 0;
+					Fin_Si
+				Fin_Para
+			Fin_Si
+		Fin_Para
+	Fin_Si
+Fin_Procedimiento

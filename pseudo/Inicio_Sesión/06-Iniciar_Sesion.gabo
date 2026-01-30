@@ -1,0 +1,108 @@
+Procedimiento Iniciar_Sesion(E/S: Rol, Datos[I].Gmail, Admin[I].Gmail, Prof[I].Gmail, Datos[I].Nombre, Admin[I].Usuario, Prof[I].Nombre, Datos[I].Password, Admin[I].Password, Prof[I].Password, pass: Cadena, indice, pos, pos_admin, pos_usuario, Datos[I].CI, Admin[I].CI, Prof[I].CI: Entero, Acceso, encontrado, encontradoProf, encontradoAdmin: Booleano, [Procedimiento Encriptacion(indice, pass)], [Procedimiento Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso, encontrado, encontradoProf, encontradoAdmin, [Funcion Aleatorio(Minimo, Maximo)])], [Procedimiento Validar_Pregunta(Preg[I].ID, Preg_P[I].ID, Preg_A[I].ID, Minimo, Maximo, pos_usuario, pos, pos_admin, Preg[I].Pregunta, Preg_P[I].Pregunta, Preg_A[I].Pregunta, encontrado, encontradoAdmin, encontradoProf, Acceso, [Funcion Aleatorio(Minimo, Maximo)])]);
+Inicio
+    Var gmail_ingresado, password_ingresado: Cadena;
+    Var R: Booleano;
+    Var I, Intentos_Fallidos: Entero;
+    
+    Intentos_Fallidos = 0;
+    encontrado = 0;
+    encontradoProf = 0;
+    encontradoAdmin = 0;
+    Acceso = 0;
+    
+    Repetir
+        // Solicitar credenciales
+        Mostrar << "INICIO DE SESIÓN";
+        Mostrar << "Ingrese su gmail:";
+        Leer >> gmail_ingresado;
+        Mostrar << "Ingrese su contraseña:";
+        Leer >> password_ingresado;
+        // Buscar en arreglo de Estudiantes y docentes
+        Para (I = 1 hasta I = 5000) Hacer;
+            Si (Admin[I].Gmail = gmail_ingresado) Entonces;
+                pos_admin = I;
+                indice = pos_admin;
+                pass = password_ingresado;
+                Encriptacion(indice, pass);
+                Si (pass = Admin[I].Password) Entonces;
+                    encontradoAdmin = 1;
+                Fin_Si
+            Fin_Si
+            Si (Prof[I].Gmail = gmail_ingresado) Entonces;
+                pos = I;
+                indice = pos;
+                pass = password_ingresado;
+                Encriptacion(indice, pass);
+                Si (pass = Prof[I].Password) Entonces;
+                    encontradoProf = 1;
+                Fin_Si
+            Fin_Si
+        Fin_Para
+        Para (I = 1 Hasta I = 80000) Hacer;
+            Si (Datos[I].Gmail = gmail_ingresado) Entonces;
+                pos_usuario = I;
+                indice = pos_usuario;
+                pass = password_ingresado;
+                Encriptacion(indice, pass);
+                Si (pass = Datos[I].Password) Entonces;
+                    encontrado = 1;
+                Fin_Si
+            Fin_Si
+        Fin_Para
+        
+        Si (encontrado = 1) or (encontradoAdmin = 1) or (encontradoProf = 1) Entonces;
+            Mostrar << "¿Desea validar con tarjeta de coordenadas o con preguntas de seguridad? 1: Coordenadas, 0: Preguntas";
+            Leer >> Re;
+            Si (Re = 1) Entonces;
+                Si (Intentos_Fallidos >= 0) and ((encontrado = 1) or encontradoAdmin = 1 or encontradoProf = 1) Entonces;
+                    Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso, encontrado, encontradoProf, encontradoAdmin, [Funcion Aleatorio(Minimo, Maximo)]);
+                    Mostrar << Validar_Coordenada;
+                Fin_Si
+            Sino
+                Si (Intentos_Fallidos >= 0) and ((encontrado = 1) or encontradoAdmin = 1 or encontradoProf = 1) Entonces;
+                    Validar_Pregunta(Preg[I].ID, Preg_P[I].ID, Preg_A[I].ID, Minimo, Maximo, pos_usuario, pos, pos_admin, Preg[I].Pregunta, Preg_P[I].Pregunta, Preg_A[I].Pregunta, encontrado, encontradoAdmin, encontradoProf, Acceso, [Funcion Aleatorio(Minimo, Maximo)]);
+                    Mostrar << Validar_Pregunta;
+                Fin_Si
+            Fin_Si
+            
+            Si (Acceso = 1) and (encontrado = 1) Entonces;
+                Mostrar << "¡Bienvenido ", Datos[pos_usuario].Nombre, "!";
+                Mostrar << "Cédula: ", Datos[pos_usuario].CI;
+                Intentos_Fallidos = 0;
+                Rol = "Estudiante";
+            Fin_Si
+            Si (Acceso = 1) and (encontradoProf = 1) Entonces;
+                Mostrar << "¡Bienvenido ", Prof[pos].Nombre, "!";
+                Mostrar << "Cédula: ", Prof[pos].CI;
+                Intentos_Fallidos = 0;
+                Rol = "Docente";
+            Fin_Si
+            Si (Acceso = 1) and (encontradoAdmin = 1) Entonces;
+                Mostrar << "¡Bienvenido ", Admin[pos_admin].Nombre, "!";
+                Mostrar << "Cédula: ", Admin[pos_admin].CI;
+                Intentos_Fallidos = 0;
+                Rol = "Administrativo";
+            Fin_Si
+
+            Si (Acceso = 0) Entonces;
+                Intentos_Fallidos = Intentos_Fallidos + 1;
+                Mostrar << "Credenciales incorrectas. Intento: ", Intentos_Fallidos;
+            Fin_Si
+            
+            Si (Intentos_Fallidos >= 3) Entonces;
+                Mostrar << "Demasiados intentos fallidos.";
+                Recuperar_Password(Acceso, encontrado, encontradoAdmin, encontradoProf, [Procedimiento Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso, encontrado, encontradoProf, encontradoAdmin, [Funcion Aleatorio(Minimo, Maximo)])], [Procedimiento Validar_Pregunta(Preg[I].ID, Preg_P[I].ID, Preg_A[I].ID, Minimo, Maximo, pos_usuario, pos, pos_admin, Preg[I].Pregunta, Preg_P[I].Pregunta, Preg_A[I].Pregunta, encontrado, encontradoAdmin, encontradoProf, Acceso, [Funcion Aleatorio(Minimo, Maximo)])]);
+                Mostrar << Recuperar_Password;
+            Fin_Si
+        Sino
+            Mostrar << "Correo electrónico o contraseña incorrecta, intente de nuevo.";
+            Mostrar << "¿Desea salir al menú principal para registrarse? 1: Sí, 0: No";
+            Leer >> R;
+        Fin_Si
+        
+        Hasta (encontrado = 1 AND Acceso = 1) OR (Intentos_Fallidos >= 3 AND Acceso = 0) OR (R = 1);
+    Fin_Repetir
+    Si (Intentos_Fallidos >= 3 AND Acceso = 0) Entonces;
+        Mostrar << "No se pudo iniciar sesión. Contacte soporte.";
+    Fin_Si
+Fin_Procedimiento
