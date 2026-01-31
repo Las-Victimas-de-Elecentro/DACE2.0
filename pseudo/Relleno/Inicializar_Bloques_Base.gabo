@@ -1,4 +1,4 @@
-Procedimiento Inicializar_Bloques_Base(E/S: Base.Lista[I].Hora_Inicio, Base.Lista[I].Hora_Fin, Base.Lista[I].Dia, Base.Lista[I].Aula, Base.Lista[I].Codigo_Materia, Base.Lista[I].Estado: Cadena, Base.Lista[I].ID_Bloque: Entero);
+Procedimiento Inicializar_Bloques_Base(E/S: Bloque[I].Hora_Inicio, Bloque[I].Hora_Fin, Bloque[I].Dia, Bloque[I].Aula, Bloque[I].Codigo_Materia, Bloque[I].Estado: Cadena, Bloque[I].ID_Bloque: Entero);
 Inicio
     Base.Cant = 48;
     // Carga de catálogo (ejemplo: 8 bloques por día de Lunes a Sábado)
@@ -10,37 +10,36 @@ Inicio
     Para (d = 1 Hasta d = 6) Hacer;
         Para (b = 1 Hasta b = 8) Hacer;
             global_id = global_id + 1;
-            Base.Lista[global_id].ID_Bloque = global_id;
-            Base.Lista[global_id].Dia = dias[d];
+            Bloque[global_id].ID_Bloque = global_id;
+            Bloque[global_id].Dia = dias[d];
             En_Caso (b > 0) Sea;
                 Caso(b = 1);
-                    Base.Lista[global_id].Hora_Inicio = "07:00"; 
-                    Base.Lista[global_id].Hora_Fin = "08:30";
+                    Bloque[global_id].Hora_Inicio = "07:00"; 
+                    Bloque[global_id].Hora_Fin = "08:30";
                 Caso(b = 2);
-                    Base.Lista[global_id].Hora_Inicio = "08:30";
-                    Base.Lista[global_id].Hora_Fin = "10:00";
+                    Bloque[global_id].Hora_Inicio = "08:30";
+                    Bloque[global_id].Hora_Fin = "10:00";
                 Caso(b = 3);
-                    Base.Lista[global_id].Hora_Inicio = "10:00";
-                    Base.Lista[global_id].Hora_Fin = "11:30";
+                    Bloque[global_id].Hora_Inicio = "10:00";
+                    Bloque[global_id].Hora_Fin = "11:30";
                 Caso(b = 4);
-                    Base.Lista[global_id].Hora_Inicio = "11:30";
-                    Base.Lista[global_id].Hora_Fin = "13:00";
+                    Bloque[global_id].Hora_Inicio = "11:30";
+                    Bloque[global_id].Hora_Fin = "13:00";
                 Caso(b = 5);
-                    Base.Lista[global_id].Hora_Inicio = "13:00";
-                    Base.Lista[global_id].Hora_Fin = "14:30";
+                    Bloque[global_id].Hora_Inicio = "13:00";
+                    Bloque[global_id].Hora_Fin = "14:30";
                 Caso(b = 6);
-                    Base.Lista[global_id].Hora_Inicio = "14:30";
-                    Base.Lista[global_id].Hora_Fin = "16:00";
+                    Bloque[global_id].Hora_Inicio = "14:30";
+                    Bloque[global_id].Hora_Fin = "16:00";
                 Caso(b = 7);
-                    Base.Lista[global_id].Hora_Inicio = "16:00";
-                    Base.Lista[global_id].Hora_Fin = "17:30";
+                    Bloque[global_id].Hora_Inicio = "16:00";
+                    Bloque[global_id].Hora_Fin = "17:30";
                 Otro_Caso
-                    Base.Lista[global_id].Hora_Inicio = "17:30";
-                    Base.Lista[global_id].Hora_Fin = "19:00";
+                    Bloque[global_id].Hora_Inicio = "17:30";
+                    Bloque[global_id].Hora_Fin = "19:00";
             Fin_Caso
-            Base.Lista[global_id].Aula = "Por asignar";
-            Base.Lista[global_id].Codigo_Materia = "";
-            Base.Lista[global_id].Estado = "Libre";
+            Bloque[global_id].Aula = "Por asignar";
+            Bloque[global_id].Estado = "Libre";
         Fin_Para
     Fin_Para
 Fin_Procedimiento

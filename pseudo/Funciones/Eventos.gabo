@@ -1,5 +1,6 @@
 Procedimiento Eventos(E/S: Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion: Cadena);
 Inicio
+    Var I: Entero;
     Mostrar << "A continuación los Even actuales";
     Para (I = 1 Hasta I = eve) Hacer;
         Mostrar << I;

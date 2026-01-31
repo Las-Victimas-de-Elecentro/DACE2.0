@@ -1,9 +1,8 @@
 Procedimiento Comunitario (E/S: SerC[N].Nombre, SerC[N].Area, Datos[pos_usuario].Carrera, Datos[pos_usuario].Nombre: Cadena, pos_usuario, SerC[N].Edad, SerC[N].Cedula, SerC[N].Semestre, SerC[N].Year, Datos[pos_usuario].Edad, Datos[pos_usuario].Semestre, Datos[pos_usuario].Year, Datos[pos_usuario].CI, Datos[pos_usuario].Materias_Aprobadas, N: Entero, Datos[pos_usuario].Servicio_Comunitario, Ad.Servicio_Comunitario, Inscripciones: Booleano, SerC[N].Horas_Realizadas: Real);
 Inicio
-    Var Cedula = 0, J = 0, I = 1, Materias_Aprobadas, Pensum: Entero;
+    Var Cedula = 0 I = 1, Materias_Aprobadas, Pensum: Entero;
     Var Horas, mitad: Real;
-    Var H = 1: Booleano;
-    J = N;
+    Var H = 0: Booleano;
     Si (Inscripciones = 1) Entonces;
         Mostrar << "Ingrese su cedula";
         Leer >> Cedula;
@@ -73,7 +72,7 @@ Inicio
                     SerC[I].Horas_Realizadas =      0;
                     Mostrar << "Ahora usted se encuentra en la base de datos del servicio comunitario";
                 Sino
-                    Si (N = 2) and (Ad.Servicio_Comunitario = 0) Entonces;
+                    Si (N = 2) and (Datos[pos_usuario].Servicio_Comunitario = 0) Entonces;
                         SerC[N].Nombre =            Datos[pos_usuario].Nombre;
                         SerC[N].Edad =              Datos[pos_usuario].Edad;
                         SerC[N].Cedula =            Datos[pos_usuario].CI;
@@ -97,7 +96,7 @@ Inicio
                 Fin_Si
             Fin_Si
             I = I + 1;
-            Hasta (I = J); 
+            Hasta (I = N); 
         Fin_Repetir
         Si (Materias_Aprobadas < mitad) Entonces;
             Mostrar << "Usted no califica para realizar servicio comunitario";

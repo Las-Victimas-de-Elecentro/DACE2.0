@@ -1,5 +1,6 @@
 Procedimiento Pasantias_Admin(E/S: Pas[I].Edad, Pas[I].Cedula, Pas[I].Semestre, Pas[I].Year, Pas[I].Estado_Solicitud: Entero, Pas[I].Nombre, Pas[I].Password, Pas[I].Carrera, Pas[I].Empresa, Pas[J].Solicitud: Cadena, Pas[I].Horas: Real);
 Inicio
+    Var R, R2, R3: Booleano;
     Mostrar << "¡Bienvenido a la sección de Pasantías!";
     Repetir
         Mostrar << "¿Desea ver las solicitudes que hay? 1: Sí, 0: No";

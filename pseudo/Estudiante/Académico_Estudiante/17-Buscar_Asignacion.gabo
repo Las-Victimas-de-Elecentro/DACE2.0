@@ -1,4 +1,4 @@
-Procedimiento Buscar_Asignacion(E/S: cod, Materias[J].Codigo, Clase[K].Codigo, Asig[Q].Estado, Asig[Q].Nombre_Profesor, Asig[Q].Codigo_Materia, Asig[Q].Titulo, Asig[Q].Descripcion, Asig[Q].Fecha_Publicacion, Asig[Q].Fecha_Entrega: Cadena, pos_usuario, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Asig[Q].ID_Asignacion, As, class: Entero);
+Procedimiento Buscar_Asignacion(E/S: cod, Materias[J].Codigo, Clase[K].Codigo, Asig[Q].Estado, Asig[Q].Nombre_Profesor, Asig[Q].Codigo_Materia, Asig[Q].Titulo, Asig[Q].Descripcion, Asig[Q].Fecha_Publicacion, Asig[Q].Fecha_Entrega: Cadena, pos_usuario, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Asig[Q].ID_Asignacion, As, class, J: Entero);
 Inicio
     Var J, K, F, Q: Entero;
     Si (cod = Materias[J].Codigo) Entonces;

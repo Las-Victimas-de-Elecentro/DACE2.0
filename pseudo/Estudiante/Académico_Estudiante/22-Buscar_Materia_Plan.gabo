@@ -1,4 +1,4 @@
-Procedimiento Buscar_Materia_Plan(E/S: cod, Materias[J].Codigo, Clase[K].Codigo, Plan[Q].Nombre_Profesor, Plan[Q].Nombre_Materia, Plan[Q].Tema, Plan[Q].Fecha, Plan[Q].Estrategia: Cadena, pos_usuario, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Plan[Q].ID_Plan, Plan[Q].Ponderacion: Entero, Plan[Q].Firmado: Booleano);
+Procedimiento Buscar_Materia_Plan(E/S: cod, Materias[J].Codigo, Clase[K].Codigo, Plan[Q].Nombre_Profesor, Plan[Q].Nombre_Materia, Plan[Q].Tema, Plan[Q].Fecha, Plan[Q].Estrategia: Cadena, pos_usuario, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Plan[Q].ID_Plan, Plan[Q].Ponderacion, J: Entero, Plan[Q].Firmado: Booleano);
 Inicio
     Var K, F, Q, L: Entero;
     Si (cod = Materias[J].Codigo) Entonces;

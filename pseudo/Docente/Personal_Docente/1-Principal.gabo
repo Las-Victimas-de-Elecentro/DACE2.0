@@ -1,6 +1,6 @@
 Procedimiento Docente_Personal([Procedimiento Informacion_Docente(Prof[pos].Avatar, Prof[pos].Nombre, Prof[pos].Gmail, pos, Prof[pos].CI)], [Procedimiento Seguridad_Docente(indice, pos, pass, Prof[pos].Password, Prof[pos].Gmail, Acceso, [Procedimiento Validar_Coordenada_Prof(pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso)], [Procedimiento Encriptacion(indice, pass)])], [Procedimiento Historial_Docente(Prof[pos].Nombre, Clase[I].Codigo_Materia, Clase[I].Nombre_Materia, Clase[I].Periodo, Clase[I].Nombre_Profesor, Clase[I].Dia, Clase[I].Hora_Inicio, Clase[I].Hora_Fin, Clase[I].Aula, class, pos, Clase[I].Seccion, Clase[I].Cant_Estudiantes)], [Procedimiento Modo_Oscuro(Tema)], [Procedimiento Avatar_Docente(pos, Avatares[I], Prof[pos].Avatar)], [Procedimiento Salud_Docente(pos, Prof[pos].Salud[pos].Transmisibles, Prof[pos].Salud[pos].Cronicas, Prof[pos].Salud[pos].Neurologicas, Prof[pos].Salud[pos].Neoplasias, Prof[pos].Salud[pos].Autoinmunes, Prof[pos].Salud[pos].Trastornos, Prof[pos].Salud[pos].Lesiones, Prof[pos].Salud[pos].Congenitas, Prof[pos].Salud[pos].Metabolicos, Prof[pos].Salud[pos].Ocupacionales)]);
 Inicio
-    var Opc: Entero, R: Booleano;
+    Var Opc: Entero, R: Booleano;
     Repetir
         Mostrar << "Bienvenido a tu perfil personal de profesor";
         Mostrar << "Aqui puedes gestionar tu informacion, seguridad y preferencias";

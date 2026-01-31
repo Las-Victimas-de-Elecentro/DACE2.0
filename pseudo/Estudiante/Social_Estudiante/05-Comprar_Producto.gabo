@@ -1,6 +1,6 @@
 Procedimiento Comprar_Producto(E/S: M, C_MP[I].Stock, A_MP[I].Stock: Entero, MP[I].Boveda, MP[I].Egresos, C_MP[I].Precio, C_MP[I].Ingresos, C_MP[I].Boveda, A_MP[I].Precio, A_MP[I].Ingresos, A_MP[I].Boveda, S_MP[I].Precio, S_MP[I].Ingresos, S_MP[I].Boveda, Precio, Egresos, Ingresos: Real, MP[I].Bitacora, MP[I].Usuario, C_MP[I].Vendedor, C_MP[I].Contacto, C_MP[I].Producto, C_MP[I].Datos_Bancarios, C_MP[I].Bitacora, A_MP[I].Vendedor, A_MP[I].Contacto, A_MP[I].Producto, A_MP[I].Datos_Bancarios, A_MP[I].Bitacora, S_MP[I].Vendedor, S_MP[I].Contacto, S_MP[I].Producto, S_MP[I].Datos_Bancarios, S_MP[I].Bitacora, DTB: Cadena, S_MP[I].Disp, validacion_pago: Booleano, [Procedimiento metodo_pago(Egresos, Ingresos, Precio, DTB, validacion_pago)]);
 Inicio
-    Var I, Opc3, Q1, Unidades: Entero;
+    Var I, Opc3, Q1, Q5 = 0, J2, Unidades: Entero;
     Var Q2, Q3, Q4: Booleano;
     Mostrar << "Bienvenido a la sección de compra";
     Mostrar << "Ingrese mediente numeros en cual de las siguientes 3 secciones está interesado";
@@ -23,8 +23,8 @@ Inicio
                         Mostrar << "Producto: ", C_MP[I].Producto;
                         Mostrar << "Stock: ", C_MP[I].Stock;
                         Mostrar << "Precio: ", C_MP[I].Precio;
-                        Q5 = Q5 + 1;
                     Fin_Si
+                    Q5 = Q5 + 1;
                 Fin_Para
                 Mostrar << "Ingrese si le intereso algun producto 1: Si, 0: No";
                 Leer >> Q2;

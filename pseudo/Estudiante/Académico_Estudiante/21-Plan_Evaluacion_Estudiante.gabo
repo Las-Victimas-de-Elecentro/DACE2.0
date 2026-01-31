@@ -1,11 +1,11 @@
-Procedimiento Plan_Evaluacion_Estudiante(E/S: pos_usuario, J: Entero, Datos[pos_usuario].Carrera, cod: Cadena, [Procedimiento Buscar_Materia_Plan(cod, Materias[J].Codigo, Clase[K].Codigo, Plan[Q].Nombre_Profesor, Plan[Q].Nombre_Materia, Plan[Q].Tema, Plan[Q].Fecha, Plan[Q].Estrategia, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Plan[Q].ID_Plan, Plan[Q].Ponderacion, Plan[Q].Firmado)]);
+Procedimiento Plan_Evaluacion_Estudiante(E/S: pos_usuario, J: Entero, Datos[pos_usuario].Carrera, cod: Cadena, [Procedimiento Buscar_Materia_Plan(cod, Materias[J].Codigo, Clase[K].Codigo, Plan[Q].Nombre_Profesor, Plan[Q].Nombre_Materia, Plan[Q].Tema, Plan[Q].Fecha, Plan[Q].Estrategia, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Plan[Q].ID_Plan, Plan[Q].Ponderacion, J, Plan[Q].Firmado)]);
 Inicio
     Var R: Booleano;
     Repetir
         Mostrar << "¡Bienvenido al apartado de los Planes de Evaluación!";
         Mostrar << "Ingrese el código de la materia de la cual desea ver su plan de evaluación";
         Leer >> cod;
-        Buscar_Materia_Plan(cod, Materias[J].Codigo, Clase[K].Codigo, Plan[Q].Nombre_Profesor, Plan[Q].Nombre_Materia, Plan[Q].Tema, Plan[Q].Fecha, Plan[Q].Estrategia, pos_usuario, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Plan[Q].ID_Plan, Plan[Q].Ponderacion, Plan[Q].Firmado);
+        Buscar_Materia_Plan(cod, Materias[J].Codigo, Clase[K].Codigo, Plan[Q].Nombre_Profesor, Plan[Q].Nombre_Materia, Plan[Q].Tema, Plan[Q].Fecha, Plan[Q].Estrategia, pos_usuario, Lista[F].ID_Lista, Clase[K].ID_Clase, Datos[pos_usuario].CI, Lista[L].Cedula, Plan[Q].ID_Plan, Plan[Q].Ponderacion, J, Plan[Q].Firmado);
         En_Caso (Datos[pos_usuario].Carrera <> "Ninguna") Sea;
             Caso(Datos[pos_usuario].Carrera = "Informatica");
                 Para (J = 1 Hasta J = 59) Hacer;

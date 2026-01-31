@@ -1,4 +1,4 @@
-Procedimiento Validar_Choque_Bloque(E/S: class: Entero, Prof[pos].Nombre, Clase[i].Nombre_Profesor, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Dia: Cadena, es_valido: Booleano);
+Procedimiento Validar_Choque_Bloque(E/S: class: Entero, Prof[pos].Nombre, Clase[i].Nombre_Profesor, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Bloque[i].Hora_Inicio, Bloque[i].Hora_Fin, Bloque[i].Dia: Cadena, es_valido: Booleano);
 Inicio
     // Valida que el docente no tenga otro bloque en el mismo día y rango
     es_valido = 1;
@@ -7,12 +7,12 @@ Inicio
     Para (i = 1 Hasta i = class) Hacer;
         Si (Clase[i].Nombre_Profesor = Prof[pos].Nombre) Entonces;
             Para (J = 1 Hasta J = 48) Hacer;
-                Si (Clase[i].Dia = Base.Lista[J].Dia) Entonces;
+                Si (Clase[i].Dia = Bloque[J].Dia) Entonces;
                     // Simplificación: si coincide hora de inicio o fin, consideramos choque
-                    Si (Clase[i].Hora_Inicio = Base.Lista[J].Hora_Inicio) Entonces;
+                    Si (Clase[i].Hora_Inicio = Bloque[J].Hora_Inicio) Entonces;
                         cant = cant + 1;
                     Fin_Si
-                    Si (Clase[i].Hora_Fin = Base.Lista[J].Hora_Fin) Entonces;
+                    Si (Clase[i].Hora_Fin = Bloque[J].Hora_Fin) Entonces;
                         cant = cant + 1;
                     Fin_Si
                 Fin_Si

@@ -2,7 +2,7 @@ Procedimiento Iniciar_Sesion(E/S: Rol, Datos[I].Gmail, Admin[I].Gmail, Prof[I].G
 Inicio
     Var gmail_ingresado, password_ingresado: Cadena;
     Var R: Booleano;
-    Var I, Intentos_Fallidos: Entero;
+    Var I, Intentos_Fallidos = 3: Entero;
     
     Intentos_Fallidos = 0;
     encontrado = 0;

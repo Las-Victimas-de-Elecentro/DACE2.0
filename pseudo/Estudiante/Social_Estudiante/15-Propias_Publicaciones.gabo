@@ -155,7 +155,7 @@ Inicio
                 Publi[K4].Tema = Tema;
                 Mostrar << "Ingrese la(s) nueva(s) etiquetas de la publicacion";
                 Publi[K4].Etiqueta = Etiqueta;
-                Mostrar << "Desea repetir esta accion 1: Si, 2: No";
+                Mostrar << "Desea repetir esta accion 1: Si, 0: No";
                 Leer >> R6;
                 Hasta (R6  = 0);
             Fin_Repetir          

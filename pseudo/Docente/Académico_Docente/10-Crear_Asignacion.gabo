@@ -1,7 +1,5 @@
 Procedimiento Crear_Asignacion(E/S: Prof[pos].Nombre, Asig[i].Titulo, Asig[i].Codigo_Materia, Asig[i].Descripcion, Asig[i].Fecha_Publicacion, Asig[i].Fecha_Entrega, Asig[i].Estado, cod: Cadena, pos, As: Entero, ok: Booleano, [Procedimiento Buscar_Materia(Materias[i].Codigo, cod, ok)]);
 Inicio 
-    Var cod: Cadena; 
-    Var pos: Entero; 
     Var ok: Booleano;
     Mostrar << "=== Creación de Asignación ===";
     Mostrar << "Código de materia:";
