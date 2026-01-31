@@ -1,6 +1,6 @@
 Procedimiento Planes_Evaluacion(E/S: plan, Plan[I].ID_Plan, Plan[I].Ponderacion: Entero, Plan[I].Nombre_Profesor, Plan[I].Codigo_Materia, Plan[I].Nombre_Materia, Plan[I].Fecha, Plan[I].Tema, Plan[I].Estrategia: Cadena, Plan[I].Firmado: Booleano);
 Inicio
-    Var opc, ID, CI, I: Entero;
+    Var opc, ID, CI, I, Elim: Entero;
     Var R: Booleano;
     Repetir
         Mostrar << "¡Bienvenido a la sección de Planes de Evaluación!";

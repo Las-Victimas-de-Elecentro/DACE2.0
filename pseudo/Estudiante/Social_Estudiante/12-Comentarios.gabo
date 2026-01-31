@@ -1,6 +1,7 @@
-Procedimiento Comentarios(E/S: Ver, re, react, Publi[Ver].ID_Publicacion, Publi[Ver].Comentarios, Com[J].ID_Publicacion, Com[J].ID_Comentario, Com[J].Cant_Reacciones, Res[K].Cant_Reacciones, Res[re].ID_Comentario, Res[re].ID_Respuesta, Rea[react].ID_Publicacion, Rea[react].ID_Comentario, Rea[react].ID_Respuesta, Rea[react].ID_Reacciones, Com[J].Respuestas: Entero, Com[J].Autor, Com[J].Fecha, Com[J].Tipo_Reaccion1, Com[J].Tipo_Reaccion2, Com[J].Tipo_Reaccion3, Com[J].Comentario, Res[re].Comentario, Res[re].Autor, Res[re].Fecha, Com[J].Imagen, Res[re].Imagen: Cadena, [Procedimiento Agregar_Reaccion(Aux, Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[react].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[react].Cant_Molesta, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta)]);
+Procedimiento Comentarios(E/S: Aux, Ver, re, react, Publi[Ver].ID_Publicacion, Publi[Ver].Comentarios, Com[J].ID_Publicacion, Com[J].ID_Comentario, Com[J].Cant_Reacciones, Res[K].Cant_Reacciones, Res[re].ID_Comentario, Res[re].ID_Respuesta, Rea[react].ID_Publicacion, Rea[react].ID_Comentario, Rea[react].ID_Respuesta, Rea[react].ID_Reacciones, Com[J].Respuestas: Entero, Com[J].Autor, Com[J].Fecha, Com[J].Tipo_Reaccion1, Com[J].Tipo_Reaccion2, Com[J].Tipo_Reaccion3, Com[J].Comentario, Res[re].Comentario, Res[re].Autor, Res[re].Fecha, Com[J].Imagen, Res[re].Imagen: Cadena, [Procedimiento Agregar_Reaccion(Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[react].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[react].Cant_Molesta, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta)]);
 Inicio
-    Var J, K, opc: Entero;
+    Var J, K, opc, Img: Entero;
+    Var R5, R_Img: Booleano;
     Para (J = 1 Hasta J = com) Hacer;
         Si (Publi[Ver].ID_Publicacion = Com[J].ID_Publicacion) Entonces;
             Mostrar << Com[J].Autor;
@@ -86,7 +87,7 @@ Inicio
                                 Rea[react].ID_Publicacion = -1;
                                 Rea[react].ID_Comentario = -1;
                                 Rea[react].ID_Respuesta = Aux;
-                                Agregar_Reaccion(Aux, Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[Aux].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[Aux].Cant_Molesta, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta);
+                                Agregar_Reaccion(Rea[react].Cant_Gusta, Rea[react].Cant_Encanta, Rea[react].Cant_Importa, Rea[Aux].Cant_Divierte, Rea[react].Cant_Asombra, Rea[react].Cant_Entristece, Rea[Aux].Cant_Molesta, Rea[react].Me_Gusta, Rea[react].Me_Encanta, Rea[react].Me_Importa, Rea[react].Me_Divierte, Rea[react].Me_Asombra, Rea[react].Me_Entristece, Rea[react].Me_Molesta);
                                 Mostrar << Agregar_Reaccion;
                                 Rea[react].ID_Reacciones = react;
                                 Res[K].Cant_Reacciones = Res[K].Cant_Reacciones + 1;

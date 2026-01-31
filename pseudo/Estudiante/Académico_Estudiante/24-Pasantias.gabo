@@ -1,6 +1,6 @@
 Procedimiento Pasantias (E/S: Pas[P].Nombre, Pas[P].Password, Pas[P].Carrera, Datos[pos_usuario].Carrera, Datos[pos_usuario].Nombre, Pas[I].Empresa, Pas[J].Solicitud: Cadena, pos_usuario, Pas[P].Edad, Pas[P].Cedula, Pas[P].Semestre, Pas[P].Year, Datos[pos_usuario].Edad, Datos[pos_usuario].Semestre, Datos[pos_usuario].Year, Datos[pos_usuario].CI, Datos[pos_usuario].Materias_Aprobadas, Datos[pos_usuario].UC_Aprobadas, P, Pas[I].Estado_Solicitud: Entero, Pas[P].Horas: Real, Datos[pos_usuario].Servicio_Comunitario, K, Datos[pos_usuario].Pasantias: Booleano);
 Inicio
-    Var R = 3, Cedula, opc: Entero;
+    Var R = 3, Cedula, Opc, I = 1, J: Entero;
     Var Password1, Password2, Nombre, Justificacion: Cadena;
     Var Horas: Real;
     Var R3, R4: Booleano;
@@ -99,15 +99,20 @@ Inicio
                     Sino
                         Mostrar << "Ingrese su contraseña";
                         Leer >> Password1;
-                        Mientras (Password2 != Pas[J].Password) Hacer;
-                            Mostrar << "Error en la contraseña le quedan: ", J3, " Intentos";
-                            Leer >> Password2;
-                            J3 = J3 - 1;
-                            Si (J3 = 0) Entonces;
-                                Password2 = Pas[J].Password;
-                                R3 = 0;
+                        Para (J = 1 Hasta J = P) Hacer;
+                            Si (Password1 != Pas[J].Password) Entonces;
+                                Mostrar << "Error en la contraseña le quedan: ", J3, " Intentos";
+                                Leer >> Password2;
+                                J3 = J3 - 1;
+                                Si (Password2 = Pas[J].Password) Entonces;
+                                    R3 = 1;
+                                Fin_Si
+                                Si (J3 = 0) Entonces;
+                                    Password2 = Pas[J].Password;
+                                    R3 = 0;
+                                Fin_Si
                             Fin_Si
-                        Fin_Mientras     
+                        Fin_Para
                         Si (R3 = 1) Entonces;
                             Mostrar << "Seleecione 1: para empresas del listado, 2: para agregar una empresa por su cuenta, 3: para revisar alguna solicitud pendiente";
                             Leer >> R;

@@ -1,6 +1,6 @@
-Procedimiento Asignar_Horario(E/S: pos, class, G, Clase[i].CI_Profesor, Gru[i].CI_Profesor, Gru[i].Seccion, Clase[i].Seccion, Prof[i].CI, Prof[i].Cant_Clases, Gru[i].Miembros: Entero, cod, Materias[i].Codigo, Prof[pos].Nombre, Clase[i].Nombre_Profesor, Gru[i].Nombre_Profesor, Gru[i].Codigo_Materia, Gru[i].Materia, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Clase[i].Periodo, Clase[i].Nombre_Materia, Clase[i].Codigo_Materia, Clase[i].Aula, Clase[i].Plataforma, Base.Lista[idb].Dia, Base.Lista[idb].Hora_Inicio, Base.Lista[idb].Hora_Fin, Base.Lista[idb].Aula: Cadena, es_valido, Clase[i].Virtual: Booleano, [Procedimiento Buscar_Materia(Materias[i].Codigo, cod, ok)], [Procedimiento Mostrar_Bloques_Disponibles(Base.Lista[i].ID_Bloque, Base.Lista[i].Dia, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Aula, Base.Lista[i].Estado)], [Procedimiento Validar_Choque_Bloque(class, Prof[pos].Nombre, Clase[i].Nombre_Profesor, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Dia, es_valido)]);
+Procedimiento Asignar_Horario(E/S: pos, class, G, Clase[i].CI_Profesor, Gru[i].CI_Profesor, Gru[i].Seccion, Clase[i].Seccion, Prof[i].CI, Prof[i].Cant_Clases, Gru[i].Miembros: Entero, cod, Materias[i].Codigo, Prof[pos].Nombre, Clase[i].Nombre_Profesor, Gru[i].Nombre_Profesor, Gru[i].Codigo_Materia, Gru[i].Materia, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Clase[i].Periodo, Clase[i].Nombre_Materia, Clase[i].Codigo_Materia, Clase[i].Aula, Clase[i].Plataforma, Bloque[idb].Dia, Bloque[idb].Hora_Inicio, Bloque[idb].Hora_Fin, Bloque[idb].Aula: Cadena, es_valido, Clase[i].Virtual: Booleano, [Procedimiento Buscar_Materia(Materias[i].Codigo, cod, ok)], [Procedimiento Mostrar_Bloques_Disponibles(Bloque[i].ID_Bloque, Bloque[i].Dia, Bloque[i].Hora_Inicio, Bloque[i].Hora_Fin, Bloque[i].Aula, Bloque[i].Estado)], [Procedimiento Validar_Choque_Bloque(class, Prof[pos].Nombre, Clase[i].Nombre_Profesor, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Bloque[i].Hora_Inicio, Bloque[i].Hora_Fin, Bloque[i].Dia, es_valido)]);
 Inicio
-    Var pos, idb: Entero;
+    Var idb: Entero;
     Var ok, R, R2, es_valido, virtual: Booleano;
     Repetir
         Mostrar << "=== Ritual de Asignación de Horario ===";
@@ -12,7 +12,7 @@ Inicio
         Si (ok = 0) Entonces;
             Mostrar << "Materia no encontrada.";
         Sino
-            Mostrar_Bloques_Disponibles(Base.Lista[i].ID_Bloque, Base.Lista[i].Dia, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Aula, Base.Lista[i].Estado);
+            Mostrar_Bloques_Disponibles(Bloque[i].ID_Bloque, Bloque[i].Dia, Bloque[i].Hora_Inicio, Bloque[i].Hora_Fin, Bloque[i].Aula, Bloque[i].Estado);
             Mostrar << Mostrar_Bloques_Disponibles;
             Mostrar << "Ingrese el ID del bloque que desea ocupar:";
             Leer >> idb;
@@ -20,10 +20,10 @@ Inicio
                 Mostrar << "ID inválido, intente nuevamente:";
                 Leer >> idb;
             Fin_Mientras
-            Si (Base.Lista[idb].Estado = "Ocupado") Entonces;
+            Si (Bloque[idb].Estado = "Ocupado") Entonces;
                 Mostrar << "Bloque ya ocupado, seleccione otro.";
             Sino
-                Validar_Choque_Bloque(class, Prof[pos].Nombre, Clase[i].Nombre_Profesor, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Base.Lista[i].Hora_Inicio, Base.Lista[i].Hora_Fin, Base.Lista[i].Dia, es_valido);
+                Validar_Choque_Bloque(class, Prof[pos].Nombre, Clase[i].Nombre_Profesor, Clase[i].Dia, Clase[i].Hora_Inicio, Clase[i].Hora_Fin, Bloque[i].Hora_Inicio, Bloque[i].Hora_Fin, Bloque[i].Dia, es_valido);
                 Si (es_valido = 0) Entonces;
                     Mostrar << "El bloque genera choque con su horario actual. Seleccione otro.";
                 Sino
@@ -37,9 +37,9 @@ Inicio
                         Hasta(R = 1);
                     Fin_Repetir
                     Clase[class].Codigo_Materia = cod;
-                    Clase[class].Dia = Base.Lista[idb].Dia;
-                    Clase[class].Hora_Inicio = Base.Lista[idb].Hora_Inicio;
-                    Clase[class].Hora_Fin = Base.Lista[idb].Hora_Fin;
+                    Clase[class].Dia = Bloque[idb].Dia;
+                    Clase[class].Hora_Inicio = Bloque[idb].Hora_Inicio;
+                    Clase[class].Hora_Fin = Bloque[idb].Hora_Fin;
                     Para (i = 1 Hasta i = class) Hacer;
                         Si (Clase[i].Codigo_Materia = cod) Entonces;
                             Si (Clase[i].Seccion > 0) Entonces;
@@ -48,7 +48,7 @@ Inicio
                         Fin_Si
                     Fin_Para
                     
-                    Clase[class].Aula = Base.Lista[idb].Aula;
+                    Clase[class].Aula = Bloque[idb].Aula;
                     Clase[class].Seccion = Seccion;
                     Clase[class].Virtual = 0;
                     Gru[G].Seccion = Seccion;

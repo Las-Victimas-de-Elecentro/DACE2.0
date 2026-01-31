@@ -1,4 +1,4 @@
-Procedimiento Estudiantes_Datos(E/S: C, Gestion[C].CI, Gestion[C].Edad, Gestion[C].Year, Gestion[C].Semestre: Entero, Gestion[C].Usuario, Gestion[C].Password, Gestion[C].Carrera, Gestion[C].Telefono: Cadena);
+Procedimiento Estudiantes_Datos(E/S: C, Gestion[C].CI, Gestion[C].Edad, Gestion[C].Year, Gestion[C].Semestre: Entero, Gestion[C].Usuario, Gestion[C].Carrera, Gestion[C].Telefono: Cadena);
 Inicio
 	Var op: Entero;
 	Var Z: Booleano;

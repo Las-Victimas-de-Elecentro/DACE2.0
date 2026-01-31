@@ -1,6 +1,7 @@
 Procedimiento Novedades(E/S: Nov: Entero, Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar: Cadena);
 Inicio
-    Var opc, Elim: Entero, R: Booleano;
+    Var I, opc, Elim: Entero;
+    Var R: Booleano;
     Repetir
         Mostrar << "¡Bienvenido a la sección de Novedades!";
         Mostrar << "¿Qué desea hacer?";
@@ -49,11 +50,11 @@ Inicio
                     Mostrar << "Es invalido";
                     Leer >> Elim;
                 Fin_Mientras
-                Nov[I].Fecha = Nov[Nov].Fecha;
-                Nov[I].Hecho = Nov[Nov].Hecho;
-                Nov[I].Responsables = Nov[Nov].Responsables;
-                Nov[I].Contexto = Nov[Nov].Contexto;
-                Nov[I].Lugar = Nov[Nov].Lugar;
+                Nov[Elim].Fecha = Nov[Nov].Fecha;
+                Nov[Elim].Hecho = Nov[Nov].Hecho;
+                Nov[Elim].Responsables = Nov[Nov].Responsables;
+                Nov[Elim].Contexto = Nov[Nov].Contexto;
+                Nov[Elim].Lugar = Nov[Nov].Lugar;
 
                 Nov[Nov].Fecha = null;
                 Nov[Nov].Hecho = null;

@@ -1,6 +1,6 @@
 Procedimiento Amigos_Estudiante(E/S: Am, pos_usuario, Lim, v, prof: Entero, Prof[J].Avatar, Admin[J].Avatar, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera: Cadena, Prof[pos_usuario].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos_usuario].Amigos, Datos[J].Semestre, Datos[J].Year, Prof[J].Cant_Materias: Entero);
 Inicio
-    Var opc, opc2: Entero;
+    Var opc, opc2, ID: Entero;
     Var Nombre: Cadena;
     Var CI: Entero;
     Var R, r, R2, encontrado = 0: Booleano;

@@ -1,7 +1,7 @@
-Procedimiento Seguridad(E/S: pos_admin: Entero, Admin[pos_admin].Password, Admin[pos_admin].Usuario, Admin[pos_admin].Gmail: Cadena, [Procedimiento Validar_Coordenada_Admin(pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Minimo, Maximo, Acceso)], [Procedimiento Encriptacion(indice, pass)]);
+Procedimiento Seguridad(E/S: pos_admin: Entero, Admin[pos_admin].Password, Admin[pos_admin].Usuario, Admin[pos_admin].Gmail: Cadena, encontradoAdmin: Booleano, [Procedimiento Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso, encontrado, encontradoProf, encontradoAdmin, [Funcion Aleatorio(Minimo, Maximo)])], [Procedimiento Encriptacion(indice, pass)]);
 Inicio
     Var opc, op: Entero;
-    Var contra, contraNueva, cargo, user: Cadena;
+    Var contra, contraNueva, user: Cadena;
     Var R, Re: Booleano;
     Var Intentos_Fallidos = 3: Entero;
     Repetir
@@ -15,11 +15,16 @@ Inicio
             Leer >> opc;
         Fin_Mientras
         Si (opc = 1) Entonces;
-            Validar_Coordenada_Admin(pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, Minimo, Maximo, Acceso)
-            Mostrar << Validar_Coordenada_Admin;
+            encontradoAdmin = 1;
+            Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso, encontrado, encontradoProf, encontradoAdmin, [Funcion Aleatorio(Minimo, Maximo)]);
+            Mostrar << Validar_Coordenada;
             Si (Acceso = 1) Entonces;
                 Mostrar << "Ingrese su contraseña actual: ";
                 Leer >> contra;
+                indice = pos_admin;
+                pass = contra;
+                Encriptacion(indice, pass);
+                contra = pass;
                 Si (contra = Admin[pos_admin].Password) Entonces;
                     Repetir
                         Mostrar << "Perfecto, ahora ingrese su nueva contraseña: ";

@@ -1,6 +1,6 @@
 Procedimiento Salir_Club(E/S: club, pos, Club[I].Miembros_Inscritos: Entero, Club[I].Nombre, Prof[I].Club: Cadena, Prof[pos].Esta_en_Club: Booleano);
 Inicio 
-    Var Nombre_Club: Entero;
+    Var Nombre_Club: Cadena;
     Si (Prof[pos].Esta_en_Club = 1) Entonces;
         Mostrar << "Ingrese el nombre del club de dónde está inscrito";
         Leer >> Nombre_Club;

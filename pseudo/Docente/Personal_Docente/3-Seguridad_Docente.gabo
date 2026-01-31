@@ -1,6 +1,8 @@
 Procedimiento Seguridad_Docente(E/S: indice, pos: Entero, pass, Prof[pos].Password, Prof[pos].Gmail: Cadena, Acceso: Booleano, [Procedimiento Validar_Coordenada_Prof(pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso)], [Procedimiento Encriptacion(indice, pass)]);
 Inicio
-    Var Opc, Intentos_Fallidos = 3: Entero, contra, contraNueva, NewG: Cadena, S = 0, R, Re: Booleano;
+    Var Opc, Intentos_Fallidos = 3: Entero;
+    Var contra, contraNueva, NewG: Cadena; 
+    Var S = 0, R, Re: Booleano;
     
     Repetir
         Mostrar << "Gestión de seguridad";
@@ -21,6 +23,10 @@ Inicio
                 Si (Acceso = 1) Entonces;
                     Mostrar << "Ingrese su contraseña actual: ";
                     Leer >> contra;
+                    indice = pos;
+                    pass = contra;
+                    Encriptacion(indice, pass);
+                    contra = pass;
                     Si (contra = Prof[pos].Password) Entonces;
                         Repetir
                             Mostrar << "Perfecto, ahora ingrese su nueva contraseña: ";

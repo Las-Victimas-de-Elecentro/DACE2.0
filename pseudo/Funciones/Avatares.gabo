@@ -1,4 +1,4 @@
-Procedimiento Avatares (E/S: Avatares[10]: Cadena);
+Procedimiento Avatares (E/S: Avatares[I]: Cadena);
 Inicio
 
     Avatares[1] = ";

@@ -1,6 +1,7 @@
-Procedimiento Mostrar_Grupos(E/S: I, Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia: Cadena, Gru[I].Miembros, Gru[I].Seccion: Entero);
+Procedimiento Mostrar_Grupos(E/S: Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia: Cadena, Gru[I].Miembros, Gru[I].Seccion: Entero);
 Inicio
     Var R: Booleano;
+    Var I: Entero;
     Mostrar << "¡Bienvenido a la sección de Grupos!";
     Mostrar << "¿Desea ver los grupos disponibles? 1: Sí, 0: No";
     Leer >> R;
