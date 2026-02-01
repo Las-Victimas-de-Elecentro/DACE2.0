@@ -1,4 +1,4 @@
-Procedimiento Docente_Social([Procedimiento Mostrar_Novedades(Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar)], [Procedimiento Mostrar_Grupos(I, Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia, Gru[I].Miembros, Gru[I].Seccion)], [Procedimiento Amigos_Docente(Am, pos, Lim, v, prof, Prof[J].Avatar, Admin[J].Avatar, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Datos[J].Semestre, Datos[J].Year, Prof[J].Cant_Materias)]);
+Procedimiento Docente_Social([Procedimiento Mostrar_Novedades(Nov, Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar)], [Procedimiento Mostrar_Grupos(Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia, G, Gru[I].Miembros, Gru[I].Seccion)], [Procedimiento Amigos_Docente(Am, pos, Lim, v, prof, Prof[J].Avatar, Admin[J].Avatar, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Datos[J].Semestre, Datos[J].Year, Prof[J].Cant_Materias)]);
 Inicio
     Var opc: Entero;
     Var R: Booleano;
@@ -9,12 +9,16 @@ Inicio
         Mostrar << "2: Mostrar Grupos";
         Mostrar << "3: Sección de Amigos";
         Leer >> opc;
+        Mientras (opc < 1 or opc > 3) Hacer;
+            Mostrar << "Es invalido";
+            Leer >> opc;
+        Fin_Mientras
         En_Caso (opc > 0) Sea;
             Caso(opc = 1);
-                Mostrar_Novedades(Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar);
+                Mostrar_Novedades(Nov, Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar);
                 Mostrar << Mostrar_Novedades;
             Caso(opc = 2);
-                Mostrar_Grupos(I, Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia, Gru[I].Miembros, Gru[I].Seccion);
+                Mostrar_Grupos(Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia, G, Gru[I].Miembros, Gru[I].Seccion);
                 Mostrar << Mostrar_Grupos;
             Otro_Caso
                 Amigos_Docente(Am, pos, Lim, v, prof, Prof[J].Avatar, Admin[J].Avatar, Prof[J].Nombre, Prof[J].Materias, Amig[Am].Nombre_Emisor, Amig[Am].Nombre_Receptor, Amig[Am].Avatar_Receptor, Admin[J].Usuario, Admin[J].Cargo, Datos[J].Nombre, Datos[J].Avatar, Datos[J].Carrera, Prof[pos].CI, Amig[Am].CI_Emisor, Amig[Am].CI_Receptor, Prof[pos].Amigos, Datos[J].Semestre, Datos[J].Year, Prof[J].Cant_Materias);

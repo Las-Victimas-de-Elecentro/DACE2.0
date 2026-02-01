@@ -1,4 +1,4 @@
-Procedimiento Seguridad_Docente(E/S: indice, pos: Entero, pass, Prof[pos].Password, Prof[pos].Gmail: Cadena, Acceso: Booleano, [Procedimiento Validar_Coordenada_Prof(pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso)], [Procedimiento Encriptacion(indice, pass)]);
+Procedimiento Seguridad_Docente(E/S: indice, pos: Entero, pass, Prof[pos].Password, Prof[pos].Gmail: Cadena, Acceso: Booleano, [Procedimiento Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso, encontrado, encontradoProf, encontradoAdmin, [Funcion Aleatorio(Minimo, Maximo)])], [Procedimiento Encriptacion(indice, pass)]);
 Inicio
     Var Opc, Intentos_Fallidos = 3: Entero;
     Var contra, contraNueva, NewG: Cadena; 
@@ -18,8 +18,8 @@ Inicio
 
         En_Caso (Opc > 0) Sea;
             Caso(Opc = 1);
-                Validar_Coordenada_Prof(pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso);
-                Mostrar << Validar_Coordenada_Prof;
+                Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso, encontrado, encontradoProf, encontradoAdmin, [Funcion Aleatorio(Minimo, Maximo)]);
+                Mostrar << Validar_Coordenada;
                 Si (Acceso = 1) Entonces;
                     Mostrar << "Ingrese su contraseña actual: ";
                     Leer >> contra;
@@ -51,7 +51,7 @@ Inicio
             Otro_Caso
                 Mostrar << "Ingrese el nuevo correo electrónico";
                 Leer >> NewG;
-                Mostrar << "¿Estás seguro de que quieres usar este correo? Ingrese 1:Sí / 0:No";
+                Mostrar << "¿Estás seguro de que quieres usar este correo? Ingrese 1: Sí / 0: No";
                 Leer >> S;
             Fin_Caso
 
@@ -63,7 +63,7 @@ Inicio
             Mostrar << "Cambios de seguridad cancelados";
         Fin_Si
 
-        Mostrar << "¿Desea cambiar otro dato de seguridad? Ingrese 1:Sí, 0:No";
+        Mostrar << "¿Desea cambiar otro dato de seguridad? Ingrese 1: Sí, 0: No";
         Leer >> R;
         Hasta(R = 0);
     Fin_Repetir

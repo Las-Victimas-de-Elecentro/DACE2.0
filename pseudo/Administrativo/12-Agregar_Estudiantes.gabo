@@ -1,4 +1,4 @@
-Procedimiento Agregar_Estudiantes(E/S: v, Datos[I].CI, Datos[I].Year, Datos[I].Semestre: Entero, Datos[I].Nombre, Datos[I].Gmail, Datos[I].Password, Datos[I].Carrera: Cadena);
+Procedimiento Agregar_Estudiantes(E/S: v, Datos[I].CI, Datos[I].Year, Datos[I].Semestre: Entero, Datos[I].Nombre, Datos[I].Gmail, Datos[I].Password, Datos[I].Carrera: Cadena, [Procedimiento Encriptacion(indice, pass)]);
 Inicio
 	Var I, op, Pos, Opcion: Entero;
 	Var R: Booleano;
@@ -32,8 +32,16 @@ Inicio
 			Leer >> Datos[Pos].Nombre;
 			Mostrar << "Ingrese la cédula del estudiante modificado";
 			Leer >> Datos[Pos].CI;
+			Mientras (Datos[Pos].CI < 1000000 or Datos[Pos].CI > 33000000) Hacer;
+				Mostrar << "Es invalido";
+				Leer >> Datos[Pos].CI;
+			Fin_Mientras
 			Mostrar << "Ingrese la contraseña del estudiante modificado";
 			Leer >> Datos[Pos].Password;
+			indice = Pos;
+			pass = Datos[Pos].Password;
+			Encriptacion(indice, pass);
+			Datos[Pos].Password = pass;
 			Mostrar << "Ingrese la carrera del estudiante";
 			Mostrar << "1: Ingeniería en Informática";
 			Mostrar << "2: Ingeniería Civil";
@@ -100,8 +108,16 @@ Inicio
 			Leer >> Datos[Pos].Nombre;
 			Mostrar << "Ingrese la cédula del nuevo estudiante";
 			Leer >> Datos[Pos].CI;
-			Mostrar << "Ingrese la contraseña del nuevo estudiante";
+			Mientras (Datos[Pos].CI < 1000000 or Datos[Pos].CI > 33000000) Hacer;
+				Mostrar << "Es invalido";
+				Leer >> Datos[Pos].CI;
+			Fin_Mientras
+			Mostrar << "Ingrese la contraseña del estudiante modificado";
 			Leer >> Datos[Pos].Password;
+			indice = Pos;
+			pass = Datos[Pos].Password;
+			Encriptacion(indice, pass);
+			Datos[Pos].Password = pass;
 			Mostrar << "Ingrese la carrera del estudiante";
 			Mostrar << "1: Ingeniería en Informática";
 			Mostrar << "2: Ingeniería Civil";

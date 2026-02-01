@@ -114,7 +114,7 @@ Inicio
         Sino
             Mostrar << "Enfermedad Crónica: ";
             Mostrar << Salud_Admin[pos_admin].Enfermedad_Cronica;
-            Mostrar << "Discapacidad_";
+            Mostrar << "Discapacidad:";
             Mostrar << Salud_Admin[pos_admin.Discapacidad];
             Mostrar << "Enfermedad del Corazón:";
             Mostrar << Salud_Admin[pos_admin].Corazon;

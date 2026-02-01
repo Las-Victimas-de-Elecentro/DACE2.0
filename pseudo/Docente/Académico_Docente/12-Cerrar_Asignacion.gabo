@@ -10,7 +10,7 @@ Inicio
         Mostrar << "=== Asignaciones Publicadas ===";
         Para (i = 1 Hasta i = As) Hacer;
             Si (Prof[pos].Nombre = Asig[i].Nombre_Profesor) and (Asig[i].Estado = "Publicada") Entonces;
-                Mostrar << " | ", Asig[i].Titulo, " | Materia: ", Asig[i].Codigo_Materia, " | Entrega: ", Asig[i].Fecha_Entrega;
+                Mostrar << I, " | ", Asig[i].Titulo, " | Materia: ", Asig[i].Codigo_Materia, " | Entrega: ", Asig[i].Fecha_Entrega;
                 asig[pos2] = i;
                 pos2 = pos2 + 1;
             Fin_Si

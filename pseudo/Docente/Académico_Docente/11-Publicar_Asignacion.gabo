@@ -10,7 +10,7 @@ Inicio
         Mostrar << "=== Asignaciones ===";
         Para (i = 1 Hasta i = As) Hacer;
             Si (Prof[pos].Nombre = Asig[i].Nombre_Profesor) Entonces;
-                Mostrar << " | ", Asig[i].Titulo, " | Estado: ", Asig[i].Estado, " | Materia: ", Asig[i].Codigo_Materia;
+                Mostrar << I," | ", Asig[i].Titulo, " | Estado: ", Asig[i].Estado, " | Materia: ", Asig[i].Codigo_Materia;
                 asig[pos2] = i;
                 pos2 = pos2 + 1;
             Fin_Si

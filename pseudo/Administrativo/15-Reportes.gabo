@@ -3,7 +3,7 @@ Inicio
     Var opc, I: Entero, R: Booleano;
     Var ele, elec: Entero;
     Repetir
-        Mostrar << "¡Bienvenido a la sección de Repcitudes!";
+        Mostrar << "¡Bienvenido a la sección de Reportes!";
         Mostrar << "¿Qué desea hacer?";
         Mostrar << "1: Ver los reportes actuales";
         Mostrar << "2: Borrar reporte en específico";
@@ -22,7 +22,7 @@ Inicio
                     Mostrar << Rep[I].Problema;
                     Mostrar << Rep[I].Fecha;
                 Fin_Para
-                Mostrar << "Esas fueron todos los reportes.";
+                Mostrar << "Esos fueron todos los reportes.";
             Caso(opc = 2);
                 Para (I = 1 Hasta I = Re) Hacer;
                     Mostrar << I, Rep[I].Titulo;

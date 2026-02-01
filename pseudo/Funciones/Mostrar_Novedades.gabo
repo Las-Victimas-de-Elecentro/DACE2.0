@@ -1,4 +1,4 @@
-Procedimiento Mostrar_Novedades(E/S: Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar: Cadena);
+Procedimiento Mostrar_Novedades(E/S: Nov: Entero, Nov[I].Hecho, Nov[I].Fecha, Nov[I].Responsables, Nov[I].Contexto, Nov[I].Lugar: Cadena);
 Inicio
     Var R: Booleano;
     Var I: Entero;
@@ -6,12 +6,12 @@ Inicio
     Mostrar << "¿Desea ver las novedades actuales? 1: Sí, 0: No";
     Leer >> R;
     Si (R = 1) Entonces;
-        Para (I = 1 Hasta I = 500) Hacer;
-            Mostrar << Nov[I].Hecho;
-            Mostrar << Nov[I].Fecha;
-            Mostrar << Nov[I].Responsables;
-            Mostrar << Nov[I].Contexto;
-            Mostrar << Nov[I].Lugar;
+        Para (I = 1 Hasta I = Nov) Hacer;
+            Mostrar << "Hecho:...",Nov[I].Hecho;
+            Mostrar << "Fecha:...", Nov[I].Fecha;
+            Mostrar << "Responsables:...", Nov[I].Responsables;
+            Mostrar << "Contexto:...", Nov[I].Contexto;
+            Mostrar << "Lugar:...", Nov[I].Lugar;
         Fin_Para
     Sino
         Mostrar << "Vuelva pronto.";

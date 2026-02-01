@@ -4,9 +4,9 @@ Inicio
     Var cod: Cadena;
     Var R, R2, R3: Booleano;
     Mostrar << "¡Bienvenido a la sección de Planes de Evaluación!";
-    Mostrar << "¿Desea asignar una evaluación para su materia? 1: Sí, 0: No";
-    Leer >> R;
     Repetir
+        Mostrar << "¿Desea asignar una evaluación para su materia? 1: Sí, 0: No";
+        Leer >> R;
         Si (R = 1) Entonces;
             Mostrar << "Ingrese el código de la materia a la que le quiere agregar una evaluación.";
             Leer >> cod;
@@ -15,21 +15,7 @@ Inicio
                     Mostrar << "Materia encontrada";
                     Para (J = 1 Hasta J = class) Hacer;
                         Si (cod = Clase[J].Codigo_Materia) and (Prof[pos].Nombre = Clase[J].Nombre_Profesor) Entonces;
-                            Mostrar << "Ingrese la fecha de la evaluación (DD/MM/YYYY)";
-                            Leer >> Plan[plan].Fecha;
-                            Mostrar << "De acuerdo, ingrese el tema de la evaluación:";
-                            Leer >> Plan[plan].Tema;
-                            Mostrar << "Ingrese la estrategia de la evaluación que se usará";
-                            Leer >> Plan[plan].Estrategia;
-                            Mostrar << "Ingrese la ponderación que tendrá esa evaluación:";
-                            Leer >> Plan[plan].Ponderacion;
-                            Mientras (Plan[plan].Ponderacion < 1) Hacer;
-                                Mostrar << "Es invalido, solo positivos";
-                                Leer >> Plan[plan].Ponderacion;
-                            Fin_Mientras
-                            Mostrar << "¿Está correcto? 1: Sí, 0: No";
-                            Leer >> R3;
-                            Si (R3 = 0) Entonces;
+                            Repetir
                                 Mostrar << "Ingrese la fecha de la evaluación (DD/MM/YYYY)";
                                 Leer >> Plan[plan].Fecha;
                                 Mostrar << "De acuerdo, ingrese el tema de la evaluación:";
@@ -42,7 +28,10 @@ Inicio
                                     Mostrar << "Es invalido, solo positivos";
                                     Leer >> Plan[plan].Ponderacion;
                                 Fin_Mientras
-                            Fin_Si
+                                Mostrar << "¿Está correcto? 1: Sí, 0: No";
+                                Leer >> R3;
+                                Hasta(R3 = 1);
+                            Fin_Repetir
                             Mostrar << "Perfecto. Evaluación añadida a la espera para ser aprobada por el consejo";
                             Plan[plan].ID_Plan = Clase[J].ID_Clase;
                             Plan[plan].Nombre_Profesor = Prof[pos].Nombre;

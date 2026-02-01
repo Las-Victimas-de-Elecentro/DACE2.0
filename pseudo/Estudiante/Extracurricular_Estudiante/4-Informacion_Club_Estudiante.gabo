@@ -1,10 +1,10 @@
-Procedimiento Informacion_Club(E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Datos[pos_usuario].Club: Cadena, pos_usuario, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero, Datos[pos_usuario].Esta_en_Club: Booleano);
+Procedimiento Informacion_Club(E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles, Datos[pos_usuario].Club: Cadena, club, pos_usuario, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero, Datos[pos_usuario].Esta_en_Club: Booleano);
 Inicio
     Var Nombre_Club: Cadena;
     Si (Datos[pos_usuario].Esta_en_Club = 1) Entonces;
         Mostrar << "Ingrese el Nombre del club al que pertenece";
         Leer >> Nombre_Club;
-        Para (I = 1 Hasta I = Club) Hacer;
+        Para (I = 1 Hasta I = club) Hacer;
             Si (Datos[pos_usuario].Club = Nombre_Club) Entonces;
                 Mostrar << "Información de su club";
                 Mostrar << "Club:..,", Club[I].Nombre;

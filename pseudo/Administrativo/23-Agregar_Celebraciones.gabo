@@ -58,12 +58,13 @@ Inicio
                 Mostrar << "Celebración modificada correctamente";
             Otro_Caso
                 Para (I = 1 Hasta I = cel) Hacer;
+                    Mostrar << I;
                     Mostrar << Cel[I].Nombre;
                     Mostrar << Cel[I].Fecha;
                     Mostrar << Cel[I].Tipo;
                     Mostrar << Cel[I].Descripcion;
                 Fin_Para
-                Mostrar << "Ingrese la posición de la celebración que desea modificar";
+                Mostrar << "Ingrese la posición de la celebración que desea eliminar";
                 Leer >> ID;
                 Mientras (ID < 1 or ID > cel) Hacer;
                     Mostrar << "Es invalido, ingrese una posición válida";

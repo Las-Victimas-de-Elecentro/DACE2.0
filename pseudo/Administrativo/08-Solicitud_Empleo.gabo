@@ -9,6 +9,10 @@ Inicio
         Leer >> Empleo[K].Usuario;
         Mostrar << "Ingrese la cédula";
         Leer >> Empleo[K].CI;
+        Mientras (Empleo[K].CI < 1000000 or Empleo[K].CI > 33000000) Hacer;
+            Mostrar << "Es invalido";
+            Leer >> Empleo[K].CI;
+        Fin_Mientras
         Mostrar << "Ingrese el correo electrónico";
         Leer >> Empleo[K].Gmail;
         Mostrar << "Ingrese la edad";
@@ -23,7 +27,7 @@ Inicio
         Leer >> Empleo[K].Titulo;
         Mostrar << "Ingrese su descripción";
         Leer >> Empleo[K].Descripcion;
-        Mostrar << "¿Desea ingresar otra solicitud de empleo? 1:Sí, 0: No";
+        Mostrar << "¿Desea ingresar otra solicitud de empleo? 1: Sí, 0: No";
         Leer >> R;
         K = K + 1;
         Hasta(R = 0 or K = 5000);
