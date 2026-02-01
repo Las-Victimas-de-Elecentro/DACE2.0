@@ -3,7 +3,7 @@ Inicio
     Var opc_pago, referencia: Entero;
     Mostrar << "Estimado Usuario a continuacion se muestran los metodos de pago disponibles";
     Mostrar << "1: Transferencia Bancaria";
-    Mostrar << "2: Pago Movil";
+    Mostrar << "2: Pago Móvil";
     Leer >> opc_pago;
     Mientras (opc_pago < 1 OR opc_pago > 2) Hacer;
         Mostrar << "Error en opcion seleccionada, por favor vuelva a intentar";
@@ -15,6 +15,7 @@ Inicio
             Caso (opc_pago = 1);
                 Mostrar << "Estos son los datos del vendedor";
                 Mostrar << DTB;
+                Mostrar << "Ingrese su referencia:";
                 Leer >> referencia;
                 Mientras (referencia < 0) Hacer;
                     Mostrar << "Error en referencia ingresada, verifique e ingrese nuevamente";
@@ -26,6 +27,7 @@ Inicio
             Otro_Caso
                 Mostrar << "Estos son los datos bancarios del vendedor";
                 Mostrar << DTB;
+                Mostrar << "Ingrese su referencia:";
                 Leer >> referencia;
 
                 Mientras (referencia < 0) Hacer;

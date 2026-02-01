@@ -22,7 +22,7 @@ Inicio
             Leer >> Opc;
         Fin_Mientras
         
-        Mostrar << "¿Estás seguro de que quieres usar este avatar? Ingrese 1:Sí / 0:No";
+        Mostrar << "¿Estás seguro de que quieres usar este avatar? Ingrese 1: Sí / 0: No";
         Leer >> A;
         
         En_Caso (A > 0) Sea;
@@ -40,13 +40,13 @@ Inicio
                 Mostrar << "Tu nuevo avatar es: Perro";
             Caso(Opc = 5);
                 Admin[pos_admin].Avatar = Avatares[5];
-                Mostrar << "Tu nuevo avatar es: Lapiz";
+                Mostrar << "Tu nuevo avatar es: Lápiz";
             Caso(Opc = 6);
                 Admin[pos_admin].Avatar = Avatares[6];
                 Mostrar << "Tu nuevo avatar es: Planta";
             Caso(Opc = 7);
                 Admin[pos_admin].Avatar = Avatares[7];
-                Mostrar << "Tu nuevo avatar es: Taza de cafe";
+                Mostrar << "Tu nuevo avatar es: Taza de café";
             Caso(Opc = 8);
                 Admin[pos_admin].Avatar = Avatares[8];
                 Mostrar << "Tu nuevo avatar es: Ninja";  
@@ -62,10 +62,10 @@ Inicio
         Fin_Caso
 
         Si (A = 0) Entonces;
-            Mostrar << "Cambio de avatar cancelados";
+            Mostrar << "Cambio de avatar cancelado";
         Fin_Si
 
-        Mostrar << "¿Quiere cambiar el avatar nuevamente? Ingrese 1:Sí / 0:No";
+        Mostrar << "¿Quiere cambiar el avatar nuevamente? Ingrese 1: Sí / 0: No";
         Leer >> R;
         Hasta(R = 0);
     Fin_Repetir

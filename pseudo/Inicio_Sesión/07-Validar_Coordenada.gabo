@@ -1,7 +1,7 @@
 Procedimiento Validar_Coordenada(E/S: pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo: Entero, Acceso, encontrado, encontradoProf, encontradoAdmin: Booleano, [Funcion Aleatorio(Minimo, Maximo)]);
 Inicio
 	Var I, J, Coordenada, Coordenada2, Fila, Columna: Entero;
-	Var R = 1: Booleano;
+	Var R = 1, R2 = 0: Booleano;
 	Si (encontrado = 1) Entonces;
 		Minimo = 1;
 		Maximo = 5;
@@ -26,9 +26,7 @@ Inicio
 					Si (Coordenada = Tarjeta[J].Fila or Coordenada2 = Tarjeta[J].Columna) Entonces;
 						Mostrar << "Coordenada válida, acceso permitido";
 						Acceso = 1;
-					Sino
-						Mostrar << "Coordenada incorrecta. Acceso denegado";
-						Acceso = 0;
+						R2 = 1;
 					Fin_Si
 				Fin_Para
 			Fin_Si
@@ -58,9 +56,7 @@ Inicio
 					Si (Coordenada = Tarjeta_A[J].Fila or Coordenada2 = Tarjeta_A[J].Columna) Entonces;
 						Mostrar << "Coordenada válida, acceso permitido";
 						Acceso = 1;
-					Sino
-						Mostrar << "Coordenada incorrecta. Acceso denegado";
-						Acceso = 0;
+						R2 = 1;
 					Fin_Si
 				Fin_Para
 			Fin_Si
@@ -90,12 +86,13 @@ Inicio
 					Si (Coordenada = Tarjeta_P[J].Fila or Coordenada2 = Tarjeta_P[J].Columna) Entonces;
 						Mostrar << "Coordenada válida, acceso permitido";
 						Acceso = 1;
-					Sino
-						Mostrar << "Coordenada incorrecta. Acceso denegado";
-						Acceso = 0;
+						R2 = 1;
 					Fin_Si
 				Fin_Para
 			Fin_Si
 		Fin_Para
+	Fin_Si
+	Si (R2 = 0) Entonces;
+		Mostrar << "Coordenada inválida. Acceso denegado";
 	Fin_Si
 Fin_Procedimiento

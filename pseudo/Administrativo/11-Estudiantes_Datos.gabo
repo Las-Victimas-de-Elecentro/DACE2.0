@@ -7,6 +7,10 @@ Inicio
         Leer >> Gestion[C].Usuario;
         Mostrar << "Ingrese la cédula del estudiante";
         Leer >> Gestion[C].CI;
+        Mientras (Gestion[C].CI < 1000000 or Gestion[C].CI 33000000) Hacer;
+            Mostrar << "Es invalido";
+            Leer >> Gestion[C].CI;
+        Fin_Mientras
         Mostrar << "Ingrese la edad";
         Leer >> Gestion[C].Edad;
         Mientras (Gestion[C].Edad < 15 or Gestion[C].Edad > 100) Hacer;
@@ -81,7 +85,7 @@ Inicio
             Gestion[I].Usuario = = Gestion[C - 1].Usuario;
             Gestion[I].CI = Gestion[C - 1].CI;
             Gestion[I].Edad = Gestion[C - 1].Edad;
-            Gestion[I].Carrera= Gestion[C - 1].Carrera;
+            Gestion[I].Carrera = Gestion[C - 1].Carrera;
             Gestion[I].Year = Gestion[C - 1].Year;
             Gestion[I].Semestre = Gestion[C - 1].Semestre;
             

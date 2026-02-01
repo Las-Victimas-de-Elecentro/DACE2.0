@@ -24,6 +24,7 @@ Inicio
             Mag[ID].Autorizacion = 1;
         Sino
             Para (I = 1 Hasta I = magis) Hacer;
+                Mostrar << I;
                 Mostrar << Mag[I].ID_Clase;
                 Mostrar << Mag[I].Nombre_Materia;
                 Mostrar << Mag[I].Codigo_Materia;

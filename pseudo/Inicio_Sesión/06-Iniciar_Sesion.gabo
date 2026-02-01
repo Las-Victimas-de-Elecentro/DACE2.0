@@ -13,9 +13,9 @@ Inicio
     Repetir
         // Solicitar credenciales
         Mostrar << "INICIO DE SESIÓN";
-        Mostrar << "Ingrese su gmail:";
+        Mostrar << "Ingrese su Gmail:";
         Leer >> gmail_ingresado;
-        Mostrar << "Ingrese su contraseña:";
+        Mostrar << "Ingrese su Contraseña:";
         Leer >> password_ingresado;
         // Buscar en arreglo de Estudiantes y docentes
         Para (I = 1 hasta I = 5000) Hacer;

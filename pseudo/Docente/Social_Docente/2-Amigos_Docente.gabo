@@ -202,7 +202,7 @@ Inicio
                         Leer >> CI;
                     Fin_Mientras
                     Si (CI = Prof[pos].CI) Entonces;
-                        Mostrar << "¿Para que quieres ver tu propia información acá?";
+                        Mostrar << "¿Para qué quieres ver tu propia información acá?";
                     Sino
                         Para (I = 1 Hasta I = Am) Hacer;
                             Si (CI = Amig[I].CI_Receptor) and (Amig[I].CI_Emisor = Prof[pos].CI) Entonces;

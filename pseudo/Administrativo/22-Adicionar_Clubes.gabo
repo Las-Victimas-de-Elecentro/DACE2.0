@@ -46,6 +46,7 @@ Inicio
             Caso(opc = 3);
                 Para (I = 1 Hasta I = club) Hacer;
                     Si (Club[I].Activo = 1) Entonces;
+                        Mostrar << I;
                         Mostrar << Club[I].Nombre;
                         Mostrar << Club[I].Descripcion;
                         Mostrar << "Miembros Inscritos:";

@@ -58,12 +58,13 @@ Inicio
                 Mostrar << "Evento modificado correctamente";
             Otro_Caso
                 Para (I = 1 Hasta I = eve) Hacer;
+                    Mostrar << I;
                     Mostrar << Even[I].Nombre;
                     Mostrar << Even[I].Fecha;
                     Mostrar << Even[I].Tipo;
                     Mostrar << Even[I].Descripcion;
                 Fin_Para
-                Mostrar << "Ingrese la posición del evento que desea modificar";
+                Mostrar << "Ingrese la posición del evento que desea eliminar";
                 Leer >> ID;
                 Mientras (ID < 1 or ID > eve) Hacer;
                     Mostrar << "Es invalido, ingrese una posición válida";

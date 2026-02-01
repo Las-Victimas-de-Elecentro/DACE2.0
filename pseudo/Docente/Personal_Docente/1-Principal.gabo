@@ -1,4 +1,4 @@
-Procedimiento Docente_Personal([Procedimiento Informacion_Docente(Prof[pos].Avatar, Prof[pos].Nombre, Prof[pos].Gmail, pos, Prof[pos].CI)], [Procedimiento Seguridad_Docente(indice, pos, pass, Prof[pos].Password, Prof[pos].Gmail, Acceso, [Procedimiento Validar_Coordenada_Prof(pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso)], [Procedimiento Encriptacion(indice, pass)])], [Procedimiento Historial_Docente(Prof[pos].Nombre, Clase[I].Codigo_Materia, Clase[I].Nombre_Materia, Clase[I].Periodo, Clase[I].Nombre_Profesor, Clase[I].Dia, Clase[I].Hora_Inicio, Clase[I].Hora_Fin, Clase[I].Aula, class, pos, Clase[I].Seccion, Clase[I].Cant_Estudiantes)], [Procedimiento Modo_Oscuro(Tema)], [Procedimiento Avatar_Docente(pos, Avatares[I], Prof[pos].Avatar)], [Procedimiento Salud_Docente(pos, Prof[pos].Salud[pos].Transmisibles, Prof[pos].Salud[pos].Cronicas, Prof[pos].Salud[pos].Neurologicas, Prof[pos].Salud[pos].Neoplasias, Prof[pos].Salud[pos].Autoinmunes, Prof[pos].Salud[pos].Trastornos, Prof[pos].Salud[pos].Lesiones, Prof[pos].Salud[pos].Congenitas, Prof[pos].Salud[pos].Metabolicos, Prof[pos].Salud[pos].Ocupacionales)]);
+Procedimiento Docente_Personal([Procedimiento Informacion_Docente(Prof[pos].Avatar, Prof[pos].Nombre, Prof[pos].Gmail, pos, Prof[pos].CI)], [Procedimiento Seguridad_Docente(indice, pos, pass, Prof[pos].Password, Prof[pos].Gmail, Acceso, [Procedimiento Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso, encontrado, encontradoProf, encontradoAdmin, [Funcion Aleatorio(Minimo, Maximo)])], [Procedimiento Encriptacion(indice, pass)])], [Procedimiento Historial_Docente(Prof[pos].Nombre, Clase[I].Codigo_Materia, Clase[I].Nombre_Materia, Clase[I].Periodo, Clase[I].Nombre_Profesor, Clase[I].Dia, Clase[I].Hora_Inicio, Clase[I].Hora_Fin, Clase[I].Aula, class, pos, Clase[I].Seccion, Clase[I].Cant_Estudiantes)], [Procedimiento Modo_Oscuro(Tema)], [Procedimiento Avatar_Docente(pos, Avatares[I], Prof[pos].Avatar)], [Procedimiento Salud_Docente(pos, Prof[pos].Salud[pos].Transmisibles, Prof[pos].Salud[pos].Cronicas, Prof[pos].Salud[pos].Neurologicas, Prof[pos].Salud[pos].Neoplasias, Prof[pos].Salud[pos].Autoinmunes, Prof[pos].Salud[pos].Trastornos, Prof[pos].Salud[pos].Lesiones, Prof[pos].Salud[pos].Congenitas, Prof[pos].Salud[pos].Metabolicos, Prof[pos].Salud[pos].Ocupacionales)]);
 Inicio
     Var Opc: Entero, R: Booleano;
     Repetir
@@ -22,7 +22,7 @@ Inicio
                 Informacion_Docente(Prof[pos].Avatar, Prof[pos].Nombre, Prof[pos].Gmail, pos, Prof[pos].CI);
                 Mostrar << Informacion_Docente;
             Caso(Opc = 2);
-                Seguridad_Docente(indice, pos, pass, Prof[pos].Password, Prof[pos].Gmail, Acceso, [Procedimiento Validar_Coordenada_Prof(pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso)], [Procedimiento Encriptacion(indice, pass)]);
+                Seguridad_Docente(indice, pos, pass, Prof[pos].Password, Prof[pos].Gmail, Acceso, [Procedimiento Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso, encontrado, encontradoProf, encontradoAdmin, [Funcion Aleatorio(Minimo, Maximo)])], [Procedimiento Encriptacion(indice, pass)]);
                 Mostrar << Seguridad_Docente;
             Caso(Opc = 3);
                 Historial_Docente(Prof[pos].Nombre, Clase[I].Codigo_Materia, Clase[I].Nombre_Materia, Clase[I].Periodo, Clase[I].Nombre_Profesor, Clase[I].Dia, Clase[I].Hora_Inicio, Clase[I].Hora_Fin, Clase[I].Aula, class, pos, Clase[I].Seccion, Clase[I].Cant_Estudiantes);
@@ -39,7 +39,7 @@ Inicio
             Otro_Caso
                 R = 0;
         Fin_Caso
-        Mostrar << "¿Desea elegir otra opción? Ingrese 1: Sí, 0:No";
+        Mostrar << "¿Desea elegir otra opción? Ingrese 1: Sí, 0: No";
         Leer >> R;
         Hasta(R = 0);
     Fin_Repetir

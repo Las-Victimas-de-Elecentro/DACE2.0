@@ -1,8 +1,8 @@
-Procedimiento Celebraciones(E/S: Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion: Cadena);
+Procedimiento Celebraciones(E/S: cel: Entero, Cel[I].Nombre, Cel[I].Fecha, Cel[I].Tipo, Cel[I].Descripcion: Cadena);
 Inicio
     Var I: Entero;
     Mostrar << "=== CELEBRACIONES Y CONMEMORACIONES ===";
-    Para (I = 1 Hasta I = Cel) Hacer;
+    Para (I = 1 Hasta I = cel) Hacer;
         Mostrar << "Celebración:..,", Cel[I].Nombre;
         Mostrar << "Fecha:..,", Cel[I].Fecha;
         Mostrar << "Tipo:..,", Cel[I].Tipo;

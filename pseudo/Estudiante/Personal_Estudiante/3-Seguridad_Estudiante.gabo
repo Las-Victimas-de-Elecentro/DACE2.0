@@ -1,4 +1,4 @@
-Procedimiento Seguridad_Estudiante(E/S: indice, pos_usuario: Entero, Datos[pos_usuario].Password, Datos[pos_usuario].Gmail, pass: Cadena, [Procedimiento Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, Minimo, Maximo, Acceso)], [Procedimiento Encriptacion(indice, pass)]);
+Procedimiento Seguridad_Estudiante(E/S: indice, pos_usuario: Entero, Datos[pos_usuario].Password, Datos[pos_usuario].Gmail, pass: Cadena, [Procedimiento Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso, encontrado, encontradoProf, encontradoAdmin, [Funcion Aleatorio(Minimo, Maximo)])], [Procedimiento Encriptacion(indice, pass)]);
 Inicio
     Var Opc, Intentos_Fallidos = 3: Entero; 
     Var contra, contraNueva, NewG: Cadena;
@@ -18,7 +18,7 @@ Inicio
 
         En_Caso (Opc > 0) Sea;
             Caso(Opc = 1);
-                Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, Minimo, Maximo, Acceso);
+                Validar_Coordenada(pos_usuario, Tarjeta[I].ID, Tarjeta[I].Fila, Tarjeta[I].Columna, pos_admin, Tarjeta_A[I].ID, Tarjeta_A[I].Fila, Tarjeta_A[I].Columna, pos, Tarjeta_P[I].ID, Tarjeta_P[I].Fila, Tarjeta_P[I].Columna, Minimo, Maximo, Acceso, encontrado, encontradoProf, encontradoAdmin, [Funcion Aleatorio(Minimo, Maximo)]);
                 Mostrar << Validar_Coordenada;
                 Si (Acceso = 1) Entonces;
                     Mostrar << "Ingrese su contraseña actual: ";

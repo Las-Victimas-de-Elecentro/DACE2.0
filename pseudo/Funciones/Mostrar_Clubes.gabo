@@ -1,4 +1,4 @@
-Procedimiento Mostrar_Clubes (E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles: Cadena, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
+Procedimiento Mostrar_Clubes (E/S: Club[I].Nombre, Club[I].Descripcion, Club[I].Horarios_Disponibles: Cadena, club, Club[I].Miembros_Inscritos, Club[I].Capacidad_Maxima: Entero);
 Inicio
     Var I: Entero;
     Mostrar << "Club Disponibles"; 

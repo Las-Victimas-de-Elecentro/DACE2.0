@@ -1,0 +1,49 @@
+Procedimiento Inscripciones_Admin(E/S: Ad.Servicio_Comunitario, Inscripciones: Booleano);
+Inicio
+    Var r, r2: Booleano;
+    Var R: Booleano
+    Mostrar << "¡Bienvenido a la sección de Inscripciones!";
+    Mostrar << "¿Desea ver si deshabilitar o habilitar inscripciones? 1: Inscripciones, 0: Servicio Comunitario";
+    Leer >> R;
+    Si (R = 1) Entonces;
+        Si (Inscripciones = 0) Entonces;
+            Mostrar << "¿Desea habilitar las inscripciones?";
+            Mostrar << "1: Sí";
+            Mostrar << "0: No";
+            Leer >> r;
+            Si (r = 1) Entonces;
+                Inscripciones = 1;
+            Sino
+                Inscripciones = 0;
+            Fin_Si
+        Sino
+            Si (Inscripciones = 1) Entonces;
+                Mostrar << "¿Desea deshabilitar las inscripciones? 1: Sí, 0: No";
+                Leer >> r2;
+                Si (r2 = 1) Entonces;
+                    Inscripciones = 0;
+                Fin_Si
+            Fin_Si
+        Fin_Si
+    Sino
+        Si (Ad.Servicio_Comunitario = 0) Entonces;
+            Mostrar << "¿Desea habilitar las inscripciones?";
+            Mostrar << "1: Sí";
+            Mostrar << "0: No";
+            Leer >> r;
+            Si (r = 1) Entonces;
+                Ad.Servicio_Comunitario = 1;
+            Sino
+                Ad.Servicio_Comunitario = 0;
+            Fin_Si
+        Sino
+            Si (Ad.Servicio_Comunitario = 1) Entonces;
+                Mostrar << "¿Desea deshabilitar las inscripciones? 1: Sí, 0: No";
+                Leer >> r2;
+                Si (r2 = 1) Entonces;
+                    Ad.Servicio_Comunitario = 0;
+                Fin_Si
+            Fin_Si
+        Fin_Si
+    Fin_Si
+Fin_Procedimiento

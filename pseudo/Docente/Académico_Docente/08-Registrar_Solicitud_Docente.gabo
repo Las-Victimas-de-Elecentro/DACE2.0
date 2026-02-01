@@ -13,7 +13,7 @@ Inicio
         Si (r = 1) Entonces;
             Para (i = 1 Hasta i = S) Hacer;
                 Si (Prof[pos].Nombre = Soli[i].Titular) Entonces;
-                    Mostrar << "Se encontró el reporte.";
+                    Mostrar << "Se encontró el solicitud.";
                     Mostrar << Soli[i].Titulo;
                     Mostrar << Soli[i].Descripcion;
                     Mostrar << Soli[i].Titular;
@@ -26,19 +26,23 @@ Inicio
                     Fin_Si
             Fin_Para
         Sino
-            Mostrar << "=== Registro de Solicitud Académica ===";
-            Mostrar << "Título de la solicitud:";
-            Leer >> Soli[S].Titulo;
-            Mostrar << "Tipo de solicitud (Acta, Constancia, Soporte) y breve descripción:";
-            Leer >> Soli[S].Descripcion;
-            Mostrar << "Titular:", Prof[pos].Nombre;
-            Soli[S].Titular = Prof[pos].Nombre;
-            Mostrar << "Destinatario:";
-            Leer >> Soli[S].Destinatario;
-            Mostrar << "Fecha (YYYY-MM-DD):";
-            Leer >> Soli[S].Fecha;
-            Mostrar << "Su petición ha sido elevada. El sistema la custodiará hasta ser atendida.";
-            S = S + 1;
+            Si (r = 2) Entonces;
+                Mostrar << "Vuelva pronto";
+            Sino
+                Mostrar << "=== Registro de Solicitud Académica ===";
+                Mostrar << "Título de la solicitud:";
+                Leer >> Soli[S].Titulo;
+                Mostrar << "Tipo de solicitud (Acta, Constancia, Soporte) y breve descripción:";
+                Leer >> Soli[S].Descripcion;
+                Mostrar << "Titular:", Prof[pos].Nombre;
+                Soli[S].Titular = Prof[pos].Nombre;
+                Mostrar << "Destinatario:";
+                Leer >> Soli[S].Destinatario;
+                Mostrar << "Fecha (YYYY-MM-DD):";
+                Leer >> Soli[S].Fecha;
+                Mostrar << "Su petición ha sido elevada. El sistema la custodiará hasta ser atendida.";
+                S = S + 1;
+            Fin_Si
         Fin_Si
         Mostrar << "¿Desea agregar otra solicitud? 1: Sí, 0: No";
         Leer >> R;

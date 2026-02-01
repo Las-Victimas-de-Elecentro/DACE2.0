@@ -1,4 +1,4 @@
-Procedimiento Salir_Club(E/S: club, pos, Club[I].Miembros_Inscritos: Entero, Club[I].Nombre, Prof[I].Club: Cadena, Prof[pos].Esta_en_Club: Booleano);
+Procedimiento Salir_Club_Docente(E/S: club, pos, Club[I].Miembros_Inscritos: Entero, Club[I].Nombre, Prof[I].Club: Cadena, Prof[pos].Esta_en_Club: Booleano);
 Inicio 
     Var Nombre_Club: Cadena;
     Si (Prof[pos].Esta_en_Club = 1) Entonces;

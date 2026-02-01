@@ -22,8 +22,12 @@ Inicio
                 Leer >> Password;
                 Mostrar << "Confirme la contraseña";
                 Leer >> Password2;
-                Mostrar << "¿Está seguro que quiere que esa sea su contraseña? 1: Sí, 0: No";
-                Leer >> R;
+                Si (Password = Password2) Entonces;  
+                    Mostrar << "¿Está seguro que quiere que esa sea su contraseña? 1: Sí, 0: No";
+                    Leer >> R;
+                Sino
+                    Mostrar << "Las contraseñas no coinciden";
+                Fin_Si
                 Hasta(R = 1);
             Fin_Repetir
             indice = v;

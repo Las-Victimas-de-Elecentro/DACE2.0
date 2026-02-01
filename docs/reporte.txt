@@ -1738,6 +1738,7 @@ ARCHIVO: .\Administrativo\09-Agregar_Empleados.gabo
       - R2:  Booleano: Se utiliza para saber si añadir al empleado a la base de datos de administrativos o docentes.
       - R3:  Booleano: Se utiliza para saber si desea modificar los administrativos o docentes.
       - R4: Booleano: Se utiliza para saber si desea agregar un nuevo empleado.
+      - R5: Booleano: Se utiliza para saber si desea modificar un perfil.
 
 ----------------------------------------
 
@@ -1903,16 +1904,18 @@ ARCHIVO: .\Administrativo\16-Novedades.gabo
 ----------------------------------------
 
 
-ARCHIVO: .\Administrativo\17-Servicio_Comunitario.gabo
+ARCHIVO: .\Administrativo\17-Inscripciones_Admin.gabo
 ========================================
-  - Procedimiento: Servicio_Comunitario.
+  - Procedimiento: Inscripciones_Admin.
     - Parametros: 
       - Entrada/Salida
         - Ad.Servicio_Comunitario
         - Inscripciones: Booleano
 
     - Variables locales:
-      - r:  Booleano: Se utiliza para habilitar las inscripciones de servicio comunitario.
+      - r:  Booleano: Se utiliza para habilitar las inscripciones de servicio comunitario y las normales.
+      - r2: Booleano: Se utiliza para deshabilitar las inscripciones de servicio comunitario y las normales.
+      - R: Booleano: Se utiliza para saber si desea habilitar o deshabilitar las inscripciones las normales o las de servicio comunitario.
 
 ----------------------------------------
 
@@ -17907,6 +17910,7 @@ ARCHIVO: .\Inicio_Sesión\07-Validar_Coordenada.gabo
       - Fila:  Entero: Se utiliza para guardar un número aleatorio con la función aleatorio para validar la coordenada en fila.
       - Columna:  Entero: Se utiliza para guardar un número aleatorio con la función aleatorio para validar la coordenada en columnas.
       - R = 1:  Booleano: Se utiliza para validar que se encontró el ID que coincide con tu usuario para encontrar tu tarjeta de coordenadas.
+      - R2 = 1: Booleano: Se utiliza para saber si la coordenada se encontró o no.
 
 ----------------------------------------
 
@@ -17938,7 +17942,8 @@ ARCHIVO: .\Inicio_Sesión\08-Validar_Pregunta.gabo
       - respuesta:  Cadena: Se utiliza para guardar la respuesta correspondiente a la pregunta de seguridad del usuario.
       - num:  Entero: Se utiliza para generar un número aleatorio con la función aleatorio para utilizarse como indice en la pregunta que debe validar el usuario.
       - I:  Entero: Se utiliza para iterar posiciones en el arreglo de registros de las preguntas de seguridad.
-      - R:  Booleano: Se utiliza para validar que se encontró la ID del usuario en las preguntas de seguridad.
+      - R = 1:  Booleano: Se utiliza para validar que se encontró la ID del usuario en las preguntas de seguridad.
+      - R2 = 0: Booleano: Se utiliza para ver si se encontró la respuesta o no.
 
 ----------------------------------------
 

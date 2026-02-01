@@ -1,12 +1,12 @@
-Procedimiento Eventos(E/S: Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion: Cadena);
+Procedimiento Eventos(E/S: eve: Entero, Even[I].Nombre, Even[I].Fecha, Even[I].Descripcion: Cadena);
 Inicio
     Var I: Entero;
-    Mostrar << "A continuación los Even actuales";
+    Mostrar << "A continuación los eventos actuales";
     Para (I = 1 Hasta I = eve) Hacer;
         Mostrar << I;
-        Mostrar << Even[I].Nombre;
-        Mostrar << Even[I].Fecha;
-        Mostrar << Even[I].Tipo;
-        Mostrar << Even[I].Descripcion;
+        Mostrar << "Nombre:...", Even[I].Nombre;
+        Mostrar << "Fecha:...", Even[I].Fecha;
+        Mostrar << "Tipo:...", Even[I].Tipo;
+        Mostrar << "Descripción:...", Even[I].Descripcion;
     Fin_Para
 Fin_Procedimiento

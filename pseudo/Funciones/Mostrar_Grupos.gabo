@@ -1,4 +1,4 @@
-Procedimiento Mostrar_Grupos(E/S: Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia: Cadena, Gru[I].Miembros, Gru[I].Seccion: Entero);
+Procedimiento Mostrar_Grupos(E/S: Gru[I].Nombre_Profesor, Gru[I].Codigo_Materia: Cadena, G, Gru[I].Miembros, Gru[I].Seccion: Entero);
 Inicio
     Var R: Booleano;
     Var I: Entero;
@@ -6,7 +6,7 @@ Inicio
     Mostrar << "¿Desea ver los grupos disponibles? 1: Sí, 0: No";
     Leer >> R;
     Si (R = 1) Entonces;
-        Para (I = 1 Hasta I = 500) Hacer;
+        Para (I = 1 Hasta I = G) Hacer;
             Mostrar << Gru[I].Nombre_Profesor;
             Mostrar << Gru[I].Codigo_Materia;
             Mostrar << Gru[I].Miembros;

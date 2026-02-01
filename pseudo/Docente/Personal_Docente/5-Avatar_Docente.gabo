@@ -14,15 +14,15 @@ Inicio
         Mostrar << "7: Taza de cafe";
         Mostrar << "8: Ninja";
         Mostrar << "9: Dona";
-        Mostrar << "10: Balon de futboll";
+        Mostrar << "10: Balon de futbol";
         Mostrar << "11: Avatar Predeterminado";
         Leer >> Opc;
-        Mientras (Opc < 1 Or > 11) Hacer;
+        Mientras (Opc < 1 Or Opc > 11) Hacer;
             Mostrar << "Ingrese solo opciones entre 1-11";
             Leer >> Opc;
         Fin_Mientras
         
-        Mostrar << "¿Estás seguro de que quieres usar este avatar? Ingrese 1:Sí / 0:No";
+        Mostrar << "¿Estás seguro de que quieres usar este avatar? Ingrese 1: Sí / 0: No";
         Leer >> A;
         
         En_Caso (A > 0) Sea;
@@ -53,9 +53,9 @@ Inicio
             Caso(Opc = 9);
                 Prof[pos].Avatar = Avatares[9];
                 Mostrar << "Tu nuevo avatar es: Dona";
-            Caso(Opc = 9);
+            Caso(Opc = 10);
                 Prof[pos].Avatar = Avatares[10];
-                Mostrar << "Tu nuevo avatar es: Balon de futboll";
+                Mostrar << "Tu nuevo avatar es: Balon de futbol";
             Otro_Caso
                 Prof[pos].Avatar = Avatares[11];
                 Mostrar << "Avatar predeterminado";
@@ -65,7 +65,7 @@ Inicio
             Mostrar << "Cambio de avatar cancelados";
         Fin_Si
 
-        Mostrar << "¿Quiere cambiar el avatar nuevamente? Ingrese 1:Sí / 0:No";
+        Mostrar << "¿Quiere cambiar el avatar nuevamente? Ingrese 1: Sí / 0: No";
         Leer >> R;
         Hasta(R = 0);
     Fin_Repetir

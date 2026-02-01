@@ -6,8 +6,8 @@ Inicio
         Mostrar << "¿Que tipo de enfermedad desea ingresar?";
         Mostrar << "Ingrese una opción";
         Mostrar << "1: Transmisibles";
-        Mostrar << "2: Cronicas";
-        Mostrar << "3: Neurologicas";
+        Mostrar << "2: Crónicas";
+        Mostrar << "3: Neurológicas";
         Mostrar << "4: Neoplasias";
         Mostrar << "5: Autoinmunes";
         Mostrar << "6: Trastornos";
@@ -25,10 +25,10 @@ Inicio
                 Mostrar << "Ingrese la enfermedad transmisible que padece";
                 Leer >> Prof[pos].Salud[pos].Transmisibles;
             Caso(Opc = 2);
-                Mostrar << "Ingrese la enfermedad cronica que padece";
+                Mostrar << "Ingrese la enfermedad crónica que padece";
                 Leer >> Prof[pos].Salud[pos].Cronicas;
             Caso(Opc = 3);
-                Mostrar << "Ingrese la enfermedad neurologica que padece";
+                Mostrar << "Ingrese la enfermedad neurológica que padece";
                 Leer >> Prof[pos].Salud[pos].Neurologicas;
             Caso(Opc = 4);
                 Mostrar << "Ingrese la enfermedad neoplasia que padece";
@@ -37,23 +37,23 @@ Inicio
                 Mostrar << "Ingrese la enfermedad autoinmune que padece";
                 Leer >> Prof[pos].Salud[pos].Autoinmunes;
             Caso(Opc = 6);
-                Mostrar << "Ingrese el transtorno que padece";
+                Mostrar << "Ingrese el trastorno que padece";
                 Leer >> Prof[pos].Salud[pos].Trastornos;
             Caso(Opc = 7);
                 Mostrar << "Ingrese la lesión que padece";
                 Leer >> Prof[pos].Salud[pos].Lesiones;
             Caso(Opc = 8);
-                Mostrar << "Ingrese la enfermedad congenita que padece";
+                Mostrar << "Ingrese la enfermedad congénita que padece";
                 Leer >> Prof[pos].Salud[pos].Congenitas;
             Caso(Opc = 9);
-                Mostrar << "Ingrese el transtorno metabolico que padece";
+                Mostrar << "Ingrese el transtorno metabólico que padece";
                 Leer >> Prof[pos].Salud[pos].Metabolicos;
             Otro_Caso
                 Mostrar << "Ingrese la enfermedad ocupacional que padece";
                 Leer >> Prof[pos].Salud[pos].Ocupacionales;
         Fin_Caso
-        Mostrar << "Enfermedad ingresada con extio";
-        Mostrar << "¿Desea ingresar otra enfermedad? Ingrese 1:Sí / 0:No";
+        Mostrar << "Enfermedad ingresada con éxito";
+        Mostrar << "¿Desea ingresar otra enfermedad? Ingrese 1: Sí / 0: No";
         Leer >> R;
         Hasta(R = 0);
     Fin_Repetir
