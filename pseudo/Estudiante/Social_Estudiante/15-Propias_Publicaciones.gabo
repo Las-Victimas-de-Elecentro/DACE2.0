@@ -68,13 +68,13 @@ Inicio
                 Si (K = 1) Entonces;
                     Mostrar << "Usted no posee publicaciones referentes al tema ingresado: ", Tema;
                 Fin_Si
-                Mostrar << "Desea buscar otro tema, 1: Si, 0: No";
+                Mostrar << "¿Desea buscar otro tema?, 1: Si, 0: No";
                 Leer >> R3;
                 Hasta (R3 = 0);
             Fin_Repetir
         Otro_Caso
             Repetir
-                Mostrar << "Ingrese La etiqueta";
+                Mostrar << "Ingrese la etiqueta";
                 Leer >> Etiqueta;
                 Para (I = 1 Hasta I = pub) Hacer;
                     Si (Publi[I].Autor = Datos[pos_usuario].Nombre) and (Etiqueta = Publi[I].Etiqueta) entonces;
@@ -99,7 +99,7 @@ Inicio
                 Si (K = 1) Entonces;
                     Mostrar << "Usted no posee publicaciones referentes a la etiqueta ingresada: ", Etiqueta;
                 Fin_Si
-                Mostrar << "Desea buscar otra publicacion por etiqueta, 1: Si, 0: No";
+                Mostrar << "¿Desea buscar otra publicacion por etiqueta?, 1: Si, 0: No";
                 Leer >> R3;
                 Hasta (R3 = 0);
             Fin_Repetir
@@ -129,7 +129,7 @@ Inicio
     K = K - 1;
     Mostrar << "Ingrese la publicacion que desea modificar o eliminar";
     Leer >> R;
-    Mientras (R < 0 or R > K) Hacer;
+    Mientras (R < 1 or R > K) Hacer;
         Mostrar << "Error en la publicacion ingresada, por favor intentelo nuevamente";
         Leer >> R;
     Fin_Mientras
@@ -150,12 +150,12 @@ Inicio
         Caso (R4 = 1);
             Repetir
                 Mostrar << "Ingrese el nuevo texto de la publicacion";
-                Publi[K4].Texto = Texto;        
+                Leer >> Publi[K4].Texto;        
                 Mostrar << "Ingrese el nuevo tema de la publicacion";
-                Publi[K4].Tema = Tema;
+                Leer >> Publi[K4].Tema;
                 Mostrar << "Ingrese la(s) nueva(s) etiquetas de la publicacion";
-                Publi[K4].Etiqueta = Etiqueta;
-                Mostrar << "Desea repetir esta accion 1: Si, 0: No";
+                Leer >> Publi[K4].Etiqueta;
+                Mostrar << "¿Desea repetir esta accion? 1: Si, 0: No";
                 Leer >> R6;
                 Hasta (R6  = 0);
             Fin_Repetir          

@@ -1,20 +1,27 @@
 Procedimiento Market_Place (E/S: pos_usuario, M, Datos[pos_usuario].CI, MP[I].Cedula: Entero, Precio, Ingresos, Egresos, MP[I].Boveda, MP[I].Ingresos, MP[I].Egresos: Real, DTB, Datos[pos_usuario].Nombre, Datos[pos_usuario].Carrera, Datos[pos_usuario].Gmail, MP[I].Usuario, MP[I].Contacto, MP[I].Area, MP[I].Bitacora, MP[I].Datos_Bancarios, MP[I].Password: Booleano, [Procedimiento Ingresar_Producto(M, J2, MP[J2].Cedula, C_MP[I].Cedula, A_MP[I].Cedula, S_MP[I].Cedula, C_MP[I].Stock, A_MP[I].Stock, C_MP[I].Precio, A_MP[I].Precio, S_MP[I].Precio, MP[J2].Usuario, MP[J2].Contacto, MP[J2].Datos_Bancarios, C_MP[I].Vendedor, C_MP[I].Contacto, C_MP[I].Datos_Bancarios, C_MP[I].Producto, A_MP[I].Vendedor, A_MP[I].Contacto, A_MP[I].Datos_Bancarios, A_MP[I].Producto, S_MP[I].Vendedor, S_MP[I].Contacto, S_MP[I].Datos_Bancarios, S_MP[I].Producto, S_MP[I].Disp)], [Procedimiento Comprar_Producto(M, C_MP[I].Stock, A_MP[I].Stock, MP[I].Boveda, MP[I].Egresos, C_MP[I].Precio, C_MP[I].Ingresos, C_MP[I].Boveda, A_MP[I].Precio, A_MP[I].Ingresos, A_MP[I].Boveda, S_MP[I].Precio, S_MP[I].Ingresos, S_MP[I].Boveda, Precio, Egresos, Ingresos, MP[I].Bitacora, MP[I].Usuario, C_MP[I].Vendedor, C_MP[I].Contacto, C_MP[I].Producto, C_MP[I].Datos_Bancarios, C_MP[I].Bitacora, A_MP[I].Vendedor, A_MP[I].Contacto, A_MP[I].Producto, A_MP[I].Datos_Bancarios, A_MP[I].Bitacora, S_MP[I].Vendedor, S_MP[I].Contacto, S_MP[I].Producto, S_MP[I].Datos_Bancarios, S_MP[I].Bitacora, DTB, S_MP[I].Disp, validacion_pago, [Procedimiento metodo_pago(Egresos, Ingresos, Precio, DTB, validacion_pago)])], [Procedimiento Editar_Producto(M, Cedula, C_MP[I].Cedula, C_MP[I].Stock, A_MP[I].Cedula, A_MP[I].Stock, S_MP[I].Cedula, C_MP[I].Precio, A_MP[I].Precio, S_MP[I].Precio, C_MP[I].Producto, C_MP[I].Vendedor, C_MP[I].Contacto, C_MP[I].Datos_Bancarios, A_MP[I].Producto, A_MP[I].Vendedor, A_MP[I].Contacto, A_MP[I].Datos_Bancarios, S_MP[I].Disp)]);
 Inicio
-    Var Cedula, J3 = 3, Opc, I = 1: Entero;
+    Var Cedula, J3 = 3, J2, Opc, I = 1, J: Entero;
     Var Numero, Cedula2, Banco, Password1, Password2: Cadena;
     Var C_true, R1, R6: Booleano;
     Mostrar << "Bienvenido al Market Place";
     Mostrar << "Siga las instrucciones a continuacion";
     Mostrar << "Por favor, ingrese su cedula";
     Leer >> Cedula;
+    Mientras (Cedula < 1000000 or Cedula > 5000000) Hacer;
+        Mostrar << "Es invalido";
+        Leer >> Cedula;
+    Fin_Mientras
     Mientras (Cedula != Datos[pos_usuario].CI) Hacer;
         Mostrar << "Su cedula no se encuentra en la base de datos de la universidad, por favor ingresela nuevamente";
         Leer >> Cedula;
     Fin_Mientras
     Repetir 
-        Si (Cedula = MP[I].Cedula) Entonces;
-            C_true = 1;
-        Fin_Si
+        Para (J = 1 Hasta J = M) Hacer;
+            Si (Cedula = MP[J].Cedula) Entonces;
+                C_true = 1;
+                J2 = J;
+            Fin_Si
+        Fin_Para
         Si (C_true = 0) Entonces;
             Mostrar << "Para poder entrar al Market Place amerita tener una cuenta registrada, por favor, cree su cuenta";
             Mostrar << "Solo ingrese si desea crear su cuenta para poder realizar automaticamente esta accion";
@@ -37,6 +44,10 @@ Inicio
                     Leer >> Banco;
                     Mostrar << "Cedula";
                     Leer >> Cedula2;
+                    Mientras (Cedula2 < 1000000 or Cedula2 > 5000000) Hacer;
+                        Mostrar << "Es invalido";
+                        Leer >> Cedula2;
+                    Fin_Mientras
                     MP[I].Datos_Bancarios = Numero + Banco + Cedula2;
                     Mostrar << "Usted ya se encuentra en la base de datos";
                     Mostrar << "Ingrese su contraseña";
@@ -51,6 +62,7 @@ Inicio
                         Leer >> Password2;
                     Fin_Mientras
                     MP[I].Password = Password1;
+                    J2 = I;
                 Sino
                     M = M + 1;
                     MP[M].Usuario =               Datos[pos_usuario].Nombre;
@@ -82,6 +94,7 @@ Inicio
                         Leer >> Password2;
                     Fin_Mientras
                     MP[M].Password = Password1;
+                    J2 = M;
                 Fin_Si
             Sino
                 Mostrar << "Gracias por entrar al Market Place, nos vemos";

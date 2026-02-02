@@ -25,7 +25,7 @@ Inicio
             Publi[Ver].Cant_Reacciones = Publi[Ver].Cant_Reacciones + 1;
             react = react + 1;
         Caso(opc = 2);
-            Comentar( com, Com[com].ID_Publicacion, Com[com].ID_Comentario, Com[com].Comentario, Com[com].Fecha, Com[com].Autor, Com[com].Imagen);
+            Comentar(com, Com[com].ID_Publicacion, Com[com].ID_Comentario, Com[com].Comentario, Com[com].Fecha, Com[com].Autor, Com[com].Imagen);
             Mostrar << Comentar;
             Publi[Ver].Comentarios = Publi[Ver].Comentarios + 1;
         Caso(opc = 3);

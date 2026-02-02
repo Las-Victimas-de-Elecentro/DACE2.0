@@ -10,7 +10,7 @@ Inicio
         Mostrar << "3-) Servicios";
         Leer >> Opc3;
         Mientras (Opc3 < 1 or Opc3 > 3) Hacer;
-            Mostrar << "Su opcion seleccioanda esta fuera del rango señalado, por favor, ingreselo nuevamente";
+            Mostrar << "Su opcion seleccionada esta fuera del rango señalado, por favor, ingreselo nuevamente";
             Leer >> Opc3;
         Fin_Mientras
         En_Caso (Opc3 > 0) Sea;
@@ -146,7 +146,7 @@ Inicio
                     Precio = S_MP[Q1].Precio;
                     metodo_pago(Egresos, Ingresos, Precio, DTB, validacion_pago);
                     Mostrar << metodo_pago;
-                    Si (Validacion_Pago = 1) Entonces;
+                    Si (validacion_pago = 1) Entonces;
                         S_MP[Q1].Ingresos = S_MP[Q1].Ingresos + Ingresos;
                         S_MP[Q1].Boveda = S_MP[Q1].Boveda + Ingresos;
                         MP[J2].Boveda = MP[J2].Boveda - Egresos;
