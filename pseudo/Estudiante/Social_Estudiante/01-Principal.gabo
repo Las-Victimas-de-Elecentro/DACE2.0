@@ -3,7 +3,7 @@ Inicio
     Var opc: Entero;
     Var R: Booleano;
     Repetir
-        Mostrar << "¡Bienvenido a la sección Social Docente!";
+        Mostrar << "¡Bienvenido a la sección Social Estudiante!";
         Mostrar << "¿Qué desea hacer?";
         Mostrar << "1: Mostrar Novedades";
         Mostrar << "2: Mostrar Grupos";

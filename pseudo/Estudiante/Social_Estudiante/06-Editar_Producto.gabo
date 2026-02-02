@@ -36,6 +36,10 @@ Inicio
                     Repetir
                         Mostrar << "Según en que puesto se le mostró el producto que desea borrar ingreselo aqui";
                         Leer >> K2;
+                        Mientras (K2 < 1 or K2 > M) Hacer;
+                            Mostrar << "Es invalido";
+                            Leer >> K2;
+                        Fin_Mientras
                         K3 = Jose_Lozano[K2];
                         Para (I = K3 Hasta I = M) Hacer;
                             C_MP[I].Vendedor = C_MP[I + 1].Vendedor;
@@ -70,6 +74,10 @@ Inicio
                     Repetir
                         Mostrar << "Según en que puesto se le mostró el producto que desea editar ingreselo aqui";
                         Leer >> K2;
+                        Mientras (K2 < 1 or K2 > M) Hacer;
+                            Mostrar << "Es invalido";
+                            Leer >> K2;
+                        Fin_Mientras
                         K3 = Jose_Lozano[K2];
                         Mostrar << "Ingrese los nuevos valores de su producto";
                         Mostrar << "Ingrese el producto a vender";
@@ -122,6 +130,10 @@ Inicio
                     Repetir
                         Mostrar << "Según en que puesto se le mostró el producto que desea borrar ingreselo aquí";
                         Leer >> K2;
+                        Mientras (K2 < 1 or K2 > M) Hacer;
+                            Mostrar << "Es invalido";
+                            Leer >> K2;
+                        Fin_Mientras
                         K3 = Jose_Lozano[K2];
                         Para (I = K3 Hasta I = M) Hacer;
                             A_MP[I].Vendedor = A_MP[I + 1].Vendedor;
@@ -157,6 +169,10 @@ Inicio
                     Repetir
                         Mostrar << "Según en que puesto se le mostró el producto que desea editar ingreselo aqui";
                         Leer >> K2;
+                        Mientras (K2 < 1 or K2 > M) Hacer;
+                            Mostrar << "Es invalido";
+                            Leer >> K2;
+                        Fin_Mientras
                         K3 = Jose_Lozano[K2];
                         Mostrar << "Ingrese los nuevos valores de su producto";
                         Mostrar << "Ingrese el producto a vender";
@@ -209,6 +225,10 @@ Inicio
                     Repetir
                         Mostrar << "Según en que puesto se le mostró el producto que desea borrar, ingreselo aquí";
                         Leer >> K2;
+                        Mientras (K2 < 1 or K2 > M) Hacer;
+                            Mostrar << "Es invalido";
+                            Leer >> K2;
+                        Fin_Mientras
                         K3 = Jose_Lozano[K2];
                         Para (I = K3 Hasta I = M) Hacer; 
                             S_MP[I].Vendedor = S_MP[I + 1].Vendedor;
@@ -242,11 +262,15 @@ Inicio
                     Repetir
                         Mostrar << "Según en que puesto se le mostró el producto que desea editar ingreselo aqui";
                         Leer >> K2;
+                        Mientras (K2 < 1 or K2 > M) Hacer;
+                            Mostrar << "Es invalido";
+                            Leer >> K2;
+                        Fin_Mientras
                         K3 = Jose_Lozano[K2];
                         Mostrar << "Ingrese los nuevos valores de su producto";
                         Mostrar << "Ingrese el producto a vender";
                         Leer >> S_MP[K3].Producto;
-                        Mostrar << "Ingrese la Disponibilidad para el servicio";
+                        Mostrar << "Ingrese la Disponibilidad para el servicio 1: Si hay, 0: No hay";
                         Leer >> S_MP[K3].Disp;
                         Mostrar << "Ingrese el precio";
                         Leer >> S_MP[K3].Precio;

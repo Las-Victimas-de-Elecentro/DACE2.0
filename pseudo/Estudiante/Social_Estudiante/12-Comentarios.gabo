@@ -30,7 +30,7 @@ Inicio
                         Leer >> R5;
                         Hasta(R5 = 1);
                     Fin_Repetir
-                    Mostrar << "¿Desea ingresar una imagen a su publicacion? Ingrese: 1: Si / 0: No: ";
+                    Mostrar << "¿Desea ingresar una imagen a su respuesta? Ingrese: 1: Si / 0: No: ";
                     Leer >> R_Img;
 
                     Si (R_Img = 1) Entonces;

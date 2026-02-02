@@ -7,7 +7,6 @@ Inicio
     Si (R = 1) Entonces;
         Repetir
             Si (Ver > Datos[pos_usuario].Vistos) and (Publi[Ver].Activo = 1) Entonces;
-                Mostrar << Publi[Ver].ID_Publicacion;
                 Mostrar << Publi[Ver].Imagen;
                 Mostrar << Publi[Ver].Autor;
                 Mostrar << Publi[Ver].Tema;
