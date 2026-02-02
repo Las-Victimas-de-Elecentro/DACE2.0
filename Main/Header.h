@@ -1,9 +1,11 @@
 #ifndef HEADER_H
 #define HEADER_H
 
-// Librerias
+//Librerias
 #include <iostream>
 #include <string>
+#include <algorithm>
+#include <vector>
 #include <fstream>
 #include <sstream>
 
@@ -21,8 +23,13 @@ struct Variables
    int Opc_F;
    int Cod;
    int T;
+   int Av;
    int I2;
    int Note;
+   int Img;
+   std::string Rol_G;
+
+   bool Comunitario;
 };
 
 //Registros
@@ -31,29 +38,38 @@ struct Variables
 #include "../Estudiante/Registro Estudiante.h"
 #include "../Docente/Registro Docente.h"
 #include "../Administrativo/Registro Administrativo.h"
+#include "../Global/Social/Registro Social.h"
+#include "../Global/Extracurricular/Extracurricular.h"
 
 //Lenados
 #include "../LLenado/Llenado.h"
 
 //Funciones
 #include "../Funciones/Funciones.h"
+#include "../Funciones/Guardados/Guardados.h"
 
-// Datos
+//Datos
 #include "../Datos/Menu/Menu.h"
 #include "../Datos/Personales/Personales.h"
 #include "../Datos/Academico/Academico.h"
+#include "../Datos/Social/Social.h"
 
-// Estudiante
+//Estudiante
 #include "../Estudiante/Academico/Academico Estudiante.h"
 #include "../Estudiante/Academico/Materias/Mat.h"
 
-// Docente
+//Docente
 #include "../Docente/Academico/Academico Docente.h"
 
-// Inicio
+//Administrativo
+#include "../Administrativo/Gestion/Gestion.h"
+
+//Inicio
 #include "../Inicio/Inicio.h"
 
-// Global
+//Global
 #include "../Global/Principal Global.h"
 #include "../Global/Personal/Global.h"
+#include "../Global/Social/Social Global.h"
+
 #endif

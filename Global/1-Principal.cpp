@@ -1,7 +1,7 @@
 #include "../Main/Header.h"
 using namespace std;
 
-void Principal_Global (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Plan)[D], Reportes (&Rep)[D], Asignacion (&Asig)[D], Clase_Magistral (&Mag)[D], Solicitudes (&Soli)[D], Grupos (&Gru)[D], Clase (&Class)[D], Bloque_Horario (&List)[48], Materias (&Mat)[527], Profesor (&Prof)[D], Administrativo (&Admin)[D], Carnet (&Car)[D], Carnetizacion (&Carn)[D])
+void Principal_Global (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Plan)[D], Reportes (&Rep)[D], Asignacion (&Asig)[D], Clase_Magistral (&Mag)[D], Solicitudes (&Soli)[D], Grupos (&Gru)[D], Clase (&Class)[D], Bloque_Horario (&List)[48], Materias (&Mat)[527], Profesor (&Prof)[D], Administrativo (&Admin)[D], Carnet (&Car)[D], Carnetizacion (&Carn)[D], Pasantias (&Pas)[D], Servicio_Comunitario (&SerC)[D], Market_Place (&MP)[D], Comida_MP (&C_MP)[D], Articulos_MP (&A_MP)[D], Servicios_MP (&S_MP)[D], Amigos (&Amig)[D], Publicaciones (&Publi)[D], Empleado (&Emp)[D], Inscrito (&Ins)[D], Novedades (&Nov)[D])
 {
     int& N = Var.N;
     int& Opc_F = Var.Opc_F;
@@ -32,7 +32,7 @@ void Principal_Global (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (
                     Menu_Global_Personal(Var, Est, Prof, Admin);
                     break;
                 case 2:
-
+                    Menu_Gestion_Admin (Var, Emp, Ins, Prof, Admin, Est, Plan, Rep, Mag, Soli, Nov, Pas, SerC, Car, Carn);
                     break;
                 case 3:
                     cout << "Cerrando Sesión";
@@ -76,12 +76,14 @@ void Principal_Global (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (
                     }
                     else
                     {
-                        Menu_Est_Academico (Var, Est, Class, Mag, Prof, Admin, Asig, Mat, Plan, Car, Carn);
+                        Menu_Est_Academico (Var, Est, Class, Mag, Prof, Admin, Asig, Mat, Plan, Car, Carn, Pas, SerC);
                     }
                     break;
                 case 2:
-                    Menu_Global_Personal(Var, Est, Prof, Admin);
+                    Menu_Global_Personal (Var, Est, Prof, Admin);
                     break;
+                case 3:
+                    Menu_Social_Global (Var, MP, C_MP, A_MP, S_MP, Est, Prof, Admin, Amig, Publi);  
                 case 5:
                     cout << RED << "Cerrando Sesión" << RESET << endl;
                     Continuar();

@@ -33,7 +33,7 @@ void Menu_Global_Personal (Variables (&Var), Estudiante (&Est)[D], Profesor (&Pr
         Limpiar();
         
         Avatares(Var, Est, Prof, Admin);
-        cout << "Bienvenido a tu perfil personal de " << Nombre << endl;
+        cout << CYAN << "Bienvenido a tu perfil personal de " << Nombre << RESET << endl;
         cout << "Aqui puedes gestionar tu informacion, seguridad y preferencias" << endl;
         cout << "1: Información personal" << endl;
         cout << "2: Seguridad" << endl;

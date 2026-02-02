@@ -27,6 +27,7 @@ struct Profesor
     string Magistral;
     int Cant_Mat;
     int Cant_Mag;
+    int Amigos;
 };
 
 #endif

@@ -1,7 +1,7 @@
 #include "../Main/Header.h"
 using namespace std;
 
-void Cargar(Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Plan)[D], Reportes (&Rep)[D], Asignacion (&Asig)[D], Clase_Magistral (&Mag)[D], Solicitudes (&Soli)[D], Grupos (&Gru)[D], Clase (&Class)[D], Materias (&Mat)[527], Profesor (&Prof)[D], Administrativo (&Admin)[D], Carnet (&Car)[D], Carnetizacion (&Carn)[D])
+void Cargar (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Plan)[D], Reportes (&Rep)[D], Asignacion (&Asig)[D], Clase_Magistral (&Mag)[D], Solicitudes (&Soli)[D], Grupos (&Gru)[D], Clase (&Class)[D], Materias (&Mat)[527], Profesor (&Prof)[D], Administrativo (&Admin)[D], Carnet (&Car)[D], Carnetizacion (&Carn)[D], Pasantias (&Pas)[D], Servicio_Comunitario (&SerC)[D], Market_Place (&MP)[D], Comida_MP (&C_MP)[D], Articulos_MP (&A_MP)[D], Servicios_MP (&S_MP)[D], Amigos (&Amig)[D], Publicaciones (&Publi)[D], Empleado (&Emp)[D], Inscrito (&Ins)[D], Novedades (&Nov)[D])
 {
     string Texto;
 
@@ -32,8 +32,12 @@ void Cargar(Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Plan)[D], 
             getline(Personal_Est, Est[I].Carrera, ';');
             getline(Personal_Est, Texto, ';'); Est[I].Semestre = stoi(Texto);
             getline(Personal_Est, Texto, ';'); Est[I].Year = stoi(Texto);
-            getline(Personal_Est, Texto, ';'); Est[I].UC_Aprobadas= stoi(Texto);
-            getline(Personal_Est, Texto); Est[I].Oscuro = stoi(Texto);
+            getline(Personal_Est, Texto, ';'); Est[I].UC_Aprobadas = stoi(Texto);
+            getline(Personal_Est, Texto, ';'); Est[I].Oscuro = stoi(Texto);
+            getline(Personal_Est, Texto, ';'); Est[I].Pasantias = stoi(Texto);
+            getline(Personal_Est, Texto, ';'); Est[I].Comunitario = stoi(Texto);
+            getline(Personal_Est, Texto); Est[I].Amigos = stoi(Texto);
+            
             I++;
         }
         Personal_Est.close();
@@ -100,6 +104,49 @@ void Cargar(Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Plan)[D], 
             ME++;
         }
         Leer_Materia_Est.close();
+    }
+
+    ifstream Archivo_P("Base de datos/Estudiantes/Pasantias.csv");
+    if (Archivo_P.is_open())
+    {
+        int I = 0;
+        getline(Archivo_P, Texto);
+        while (I < D && getline(Archivo_P, Pas[I].Nombre, ';')) 
+        {
+            getline(Archivo_P, Texto, ';'); Pas[I].Edad = stoi(Texto);
+            getline(Archivo_P, Texto, ';'); Pas[I].Cedula = stol(Texto);
+            getline(Archivo_P, Pas[I].Password, ';');
+            getline(Archivo_P, Pas[I].Carrera, ';');
+            getline(Archivo_P, Texto, ';'); Pas[I].Semestre = stoi(Texto);
+            getline(Archivo_P, Texto, ';'); Pas[I].Year = stoi(Texto);
+            getline(Archivo_P, Pas[I].Empresa, ';');
+            getline(Archivo_P, Pas[I].Justificacion, ';');
+            getline(Archivo_P, Texto, ';'); Pas[I].Estado_Solicitud = stoi(Texto);
+            getline(Archivo_P, Texto); Pas[I].Horas = stof(Texto);
+            I++;
+        }
+        Archivo_P.close();
+    }
+
+    ifstream Archivo_S("Base de datos/Estudiantes/Servicio.csv");
+    if (Archivo_S.is_open())
+    {
+        int I = 0;
+        getline(Archivo_S, Texto);
+        while (I < D && getline(Archivo_S, SerC[I].Nombre, ';'))
+        {
+            getline(Archivo_S, SerC[I].Apellido, ';');
+            getline(Archivo_S, Texto, ';'); SerC[I].Cedula = stol(Texto);
+            getline(Archivo_S, Texto, ';'); SerC[I].Fecha.Dia = stoi(Texto);
+            getline(Archivo_S, Texto, ';'); SerC[I].Fecha.Mes = stoi(Texto);
+            getline(Archivo_S, Texto, ';'); SerC[I].Fecha.Year = stoi(Texto);
+            getline(Archivo_S, SerC[I].Area, ';');
+            getline(Archivo_S, Texto, ';'); SerC[I].Semestre = stoi(Texto);
+            getline(Archivo_S, Texto, ';'); SerC[I].Year = stoi(Texto);
+            getline(Archivo_S, Texto); SerC[I].Horas_Realizadas = stof(Texto);
+            I++;
+        }
+        Archivo_S.close();
     }
 
     ifstream Leer_Mag("Base de datos/Docentes/Clases Magistrales.csv");
@@ -521,22 +568,24 @@ void Cargar(Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Plan)[D], 
     ifstream Leer_Plan("Base de datos/Docentes/Plan_Evaluacion.csv");
     if (Leer_Plan.is_open())
     {
-        int i = 0;
+        int P = 0;
         getline(Leer_Plan, Texto);
-        while (i < D && getline(Leer_Plan, Texto, ';'))
+        while (P < D && getline(Leer_Plan, Plan[P].Nombre_Profesor, ';')) 
         {
-            getline(Leer_Plan, Plan[i].Nombre_Profesor, ';');
-            getline(Leer_Plan, Texto, ';'); Plan[i].CI_Profesor = stoi(Texto);
-            getline(Leer_Plan, Plan[i].Codigo_Materia, ';');
-            getline(Leer_Plan, Plan[i].Nombre_Materia, ';');
-            getline(Leer_Plan, Texto, ';'); Plan[i].Fecha.Dia = stoi(Texto);
-            getline(Leer_Plan, Texto, ';'); Plan[i].Fecha.Mes = stoi(Texto);
-            getline(Leer_Plan, Texto, ';'); Plan[i].Fecha.Year = stoi(Texto);
-            getline(Leer_Plan, Plan[i].Tema, ';');
-            getline(Leer_Plan, Plan[i].Estrategia, ';');
-            getline(Leer_Plan, Texto, ';'); Plan[i].Ponderacion = stoi(Texto);
-            getline(Leer_Plan, Texto); Plan[i].Firmado = (Texto == "1");
-            i++;
+            getline(Leer_Plan, Texto, ';'); 
+            Plan[P].CI_Profesor = stoi(Texto);
+            getline(Leer_Plan, Plan[P].Codigo_Materia, ';');
+            getline(Leer_Plan, Plan[P].Nombre_Materia, ';');
+            getline(Leer_Plan, Texto, ';'); Plan[P].Fecha.Dia = stoi(Texto);
+            getline(Leer_Plan, Texto, ';'); Plan[P].Fecha.Mes = stoi(Texto);
+            getline(Leer_Plan, Texto, ';'); Plan[P].Fecha.Year = stoi(Texto);
+            getline(Leer_Plan, Plan[P].Tema, ';');
+            getline(Leer_Plan, Plan[P].Estrategia, ';');
+            getline(Leer_Plan, Texto, ';'); 
+            Plan[P].Ponderacion = stoi(Texto);
+            getline(Leer_Plan, Texto);
+            Plan[P].Firmado = (Texto.find('1') != string::npos);
+            P++;
         }
         Leer_Plan.close();
     }
@@ -593,6 +642,346 @@ void Cargar(Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Plan)[D], 
             CE++;
         }
         Leer_Car_Est.close();
+    }
+
+    ifstream Mark("Base de datos/Marketplaces/Cuentas.csv");
+    if (Mark.is_open())
+    {
+        int MA = 0;
+        getline(Mark, Texto); 
+        
+        while (MA < D && getline(Mark, MP[MA].Usuario, ';'))
+        {
+            getline(Mark, Texto, ';'); MP[MA].Cedula = stol(Texto);
+            getline(Mark, MP[MA].Contacto, ';');
+            getline(Mark, MP[MA].Password, ';');
+            getline(Mark, MP[MA].Datos_Bancarios, ';');
+            getline(Mark, MP[MA].Area, ';');
+            getline(Mark, Texto, ';'); MP[MA].Boveda = stof(Texto);
+            getline(Mark, Texto, ';'); MP[MA].Ingresos = stof(Texto);
+            getline(Mark, Texto, ';'); MP[MA].Egresos = stof(Texto);
+            getline(Mark, MP[MA].Bitacora); 
+            
+            MA++;
+        }
+        Mark.close();
+    }
+
+    ifstream Mark_C("Base de datos/Marketplaces/Comida.csv");
+    if (Mark_C.is_open())
+    {
+        int MA = 0;
+        getline(Mark_C, Texto); 
+        while (MA < D && getline(Mark_C, C_MP[MA].Vendedor, ';'))
+        {
+            getline(Mark_C, Texto, ';'); C_MP[MA].Cedula = stol(Texto);
+            getline(Mark_C, C_MP[MA].Contacto, ';');
+            getline(Mark_C, C_MP[MA].Datos_Bancarios, ';');
+            getline(Mark_C, C_MP[MA].Producto, ';');
+            getline(Mark_C, Texto, ';'); C_MP[MA].Stock = stoi(Texto);
+            getline(Mark_C, Texto); C_MP[MA].Precio = stof(Texto);
+            MA++;
+        }
+        Mark_C.close();
+    }
+
+    ifstream Mark_A("Base de datos/Marketplaces/Articulos.csv");
+    if (Mark_A.is_open())
+    {
+        int MA = 0;
+        getline(Mark_A, Texto); 
+        while (MA < D && getline(Mark_A, A_MP[MA].Vendedor, ';'))
+        {
+            getline(Mark_A, Texto, ';'); A_MP[MA].Cedula = stol(Texto);
+            getline(Mark_A, A_MP[MA].Contacto, ';');
+            getline(Mark_A, A_MP[MA].Datos_Bancarios, ';');
+            getline(Mark_A, A_MP[MA].Producto, ';');
+            getline(Mark_A, Texto, ';'); A_MP[MA].Stock = stoi(Texto);
+            getline(Mark_A, Texto); A_MP[MA].Precio = stof(Texto);
+            MA++;
+        }
+        Mark_A.close();
+    }
+
+    ifstream Mark_S("Base de datos/Marketplaces/Servicios.csv");
+    if (Mark_S.is_open())
+    {
+        int MA = 0;
+        getline(Mark_S, Texto); 
+        while (MA < D && getline(Mark_S, S_MP[MA].Vendedor, ';'))
+        {
+            getline(Mark_S, Texto, ';'); S_MP[MA].Cedula = stol(Texto);
+            getline(Mark_S, Texto, ';'); S_MP[MA].Disp = stoi(Texto);
+            getline(Mark_S, Texto, ';'); S_MP[MA].Precio = stof(Texto);
+            getline(Mark_S, S_MP[MA].Contacto, ';');
+            getline(Mark_S, S_MP[MA].Datos_Bancarios, ';');
+            getline(Mark_S, S_MP[MA].Producto); 
+            MA++;
+        }
+        Mark_S.close();
+    }
+
+    // Social
+
+    ifstream Archivo("Base de datos/Social/Amigos.csv");
+
+    if (Archivo.is_open())
+    {
+
+        getline(Archivo, Texto);
+
+        int i = 0;
+        while (i < D && getline(Archivo, Amig[i].Nombre_Emisor, ';'))
+        {
+
+            getline(Archivo, Texto, ';');
+            if (Texto != "")
+            {
+
+                Amig[i].CI_Emisor = stol(Texto);
+            }
+
+            getline(Archivo, Texto, ';');
+            stringstream ss_nom(Texto);
+            string item_nom;
+            int j_nom = 0;
+            while (getline(ss_nom, item_nom, '|') && j_nom < D)
+            {
+
+                Amig[i].Nombre_Receptor[j_nom] = item_nom;
+                j_nom++;
+            }
+
+            getline(Archivo, Texto, ';');
+            stringstream ss_ci(Texto);
+            string item_ci;
+            int j_ci = 0;
+            while (getline(ss_ci, item_ci, '|') && j_ci < D)
+            {
+
+                if (item_ci != "")
+                {
+
+                    Amig[i].CI_Receptor[j_ci] = stol(item_ci);
+                }
+                j_ci++;
+            }
+
+            getline(Archivo, Texto);
+            stringstream ss_av(Texto);
+            string item_av;
+            int j_av = 0;
+            while (getline(ss_av, item_av, '|') && j_av < D)
+            {
+
+                Amig[i].Avatar_Receptor[j_av] = item_av;
+                j_av++;
+            }
+
+            i++;
+        }
+        Archivo.close();
+    }
+
+    ifstream Arch_Pub("Base de datos/Social/Publicaciones.csv");
+
+    if (Arch_Pub.is_open())
+    {
+
+        int I = 0;
+        getline(Arch_Pub, Texto);
+        while (I < D && getline(Arch_Pub, Texto, ';'))
+        {
+
+            Publi[I].ID = stoi(Texto);
+            getline(Arch_Pub, Texto, ';'); Publi[I].CI = stol(Texto);
+            getline(Arch_Pub, Publi[I].Imagen, ';'); 
+            getline(Arch_Pub, Publi[I].Autor, ';');
+            getline(Arch_Pub, Publi[I].Normas, ';');
+            getline(Arch_Pub, Publi[I].Tema, ';');
+            getline(Arch_Pub, Publi[I].Texto, ';');
+            getline(Arch_Pub, Texto, ';'); Publi[I].Fecha.Dia = stoi(Texto);
+            getline(Arch_Pub, Texto, ';'); Publi[I].Fecha.Mes = stoi(Texto);
+            getline(Arch_Pub, Texto, ';'); Publi[I].Fecha.Year = stoi(Texto);
+            getline(Arch_Pub, Texto, ';'); Publi[I].Reac.Cant_Gusta = stoi(Texto);
+            getline(Arch_Pub, Texto, ';'); Publi[I].Reac.Cant_Encanta = stoi(Texto);
+            getline(Arch_Pub, Texto, ';'); Publi[I].Reac.Cant_Importa = stoi(Texto);
+            getline(Arch_Pub, Texto, ';'); Publi[I].Reac.Cant_Divierte = stoi(Texto);
+            getline(Arch_Pub, Texto, ';'); Publi[I].Reac.Cant_Asombra = stoi(Texto);
+            getline(Arch_Pub, Texto, ';'); Publi[I].Reac.Cant_Entristece = stoi(Texto);
+            getline(Arch_Pub, Texto, ';'); Publi[I].Reac.Cant_Molesta = stoi(Texto);
+            getline(Arch_Pub, Texto, ';'); Publi[I].Cant_Reac = stoi(Texto);
+            getline(Arch_Pub, Texto, ';'); Publi[I].Cant_Coment = stoi(Texto);
+            getline(Arch_Pub, Texto, ';'); Publi[I].Activo = stoi(Texto);
+
+            getline(Arch_Pub, Texto, ';');
+            stringstream sse(Texto); string et; int e_idx = 0;
+            while(sse >> et && e_idx < 50) { Publi[I].Etiqueta[e_idx++] = et; }
+            getline(Arch_Pub, Texto, ';');
+            stringstream ssr(Texto); int r; Publi[I].Mi_Reaccion.clear();
+            while(ssr >> r) { Publi[I].Mi_Reaccion.push_back(r); }
+            getline(Arch_Pub, Texto);
+            stringstream ssc(Texto); long c; Publi[I].CI_Reaccion.clear();
+            while(ssc >> c) { Publi[I].CI_Reaccion.push_back(c); }
+            I++;
+        }
+        Arch_Pub.close();
+    }
+
+    ifstream Arch_Com("Base de datos/Social/Comentarios.csv");
+    if (Arch_Com.is_open())
+    {
+
+        getline(Arch_Com, Texto);
+        while (getline(Arch_Com, Texto, ';'))
+        {
+
+            int id_p = stoi(Texto); Comentarios aux_c;
+            getline(Arch_Com, Texto, ';'); aux_c.ID = stoi(Texto);
+            getline(Arch_Com, aux_c.Autor, ';');
+            getline(Arch_Com, aux_c.Comentario, ';');
+            getline(Arch_Com, Texto, ';'); aux_c.Fecha.Dia = stoi(Texto);
+            getline(Arch_Com, Texto, ';'); aux_c.Fecha.Mes = stoi(Texto);
+            getline(Arch_Com, Texto, ';'); aux_c.Fecha.Year = stoi(Texto);
+            getline(Arch_Com, Texto, ';'); aux_c.Reac.Cant_Gusta = stoi(Texto);
+            getline(Arch_Com, Texto, ';'); aux_c.Reac.Cant_Encanta = stoi(Texto);
+            getline(Arch_Com, Texto, ';'); aux_c.Reac.Cant_Importa = stoi(Texto);
+            getline(Arch_Com, Texto, ';'); aux_c.Reac.Cant_Divierte = stoi(Texto);
+            getline(Arch_Com, Texto, ';'); aux_c.Reac.Cant_Asombra = stoi(Texto);
+            getline(Arch_Com, Texto, ';'); aux_c.Reac.Cant_Entristece = stoi(Texto);
+            getline(Arch_Com, Texto, ';'); aux_c.Reac.Cant_Molesta = stoi(Texto);
+            getline(Arch_Com, Texto, ';'); aux_c.Cant_Reac = stoi(Texto);
+            getline(Arch_Com, Texto, ';');
+            stringstream ssr_c(Texto); int r; aux_c.Mi_Reaccion.clear();
+            while(ssr_c >> r) { aux_c.Mi_Reaccion.push_back(r); }
+            getline(Arch_Com, Texto);
+            stringstream ssc_c(Texto); long c; aux_c.CI_Reaccion.clear();
+            while(ssc_c >> c) { aux_c.CI_Reaccion.push_back(c); }
+
+            for(int i = 0; i < D; i++)
+            {
+
+                if(Publi[i].ID == id_p && Publi[i].Activo) { Publi[i].Coment.push_back(aux_c); break; }
+            }
+        }
+        Arch_Com.close();
+    }
+
+    ifstream Arch_Res("Base de datos/Social/Respuestas.csv");
+    if (Arch_Res.is_open())
+    {
+
+        getline(Arch_Res, Texto);
+        while (getline(Arch_Res, Texto, ';'))
+        {
+
+            int id_c = stoi(Texto); Respuesta aux_r;
+            getline(Arch_Res, aux_r.Autor, ';');
+            getline(Arch_Res, aux_r.Respuesta, ';');
+            getline(Arch_Res, Texto, ';'); aux_r.Fecha.Dia = stoi(Texto);
+            getline(Arch_Res, Texto, ';'); aux_r.Fecha.Mes = stoi(Texto);
+            getline(Arch_Res, Texto, ';'); aux_r.Fecha.Year = stoi(Texto);
+            getline(Arch_Res, Texto, ';'); aux_r.Reac.Cant_Gusta = stoi(Texto);
+            getline(Arch_Res, Texto, ';'); aux_r.Reac.Cant_Encanta = stoi(Texto);
+            getline(Arch_Res, Texto, ';'); aux_r.Reac.Cant_Importa = stoi(Texto);
+            getline(Arch_Res, Texto, ';'); aux_r.Reac.Cant_Divierte = stoi(Texto);
+            getline(Arch_Res, Texto, ';'); aux_r.Reac.Cant_Asombra = stoi(Texto);
+            getline(Arch_Res, Texto, ';'); aux_r.Reac.Cant_Entristece = stoi(Texto);
+            getline(Arch_Res, Texto, ';'); aux_r.Reac.Cant_Molesta = stoi(Texto);
+            getline(Arch_Res, Texto, ';'); aux_r.Cant_Reac = stoi(Texto);
+            getline(Arch_Res, Texto, ';');
+            stringstream ssr_r(Texto); int r; aux_r.Mi_Reaccion.clear();
+            while(ssr_r >> r) { aux_r.Mi_Reaccion.push_back(r); }
+            getline(Arch_Res, Texto);
+            stringstream ssc_r(Texto); long c; aux_r.CI_Reaccion.clear();
+            while(ssc_r >> c) { aux_r.CI_Reaccion.push_back(c); }
+
+            for(int i = 0; i < D; i++)
+            {
+
+                for(size_t j = 0; j < Publi[i].Coment.size(); j++)
+                {
+
+                    if(Publi[i].Coment[j].ID == id_c) { Publi[i].Coment[j].Resp.push_back(aux_r); }
+                }
+            }
+        }
+        Arch_Res.close();
+    }
+
+    ifstream LeerEmp("Base de datos/Solicitudes/Empleados.csv");
+    if (LeerEmp.is_open())
+    {
+        int E = 0;
+        getline(LeerEmp, Texto);
+
+        while (E < D && getline(LeerEmp, Emp[E].Nombre, ';'))
+        {
+            getline(LeerEmp, Emp[E].Apellido, ';');
+            getline(LeerEmp, Texto, ';'); Emp[E].Cedula = stol(Texto);
+            getline(LeerEmp, Texto, ';'); Emp[E].Fecha.Dia = stoi(Texto);
+            getline(LeerEmp, Texto, ';'); Emp[E].Fecha.Mes = stoi(Texto);
+            getline(LeerEmp, Texto, ';'); Emp[E].Fecha.Year = stoi(Texto);
+            getline(LeerEmp, Emp[E].Correo, ';');
+            getline(LeerEmp, Emp[E].Experiencia, ';');
+            getline(LeerEmp, Emp[E].Descripcion, ';');
+
+            for (int i = 0; i < 20; i++)
+            {
+                getline(LeerEmp, Emp[E].Titulo[i], ';');
+            }
+
+            getline(LeerEmp, Texto, ';'); Emp[E].Aprobado = stoi(Texto);
+            getline(LeerEmp, Texto); Emp[E].Trabajando = stoi(Texto);
+
+            E++;
+        }
+        LeerEmp.close();
+    }
+
+    ifstream LeerIns("Base de datos/Solicitudes/Inscritos.csv");
+    if (LeerIns.is_open())
+    {
+        int I = 0;
+        getline(LeerIns, Texto);
+
+        while (I < D && getline(LeerIns, Ins[I].Nombre, ';'))
+        {
+            getline(LeerIns, Ins[I].Apellido, ';');
+            getline(LeerIns, Texto, ';'); Ins[I].Cedula = stol(Texto);
+            getline(LeerIns, Texto, ';'); Ins[I].Fecha.Dia = stoi(Texto);
+            getline(LeerIns, Texto, ';'); Ins[I].Fecha.Mes = stoi(Texto);
+            getline(LeerIns, Texto, ';'); Ins[I].Fecha.Year = stoi(Texto);
+            getline(LeerIns, Ins[I].Correo, ';');
+            getline(LeerIns, Ins[I].Carrera, ';');
+            getline(LeerIns, Texto, ';'); Ins[I].Semestre = stoi(Texto);
+            getline(LeerIns, Texto, ';'); Ins[I].Year = stoi(Texto);
+            getline(LeerIns, Texto, ';'); Ins[I].Aprobado = stoi(Texto);
+            getline(LeerIns, Texto); Ins[I].Estudiando = stoi(Texto);
+
+            I++;
+        }
+        LeerIns.close();
+    }
+
+    ifstream LeerNov("Base de datos/Administrativos/Novedades.csv");
+    if (LeerNov.is_open())
+    {
+        int I = 0;
+        getline(LeerNov, Texto); 
+
+        while (I < D && getline(LeerNov, Nov[I].Hecho, ';'))
+        {
+            getline(LeerNov, Texto, ';'); Nov[I].Fecha.Dia = stoi(Texto);
+            getline(LeerNov, Texto, ';'); Nov[I].Fecha.Mes = stoi(Texto);
+            getline(LeerNov, Texto, ';'); Nov[I].Fecha.Year = stoi(Texto);
+            getline(LeerNov, Nov[I].Responsables, ';');
+            getline(LeerNov, Nov[I].Contexto, ';');
+            getline(LeerNov, Nov[I].Lugar); 
+
+            I++;
+        }
+        LeerNov.close();
     }
 
 }

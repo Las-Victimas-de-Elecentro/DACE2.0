@@ -8,7 +8,7 @@ string Dibujo;
 string Rol;
 bool Oscuro;
 
-//Registros Grandes
+//Academico
 Estudiante Est[D];
 Materias Mat[527];
 Profesor Prof[D];
@@ -23,6 +23,27 @@ Clase_Magistral Mag[D];
 Plan_Evaluacion Plan[D];
 Carnetizacion Carn[D];
 Carnet Car[D];
+Pasantias Pas[D];
+Servicio_Comunitario SerC[D];
+
+//Social
+Market_Place MP[D];
+Comida_MP C_MP[D];
+Articulos_MP A_MP[D];
+Servicios_MP S_MP[D];
+Publicaciones Publi[D];
+Amigos Amig[D];
+Novedades Nov[D];
+Chatbot Bot[10];
+
+//Extracurricular
+Eventos Even[D];
+Clubes Club[D];
+Celebraciones Cel[D];
+
+//Admin
+Empleado Emp[D];
+Inscrito Ins[D];
 
 
 int main()
@@ -38,7 +59,7 @@ int main()
     //Cargar Usuarios
     Verificar_Llenado(Est, Prof, Admin);
     Llenado_Horario (List);
-    Cargar (Var, Est, Plan, Rep, Asig, Mag, Soli, Gru, Class, Mat, Prof, Admin, Car, Carn);
+    Cargar (Var, Est, Plan, Rep, Asig, Mag, Soli, Gru, Class, Mat, Prof, Admin, Car, Carn, Pas, SerC, MP, C_MP, A_MP, S_MP, Amig, Publi, Emp, Ins, Nov);
 
     do {
         Limpiar();
@@ -55,7 +76,7 @@ int main()
         switch (Opc)
         {
             case 1:
-                Sesion (Var, Est, Plan, Rep, Asig, Mag, Soli, Gru, Class, List, Mat, Prof, Admin, Car, Carn);
+                Sesion (Var, Est, Plan, Rep, Asig, Mag, Soli, Gru, Class, List, Mat, Prof, Admin, Car, Carn, Pas, SerC, MP, C_MP, A_MP, S_MP, Amig, Publi, Emp, Ins, Nov);
                 break;
             case 2:
                 Registro (Var, Est, Prof, Admin);

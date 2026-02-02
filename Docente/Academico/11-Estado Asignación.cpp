@@ -52,7 +52,7 @@ void Estado_Asignacion (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion 
     else
     {
         cout << RED << (R == 1 ? "No hay asignaciones para publicar" : "No hay asignaciones para cerrar") << RESET << endl;
-        Continuar();
+        Continue();
         return;
     }
 

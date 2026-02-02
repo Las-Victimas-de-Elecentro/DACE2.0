@@ -10,5 +10,8 @@ int Horas_Academic ();
 int Entero ();
 float Real ();
 float Notas ();
+void Password_Academic (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
+int Jornada ();
+int Jornada_C ();
 
 #endif

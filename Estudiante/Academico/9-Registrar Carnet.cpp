@@ -5,7 +5,7 @@ void Carnet_Est (Variables (&Var), Estudiante (&Est)[D], Carnet (&Car)[D], Carne
 {
     int& N = Var.N;
     int I, P = -1;
-    bool R, Registrado = false, Pagado = false;
+    bool R, Registrado = 0, Pagado = 0;
 
     Limpiar();
     Dibujo = "Card"; Art();
@@ -17,11 +17,11 @@ void Carnet_Est (Variables (&Var), Estudiante (&Est)[D], Carnet (&Car)[D], Carne
         {
             if (Carn[I].Est.Cedula == Est[N].Cedula)
             {
-                Registrado = true;
+                Registrado = 1;
                 P = I;
-                if (Carn[I].Est.Pago == true)
+                if (Carn[I].Est.Pago == 1)
                 {
-                    Pagado = true;
+                    Pagado = 1;
                 }
                 break;
             }
@@ -31,9 +31,9 @@ void Carnet_Est (Variables (&Var), Estudiante (&Est)[D], Carnet (&Car)[D], Carne
     Limpiar();
     Dibujo = "Card"; Art();
 
-    if (Registrado == true)
+    if (Registrado == 1)
     {
-        if (Pagado == true)
+        if (Pagado == 1)
         {
             cout << GREEN << "Pago válido, aquí tiene su carnet" << RESET << endl;
             cout << CYAN << "Carnet Universitario" << RESET << endl;
@@ -58,6 +58,8 @@ void Carnet_Est (Variables (&Var), Estudiante (&Est)[D], Carnet (&Car)[D], Carne
         {
             if (Carn[I].Activo == 1 && Carn[I].Carrera == Est[N].Carrera && Carn[I].Est.Nombre == "")
             {
+                Limpiar();
+                Dibujo = "Card"; Art();
                 Cont_Carn++;
                 cout << "Sede: " << Carn[I].Lugar << " | Fecha: " << Carn[I].Fecha.Dia << "/" << Carn[I].Fecha.Mes << "/" << Carn[I].Fecha.Year << endl;
                 cout << "Precio: " << Carn[I].Precio << "$" << endl;
@@ -69,7 +71,7 @@ void Carnet_Est (Variables (&Var), Estudiante (&Est)[D], Carnet (&Car)[D], Carne
                     Carn[I].Est.Nombre = Est[N].Nombre;
                     Carn[I].Est.Apellido = Est[N].Apellido;
                     Carn[I].Est.Cedula = Est[N].Cedula;
-                    Carn[I].Est.Pago = false;
+                    Carn[I].Est.Pago = 0;
 
                     cout << GREEN << "Registro completado." << RESET << endl;
                     Guardar_Carn(Car, Carn);

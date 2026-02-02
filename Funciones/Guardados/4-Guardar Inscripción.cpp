@@ -1,4 +1,4 @@
-#include "../Main/Header.h"
+#include "../../Main/Header.h"
 using namespace std;
 
 void Guardar_Ins (Clase (&Class)[D], Estudiante (&Est)[D], Clase_Magistral (&Mag)[D])

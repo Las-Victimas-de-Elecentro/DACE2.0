@@ -20,15 +20,21 @@ float Real ()
             }
         }
 
+        if (Real_Valid == true)
+        {
+            Real = stoi(Real_S);
+            
+            if (Real < 1)
+            {
+                Real_Valid = false;
+            }
+        }
+
         if (Real_Valid == false)
         {
             cout << RED << "Dato invalido" << RESET << endl;
             cout << "Ingrese nuevamente: ";
             cin >> Real_S;
-        }
-        else
-        {
-            Real = stof(Real_S);
         }
 
     } while (Real_Valid == false);

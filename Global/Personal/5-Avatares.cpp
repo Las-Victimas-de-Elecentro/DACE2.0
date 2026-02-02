@@ -205,12 +205,10 @@ void Avatares (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Admi
         cout << "⠘⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠛⠀⠀" << RESET << endl;
     }
 
-    if (Oscuro == 0)
-    {
+    cout << endl;
+    if (Oscuro == 0) {
         cout << "\033[0m" << flush;
-    }
-    else
-    {
+    } else {
         cout << "\033[30;47m" << flush;
     }
 }

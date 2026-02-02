@@ -12,6 +12,5 @@ int Year_User ();
 string Correo_User ();
 string Password_User ();
 long long Telefono_User ();
-string Parroquia_User ();
 
 #endif

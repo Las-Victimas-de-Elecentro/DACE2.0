@@ -1,4 +1,4 @@
-#include "../Main/Header.h"
+#include "../../Main/Header.h"
 using namespace std;
 
 void Guardar(Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D])
@@ -20,7 +20,7 @@ void Guardar(Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Admini
     if (Personal.is_open())
     {
         if (Rol == "Est") {
-            Personal << "Avatar;Nombre;Segundo Nombre;Apellido;Segundo Apellido;Cedula;Dia;Mes;Year;Dirección;Telefono;Genero;Parroquia;Etnia;Correo;Password;Oscuro" << endl;
+            Personal << "Avatar;Nombre;Segundo Nombre;Apellido;Segundo Apellido;Cedula;Dia;Mes;Year;Dirección;Telefono;Genero;Parroquia;Etnia;Correo;Password;Carrera;Semestre;Año;UC Aprobadas;Oscuro;Pasantias;Comunitario;Amigos" << endl;
         } else {
             Personal << "Avatar;Nombre;Segundo Nombre;Apellido;Segundo Apellido;Cedula;Dia;Mes;Year;Cargo;Dirección;Telefono;Genero;Parroquia;Etnia;Correo;Password;Oscuro" << endl;
         }
@@ -30,27 +30,30 @@ void Guardar(Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Admini
         {
             if (Rol == "Est" && Est[I].Nombre != "")
             {
-                Personal << Est[I].Avatar    << ";";
-                Personal << Est[I].Nombre    << ";";
-                Personal << Est[I].Nombre2    << ";";
-                Personal << Est[I].Apellido  << ";";
-                Personal << Est[I].Apellido2  << ";";
-                Personal << Est[I].Cedula    << ";";
+                Personal << Est[I].Avatar << ";";
+                Personal << Est[I].Nombre << ";";
+                Personal << Est[I].Nombre2 << ";";
+                Personal << Est[I].Apellido << ";";
+                Personal << Est[I].Apellido2 << ";";
+                Personal << Est[I].Cedula << ";";
                 Personal << Est[I].Fecha.Dia << ";";
                 Personal << Est[I].Fecha.Mes << ";";
                 Personal << Est[I].Fecha.Year << ";";
-                Personal << Est[I].Direccion  << ";";
-                Personal << Est[I].Telefono  << ";";
-                Personal << Est[I].Genero  << ";";
-                Personal << Est[I].Parroquia  << ";";
-                Personal << Est[I].Etnia  << ";";
-                Personal << Est[I].Correo    << ";";
-                Personal << Est[I].Password  << ";";
-                Personal << Est[I].Carrera  << ";";
-                Personal << Est[I].Semestre  << ";";
-                Personal << Est[I].Year  << ";";
-                Personal << Est[I].UC_Aprobadas  << ";";
-                Personal << Est[I].Oscuro  << endl; 
+                Personal << Est[I].Direccion << ";";
+                Personal << Est[I].Telefono << ";";
+                Personal << Est[I].Genero << ";";
+                Personal << Est[I].Parroquia << ";";
+                Personal << Est[I].Etnia << ";";
+                Personal << Est[I].Correo << ";";
+                Personal << Est[I].Password << ";";
+                Personal << Est[I].Carrera << ";";
+                Personal << Est[I].Semestre << ";";
+                Personal << Est[I].Year << ";";
+                Personal << Est[I].UC_Aprobadas << ";";
+                Personal << Est[I].Oscuro << ";";
+                Personal << Est[I].Pasantias << ";";
+                Personal << Est[I].Comunitario << ";";
+                Personal << Est[I].Amigos << endl; 
             }
             else if (Rol == "Prof" && Prof[I].Nombre != "")
             {
@@ -180,5 +183,4 @@ void Guardar(Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Admini
         }
         Materia.close();
     }
-    
 }

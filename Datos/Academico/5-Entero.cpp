@@ -19,15 +19,21 @@ int Entero ()
             }
         }
 
+        if (Entero_Valid == true)
+        {
+            Entero = stoi(Entero_S);
+            
+            if (Entero < 1)
+            {
+                Entero_Valid = false;
+            }
+        }
+
         if (Entero_Valid == false)
         {
             cout << RED << "Dato invalido" << RESET << endl;
             cout << "Ingrese nuevamente: ";
             cin >> Entero_S;
-        }
-        else
-        {
-            Entero = stoi(Entero_S);
         }
 
     } while (Entero_Valid == false);

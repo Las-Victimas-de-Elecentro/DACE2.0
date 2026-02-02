@@ -129,7 +129,7 @@ void Datos_Extras_Global (Variables (&Var), Estudiante (&Est)[D], Profesor (&Pro
 
     Dibujo = "User"; Art();
     cout << "Ingrese su Parroquia: ";
-    Parroquia = Parroquia_User();
+    Parroquia = Palabra();
     if (Rol == "Est")
     {
         Est[N].Parroquia = Parroquia;

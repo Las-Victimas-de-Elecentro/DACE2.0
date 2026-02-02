@@ -30,6 +30,23 @@ struct Estudiante
     string Magistral;
     int Cant_Mat;
     int Cant_Mag;
+    bool Pasantias;
+    bool Comunitario;
+    int Amigos;
 };
+
+struct Inscrito
+{
+    string Nombre;
+    string Apellido;
+    long Cedula;
+    Nacimiento Fecha;
+    string Correo;
+    string Carrera;
+    int Semestre, Year;
+    bool Aprobado;
+    bool Estudiando;
+};
+
 
 #endif

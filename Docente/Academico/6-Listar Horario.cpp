@@ -27,11 +27,15 @@ void Listar_Horario (Variables (&Var), Clase (&Class)[D], Profesor (&Prof)[D])
 
                 cout << Class[I].Class1.Dia << " " << Class[I].Class1.Hora_Inicio << "-" << Class[I].Class1.Hora_Fin << " | Aula: " << Class[I].Class1.Aula << endl;
                 
-                cout << Class[I].Class2.Dia << " " << Class[I].Class2.Hora_Inicio << "-" << Class[I].Class2.Hora_Fin << " | Aula: " << Class[I].Class2.Aula << endl;
+                if (Class[I].Class2.Aula != 0)
+                {
+
+                    cout << Class[I].Class2.Dia << " " << Class[I].Class2.Hora_Inicio << "-" << Class[I].Class2.Hora_Fin << " | Aula: " << Class[I].Class2.Aula << endl;
+                }
+                cout << endl;
             }
         }
 
-        cout << endl;
         Continue();
         return;
     }

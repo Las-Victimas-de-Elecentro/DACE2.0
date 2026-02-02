@@ -12,8 +12,7 @@ void Asignar_Horario (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&
 
     do {
         P = -1; G = -1; Encontrada = false;
-        Limpiar();
-        Dibujo = "BookTwo"; Art();
+        Limpiar(); Dibujo = "BookTwo"; Art();
 
         if (Prof[N].Materias != "")
         {
@@ -48,6 +47,7 @@ void Asignar_Horario (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&
 
             if (P == -1) 
             {
+                Limpiar(); Dibujo = "BookTwo"; Art();
                 cout << RED << "No hay espacio para más clases" << RESET << endl;
                 Continue();
                 return;
@@ -57,12 +57,14 @@ void Asignar_Horario (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&
             Dibujo = "BookTwo"; Art();
 
             do {
+                Limpiar(); Dibujo = "BookTwo"; Art();
                 cout << "Ingrese el período actual: ";
                 cin >> Class[P].Periodo;
                 cout << "¿Está seguro? Ingrese: 1: Sí / 0: No : ";
                 R = Opc_Bool();
             } while (R == 0);
 
+            Limpiar(); Dibujo = "BookTwo"; Art();
             cout << "¿Cuantas clases semanales tendrá esta materia? Ingrese: 1: Dos / 0: Una : ";
             Cant_Class = Opc_Bool();
 
@@ -83,14 +85,13 @@ void Asignar_Horario (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&
 
             for (K = 0 ; K < (Cant_Class == 1 ? 2 : 1) ; K++)
             {
-                Limpiar();
-                Dibujo = "BookTwo"; Art();
+                Limpiar(); Dibujo = "BookTwo"; Art();
                 
                 cout << CYAN << "Asignación de Horario Número: " << K + 1 << RESET << endl;
                 cout << "¿La clase será 1: Normal / 0: Virtual? : ";
                 Opc = Opc_Bool();
 
-                Limpiar();
+                Limpiar(); Dibujo = "BookTwo"; Art();
                 Bloques_Disponibles(List);
                 Opc_F = 48;
                 cout << "Ingrese el ID del bloque para el Horario Número " << K + 1 << ": ";
@@ -108,8 +109,7 @@ void Asignar_Horario (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&
                     if (Opc == 1) Class[P].Class1.Plataforma = "Ninguna";
                     else 
                     {
-                        Limpiar();
-                        Dibujo = "BookTwo"; Art();
+                        Limpiar(); Dibujo = "BookTwo"; Art();
                         cout << "Plataforma virtual: ";
                         Class[P].Class1.Plataforma = Palabra();
                     }
@@ -124,8 +124,7 @@ void Asignar_Horario (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&
                     if (Opc == 1) Class[P].Class2.Plataforma = "Ninguna";
                     else 
                     {
-                        Limpiar();
-                        Dibujo = "BookTwo"; Art();
+                        Limpiar(); Dibujo = "BookTwo"; Art();
                         cout << "Plataforma virtual: ";
                         Class[P].Class2.Plataforma = Palabra();
                     }
@@ -168,8 +167,7 @@ void Asignar_Horario (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&
                 Gru[G].Miembros = 1;
             }
 
-            Limpiar();
-            Dibujo = "BookTwo"; Art();
+            Limpiar(); Dibujo = "BookTwo"; Art();
             cout << GREEN << "Datos guardados correctamente" << RESET << endl;
             Guardar_Academic(Var, Est, Plan, Rep, Asig, Mag, Soli, Gru, Class, Mat, Prof, Admin);
             
@@ -178,6 +176,7 @@ void Asignar_Horario (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&
         }
         else
         {
+            Limpiar(); Dibujo = "BookTwo"; Art();
             cout << RED << "No has registrado ninguna Materia" << RESET << endl;
             Continue();
             return;

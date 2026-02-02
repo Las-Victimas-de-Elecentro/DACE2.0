@@ -1,7 +1,7 @@
 #include "../../Main/Header.h"
 using namespace std;
 
-void Menu_Est_Academico (Variables (&Var), Estudiante (&Est)[D], Clase (&Class)[D], Clase_Magistral (&Mag)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D], Asignacion (&Asig)[D], Materias (&Mat)[527], Plan_Evaluacion (&Plan)[D], Carnet (&Car)[D], Carnetizacion (&Carn)[D])
+void Menu_Est_Academico (Variables (&Var), Estudiante (&Est)[D], Clase (&Class)[D], Clase_Magistral (&Mag)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D], Asignacion (&Asig)[D], Materias (&Mat)[527], Plan_Evaluacion (&Plan)[D], Carnet (&Car)[D], Carnetizacion (&Carn)[D], Pasantias (&Pas)[D], Servicio_Comunitario (&SerC)[D])
 {
     int& N = Var.N;
     int& Opc_F = Var.Opc_F;
@@ -13,7 +13,7 @@ void Menu_Est_Academico (Variables (&Var), Estudiante (&Est)[D], Clase (&Class)[
         Limpiar();
         Opc_F = 12;
         Avatares(Var, Est, Prof, Admin);
-        cout << "Bienvenido a la sección acádemica" << endl;
+        cout << CYAN << "Bienvenido a la sección acádemica" << RESET << endl;
         cout << "¿Qué desea hacer?" << endl;
         cout << "1: Ver su Horario" << endl;
         cout << "2: Inscripciones" << endl;
@@ -53,6 +53,13 @@ void Menu_Est_Academico (Variables (&Var), Estudiante (&Est)[D], Clase (&Class)[
                 break;
             case 9:
                 Carnet_Est (Var, Est, Car, Carn);
+                break;
+            case 10:
+                Pasantias_Est (Var, Est, Pas, Prof, Admin, SerC);
+                break;
+            case 11:
+                Comunitario_Est (Var, Est, Pas, SerC);
+                break;
         }
 
     } while (Opc != 12);

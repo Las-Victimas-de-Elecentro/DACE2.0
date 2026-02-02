@@ -256,7 +256,7 @@ void Modificar_Datos_Global (Variables (&Var), Estudiante (&Est)[D], Profesor (&
                 if ((Rol == "Est" && Est[N].Parroquia != "") || (Rol == "Prof" && Prof[N].Parroquia != "") || (Rol == "Admin" && Admin[N].Parroquia != ""))
                 {
                     cout << "Ingrese su nueva Parroquia: ";
-                    Parroquia = Parroquia_User();
+                    Parroquia = Palabra();
                     if (Rol == "Est")
                     {
                         Est[N].Parroquia = Parroquia;
@@ -269,7 +269,7 @@ void Modificar_Datos_Global (Variables (&Var), Estudiante (&Est)[D], Profesor (&
                     {
                         Admin[N].Parroquia = Parroquia;
                     }
-                    cout << GREEN << "Nueva Parroquia añadida: " << RESET << endl;
+                    cout << GREEN << "Nueva Parroquia añadida" << RESET << endl;
                     Continuar();
                 }
                 else

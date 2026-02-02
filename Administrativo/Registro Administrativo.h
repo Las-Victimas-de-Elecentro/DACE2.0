@@ -25,4 +25,18 @@ struct Administrativo
     bool Oscuro;
 };
 
+struct Empleado
+{
+    string Nombre;
+    string Apellido;
+    long Cedula;
+    Nacimiento Fecha;
+    string Correo;
+    string Experiencia;
+    string Descripcion;
+    string Titulo[20];
+    bool Aprobado;
+    bool Trabajando;
+};
+
 #endif

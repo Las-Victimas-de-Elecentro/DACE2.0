@@ -13,7 +13,7 @@ void Menu_Prof_Academic (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion
         Limpiar();
         Opc_F = 10;
         Avatares(Var, Est, Prof, Admin);
-        cout << "Bienvenido al sistema DACE - Sección Académica (Docente)" << endl;
+        cout << CYAN << "Bienvenido al sistema DACE - Sección Académica (Docente)" << RESET << endl;
         cout << "Seleccione una opción, Docente" << endl;
         cout << "1: Registrar Materias" << endl;
         cout << "2: Asignar Horario" << endl;

@@ -3,6 +3,33 @@
 #define REGISTRO_MATERIAS_H
 using namespace std;
 
+struct Pasantias
+{
+    string Nombre;
+    int Edad;
+    int Cedula;
+    string Password;
+    string Carrera;
+    int Semestre;
+    int Year;
+    string Empresa;
+    string Justificacion;
+    int Estado_Solicitud;
+    float Horas;
+};
+
+struct Servicio_Comunitario
+{
+    string Nombre;
+    string Apellido;
+    int Cedula;
+    Nacimiento Fecha;
+    string Area;
+    int Semestre;
+    int Year;
+    float Horas_Realizadas;
+};
+
 struct Estudiante_Car
 {
     long Cedula;

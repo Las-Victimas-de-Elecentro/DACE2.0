@@ -16,30 +16,33 @@ void Registrar (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Adm
     {
         if (Vacio_P == true) 
         {
-            Archivo_P << "Avatar;Nombre;Segundo Nombre;Apellido;Segundo Apellido;Cedula;Dia;Mes;Year;Dirección;Telefono;Genero;Parroquia;Etnia;Correo;Password;Carrera;Semestre;Año;UC Aprobadas;Oscuro" << endl;
+            Archivo_P << "Avatar;Nombre;Segundo Nombre;Apellido;Segundo Apellido;Cedula;Dia;Mes;Year;Dirección;Telefono;Genero;Parroquia;Etnia;Correo;Password;Carrera;Semestre;Año;UC Aprobadas;Oscuro;Pasantias;Comunitario;Amigos" << endl;
         }
 
-        Archivo_P << Est[N].Avatar    << ";";
-        Archivo_P << Est[N].Nombre    << ";";
-        Archivo_P << Est[N].Nombre2    << ";";
-        Archivo_P << Est[N].Apellido  << ";";
-        Archivo_P << Est[N].Apellido2  << ";";
-        Archivo_P << Est[N].Cedula    << ";";
+        Archivo_P << Est[N].Avatar << ";";
+        Archivo_P << Est[N].Nombre << ";";
+        Archivo_P << Est[N].Nombre2 << ";";
+        Archivo_P << Est[N].Apellido << ";";
+        Archivo_P << Est[N].Apellido2 << ";";
+        Archivo_P << Est[N].Cedula << ";";
         Archivo_P << Est[N].Fecha.Dia << ";";
         Archivo_P << Est[N].Fecha.Mes << ";";
         Archivo_P << Est[N].Fecha.Year << ";";
-        Archivo_P << Est[N].Direccion  << ";";
-        Archivo_P << Est[N].Telefono  << ";";
-        Archivo_P << Est[N].Genero  << ";";
-        Archivo_P << Est[N].Parroquia  << ";";
-        Archivo_P << Est[N].Etnia  << ";";
-        Archivo_P << Est[N].Correo    << ";";
-        Archivo_P << Est[N].Password  << ";";
-        Archivo_P << Est[N].Carrera  << ";";
-        Archivo_P << Est[N].Semestre  << ";";
-        Archivo_P << Est[N].Year  << ";";
-        Archivo_P << Est[N].UC_Aprobadas  << ";";
-        Archivo_P << Est[N].Oscuro  << endl; 
+        Archivo_P << Est[N].Direccion << ";";
+        Archivo_P << Est[N].Telefono << ";";
+        Archivo_P << Est[N].Genero << ";";
+        Archivo_P << Est[N].Parroquia << ";";
+        Archivo_P << Est[N].Etnia << ";";
+        Archivo_P << Est[N].Correo << ";";
+        Archivo_P << Est[N].Password << ";";
+        Archivo_P << Est[N].Carrera << ";";
+        Archivo_P << Est[N].Semestre << ";";
+        Archivo_P << Est[N].Year << ";";
+        Archivo_P << Est[N].UC_Aprobadas << ";";
+        Archivo_P << Est[N].Oscuro << ";";
+        Archivo_P << Est[N].Pasantias << ";";
+        Archivo_P << Est[N].Comunitario << ";";
+        Archivo_P << Est[N].Amigos << endl; 
         
         Archivo_P.close();
     }

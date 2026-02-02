@@ -9,8 +9,8 @@ void Cargar_Notas (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Pla
     string& Car = Var.Car;
     int& T = Var.T, I2 = Var.I2, Note = Var.Note;
 
-    int I, J, K, Es = -1, Cont, Opc_Mat, Cod, Opc_Car;
-    bool Encontrada = false, R;
+    int I, J, K, Es = -1, Cont, Opc_Mat, Opc_Car;
+    bool R;
     string Elegida;
 
     do {
@@ -37,35 +37,35 @@ void Cargar_Notas (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Pla
 
         switch (Opc_Car)
         {
-            case 1:
-                Car = "Informática";
+            case 1: 
+                Car = "Informática"; 
                 break;
-            case 2:
-                Car = "Civil";
+            case 2: 
+                Car = "Civil"; 
                 break;
-            case 3:
-                Car = "Hidrocarburo";
+            case 3: 
+                Car = "Hidrocarburo"; 
                 break;
-            case 4:
-                Car = "Medicina";
+            case 4: 
+                Car = "Medicina"; 
                 break;
-            case 5:
-                Car = "Odontología";
+            case 5: 
+                Car = "Odontología"; 
                 break;
-            case 6:
-                Car = "Veterinaria";
+            case 6: 
+                Car = "Veterinaria"; 
                 break;
-            case 7:
-                Car = "Derecho";
+            case 7: 
+                Car = "Derecho"; 
                 break;
-            case 8:
-                Car = "Social";
+            case 8: 
+                Car = "Social"; 
                 break;
-            case 9:
-                Car = "Contaduría";
+            case 9: 
+                Car = "Contaduría"; 
                 break;
-            case 10:
-                Car = "Economía";
+            case 10: 
+                Car = "Economía"; 
                 break;
         }
 
@@ -83,6 +83,15 @@ void Cargar_Notas (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Pla
             cout << "Ingrese Opcion: ";
             Opc_Mat = Opc_Menu(Opc_F);
             Elegida = Obtener_Materia(Prof[N].Materias, Opc_Mat);
+
+            for (I = 0; I < 527; I++)
+            {
+                if (Mat[I].Nombre == Elegida)
+                {
+                    T = I; 
+                    break;
+                }
+            }
 
             int Pos_Clase = -1;
             for (I = 0; I < D; I++)
@@ -112,6 +121,7 @@ void Cargar_Notas (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Pla
                             Note = Notas();
                             
                             I2 = K;
+                            
                             Notas_Materias_Prof(Var, Est, Mat);
                             Es = 1;
                             break;
@@ -132,7 +142,7 @@ void Cargar_Notas (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Pla
             else
             {
                 cout << RED << "No existen estudiantes de " << Car << " registrados en esta clase." << RESET << endl;
-                Continuar();
+                Continue();
             }
 
             cout << "¿Desea cargar notas de otra materia? Ingrese: 1: Sí / 0: No : ";

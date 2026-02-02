@@ -1,4 +1,4 @@
-#include "../Main/Header.h"
+#include "../../Main/Header.h"
 using namespace std;
 
 void Guardar_Carn (Carnet (&Car)[D], Carnetizacion (&Carn)[D])
