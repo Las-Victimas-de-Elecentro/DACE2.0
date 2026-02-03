@@ -1,80 +1,76 @@
-Procedimiento Historial_Veterinaria (E/S: Contador: Entero, Suma, Datos[pos_usuario].Materias.Vet[pos_usuario].Faenas_Pecuarias, Datos[pos_usuario].Materias.Vet[pos_usuario].Ingles_Instrumental, Datos[pos_usuario].Materias.Vet[pos_usuario].Ecologia_Agricola, Datos[pos_usuario].Materias.Vet[pos_usuario].Perfil_Profesional, Datos[pos_usuario].Materias.Vet[pos_usuario].Deportes, Datos[pos_usuario].Materias.Vet[pos_usuario].Bioquimica, Datos[pos_usuario].Materias.Vet[pos_usuario].Computacion, Datos[pos_usuario].Materias.Vet[pos_usuario].Zoologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Anatomia_I, Datos[pos_usuario].Materias.Vet[pos_usuario].Histologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Arte_Cultura, Datos[pos_usuario].Materias.Vet[pos_usuario].Bioestadistica, Datos[pos_usuario].Materias.Vet[pos_usuario].Genetica, Datos[pos_usuario].Materias.Vet[pos_usuario].Fisiologia_Animal, Datos[pos_usuario].Materias.Vet[pos_usuario].Zootecnia, Datos[pos_usuario].Materias.Vet[pos_usuario].Microbiologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Patologia_Clinica, Datos[pos_usuario].Materias.Vet[pos_usuario].Farmacologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Semiologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Nutricion, Datos[pos_usuario].Materias.Vet[pos_usuario].Reproduccion, Datos[pos_usuario].Materias.Vet[pos_usuario].Parasitologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Anatomia_Patologica, Datos[pos_usuario].Materias.Vet[pos_usuario].Gerencia, Datos[pos_usuario].Materias.Vet[pos_usuario].Saneamiento, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Rumiantes, Datos[pos_usuario].Materias.Vet[pos_usuario].Mejoramiento_Animal, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Caninos, Datos[pos_usuario].Materias.Vet[pos_usuario].Investigacion_I, Datos[pos_usuario].Materias.Vet[pos_usuario].Extension_I, Datos[pos_usuario].Materias.Vet[pos_usuario].Cirugia, Datos[pos_usuario].Materias.Vet[pos_usuario].Servicio_Comunitario, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Preventiva, Datos[pos_usuario].Materias.Vet[pos_usuario].Extension_II, Datos[pos_usuario].Materias.Vet[pos_usuario].Investigacion_II, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Especies, Datos[pos_usuario].Materias.Vet[pos_usuario].Legislacion, Datos[pos_usuario].Materias.Vet[pos_usuario].Produccion_Industria, Datos[pos_usuario].Materias.Vet[pos_usuario].Derecho_Constitucional, Datos[pos_usuario].Materias.Vet[pos_usuario].Epidemiologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Suinos, Datos[pos_usuario].Materias.Vet[pos_usuario].Pasantias: Real);
+Procedimiento Historial_Veterinaria (E/S: Suma, Contador: Real, Datos[pos_usuario].Year: Entero, Datos[pos_usuario].Materias.Vet[pos_usuario].Computacion, Datos[pos_usuario].Materias.Vet[pos_usuario].Deportes, Datos[pos_usuario].Materias.Vet[pos_usuario].Perfil_Profesional, Datos[pos_usuario].Materias.Vet[pos_usuario].Ecologia_Agricola, Datos[pos_usuario].Materias.Vet[pos_usuario].Ingles_Instrumental, Datos[pos_usuario].Materias.Vet[pos_usuario].Anatomia_I, Datos[pos_usuario].Materias.Vet[pos_usuario].Faenas_Pecuarias, Datos[pos_usuario].Materias.Vet[pos_usuario].Bioquimica, Datos[pos_usuario].Materias.Vet[pos_usuario].Electiva_Complementaria, Datos[pos_usuario].Materias.Vet[pos_usuario].Zoologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Histologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Microbiologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Genetica, Datos[pos_usuario].Materias.Vet[pos_usuario].Zootecnia, Datos[pos_usuario].Materias.Vet[pos_usuario].Bioestadistica, Datos[pos_usuario].Materias.Vet[pos_usuario].Arte_Cultura, Datos[pos_usuario].Materias.Vet[pos_usuario].Fisiologia_Animal, Datos[pos_usuario].Materias.Vet[pos_usuario].Patologia_Clinica, Datos[pos_usuario].Materias.Vet[pos_usuario].Reproduccion, Datos[pos_usuario].Materias.Vet[pos_usuario].Farmacologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Semiologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Nutricion, Datos[pos_usuario].Materias.Vet[pos_usuario].Parasitologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Anatomia_Patologica, Datos[pos_usuario].Materias.Vet[pos_usuario].Investigacion_I, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Caninos, Datos[pos_usuario].Materias.Vet[pos_usuario].Gerencia, Datos[pos_usuario].Materias.Vet[pos_usuario].Mejoramiento_Animal, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Rumiantes, Datos[pos_usuario].Materias.Vet[pos_usuario].Cirugia, Datos[pos_usuario].Materias.Vet[pos_usuario].Saneamiento, Datos[pos_usuario].Materias.Vet[pos_usuario].Extension_I, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Preventiva, Datos[pos_usuario].Materias.Vet[pos_usuario].Produccion_Industria, Datos[pos_usuario].Materias.Vet[pos_usuario].Derecho_Constitucional, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Suinos, Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Especies, Datos[pos_usuario].Materias.Vet[pos_usuario].Legislacion, Datos[pos_usuario].Materias.Vet[pos_usuario].Servicio_Comunitario, Datos[pos_usuario].Materias.Vet[pos_usuario].Pasantias, Datos[pos_usuario].Materias.Vet[pos_usuario].Epidemiologia, Datos[pos_usuario].Materias.Vet[pos_usuario].Investigacion_II, Datos[pos_usuario].Materias.Vet[pos_usuario].Extension_II: Real)
 Inicio
 
-    // Primer Año
-    Si (Datos[pos_usuario].Year >= 1) Entonces;
-        Mostrar << "Faenas Pecuarias:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Faenas_Pecuarias;
-        Mostrar << "Ingles Instrumental:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Ingles_Instrumental;
-        Mostrar << "Ecología Agrícola:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Ecologia_Agricola;
-        Mostrar << "Anali. del Perfil Profesional:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Perfil_Profesional;
-        Mostrar << "Educación Física y Deportes:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Deportes;
-        Mostrar << "Bioquímica:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Bioquimica;
-        Mostrar << "Computación:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Computacion;
-        Mostrar << "Zoología:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Zoologia;
-        Mostrar << "Anat. de los Animales Domestic.:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Anatomia_I;
-        
-        Suma = Suma + (Datos[pos_usuario].Materias.Vet[pos_usuario].Faenas_Pecuarias + Datos[pos_usuario].Materias.Vet[pos_usuario].Ingles_Instrumental + Datos[pos_usuario].Materias.Vet[pos_usuario].Ecologia_Agricola + Datos[pos_usuario].Materias.Vet[pos_usuario].Perfil_Profesional + Datos[pos_usuario].Materias.Vet[pos_usuario].Deportes + Datos[pos_usuario].Materias.Vet[pos_usuario].Bioquimica + Datos[pos_usuario].Materias.Vet[pos_usuario].Computacion + Datos[pos_usuario].Materias.Vet[pos_usuario].Zoologia + Datos[pos_usuario].Materias.Vet[pos_usuario].Anatomia_I);
-        Contador = Contador + 9;
+    Si (Datos[pos_usuario].Year >= 1) Entonces
+        Mostrar << "Computación: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Computacion;
+        Mostrar << "Educación Física y Deportes: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Deportes;
+        Mostrar << "Análisis del Perfil Profesional: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Perfil_Profesional;
+        Mostrar << "Ecología Agrícola: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Ecologia_Agricola;
+        Mostrar << "Inglés Instrumental: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Ingles_Instrumental;
+        Mostrar << "Anatomía de los Animales Domésticos: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Anatomia_I;
+        Mostrar << "Faenas Pecuarias: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Faenas_Pecuarias;
+        Mostrar << "Bioquímica: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Bioquimica;
+        Mostrar << "Electiva Complementaria: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Electiva_Complementaria;
+        Mostrar << "Zoología: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Zoologia;
+
+        Suma = Suma + (Datos[pos_usuario].Materias.Vet[pos_usuario].Computacion + Datos[pos_usuario].Materias.Vet[pos_usuario].Deportes + Datos[pos_usuario].Materias.Vet[pos_usuario].Perfil_Profesional + Datos[pos_usuario].Materias.Vet[pos_usuario].Ecologia_Agricola + Datos[pos_usuario].Materias.Vet[pos_usuario].Ingles_Instrumental + Datos[pos_usuario].Materias.Vet[pos_usuario].Anatomia_I + Datos[pos_usuario].Materias.Vet[pos_usuario].Faenas_Pecuarias + Datos[pos_usuario].Materias.Vet[pos_usuario].Bioquimica + Datos[pos_usuario].Materias.Vet[pos_usuario].Electiva_Complementaria + Datos[pos_usuario].Materias.Vet[pos_usuario].Zoologia);
+        Contador = Contador + 10;
     Fin_Si
 
-    // Segundo Año
-    Si (Datos[pos_usuario].Year >= 2) Entonces;
-        Mostrar << "Histología Veterinaria:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Histologia;
-        Mostrar << "Arte y Cultura:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Arte_Cultura;
-        Mostrar << "Bioestadística:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Bioestadistica;
-        Mostrar << "Genética:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Genetica;
-        Mostrar << "Fisiología Animal:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Fisiologia_Animal;
-        Mostrar << "Zootecnia:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Zootecnia;
-        Mostrar << "Microbiología:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Microbiologia;
-        
-        Suma = Suma + (Datos[pos_usuario].Materias.Vet[pos_usuario].Histologia + Datos[pos_usuario].Materias.Vet[pos_usuario].Arte_Cultura + Datos[pos_usuario].Materias.Vet[pos_usuario].Bioestadistica + Datos[pos_usuario].Materias.Vet[pos_usuario].Genetica + Datos[pos_usuario].Materias.Vet[pos_usuario].Fisiologia_Animal + Datos[pos_usuario].Materias.Vet[pos_usuario].Zootecnia + Datos[pos_usuario].Materias.Vet[pos_usuario].Microbiologia);
+    Si (Datos[pos_usuario].Year >= 2) Entonces
+        Mostrar << "Histología Veterinaria: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Histologia;
+        Mostrar << "Microbiología: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Microbiologia;
+        Mostrar << "Genética: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Genetica;
+        Mostrar << "Zootecnia: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Zootecnia;
+        Mostrar << "Bioestadística: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Bioestadistica;
+        Mostrar << "Arte y Cultura: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Arte_Cultura;
+        Mostrar << "Fisiología Animal: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Fisiologia_Animal;
+
+        Suma = Suma + (Datos[pos_usuario].Materias.Vet[pos_usuario].Histologia + Datos[pos_usuario].Materias.Vet[pos_usuario].Microbiologia + Datos[pos_usuario].Materias.Vet[pos_usuario].Genetica + Datos[pos_usuario].Materias.Vet[pos_usuario].Zootecnia + Datos[pos_usuario].Materias.Vet[pos_usuario].Bioestadistica + Datos[pos_usuario].Materias.Vet[pos_usuario].Arte_Cultura + Datos[pos_usuario].Materias.Vet[pos_usuario].Fisiologia_Animal);
         Contador = Contador + 7;
     Fin_Si
 
-    // Tercer Año
-    Si (Datos[pos_usuario].Year >= 3) Entonces;
-        Mostrar << "Patología Clínica Veterinaria:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Patologia_Clinica;
-        Mostrar << "Farmacología Veterinaria:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Farmacologia;
-        Mostrar << "Semiología Veterinaria:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Semiologia;
-        Mostrar << "Nutrición y Alimentación Ani.:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Nutricion;
-        Mostrar << "Reproducción Animal:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Reproduccion;
-        Mostrar << "Parasitología Veterinaria:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Parasitologia;
-        Mostrar << "Anatomía Patológica Vet:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Anatomia_Patologica;
-        
-        Suma = Suma + (Datos[pos_usuario].Materias.Vet[pos_usuario].Patologia_Clinica + Datos[pos_usuario].Materias.Vet[pos_usuario].Farmacologia + Datos[pos_usuario].Materias.Vet[pos_usuario].Semiologia + Datos[pos_usuario].Materias.Vet[pos_usuario].Nutricion + Datos[pos_usuario].Materias.Vet[pos_usuario].Reproduccion + Datos[pos_usuario].Materias.Vet[pos_usuario].Parasitologia + Datos[pos_usuario].Materias.Vet[pos_usuario].Anatomia_Patologica);
+    Si (Datos[pos_usuario].Year >= 3) Entonces
+        Mostrar << "Patología Clínica Veterinaria: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Patologia_Clinica;
+        Mostrar << "Reproducción Animal: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Reproduccion;
+        Mostrar << "Farmacología Veterinaria: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Farmacologia;
+        Mostrar << "Semiología Veterinaria: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Semiologia;
+        Mostrar << "Nutrición y Alimentación Animal: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Nutricion;
+        Mostrar << "Parasitología Veterinaria: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Parasitologia;
+        Mostrar << "Anatomía Patológica Veterinaria: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Anatomia_Patologica;
+
+        Suma = Suma + (Datos[pos_usuario].Materias.Vet[pos_usuario].Patologia_Clinica + Datos[pos_usuario].Materias.Vet[pos_usuario].Reproduccion + Datos[pos_usuario].Materias.Vet[pos_usuario].Farmacologia + Datos[pos_usuario].Materias.Vet[pos_usuario].Semiologia + Datos[pos_usuario].Materias.Vet[pos_usuario].Nutricion + Datos[pos_usuario].Materias.Vet[pos_usuario].Parasitologia + Datos[pos_usuario].Materias.Vet[pos_usuario].Anatomia_Patologica);
         Contador = Contador + 7;
     Fin_Si
 
-    // Cuarto Año
-    Si (Datos[pos_usuario].Year >= 4) Entonces;
-        Mostrar << "Gerencia de Ser. Veterinaria:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Gerencia;
-        Mostrar << "Saneamiento Ambiental:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Saneamiento;
-        Mostrar << "Medicina de Rumiantes y Equino:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Rumiantes;
-        Mostrar << "Mejoramiento Animal:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Mejoramiento_Animal;
-        Mostrar << "Medicina de Caninos y Felinos:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Caninos;
-        Mostrar << "Investigación Veterinaria I:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Investigacion_I;
-        Mostrar << "Extension Profesional I:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Extension_I;
-        Mostrar << "Cirugía Veterinaria:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Cirugia;
-        
-        Suma = Suma + (Datos[pos_usuario].Materias.Vet[pos_usuario].Gerencia + Datos[pos_usuario].Materias.Vet[pos_usuario].Saneamiento + Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Rumiantes + Datos[pos_usuario].Materias.Vet[pos_usuario].Mejoramiento_Animal + Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Caninos + Datos[pos_usuario].Materias.Vet[pos_usuario].Investigacion_I + Datos[pos_usuario].Materias.Vet[pos_usuario].Extension_I + Datos[pos_usuario].Materias.Vet[pos_usuario].Cirugia);
+    Si (Datos[pos_usuario].Year >= 4) Entonces
+        Mostrar << "Investigación Veterinaria I: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Investigacion_I;
+        Mostrar << "Medicina de Caninos y Felinos: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Caninos;
+        Mostrar << "Gerencia de Servicio Veterinaria: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Gerencia;
+        Mostrar << "Mejoramiento Animal: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Mejoramiento_Animal;
+        Mostrar << "Medicina de Rumiantes y Equino: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Rumiantes;
+        Mostrar << "Cirugía Veterinaria: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Cirugia;
+        Mostrar << "Saneamiento Ambiental: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Saneamiento;
+        Mostrar << "Extensión Profesional I: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Extension_I;
+
+        Suma = Suma + (Datos[pos_usuario].Materias.Vet[pos_usuario].Investigacion_I + Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Caninos + Datos[pos_usuario].Materias.Vet[pos_usuario].Gerencia + Datos[pos_usuario].Materias.Vet[pos_usuario].Mejoramiento_Animal + Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Rumiantes + Datos[pos_usuario].Materias.Vet[pos_usuario].Cirugia + Datos[pos_usuario].Materias.Vet[pos_usuario].Saneamiento + Datos[pos_usuario].Materias.Vet[pos_usuario].Extension_I);
         Contador = Contador + 8;
     Fin_Si
 
-    // Quinto Año
-    Si (Datos[pos_usuario].Year >= 5) Entonces;
-        Mostrar << "Servicio Comunitario:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Servicio_Comunitario;
-        Mostrar << "Med. Preventiva y Cli. Hospit.:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Preventiva;
-        Mostrar << "Extension Profesional II:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Extension_II;
-        Mostrar << "Investigación Veterinaria II:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Investigacion_II;
-        Mostrar << "Med. Conejo, Peces, Esp Silt Lab:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Especies;
-        Mostrar << "Legislación y Deontología Vet.:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Legislacion;
-        Mostrar << "Proceso de Prod.Ind e Inp San:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Produccion_Industria;
-        Mostrar << "Derecho Constitucional:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Derecho_Constitucional;
-        Mostrar << "Epidemiología General:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Epidemiologia;
-        Mostrar << "Medicina de Suinos y Aves:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Suinos;
-        Mostrar << "Pasantías Profesionales:...", Datos[pos_usuario].Materias.Vet[pos_usuario].Pasantias;
-        
-        Suma = Suma + (Datos[pos_usuario].Materias.Vet[pos_usuario].Servicio_Comunitario + Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Preventiva + Datos[pos_usuario].Materias.Vet[pos_usuario].Extension_II + Datos[pos_usuario].Materias.Vet[pos_usuario].Investigacion_II + Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Especies + Datos[pos_usuario].Materias.Vet[pos_usuario].Legislacion + Datos[pos_usuario].Materias.Vet[pos_usuario].Produccion_Industria + Datos[pos_usuario].Materias.Vet[pos_usuario].Derecho_Constitucional + Datos[pos_usuario].Materias.Vet[pos_usuario].Epidemiologia + Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Suinos + Datos[pos_usuario].Materias.Vet[pos_usuario].Pasantias);
+    Si (Datos[pos_usuario].Year >= 5) Entonces
+        Mostrar << "Medicina Preventiva y Clínica Hospitalaria: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Preventiva;
+        Mostrar << "Proceso de Producción Industrial: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Produccion_Industria;
+        Mostrar << "Derecho Constitucional: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Derecho_Constitucional;
+        Mostrar << "Medicina de Suinos y Aves: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Suinos;
+        Mostrar << "Medicina Conejo, Peces y Silvestres: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Especies;
+        Mostrar << "Legislación y Deontología: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Legislacion;
+        Mostrar << "Servicio Comunitario: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Servicio_Comunitario;
+        Mostrar << "Pasantías Profesionales: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Pasantias;
+        Mostrar << "Epidemiología General: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Epidemiologia;
+        Mostrar << "Investigación Veterinaria II: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Investigacion_II;
+        Mostrar << "Extensión Profesional II: ", Datos[pos_usuario].Materias.Vet[pos_usuario].Extension_II;
+
+        Suma = Suma + (Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Preventiva + Datos[pos_usuario].Materias.Vet[pos_usuario].Produccion_Industria + Datos[pos_usuario].Materias.Vet[pos_usuario].Derecho_Constitucional + Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Suinos + Datos[pos_usuario].Materias.Vet[pos_usuario].Medicina_Especies + Datos[pos_usuario].Materias.Vet[pos_usuario].Legislacion + Datos[pos_usuario].Materias.Vet[pos_usuario].Servicio_Comunitario + Datos[pos_usuario].Materias.Vet[pos_usuario].Pasantias + Datos[pos_usuario].Materias.Vet[pos_usuario].Epidemiologia + Datos[pos_usuario].Materias.Vet[pos_usuario].Investigacion_II + Datos[pos_usuario].Materias.Vet[pos_usuario].Extension_II);
         Contador = Contador + 11;
     Fin_Si
 Fin_Procedimiento
