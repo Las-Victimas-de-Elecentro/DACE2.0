@@ -1,14 +1,14 @@
 -------------------- REPORTE DE TODO EL PSEUDO --------------------
 Total de archivos: 153
-Total de lineas: 22471
+Total de lineas: 22603
 Total de funciones: 1
 Total de registros: 58
 Total de procedimientos: 151
-Total de variables: 526
-Total de parametros en procedimientos: 16067
+Total de variables: 532
+Total de parametros en procedimientos: 16498
   - De Entrada: 3
-  - De Salida: 8831
-  - De Entrada/Salida: 7233
+  - De Salida: 9227
+  - De Entrada/Salida: 7268
 --------------------------------------------------------------------
 
 ARCHIVO: .\Principal.gabo

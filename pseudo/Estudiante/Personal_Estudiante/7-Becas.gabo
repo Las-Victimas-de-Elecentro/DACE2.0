@@ -1,10 +1,12 @@
-Procedimiento Becas(E/S: be, pos_usuario, Beca[be].CI, Datos[pos_usuario].CI: Entero, Beca[be].Nombre, Datos[pos_usuario].Nombre, Beca[be].Carta_Motivacion, Beca[be].Carta_Recomendacion: Cadena);
+Procedimiento Becas(E/S: be, pos_usuario, Beca[be].CI, Datos[pos_usuario].CI: Entero, Beca[be].Nombre, Datos[pos_usuario].Nombre, Beca[be].Carta_Motivacion, Beca[be].Carta_Recomendacion: Cadena, Beca[I].Verificada: Booleano);
 Inicio
     Var Encontrado = 0, R: Booleano;
     Var I: Entero;
     Para (I = 1 Hasta I = be) Hacer;
         Si (Datos[pos_usuario].CI = Beca[I].CI) Entonces;
-            Encontrado = 1;
+            Si (Beca[I].Verificada = 1) Entonces;
+                Encontrado = 1;
+            Fin_Si
         Fin_Si
     Fin_Para
     Si (Encontrado = 1) Entonces;

@@ -1,0 +1,26 @@
+Procedimiento Aceptar_Becas(E/S: be, Beca[be].CI: Entero, Beca[be].Nombre, Beca[be].Carta_Motivacion, Beca[be].Carta_Recomendacion: Cadena, Beca[I].Verificada: Booleano);
+Inicio
+    Var I: Entero;
+    Var R, R2: Booleano;
+    Mostrar << "¡Bienvenido al apartado de aceptar becas!";
+    Mostrar << "¿Desea ver las becas sin verificar? 1: Sí, 0: No";
+    Leer >> R;
+    Si (R = 1) Entonces;
+        Mostrar << "Becas:";
+        Para (I = 1 Hasta I = be) Hacer;
+            Si (Beca[I].Verificada = 0) Entonces;
+                Mostrar << Beca[I].Nombre;
+                Mostrar << Beca[I].CI;
+                Mostrar << Beca[I].Carta_Motivacion;
+                Mostrar << Beca[I].Carta_Recomendacion;
+                Mostrar << "¿Desea habilitar la beca? 1: Sí, 0: No";
+                Leer >> R2;
+                Si (R2 = 1) Entonces;
+                    Beca[I].Verificada = 1;
+                Sino
+                    Beca[I].Verificada = 0;
+                Fin_Si
+            Fin_Si
+        Fin_Para
+    Fin_Si
+Fin_Procedimiento
