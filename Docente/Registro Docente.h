@@ -28,6 +28,7 @@ struct Profesor
     int Cant_Mat;
     int Cant_Mag;
     int Amigos;
+    bool Club;
 };
 
 #endif

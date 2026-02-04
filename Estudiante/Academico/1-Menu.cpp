@@ -1,7 +1,7 @@
 #include "../../Main/Header.h"
 using namespace std;
 
-void Menu_Est_Academico (Variables (&Var), Estudiante (&Est)[D], Clase (&Class)[D], Clase_Magistral (&Mag)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D], Asignacion (&Asig)[D], Materias (&Mat)[527], Plan_Evaluacion (&Plan)[D], Carnet (&Car)[D], Carnetizacion (&Carn)[D], Pasantias (&Pas)[D], Servicio_Comunitario (&SerC)[D])
+void Menu_Est_Academico (Variables (&Var), Estudiante (&Est)[D], Clase (&Class)[D], Clase_Magistral (&Mag)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D], Asignacion (&Asig)[D], Materias (&Mat)[527], Plan_Evaluacion (&Plan)[D], Carnet (&Car)[D], Carnetizacion (&Carn)[D], Pasantias (&Pas)[D], Servicio_Comunitario (&SerC)[D], Reportes (&Rep)[D], Solicitudes (&Soli)[D], Grupos (&Gru)[D])
 {
     int& N = Var.N;
     int& Opc_F = Var.Opc_F;
@@ -44,6 +44,12 @@ void Menu_Est_Academico (Variables (&Var), Estudiante (&Est)[D], Clase (&Class)[
                 break;
             case 3:
                 Buscar_Asignacion (Var, Class, Est, Asig, Mat);
+                break;
+            case 4:
+                Registrar_Solicitud (Var, Est, Plan, Rep, Asig, Mag, Soli, Gru, Class, Mat, Prof, Admin);
+                break;
+            case 5:
+                Registrar_Reporte (Var, Est, Plan, Rep, Asig, Mag, Soli, Gru, Class, Mat, Prof, Admin);
                 break;
             case 7:
                 Buscar_Magistrales (Var, Est, Class, Mag, Prof);

@@ -3,6 +3,22 @@
 #define REGISTRO_SOCIAL_H
 using namespace std;
 
+struct Ayuda_Social
+{
+    string Nombre_Afectado;
+    string Razon;
+    string Contacto;
+};
+
+struct Ayuda_Animal
+{
+    string Nombre_Animal;
+    string Tipo_Animal;
+    string Raza;
+    string Razon;
+    string Contacto;
+};
+
 struct Market_Place
 {
     string Usuario;

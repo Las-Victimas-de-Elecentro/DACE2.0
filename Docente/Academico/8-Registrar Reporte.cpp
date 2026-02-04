@@ -3,13 +3,35 @@ using namespace std;
 
 void Registrar_Reporte (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Plan)[D], Reportes (&Rep)[D], Asignacion (&Asig)[D], Clase_Magistral (&Mag)[D], Solicitudes (&Soli)[D], Grupos (&Gru)[D], Clase (&Class)[D], Materias (&Mat)[527], Profesor (&Prof)[D], Administrativo (&Admin)[D])
 {
+
     int& N = Var.N;
     int& Opc_F = Var.Opc_F;
 
     int I = 0, E = 0, Cont = -1, Report = -1;
     bool R, R2, R3;
+    string Nombre_Usuario;
+
+    if (Rol == "Est")
+    {
+
+        Nombre_Usuario = Est[N].Nombre;
+
+    }
+    else if (Rol == "Prof")
+    {
+
+        Nombre_Usuario = Prof[N].Nombre;
+
+    }
+    else
+    {
+
+        Nombre_Usuario = Admin[N].Nombre;
+
+    }
 
     do {
+
         I = 0; E = 0; Cont = -1; Report = -1;
         
         Limpiar();
@@ -23,10 +45,13 @@ void Registrar_Reporte (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion 
 
         if (R == 1)
         {
+
             for (I = 0 ; I < D ; I++)
             {
-                if (Prof[N].Nombre == Rep[I].Titular)
+
+                if (Nombre_Usuario == Rep[I].Titular)
                 {
+
                     cout << GREEN << "Reporte Numero: " << I+1 << RESET << endl;
                     cout << Rep[I].Titulo << endl;
                     cout << Rep[I].Descripcion << endl;
@@ -36,21 +61,32 @@ void Registrar_Reporte (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion 
 
                     if (Rep[I].Recibido == 1)
                     {
+
                         cout << GREEN << "Reporte recibido, se tomará en cuenta para su posible solución" << RESET << endl;
+
                     }
                     else
                     {
+
                         cout << RED << "Reporte sin recibir, siga esperando respuesta" << RESET << endl;
+
                     }
+
                     Report++;
+
                 }
+
             }
 
             if (Report == -1)
             {
+
                 cout << RED << "No tienes ningun reporte registrado" << RESET << endl;
+
             }
+
             Continue();
+
         }
 
         Limpiar();
@@ -64,53 +100,79 @@ void Registrar_Reporte (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion 
         
         if (R2 == 1)
         {
+
             for (I = 0 ; I < D ; I++)
             {
+
                 if (Rep[I].Titular == "")
                 {
+
                     Cont++;
+
                 }
+
             }
 
             if (Cont != -1)
             {
+
                 for (I = 0 ; I < D ; I++)
                 {
+
                     if (Rep[I].Titular == "")
                     {
+
                         E = I;
                         break;
+
                     }
+
                 }
 
                 Limpiar();
                 Dibujo = "Law"; Art();
 
                 cout << CYAN << "Registro de Reporte Académico" << RESET << endl;
-                Rep[E].Titular = Prof[N].Nombre;
+
+                Rep[E].Titular = Nombre_Usuario;
+
                 cout << "Título del reporte: ";
                 getline (cin >> ws, Rep[E].Titulo);
+
                 cout << "Describa el problema o incidencia: ";
                 getline (cin >> ws, Rep[E].Descripcion);
+
                 cout << "Problema en cuestión: ";
                 getline (cin >> ws, Rep[E].Problema);
+
                 cout << "Fecha" << endl;
+
                 cout << "Dia: ";
                 Rep[E].Fecha.Dia = Dia_User();
+
                 cout << "Mes: ";
                 Rep[E].Fecha.Mes = Mes_User();
+
                 cout << "Año: ";
                 Rep[E].Fecha.Year = Year_User();
+
                 Rep[E].Recibido = 0;
+
                 cout << GREEN << "El reporte ha sido enviado. La institución escuchará su voz" << RESET << endl;
+
                 Guardar_Academic(Var, Est, Plan, Rep, Asig, Mag, Soli, Gru, Class, Mat, Prof, Admin);
+
                 Continuar();
+
             }
             else
             {
+
                 cout << RED << "No es posible registrar más reportes" << RESET << endl;
                 Continue();
+
             }
+
         }
 
         cout << "¿Desea repetir el proceso de reportes? Ingrese: 1: Sí / 0: No: ";
@@ -119,4 +181,5 @@ void Registrar_Reporte (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion 
     } while (R3 == 1);
 
     return;
+
 }

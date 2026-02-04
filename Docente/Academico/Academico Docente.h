@@ -18,5 +18,6 @@ void Magistrales_Prof (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (
 void Plan_Evaluacion_Prof (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Plan)[D], Reportes (&Rep)[D], Asignacion (&Asig)[D], Clase_Magistral (&Mag)[D], Solicitudes (&Soli)[D], Grupos (&Gru)[D], Clase (&Class)[D], Materias (&Mat)[527], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
 void Cargar_Notas (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion (&Plan)[D], Reportes (&Rep)[D], Asignacion (&Asig)[D], Clase_Magistral (&Mag)[D], Solicitudes (&Soli)[D], Grupos (&Gru)[D], Clase (&Class)[D], Materias (&Mat)[527], Profesor (&Prof)[D], Administrativo (&Admin)[D]);
 void Notas_Materias_Prof (Variables (&Var), Estudiante (&Est)[D], Materias (&Mat)[527]);
+void Historial_Labor_Docente (Variables (&Var), Clase (&Class)[D], Profesor (&Prof)[D]);
 
 #endif

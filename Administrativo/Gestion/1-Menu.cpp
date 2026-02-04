@@ -1,7 +1,7 @@
 #include "../../Main/Header.h"
 using namespace std;
 
-void Menu_Gestion_Admin (Variables (&Var), Empleado (&Emp)[D], Inscrito (&Ins)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D], Estudiante (&Est)[D], Plan_Evaluacion (&Plan)[D], Reportes (&Rep)[D], Clase_Magistral (&Mag)[D], Solicitudes (&Soli)[D], Novedades (&Nov)[D], Pasantias (&Pas)[D], Servicio_Comunitario (&SerC)[D], Carnet (&Car)[D], Carnetizacion (&Carn)[D])
+void Menu_Gestion_Admin (Variables (&Var), Empleado (&Emp)[D], Inscrito (&Ins)[D], Profesor (&Prof)[D], Administrativo (&Admin)[D], Estudiante (&Est)[D], Plan_Evaluacion (&Plan)[D], Reportes (&Rep)[D], Clase_Magistral (&Mag)[D], Solicitudes (&Soli)[D], Novedades (&Nov)[D], Pasantias (&Pas)[D], Servicio_Comunitario (&SerC)[D], Carnet (&Car)[D], Carnetizacion (&Carn)[D], Clubes (&Club)[D], Celebraciones (&Cel)[D], Eventos (&Even)[D], Becas (&Beca)[D])
 {
     int& N = Var.N;
     int& Opc_F = Var.Opc_F;
@@ -10,7 +10,7 @@ void Menu_Gestion_Admin (Variables (&Var), Empleado (&Emp)[D], Inscrito (&Ins)[D
     do {
         Limpiar();
         Dibujo = "Gestion"; Art();
-        Opc_F = 16;
+        Opc_F = 19;
         cout << CYAN << "Bienvenido a la sección de Administrador " << Admin[N].Nombre << RESET << endl;
         cout << "¿Que desea hacer?" << endl;
         cout << "1: Ingresar solicitudes de empleo" << endl;
@@ -27,8 +27,11 @@ void Menu_Gestion_Admin (Variables (&Var), Empleado (&Emp)[D], Inscrito (&Ins)[D
         cout << "12: Clases Magistrales" << endl;
         cout << "13: Planes de Evaluación" << endl;
         cout << "14: Carnetización" << endl;
-        cout << "15: Añadir Clubes" << endl;
-        cout << "16: Salir" << endl;
+        cout << "15: Gestión Clubes" << endl;
+        cout << "16: Gestión Celebraciones" << endl;
+        cout << "17: Gestión Eventos" << endl;
+        cout << "18: Gestión Becas" << endl;
+        cout << "19: Salir" << endl;
         cout << "Ingrese: ";
         Opc = Opc_Menu(Opc_F);
 
@@ -76,8 +79,20 @@ void Menu_Gestion_Admin (Variables (&Var), Empleado (&Emp)[D], Inscrito (&Ins)[D
             case 14:
                 Gestion_Carnet (Var, Car, Carn);
                 break;
+            case 15:
+                Gestion_Club (Var, Club);
+                break;
+            case 16:
+                Gestion_Celebraciones (Var, Cel);
+                break;
+            case 17:
+                Gestion_Eventos (Var, Even);
+                break;
+            case 18:
+                Aceptar_Becas (Var, Beca);
+                break;
 
         }
 
-    } while (Opc != 16);
+    } while (Opc != 19);
 }

@@ -368,7 +368,7 @@ void Com_Est (Variables (&Var), Estudiante (&Est)[D], Clase (&Class)[D], Clase_M
         cout << n++ << ": Salir" << endl;
 
         Opc_F = n;
-        cout << "\nIngrese :";
+        cout << "Ingrese :";
         Select = Opc_Menu(Opc_F);
 
         if (Select >= 1 && Select <= Total)

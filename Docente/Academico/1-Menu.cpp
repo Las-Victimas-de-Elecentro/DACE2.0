@@ -11,7 +11,7 @@ void Menu_Prof_Academic (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion
 
     do {
         Limpiar();
-        Opc_F = 10;
+        Opc_F = 11;
         Avatares(Var, Est, Prof, Admin);
         cout << CYAN << "Bienvenido al sistema DACE - Sección Académica (Docente)" << RESET << endl;
         cout << "Seleccione una opción, Docente" << endl;
@@ -24,7 +24,8 @@ void Menu_Prof_Academic (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion
         cout << "7: Clases Magistrales" << endl;
         cout << "8: Plan de Evaluación" << endl;
         cout << "9: Cargar notas en el sistema" << endl;
-        cout << "10: Salir" << endl;
+        cout << "10: Historial Docente" << endl;
+        cout << "11: Salir" << endl;
         cout << "Ingrese una opción: ";
         Opc = Opc_Menu(Opc_F);
 
@@ -59,7 +60,10 @@ void Menu_Prof_Academic (Variables (&Var), Estudiante (&Est)[D], Plan_Evaluacion
             case 9:
                 Cargar_Notas (Var, Est, Plan, Rep, Asig, Mag, Soli, Gru, Class, Mat, Prof, Admin);
                 break;
+            case 10:
+                Historial_Labor_Docente (Var, Class, Prof);
+                break;
         }
 
-    } while (Opc != 10);
+    } while (Opc != 11);
 }

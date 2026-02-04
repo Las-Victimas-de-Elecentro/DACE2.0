@@ -32,7 +32,9 @@ struct Estudiante
     int Cant_Mag;
     bool Pasantias;
     bool Comunitario;
+    bool Club;
     int Amigos;
+    bool Bloqueado;
 };
 
 struct Inscrito

@@ -34,15 +34,15 @@ struct Variables
 
 //Registros
 #include "../Global/Registro Global.h"
-#include "../Academico/Registro Academico.h"
+#include "../Global/Academico/Registro Academico.h"
 #include "../Estudiante/Registro Estudiante.h"
 #include "../Docente/Registro Docente.h"
 #include "../Administrativo/Registro Administrativo.h"
 #include "../Global/Social/Registro Social.h"
-#include "../Global/Extracurricular/Extracurricular.h"
+#include "../Global/Extracurricular/Registro Extracurricular.h"
 
 //Lenados
-#include "../LLenado/Llenado.h"
+#include "../Llenado/Llenado.h"
 
 //Funciones
 #include "../Funciones/Funciones.h"
@@ -57,12 +57,17 @@ struct Variables
 //Estudiante
 #include "../Estudiante/Academico/Academico Estudiante.h"
 #include "../Estudiante/Academico/Materias/Mat.h"
+#include "../Global/Personal/Historial/Historial.h"
+#include "../Estudiante/Social/Social Estudiantil.h"
 
 //Docente
 #include "../Docente/Academico/Academico Docente.h"
 
 //Administrativo
 #include "../Administrativo/Gestion/Gestion.h"
+
+//Extracurricular
+#include "../Global/Extracurricular/Extracurricular.h"
 
 //Inicio
 #include "../Inicio/Inicio.h"

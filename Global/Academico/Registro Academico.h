@@ -1,7 +1,17 @@
-#include "../Main/Header.h"
+#include "../../Main/Header.h"
 #ifndef REGISTRO_MATERIAS_H
 #define REGISTRO_MATERIAS_H
 using namespace std;
+
+struct Becas
+{
+    string Nombre;
+    int CI;
+    string Motivo;
+    string Carta_Recomendacion;
+    string Carta_Motivacion;
+    bool Verificada;
+};
 
 struct Pasantias
 {

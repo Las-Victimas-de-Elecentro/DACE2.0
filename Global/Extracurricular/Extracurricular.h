@@ -1,31 +1,11 @@
 #include "../../Main/Header.h"
-#ifndef REGISTRO_EXTRA_H
-#define REGISTRO_EXTRA_H
+#ifndef EXTRA_H
+#define EXTRA_H
 using namespace std;
 
-struct Eventos
-{
-    int ID;     
-    string Nombre;                               
-    string Fecha;
-    string Descripcion;
-};
-
-struct Clubes
-{
-    string Nombre;
-    string Descripcion;
-    string Capacidad_Maxima;
-    string Miembros_Inscritos;
-    string Horarios_Disponibles;
-};
-
-struct Celebraciones
-{
-    string Nombre; 
-    string Fecha;
-    string Tipo;
-    string Descripcion;
-};
+void Menu_Extra (Variables (&Var), Estudiante (&Est)[D], Profesor (&Prof)[D], Clubes (&Club)[D], Celebraciones (&Cel)[D], Eventos (&Even)[D]);
+void Inscripcion_Club (Variables (&Var), Clubes (&Club)[D], Estudiante (&Est)[D], Profesor (&Prof)[D]);
+void Ver_Eventos (Variables (&Var), Eventos (&Even)[D]);
+void Ver_Celebraciones (Variables (&Var), Celebraciones (&Cel)[D]);
 
 #endif

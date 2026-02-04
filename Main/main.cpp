@@ -35,6 +35,9 @@ Publicaciones Publi[D];
 Amigos Amig[D];
 Novedades Nov[D];
 Chatbot Bot[10];
+Becas Beca[D];
+Ayuda_Social Soci[D];
+Ayuda_Animal Anim[D];
 
 //Extracurricular
 Eventos Even[D];
@@ -76,7 +79,7 @@ int main()
         switch (Opc)
         {
             case 1:
-                Sesion (Var, Est, Plan, Rep, Asig, Mag, Soli, Gru, Class, List, Mat, Prof, Admin, Car, Carn, Pas, SerC, MP, C_MP, A_MP, S_MP, Amig, Publi, Emp, Ins, Nov);
+                Sesion (Var, Est, Plan, Rep, Asig, Mag, Soli, Gru, Class, List, Mat, Prof, Admin, Car, Carn, Pas, SerC, MP, C_MP, A_MP, S_MP, Amig, Publi, Emp, Ins, Nov, Club, Cel, Even, Soci, Anim, Beca);
                 break;
             case 2:
                 Registro (Var, Est, Prof, Admin);
